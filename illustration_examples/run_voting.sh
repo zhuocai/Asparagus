@@ -13,4 +13,6 @@ python synthesizer.py \
     --output_file ${file_name}_${contract_name}_${function_name}.out \
     --use_const_cnt 1 --print_verbose
 
+rm *.smt2 *.model *.gas
+
 cd -
