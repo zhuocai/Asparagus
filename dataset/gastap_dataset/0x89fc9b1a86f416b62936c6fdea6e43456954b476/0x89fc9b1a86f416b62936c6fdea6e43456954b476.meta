@@ -1,0 +1,97 @@
+{
+    "HashBounty": {
+        "function_list": [
+            "HashBounty()",
+            "setBounty(bytes32)",
+            "claimBounty(uint256,string)",
+            "addBountyReward(uint256)",
+            "collectFees()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "HashBounty()": {
+                "argument": {},
+                "contract": {
+                    "bountyIndex": "uint256",
+                    "fees": "uint256"
+                }
+            },
+            "setBounty(bytes32)": {
+                "argument": {
+                    "hash": "bytes32"
+                },
+                "contract": {
+                    "bountyIndex": "uint256",
+                    "fees": "uint256"
+                }
+            },
+            "claimBounty(uint256,string)": {
+                "argument": {
+                    "claimIndex": "uint256",
+                    "solution": "string"
+                },
+                "contract": {
+                    "bountyIndex": "uint256",
+                    "fees": "uint256"
+                }
+            },
+            "addBountyReward(uint256)": {
+                "argument": {
+                    "index": "uint256"
+                },
+                "contract": {
+                    "bountyIndex": "uint256",
+                    "fees": "uint256"
+                }
+            },
+            "collectFees()": {
+                "argument": {},
+                "contract": {
+                    "bountyIndex": "uint256",
+                    "fees": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "setBounty(bytes32)": [
+                103,
+                75
+            ],
+            "addBountyReward(uint256)": [
+                297,
+                141
+            ],
+            "claimBounty(uint256,string)": [
+                159,
+                97
+            ],
+            "collectFees()": [
+                274,
+                119
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump1131": [
+                "owner.transfer(fees)",
+                "owner.transfer(fees)"
+            ],
+            "block588": [
+                "sha256(solution)"
+            ],
+            "block963": [
+                "msg.sender.transfer(bounties[claimIndex].reward)"
+            ],
+            "jump588": [
+                "sha256(solution)",
+                "sha256(solution)"
+            ],
+            "block1131": [
+                "owner.transfer(fees)"
+            ],
+            "jump963": [
+                "msg.sender.transfer(bounties[claimIndex].reward)",
+                "msg.sender.transfer(bounties[claimIndex].reward)"
+            ]
+        }
+    }
+}

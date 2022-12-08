@@ -1,0 +1,255 @@
+{
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "Owned": {
+        "function_list": [
+            "Owned()",
+            "isOwner(address)",
+            "initiateOwnershipTransfer(address)",
+            "completeOwnershipTransfer()"
+        ],
+        "initial_state": {
+            "Owned()": {
+                "argument": {},
+                "contract": {}
+            },
+            "isOwner(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "initiateOwnershipTransfer(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "completeOwnershipTransfer()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "initiateOwnershipTransfer(address)": [
+                190,
+                97
+            ],
+            "completeOwnershipTransfer()": [
+                368,
+                141
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "ERC20Interface": {
+        "function_list": [
+            "name()",
+            "symbol()",
+            "decimals()",
+            "totalSupply()",
+            "balanceOf(address)",
+            "allowance(address,address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)"
+        ],
+        "initial_state": {
+            "name()": {
+                "argument": {},
+                "contract": {}
+            },
+            "symbol()": {
+                "argument": {},
+                "contract": {}
+            },
+            "decimals()": {
+                "argument": {},
+                "contract": {}
+            },
+            "totalSupply()": {
+                "argument": {},
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferFrom(address,address,uint256)": [
+                81,
+                75
+            ],
+            "transfer(address,uint256)": [
+                214,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "FutureTokenSaleLockBox": {
+        "function_list": [
+            "Owned()",
+            "isOwner(address)",
+            "initiateOwnershipTransfer(address)",
+            "completeOwnershipTransfer()",
+            "FutureTokenSaleLockBox(ERC20Interface,TokenSaleInterface)",
+            "currentTime()",
+            "hasUnlockDatePassed()",
+            "extendUnlockDate(uint256)",
+            "transfer(address,uint256)"
+        ],
+        "initial_state": {
+            "Owned()": {
+                "argument": {},
+                "contract": {
+                    "unlockDate": "uint256"
+                }
+            },
+            "isOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "unlockDate": "uint256"
+                }
+            },
+            "initiateOwnershipTransfer(address)": {
+                "argument": {},
+                "contract": {
+                    "unlockDate": "uint256"
+                }
+            },
+            "completeOwnershipTransfer()": {
+                "argument": {},
+                "contract": {
+                    "unlockDate": "uint256"
+                }
+            },
+            "FutureTokenSaleLockBox(ERC20Interface,TokenSaleInterface)": {
+                "argument": {},
+                "contract": {
+                    "unlockDate": "uint256"
+                }
+            },
+            "currentTime()": {
+                "argument": {},
+                "contract": {
+                    "unlockDate": "uint256"
+                }
+            },
+            "hasUnlockDatePassed()": {
+                "argument": {},
+                "contract": {
+                    "unlockDate": "uint256"
+                }
+            },
+            "extendUnlockDate(uint256)": {
+                "argument": {
+                    "_newDate": "uint256"
+                },
+                "contract": {
+                    "unlockDate": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "unlockDate": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "currentTime()": [
+                879,
+                273
+            ],
+            "completeOwnershipTransfer()": [
+                922,
+                295
+            ],
+            "extendUnlockDate(uint256)": [
+                267,
+                97
+            ],
+            "initiateOwnershipTransfer(address)": [
+                701,
+                229
+            ],
+            "hasUnlockDatePassed()": [
+                379,
+                141
+            ],
+            "transfer(address,uint256)": [
+                1417,
+                946
+            ]
+        },
+        "block_CALL_mapping": {
+            "block1417": [
+                "simpleToken.transfer(_to, _value)"
+            ],
+            "jump1417": [
+                "simpleToken.transfer(_to, _value)",
+                "simpleToken.transfer(_to, _value)"
+            ]
+        }
+    }
+}

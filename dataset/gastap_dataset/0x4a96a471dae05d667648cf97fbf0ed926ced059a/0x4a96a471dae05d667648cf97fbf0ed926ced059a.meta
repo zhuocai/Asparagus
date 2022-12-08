@@ -1,0 +1,232 @@
+{
+    "Token": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "val": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transfer(address,uint256)": [
+                168,
+                97
+            ],
+            "balanceOf(address)": [
+                81,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "DefaultSweeper": {
+        "function_list": [
+            "sweep(address,uint256)",
+            "fallback()",
+            "AbstractSweeper(address)",
+            "DefaultSweeper(address)",
+            "sweep(address,uint256)"
+        ],
+        "initial_state": {
+            "sweep(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {}
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {}
+            },
+            "AbstractSweeper(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "DefaultSweeper(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "sweep(address,uint256)": [
+                83,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "block822": [
+                "controller.halted()"
+            ],
+            "block326": [
+                "controller.authorizedCaller()"
+            ],
+            "jump2013": [
+                "controller.logSweep(this, destination, _token, _amount)",
+                "controller.logSweep(this, destination, _token, _amount)"
+            ],
+            "block1304": [
+                "token.balanceOf(this)"
+            ],
+            "block572": [
+                "controller.owner()"
+            ],
+            "jump326": [
+                "controller.authorizedCaller()",
+                "controller.authorizedCaller()"
+            ],
+            "jump822": [
+                "controller.halted()",
+                "controller.halted()"
+            ],
+            "jump572": [
+                "controller.owner()",
+                "controller.owner()"
+            ],
+            "block2013": [
+                "controller.logSweep(this, destination, _token, _amount)"
+            ],
+            "jump1028": [
+                "controller.destination()",
+                "controller.destination()"
+            ],
+            "block1028": [
+                "controller.destination()"
+            ],
+            "jump1304": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "block1542": [
+                "token.transfer(destination, amount)"
+            ],
+            "jump1542": [
+                "token.transfer(destination, amount)",
+                "token.transfer(destination, amount)"
+            ],
+            "block1651": [
+                "destination.send(amountInWei)"
+            ]
+        }
+    },
+    "UserWallet": {
+        "function_list": [
+            "UserWallet(address)",
+            "fallback()",
+            "tokenFallback(address,uint256,bytes)",
+            "sweep(address,uint256)"
+        ],
+        "initial_state": {
+            "UserWallet(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {}
+            },
+            "tokenFallback(address,uint256,bytes)": {
+                "argument": {
+                    "_value": "uint256",
+                    "_data": "bytes"
+                },
+                "contract": {}
+            },
+            "sweep(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "tokenFallback(address,uint256,bytes)": [
+                179,
+                97
+            ],
+            "sweep(address,uint256)": [
+                78,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "block515": [
+                "sweeperList.sweeperOf(_token)"
+            ],
+            "jump515": [
+                "sweeperList.sweeperOf(_token)",
+                "sweeperList.sweeperOf(_token)"
+            ]
+        }
+    },
+    "Controller": {
+        "function_list": [
+            "sweeperOf(address)",
+            "Controller()",
+            "changeAuthorizedCaller(address)",
+            "changeDestination(address)",
+            "changeOwner(address)",
+            "makeWallet()",
+            "halt()",
+            "start()",
+            "addSweeper(address,address)",
+            "sweeperOf(address)",
+            "logSweep(address,address,address,uint256)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "sweeperOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "Controller()": {
+                "argument": {},
+                "contract": {}
+            },
+            "changeAuthorizedCaller(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "changeDestination(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "changeOwner(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "makeWallet()": {
+                "argument": {},
+                "contract": {}
+            },
+            "halt()": {
+                "argument": {},
+                "contract": {}
+            },
+            "start()": {
+                "argument": {},
+                "contract": {}
+            },
+            "addSweeper(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "logSweep(address,address,address,uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    }
+}

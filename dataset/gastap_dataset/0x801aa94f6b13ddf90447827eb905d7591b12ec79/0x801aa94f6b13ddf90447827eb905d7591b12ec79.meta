@@ -1,0 +1,216 @@
+{
+    "PeerBet": {
+        "function_list": [
+            "PeerBet()",
+            "createGame(string,string,uint16,uint64)",
+            "cancelOpenBids(PeerBet.Book)",
+            "cancelBets(PeerBet.Book,PeerBet.BookType)",
+            "deleteGame(bytes32)",
+            "payBets(bytes32)",
+            "verifyGameResult(bytes32)",
+            "setGameResult(bytes32,int256,int256)",
+            "bid(bytes32,PeerBet.BookType,bool,int32)",
+            "getOpenBids(bytes32,PeerBet.BookType)",
+            "getBook(bytes32,PeerBet.BookType)",
+            "matchExistingBids(PeerBet.Bid,bytes32,PeerBet.BookType)",
+            "cancelBid(bytes32,PeerBet.BookType,int32,bool)",
+            "kill()",
+            "getGameId(address,string,string,uint16,uint64)",
+            "getActiveGames()",
+            "addBidToStack(PeerBet.Bid,PeerBet.Bid[],bool)",
+            "getGameById(bytes32)",
+            "withdraw()"
+        ],
+        "initial_state": {
+            "PeerBet()": {
+                "argument": {},
+                "contract": {
+                    "games": "PeerBet.Game[]"
+                }
+            },
+            "createGame(string,string,uint16,uint64)": {
+                "argument": {
+                    "home": "string",
+                    "away": "string",
+                    "category": "uint16",
+                    "locktime": "uint64"
+                },
+                "contract": {
+                    "games": "PeerBet.Game[]"
+                }
+            },
+            "cancelOpenBids(PeerBet.Book)": {
+                "argument": {},
+                "contract": {
+                    "games": "PeerBet.Game[]"
+                }
+            },
+            "cancelBets(PeerBet.Book,PeerBet.BookType)": {
+                "argument": {},
+                "contract": {
+                    "games": "PeerBet.Game[]"
+                }
+            },
+            "deleteGame(bytes32)": {
+                "argument": {
+                    "game_id": "bytes32"
+                },
+                "contract": {
+                    "games": "PeerBet.Game[]"
+                }
+            },
+            "payBets(bytes32)": {
+                "argument": {
+                    "game_id": "bytes32"
+                },
+                "contract": {
+                    "games": "PeerBet.Game[]"
+                }
+            },
+            "verifyGameResult(bytes32)": {
+                "argument": {
+                    "game_id": "bytes32"
+                },
+                "contract": {
+                    "games": "PeerBet.Game[]"
+                }
+            },
+            "setGameResult(bytes32,int256,int256)": {
+                "argument": {
+                    "game_id": "bytes32"
+                },
+                "contract": {
+                    "games": "PeerBet.Game[]"
+                }
+            },
+            "bid(bytes32,PeerBet.BookType,bool,int32)": {
+                "argument": {
+                    "game_id": "bytes32"
+                },
+                "contract": {
+                    "games": "PeerBet.Game[]"
+                }
+            },
+            "getOpenBids(bytes32,PeerBet.BookType)": {
+                "argument": {
+                    "game_id": "bytes32"
+                },
+                "contract": {
+                    "games": "PeerBet.Game[]"
+                }
+            },
+            "getBook(bytes32,PeerBet.BookType)": {
+                "argument": {
+                    "game_id": "bytes32"
+                },
+                "contract": {
+                    "games": "PeerBet.Game[]"
+                }
+            },
+            "matchExistingBids(PeerBet.Bid,bytes32,PeerBet.BookType)": {
+                "argument": {
+                    "game_id": "bytes32"
+                },
+                "contract": {
+                    "games": "PeerBet.Game[]"
+                }
+            },
+            "cancelBid(bytes32,PeerBet.BookType,int32,bool)": {
+                "argument": {
+                    "game_id": "bytes32"
+                },
+                "contract": {
+                    "games": "PeerBet.Game[]"
+                }
+            },
+            "kill()": {
+                "argument": {},
+                "contract": {
+                    "games": "PeerBet.Game[]"
+                }
+            },
+            "getGameId(address,string,string,uint16,uint64)": {
+                "argument": {
+                    "home": "string",
+                    "away": "string",
+                    "category": "uint16",
+                    "locktime": "uint64"
+                },
+                "contract": {
+                    "games": "PeerBet.Game[]"
+                }
+            },
+            "getActiveGames()": {
+                "argument": {},
+                "contract": {
+                    "games": "PeerBet.Game[]"
+                }
+            },
+            "addBidToStack(PeerBet.Bid,PeerBet.Bid[],bool)": {
+                "argument": {
+                    "stack": "PeerBet.Bid[]"
+                },
+                "contract": {
+                    "games": "PeerBet.Game[]"
+                }
+            },
+            "getGameById(bytes32)": {
+                "argument": {
+                    "game_id": "bytes32"
+                },
+                "contract": {
+                    "games": "PeerBet.Game[]"
+                }
+            },
+            "withdraw()": {
+                "argument": {},
+                "contract": {
+                    "games": "PeerBet.Game[]"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "setGameResult(bytes32,int256,int256)": [
+                1570,
+                339
+            ],
+            "kill()": [
+                534,
+                163
+            ],
+            "createGame(string,string,uint16,uint64)": [
+                1234,
+                295
+            ],
+            "deleteGame(bytes32)": [
+                982,
+                251
+            ],
+            "getGameId(address,string,string,uint16,uint64)": [
+                626,
+                207
+            ],
+            "verifyGameResult(bytes32)": [
+                557,
+                185
+            ],
+            "withdraw()": [
+                491,
+                141
+            ],
+            "getActiveGames()": [
+                202,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump2771": [
+                "msg.sender.send(balance)",
+                "msg.sender.send(balance)"
+            ],
+            "block2771": [
+                "msg.sender.send(balance)"
+            ]
+        }
+    }
+}

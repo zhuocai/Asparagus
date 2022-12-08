@@ -1,0 +1,167 @@
+{
+    "ERC20": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "approve(address,uint256)",
+            "transferFrom(address,address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                202,
+                75
+            ],
+            "transfer(address,uint256)": [
+                873,
+                273
+            ],
+            "balanceOf(address)": [
+                601,
+                185
+            ],
+            "transferFrom(address,address,uint256)": [
+                346,
+                119
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Owned": {
+        "function_list": [
+            "Owned()",
+            "transferOwnership(address)"
+        ],
+        "initial_state": {
+            "Owned()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "TerraformReserve": {
+        "function_list": [
+            "Owned()",
+            "transferOwnership(address)",
+            "TerraformReserve(address)",
+            "lockMana(address,uint256)",
+            "changeContractState(bool)",
+            "setTargetContract(address)",
+            "fallback()"
+        ],
+        "initial_state": {
+            "Owned()": {
+                "argument": {},
+                "contract": {
+                    "totalLocked": "uint256"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "totalLocked": "uint256"
+                }
+            },
+            "TerraformReserve(address)": {
+                "argument": {},
+                "contract": {
+                    "totalLocked": "uint256"
+                }
+            },
+            "lockMana(address,uint256)": {
+                "argument": {
+                    "mana": "uint256"
+                },
+                "contract": {
+                    "totalLocked": "uint256"
+                }
+            },
+            "changeContractState(bool)": {
+                "argument": {},
+                "contract": {
+                    "totalLocked": "uint256"
+                }
+            },
+            "setTargetContract(address)": {
+                "argument": {},
+                "contract": {
+                    "totalLocked": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "totalLocked": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "lockMana(address,uint256)": [
+                326,
+                141
+            ],
+            "setTargetContract(address)": [
+                169,
+                75
+            ],
+            "transferOwnership(address)": [
+                798,
+                273
+            ],
+            "changeContractState(bool)": [
+                279,
+                119
+            ]
+        },
+        "block_CALL_mapping": {
+            "block1916": [
+                "manaToken.transferFrom(_from, this, mana)"
+            ],
+            "jump1254": [
+                "manaToken.approve(landClaim, totalLocked)",
+                "manaToken.approve(landClaim, totalLocked)"
+            ],
+            "block1254": [
+                "manaToken.approve(landClaim, totalLocked)"
+            ],
+            "jump1916": [
+                "manaToken.transferFrom(_from, this, mana)",
+                "manaToken.transferFrom(_from, this, mana)"
+            ]
+        }
+    }
+}

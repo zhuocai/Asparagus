@@ -1,0 +1,528 @@
+block0(g(masterContract), l(l1), l(l0), calldataload, calldatasize, caller, callvalue, destination)=>
+	s(0) = 128
+	nop(PUSH1)
+	s(1) = 64
+	nop(PUSH1)
+	l(l0) = s(0)
+	nop(MSTORE)
+	s(0) = 4
+	nop(PUSH1)
+	s(1) = calldatasize
+	nop(CALLDATASIZE)
+	call(jump0(s(1),s(0),g(masterContract), l(l1), l(l0), calldataload, calldatasize, caller, callvalue, destination))
+	nop(LT)
+	nop(PUSH2)
+	nop(JUMPI)
+
+jump0(s(1), s(0), g(masterContract), l(l1), l(l0), calldataload, calldatasize, caller, callvalue, destination)=>
+	lt(s(1), s(0))
+	call(block87())
+
+jump0(s(1), s(0), g(masterContract), l(l1), l(l0), calldataload, calldatasize, caller, callvalue, destination)=>
+	geq(s(1), s(0))
+	call(block13(g(masterContract), l(l1), l(l0), calldataload, calldatasize, caller, callvalue, destination))
+
+block13(g(masterContract), l(l1), l(l0), calldataload, calldatasize, caller, callvalue, destination)=>
+	s(0) = 0
+	nop(PUSH1)
+	s(0) = calldataload
+	nop(CALLDATALOAD)
+	s(1) = 26959946667150639794667015087019630673637144422540572481103610249216
+	nop(PUSH29)
+	s(2) = s(0)
+	s(0) = s(1)
+	s(1) = s(2)
+	nop(SWAP1)
+	s(0) = s(1)/s(0)
+	nop(DIV)
+	s(1) = 4294967295
+	nop(PUSH4)
+	s(0) = and(s(1), s(0))
+	nop(AND)
+	s(1) = s(0)
+	nop(DUP1)
+	s(2) = 475700636
+	nop(PUSH4)
+	call(jump13(s(2),s(1),s(0),g(masterContract), l(l1), l(l0), calldataload, calldatasize, caller, callvalue, destination))
+	nop(EQ)
+	nop(PUSH2)
+	nop(JUMPI)
+
+jump13(s(2), s(1), s(0), g(masterContract), l(l1), l(l0), calldataload, calldatasize, caller, callvalue, destination)=>
+	eq(s(2), s(1))
+	call(block92(s(0),g(masterContract), calldatasize, caller, destination))
+
+jump13(s(2), s(1), s(0), g(masterContract), l(l1), l(l0), calldataload, calldatasize, caller, callvalue, destination)=>
+	neq(s(2), s(1))
+	call(block65(s(0),g(masterContract), l(l1), l(l0), calldatasize, caller, callvalue, destination))
+
+jump65(s(2), s(1), s(0), g(masterContract), l(l1), l(l0), calldatasize, caller, callvalue, destination)=>
+	eq(s(2), s(1))
+	call(block146(s(0),g(masterContract), l(l1), l(l0), callvalue))
+
+jump65(s(2), s(1), s(0), g(masterContract), l(l1), l(l0), calldatasize, caller, callvalue, destination)=>
+	neq(s(2), s(1))
+	call(block76(s(0),g(masterContract), calldatasize, caller, callvalue, destination))
+
+block65(s(0), g(masterContract), l(l1), l(l0), calldatasize, caller, callvalue, destination)=>
+	s(1) = s(0)
+	nop(DUP1)
+	s(2) = 3443813922
+	nop(PUSH4)
+	call(jump65(s(2),s(1),s(0),g(masterContract), l(l1), l(l0), calldatasize, caller, callvalue, destination))
+	nop(EQ)
+	nop(PUSH2)
+	nop(JUMPI)
+
+block76(s(0), g(masterContract), calldatasize, caller, callvalue, destination)=>
+	s(1) = s(0)
+	nop(DUP1)
+	s(2) = 3686215527
+	nop(PUSH4)
+	call(jump76(s(2),s(1),s(0),g(masterContract), calldatasize, caller, callvalue, destination))
+	nop(EQ)
+	nop(PUSH2)
+	nop(JUMPI)
+
+jump76(s(2), s(1), s(0), g(masterContract), calldatasize, caller, callvalue, destination)=>
+	eq(s(2), s(1))
+	call(block233(s(0),g(masterContract), calldatasize, caller, callvalue, destination))
+
+jump76(s(2), s(1), s(0), g(masterContract), calldatasize, caller, callvalue, destination)=>
+	neq(s(2), s(1))
+	call(block87_0(s(0)))
+
+block87()=>
+	nop(JUMPDEST)
+	s(0) = 0
+	nop(PUSH1)
+	s(1) = s(0)
+	nop(DUP1)
+	nop(REVERT)
+
+block92(s(0), g(masterContract), calldatasize, caller, destination)=>
+	nop(JUMPDEST)
+	s(1) = 144
+	nop(PUSH2)
+	s(2) = 4
+	nop(PUSH1)
+	s(3) = s(2)
+	nop(DUP1)
+	s(4) = calldatasize
+	nop(CALLDATASIZE)
+	s(3) = s(4)-s(3)
+	nop(SUB)
+	s(4) = s(2)
+	nop(DUP2)
+	s(3) = s(4)+s(3)
+	nop(ADD)
+	s(4) = s(2)
+	s(2) = s(3)
+	s(3) = s(4)
+	nop(SWAP1)
+	s(4) = s(3)
+	nop(DUP1)
+	s(5) = s(4)
+	nop(DUP1)
+	s(5) = destination
+	nop(CALLDATALOAD)
+	s(6) = 1461501637330902918203684832716283019655932542975
+	nop(PUSH20)
+	s(5) = and(s(6), s(5))
+	nop(AND)
+	s(6) = s(4)
+	s(4) = s(5)
+	s(5) = s(6)
+	nop(SWAP1)
+	s(6) = 32
+	nop(PUSH1)
+	s(5) = s(6)+s(5)
+	nop(ADD)
+	s(6) = s(4)
+	s(4) = s(5)
+	s(5) = s(6)
+	nop(SWAP1)
+	s(6) = s(2)
+	s(2) = s(5)
+	s(5) = s(6)
+	nop(SWAP3)
+	s(6) = s(3)
+	s(3) = s(5)
+	s(5) = s(6)
+	nop(SWAP2)
+	s(6) = s(4)
+	s(4) = s(5)
+	s(5) = s(6)
+	nop(SWAP1)
+	nop(POP)
+	nop(POP)
+	nop(POP)
+	s(3) = 300
+	nop(PUSH2)
+	call(block300(s(2),s(1),s(0),g(masterContract), caller))
+	nop(JUMP)
+
+jump146(s(2), s(1), s(0), g(masterContract), l(l1), l(l0), callvalue)=>
+	eq(s(2), 0)
+	call(block158(s(1), s(0),g(masterContract), l(l1), l(l0)))
+
+jump146(s(2), s(1), s(0), g(masterContract), l(l1), l(l0), callvalue)=>
+	neq(s(2), 0)
+	call(block154(s(1), s(0)))
+
+block146(s(0), g(masterContract), l(l1), l(l0), callvalue)=>
+	nop(JUMPDEST)
+	s(1) = callvalue
+	nop(CALLVALUE)
+	s(2) = s(1)
+	nop(DUP1)
+	call(jump146(s(2),s(1),s(0),g(masterContract), l(l1), l(l0), callvalue))
+	nop(ISZERO)
+	nop(PUSH2)
+	nop(JUMPI)
+
+block154(s(1), s(0))=>
+	s(2) = 0
+	nop(PUSH1)
+	s(3) = s(2)
+	nop(DUP1)
+	nop(REVERT)
+
+block158(s(1), s(0), g(masterContract), l(l1), l(l0))=>
+	nop(JUMPDEST)
+	nop(POP)
+	s(1) = 167
+	nop(PUSH2)
+	s(2) = 416
+	nop(PUSH2)
+	call(block416(s(1),s(0),g(masterContract), l(l1), l(l0)))
+	nop(JUMP)
+
+block167(s(2), s(1), s(0), l(l1), l(l0))=>
+	nop(JUMPDEST)
+	s(3) = 64
+	nop(PUSH1)
+	s(3) = l(l0)
+	nop(MLOAD)
+	s(4) = s(3)
+	nop(DUP1)
+	s(5) = s(2)
+	nop(DUP3)
+	s(6) = 1461501637330902918203684832716283019655932542975
+	nop(PUSH20)
+	s(5) = and(s(6), s(5))
+	nop(AND)
+	s(6) = 1461501637330902918203684832716283019655932542975
+	nop(PUSH20)
+	s(5) = and(s(6), s(5))
+	nop(AND)
+	s(6) = s(4)
+	nop(DUP2)
+	l(l1) = s(5)
+	nop(MSTORE)
+	s(5) = 32
+	nop(PUSH1)
+	s(4) = s(5)+s(4)
+	nop(ADD)
+	s(5) = s(2)
+	s(2) = s(4)
+	s(4) = s(5)
+	nop(SWAP2)
+	nop(POP)
+	nop(POP)
+	s(3) = 64
+	nop(PUSH1)
+	s(3) = l(l0)
+	nop(MLOAD)
+	s(4) = s(3)
+	nop(DUP1)
+	s(5) = s(2)
+	s(2) = s(4)
+	s(4) = s(5)
+	nop(SWAP2)
+	s(3) = s(4)-s(3)
+	nop(SUB)
+	s(4) = s(2)
+	s(2) = s(3)
+	s(3) = s(4)
+	nop(SWAP1)
+	nop(RETURN)
+
+jump233(s(2), s(1), s(0), g(masterContract), calldatasize, caller, callvalue, destination)=>
+	eq(s(2), 0)
+	call(block245(s(1), s(0),g(masterContract), calldatasize, caller, destination))
+
+jump233(s(2), s(1), s(0), g(masterContract), calldatasize, caller, callvalue, destination)=>
+	neq(s(2), 0)
+	call(block241(s(1), s(0)))
+
+block233(s(0), g(masterContract), calldatasize, caller, callvalue, destination)=>
+	nop(JUMPDEST)
+	s(1) = callvalue
+	nop(CALLVALUE)
+	s(2) = s(1)
+	nop(DUP1)
+	call(jump233(s(2),s(1),s(0),g(masterContract), calldatasize, caller, callvalue, destination))
+	nop(ISZERO)
+	nop(PUSH2)
+	nop(JUMPI)
+
+block241(s(1), s(0))=>
+	s(2) = 0
+	nop(PUSH1)
+	s(3) = s(2)
+	nop(DUP1)
+	nop(REVERT)
+
+block245(s(1), s(0), g(masterContract), calldatasize, caller, destination)=>
+	nop(JUMPDEST)
+	nop(POP)
+	s(1) = 298
+	nop(PUSH2)
+	s(2) = 4
+	nop(PUSH1)
+	s(3) = s(2)
+	nop(DUP1)
+	s(4) = calldatasize
+	nop(CALLDATASIZE)
+	s(3) = s(4)-s(3)
+	nop(SUB)
+	s(4) = s(2)
+	nop(DUP2)
+	s(3) = s(4)+s(3)
+	nop(ADD)
+	s(4) = s(2)
+	s(2) = s(3)
+	s(3) = s(4)
+	nop(SWAP1)
+	s(4) = s(3)
+	nop(DUP1)
+	s(5) = s(4)
+	nop(DUP1)
+	s(5) = destination
+	nop(CALLDATALOAD)
+	s(6) = 1461501637330902918203684832716283019655932542975
+	nop(PUSH20)
+	s(5) = and(s(6), s(5))
+	nop(AND)
+	s(6) = s(4)
+	s(4) = s(5)
+	s(5) = s(6)
+	nop(SWAP1)
+	s(6) = 32
+	nop(PUSH1)
+	s(5) = s(6)+s(5)
+	nop(ADD)
+	s(6) = s(4)
+	s(4) = s(5)
+	s(5) = s(6)
+	nop(SWAP1)
+	s(6) = s(2)
+	s(2) = s(5)
+	s(5) = s(6)
+	nop(SWAP3)
+	s(6) = s(3)
+	s(3) = s(5)
+	s(5) = s(6)
+	nop(SWAP2)
+	s(6) = s(4)
+	s(4) = s(5)
+	s(5) = s(6)
+	nop(SWAP1)
+	nop(POP)
+	nop(POP)
+	nop(POP)
+	s(3) = 453
+	nop(PUSH2)
+	call(block453(s(2),s(1),s(0),g(masterContract), caller))
+	nop(JUMP)
+
+block300(s(2), s(1), s(0), g(masterContract), caller)=>
+	nop(JUMPDEST)
+	s(3) = 0
+	nop(PUSH1)
+	s(4) = s(3)
+	nop(DUP1)
+	s(5) = s(3)
+	s(3) = s(4)
+	s(4) = s(5)
+	nop(SWAP1)
+	s(4) = g(masterContract)
+	nop(SLOAD)
+	s(5) = s(3)
+	s(3) = s(4)
+	s(4) = s(5)
+	nop(SWAP1)
+	s(5) = 256
+	nop(PUSH2)
+	s(4) = s(5)^s(4)
+	nop(EXP)
+	s(5) = s(3)
+	s(3) = s(4)
+	s(4) = s(5)
+	nop(SWAP1)
+	s(3) = s(4)/s(3)
+	nop(DIV)
+	s(4) = 1461501637330902918203684832716283019655932542975
+	nop(PUSH20)
+	s(3) = and(s(4), s(3))
+	nop(AND)
+	s(4) = 1461501637330902918203684832716283019655932542975
+	nop(PUSH20)
+	s(3) = and(s(4), s(3))
+	nop(AND)
+	s(4) = caller
+	nop(CALLER)
+	s(5) = 1461501637330902918203684832716283019655932542975
+	nop(PUSH20)
+	s(4) = and(s(5), s(4))
+	nop(AND)
+	call(jump300(s(4),s(3),s(2),s(1),s(0),g(masterContract), caller))
+	nop(EQ)
+	nop(ISZERO)
+	nop(ISZERO)
+	nop(PUSH2)
+	nop(JUMPI)
+
+jump300(s(4), s(3), s(2), s(1), s(0), g(masterContract), caller)=>
+	eq(s(4), s(3))
+	call(block391(s(2), s(1), s(0)))
+
+jump300(s(4), s(3), s(2), s(1), s(0), g(masterContract), caller)=>
+	neq(s(4), s(3))
+	call(block387(s(2), s(1), s(0)))
+
+block387(s(2), s(1), s(0))=>
+	s(3) = 0
+	nop(PUSH1)
+	s(4) = s(3)
+	nop(DUP1)
+	nop(REVERT)
+
+block391(s(2), s(1), s(0))=>
+	nop(JUMPDEST)
+	s(3) = s(2)
+	nop(DUP1)
+	s(4) = 1461501637330902918203684832716283019655932542975
+	nop(PUSH20)
+	s(3) = and(s(4), s(3))
+	nop(AND)
+	nop(SUICIDE)
+
+block416(s(1), s(0), g(masterContract), l(l1), l(l0))=>
+	nop(JUMPDEST)
+	s(2) = 0
+	nop(PUSH1)
+	s(3) = s(2)
+	nop(DUP1)
+	s(4) = s(2)
+	s(2) = s(3)
+	s(3) = s(4)
+	nop(SWAP1)
+	s(3) = g(masterContract)
+	nop(SLOAD)
+	s(4) = s(2)
+	s(2) = s(3)
+	s(3) = s(4)
+	nop(SWAP1)
+	s(4) = 256
+	nop(PUSH2)
+	s(3) = s(4)^s(3)
+	nop(EXP)
+	s(4) = s(2)
+	s(2) = s(3)
+	s(3) = s(4)
+	nop(SWAP1)
+	s(2) = s(3)/s(2)
+	nop(DIV)
+	s(3) = 1461501637330902918203684832716283019655932542975
+	nop(PUSH20)
+	s(2) = and(s(3), s(2))
+	nop(AND)
+	s(3) = s(1)
+	nop(DUP2)
+	call(block167(s(2),s(1),s(0), l(l1), l(l0)))
+	nop(JUMP)
+
+jump453(s(4), s(3), s(2), s(1), s(0), g(masterContract), caller)=>
+	eq(s(4), s(3))
+	call(block544(s(2), s(1), s(0)))
+
+jump453(s(4), s(3), s(2), s(1), s(0), g(masterContract), caller)=>
+	neq(s(4), s(3))
+	call(block540(s(2), s(1), s(0)))
+
+block453(s(2), s(1), s(0), g(masterContract), caller)=>
+	nop(JUMPDEST)
+	s(3) = 0
+	nop(PUSH1)
+	s(4) = s(3)
+	nop(DUP1)
+	s(5) = s(3)
+	s(3) = s(4)
+	s(4) = s(5)
+	nop(SWAP1)
+	s(4) = g(masterContract)
+	nop(SLOAD)
+	s(5) = s(3)
+	s(3) = s(4)
+	s(4) = s(5)
+	nop(SWAP1)
+	s(5) = 256
+	nop(PUSH2)
+	s(4) = s(5)^s(4)
+	nop(EXP)
+	s(5) = s(3)
+	s(3) = s(4)
+	s(4) = s(5)
+	nop(SWAP1)
+	s(3) = s(4)/s(3)
+	nop(DIV)
+	s(4) = 1461501637330902918203684832716283019655932542975
+	nop(PUSH20)
+	s(3) = and(s(4), s(3))
+	nop(AND)
+	s(4) = 1461501637330902918203684832716283019655932542975
+	nop(PUSH20)
+	s(3) = and(s(4), s(3))
+	nop(AND)
+	s(4) = caller
+	nop(CALLER)
+	s(5) = 1461501637330902918203684832716283019655932542975
+	nop(PUSH20)
+	s(4) = and(s(5), s(4))
+	nop(AND)
+	call(jump453(s(4),s(3),s(2),s(1),s(0),g(masterContract), caller))
+	nop(EQ)
+	nop(ISZERO)
+	nop(ISZERO)
+	nop(PUSH2)
+	nop(JUMPI)
+
+block540(s(2), s(1), s(0))=>
+	s(3) = 0
+	nop(PUSH1)
+	s(4) = s(3)
+	nop(DUP1)
+	nop(REVERT)
+
+block544(s(2), s(1), s(0))=>
+	nop(JUMPDEST)
+	s(3) = s(2)
+	nop(DUP1)
+	s(4) = 1461501637330902918203684832716283019655932542975
+	nop(PUSH20)
+	s(3) = and(s(4), s(3))
+	nop(AND)
+	nop(SUICIDE)
+	skip
+	nop(STOP)
+
+block87_0(s(0))=>
+	nop(JUMPDEST)
+	s(1) = 0
+	nop(PUSH1)
+	s(2) = s(1)
+	nop(DUP1)
+	nop(REVERT)
+

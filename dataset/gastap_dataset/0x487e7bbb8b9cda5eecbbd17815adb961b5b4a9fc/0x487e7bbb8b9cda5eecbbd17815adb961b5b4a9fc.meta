@@ -1,0 +1,535 @@
+{
+    "Ownable": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "HasNoEther": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "HasNoEther()",
+            "fallback()",
+            "reclaimEther()"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "HasNoEther()": {
+                "argument": {},
+                "contract": {}
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {}
+            },
+            "reclaimEther()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "reclaimEther()": [
+                189,
+                97
+            ],
+            "transferOwnership(address)": [
+                212,
+                119
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump407": [
+                "owner.send(this.balance)",
+                "owner.send(this.balance)"
+            ],
+            "block407": [
+                "owner.send(this.balance)"
+            ]
+        }
+    },
+    "ERC20Basic": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                124,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "ERC20": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                180,
+                75
+            ],
+            "balanceOf(address)": [
+                615,
+                185
+            ],
+            "transferFrom(address,address,uint256)": [
+                324,
+                119
+            ],
+            "allowance(address,address)": [
+                913,
+                273
+            ],
+            "transfer(address,uint256)": [
+                812,
+                251
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "SafeERC20": {
+        "function_list": [
+            "safeTransfer(ERC20Basic,address,uint256)",
+            "safeTransferFrom(ERC20,address,address,uint256)",
+            "safeApprove(ERC20,address,uint256)"
+        ],
+        "initial_state": {
+            "safeTransfer(ERC20Basic,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "safeTransferFrom(ERC20,address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "safeApprove(ERC20,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "CanReclaimToken": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "reclaimToken(ERC20Basic)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "reclaimToken(ERC20Basic)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                246,
+                119
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump561": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "jump1243": [
+                "token.transfer(to, value)",
+                "token.transfer(to, value)"
+            ],
+            "block1243": [
+                "token.transfer(to, value)"
+            ],
+            "block561": [
+                "token.balanceOf(this)"
+            ]
+        }
+    },
+    "PortCoin": {
+        "function_list": [
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "PortCoin()",
+            "electNewMayor(address)",
+            "issue(address,uint256)",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "PortCoin()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "electNewMayor(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "issue(address,uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                324,
+                97
+            ],
+            "electNewMayor(address)": [
+                644,
+                185
+            ],
+            "issue(address,uint256)": [
+                798,
+                229
+            ],
+            "balanceOf(address)": [
+                711,
+                207
+            ],
+            "transferFrom(address,address,uint256)": [
+                468,
+                141
+            ],
+            "allowance(address,address)": [
+                1144,
+                295
+            ],
+            "transfer(address,uint256)": [
+                1043,
+                273
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "PortMayor": {
+        "function_list": [
+            "reclaimToken(ERC20Basic)",
+            "Ownable()",
+            "transferOwnership(address)",
+            "HasNoEther()",
+            "fallback()",
+            "reclaimEther()",
+            "PortMayor(address)",
+            "electNewMayor(address)",
+            "isEvent(address)",
+            "isValidTicket(address,uint8)",
+            "createEvent(address)",
+            "stringify(uint8)",
+            "attend(uint8,bytes32,bytes32,uint8)",
+            "issue(address,uint256)"
+        ],
+        "initial_state": {
+            "reclaimToken(ERC20Basic)": {
+                "argument": {},
+                "contract": {}
+            },
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "HasNoEther()": {
+                "argument": {},
+                "contract": {}
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {}
+            },
+            "reclaimEther()": {
+                "argument": {},
+                "contract": {}
+            },
+            "PortMayor(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "electNewMayor(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "isEvent(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "isValidTicket(address,uint8)": {
+                "argument": {
+                    "ticket": "uint8"
+                },
+                "contract": {}
+            },
+            "createEvent(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "stringify(uint8)": {
+                "argument": {
+                    "v": "uint8"
+                },
+                "contract": {}
+            },
+            "attend(uint8,bytes32,bytes32,uint8)": {
+                "argument": {
+                    "ticket": "uint8",
+                    "r": "bytes32",
+                    "s": "bytes32",
+                    "v": "uint8"
+                },
+                "contract": {}
+            },
+            "issue(address,uint256)": {
+                "argument": {
+                    "quantity": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "createEvent(address)": [
+                428,
+                141
+            ],
+            "isEvent(address)": [
+                940,
+                273
+            ],
+            "isValidTicket(address,uint8)": [
+                257,
+                97
+            ],
+            "stringify(uint8)": [
+                771,
+                251
+            ],
+            "electNewMayor(address)": [
+                1851,
+                926
+            ],
+            "issue(address,uint256)": [
+                3379,
+                21190
+            ],
+            "attend(uint8,bytes32,bytes32,uint8)": [
+                682,
+                229
+            ],
+            "reclaimEther()": [
+                659,
+                207
+            ],
+            "transferOwnership(address)": [
+                1031,
+                295
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump1851": [
+                "coin.electNewMayor(newMayor)",
+                "coin.electNewMayor(newMayor)"
+            ],
+            "jump2431": [
+                "coin.issue(to, quantity)",
+                "coin.issue(to, quantity)"
+            ],
+            "block2848": [
+                "ecrecover(keccak256(\"\\x19Ethereum Signed Message:\\n3\",stringify(ticket)),v,r,s)"
+            ],
+            "jump3379": [
+                "coin.issue(msg.sender, 1)",
+                "coin.issue(msg.sender, 1)"
+            ],
+            "jump1346": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "block3379": [
+                "coin.issue(msg.sender, 1)"
+            ],
+            "jump2623": [
+                "owner.send(this.balance)",
+                "owner.send(this.balance)"
+            ],
+            "jump4573": [
+                "token.transfer(to, value)",
+                "token.transfer(to, value)"
+            ],
+            "block1851": [
+                "coin.electNewMayor(newMayor)"
+            ],
+            "block4573": [
+                "token.transfer(to, value)"
+            ],
+            "block2431": [
+                "coin.issue(to, quantity)"
+            ],
+            "jump2848": [
+                "ecrecover(keccak256(\"\\x19Ethereum Signed Message:\\n3\",stringify(ticket)),v,r,s)",
+                "ecrecover(keccak256(\"\\x19Ethereum Signed Message:\\n3\",stringify(ticket)),v,r,s)"
+            ],
+            "block2623": [
+                "owner.send(this.balance)"
+            ],
+            "block1346": [
+                "token.balanceOf(this)"
+            ]
+        }
+    }
+}

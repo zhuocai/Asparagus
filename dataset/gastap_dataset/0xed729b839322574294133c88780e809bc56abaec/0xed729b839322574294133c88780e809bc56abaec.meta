@@ -1,0 +1,78 @@
+{
+    "token": {
+        "function_list": [
+            "transfer(address,uint256)"
+        ],
+        "initial_state": {
+            "transfer(address,uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transfer(address,uint256)": [
+                68,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "knuckCrowdsaleOne": {
+        "function_list": [
+            "knuckCrowdsaleOne(address,uint256,address)",
+            "fallback()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "knuckCrowdsaleOne(address,uint256,address)": {
+                "argument": {
+                    "CostOfEachKnuck": "uint256"
+                },
+                "contract": {
+                    "amountRaised": "uint256",
+                    "price": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "amountRaised": "uint256",
+                    "price": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {
+            "jump427": [
+                "knuckReward.transfer(msg.sender, ((amount / price) * 1 ether))",
+                "knuckReward.transfer(msg.sender, ((amount / price) * 1 ether))"
+            ],
+            "block427_0": [
+                "knuckReward.transfer(msg.sender, ((amount / price) * 1 ether))"
+            ],
+            "block427": [
+                "knuckReward.transfer(msg.sender, ((amount / price) * 1 ether))"
+            ],
+            "jump447_0": [
+                "beneficiary.transfer(amount)",
+                "beneficiary.transfer(amount)"
+            ],
+            "block447": [
+                "beneficiary.transfer(amount)"
+            ],
+            "jump447": [
+                "beneficiary.transfer(amount)",
+                "beneficiary.transfer(amount)"
+            ],
+            "jump427_0": [
+                "knuckReward.transfer(msg.sender, ((amount / price) * 1 ether))",
+                "knuckReward.transfer(msg.sender, ((amount / price) * 1 ether))"
+            ],
+            "block447_0": [
+                "beneficiary.transfer(amount)"
+            ]
+        }
+    }
+}

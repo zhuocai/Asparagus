@@ -1,0 +1,61 @@
+{
+    "ThreesigWallet": {
+        "function_list": [
+            "ThreesigWallet()",
+            "fallback()",
+            "proposeTx(address)",
+            "approveTx(uint8)"
+        ],
+        "initial_state": {
+            "ThreesigWallet()": {
+                "argument": {},
+                "contract": {
+                    "txs": "ThreesigWallet.Tx[]",
+                    "balance": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "txs": "ThreesigWallet.Tx[]",
+                    "balance": "uint256"
+                }
+            },
+            "proposeTx(address)": {
+                "argument": {},
+                "contract": {
+                    "txs": "ThreesigWallet.Tx[]",
+                    "balance": "uint256"
+                }
+            },
+            "approveTx(uint8)": {
+                "argument": {
+                    "txIdx": "uint8"
+                },
+                "contract": {
+                    "txs": "ThreesigWallet.Tx[]",
+                    "balance": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "proposeTx(address)": [
+                164,
+                97
+            ],
+            "approveTx(uint8)": [
+                116,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "block710": [
+                "txs[txIdx].destAddr.transfer(balance)"
+            ],
+            "jump710": [
+                "txs[txIdx].destAddr.transfer(balance)",
+                "txs[txIdx].destAddr.transfer(balance)"
+            ]
+        }
+    }
+}

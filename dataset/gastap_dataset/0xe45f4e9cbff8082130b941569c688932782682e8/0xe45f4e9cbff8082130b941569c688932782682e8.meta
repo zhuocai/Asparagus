@@ -1,0 +1,246 @@
+{
+    "ICO": {
+        "function_list": [
+            "invest(address)"
+        ],
+        "initial_state": {
+            "invest(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "invest(address)": [
+                68,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "SafeMath": {
+        "function_list": [
+            "safeAdd(uint256,uint256)",
+            "safeMul(uint256,uint256)"
+        ],
+        "initial_state": {
+            "safeAdd(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "safeMul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "owned": {
+        "function_list": [
+            "owned()",
+            "changeOwner(address)"
+        ],
+        "initial_state": {
+            "owned()": {
+                "argument": {},
+                "contract": {}
+            },
+            "changeOwner(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "changeOwner(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "mortal": {
+        "function_list": [
+            "owned()",
+            "changeOwner(address)",
+            "close()"
+        ],
+        "initial_state": {
+            "owned()": {
+                "argument": {},
+                "contract": {}
+            },
+            "changeOwner(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "close()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "close()": [
+                92,
+                75
+            ],
+            "changeOwner(address)": [
+                202,
+                119
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Reservation2": {
+        "function_list": [
+            "safeAdd(uint256,uint256)",
+            "safeMul(uint256,uint256)",
+            "close()",
+            "owned()",
+            "changeOwner(address)",
+            "Reservation2(address,uint256)",
+            "fallback()",
+            "buyTokens(uint256,uint256)",
+            "withdraw()",
+            "getNumInvestors()",
+            "setICO(address)"
+        ],
+        "initial_state": {
+            "safeAdd(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "investors": "address[]",
+                    "weiCap": "uint256"
+                }
+            },
+            "safeMul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "investors": "address[]",
+                    "weiCap": "uint256"
+                }
+            },
+            "close()": {
+                "argument": {},
+                "contract": {
+                    "investors": "address[]",
+                    "weiCap": "uint256"
+                }
+            },
+            "owned()": {
+                "argument": {},
+                "contract": {
+                    "investors": "address[]",
+                    "weiCap": "uint256"
+                }
+            },
+            "changeOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "investors": "address[]",
+                    "weiCap": "uint256"
+                }
+            },
+            "Reservation2(address,uint256)": {
+                "argument": {
+                    "_etherCap": "uint256"
+                },
+                "contract": {
+                    "investors": "address[]",
+                    "weiCap": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "investors": "address[]",
+                    "weiCap": "uint256"
+                }
+            },
+            "buyTokens(uint256,uint256)": {
+                "argument": {
+                    "_from": "uint256",
+                    "_to": "uint256"
+                },
+                "contract": {
+                    "investors": "address[]",
+                    "weiCap": "uint256"
+                }
+            },
+            "withdraw()": {
+                "argument": {},
+                "contract": {
+                    "investors": "address[]",
+                    "weiCap": "uint256"
+                }
+            },
+            "getNumInvestors()": {
+                "argument": {},
+                "contract": {
+                    "investors": "address[]",
+                    "weiCap": "uint256"
+                }
+            },
+            "setICO(address)": {
+                "argument": {},
+                "contract": {
+                    "investors": "address[]",
+                    "weiCap": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "getNumInvestors()": [
+                988,
+                185
+            ],
+            "buyTokens(uint256,uint256)": [
+                1031,
+                207
+            ],
+            "setICO(address)": [
+                1283,
+                295
+            ],
+            "withdraw()": [
+                659,
+                75
+            ],
+            "close()": [
+                791,
+                119
+            ],
+            "changeOwner(address)": [
+                1216,
+                273
+            ]
+        },
+        "block_CALL_mapping": {
+            "block2764": [
+                "ico.invest.value(amount)(investors[i])"
+            ],
+            "jump2764": [
+                "ico.invest.value(amount)(investors[i])",
+                "ico.invest.value(amount)(investors[i])"
+            ],
+            "block1475": [
+                "msg.sender.transfer(amount)"
+            ],
+            "jump1475": [
+                "msg.sender.transfer(amount)",
+                "msg.sender.transfer(amount)"
+            ]
+        }
+    }
+}

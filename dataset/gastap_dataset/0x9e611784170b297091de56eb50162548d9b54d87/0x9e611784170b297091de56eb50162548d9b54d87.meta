@@ -1,0 +1,101 @@
+{
+    "Crowdsale": {
+        "function_list": [
+            "invest(address)"
+        ],
+        "initial_state": {
+            "invest(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "invest(address)": [
+                68,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Investment": {
+        "function_list": [
+            "Investment()",
+            "fallback()",
+            "isInvestor(address)",
+            "buyTokens(uint256,uint256)",
+            "withdraw()",
+            "getNumInvestors()"
+        ],
+        "initial_state": {
+            "Investment()": {
+                "argument": {},
+                "contract": {
+                    "investors": "address[]"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "investors": "address[]"
+                }
+            },
+            "isInvestor(address)": {
+                "argument": {},
+                "contract": {
+                    "investors": "address[]"
+                }
+            },
+            "buyTokens(uint256,uint256)": {
+                "argument": {
+                    "from": "uint256",
+                    "to": "uint256"
+                },
+                "contract": {
+                    "investors": "address[]"
+                }
+            },
+            "withdraw()": {
+                "argument": {},
+                "contract": {
+                    "investors": "address[]"
+                }
+            },
+            "getNumInvestors()": {
+                "argument": {},
+                "contract": {
+                    "investors": "address[]"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "getNumInvestors()": [
+                634,
+                163
+            ],
+            "buyTokens(uint256,uint256)": [
+                677,
+                185
+            ],
+            "isInvestor(address)": [
+                732,
+                207
+            ],
+            "withdraw()": [
+                328,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "block1899": [
+                "ico.invest.value(amount)(investors[i])"
+            ],
+            "jump1899": [
+                "ico.invest.value(amount)(investors[i])",
+                "ico.invest.value(amount)(investors[i])"
+            ],
+            "block986": [
+                "msg.sender.send(balanceOf[msg.sender])"
+            ]
+        }
+    }
+}

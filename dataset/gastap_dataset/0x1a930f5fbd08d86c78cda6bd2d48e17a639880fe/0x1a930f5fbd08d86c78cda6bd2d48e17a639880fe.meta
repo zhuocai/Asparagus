@@ -1,0 +1,212 @@
+{
+    "ERC20": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                346,
+                97
+            ],
+            "balanceOf(address)": [
+                773,
+                207
+            ],
+            "transferFrom(address,address,uint256)": [
+                490,
+                141
+            ],
+            "allowance(address,address)": [
+                1394,
+                339
+            ],
+            "transfer(address,uint256)": [
+                1091,
+                273
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Ownable": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "HasNoTokens": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "extractTokens(address,address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "extractTokens(address,address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "extractTokens(address,address)": [
+                179,
+                97
+            ],
+            "transferOwnership(address)": [
+                278,
+                119
+            ]
+        },
+        "block_CALL_mapping": {
+            "block988": [
+                "token.transfer(_claimer, balance)"
+            ],
+            "block508": [
+                "_claimer.transfer(this.balance)"
+            ],
+            "block764": [
+                "token.balanceOf(this)"
+            ],
+            "jump764": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "jump988": [
+                "token.transfer(_claimer, balance)",
+                "token.transfer(_claimer, balance)"
+            ],
+            "jump508": [
+                "_claimer.transfer(this.balance)",
+                "_claimer.transfer(this.balance)"
+            ]
+        }
+    },
+    "BountyDistribute": {
+        "function_list": [
+            "extractTokens(address,address)",
+            "Ownable()",
+            "transferOwnership(address)",
+            "distributeTokens(address,address[],uint256[])"
+        ],
+        "initial_state": {
+            "extractTokens(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "distributeTokens(address,address[],uint256[])": {
+                "argument": {
+                    "_to": "address[]",
+                    "_value": "uint256[]"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "extractTokens(address,address)": [
+                305,
+                119
+            ],
+            "distributeTokens(address,address[],uint256[])": [
+                103,
+                75
+            ],
+            "transferOwnership(address)": [
+                404,
+                141
+            ]
+        },
+        "block_CALL_mapping": {
+            "block1554": [
+                "token.transfer(_claimer, balance)"
+            ],
+            "jump829": [
+                "token.transfer(_to[i], _value[i])",
+                "token.transfer(_to[i], _value[i])"
+            ],
+            "block1330": [
+                "token.balanceOf(this)"
+            ],
+            "block1074": [
+                "_claimer.transfer(this.balance)"
+            ],
+            "block829": [
+                "token.transfer(_to[i], _value[i])"
+            ],
+            "jump1330": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "jump1074": [
+                "_claimer.transfer(this.balance)",
+                "_claimer.transfer(this.balance)"
+            ],
+            "jump1554": [
+                "token.transfer(_claimer, balance)",
+                "token.transfer(_claimer, balance)"
+            ]
+        }
+    }
+}

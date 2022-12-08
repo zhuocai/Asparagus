@@ -1,0 +1,187 @@
+{
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)",
+            "max64(uint64,uint64)",
+            "min64(uint64,uint64)",
+            "max256(uint256,uint256)",
+            "min256(uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "max64(uint64,uint64)": {
+                "argument": {
+                    "a": "uint64",
+                    "b": "uint64"
+                },
+                "contract": {}
+            },
+            "min64(uint64,uint64)": {
+                "argument": {
+                    "a": "uint64",
+                    "b": "uint64"
+                },
+                "contract": {}
+            },
+            "max256(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "min256(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "token": {
+        "function_list": [
+            "transfer(address,uint256)",
+            "balanceOf(address)"
+        ],
+        "initial_state": {
+            "transfer(address,uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transfer(address,uint256)": [
+                68,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Crowdsale": {
+        "function_list": [
+            "Crowdsale()",
+            "fallback()",
+            "safeWithdrawal()"
+        ],
+        "initial_state": {
+            "Crowdsale()": {
+                "argument": {},
+                "contract": {
+                    "tokenBalance": "uint256",
+                    "amountRaised": "uint256",
+                    "deadline": "uint256",
+                    "dollar_exchange": "uint256",
+                    "test_factor": "uint256",
+                    "start_time": "uint256",
+                    "price": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "tokenBalance": "uint256",
+                    "amountRaised": "uint256",
+                    "deadline": "uint256",
+                    "dollar_exchange": "uint256",
+                    "test_factor": "uint256",
+                    "start_time": "uint256",
+                    "price": "uint256"
+                }
+            },
+            "safeWithdrawal()": {
+                "argument": {},
+                "contract": {
+                    "tokenBalance": "uint256",
+                    "amountRaised": "uint256",
+                    "deadline": "uint256",
+                    "dollar_exchange": "uint256",
+                    "test_factor": "uint256",
+                    "start_time": "uint256",
+                    "price": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "safeWithdrawal()": [
+                1261,
+                207
+            ]
+        },
+        "block_CALL_mapping": {
+            "block723_0": [
+                "tokenReward.transfer(msg.sender, SafeMath.div(amount * 1 ether, price))"
+            ],
+            "jump2240": [
+                "tokenReward.transfer(beneficiary, tokenReward.balanceOf(this))",
+                "tokenReward.transfer(beneficiary, tokenReward.balanceOf(this))"
+            ],
+            "jump1516": [
+                "beneficiary.send(amountRaised)",
+                "beneficiary.send(amountRaised)"
+            ],
+            "block2048": [
+                "tokenReward.balanceOf(this)"
+            ],
+            "jump723": [
+                "tokenReward.transfer(msg.sender, SafeMath.div(amount * 1 ether, price))",
+                "tokenReward.transfer(msg.sender, SafeMath.div(amount * 1 ether, price))"
+            ],
+            "block1516": [
+                "beneficiary.send(amountRaised)"
+            ],
+            "block2240": [
+                "tokenReward.transfer(beneficiary, tokenReward.balanceOf(this))"
+            ],
+            "jump723_0": [
+                "tokenReward.transfer(msg.sender, SafeMath.div(amount * 1 ether, price))",
+                "tokenReward.transfer(msg.sender, SafeMath.div(amount * 1 ether, price))"
+            ],
+            "block723": [
+                "tokenReward.transfer(msg.sender, SafeMath.div(amount * 1 ether, price))"
+            ],
+            "jump2048": [
+                "tokenReward.balanceOf(this)",
+                "tokenReward.balanceOf(this)"
+            ]
+        }
+    }
+}

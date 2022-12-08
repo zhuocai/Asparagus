@@ -1,0 +1,134 @@
+{
+    "Token": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                402,
+                141
+            ],
+            "transfer(address,uint256)": [
+                489,
+                163
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "BonusDealer": {
+        "function_list": [
+            "BonusDealer()",
+            "bonusCalculation(uint256)",
+            "recursiveCalculation()",
+            "payDiff(address,uint256)",
+            "withdrawNexiums(address)",
+            "fallback()"
+        ],
+        "initial_state": {
+            "BonusDealer()": {
+                "argument": {},
+                "contract": {
+                    "totalDistributed": "uint256",
+                    "paidAddress": "address[]",
+                    "bonuses": "BonusDealer.Bonus[]",
+                    "nxcBought": "uint256"
+                }
+            },
+            "bonusCalculation(uint256)": {
+                "argument": {
+                    "_nxcBought": "uint256"
+                },
+                "contract": {
+                    "totalDistributed": "uint256",
+                    "paidAddress": "address[]",
+                    "bonuses": "BonusDealer.Bonus[]",
+                    "nxcBought": "uint256"
+                }
+            },
+            "recursiveCalculation()": {
+                "argument": {},
+                "contract": {
+                    "totalDistributed": "uint256",
+                    "paidAddress": "address[]",
+                    "bonuses": "BonusDealer.Bonus[]",
+                    "nxcBought": "uint256"
+                }
+            },
+            "payDiff(address,uint256)": {
+                "argument": {
+                    "totalNxcBought": "uint256"
+                },
+                "contract": {
+                    "totalDistributed": "uint256",
+                    "paidAddress": "address[]",
+                    "bonuses": "BonusDealer.Bonus[]",
+                    "nxcBought": "uint256"
+                }
+            },
+            "withdrawNexiums(address)": {
+                "argument": {},
+                "contract": {
+                    "totalDistributed": "uint256",
+                    "paidAddress": "address[]",
+                    "bonuses": "BonusDealer.Bonus[]",
+                    "nxcBought": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "totalDistributed": "uint256",
+                    "paidAddress": "address[]",
+                    "bonuses": "BonusDealer.Bonus[]",
+                    "nxcBought": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "withdrawNexiums(address)": [
+                562,
+                110
+            ],
+            "payDiff(address,uint256)": [
+                485,
+                88
+            ]
+        },
+        "block_CALL_mapping": {
+            "block2176": [
+                "nexium.balanceOf(this)"
+            ],
+            "block1566": [
+                "nexium.transfer(backer, totalToPay)"
+            ],
+            "jump2368": [
+                "nexium.transfer(a, nexium.balanceOf(this))",
+                "nexium.transfer(a, nexium.balanceOf(this))"
+            ],
+            "jump2176": [
+                "nexium.balanceOf(this)",
+                "nexium.balanceOf(this)"
+            ],
+            "block2368": [
+                "nexium.transfer(a, nexium.balanceOf(this))"
+            ],
+            "jump1566": [
+                "nexium.transfer(backer, totalToPay)",
+                "nexium.transfer(backer, totalToPay)"
+            ]
+        }
+    }
+}

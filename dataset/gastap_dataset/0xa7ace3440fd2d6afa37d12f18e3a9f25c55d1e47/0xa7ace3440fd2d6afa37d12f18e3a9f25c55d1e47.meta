@@ -1,0 +1,520 @@
+{
+    "TreeLib": {
+        "function_list": [
+            "addInterval(TreeLib.Tree,uint256,uint256,bytes32)",
+            "getInterval(TreeLib.Tree,uint256)",
+            "search(TreeLib.Tree,uint256)",
+            "_createInterval(TreeLib.Tree,uint256,uint256,bytes32)",
+            "_createNode(TreeLib.Tree)",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "addInterval(TreeLib.Tree,uint256,uint256,bytes32)": {
+                "argument": {
+                    "begin": "uint256",
+                    "end": "uint256",
+                    "data": "bytes32"
+                },
+                "contract": {
+                    "SEARCH_DONE": "uint8",
+                    "SEARCH_EARLIER": "uint8",
+                    "SEARCH_LATER": "uint8"
+                }
+            },
+            "getInterval(TreeLib.Tree,uint256)": {
+                "argument": {
+                    "intervalID": "uint256"
+                },
+                "contract": {
+                    "SEARCH_DONE": "uint8",
+                    "SEARCH_EARLIER": "uint8",
+                    "SEARCH_LATER": "uint8"
+                }
+            },
+            "search(TreeLib.Tree,uint256)": {
+                "argument": {
+                    "point": "uint256"
+                },
+                "contract": {
+                    "SEARCH_DONE": "uint8",
+                    "SEARCH_EARLIER": "uint8",
+                    "SEARCH_LATER": "uint8"
+                }
+            },
+            "_createInterval(TreeLib.Tree,uint256,uint256,bytes32)": {
+                "argument": {
+                    "begin": "uint256",
+                    "end": "uint256",
+                    "data": "bytes32"
+                },
+                "contract": {
+                    "SEARCH_DONE": "uint8",
+                    "SEARCH_EARLIER": "uint8",
+                    "SEARCH_LATER": "uint8"
+                }
+            },
+            "_createNode(TreeLib.Tree)": {
+                "argument": {},
+                "contract": {
+                    "SEARCH_DONE": "uint8",
+                    "SEARCH_EARLIER": "uint8",
+                    "SEARCH_LATER": "uint8"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "SEARCH_DONE": "uint8",
+                    "SEARCH_EARLIER": "uint8",
+                    "SEARCH_LATER": "uint8"
+                }
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "IntervalLib": {
+        "function_list": [],
+        "initial_state": {},
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "GroveLib": {
+        "function_list": [
+            "max(uint256,uint256)",
+            "getNodeId(GroveLib.Index,bytes32)",
+            "getNodeValue(GroveLib.Index,bytes32)",
+            "getNodeHeight(GroveLib.Index,bytes32)",
+            "getNodeParent(GroveLib.Index,bytes32)",
+            "getNodeLeftChild(GroveLib.Index,bytes32)",
+            "getNodeRightChild(GroveLib.Index,bytes32)",
+            "getPreviousNode(GroveLib.Index,bytes32)",
+            "getNextNode(GroveLib.Index,bytes32)",
+            "insert(GroveLib.Index,bytes32,int256)",
+            "exists(GroveLib.Index,bytes32)",
+            "remove(GroveLib.Index,bytes32)",
+            "_compare(int256,bytes2,int256)",
+            "_getMaximum(GroveLib.Index,bytes32)",
+            "_getMinimum(GroveLib.Index,bytes32)",
+            "query(GroveLib.Index,bytes2,int256)",
+            "_rebalanceTree(GroveLib.Index,bytes32)",
+            "_getBalanceFactor(GroveLib.Index,bytes32)",
+            "_updateNodeHeight(GroveLib.Index,bytes32)",
+            "_rotateLeft(GroveLib.Index,bytes32)",
+            "_rotateRight(GroveLib.Index,bytes32)",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "max(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "GT": "bytes2",
+                    "LT": "bytes2",
+                    "GTE": "bytes2",
+                    "LTE": "bytes2",
+                    "EQ": "bytes2"
+                }
+            },
+            "getNodeId(GroveLib.Index,bytes32)": {
+                "argument": {
+                    "id": "bytes32"
+                },
+                "contract": {
+                    "GT": "bytes2",
+                    "LT": "bytes2",
+                    "GTE": "bytes2",
+                    "LTE": "bytes2",
+                    "EQ": "bytes2"
+                }
+            },
+            "getNodeValue(GroveLib.Index,bytes32)": {
+                "argument": {
+                    "id": "bytes32"
+                },
+                "contract": {
+                    "GT": "bytes2",
+                    "LT": "bytes2",
+                    "GTE": "bytes2",
+                    "LTE": "bytes2",
+                    "EQ": "bytes2"
+                }
+            },
+            "getNodeHeight(GroveLib.Index,bytes32)": {
+                "argument": {
+                    "id": "bytes32"
+                },
+                "contract": {
+                    "GT": "bytes2",
+                    "LT": "bytes2",
+                    "GTE": "bytes2",
+                    "LTE": "bytes2",
+                    "EQ": "bytes2"
+                }
+            },
+            "getNodeParent(GroveLib.Index,bytes32)": {
+                "argument": {
+                    "id": "bytes32"
+                },
+                "contract": {
+                    "GT": "bytes2",
+                    "LT": "bytes2",
+                    "GTE": "bytes2",
+                    "LTE": "bytes2",
+                    "EQ": "bytes2"
+                }
+            },
+            "getNodeLeftChild(GroveLib.Index,bytes32)": {
+                "argument": {
+                    "id": "bytes32"
+                },
+                "contract": {
+                    "GT": "bytes2",
+                    "LT": "bytes2",
+                    "GTE": "bytes2",
+                    "LTE": "bytes2",
+                    "EQ": "bytes2"
+                }
+            },
+            "getNodeRightChild(GroveLib.Index,bytes32)": {
+                "argument": {
+                    "id": "bytes32"
+                },
+                "contract": {
+                    "GT": "bytes2",
+                    "LT": "bytes2",
+                    "GTE": "bytes2",
+                    "LTE": "bytes2",
+                    "EQ": "bytes2"
+                }
+            },
+            "getPreviousNode(GroveLib.Index,bytes32)": {
+                "argument": {
+                    "id": "bytes32"
+                },
+                "contract": {
+                    "GT": "bytes2",
+                    "LT": "bytes2",
+                    "GTE": "bytes2",
+                    "LTE": "bytes2",
+                    "EQ": "bytes2"
+                }
+            },
+            "getNextNode(GroveLib.Index,bytes32)": {
+                "argument": {
+                    "id": "bytes32"
+                },
+                "contract": {
+                    "GT": "bytes2",
+                    "LT": "bytes2",
+                    "GTE": "bytes2",
+                    "LTE": "bytes2",
+                    "EQ": "bytes2"
+                }
+            },
+            "insert(GroveLib.Index,bytes32,int256)": {
+                "argument": {
+                    "id": "bytes32"
+                },
+                "contract": {
+                    "GT": "bytes2",
+                    "LT": "bytes2",
+                    "GTE": "bytes2",
+                    "LTE": "bytes2",
+                    "EQ": "bytes2"
+                }
+            },
+            "exists(GroveLib.Index,bytes32)": {
+                "argument": {
+                    "id": "bytes32"
+                },
+                "contract": {
+                    "GT": "bytes2",
+                    "LT": "bytes2",
+                    "GTE": "bytes2",
+                    "LTE": "bytes2",
+                    "EQ": "bytes2"
+                }
+            },
+            "remove(GroveLib.Index,bytes32)": {
+                "argument": {
+                    "id": "bytes32"
+                },
+                "contract": {
+                    "GT": "bytes2",
+                    "LT": "bytes2",
+                    "GTE": "bytes2",
+                    "LTE": "bytes2",
+                    "EQ": "bytes2"
+                }
+            },
+            "_compare(int256,bytes2,int256)": {
+                "argument": {
+                    "operator": "bytes2"
+                },
+                "contract": {
+                    "GT": "bytes2",
+                    "LT": "bytes2",
+                    "GTE": "bytes2",
+                    "LTE": "bytes2",
+                    "EQ": "bytes2"
+                }
+            },
+            "_getMaximum(GroveLib.Index,bytes32)": {
+                "argument": {
+                    "id": "bytes32"
+                },
+                "contract": {
+                    "GT": "bytes2",
+                    "LT": "bytes2",
+                    "GTE": "bytes2",
+                    "LTE": "bytes2",
+                    "EQ": "bytes2"
+                }
+            },
+            "_getMinimum(GroveLib.Index,bytes32)": {
+                "argument": {
+                    "id": "bytes32"
+                },
+                "contract": {
+                    "GT": "bytes2",
+                    "LT": "bytes2",
+                    "GTE": "bytes2",
+                    "LTE": "bytes2",
+                    "EQ": "bytes2"
+                }
+            },
+            "query(GroveLib.Index,bytes2,int256)": {
+                "argument": {
+                    "operator": "bytes2"
+                },
+                "contract": {
+                    "GT": "bytes2",
+                    "LT": "bytes2",
+                    "GTE": "bytes2",
+                    "LTE": "bytes2",
+                    "EQ": "bytes2"
+                }
+            },
+            "_rebalanceTree(GroveLib.Index,bytes32)": {
+                "argument": {
+                    "id": "bytes32"
+                },
+                "contract": {
+                    "GT": "bytes2",
+                    "LT": "bytes2",
+                    "GTE": "bytes2",
+                    "LTE": "bytes2",
+                    "EQ": "bytes2"
+                }
+            },
+            "_getBalanceFactor(GroveLib.Index,bytes32)": {
+                "argument": {
+                    "id": "bytes32"
+                },
+                "contract": {
+                    "GT": "bytes2",
+                    "LT": "bytes2",
+                    "GTE": "bytes2",
+                    "LTE": "bytes2",
+                    "EQ": "bytes2"
+                }
+            },
+            "_updateNodeHeight(GroveLib.Index,bytes32)": {
+                "argument": {
+                    "id": "bytes32"
+                },
+                "contract": {
+                    "GT": "bytes2",
+                    "LT": "bytes2",
+                    "GTE": "bytes2",
+                    "LTE": "bytes2",
+                    "EQ": "bytes2"
+                }
+            },
+            "_rotateLeft(GroveLib.Index,bytes32)": {
+                "argument": {
+                    "id": "bytes32"
+                },
+                "contract": {
+                    "GT": "bytes2",
+                    "LT": "bytes2",
+                    "GTE": "bytes2",
+                    "LTE": "bytes2",
+                    "EQ": "bytes2"
+                }
+            },
+            "_rotateRight(GroveLib.Index,bytes32)": {
+                "argument": {
+                    "id": "bytes32"
+                },
+                "contract": {
+                    "GT": "bytes2",
+                    "LT": "bytes2",
+                    "GTE": "bytes2",
+                    "LTE": "bytes2",
+                    "EQ": "bytes2"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "GT": "bytes2",
+                    "LT": "bytes2",
+                    "GTE": "bytes2",
+                    "LTE": "bytes2",
+                    "EQ": "bytes2"
+                }
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "ListLib": {
+        "function_list": [
+            "createNew()",
+            "createNew(uint256)",
+            "add(ListLib.List,uint256,uint256,uint256)",
+            "matching(ListLib.List,uint256)",
+            "_begin(ListLib.List,bytes32)",
+            "_end(ListLib.List,bytes32)",
+            "_next(ListLib.List,bytes32)",
+            "_previous(ListLib.List,bytes32)",
+            "_getBeginIndexKey(uint256)",
+            "_getEndIndexKey(uint256)",
+            "_getBegin(int256)",
+            "_getEnd(int256)",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "createNew()": {
+                "argument": {},
+                "contract": {
+                    "SEARCH_DONE": "uint8",
+                    "SEARCH_EARLIER": "uint8",
+                    "SEARCH_LATER": "uint8"
+                }
+            },
+            "createNew(uint256)": {
+                "argument": {
+                    "id": "uint256"
+                },
+                "contract": {
+                    "SEARCH_DONE": "uint8",
+                    "SEARCH_EARLIER": "uint8",
+                    "SEARCH_LATER": "uint8"
+                }
+            },
+            "add(ListLib.List,uint256,uint256,uint256)": {
+                "argument": {
+                    "begin": "uint256",
+                    "end": "uint256",
+                    "intervalID": "uint256"
+                },
+                "contract": {
+                    "SEARCH_DONE": "uint8",
+                    "SEARCH_EARLIER": "uint8",
+                    "SEARCH_LATER": "uint8"
+                }
+            },
+            "matching(ListLib.List,uint256)": {
+                "argument": {
+                    "point": "uint256"
+                },
+                "contract": {
+                    "SEARCH_DONE": "uint8",
+                    "SEARCH_EARLIER": "uint8",
+                    "SEARCH_LATER": "uint8"
+                }
+            },
+            "_begin(ListLib.List,bytes32)": {
+                "argument": {
+                    "indexNode": "bytes32"
+                },
+                "contract": {
+                    "SEARCH_DONE": "uint8",
+                    "SEARCH_EARLIER": "uint8",
+                    "SEARCH_LATER": "uint8"
+                }
+            },
+            "_end(ListLib.List,bytes32)": {
+                "argument": {
+                    "indexNode": "bytes32"
+                },
+                "contract": {
+                    "SEARCH_DONE": "uint8",
+                    "SEARCH_EARLIER": "uint8",
+                    "SEARCH_LATER": "uint8"
+                }
+            },
+            "_next(ListLib.List,bytes32)": {
+                "argument": {
+                    "cur": "bytes32"
+                },
+                "contract": {
+                    "SEARCH_DONE": "uint8",
+                    "SEARCH_EARLIER": "uint8",
+                    "SEARCH_LATER": "uint8"
+                }
+            },
+            "_previous(ListLib.List,bytes32)": {
+                "argument": {
+                    "cur": "bytes32"
+                },
+                "contract": {
+                    "SEARCH_DONE": "uint8",
+                    "SEARCH_EARLIER": "uint8",
+                    "SEARCH_LATER": "uint8"
+                }
+            },
+            "_getBeginIndexKey(uint256)": {
+                "argument": {
+                    "begin": "uint256"
+                },
+                "contract": {
+                    "SEARCH_DONE": "uint8",
+                    "SEARCH_EARLIER": "uint8",
+                    "SEARCH_LATER": "uint8"
+                }
+            },
+            "_getEndIndexKey(uint256)": {
+                "argument": {
+                    "end": "uint256"
+                },
+                "contract": {
+                    "SEARCH_DONE": "uint8",
+                    "SEARCH_EARLIER": "uint8",
+                    "SEARCH_LATER": "uint8"
+                }
+            },
+            "_getBegin(int256)": {
+                "argument": {},
+                "contract": {
+                    "SEARCH_DONE": "uint8",
+                    "SEARCH_EARLIER": "uint8",
+                    "SEARCH_LATER": "uint8"
+                }
+            },
+            "_getEnd(int256)": {
+                "argument": {},
+                "contract": {
+                    "SEARCH_DONE": "uint8",
+                    "SEARCH_EARLIER": "uint8",
+                    "SEARCH_LATER": "uint8"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "SEARCH_DONE": "uint8",
+                    "SEARCH_EARLIER": "uint8",
+                    "SEARCH_LATER": "uint8"
+                }
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    }
+}

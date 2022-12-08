@@ -1,0 +1,108 @@
+{
+    "TrustWallet": {
+        "function_list": [
+            "isTransactionPending()",
+            "TrustWallet(address)",
+            "fallback()",
+            "initiateTransaction(address,uint256,bytes)",
+            "executeTransaction()",
+            "cancelTransaction()",
+            "addUser(address,uint256)",
+            "removeUser(address)"
+        ],
+        "initial_state": {
+            "isTransactionPending()": {
+                "argument": {},
+                "contract": {
+                    "transactions": "TrustWallet.Transaction[]",
+                    "userAddresses": "address[]"
+                }
+            },
+            "TrustWallet(address)": {
+                "argument": {},
+                "contract": {
+                    "transactions": "TrustWallet.Transaction[]",
+                    "userAddresses": "address[]"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "transactions": "TrustWallet.Transaction[]",
+                    "userAddresses": "address[]"
+                }
+            },
+            "initiateTransaction(address,uint256,bytes)": {
+                "argument": {
+                    "_value": "uint256",
+                    "_data": "bytes"
+                },
+                "contract": {
+                    "transactions": "TrustWallet.Transaction[]",
+                    "userAddresses": "address[]"
+                }
+            },
+            "executeTransaction()": {
+                "argument": {},
+                "contract": {
+                    "transactions": "TrustWallet.Transaction[]",
+                    "userAddresses": "address[]"
+                }
+            },
+            "cancelTransaction()": {
+                "argument": {},
+                "contract": {
+                    "transactions": "TrustWallet.Transaction[]",
+                    "userAddresses": "address[]"
+                }
+            },
+            "addUser(address,uint256)": {
+                "argument": {
+                    "new_user_time": "uint256"
+                },
+                "contract": {
+                    "transactions": "TrustWallet.Transaction[]",
+                    "userAddresses": "address[]"
+                }
+            },
+            "removeUser(address)": {
+                "argument": {},
+                "contract": {
+                    "transactions": "TrustWallet.Transaction[]",
+                    "userAddresses": "address[]"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "initiateTransaction(address,uint256,bytes)": [
+                167,
+                97
+            ],
+            "executeTransaction()": [
+                144,
+                75
+            ],
+            "removeUser(address)": [
+                446,
+                163
+            ],
+            "cancelTransaction()": [
+                423,
+                141
+            ],
+            "addUser(address,uint256)": [
+                1074,
+                229
+            ]
+        },
+        "block_CALL_mapping": {
+            "block1769": [
+                "transaction.destination.call.value(transaction.value)(transaction.data)"
+            ],
+            "jump1769": [
+                "transaction.destination.call.value(transaction.value)(transaction.data)",
+                "transaction.destination.call.value(transaction.value)(transaction.data)"
+            ]
+        }
+    }
+}

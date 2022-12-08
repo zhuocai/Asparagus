@@ -1,0 +1,822 @@
+{
+    "ClockAuctionBase": {
+        "function_list": [
+            "fallback()",
+            "_owns(address,address,uint256)",
+            "_escrow(address,address,uint256)",
+            "_transfer(address,address,uint256)",
+            "_addAuction(address,uint256,ClockAuctionBase.Auction)",
+            "_cancelAuction(address,uint256,address)",
+            "_bid(address,uint256,uint256)",
+            "_removeAuction(address,uint256)",
+            "_isOnAuction(ClockAuctionBase.Auction)",
+            "_currentPrice(ClockAuctionBase.Auction)",
+            "_computeCurrentPrice(uint256,uint256,uint256,uint256)",
+            "_computeCut(uint256)",
+            "_getNft(address)"
+        ],
+        "initial_state": {
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "ownerCut": "uint256"
+                }
+            },
+            "_owns(address,address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "ownerCut": "uint256"
+                }
+            },
+            "_escrow(address,address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "ownerCut": "uint256"
+                }
+            },
+            "_transfer(address,address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "ownerCut": "uint256"
+                }
+            },
+            "_addAuction(address,uint256,ClockAuctionBase.Auction)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "ownerCut": "uint256"
+                }
+            },
+            "_cancelAuction(address,uint256,address)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "ownerCut": "uint256"
+                }
+            },
+            "_bid(address,uint256,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256",
+                    "_bidAmount": "uint256"
+                },
+                "contract": {
+                    "ownerCut": "uint256"
+                }
+            },
+            "_removeAuction(address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "ownerCut": "uint256"
+                }
+            },
+            "_isOnAuction(ClockAuctionBase.Auction)": {
+                "argument": {},
+                "contract": {
+                    "ownerCut": "uint256"
+                }
+            },
+            "_currentPrice(ClockAuctionBase.Auction)": {
+                "argument": {},
+                "contract": {
+                    "ownerCut": "uint256"
+                }
+            },
+            "_computeCurrentPrice(uint256,uint256,uint256,uint256)": {
+                "argument": {
+                    "_startingPrice": "uint256",
+                    "_endingPrice": "uint256",
+                    "_duration": "uint256",
+                    "_secondsPassed": "uint256"
+                },
+                "contract": {
+                    "ownerCut": "uint256"
+                }
+            },
+            "_computeCut(uint256)": {
+                "argument": {
+                    "_price": "uint256"
+                },
+                "contract": {
+                    "ownerCut": "uint256"
+                }
+            },
+            "_getNft(address)": {
+                "argument": {},
+                "contract": {
+                    "ownerCut": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "Ownable": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Pausable": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "pause()",
+            "unpause()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "pause()": {
+                "argument": {},
+                "contract": {}
+            },
+            "unpause()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "pause()": [
+                184,
+                119
+            ],
+            "unpause()": [
+                114,
+                75
+            ],
+            "transferOwnership(address)": [
+                294,
+                163
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "ClockAuction": {
+        "function_list": [
+            "fallback()",
+            "_owns(address,address,uint256)",
+            "_escrow(address,address,uint256)",
+            "_transfer(address,address,uint256)",
+            "_addAuction(address,uint256,ClockAuctionBase.Auction)",
+            "_cancelAuction(address,uint256,address)",
+            "_bid(address,uint256,uint256)",
+            "_removeAuction(address,uint256)",
+            "_isOnAuction(ClockAuctionBase.Auction)",
+            "_currentPrice(ClockAuctionBase.Auction)",
+            "_computeCurrentPrice(uint256,uint256,uint256,uint256)",
+            "_computeCut(uint256)",
+            "_getNft(address)",
+            "pause()",
+            "unpause()",
+            "Ownable()",
+            "transferOwnership(address)",
+            "ClockAuction(uint256)",
+            "withdrawBalance()",
+            "createAuction(address,uint256,uint256,uint256,uint256,address)",
+            "bid(address,uint256)",
+            "cancelAuction(address,uint256)",
+            "cancelAuctionWhenPaused(address,uint256)",
+            "getAuction(address,uint256)",
+            "getCurrentPrice(address,uint256)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "fallback()": {
+                "argument": {},
+                "contract": {}
+            },
+            "_owns(address,address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {}
+            },
+            "_escrow(address,address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {}
+            },
+            "_transfer(address,address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {}
+            },
+            "_addAuction(address,uint256,ClockAuctionBase.Auction)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {}
+            },
+            "_cancelAuction(address,uint256,address)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {}
+            },
+            "_bid(address,uint256,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256",
+                    "_bidAmount": "uint256"
+                },
+                "contract": {}
+            },
+            "_removeAuction(address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {}
+            },
+            "_isOnAuction(ClockAuctionBase.Auction)": {
+                "argument": {},
+                "contract": {}
+            },
+            "_currentPrice(ClockAuctionBase.Auction)": {
+                "argument": {},
+                "contract": {}
+            },
+            "_computeCurrentPrice(uint256,uint256,uint256,uint256)": {
+                "argument": {
+                    "_startingPrice": "uint256",
+                    "_endingPrice": "uint256",
+                    "_duration": "uint256",
+                    "_secondsPassed": "uint256"
+                },
+                "contract": {}
+            },
+            "_computeCut(uint256)": {
+                "argument": {
+                    "_price": "uint256"
+                },
+                "contract": {}
+            },
+            "_getNft(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "pause()": {
+                "argument": {},
+                "contract": {}
+            },
+            "unpause()": {
+                "argument": {},
+                "contract": {}
+            },
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "ClockAuction(uint256)": {
+                "argument": {
+                    "_cut": "uint256"
+                },
+                "contract": {}
+            },
+            "withdrawBalance()": {
+                "argument": {},
+                "contract": {}
+            },
+            "createAuction(address,uint256,uint256,uint256,uint256,address)": {
+                "argument": {
+                    "_tokenId": "uint256",
+                    "_startingPrice": "uint256",
+                    "_endingPrice": "uint256",
+                    "_duration": "uint256"
+                },
+                "contract": {}
+            },
+            "bid(address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {}
+            },
+            "cancelAuction(address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {}
+            },
+            "cancelAuctionWhenPaused(address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {}
+            },
+            "getAuction(address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {}
+            },
+            "getCurrentPrice(address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "pause()": [
+                755,
+                251
+            ],
+            "cancelAuctionWhenPaused(address,uint256)": [
+                212,
+                75
+            ],
+            "getCurrentPrice(address,uint256)": [
+                446,
+                185
+            ],
+            "unpause()": [
+                289,
+                97
+            ],
+            "createAuction(address,uint256,uint256,uint256,uint256,address)": [
+                942,
+                317
+            ],
+            "getAuction(address,uint256)": [
+                543,
+                207
+            ],
+            "cancelAuction(address,uint256)": [
+                778,
+                273
+            ],
+            "withdrawBalance()": [
+                423,
+                163
+            ],
+            "bid(address,uint256)": [
+                312,
+                119
+            ],
+            "transferOwnership(address)": [
+                1081,
+                339
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump6152_1": [
+                "candidateContract.implementsERC721()",
+                "candidateContract.implementsERC721()"
+            ],
+            "jump6152_0": [
+                "candidateContract.implementsERC721()",
+                "candidateContract.implementsERC721()"
+            ],
+            "jump6152_3": [
+                "candidateContract.implementsERC721()",
+                "candidateContract.implementsERC721()"
+            ],
+            "jump6152_2": [
+                "candidateContract.implementsERC721()",
+                "candidateContract.implementsERC721()"
+            ],
+            "block4289_0": [
+                "nonFungibleContract.transfer(_receiver, _tokenId)"
+            ],
+            "block4289_1": [
+                "nonFungibleContract.transfer(_receiver, _tokenId)"
+            ],
+            "jump4289_0": [
+                "nonFungibleContract.transfer(_receiver, _tokenId)",
+                "nonFungibleContract.transfer(_receiver, _tokenId)"
+            ],
+            "jump4289_1": [
+                "nonFungibleContract.transfer(_receiver, _tokenId)",
+                "nonFungibleContract.transfer(_receiver, _tokenId)"
+            ],
+            "jump3852": [
+                "seller.transfer(sellerProceeds)",
+                "seller.transfer(sellerProceeds)"
+            ],
+            "block6152_2": [
+                "candidateContract.implementsERC721()"
+            ],
+            "block6152_1": [
+                "candidateContract.implementsERC721()"
+            ],
+            "block6152_0": [
+                "candidateContract.implementsERC721()"
+            ],
+            "jump1776": [
+                "msg.sender.transfer(this.balance)",
+                "msg.sender.transfer(this.balance)"
+            ],
+            "jump5030": [
+                "nonFungibleContract.transferFrom(_owner, this, _tokenId)",
+                "nonFungibleContract.transferFrom(_owner, this, _tokenId)"
+            ],
+            "block6152": [
+                "candidateContract.implementsERC721()"
+            ],
+            "block1776": [
+                "msg.sender.transfer(this.balance)"
+            ],
+            "jump4710": [
+                "nonFungibleContract.ownerOf(_tokenId)",
+                "nonFungibleContract.ownerOf(_tokenId)"
+            ],
+            "jump6152": [
+                "candidateContract.implementsERC721()",
+                "candidateContract.implementsERC721()"
+            ],
+            "block3852": [
+                "seller.transfer(sellerProceeds)"
+            ],
+            "block6152_3": [
+                "candidateContract.implementsERC721()"
+            ],
+            "block4289": [
+                "nonFungibleContract.transfer(_receiver, _tokenId)"
+            ],
+            "jump4289": [
+                "nonFungibleContract.transfer(_receiver, _tokenId)",
+                "nonFungibleContract.transfer(_receiver, _tokenId)"
+            ],
+            "block5030": [
+                "nonFungibleContract.transferFrom(_owner, this, _tokenId)"
+            ],
+            "block4710": [
+                "nonFungibleContract.ownerOf(_tokenId)"
+            ]
+        }
+    },
+    "SaleClockAuction": {
+        "function_list": [
+            "ClockAuction(uint256)",
+            "withdrawBalance()",
+            "createAuction(address,uint256,uint256,uint256,uint256,address)",
+            "bid(address,uint256)",
+            "cancelAuction(address,uint256)",
+            "cancelAuctionWhenPaused(address,uint256)",
+            "getAuction(address,uint256)",
+            "getCurrentPrice(address,uint256)",
+            "fallback()",
+            "_owns(address,address,uint256)",
+            "_escrow(address,address,uint256)",
+            "_transfer(address,address,uint256)",
+            "_addAuction(address,uint256,ClockAuctionBase.Auction)",
+            "_cancelAuction(address,uint256,address)",
+            "_bid(address,uint256,uint256)",
+            "_removeAuction(address,uint256)",
+            "_isOnAuction(ClockAuctionBase.Auction)",
+            "_currentPrice(ClockAuctionBase.Auction)",
+            "_computeCurrentPrice(uint256,uint256,uint256,uint256)",
+            "_computeCut(uint256)",
+            "_getNft(address)",
+            "pause()",
+            "unpause()",
+            "Ownable()",
+            "transferOwnership(address)",
+            "SaleClockAuction(uint256)",
+            "createAuction(address,uint256,uint256,uint256,uint256)",
+            "bid(address,uint256)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "ClockAuction(uint256)": {
+                "argument": {
+                    "_cut": "uint256"
+                },
+                "contract": {}
+            },
+            "withdrawBalance()": {
+                "argument": {},
+                "contract": {}
+            },
+            "createAuction(address,uint256,uint256,uint256,uint256,address)": {
+                "argument": {
+                    "_tokenId": "uint256",
+                    "_startingPrice": "uint256",
+                    "_endingPrice": "uint256",
+                    "_duration": "uint256"
+                },
+                "contract": {}
+            },
+            "bid(address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {}
+            },
+            "cancelAuction(address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {}
+            },
+            "cancelAuctionWhenPaused(address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {}
+            },
+            "getAuction(address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {}
+            },
+            "getCurrentPrice(address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {}
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {}
+            },
+            "_owns(address,address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {}
+            },
+            "_escrow(address,address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {}
+            },
+            "_transfer(address,address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {}
+            },
+            "_addAuction(address,uint256,ClockAuctionBase.Auction)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {}
+            },
+            "_cancelAuction(address,uint256,address)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {}
+            },
+            "_bid(address,uint256,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256",
+                    "_bidAmount": "uint256"
+                },
+                "contract": {}
+            },
+            "_removeAuction(address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {}
+            },
+            "_isOnAuction(ClockAuctionBase.Auction)": {
+                "argument": {},
+                "contract": {}
+            },
+            "_currentPrice(ClockAuctionBase.Auction)": {
+                "argument": {},
+                "contract": {}
+            },
+            "_computeCurrentPrice(uint256,uint256,uint256,uint256)": {
+                "argument": {
+                    "_startingPrice": "uint256",
+                    "_endingPrice": "uint256",
+                    "_duration": "uint256",
+                    "_secondsPassed": "uint256"
+                },
+                "contract": {}
+            },
+            "_computeCut(uint256)": {
+                "argument": {
+                    "_price": "uint256"
+                },
+                "contract": {}
+            },
+            "_getNft(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "pause()": {
+                "argument": {},
+                "contract": {}
+            },
+            "unpause()": {
+                "argument": {},
+                "contract": {}
+            },
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "SaleClockAuction(uint256)": {
+                "argument": {
+                    "_cut": "uint256"
+                },
+                "contract": {}
+            },
+            "createAuction(address,uint256,uint256,uint256,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256",
+                    "_startingPrice": "uint256",
+                    "_endingPrice": "uint256",
+                    "_duration": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "pause()": [
+                766,
+                251
+            ],
+            "cancelAuctionWhenPaused(address,uint256)": [
+                223,
+                75
+            ],
+            "getCurrentPrice(address,uint256)": [
+                457,
+                185
+            ],
+            "unpause()": [
+                300,
+                97
+            ],
+            "createAuction(address,uint256,uint256,uint256,uint256,address)": [
+                1060,
+                339
+            ],
+            "createAuction(address,uint256,uint256,uint256,uint256)": [
+                953,
+                317
+            ],
+            "getAuction(address,uint256)": [
+                554,
+                207
+            ],
+            "cancelAuction(address,uint256)": [
+                789,
+                273
+            ],
+            "withdrawBalance()": [
+                434,
+                163
+            ],
+            "bid(address,uint256)": [
+                323,
+                119
+            ],
+            "transferOwnership(address)": [
+                1199,
+                361
+            ]
+        },
+        "block_CALL_mapping": {
+            "block6647_4": [
+                "candidateContract.implementsERC721()"
+            ],
+            "block6647_2": [
+                "candidateContract.implementsERC721()"
+            ],
+            "block6647_3": [
+                "candidateContract.implementsERC721()"
+            ],
+            "block6647_0": [
+                "candidateContract.implementsERC721()"
+            ],
+            "block6647_1": [
+                "candidateContract.implementsERC721()"
+            ],
+            "jump6647_0": [
+                "candidateContract.implementsERC721()",
+                "candidateContract.implementsERC721()"
+            ],
+            "jump6647_1": [
+                "candidateContract.implementsERC721()",
+                "candidateContract.implementsERC721()"
+            ],
+            "jump6647_2": [
+                "candidateContract.implementsERC721()",
+                "candidateContract.implementsERC721()"
+            ],
+            "jump6647_3": [
+                "candidateContract.implementsERC721()",
+                "candidateContract.implementsERC721()"
+            ],
+            "jump6647_4": [
+                "candidateContract.implementsERC721()",
+                "candidateContract.implementsERC721()"
+            ],
+            "jump1990": [
+                "msg.sender.transfer(this.balance)",
+                "msg.sender.transfer(this.balance)"
+            ],
+            "jump4347": [
+                "seller.transfer(sellerProceeds)",
+                "seller.transfer(sellerProceeds)"
+            ],
+            "jump4784": [
+                "nonFungibleContract.transfer(_receiver, _tokenId)",
+                "nonFungibleContract.transfer(_receiver, _tokenId)"
+            ],
+            "block6133": [
+                "nonFungibleContract.ownerOf(_tokenId)"
+            ],
+            "block5285_0": [
+                "nonFungibleContract.transferFrom(_owner, this, _tokenId)"
+            ],
+            "jump5285": [
+                "nonFungibleContract.transferFrom(_owner, this, _tokenId)",
+                "nonFungibleContract.transferFrom(_owner, this, _tokenId)"
+            ],
+            "block5285": [
+                "nonFungibleContract.transferFrom(_owner, this, _tokenId)"
+            ],
+            "jump5285_0": [
+                "nonFungibleContract.transferFrom(_owner, this, _tokenId)",
+                "nonFungibleContract.transferFrom(_owner, this, _tokenId)"
+            ],
+            "jump6133": [
+                "nonFungibleContract.ownerOf(_tokenId)",
+                "nonFungibleContract.ownerOf(_tokenId)"
+            ],
+            "block4784_0": [
+                "nonFungibleContract.transfer(_receiver, _tokenId)"
+            ],
+            "block4784_1": [
+                "nonFungibleContract.transfer(_receiver, _tokenId)"
+            ],
+            "block4784": [
+                "nonFungibleContract.transfer(_receiver, _tokenId)"
+            ],
+            "block1990": [
+                "msg.sender.transfer(this.balance)"
+            ],
+            "jump6647": [
+                "candidateContract.implementsERC721()",
+                "candidateContract.implementsERC721()"
+            ],
+            "jump4784_0": [
+                "nonFungibleContract.transfer(_receiver, _tokenId)",
+                "nonFungibleContract.transfer(_receiver, _tokenId)"
+            ],
+            "jump4784_1": [
+                "nonFungibleContract.transfer(_receiver, _tokenId)",
+                "nonFungibleContract.transfer(_receiver, _tokenId)"
+            ],
+            "block6647": [
+                "candidateContract.implementsERC721()"
+            ],
+            "block4347": [
+                "seller.transfer(sellerProceeds)"
+            ]
+        }
+    }
+}

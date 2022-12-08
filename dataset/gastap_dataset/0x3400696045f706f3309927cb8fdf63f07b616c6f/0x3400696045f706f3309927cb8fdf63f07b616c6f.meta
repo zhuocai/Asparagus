@@ -1,0 +1,385 @@
+{
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "Ownable": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "ERC20Basic": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                124,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "ERC20": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                125,
+                75
+            ],
+            "balanceOf(address)": [
+                402,
+                141
+            ],
+            "allowance(address,address)": [
+                590,
+                185
+            ],
+            "transferFrom(address,address,uint256)": [
+                269,
+                119
+            ],
+            "transfer(address,uint256)": [
+                489,
+                163
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "SafeERC20": {
+        "function_list": [
+            "safeTransfer(ERC20Basic,address,uint256)",
+            "safeTransferFrom(ERC20,address,address,uint256)",
+            "safeApprove(ERC20,address,uint256)"
+        ],
+        "initial_state": {
+            "safeTransfer(ERC20Basic,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "safeTransferFrom(ERC20,address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "safeApprove(ERC20,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "ECRecovery": {
+        "function_list": [
+            "recover(bytes32,bytes)"
+        ],
+        "initial_state": {
+            "recover(bytes32,bytes)": {
+                "argument": {
+                    "hash": "bytes32",
+                    "sig": "bytes"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "recover(bytes32,bytes)": [
+                93,
+                83
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump370": [
+                "ecrecover(hash, v, r, s)",
+                "ecrecover(hash, v, r, s)"
+            ],
+            "block370": [
+                "ecrecover(hash, v, r, s)"
+            ]
+        }
+    },
+    "InviteCollateralizer": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "InviteCollateralizer(ERC20,address)",
+            "takeCollateral(address)",
+            "reclaim()",
+            "seize(address,uint256)",
+            "changeCollateralTaker(address)",
+            "changeCollateralSeizer(address)",
+            "changeCollateralAmount(uint256)",
+            "changeSeizedTokensWallet(address)",
+            "changeLockupDuration(uint64)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {
+                    "collateralizations": "mapping(address => InviteCollateralizer.Collateralization[])",
+                    "collateralAmount": "uint256",
+                    "lockupDuration": "uint64"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "collateralizations": "mapping(address => InviteCollateralizer.Collateralization[])",
+                    "collateralAmount": "uint256",
+                    "lockupDuration": "uint64"
+                }
+            },
+            "InviteCollateralizer(ERC20,address)": {
+                "argument": {},
+                "contract": {
+                    "collateralizations": "mapping(address => InviteCollateralizer.Collateralization[])",
+                    "collateralAmount": "uint256",
+                    "lockupDuration": "uint64"
+                }
+            },
+            "takeCollateral(address)": {
+                "argument": {},
+                "contract": {
+                    "collateralizations": "mapping(address => InviteCollateralizer.Collateralization[])",
+                    "collateralAmount": "uint256",
+                    "lockupDuration": "uint64"
+                }
+            },
+            "reclaim()": {
+                "argument": {},
+                "contract": {
+                    "collateralizations": "mapping(address => InviteCollateralizer.Collateralization[])",
+                    "collateralAmount": "uint256",
+                    "lockupDuration": "uint64"
+                }
+            },
+            "seize(address,uint256)": {
+                "argument": {
+                    "_collateralId": "uint256"
+                },
+                "contract": {
+                    "collateralizations": "mapping(address => InviteCollateralizer.Collateralization[])",
+                    "collateralAmount": "uint256",
+                    "lockupDuration": "uint64"
+                }
+            },
+            "changeCollateralTaker(address)": {
+                "argument": {},
+                "contract": {
+                    "collateralizations": "mapping(address => InviteCollateralizer.Collateralization[])",
+                    "collateralAmount": "uint256",
+                    "lockupDuration": "uint64"
+                }
+            },
+            "changeCollateralSeizer(address)": {
+                "argument": {},
+                "contract": {
+                    "collateralizations": "mapping(address => InviteCollateralizer.Collateralization[])",
+                    "collateralAmount": "uint256",
+                    "lockupDuration": "uint64"
+                }
+            },
+            "changeCollateralAmount(uint256)": {
+                "argument": {
+                    "_newAmount": "uint256"
+                },
+                "contract": {
+                    "collateralizations": "mapping(address => InviteCollateralizer.Collateralization[])",
+                    "collateralAmount": "uint256",
+                    "lockupDuration": "uint64"
+                }
+            },
+            "changeSeizedTokensWallet(address)": {
+                "argument": {},
+                "contract": {
+                    "collateralizations": "mapping(address => InviteCollateralizer.Collateralization[])",
+                    "collateralAmount": "uint256",
+                    "lockupDuration": "uint64"
+                }
+            },
+            "changeLockupDuration(uint64)": {
+                "argument": {
+                    "_newLockupDuration": "uint64"
+                },
+                "contract": {
+                    "collateralizations": "mapping(address => InviteCollateralizer.Collateralization[])",
+                    "collateralAmount": "uint256",
+                    "lockupDuration": "uint64"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "takeCollateral(address)": [
+                1074,
+                339
+            ],
+            "changeSeizedTokensWallet(address)": [
+                541,
+                185
+            ],
+            "seize(address,uint256)": [
+                1165,
+                361
+            ],
+            "reclaim()": [
+                743,
+                229
+            ],
+            "changeCollateralAmount(uint256)": [
+                496,
+                163
+            ],
+            "changeCollateralTaker(address)": [
+                429,
+                141
+            ],
+            "changeLockupDuration(uint64)": [
+                224,
+                75
+            ],
+            "transferOwnership(address)": [
+                1242,
+                383
+            ],
+            "changeCollateralSeizer(address)": [
+                790,
+                251
+            ]
+        },
+        "block_CALL_mapping": {
+            "block3696": [
+                "blt.transferFrom(_owner, address(this), collateralAmount)"
+            ],
+            "jump3696": [
+                "blt.transferFrom(_owner, address(this), collateralAmount)",
+                "blt.transferFrom(_owner, address(this), collateralAmount)"
+            ],
+            "block4889": [
+                "blt.transfer(seizedTokensWallet, collateralizations[_subject][_collateralId].value)"
+            ],
+            "jump3004": [
+                "blt.transfer(msg.sender, reclaimableAmount)",
+                "blt.transfer(msg.sender, reclaimableAmount)"
+            ],
+            "block3004": [
+                "blt.transfer(msg.sender, reclaimableAmount)"
+            ],
+            "jump4889": [
+                "blt.transfer(seizedTokensWallet, collateralizations[_subject][_collateralId].value)",
+                "blt.transfer(seizedTokensWallet, collateralizations[_subject][_collateralId].value)"
+            ]
+        }
+    }
+}

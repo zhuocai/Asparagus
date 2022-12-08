@@ -1,0 +1,685 @@
+{
+    "FlightDelayDatabaseModel": {
+        "function_list": [],
+        "initial_state": {},
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "FlightDelayControlledContract": {
+        "function_list": [
+            "setController(address)",
+            "destruct()",
+            "setContracts()",
+            "getContract(bytes32)"
+        ],
+        "initial_state": {
+            "setController(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "destruct()": {
+                "argument": {},
+                "contract": {}
+            },
+            "setContracts()": {
+                "argument": {},
+                "contract": {}
+            },
+            "getContract(bytes32)": {
+                "argument": {
+                    "_id": "bytes32"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "destruct()": [
+                92,
+                75
+            ],
+            "setContracts()": [
+                115,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "FlightDelayConstants": {
+        "function_list": [
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "MIN_OBSERVATIONS": "uint256",
+                    "MIN_PREMIUM": "uint256",
+                    "MAX_PREMIUM": "uint256",
+                    "MAX_PAYOUT": "uint256",
+                    "MIN_PREMIUM_EUR": "uint256",
+                    "MAX_PREMIUM_EUR": "uint256",
+                    "MAX_PAYOUT_EUR": "uint256",
+                    "MIN_PREMIUM_USD": "uint256",
+                    "MAX_PREMIUM_USD": "uint256",
+                    "MAX_PAYOUT_USD": "uint256",
+                    "MIN_PREMIUM_GBP": "uint256",
+                    "MAX_PREMIUM_GBP": "uint256",
+                    "MAX_PAYOUT_GBP": "uint256",
+                    "MAX_CUMULATED_WEIGHTED_PREMIUM": "uint256",
+                    "REWARD_PERCENT": "uint8",
+                    "RESERVE_PERCENT": "uint8",
+                    "WEIGHT_PATTERN": "uint8[6]",
+                    "MIN_TIME_BEFORE_DEPARTURE": "uint256",
+                    "CHECK_PAYOUT_OFFSET": "uint256",
+                    "MAX_FLIGHT_DURATION": "uint256",
+                    "CONTRACT_DEAD_LINE": "uint256",
+                    "MIN_DEPARTURE_LIM": "uint256",
+                    "MAX_DEPARTURE_LIM": "uint256",
+                    "ORACLIZE_GAS": "uint256",
+                    "ORACLIZE_RATINGS_BASE_URL": "string",
+                    "ORACLIZE_RATINGS_QUERY": "string",
+                    "ORACLIZE_STATUS_BASE_URL": "string",
+                    "ORACLIZE_STATUS_QUERY": "string"
+                }
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "FlightDelayDatabase": {
+        "function_list": [
+            "setAccessControl(address,address,uint8)",
+            "setAccessControl(address,address,uint8,bool)",
+            "getAccessControl(address,address,uint8)",
+            "setLedger(uint8,int256)",
+            "getLedger(uint8)",
+            "getCustomerPremium(uint256)",
+            "getPolicyData(uint256)",
+            "getPolicyState(uint256)",
+            "getRiskId(uint256)",
+            "createPolicy(address,uint256,FlightDelayDatabaseModel.Currency,bytes32,bytes32)",
+            "setState(uint256,FlightDelayDatabaseModel.policyState,uint256,bytes32)",
+            "setWeight(uint256,uint256,bytes)",
+            "setPayouts(uint256,uint256,uint256)",
+            "setDelay(uint256,uint8,uint256)",
+            "getRiskParameters(bytes32)",
+            "getPremiumFactors(bytes32)",
+            "createUpdateRisk(bytes32,bytes32,uint256)",
+            "setPremiumFactors(bytes32,uint256,uint256)",
+            "getOraclizeCallback(bytes32)",
+            "getOraclizePolicyId(bytes32)",
+            "createOraclizeCallback(bytes32,uint256,FlightDelayDatabaseModel.oraclizeState,uint256)",
+            "checkTime(bytes32,bytes32,uint256)",
+            "setController(address)",
+            "destruct()",
+            "setContracts()",
+            "getContract(bytes32)",
+            "FlightDelayDatabase(address)",
+            "setContracts()",
+            "setAccessControl(address,address,uint8,bool)",
+            "setAccessControl(address,address,uint8)",
+            "getAccessControl(address,address,uint8)",
+            "setLedger(uint8,int256)",
+            "getLedger(uint8)",
+            "getCustomerPremium(uint256)",
+            "getPolicyData(uint256)",
+            "getPolicyState(uint256)",
+            "getRiskId(uint256)",
+            "createPolicy(address,uint256,FlightDelayDatabaseModel.Currency,bytes32,bytes32)",
+            "setState(uint256,FlightDelayDatabaseModel.policyState,uint256,bytes32)",
+            "setWeight(uint256,uint256,bytes)",
+            "setPayouts(uint256,uint256,uint256)",
+            "setDelay(uint256,uint8,uint256)",
+            "getRiskParameters(bytes32)",
+            "getPremiumFactors(bytes32)",
+            "createUpdateRisk(bytes32,bytes32,uint256)",
+            "setPremiumFactors(bytes32,uint256,uint256)",
+            "getOraclizeCallback(bytes32)",
+            "getOraclizePolicyId(bytes32)",
+            "createOraclizeCallback(bytes32,uint256,FlightDelayDatabaseModel.oraclizeState,uint256)",
+            "checkTime(bytes32,bytes32,uint256)",
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "setAccessControl(address,address,uint8)": {
+                "argument": {
+                    "_perm": "uint8"
+                },
+                "contract": {
+                    "policies": "FlightDelayDatabaseModel.Policy[]",
+                    "extCustomerPolicies": "mapping(bytes32 => uint256[])",
+                    "customerPolicies": "mapping(address => uint256[])"
+                }
+            },
+            "setAccessControl(address,address,uint8,bool)": {
+                "argument": {
+                    "_perm": "uint8"
+                },
+                "contract": {
+                    "policies": "FlightDelayDatabaseModel.Policy[]",
+                    "extCustomerPolicies": "mapping(bytes32 => uint256[])",
+                    "customerPolicies": "mapping(address => uint256[])"
+                }
+            },
+            "getAccessControl(address,address,uint8)": {
+                "argument": {
+                    "_perm": "uint8"
+                },
+                "contract": {
+                    "policies": "FlightDelayDatabaseModel.Policy[]",
+                    "extCustomerPolicies": "mapping(bytes32 => uint256[])",
+                    "customerPolicies": "mapping(address => uint256[])"
+                }
+            },
+            "setLedger(uint8,int256)": {
+                "argument": {
+                    "_index": "uint8"
+                },
+                "contract": {
+                    "policies": "FlightDelayDatabaseModel.Policy[]",
+                    "extCustomerPolicies": "mapping(bytes32 => uint256[])",
+                    "customerPolicies": "mapping(address => uint256[])"
+                }
+            },
+            "getLedger(uint8)": {
+                "argument": {
+                    "_index": "uint8"
+                },
+                "contract": {
+                    "policies": "FlightDelayDatabaseModel.Policy[]",
+                    "extCustomerPolicies": "mapping(bytes32 => uint256[])",
+                    "customerPolicies": "mapping(address => uint256[])"
+                }
+            },
+            "getCustomerPremium(uint256)": {
+                "argument": {
+                    "_policyId": "uint256"
+                },
+                "contract": {
+                    "policies": "FlightDelayDatabaseModel.Policy[]",
+                    "extCustomerPolicies": "mapping(bytes32 => uint256[])",
+                    "customerPolicies": "mapping(address => uint256[])"
+                }
+            },
+            "getPolicyData(uint256)": {
+                "argument": {
+                    "_policyId": "uint256"
+                },
+                "contract": {
+                    "policies": "FlightDelayDatabaseModel.Policy[]",
+                    "extCustomerPolicies": "mapping(bytes32 => uint256[])",
+                    "customerPolicies": "mapping(address => uint256[])"
+                }
+            },
+            "getPolicyState(uint256)": {
+                "argument": {
+                    "_policyId": "uint256"
+                },
+                "contract": {
+                    "policies": "FlightDelayDatabaseModel.Policy[]",
+                    "extCustomerPolicies": "mapping(bytes32 => uint256[])",
+                    "customerPolicies": "mapping(address => uint256[])"
+                }
+            },
+            "getRiskId(uint256)": {
+                "argument": {
+                    "_policyId": "uint256"
+                },
+                "contract": {
+                    "policies": "FlightDelayDatabaseModel.Policy[]",
+                    "extCustomerPolicies": "mapping(bytes32 => uint256[])",
+                    "customerPolicies": "mapping(address => uint256[])"
+                }
+            },
+            "createPolicy(address,uint256,FlightDelayDatabaseModel.Currency,bytes32,bytes32)": {
+                "argument": {
+                    "_premium": "uint256",
+                    "_customerExternalId": "bytes32",
+                    "_riskId": "bytes32"
+                },
+                "contract": {
+                    "policies": "FlightDelayDatabaseModel.Policy[]",
+                    "extCustomerPolicies": "mapping(bytes32 => uint256[])",
+                    "customerPolicies": "mapping(address => uint256[])"
+                }
+            },
+            "setState(uint256,FlightDelayDatabaseModel.policyState,uint256,bytes32)": {
+                "argument": {
+                    "_policyId": "uint256",
+                    "_stateTime": "uint256",
+                    "_stateMessage": "bytes32"
+                },
+                "contract": {
+                    "policies": "FlightDelayDatabaseModel.Policy[]",
+                    "extCustomerPolicies": "mapping(bytes32 => uint256[])",
+                    "customerPolicies": "mapping(address => uint256[])"
+                }
+            },
+            "setWeight(uint256,uint256,bytes)": {
+                "argument": {
+                    "_policyId": "uint256",
+                    "_weight": "uint256",
+                    "_proof": "bytes"
+                },
+                "contract": {
+                    "policies": "FlightDelayDatabaseModel.Policy[]",
+                    "extCustomerPolicies": "mapping(bytes32 => uint256[])",
+                    "customerPolicies": "mapping(address => uint256[])"
+                }
+            },
+            "setPayouts(uint256,uint256,uint256)": {
+                "argument": {
+                    "_policyId": "uint256",
+                    "_calculatedPayout": "uint256",
+                    "_actualPayout": "uint256"
+                },
+                "contract": {
+                    "policies": "FlightDelayDatabaseModel.Policy[]",
+                    "extCustomerPolicies": "mapping(bytes32 => uint256[])",
+                    "customerPolicies": "mapping(address => uint256[])"
+                }
+            },
+            "setDelay(uint256,uint8,uint256)": {
+                "argument": {
+                    "_policyId": "uint256",
+                    "_delay": "uint8",
+                    "_delayInMinutes": "uint256"
+                },
+                "contract": {
+                    "policies": "FlightDelayDatabaseModel.Policy[]",
+                    "extCustomerPolicies": "mapping(bytes32 => uint256[])",
+                    "customerPolicies": "mapping(address => uint256[])"
+                }
+            },
+            "getRiskParameters(bytes32)": {
+                "argument": {
+                    "_riskId": "bytes32"
+                },
+                "contract": {
+                    "policies": "FlightDelayDatabaseModel.Policy[]",
+                    "extCustomerPolicies": "mapping(bytes32 => uint256[])",
+                    "customerPolicies": "mapping(address => uint256[])"
+                }
+            },
+            "getPremiumFactors(bytes32)": {
+                "argument": {
+                    "_riskId": "bytes32"
+                },
+                "contract": {
+                    "policies": "FlightDelayDatabaseModel.Policy[]",
+                    "extCustomerPolicies": "mapping(bytes32 => uint256[])",
+                    "customerPolicies": "mapping(address => uint256[])"
+                }
+            },
+            "createUpdateRisk(bytes32,bytes32,uint256)": {
+                "argument": {
+                    "_carrierFlightNumber": "bytes32",
+                    "_departureYearMonthDay": "bytes32",
+                    "_arrivalTime": "uint256"
+                },
+                "contract": {
+                    "policies": "FlightDelayDatabaseModel.Policy[]",
+                    "extCustomerPolicies": "mapping(bytes32 => uint256[])",
+                    "customerPolicies": "mapping(address => uint256[])"
+                }
+            },
+            "setPremiumFactors(bytes32,uint256,uint256)": {
+                "argument": {
+                    "_riskId": "bytes32",
+                    "_cumulatedWeightedPremium": "uint256",
+                    "_premiumMultiplier": "uint256"
+                },
+                "contract": {
+                    "policies": "FlightDelayDatabaseModel.Policy[]",
+                    "extCustomerPolicies": "mapping(bytes32 => uint256[])",
+                    "customerPolicies": "mapping(address => uint256[])"
+                }
+            },
+            "getOraclizeCallback(bytes32)": {
+                "argument": {
+                    "_queryId": "bytes32"
+                },
+                "contract": {
+                    "policies": "FlightDelayDatabaseModel.Policy[]",
+                    "extCustomerPolicies": "mapping(bytes32 => uint256[])",
+                    "customerPolicies": "mapping(address => uint256[])"
+                }
+            },
+            "getOraclizePolicyId(bytes32)": {
+                "argument": {
+                    "_queryId": "bytes32"
+                },
+                "contract": {
+                    "policies": "FlightDelayDatabaseModel.Policy[]",
+                    "extCustomerPolicies": "mapping(bytes32 => uint256[])",
+                    "customerPolicies": "mapping(address => uint256[])"
+                }
+            },
+            "createOraclizeCallback(bytes32,uint256,FlightDelayDatabaseModel.oraclizeState,uint256)": {
+                "argument": {
+                    "_queryId": "bytes32",
+                    "_policyId": "uint256",
+                    "_oraclizeTime": "uint256"
+                },
+                "contract": {
+                    "policies": "FlightDelayDatabaseModel.Policy[]",
+                    "extCustomerPolicies": "mapping(bytes32 => uint256[])",
+                    "customerPolicies": "mapping(address => uint256[])"
+                }
+            },
+            "checkTime(bytes32,bytes32,uint256)": {
+                "argument": {
+                    "_queryId": "bytes32",
+                    "_riskId": "bytes32",
+                    "_offset": "uint256"
+                },
+                "contract": {
+                    "policies": "FlightDelayDatabaseModel.Policy[]",
+                    "extCustomerPolicies": "mapping(bytes32 => uint256[])",
+                    "customerPolicies": "mapping(address => uint256[])"
+                }
+            },
+            "setController(address)": {
+                "argument": {},
+                "contract": {
+                    "policies": "FlightDelayDatabaseModel.Policy[]",
+                    "extCustomerPolicies": "mapping(bytes32 => uint256[])",
+                    "customerPolicies": "mapping(address => uint256[])"
+                }
+            },
+            "destruct()": {
+                "argument": {},
+                "contract": {
+                    "policies": "FlightDelayDatabaseModel.Policy[]",
+                    "extCustomerPolicies": "mapping(bytes32 => uint256[])",
+                    "customerPolicies": "mapping(address => uint256[])"
+                }
+            },
+            "setContracts()": {
+                "argument": {},
+                "contract": {
+                    "policies": "FlightDelayDatabaseModel.Policy[]",
+                    "extCustomerPolicies": "mapping(bytes32 => uint256[])",
+                    "customerPolicies": "mapping(address => uint256[])"
+                }
+            },
+            "getContract(bytes32)": {
+                "argument": {
+                    "_id": "bytes32"
+                },
+                "contract": {
+                    "policies": "FlightDelayDatabaseModel.Policy[]",
+                    "extCustomerPolicies": "mapping(bytes32 => uint256[])",
+                    "customerPolicies": "mapping(address => uint256[])"
+                }
+            },
+            "FlightDelayDatabase(address)": {
+                "argument": {},
+                "contract": {
+                    "policies": "FlightDelayDatabaseModel.Policy[]",
+                    "extCustomerPolicies": "mapping(bytes32 => uint256[])",
+                    "customerPolicies": "mapping(address => uint256[])"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "policies": "FlightDelayDatabaseModel.Policy[]",
+                    "extCustomerPolicies": "mapping(bytes32 => uint256[])",
+                    "customerPolicies": "mapping(address => uint256[])"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "getCustomerPremium(uint256)": [
+                3157,
+                823
+            ],
+            "getOraclizePolicyId(bytes32)": [
+                2286,
+                581
+            ],
+            "getAccessControl(address,address,uint8)": [
+                4020,
+                955
+            ],
+            "getOraclizeCallback(bytes32)": [
+                2478,
+                625
+            ],
+            "setDelay(uint256,uint8,uint256)": [
+                1153,
+                229
+            ],
+            "getRiskParameters(bytes32)": [
+                3582,
+                911
+            ],
+            "getRiskId(uint256)": [
+                4179,
+                999
+            ],
+            "setAccessControl(address,address,uint8,bool)": [
+                3346,
+                867
+            ],
+            "setWeight(uint256,uint256,bytes)": [
+                4550,
+                1087
+            ],
+            "setContracts()": [
+                4156,
+                977
+            ],
+            "setPayouts(uint256,uint256,uint256)": [
+                645,
+                97
+            ],
+            "setAccessControl(address,address,uint8)": [
+                3470,
+                889
+            ],
+            "setPremiumFactors(bytes32,uint256,uint256)": [
+                2554,
+                647
+            ],
+            "checkTime(bytes32,bytes32,uint256)": [
+                2825,
+                713
+            ],
+            "setLedger(uint8,int256)": [
+                1544,
+                361
+            ],
+            "getPremiumFactors(bytes32)": [
+                2922,
+                735
+            ],
+            "getLedger(uint8)": [
+                1085,
+                207
+            ],
+            "createUpdateRisk(bytes32,bytes32,uint256)": [
+                848,
+                163
+            ],
+            "getPolicyData(uint256)": [
+                2355,
+                603
+            ],
+            "destruct()": [
+                1290,
+                273
+            ],
+            "getPolicyState(uint256)": [
+                2026,
+                493
+            ]
+        },
+        "block_CALL_mapping": {
+            "block10129": [
+                "FD_AC.checkPermission(102, msg.sender)"
+            ],
+            "jump5557": [
+                "FD_AC.checkPermission(101, msg.sender)",
+                "FD_AC.checkPermission(101, msg.sender)"
+            ],
+            "block12719": [
+                "FD_AC.setPermissionById(101, \"FD.Ledger\")"
+            ],
+            "jump12080": [
+                "FD_AC.setPermissionById(101, \"FD.NewPolicy\")",
+                "FD_AC.setPermissionById(101, \"FD.NewPolicy\")"
+            ],
+            "block4878": [
+                "FD_AC.checkPermission(102, msg.sender)"
+            ],
+            "jump14226": [
+                "FD_CI.getContract(_id)",
+                "FD_CI.getContract(_id)"
+            ],
+            "jump12719": [
+                "FD_AC.setPermissionById(101, \"FD.Ledger\")",
+                "FD_AC.setPermissionById(101, \"FD.Ledger\")"
+            ],
+            "jump6061": [
+                "FD_AC.checkPermission(101, msg.sender)",
+                "FD_AC.checkPermission(101, msg.sender)"
+            ],
+            "jump7807": [
+                "FD_AC.checkPermission(102, msg.sender)",
+                "FD_AC.checkPermission(102, msg.sender)"
+            ],
+            "block14226": [
+                "FD_CI.getContract(_id)"
+            ],
+            "jump6439": [
+                "FD_AC.checkPermission(102, msg.sender)",
+                "FD_AC.checkPermission(102, msg.sender)"
+            ],
+            "jump12932": [
+                "FD_AC.setPermissionById(102, \"FD.Owner\")",
+                "FD_AC.setPermissionById(102, \"FD.Owner\")"
+            ],
+            "jump12293": [
+                "FD_AC.setPermissionById(101, \"FD.Underwrite\")",
+                "FD_AC.setPermissionById(101, \"FD.Underwrite\")"
+            ],
+            "block7389": [
+                "FD_AC.checkPermission(101, msg.sender)"
+            ],
+            "block5557": [
+                "FD_AC.checkPermission(101, msg.sender)"
+            ],
+            "block12293": [
+                "FD_AC.setPermissionById(101, \"FD.Underwrite\")"
+            ],
+            "jump5167": [
+                "FD_AC.checkPermission(101, msg.sender)",
+                "FD_AC.checkPermission(101, msg.sender)"
+            ],
+            "jump8788": [
+                "FD_AC.checkPermission(102, msg.sender)",
+                "FD_AC.checkPermission(102, msg.sender)"
+            ],
+            "jump9723": [
+                "FD_AC.checkPermission(101, msg.sender)",
+                "FD_AC.checkPermission(101, msg.sender)"
+            ],
+            "block12506": [
+                "FD_AC.setPermissionById(101, \"FD.Payout\")"
+            ],
+            "block5167": [
+                "FD_AC.checkPermission(101, msg.sender)"
+            ],
+            "jump12506": [
+                "FD_AC.setPermissionById(101, \"FD.Payout\")",
+                "FD_AC.setPermissionById(101, \"FD.Payout\")"
+            ],
+            "block6439": [
+                "FD_AC.checkPermission(102, msg.sender)"
+            ],
+            "block12932": [
+                "FD_AC.setPermissionById(102, \"FD.Owner\")"
+            ],
+            "block13930": [
+                "FD_AC.checkPermission(101, msg.sender)"
+            ],
+            "block8788": [
+                "FD_AC.checkPermission(102, msg.sender)"
+            ],
+            "block10827_0": [
+                "FD_CI.getContract(\"FD.AccessController\")"
+            ],
+            "jump13281": [
+                "FD_AC.checkPermission(101, msg.sender)",
+                "FD_AC.checkPermission(101, msg.sender)"
+            ],
+            "jump13930": [
+                "FD_AC.checkPermission(101, msg.sender)",
+                "FD_AC.checkPermission(101, msg.sender)"
+            ],
+            "jump8192": [
+                "FD_AC.checkPermission(101, msg.sender)",
+                "FD_AC.checkPermission(101, msg.sender)"
+            ],
+            "block7807": [
+                "FD_AC.checkPermission(102, msg.sender)"
+            ],
+            "block9723": [
+                "FD_AC.checkPermission(101, msg.sender)"
+            ],
+            "jump7389": [
+                "FD_AC.checkPermission(101, msg.sender)",
+                "FD_AC.checkPermission(101, msg.sender)"
+            ],
+            "block6925": [
+                "FD_AC.checkPermission(101, msg.sender)"
+            ],
+            "block13281": [
+                "FD_AC.checkPermission(101, msg.sender)"
+            ],
+            "block10827": [
+                "FD_CI.getContract(\"FD.AccessController\")"
+            ],
+            "block12080": [
+                "FD_AC.setPermissionById(101, \"FD.NewPolicy\")"
+            ],
+            "jump6925": [
+                "FD_AC.checkPermission(101, msg.sender)",
+                "FD_AC.checkPermission(101, msg.sender)"
+            ],
+            "block8192": [
+                "FD_AC.checkPermission(101, msg.sender)"
+            ],
+            "jump10827": [
+                "FD_CI.getContract(\"FD.AccessController\")",
+                "FD_CI.getContract(\"FD.AccessController\")"
+            ],
+            "block6061": [
+                "FD_AC.checkPermission(101, msg.sender)"
+            ],
+            "jump4878": [
+                "FD_AC.checkPermission(102, msg.sender)",
+                "FD_AC.checkPermission(102, msg.sender)"
+            ],
+            "block9187": [
+                "FD_AC.checkPermission(102, msg.sender)"
+            ],
+            "jump10827_0": [
+                "FD_CI.getContract(\"FD.AccessController\")",
+                "FD_CI.getContract(\"FD.AccessController\")"
+            ],
+            "jump9187": [
+                "FD_AC.checkPermission(102, msg.sender)",
+                "FD_AC.checkPermission(102, msg.sender)"
+            ],
+            "jump10129": [
+                "FD_AC.checkPermission(102, msg.sender)",
+                "FD_AC.checkPermission(102, msg.sender)"
+            ]
+        }
+    }
+}

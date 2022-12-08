@@ -1,0 +1,262 @@
+{
+    "EscrowMyEther": {
+        "function_list": [
+            "EscrowMyEther()",
+            "fallback()",
+            "setEscrowFee(uint256)",
+            "getEscrowFee(address)",
+            "newEscrow(address,address,bytes32)",
+            "getNumTransactions(address,uint256)",
+            "getSpecificTransaction(address,uint256,uint256)",
+            "buyerHistory(address,uint256,uint256)",
+            "SellerHistory(address,uint256,uint256)",
+            "escrowHistory(address,uint256,uint256)",
+            "checkStatus(address,uint256)",
+            "buyerFundRelease(uint256)",
+            "sellerRefund(uint256)",
+            "EscrowEscalation(uint256,uint256)",
+            "escrowDecision(uint256,uint256)",
+            "WithdrawFunds()",
+            "CheckBalance(address)"
+        ],
+        "initial_state": {
+            "EscrowMyEther()": {
+                "argument": {},
+                "contract": {
+                    "buyerDatabase": "mapping(address => EscrowMyEther.EscrowStruct[])",
+                    "sellerDatabase": "mapping(address => EscrowMyEther.TransactionStruct[])",
+                    "escrowDatabase": "mapping(address => EscrowMyEther.TransactionStruct[])"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "buyerDatabase": "mapping(address => EscrowMyEther.EscrowStruct[])",
+                    "sellerDatabase": "mapping(address => EscrowMyEther.TransactionStruct[])",
+                    "escrowDatabase": "mapping(address => EscrowMyEther.TransactionStruct[])"
+                }
+            },
+            "setEscrowFee(uint256)": {
+                "argument": {
+                    "fee": "uint256"
+                },
+                "contract": {
+                    "buyerDatabase": "mapping(address => EscrowMyEther.EscrowStruct[])",
+                    "sellerDatabase": "mapping(address => EscrowMyEther.TransactionStruct[])",
+                    "escrowDatabase": "mapping(address => EscrowMyEther.TransactionStruct[])"
+                }
+            },
+            "getEscrowFee(address)": {
+                "argument": {},
+                "contract": {
+                    "buyerDatabase": "mapping(address => EscrowMyEther.EscrowStruct[])",
+                    "sellerDatabase": "mapping(address => EscrowMyEther.TransactionStruct[])",
+                    "escrowDatabase": "mapping(address => EscrowMyEther.TransactionStruct[])"
+                }
+            },
+            "newEscrow(address,address,bytes32)": {
+                "argument": {
+                    "notes": "bytes32"
+                },
+                "contract": {
+                    "buyerDatabase": "mapping(address => EscrowMyEther.EscrowStruct[])",
+                    "sellerDatabase": "mapping(address => EscrowMyEther.TransactionStruct[])",
+                    "escrowDatabase": "mapping(address => EscrowMyEther.TransactionStruct[])"
+                }
+            },
+            "getNumTransactions(address,uint256)": {
+                "argument": {
+                    "switcher": "uint256"
+                },
+                "contract": {
+                    "buyerDatabase": "mapping(address => EscrowMyEther.EscrowStruct[])",
+                    "sellerDatabase": "mapping(address => EscrowMyEther.TransactionStruct[])",
+                    "escrowDatabase": "mapping(address => EscrowMyEther.TransactionStruct[])"
+                }
+            },
+            "getSpecificTransaction(address,uint256,uint256)": {
+                "argument": {
+                    "switcher": "uint256",
+                    "ID": "uint256"
+                },
+                "contract": {
+                    "buyerDatabase": "mapping(address => EscrowMyEther.EscrowStruct[])",
+                    "sellerDatabase": "mapping(address => EscrowMyEther.TransactionStruct[])",
+                    "escrowDatabase": "mapping(address => EscrowMyEther.TransactionStruct[])"
+                }
+            },
+            "buyerHistory(address,uint256,uint256)": {
+                "argument": {
+                    "startID": "uint256",
+                    "numToLoad": "uint256"
+                },
+                "contract": {
+                    "buyerDatabase": "mapping(address => EscrowMyEther.EscrowStruct[])",
+                    "sellerDatabase": "mapping(address => EscrowMyEther.TransactionStruct[])",
+                    "escrowDatabase": "mapping(address => EscrowMyEther.TransactionStruct[])"
+                }
+            },
+            "SellerHistory(address,uint256,uint256)": {
+                "argument": {
+                    "startID": "uint256",
+                    "numToLoad": "uint256"
+                },
+                "contract": {
+                    "buyerDatabase": "mapping(address => EscrowMyEther.EscrowStruct[])",
+                    "sellerDatabase": "mapping(address => EscrowMyEther.TransactionStruct[])",
+                    "escrowDatabase": "mapping(address => EscrowMyEther.TransactionStruct[])"
+                }
+            },
+            "escrowHistory(address,uint256,uint256)": {
+                "argument": {
+                    "startID": "uint256",
+                    "numToLoad": "uint256"
+                },
+                "contract": {
+                    "buyerDatabase": "mapping(address => EscrowMyEther.EscrowStruct[])",
+                    "sellerDatabase": "mapping(address => EscrowMyEther.TransactionStruct[])",
+                    "escrowDatabase": "mapping(address => EscrowMyEther.TransactionStruct[])"
+                }
+            },
+            "checkStatus(address,uint256)": {
+                "argument": {
+                    "nounce": "uint256"
+                },
+                "contract": {
+                    "buyerDatabase": "mapping(address => EscrowMyEther.EscrowStruct[])",
+                    "sellerDatabase": "mapping(address => EscrowMyEther.TransactionStruct[])",
+                    "escrowDatabase": "mapping(address => EscrowMyEther.TransactionStruct[])"
+                }
+            },
+            "buyerFundRelease(uint256)": {
+                "argument": {
+                    "ID": "uint256"
+                },
+                "contract": {
+                    "buyerDatabase": "mapping(address => EscrowMyEther.EscrowStruct[])",
+                    "sellerDatabase": "mapping(address => EscrowMyEther.TransactionStruct[])",
+                    "escrowDatabase": "mapping(address => EscrowMyEther.TransactionStruct[])"
+                }
+            },
+            "sellerRefund(uint256)": {
+                "argument": {
+                    "ID": "uint256"
+                },
+                "contract": {
+                    "buyerDatabase": "mapping(address => EscrowMyEther.EscrowStruct[])",
+                    "sellerDatabase": "mapping(address => EscrowMyEther.TransactionStruct[])",
+                    "escrowDatabase": "mapping(address => EscrowMyEther.TransactionStruct[])"
+                }
+            },
+            "EscrowEscalation(uint256,uint256)": {
+                "argument": {
+                    "switcher": "uint256",
+                    "ID": "uint256"
+                },
+                "contract": {
+                    "buyerDatabase": "mapping(address => EscrowMyEther.EscrowStruct[])",
+                    "sellerDatabase": "mapping(address => EscrowMyEther.TransactionStruct[])",
+                    "escrowDatabase": "mapping(address => EscrowMyEther.TransactionStruct[])"
+                }
+            },
+            "escrowDecision(uint256,uint256)": {
+                "argument": {
+                    "ID": "uint256",
+                    "Decision": "uint256"
+                },
+                "contract": {
+                    "buyerDatabase": "mapping(address => EscrowMyEther.EscrowStruct[])",
+                    "sellerDatabase": "mapping(address => EscrowMyEther.TransactionStruct[])",
+                    "escrowDatabase": "mapping(address => EscrowMyEther.TransactionStruct[])"
+                }
+            },
+            "WithdrawFunds()": {
+                "argument": {},
+                "contract": {
+                    "buyerDatabase": "mapping(address => EscrowMyEther.EscrowStruct[])",
+                    "sellerDatabase": "mapping(address => EscrowMyEther.TransactionStruct[])",
+                    "escrowDatabase": "mapping(address => EscrowMyEther.TransactionStruct[])"
+                }
+            },
+            "CheckBalance(address)": {
+                "argument": {},
+                "contract": {
+                    "buyerDatabase": "mapping(address => EscrowMyEther.EscrowStruct[])",
+                    "sellerDatabase": "mapping(address => EscrowMyEther.TransactionStruct[])",
+                    "escrowDatabase": "mapping(address => EscrowMyEther.TransactionStruct[])"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "buyerFundRelease(uint256)": [
+                2974,
+                449
+            ],
+            "getEscrowFee(address)": [
+                1805,
+                273
+            ],
+            "getNumTransactions(address,uint256)": [
+                2489,
+                405
+            ],
+            "setEscrowFee(uint256)": [
+                675,
+                97
+            ],
+            "EscrowEscalation(uint256,uint256)": [
+                1430,
+                207
+            ],
+            "newEscrow(address,address,bytes32)": [
+                3019,
+                471
+            ],
+            "escrowHistory(address,uint256,uint256)": [
+                2586,
+                427
+            ],
+            "CheckBalance(address)": [
+                1343,
+                185
+            ],
+            "sellerRefund(uint256)": [
+                2084,
+                339
+            ],
+            "SellerHistory(address,uint256,uint256)": [
+                287,
+                75
+            ],
+            "WithdrawFunds()": [
+                1485,
+                229
+            ],
+            "buyerHistory(address,uint256,uint256)": [
+                868,
+                141
+            ],
+            "checkStatus(address,uint256)": [
+                1892,
+                295
+            ],
+            "getSpecificTransaction(address,uint256,uint256)": [
+                1508,
+                251
+            ],
+            "escrowDecision(uint256,uint256)": [
+                2129,
+                361
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump6692": [
+                "msg.sender.send(amount)",
+                "msg.sender.send(amount)"
+            ],
+            "block6692": [
+                "msg.sender.send(amount)"
+            ]
+        }
+    }
+}

@@ -1,0 +1,118 @@
+{
+    "ERC20": {
+        "function_list": [
+            "transfer(address,uint256)"
+        ],
+        "initial_state": {
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transfer(address,uint256)": [
+                873,
+                273
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "BancorBuyer": {
+        "function_list": [
+            "withdraw()",
+            "buy()",
+            "fallback()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "withdraw()": {
+                "argument": {},
+                "contract": {
+                    "time_bought": "uint256"
+                }
+            },
+            "buy()": {
+                "argument": {},
+                "contract": {
+                    "time_bought": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "time_bought": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "buy()": [
+                1168,
+                141
+            ],
+            "withdraw()": [
+                1098,
+                97
+            ]
+        },
+        "block_CALL_mapping": {
+            "block584": [
+                "ERC20(token).transfer(msg.sender, amount - fee)"
+            ],
+            "jump584_0": [
+                "ERC20(token).transfer(msg.sender, amount - fee)",
+                "ERC20(token).transfer(msg.sender, amount - fee)"
+            ],
+            "jump875": [
+                "ERC20(token).transfer(developer, fee)",
+                "ERC20(token).transfer(developer, fee)"
+            ],
+            "block917": [
+                "msg.sender.transfer(msg.value)"
+            ],
+            "jump917": [
+                "msg.sender.transfer(msg.value)",
+                "msg.sender.transfer(msg.value)"
+            ],
+            "block917_0": [
+                "msg.sender.transfer(msg.value)"
+            ],
+            "jump1258": [
+                "msg.sender.transfer(amount)",
+                "msg.sender.transfer(amount)"
+            ],
+            "block584_0": [
+                "ERC20(token).transfer(msg.sender, amount - fee)"
+            ],
+            "jump917_0": [
+                "msg.sender.transfer(msg.value)",
+                "msg.sender.transfer(msg.value)"
+            ],
+            "block1486": [
+                "sale.transfer(this.balance)"
+            ],
+            "jump875_0": [
+                "ERC20(token).transfer(developer, fee)",
+                "ERC20(token).transfer(developer, fee)"
+            ],
+            "block1258": [
+                "msg.sender.transfer(amount)"
+            ],
+            "block875": [
+                "ERC20(token).transfer(developer, fee)"
+            ],
+            "jump584": [
+                "ERC20(token).transfer(msg.sender, amount - fee)",
+                "ERC20(token).transfer(msg.sender, amount - fee)"
+            ],
+            "jump1486": [
+                "sale.transfer(this.balance)",
+                "sale.transfer(this.balance)"
+            ],
+            "block875_0": [
+                "ERC20(token).transfer(developer, fee)"
+            ]
+        }
+    }
+}

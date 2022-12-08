@@ -1,0 +1,594 @@
+{
+    "owned": {
+        "function_list": [
+            "owned()",
+            "transferOwnership(address)"
+        ],
+        "initial_state": {
+            "owned()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "tokenRecipient": {
+        "function_list": [
+            "receiveApproval(address,uint256,address,bytes)"
+        ],
+        "initial_state": {
+            "receiveApproval(address,uint256,address,bytes)": {
+                "argument": {
+                    "_value": "uint256",
+                    "_extraData": "bytes"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "receiveApproval(address,uint256,address,bytes)": [
+                174,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump573": [
+                "t.transferFrom(_from, this, _value)",
+                "t.transferFrom(_from, this, _value)"
+            ],
+            "block573": [
+                "t.transferFrom(_from, this, _value)"
+            ]
+        }
+    },
+    "token": {
+        "function_list": [
+            "token(uint256,string,uint8,string)",
+            "transfer(address,uint256)",
+            "approve(address,uint256)",
+            "approveAndCall(address,uint256,bytes)",
+            "transferFrom(address,address,uint256)",
+            "fallback()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "token(uint256,string,uint8,string)": {
+                "argument": {
+                    "initialSupply": "uint256",
+                    "tokenName": "string",
+                    "decimalUnits": "uint8",
+                    "tokenSymbol": "string"
+                },
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256"
+                }
+            },
+            "approveAndCall(address,uint256,bytes)": {
+                "argument": {
+                    "_value": "uint256",
+                    "_extraData": "bytes"
+                },
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                337,
+                97
+            ],
+            "transferFrom(address,address,uint256)": [
+                481,
+                141
+            ],
+            "approveAndCall(address,uint256,bytes)": [
+                1115,
+                273
+            ],
+            "transfer(address,uint256)": [
+                1038,
+                251
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump3650": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)",
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ],
+            "block3650": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ]
+        }
+    },
+    "TravelCoinToken": {
+        "function_list": [
+            "token(uint256,string,uint8,string)",
+            "transfer(address,uint256)",
+            "approve(address,uint256)",
+            "approveAndCall(address,uint256,bytes)",
+            "transferFrom(address,address,uint256)",
+            "fallback()",
+            "owned()",
+            "transferOwnership(address)",
+            "TravelCoinToken()",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "mintToken(address,uint256)",
+            "freezeAccount(address,bool)",
+            "setPrices(uint256,uint256)",
+            "buy()",
+            "sell(uint256)",
+            "addNewTicket(address,uint256,uint256,bool)",
+            "allocateTicket(address,address)",
+            "getAllTickets()",
+            "getONETIMESOLD()",
+            "getMyTicketAddresses(address)",
+            "transferTicket(address,address)",
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "token(uint256,string,uint8,string)": {
+                "argument": {
+                    "initialSupply": "uint256",
+                    "tokenName": "string",
+                    "decimalUnits": "uint8",
+                    "tokenSymbol": "string"
+                },
+                "contract": {
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256",
+                    "ONETIMESOLD": "address[]",
+                    "initialSupply": "uint256",
+                    "decimalUnits": "uint8",
+                    "tokenName": "string",
+                    "tokenSymbol": "string",
+                    "customer_tickets": "mapping(address => address[])",
+                    "ticket_addresses": "address[]"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256",
+                    "ONETIMESOLD": "address[]",
+                    "initialSupply": "uint256",
+                    "decimalUnits": "uint8",
+                    "tokenName": "string",
+                    "tokenSymbol": "string",
+                    "customer_tickets": "mapping(address => address[])",
+                    "ticket_addresses": "address[]"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256",
+                    "ONETIMESOLD": "address[]",
+                    "initialSupply": "uint256",
+                    "decimalUnits": "uint8",
+                    "tokenName": "string",
+                    "tokenSymbol": "string",
+                    "customer_tickets": "mapping(address => address[])",
+                    "ticket_addresses": "address[]"
+                }
+            },
+            "approveAndCall(address,uint256,bytes)": {
+                "argument": {
+                    "_value": "uint256",
+                    "_extraData": "bytes"
+                },
+                "contract": {
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256",
+                    "ONETIMESOLD": "address[]",
+                    "initialSupply": "uint256",
+                    "decimalUnits": "uint8",
+                    "tokenName": "string",
+                    "tokenSymbol": "string",
+                    "customer_tickets": "mapping(address => address[])",
+                    "ticket_addresses": "address[]"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256",
+                    "ONETIMESOLD": "address[]",
+                    "initialSupply": "uint256",
+                    "decimalUnits": "uint8",
+                    "tokenName": "string",
+                    "tokenSymbol": "string",
+                    "customer_tickets": "mapping(address => address[])",
+                    "ticket_addresses": "address[]"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256",
+                    "ONETIMESOLD": "address[]",
+                    "initialSupply": "uint256",
+                    "decimalUnits": "uint8",
+                    "tokenName": "string",
+                    "tokenSymbol": "string",
+                    "customer_tickets": "mapping(address => address[])",
+                    "ticket_addresses": "address[]"
+                }
+            },
+            "owned()": {
+                "argument": {},
+                "contract": {
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256",
+                    "ONETIMESOLD": "address[]",
+                    "initialSupply": "uint256",
+                    "decimalUnits": "uint8",
+                    "tokenName": "string",
+                    "tokenSymbol": "string",
+                    "customer_tickets": "mapping(address => address[])",
+                    "ticket_addresses": "address[]"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256",
+                    "ONETIMESOLD": "address[]",
+                    "initialSupply": "uint256",
+                    "decimalUnits": "uint8",
+                    "tokenName": "string",
+                    "tokenSymbol": "string",
+                    "customer_tickets": "mapping(address => address[])",
+                    "ticket_addresses": "address[]"
+                }
+            },
+            "TravelCoinToken()": {
+                "argument": {},
+                "contract": {
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256",
+                    "ONETIMESOLD": "address[]",
+                    "initialSupply": "uint256",
+                    "decimalUnits": "uint8",
+                    "tokenName": "string",
+                    "tokenSymbol": "string",
+                    "customer_tickets": "mapping(address => address[])",
+                    "ticket_addresses": "address[]"
+                }
+            },
+            "mintToken(address,uint256)": {
+                "argument": {
+                    "mintedAmount": "uint256"
+                },
+                "contract": {
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256",
+                    "ONETIMESOLD": "address[]",
+                    "initialSupply": "uint256",
+                    "decimalUnits": "uint8",
+                    "tokenName": "string",
+                    "tokenSymbol": "string",
+                    "customer_tickets": "mapping(address => address[])",
+                    "ticket_addresses": "address[]"
+                }
+            },
+            "freezeAccount(address,bool)": {
+                "argument": {},
+                "contract": {
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256",
+                    "ONETIMESOLD": "address[]",
+                    "initialSupply": "uint256",
+                    "decimalUnits": "uint8",
+                    "tokenName": "string",
+                    "tokenSymbol": "string",
+                    "customer_tickets": "mapping(address => address[])",
+                    "ticket_addresses": "address[]"
+                }
+            },
+            "setPrices(uint256,uint256)": {
+                "argument": {
+                    "newSellPrice": "uint256",
+                    "newBuyPrice": "uint256"
+                },
+                "contract": {
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256",
+                    "ONETIMESOLD": "address[]",
+                    "initialSupply": "uint256",
+                    "decimalUnits": "uint8",
+                    "tokenName": "string",
+                    "tokenSymbol": "string",
+                    "customer_tickets": "mapping(address => address[])",
+                    "ticket_addresses": "address[]"
+                }
+            },
+            "buy()": {
+                "argument": {},
+                "contract": {
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256",
+                    "ONETIMESOLD": "address[]",
+                    "initialSupply": "uint256",
+                    "decimalUnits": "uint8",
+                    "tokenName": "string",
+                    "tokenSymbol": "string",
+                    "customer_tickets": "mapping(address => address[])",
+                    "ticket_addresses": "address[]"
+                }
+            },
+            "sell(uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256",
+                    "ONETIMESOLD": "address[]",
+                    "initialSupply": "uint256",
+                    "decimalUnits": "uint8",
+                    "tokenName": "string",
+                    "tokenSymbol": "string",
+                    "customer_tickets": "mapping(address => address[])",
+                    "ticket_addresses": "address[]"
+                }
+            },
+            "addNewTicket(address,uint256,uint256,bool)": {
+                "argument": {
+                    "price": "uint256",
+                    "reward_pts": "uint256"
+                },
+                "contract": {
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256",
+                    "ONETIMESOLD": "address[]",
+                    "initialSupply": "uint256",
+                    "decimalUnits": "uint8",
+                    "tokenName": "string",
+                    "tokenSymbol": "string",
+                    "customer_tickets": "mapping(address => address[])",
+                    "ticket_addresses": "address[]"
+                }
+            },
+            "allocateTicket(address,address)": {
+                "argument": {},
+                "contract": {
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256",
+                    "ONETIMESOLD": "address[]",
+                    "initialSupply": "uint256",
+                    "decimalUnits": "uint8",
+                    "tokenName": "string",
+                    "tokenSymbol": "string",
+                    "customer_tickets": "mapping(address => address[])",
+                    "ticket_addresses": "address[]"
+                }
+            },
+            "getAllTickets()": {
+                "argument": {},
+                "contract": {
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256",
+                    "ONETIMESOLD": "address[]",
+                    "initialSupply": "uint256",
+                    "decimalUnits": "uint8",
+                    "tokenName": "string",
+                    "tokenSymbol": "string",
+                    "customer_tickets": "mapping(address => address[])",
+                    "ticket_addresses": "address[]"
+                }
+            },
+            "getONETIMESOLD()": {
+                "argument": {},
+                "contract": {
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256",
+                    "ONETIMESOLD": "address[]",
+                    "initialSupply": "uint256",
+                    "decimalUnits": "uint8",
+                    "tokenName": "string",
+                    "tokenSymbol": "string",
+                    "customer_tickets": "mapping(address => address[])",
+                    "ticket_addresses": "address[]"
+                }
+            },
+            "getMyTicketAddresses(address)": {
+                "argument": {},
+                "contract": {
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256",
+                    "ONETIMESOLD": "address[]",
+                    "initialSupply": "uint256",
+                    "decimalUnits": "uint8",
+                    "tokenName": "string",
+                    "tokenSymbol": "string",
+                    "customer_tickets": "mapping(address => address[])",
+                    "ticket_addresses": "address[]"
+                }
+            },
+            "transferTicket(address,address)": {
+                "argument": {},
+                "contract": {
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256",
+                    "ONETIMESOLD": "address[]",
+                    "initialSupply": "uint256",
+                    "decimalUnits": "uint8",
+                    "tokenName": "string",
+                    "tokenSymbol": "string",
+                    "customer_tickets": "mapping(address => address[])",
+                    "ticket_addresses": "address[]"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256",
+                    "ONETIMESOLD": "address[]",
+                    "initialSupply": "uint256",
+                    "decimalUnits": "uint8",
+                    "tokenName": "string",
+                    "tokenSymbol": "string",
+                    "customer_tickets": "mapping(address => address[])",
+                    "ticket_addresses": "address[]"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "getMyTicketAddresses(address)": [
+                1114,
+                163
+            ],
+            "buy()": [
+                3466,
+                691
+            ],
+            "transferFrom(address,address,uint256)": [
+                1466,
+                251
+            ],
+            "sell(uint256)": [
+                4134,
+                845
+            ],
+            "approve(address,uint256)": [
+                1013,
+                141
+            ],
+            "transferTicket(address,address)": [
+                1800,
+                339
+            ],
+            "addNewTicket(address,uint256,uint256,bool)": [
+                3367,
+                669
+            ],
+            "getAllTickets()": [
+                490,
+                75
+            ],
+            "transferOwnership(address)": [
+                4258,
+                889
+            ],
+            "setPrices(uint256,uint256)": [
+                814,
+                97
+            ],
+            "mintToken(address,uint256)": [
+                2603,
+                493
+            ],
+            "approveAndCall(address,uint256,bytes)": [
+                3753,
+                779
+            ],
+            "getONETIMESOLD()": [
+                1358,
+                229
+            ],
+            "freezeAccount(address,bool)": [
+                4179,
+                867
+            ],
+            "transfer(address,uint256)": [
+                3476,
+                713
+            ]
+        },
+        "block_CALL_mapping": {
+            "block11885": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ],
+            "jump12072": [
+                "msg.sender.send(amount * sellPrice)",
+                "msg.sender.send(amount * sellPrice)"
+            ],
+            "jump11885": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)",
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ],
+            "block12072": [
+                "msg.sender.send(amount * sellPrice)"
+            ]
+        }
+    }
+}

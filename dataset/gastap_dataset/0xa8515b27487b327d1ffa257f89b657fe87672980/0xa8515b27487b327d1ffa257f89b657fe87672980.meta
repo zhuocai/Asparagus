@@ -1,0 +1,573 @@
+{
+    "SafeMath": {
+        "function_list": [
+            "safeMul(uint256,uint256)",
+            "safeDiv(uint256,uint256)",
+            "safeSub(uint256,uint256)",
+            "safeAdd(uint256,uint256)"
+        ],
+        "initial_state": {
+            "safeMul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "safeDiv(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "safeSub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "safeAdd(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "BancorFormula": {
+        "function_list": [
+            "safeMul(uint256,uint256)",
+            "safeDiv(uint256,uint256)",
+            "safeSub(uint256,uint256)",
+            "safeAdd(uint256,uint256)",
+            "calculatePurchaseReturn(uint256,uint256,uint8,uint256)",
+            "calculateSaleReturn(uint256,uint256,uint8,uint256)",
+            "BancorFormula()",
+            "calculatePurchaseReturn(uint256,uint256,uint8,uint256)",
+            "calculateSaleReturn(uint256,uint256,uint8,uint256)",
+            "calculateBestPrecision(uint256,uint256,uint256,uint256)",
+            "power(uint256,uint256,uint256,uint256,uint8)",
+            "ln(uint256,uint256,uint8)",
+            "lnUpperBound(uint256,uint256)",
+            "fixedLoge(uint256,uint8)",
+            "fixedLog2(uint256,uint8)",
+            "ceilLog2(uint256,uint256)",
+            "floorLog2(uint256)",
+            "fixedExp(uint256,uint8)",
+            "fixedExpUnsafe(uint256,uint8)",
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "safeMul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "version": "string",
+                    "ONE": "uint256",
+                    "TWO": "uint256",
+                    "MIN_PRECISION": "uint8",
+                    "MAX_PRECISION": "uint8",
+                    "SCALED_EXP_0P5": "uint256",
+                    "SCALED_VAL_0P5": "uint256",
+                    "SCALED_EXP_1P0": "uint256",
+                    "SCALED_VAL_1P0": "uint256",
+                    "SCALED_EXP_2P0": "uint256",
+                    "SCALED_VAL_2P0": "uint256",
+                    "SCALED_EXP_3P0": "uint256",
+                    "SCALED_VAL_3P0": "uint256",
+                    "CEILING_LN2_MANTISSA": "uint256",
+                    "FLOOR_LN2_MANTISSA": "uint256",
+                    "FLOOR_LN2_EXPONENT": "uint8",
+                    "maxExpArray": "uint256[128]"
+                }
+            },
+            "safeDiv(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "version": "string",
+                    "ONE": "uint256",
+                    "TWO": "uint256",
+                    "MIN_PRECISION": "uint8",
+                    "MAX_PRECISION": "uint8",
+                    "SCALED_EXP_0P5": "uint256",
+                    "SCALED_VAL_0P5": "uint256",
+                    "SCALED_EXP_1P0": "uint256",
+                    "SCALED_VAL_1P0": "uint256",
+                    "SCALED_EXP_2P0": "uint256",
+                    "SCALED_VAL_2P0": "uint256",
+                    "SCALED_EXP_3P0": "uint256",
+                    "SCALED_VAL_3P0": "uint256",
+                    "CEILING_LN2_MANTISSA": "uint256",
+                    "FLOOR_LN2_MANTISSA": "uint256",
+                    "FLOOR_LN2_EXPONENT": "uint8",
+                    "maxExpArray": "uint256[128]"
+                }
+            },
+            "safeSub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "version": "string",
+                    "ONE": "uint256",
+                    "TWO": "uint256",
+                    "MIN_PRECISION": "uint8",
+                    "MAX_PRECISION": "uint8",
+                    "SCALED_EXP_0P5": "uint256",
+                    "SCALED_VAL_0P5": "uint256",
+                    "SCALED_EXP_1P0": "uint256",
+                    "SCALED_VAL_1P0": "uint256",
+                    "SCALED_EXP_2P0": "uint256",
+                    "SCALED_VAL_2P0": "uint256",
+                    "SCALED_EXP_3P0": "uint256",
+                    "SCALED_VAL_3P0": "uint256",
+                    "CEILING_LN2_MANTISSA": "uint256",
+                    "FLOOR_LN2_MANTISSA": "uint256",
+                    "FLOOR_LN2_EXPONENT": "uint8",
+                    "maxExpArray": "uint256[128]"
+                }
+            },
+            "safeAdd(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "version": "string",
+                    "ONE": "uint256",
+                    "TWO": "uint256",
+                    "MIN_PRECISION": "uint8",
+                    "MAX_PRECISION": "uint8",
+                    "SCALED_EXP_0P5": "uint256",
+                    "SCALED_VAL_0P5": "uint256",
+                    "SCALED_EXP_1P0": "uint256",
+                    "SCALED_VAL_1P0": "uint256",
+                    "SCALED_EXP_2P0": "uint256",
+                    "SCALED_VAL_2P0": "uint256",
+                    "SCALED_EXP_3P0": "uint256",
+                    "SCALED_VAL_3P0": "uint256",
+                    "CEILING_LN2_MANTISSA": "uint256",
+                    "FLOOR_LN2_MANTISSA": "uint256",
+                    "FLOOR_LN2_EXPONENT": "uint8",
+                    "maxExpArray": "uint256[128]"
+                }
+            },
+            "calculatePurchaseReturn(uint256,uint256,uint8,uint256)": {
+                "argument": {
+                    "_supply": "uint256",
+                    "_reserveBalance": "uint256",
+                    "_reserveRatio": "uint8",
+                    "_depositAmount": "uint256"
+                },
+                "contract": {
+                    "version": "string",
+                    "ONE": "uint256",
+                    "TWO": "uint256",
+                    "MIN_PRECISION": "uint8",
+                    "MAX_PRECISION": "uint8",
+                    "SCALED_EXP_0P5": "uint256",
+                    "SCALED_VAL_0P5": "uint256",
+                    "SCALED_EXP_1P0": "uint256",
+                    "SCALED_VAL_1P0": "uint256",
+                    "SCALED_EXP_2P0": "uint256",
+                    "SCALED_VAL_2P0": "uint256",
+                    "SCALED_EXP_3P0": "uint256",
+                    "SCALED_VAL_3P0": "uint256",
+                    "CEILING_LN2_MANTISSA": "uint256",
+                    "FLOOR_LN2_MANTISSA": "uint256",
+                    "FLOOR_LN2_EXPONENT": "uint8",
+                    "maxExpArray": "uint256[128]"
+                }
+            },
+            "calculateSaleReturn(uint256,uint256,uint8,uint256)": {
+                "argument": {
+                    "_supply": "uint256",
+                    "_reserveBalance": "uint256",
+                    "_reserveRatio": "uint8",
+                    "_sellAmount": "uint256"
+                },
+                "contract": {
+                    "version": "string",
+                    "ONE": "uint256",
+                    "TWO": "uint256",
+                    "MIN_PRECISION": "uint8",
+                    "MAX_PRECISION": "uint8",
+                    "SCALED_EXP_0P5": "uint256",
+                    "SCALED_VAL_0P5": "uint256",
+                    "SCALED_EXP_1P0": "uint256",
+                    "SCALED_VAL_1P0": "uint256",
+                    "SCALED_EXP_2P0": "uint256",
+                    "SCALED_VAL_2P0": "uint256",
+                    "SCALED_EXP_3P0": "uint256",
+                    "SCALED_VAL_3P0": "uint256",
+                    "CEILING_LN2_MANTISSA": "uint256",
+                    "FLOOR_LN2_MANTISSA": "uint256",
+                    "FLOOR_LN2_EXPONENT": "uint8",
+                    "maxExpArray": "uint256[128]"
+                }
+            },
+            "BancorFormula()": {
+                "argument": {},
+                "contract": {
+                    "version": "string",
+                    "ONE": "uint256",
+                    "TWO": "uint256",
+                    "MIN_PRECISION": "uint8",
+                    "MAX_PRECISION": "uint8",
+                    "SCALED_EXP_0P5": "uint256",
+                    "SCALED_VAL_0P5": "uint256",
+                    "SCALED_EXP_1P0": "uint256",
+                    "SCALED_VAL_1P0": "uint256",
+                    "SCALED_EXP_2P0": "uint256",
+                    "SCALED_VAL_2P0": "uint256",
+                    "SCALED_EXP_3P0": "uint256",
+                    "SCALED_VAL_3P0": "uint256",
+                    "CEILING_LN2_MANTISSA": "uint256",
+                    "FLOOR_LN2_MANTISSA": "uint256",
+                    "FLOOR_LN2_EXPONENT": "uint8",
+                    "maxExpArray": "uint256[128]"
+                }
+            },
+            "calculateBestPrecision(uint256,uint256,uint256,uint256)": {
+                "argument": {
+                    "_baseN": "uint256",
+                    "_baseD": "uint256",
+                    "_expN": "uint256",
+                    "_expD": "uint256"
+                },
+                "contract": {
+                    "version": "string",
+                    "ONE": "uint256",
+                    "TWO": "uint256",
+                    "MIN_PRECISION": "uint8",
+                    "MAX_PRECISION": "uint8",
+                    "SCALED_EXP_0P5": "uint256",
+                    "SCALED_VAL_0P5": "uint256",
+                    "SCALED_EXP_1P0": "uint256",
+                    "SCALED_VAL_1P0": "uint256",
+                    "SCALED_EXP_2P0": "uint256",
+                    "SCALED_VAL_2P0": "uint256",
+                    "SCALED_EXP_3P0": "uint256",
+                    "SCALED_VAL_3P0": "uint256",
+                    "CEILING_LN2_MANTISSA": "uint256",
+                    "FLOOR_LN2_MANTISSA": "uint256",
+                    "FLOOR_LN2_EXPONENT": "uint8",
+                    "maxExpArray": "uint256[128]"
+                }
+            },
+            "power(uint256,uint256,uint256,uint256,uint8)": {
+                "argument": {
+                    "_baseN": "uint256",
+                    "_baseD": "uint256",
+                    "_expN": "uint256",
+                    "_expD": "uint256",
+                    "_precision": "uint8"
+                },
+                "contract": {
+                    "version": "string",
+                    "ONE": "uint256",
+                    "TWO": "uint256",
+                    "MIN_PRECISION": "uint8",
+                    "MAX_PRECISION": "uint8",
+                    "SCALED_EXP_0P5": "uint256",
+                    "SCALED_VAL_0P5": "uint256",
+                    "SCALED_EXP_1P0": "uint256",
+                    "SCALED_VAL_1P0": "uint256",
+                    "SCALED_EXP_2P0": "uint256",
+                    "SCALED_VAL_2P0": "uint256",
+                    "SCALED_EXP_3P0": "uint256",
+                    "SCALED_VAL_3P0": "uint256",
+                    "CEILING_LN2_MANTISSA": "uint256",
+                    "FLOOR_LN2_MANTISSA": "uint256",
+                    "FLOOR_LN2_EXPONENT": "uint8",
+                    "maxExpArray": "uint256[128]"
+                }
+            },
+            "ln(uint256,uint256,uint8)": {
+                "argument": {
+                    "_numerator": "uint256",
+                    "_denominator": "uint256",
+                    "_precision": "uint8"
+                },
+                "contract": {
+                    "version": "string",
+                    "ONE": "uint256",
+                    "TWO": "uint256",
+                    "MIN_PRECISION": "uint8",
+                    "MAX_PRECISION": "uint8",
+                    "SCALED_EXP_0P5": "uint256",
+                    "SCALED_VAL_0P5": "uint256",
+                    "SCALED_EXP_1P0": "uint256",
+                    "SCALED_VAL_1P0": "uint256",
+                    "SCALED_EXP_2P0": "uint256",
+                    "SCALED_VAL_2P0": "uint256",
+                    "SCALED_EXP_3P0": "uint256",
+                    "SCALED_VAL_3P0": "uint256",
+                    "CEILING_LN2_MANTISSA": "uint256",
+                    "FLOOR_LN2_MANTISSA": "uint256",
+                    "FLOOR_LN2_EXPONENT": "uint8",
+                    "maxExpArray": "uint256[128]"
+                }
+            },
+            "lnUpperBound(uint256,uint256)": {
+                "argument": {
+                    "_numerator": "uint256",
+                    "_denominator": "uint256"
+                },
+                "contract": {
+                    "version": "string",
+                    "ONE": "uint256",
+                    "TWO": "uint256",
+                    "MIN_PRECISION": "uint8",
+                    "MAX_PRECISION": "uint8",
+                    "SCALED_EXP_0P5": "uint256",
+                    "SCALED_VAL_0P5": "uint256",
+                    "SCALED_EXP_1P0": "uint256",
+                    "SCALED_VAL_1P0": "uint256",
+                    "SCALED_EXP_2P0": "uint256",
+                    "SCALED_VAL_2P0": "uint256",
+                    "SCALED_EXP_3P0": "uint256",
+                    "SCALED_VAL_3P0": "uint256",
+                    "CEILING_LN2_MANTISSA": "uint256",
+                    "FLOOR_LN2_MANTISSA": "uint256",
+                    "FLOOR_LN2_EXPONENT": "uint8",
+                    "maxExpArray": "uint256[128]"
+                }
+            },
+            "fixedLoge(uint256,uint8)": {
+                "argument": {
+                    "_x": "uint256",
+                    "_precision": "uint8"
+                },
+                "contract": {
+                    "version": "string",
+                    "ONE": "uint256",
+                    "TWO": "uint256",
+                    "MIN_PRECISION": "uint8",
+                    "MAX_PRECISION": "uint8",
+                    "SCALED_EXP_0P5": "uint256",
+                    "SCALED_VAL_0P5": "uint256",
+                    "SCALED_EXP_1P0": "uint256",
+                    "SCALED_VAL_1P0": "uint256",
+                    "SCALED_EXP_2P0": "uint256",
+                    "SCALED_VAL_2P0": "uint256",
+                    "SCALED_EXP_3P0": "uint256",
+                    "SCALED_VAL_3P0": "uint256",
+                    "CEILING_LN2_MANTISSA": "uint256",
+                    "FLOOR_LN2_MANTISSA": "uint256",
+                    "FLOOR_LN2_EXPONENT": "uint8",
+                    "maxExpArray": "uint256[128]"
+                }
+            },
+            "fixedLog2(uint256,uint8)": {
+                "argument": {
+                    "_x": "uint256",
+                    "_precision": "uint8"
+                },
+                "contract": {
+                    "version": "string",
+                    "ONE": "uint256",
+                    "TWO": "uint256",
+                    "MIN_PRECISION": "uint8",
+                    "MAX_PRECISION": "uint8",
+                    "SCALED_EXP_0P5": "uint256",
+                    "SCALED_VAL_0P5": "uint256",
+                    "SCALED_EXP_1P0": "uint256",
+                    "SCALED_VAL_1P0": "uint256",
+                    "SCALED_EXP_2P0": "uint256",
+                    "SCALED_VAL_2P0": "uint256",
+                    "SCALED_EXP_3P0": "uint256",
+                    "SCALED_VAL_3P0": "uint256",
+                    "CEILING_LN2_MANTISSA": "uint256",
+                    "FLOOR_LN2_MANTISSA": "uint256",
+                    "FLOOR_LN2_EXPONENT": "uint8",
+                    "maxExpArray": "uint256[128]"
+                }
+            },
+            "ceilLog2(uint256,uint256)": {
+                "argument": {
+                    "_numerator": "uint256",
+                    "_denominator": "uint256"
+                },
+                "contract": {
+                    "version": "string",
+                    "ONE": "uint256",
+                    "TWO": "uint256",
+                    "MIN_PRECISION": "uint8",
+                    "MAX_PRECISION": "uint8",
+                    "SCALED_EXP_0P5": "uint256",
+                    "SCALED_VAL_0P5": "uint256",
+                    "SCALED_EXP_1P0": "uint256",
+                    "SCALED_VAL_1P0": "uint256",
+                    "SCALED_EXP_2P0": "uint256",
+                    "SCALED_VAL_2P0": "uint256",
+                    "SCALED_EXP_3P0": "uint256",
+                    "SCALED_VAL_3P0": "uint256",
+                    "CEILING_LN2_MANTISSA": "uint256",
+                    "FLOOR_LN2_MANTISSA": "uint256",
+                    "FLOOR_LN2_EXPONENT": "uint8",
+                    "maxExpArray": "uint256[128]"
+                }
+            },
+            "floorLog2(uint256)": {
+                "argument": {
+                    "_n": "uint256"
+                },
+                "contract": {
+                    "version": "string",
+                    "ONE": "uint256",
+                    "TWO": "uint256",
+                    "MIN_PRECISION": "uint8",
+                    "MAX_PRECISION": "uint8",
+                    "SCALED_EXP_0P5": "uint256",
+                    "SCALED_VAL_0P5": "uint256",
+                    "SCALED_EXP_1P0": "uint256",
+                    "SCALED_VAL_1P0": "uint256",
+                    "SCALED_EXP_2P0": "uint256",
+                    "SCALED_VAL_2P0": "uint256",
+                    "SCALED_EXP_3P0": "uint256",
+                    "SCALED_VAL_3P0": "uint256",
+                    "CEILING_LN2_MANTISSA": "uint256",
+                    "FLOOR_LN2_MANTISSA": "uint256",
+                    "FLOOR_LN2_EXPONENT": "uint8",
+                    "maxExpArray": "uint256[128]"
+                }
+            },
+            "fixedExp(uint256,uint8)": {
+                "argument": {
+                    "_x": "uint256",
+                    "_precision": "uint8"
+                },
+                "contract": {
+                    "version": "string",
+                    "ONE": "uint256",
+                    "TWO": "uint256",
+                    "MIN_PRECISION": "uint8",
+                    "MAX_PRECISION": "uint8",
+                    "SCALED_EXP_0P5": "uint256",
+                    "SCALED_VAL_0P5": "uint256",
+                    "SCALED_EXP_1P0": "uint256",
+                    "SCALED_VAL_1P0": "uint256",
+                    "SCALED_EXP_2P0": "uint256",
+                    "SCALED_VAL_2P0": "uint256",
+                    "SCALED_EXP_3P0": "uint256",
+                    "SCALED_VAL_3P0": "uint256",
+                    "CEILING_LN2_MANTISSA": "uint256",
+                    "FLOOR_LN2_MANTISSA": "uint256",
+                    "FLOOR_LN2_EXPONENT": "uint8",
+                    "maxExpArray": "uint256[128]"
+                }
+            },
+            "fixedExpUnsafe(uint256,uint8)": {
+                "argument": {
+                    "_x": "uint256",
+                    "_precision": "uint8"
+                },
+                "contract": {
+                    "version": "string",
+                    "ONE": "uint256",
+                    "TWO": "uint256",
+                    "MIN_PRECISION": "uint8",
+                    "MAX_PRECISION": "uint8",
+                    "SCALED_EXP_0P5": "uint256",
+                    "SCALED_VAL_0P5": "uint256",
+                    "SCALED_EXP_1P0": "uint256",
+                    "SCALED_VAL_1P0": "uint256",
+                    "SCALED_EXP_2P0": "uint256",
+                    "SCALED_VAL_2P0": "uint256",
+                    "SCALED_EXP_3P0": "uint256",
+                    "SCALED_VAL_3P0": "uint256",
+                    "CEILING_LN2_MANTISSA": "uint256",
+                    "FLOOR_LN2_MANTISSA": "uint256",
+                    "FLOOR_LN2_EXPONENT": "uint8",
+                    "maxExpArray": "uint256[128]"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "version": "string",
+                    "ONE": "uint256",
+                    "TWO": "uint256",
+                    "MIN_PRECISION": "uint8",
+                    "MAX_PRECISION": "uint8",
+                    "SCALED_EXP_0P5": "uint256",
+                    "SCALED_VAL_0P5": "uint256",
+                    "SCALED_EXP_1P0": "uint256",
+                    "SCALED_VAL_1P0": "uint256",
+                    "SCALED_EXP_2P0": "uint256",
+                    "SCALED_VAL_2P0": "uint256",
+                    "SCALED_EXP_3P0": "uint256",
+                    "SCALED_VAL_3P0": "uint256",
+                    "CEILING_LN2_MANTISSA": "uint256",
+                    "FLOOR_LN2_MANTISSA": "uint256",
+                    "FLOOR_LN2_EXPONENT": "uint8",
+                    "maxExpArray": "uint256[128]"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "ceilLog2(uint256,uint256)": [
+                290,
+                97
+            ],
+            "ln(uint256,uint256,uint8)": [
+                202,
+                75
+            ],
+            "fixedLog2(uint256,uint8)": [
+                443,
+                141
+            ],
+            "calculatePurchaseReturn(uint256,uint256,uint8,uint256)": [
+                984,
+                273
+            ],
+            "power(uint256,uint256,uint256,uint256,uint8)": [
+                1082,
+                295
+            ],
+            "lnUpperBound(uint256,uint256)": [
+                909,
+                251
+            ],
+            "fixedLoge(uint256,uint8)": [
+                622,
+                185
+            ],
+            "fixedExp(uint256,uint8)": [
+                365,
+                119
+            ],
+            "floorLog2(uint256)": [
+                700,
+                207
+            ],
+            "fixedExpUnsafe(uint256,uint8)": [
+                1288,
+                339
+            ],
+            "calculateBestPrecision(uint256,uint256,uint256,uint256)": [
+                521,
+                163
+            ],
+            "calculateSaleReturn(uint256,uint256,uint8,uint256)": [
+                1190,
+                317
+            ]
+        },
+        "block_CALL_mapping": {}
+    }
+}

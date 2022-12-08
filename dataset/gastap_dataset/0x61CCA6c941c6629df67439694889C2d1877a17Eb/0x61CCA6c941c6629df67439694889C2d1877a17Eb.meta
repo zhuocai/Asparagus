@@ -1,0 +1,150 @@
+{
+    "LockYourLove": {
+        "function_list": [
+            "LockYourLove()",
+            "fallback()",
+            "donateToLovers(bytes32)",
+            "setPrice(uint256)",
+            "getPrice()",
+            "getNumLoveItems()",
+            "addLovers(bytes32,string,string)",
+            "getLovers(bytes32)",
+            "destroy()"
+        ],
+        "initial_state": {
+            "LockYourLove()": {
+                "argument": {},
+                "contract": {
+                    "price": "uint256",
+                    "numLoveItems": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "price": "uint256",
+                    "numLoveItems": "uint256"
+                }
+            },
+            "donateToLovers(bytes32)": {
+                "argument": {
+                    "loveHash": "bytes32"
+                },
+                "contract": {
+                    "price": "uint256",
+                    "numLoveItems": "uint256"
+                }
+            },
+            "setPrice(uint256)": {
+                "argument": {
+                    "newprice": "uint256"
+                },
+                "contract": {
+                    "price": "uint256",
+                    "numLoveItems": "uint256"
+                }
+            },
+            "getPrice()": {
+                "argument": {},
+                "contract": {
+                    "price": "uint256",
+                    "numLoveItems": "uint256"
+                }
+            },
+            "getNumLoveItems()": {
+                "argument": {},
+                "contract": {
+                    "price": "uint256",
+                    "numLoveItems": "uint256"
+                }
+            },
+            "addLovers(bytes32,string,string)": {
+                "argument": {
+                    "love_hash": "bytes32",
+                    "lovemsg": "string",
+                    "loveurl": "string"
+                },
+                "contract": {
+                    "price": "uint256",
+                    "numLoveItems": "uint256"
+                }
+            },
+            "getLovers(bytes32)": {
+                "argument": {
+                    "love_hash": "bytes32"
+                },
+                "contract": {
+                    "price": "uint256",
+                    "numLoveItems": "uint256"
+                }
+            },
+            "destroy()": {
+                "argument": {},
+                "contract": {
+                    "price": "uint256",
+                    "numLoveItems": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "getNumLoveItems()": [
+                1100,
+                273
+            ],
+            "setPrice(uint256)": [
+                926,
+                185
+            ],
+            "addLovers(bytes32,string,string)": [
+                297,
+                97
+            ],
+            "getPrice()": [
+                971,
+                207
+            ],
+            "donateToLovers(bytes32)": [
+                237,
+                75
+            ],
+            "destroy()": [
+                473,
+                119
+            ],
+            "getLovers(bytes32)": [
+                496,
+                141
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump164": [
+                "msg.sender.transfer(msg.value)",
+                "msg.sender.transfer(msg.value)"
+            ],
+            "jump164_0": [
+                "msg.sender.transfer(msg.value)",
+                "msg.sender.transfer(msg.value)"
+            ],
+            "block164_0": [
+                "msg.sender.transfer(msg.value)"
+            ],
+            "jump1258": [
+                "mapLoveItems[loveHash].lovers_address.transfer(msg.value)",
+                "mapLoveItems[loveHash].lovers_address.transfer(msg.value)"
+            ],
+            "block1682": [
+                "owner.transfer(price)"
+            ],
+            "block1258": [
+                "mapLoveItems[loveHash].lovers_address.transfer(msg.value)"
+            ],
+            "jump1682": [
+                "owner.transfer(price)",
+                "owner.transfer(price)"
+            ],
+            "block164": [
+                "msg.sender.transfer(msg.value)"
+            ]
+        }
+    }
+}

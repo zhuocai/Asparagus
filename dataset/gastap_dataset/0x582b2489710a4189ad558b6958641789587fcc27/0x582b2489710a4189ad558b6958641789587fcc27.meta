@@ -1,0 +1,622 @@
+{
+    "PonziUnlimited": {
+        "function_list": [
+            "PonziUnlimited()",
+            "getPayout(uint256)",
+            "getLastPayouts()",
+            "getMaster()",
+            "getnumDeposits()",
+            "getContractMetrics()",
+            "setActive(bool)",
+            "inviteReferee(address,address)",
+            "createReferee(address,address)",
+            "checkIfReferee(address)",
+            "getAddressGains(address)",
+            "getCurrentPayoutIndex()",
+            "getEarliestPosition(address)",
+            "deposit()",
+            "resetBonuses(address)",
+            "setGainsRate(uint256)",
+            "resetReferee(address)",
+            "resetReferedCount(address)",
+            "getAccountReferalsStats(address)",
+            "computeGainsRate(address)",
+            "computeGains(PonziUnlimited.Deposit)",
+            "isReferee(address)",
+            "getReferedCount(address)",
+            "getPendingReferals(address)",
+            "addNewPayout(PonziUnlimited.PayoutItem)",
+            "payout(PonziUnlimited.Deposit)",
+            "dispatchGains()",
+            "fallback()"
+        ],
+        "initial_state": {
+            "PonziUnlimited()": {
+                "argument": {},
+                "contract": {
+                    "feesRate": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "referedRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "PonziUnlimited.PayoutItem[]"
+                }
+            },
+            "getPayout(uint256)": {
+                "argument": {
+                    "index": "uint256"
+                },
+                "contract": {
+                    "feesRate": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "referedRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "PonziUnlimited.PayoutItem[]"
+                }
+            },
+            "getLastPayouts()": {
+                "argument": {},
+                "contract": {
+                    "feesRate": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "referedRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "PonziUnlimited.PayoutItem[]"
+                }
+            },
+            "getMaster()": {
+                "argument": {},
+                "contract": {
+                    "feesRate": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "referedRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "PonziUnlimited.PayoutItem[]"
+                }
+            },
+            "getnumDeposits()": {
+                "argument": {},
+                "contract": {
+                    "feesRate": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "referedRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "PonziUnlimited.PayoutItem[]"
+                }
+            },
+            "getContractMetrics()": {
+                "argument": {},
+                "contract": {
+                    "feesRate": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "referedRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "PonziUnlimited.PayoutItem[]"
+                }
+            },
+            "setActive(bool)": {
+                "argument": {},
+                "contract": {
+                    "feesRate": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "referedRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "PonziUnlimited.PayoutItem[]"
+                }
+            },
+            "inviteReferee(address,address)": {
+                "argument": {},
+                "contract": {
+                    "feesRate": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "referedRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "PonziUnlimited.PayoutItem[]"
+                }
+            },
+            "createReferee(address,address)": {
+                "argument": {},
+                "contract": {
+                    "feesRate": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "referedRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "PonziUnlimited.PayoutItem[]"
+                }
+            },
+            "checkIfReferee(address)": {
+                "argument": {},
+                "contract": {
+                    "feesRate": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "referedRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "PonziUnlimited.PayoutItem[]"
+                }
+            },
+            "getAddressGains(address)": {
+                "argument": {},
+                "contract": {
+                    "feesRate": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "referedRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "PonziUnlimited.PayoutItem[]"
+                }
+            },
+            "getCurrentPayoutIndex()": {
+                "argument": {},
+                "contract": {
+                    "feesRate": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "referedRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "PonziUnlimited.PayoutItem[]"
+                }
+            },
+            "getEarliestPosition(address)": {
+                "argument": {},
+                "contract": {
+                    "feesRate": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "referedRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "PonziUnlimited.PayoutItem[]"
+                }
+            },
+            "deposit()": {
+                "argument": {},
+                "contract": {
+                    "feesRate": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "referedRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "PonziUnlimited.PayoutItem[]"
+                }
+            },
+            "resetBonuses(address)": {
+                "argument": {},
+                "contract": {
+                    "feesRate": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "referedRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "PonziUnlimited.PayoutItem[]"
+                }
+            },
+            "setGainsRate(uint256)": {
+                "argument": {
+                    "gainsRate": "uint256"
+                },
+                "contract": {
+                    "feesRate": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "referedRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "PonziUnlimited.PayoutItem[]"
+                }
+            },
+            "resetReferee(address)": {
+                "argument": {},
+                "contract": {
+                    "feesRate": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "referedRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "PonziUnlimited.PayoutItem[]"
+                }
+            },
+            "resetReferedCount(address)": {
+                "argument": {},
+                "contract": {
+                    "feesRate": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "referedRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "PonziUnlimited.PayoutItem[]"
+                }
+            },
+            "getAccountReferalsStats(address)": {
+                "argument": {},
+                "contract": {
+                    "feesRate": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "referedRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "PonziUnlimited.PayoutItem[]"
+                }
+            },
+            "computeGainsRate(address)": {
+                "argument": {},
+                "contract": {
+                    "feesRate": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "referedRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "PonziUnlimited.PayoutItem[]"
+                }
+            },
+            "computeGains(PonziUnlimited.Deposit)": {
+                "argument": {},
+                "contract": {
+                    "feesRate": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "referedRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "PonziUnlimited.PayoutItem[]"
+                }
+            },
+            "isReferee(address)": {
+                "argument": {},
+                "contract": {
+                    "feesRate": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "referedRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "PonziUnlimited.PayoutItem[]"
+                }
+            },
+            "getReferedCount(address)": {
+                "argument": {},
+                "contract": {
+                    "feesRate": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "referedRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "PonziUnlimited.PayoutItem[]"
+                }
+            },
+            "getPendingReferals(address)": {
+                "argument": {},
+                "contract": {
+                    "feesRate": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "referedRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "PonziUnlimited.PayoutItem[]"
+                }
+            },
+            "addNewPayout(PonziUnlimited.PayoutItem)": {
+                "argument": {},
+                "contract": {
+                    "feesRate": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "referedRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "PonziUnlimited.PayoutItem[]"
+                }
+            },
+            "payout(PonziUnlimited.Deposit)": {
+                "argument": {},
+                "contract": {
+                    "feesRate": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "referedRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "PonziUnlimited.PayoutItem[]"
+                }
+            },
+            "dispatchGains()": {
+                "argument": {},
+                "contract": {
+                    "feesRate": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "referedRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "PonziUnlimited.PayoutItem[]"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "feesRate": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "referedRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "PonziUnlimited.PayoutItem[]"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "getnumDeposits()": [
+                1730,
+                427
+            ],
+            "getContractMetrics()": [
+                1315,
+                339
+            ],
+            "getPayout(uint256)": [
+                1026,
+                251
+            ],
+            "getEarliestPosition(address)": [
+                831,
+                207
+            ],
+            "getCurrentPayoutIndex()": [
+                788,
+                185
+            ],
+            "setActive(bool)": [
+                2038,
+                515
+            ],
+            "computeGainsRate(address)": [
+                474,
+                97
+            ],
+            "inviteReferee(address,address)": [
+                1477,
+                383
+            ],
+            "getAddressGains(address)": [
+                1142,
+                273
+            ],
+            "getLastPayouts()": [
+                1600,
+                405
+            ],
+            "getAccountReferalsStats(address)": [
+                2365,
+                625
+            ],
+            "getMaster()": [
+                1390,
+                361
+            ],
+            "dispatchGains()": [
+                2634,
+                713
+            ],
+            "deposit()": [
+                2239,
+                581
+            ],
+            "setGainsRate(uint256)": [
+                2502,
+                669
+            ]
+        },
+        "block_CALL_mapping": {
+            "block6361_3": [
+                "master.send(fees)"
+            ],
+            "block6143_1": [
+                "currentDepositor.send( payableAmount )"
+            ],
+            "block6361_1": [
+                "master.send(fees)"
+            ],
+            "block6361_0": [
+                "master.send(fees)"
+            ],
+            "jump6361_3": [
+                "master.send(fees)",
+                "master.send(fees)"
+            ],
+            "jump6361_0": [
+                "master.send(fees)",
+                "master.send(fees)"
+            ],
+            "jump6361_1": [
+                "master.send(fees)",
+                "master.send(fees)"
+            ],
+            "jump6361": [
+                "master.send(fees)",
+                "master.send(fees)"
+            ],
+            "block6361_2": [
+                "master.send(fees)"
+            ],
+            "block6143_3": [
+                "currentDepositor.send( payableAmount )"
+            ],
+            "jump6361_2": [
+                "master.send(fees)",
+                "master.send(fees)"
+            ],
+            "jump6143": [
+                "currentDepositor.send( payableAmount )",
+                "currentDepositor.send( payableAmount )"
+            ],
+            "block6143_0": [
+                "currentDepositor.send( payableAmount )"
+            ],
+            "block6143": [
+                "currentDepositor.send( payableAmount )"
+            ],
+            "block6143_2": [
+                "currentDepositor.send( payableAmount )"
+            ],
+            "block6361": [
+                "master.send(fees)"
+            ],
+            "jump6143_3": [
+                "currentDepositor.send( payableAmount )",
+                "currentDepositor.send( payableAmount )"
+            ],
+            "jump6143_2": [
+                "currentDepositor.send( payableAmount )",
+                "currentDepositor.send( payableAmount )"
+            ],
+            "jump6143_1": [
+                "currentDepositor.send( payableAmount )",
+                "currentDepositor.send( payableAmount )"
+            ],
+            "jump6143_0": [
+                "currentDepositor.send( payableAmount )",
+                "currentDepositor.send( payableAmount )"
+            ]
+        }
+    }
+}

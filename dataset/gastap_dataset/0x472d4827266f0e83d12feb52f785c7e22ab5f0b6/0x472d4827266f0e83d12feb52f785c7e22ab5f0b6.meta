@@ -1,0 +1,80 @@
+{
+    "FileStorage": {
+        "function_list": [
+            "FileStorage()",
+            "Kill()",
+            "StoreFile(uint256,bytes32,string,string,string,string,string,uint256,bytes)",
+            "GetFileLocation(bytes32)",
+            "fallback()"
+        ],
+        "initial_state": {
+            "FileStorage()": {
+                "argument": {},
+                "contract": {
+                    "files": "mapping(bytes32 => FileStorage.File[])"
+                }
+            },
+            "Kill()": {
+                "argument": {},
+                "contract": {
+                    "files": "mapping(bytes32 => FileStorage.File[])"
+                }
+            },
+            "StoreFile(uint256,bytes32,string,string,string,string,string,uint256,bytes)": {
+                "argument": {
+                    "storePrice": "uint256",
+                    "key": "bytes32",
+                    "title": "string",
+                    "category": "string",
+                    "extension": "string",
+                    "created": "string",
+                    "updated": "string",
+                    "version": "uint256",
+                    "data": "bytes"
+                },
+                "contract": {
+                    "files": "mapping(bytes32 => FileStorage.File[])"
+                }
+            },
+            "GetFileLocation(bytes32)": {
+                "argument": {
+                    "key": "bytes32"
+                },
+                "contract": {
+                    "files": "mapping(bytes32 => FileStorage.File[])"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "files": "mapping(bytes32 => FileStorage.File[])"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "StoreFile(uint256,bytes32,string,string,string,string,string,uint256,bytes)": [
+                116,
+                75
+            ],
+            "GetFileLocation(bytes32)": [
+                1343,
+                119
+            ],
+            "Kill()": [
+                1412,
+                141
+            ]
+        },
+        "block_CALL_mapping": {
+            "block1980": [
+                "msg.sender.send(this.balance)"
+            ],
+            "block1862": [
+                "owner.send(this.balance)"
+            ],
+            "block2066": [
+                "msg.sender.send(this.balance)"
+            ]
+        }
+    }
+}

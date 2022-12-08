@@ -1,0 +1,286 @@
+{
+    "Owned": {
+        "function_list": [
+            "setOwner(address)"
+        ],
+        "initial_state": {
+            "setOwner(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "setOwner(address)": [
+                81,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Destroyable": {
+        "function_list": [
+            "setHammer(address)",
+            "destroy()"
+        ],
+        "initial_state": {
+            "setHammer(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "destroy()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "setHammer(address)": [
+                202,
+                119
+            ],
+            "destroy()": [
+                179,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Object": {
+        "function_list": [
+            "setHammer(address)",
+            "destroy()",
+            "setOwner(address)",
+            "Object()"
+        ],
+        "initial_state": {
+            "setHammer(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "destroy()": {
+                "argument": {},
+                "contract": {}
+            },
+            "setOwner(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "Object()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "setHammer(address)": [
+                378,
+                163
+            ],
+            "setOwner(address)": [
+                114,
+                75
+            ],
+            "destroy()": [
+                268,
+                119
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "ERC20": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                337,
+                97
+            ],
+            "allowance(address,address)": [
+                1286,
+                295
+            ],
+            "balanceOf(address)": [
+                807,
+                207
+            ],
+            "transferFrom(address,address,uint256)": [
+                481,
+                141
+            ],
+            "transfer(address,uint256)": [
+                1038,
+                251
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump3655": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)",
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ],
+            "block3655": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ]
+        }
+    },
+    "Presale": {
+        "function_list": [
+            "Object()",
+            "setHammer(address)",
+            "destroy()",
+            "setOwner(address)",
+            "Presale(address,uint256,uint256)",
+            "cancel()",
+            "fallback()"
+        ],
+        "initial_state": {
+            "Object()": {
+                "argument": {},
+                "contract": {
+                    "bounty": "uint256",
+                    "donation": "uint256"
+                }
+            },
+            "setHammer(address)": {
+                "argument": {},
+                "contract": {
+                    "bounty": "uint256",
+                    "donation": "uint256"
+                }
+            },
+            "destroy()": {
+                "argument": {},
+                "contract": {
+                    "bounty": "uint256",
+                    "donation": "uint256"
+                }
+            },
+            "setOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "bounty": "uint256",
+                    "donation": "uint256"
+                }
+            },
+            "Presale(address,uint256,uint256)": {
+                "argument": {
+                    "_bounty": "uint256",
+                    "_donation": "uint256"
+                },
+                "contract": {
+                    "bounty": "uint256",
+                    "donation": "uint256"
+                }
+            },
+            "cancel()": {
+                "argument": {},
+                "contract": {
+                    "bounty": "uint256",
+                    "donation": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "bounty": "uint256",
+                    "donation": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "setOwner(address)": [
+                537,
+                75
+            ],
+            "setHammer(address)": [
+                887,
+                207
+            ],
+            "destroy()": [
+                691,
+                119
+            ],
+            "cancel()": [
+                954,
+                229
+            ]
+        },
+        "block_CALL_mapping": {
+            "block368": [
+                "token.transfer(msg.sender, bounty)"
+            ],
+            "block1909": [
+                "token.transfer(owner, bounty)"
+            ],
+            "block438": [
+                "owner.send(msg.value)"
+            ],
+            "jump438_0": [
+                "owner.send(msg.value)",
+                "owner.send(msg.value)"
+            ],
+            "block438_0": [
+                "owner.send(msg.value)"
+            ],
+            "jump368": [
+                "token.transfer(msg.sender, bounty)",
+                "token.transfer(msg.sender, bounty)"
+            ],
+            "jump1909": [
+                "token.transfer(owner, bounty)",
+                "token.transfer(owner, bounty)"
+            ],
+            "jump368_0": [
+                "token.transfer(msg.sender, bounty)",
+                "token.transfer(msg.sender, bounty)"
+            ],
+            "block368_0": [
+                "token.transfer(msg.sender, bounty)"
+            ],
+            "jump438": [
+                "owner.send(msg.value)",
+                "owner.send(msg.value)"
+            ]
+        }
+    }
+}

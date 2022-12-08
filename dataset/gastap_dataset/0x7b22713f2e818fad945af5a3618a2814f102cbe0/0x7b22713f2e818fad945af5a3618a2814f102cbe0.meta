@@ -1,0 +1,209 @@
+{
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "Token": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                125,
+                75
+            ],
+            "balanceOf(address)": [
+                402,
+                141
+            ],
+            "allowance(address,address)": [
+                590,
+                185
+            ],
+            "transferFrom(address,address,uint256)": [
+                269,
+                119
+            ],
+            "transfer(address,uint256)": [
+                489,
+                163
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "LRCFoundationIceboxContract": {
+        "function_list": [
+            "LRCFoundationIceboxContract(address,address)",
+            "start()",
+            "fallback()",
+            "calculateLRCUnlockAmount(uint256,uint256)",
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "LRCFoundationIceboxContract(address,address)": {
+                "argument": {},
+                "contract": {
+                    "FREEZE_PERIOD": "uint256",
+                    "lrcInitialBalance": "uint256",
+                    "lrcWithdrawn": "uint256",
+                    "lrcUnlockPerMonth": "uint256",
+                    "startTime": "uint256",
+                    "withdrawId": "uint256"
+                }
+            },
+            "start()": {
+                "argument": {},
+                "contract": {
+                    "FREEZE_PERIOD": "uint256",
+                    "lrcInitialBalance": "uint256",
+                    "lrcWithdrawn": "uint256",
+                    "lrcUnlockPerMonth": "uint256",
+                    "startTime": "uint256",
+                    "withdrawId": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "FREEZE_PERIOD": "uint256",
+                    "lrcInitialBalance": "uint256",
+                    "lrcWithdrawn": "uint256",
+                    "lrcUnlockPerMonth": "uint256",
+                    "startTime": "uint256",
+                    "withdrawId": "uint256"
+                }
+            },
+            "calculateLRCUnlockAmount(uint256,uint256)": {
+                "argument": {
+                    "_now": "uint256",
+                    "_balance": "uint256"
+                },
+                "contract": {
+                    "FREEZE_PERIOD": "uint256",
+                    "lrcInitialBalance": "uint256",
+                    "lrcWithdrawn": "uint256",
+                    "lrcUnlockPerMonth": "uint256",
+                    "startTime": "uint256",
+                    "withdrawId": "uint256"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "FREEZE_PERIOD": "uint256",
+                    "lrcInitialBalance": "uint256",
+                    "lrcWithdrawn": "uint256",
+                    "lrcUnlockPerMonth": "uint256",
+                    "startTime": "uint256",
+                    "withdrawId": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "start()": [
+                1306,
+                207
+            ]
+        },
+        "block_CALL_mapping": {
+            "block884_0": [
+                "token.transfer(owner, lrcAmount)"
+            ],
+            "block1916": [
+                "Token(lrcTokenAddress).balanceOf(address(this))"
+            ],
+            "jump884_0": [
+                "token.transfer(owner, lrcAmount)",
+                "token.transfer(owner, lrcAmount)"
+            ],
+            "jump495_0": [
+                "token.balanceOf(address(this))",
+                "token.balanceOf(address(this))"
+            ],
+            "jump884": [
+                "token.transfer(owner, lrcAmount)",
+                "token.transfer(owner, lrcAmount)"
+            ],
+            "jump495": [
+                "token.balanceOf(address(this))",
+                "token.balanceOf(address(this))"
+            ],
+            "block495_0": [
+                "token.balanceOf(address(this))"
+            ],
+            "block884": [
+                "token.transfer(owner, lrcAmount)"
+            ],
+            "block495": [
+                "token.balanceOf(address(this))"
+            ],
+            "jump1916": [
+                "Token(lrcTokenAddress).balanceOf(address(this))",
+                "Token(lrcTokenAddress).balanceOf(address(this))"
+            ]
+        }
+    }
+}

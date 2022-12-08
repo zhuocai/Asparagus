@@ -1,0 +1,276 @@
+{
+    "Token": {
+        "function_list": [
+            "transfer(address,uint256)",
+            "balanceOf(address)"
+        ],
+        "initial_state": {
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                402,
+                141
+            ],
+            "transfer(address,uint256)": [
+                489,
+                163
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Owned": {
+        "function_list": [
+            "Owned()",
+            "changeOwner(address)",
+            "acceptOwnership()"
+        ],
+        "initial_state": {
+            "Owned()": {
+                "argument": {},
+                "contract": {}
+            },
+            "changeOwner(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "acceptOwnership()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "changeOwner(address)": [
+                202,
+                119
+            ],
+            "acceptOwnership()": [
+                92,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "TokenReceivable": {
+        "function_list": [
+            "Owned()",
+            "changeOwner(address)",
+            "acceptOwnership()",
+            "claimTokens(address,address)"
+        ],
+        "initial_state": {
+            "Owned()": {
+                "argument": {},
+                "contract": {}
+            },
+            "changeOwner(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "acceptOwnership()": {
+                "argument": {},
+                "contract": {}
+            },
+            "claimTokens(address,address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "acceptOwnership()": [
+                226,
+                97
+            ],
+            "changeOwner(address)": [
+                336,
+                141
+            ],
+            "claimTokens(address,address)": [
+                103,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "block881": [
+                "token.transfer(_to, balance)"
+            ],
+            "jump657": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "jump881": [
+                "token.transfer(_to, balance)",
+                "token.transfer(_to, balance)"
+            ],
+            "block657": [
+                "token.balanceOf(this)"
+            ]
+        }
+    },
+    "FunFairSale": {
+        "function_list": [
+            "claimTokens(address,address)",
+            "Owned()",
+            "changeOwner(address)",
+            "acceptOwnership()",
+            "FunFairSale()",
+            "setSoftCapDeadline(uint256)",
+            "launch(uint256)",
+            "fallback()",
+            "withdraw()",
+            "setStartTime(uint256,uint256)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "claimTokens(address,address)": {
+                "argument": {},
+                "contract": {
+                    "deadline": "uint256",
+                    "startTime": "uint256",
+                    "capAmount": "uint256"
+                }
+            },
+            "Owned()": {
+                "argument": {},
+                "contract": {
+                    "deadline": "uint256",
+                    "startTime": "uint256",
+                    "capAmount": "uint256"
+                }
+            },
+            "changeOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "deadline": "uint256",
+                    "startTime": "uint256",
+                    "capAmount": "uint256"
+                }
+            },
+            "acceptOwnership()": {
+                "argument": {},
+                "contract": {
+                    "deadline": "uint256",
+                    "startTime": "uint256",
+                    "capAmount": "uint256"
+                }
+            },
+            "FunFairSale()": {
+                "argument": {},
+                "contract": {
+                    "deadline": "uint256",
+                    "startTime": "uint256",
+                    "capAmount": "uint256"
+                }
+            },
+            "setSoftCapDeadline(uint256)": {
+                "argument": {
+                    "t": "uint256"
+                },
+                "contract": {
+                    "deadline": "uint256",
+                    "startTime": "uint256",
+                    "capAmount": "uint256"
+                }
+            },
+            "launch(uint256)": {
+                "argument": {
+                    "_cap": "uint256"
+                },
+                "contract": {
+                    "deadline": "uint256",
+                    "startTime": "uint256",
+                    "capAmount": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "deadline": "uint256",
+                    "startTime": "uint256",
+                    "capAmount": "uint256"
+                }
+            },
+            "withdraw()": {
+                "argument": {},
+                "contract": {
+                    "deadline": "uint256",
+                    "startTime": "uint256",
+                    "capAmount": "uint256"
+                }
+            },
+            "setStartTime(uint256,uint256)": {
+                "argument": {
+                    "_startTime": "uint256",
+                    "_deadline": "uint256"
+                },
+                "contract": {
+                    "deadline": "uint256",
+                    "startTime": "uint256",
+                    "capAmount": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "launch(uint256)": [
+                504,
+                185
+            ],
+            "setStartTime(uint256,uint256)": [
+                748,
+                273
+            ],
+            "claimTokens(address,address)": [
+                315,
+                119
+            ],
+            "setSoftCapDeadline(uint256)": [
+                703,
+                251
+            ],
+            "withdraw()": [
+                292,
+                97
+            ],
+            "changeOwner(address)": [
+                636,
+                229
+            ],
+            "acceptOwnership()": [
+                481,
+                163
+            ]
+        },
+        "block_CALL_mapping": {
+            "block958": [
+                "owner.call.value(this.balance)()"
+            ],
+            "block1549": [
+                "token.transfer(_to, balance)"
+            ],
+            "jump1549": [
+                "token.transfer(_to, balance)",
+                "token.transfer(_to, balance)"
+            ],
+            "jump958": [
+                "owner.call.value(this.balance)()",
+                "owner.call.value(this.balance)()"
+            ],
+            "jump1325": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "block1325": [
+                "token.balanceOf(this)"
+            ]
+        }
+    }
+}

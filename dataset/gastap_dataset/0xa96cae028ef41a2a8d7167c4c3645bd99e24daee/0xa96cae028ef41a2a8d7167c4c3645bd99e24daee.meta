@@ -1,0 +1,162 @@
+{
+    "ERC20Basic": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                124,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Ownable": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "KYC": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "KYC()",
+            "setAdmin(address)",
+            "register(address)",
+            "registerByList(address[])",
+            "unregister(address)",
+            "unregisterByList(address[])",
+            "claimTokens(address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "KYC()": {
+                "argument": {},
+                "contract": {}
+            },
+            "setAdmin(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "register(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "registerByList(address[])": {
+                "argument": {
+                    "_addrs": "address[]"
+                },
+                "contract": {}
+            },
+            "unregister(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "unregisterByList(address[])": {
+                "argument": {
+                    "_addrs": "address[]"
+                },
+                "contract": {}
+            },
+            "claimTokens(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "unregisterByList(address[])": [
+                808,
+                251
+            ],
+            "claimTokens(address)": [
+                741,
+                229
+            ],
+            "unregister(address)": [
+                169,
+                75
+            ],
+            "register(address)": [
+                236,
+                97
+            ],
+            "registerByList(address[])": [
+                303,
+                119
+            ],
+            "setAdmin(address)": [
+                496,
+                163
+            ],
+            "transferOwnership(address)": [
+                910,
+                273
+            ]
+        },
+        "block_CALL_mapping": {
+            "block3403": [
+                "token.transfer(owner, balance)"
+            ],
+            "block2857": [
+                "owner.transfer(this.balance)"
+            ],
+            "jump3403": [
+                "token.transfer(owner, balance)",
+                "token.transfer(owner, balance)"
+            ],
+            "block3146": [
+                "token.balanceOf(this)"
+            ],
+            "jump2857": [
+                "owner.transfer(this.balance)",
+                "owner.transfer(this.balance)"
+            ],
+            "jump3146": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ]
+        }
+    }
+}

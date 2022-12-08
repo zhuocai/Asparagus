@@ -1,0 +1,310 @@
+{
+    "owned": {
+        "function_list": [
+            "owned()",
+            "transferOwnership(address)"
+        ],
+        "initial_state": {
+            "owned()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "tokenRecipient": {
+        "function_list": [
+            "receiveApproval(address,uint256,address,bytes)",
+            "fallback()"
+        ],
+        "initial_state": {
+            "receiveApproval(address,uint256,address,bytes)": {
+                "argument": {
+                    "_value": "uint256",
+                    "_extraData": "bytes"
+                },
+                "contract": {}
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "receiveApproval(address,uint256,address,bytes)": [
+                174,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump573": [
+                "t.transferFrom(_from, this, _value)",
+                "t.transferFrom(_from, this, _value)"
+            ],
+            "block573": [
+                "t.transferFrom(_from, this, _value)"
+            ]
+        }
+    },
+    "Token": {
+        "function_list": [
+            "transferFrom(address,address,uint256)"
+        ],
+        "initial_state": {
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferFrom(address,address,uint256)": [
+                468,
+                141
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump3848": [
+                "spender.receiveApproval(\n                msg.sender,\n                _value,\n                this,\n                _extraData\n            )",
+                "spender.receiveApproval(\n                msg.sender,\n                _value,\n                this,\n                _extraData\n            )"
+            ],
+            "block3848": [
+                "spender.receiveApproval(\n                msg.sender,\n                _value,\n                this,\n                _extraData\n            )"
+            ]
+        }
+    },
+    "Oryza": {
+        "function_list": [
+            "receiveApproval(address,uint256,address,bytes)",
+            "fallback()",
+            "owned()",
+            "transferOwnership(address)",
+            "Oryza(Token,uint256,uint256)",
+            "changeVotingRules(Token,uint256,uint256)",
+            "newProposal(address,uint256,string,bytes)",
+            "newProposalInEther(address,uint256,string,bytes)",
+            "checkProposalCode(uint256,address,uint256,bytes)",
+            "vote(uint256,bool)",
+            "executeProposal(uint256,bytes)"
+        ],
+        "initial_state": {
+            "receiveApproval(address,uint256,address,bytes)": {
+                "argument": {
+                    "_value": "uint256",
+                    "_extraData": "bytes"
+                },
+                "contract": {
+                    "minimumQuorum": "uint256",
+                    "debatingPeriodInMinutes": "uint256",
+                    "proposals": "Oryza.Proposal[]",
+                    "numProposals": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "minimumQuorum": "uint256",
+                    "debatingPeriodInMinutes": "uint256",
+                    "proposals": "Oryza.Proposal[]",
+                    "numProposals": "uint256"
+                }
+            },
+            "owned()": {
+                "argument": {},
+                "contract": {
+                    "minimumQuorum": "uint256",
+                    "debatingPeriodInMinutes": "uint256",
+                    "proposals": "Oryza.Proposal[]",
+                    "numProposals": "uint256"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "minimumQuorum": "uint256",
+                    "debatingPeriodInMinutes": "uint256",
+                    "proposals": "Oryza.Proposal[]",
+                    "numProposals": "uint256"
+                }
+            },
+            "Oryza(Token,uint256,uint256)": {
+                "argument": {
+                    "minimumSharesToPassAVote": "uint256",
+                    "minutesForDebate": "uint256"
+                },
+                "contract": {
+                    "minimumQuorum": "uint256",
+                    "debatingPeriodInMinutes": "uint256",
+                    "proposals": "Oryza.Proposal[]",
+                    "numProposals": "uint256"
+                }
+            },
+            "changeVotingRules(Token,uint256,uint256)": {
+                "argument": {
+                    "minimumSharesToPassAVote": "uint256",
+                    "minutesForDebate": "uint256"
+                },
+                "contract": {
+                    "minimumQuorum": "uint256",
+                    "debatingPeriodInMinutes": "uint256",
+                    "proposals": "Oryza.Proposal[]",
+                    "numProposals": "uint256"
+                }
+            },
+            "newProposal(address,uint256,string,bytes)": {
+                "argument": {
+                    "weiAmount": "uint256",
+                    "jobDescription": "string",
+                    "transactionBytecode": "bytes"
+                },
+                "contract": {
+                    "minimumQuorum": "uint256",
+                    "debatingPeriodInMinutes": "uint256",
+                    "proposals": "Oryza.Proposal[]",
+                    "numProposals": "uint256"
+                }
+            },
+            "newProposalInEther(address,uint256,string,bytes)": {
+                "argument": {
+                    "etherAmount": "uint256",
+                    "jobDescription": "string",
+                    "transactionBytecode": "bytes"
+                },
+                "contract": {
+                    "minimumQuorum": "uint256",
+                    "debatingPeriodInMinutes": "uint256",
+                    "proposals": "Oryza.Proposal[]",
+                    "numProposals": "uint256"
+                }
+            },
+            "checkProposalCode(uint256,address,uint256,bytes)": {
+                "argument": {
+                    "proposalNumber": "uint256",
+                    "weiAmount": "uint256",
+                    "transactionBytecode": "bytes"
+                },
+                "contract": {
+                    "minimumQuorum": "uint256",
+                    "debatingPeriodInMinutes": "uint256",
+                    "proposals": "Oryza.Proposal[]",
+                    "numProposals": "uint256"
+                }
+            },
+            "vote(uint256,bool)": {
+                "argument": {
+                    "proposalNumber": "uint256"
+                },
+                "contract": {
+                    "minimumQuorum": "uint256",
+                    "debatingPeriodInMinutes": "uint256",
+                    "proposals": "Oryza.Proposal[]",
+                    "numProposals": "uint256"
+                }
+            },
+            "executeProposal(uint256,bytes)": {
+                "argument": {
+                    "proposalNumber": "uint256",
+                    "transactionBytecode": "bytes"
+                },
+                "contract": {
+                    "minimumQuorum": "uint256",
+                    "debatingPeriodInMinutes": "uint256",
+                    "proposals": "Oryza.Proposal[]",
+                    "numProposals": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "newProposal(address,uint256,string,bytes)": [
+                1276,
+                273
+            ],
+            "checkProposalCode(uint256,address,uint256,bytes)": [
+                1827,
+                339
+            ],
+            "vote(uint256,bool)": [
+                1750,
+                317
+            ],
+            "newProposalInEther(address,uint256,string,bytes)": [
+                1513,
+                295
+            ],
+            "executeProposal(uint256,bytes)": [
+                592,
+                97
+            ],
+            "transferOwnership(address)": [
+                2008,
+                361
+            ],
+            "receiveApproval(address,uint256,address,bytes)": [
+                1097,
+                251
+            ]
+        },
+        "block_CALL_mapping": {
+            "block2981": [
+                "sharesTokenAddress.balanceOf(v.voter)"
+            ],
+            "jump3306": [
+                "p.recipient.call.value(p.amount)(transactionBytecode)",
+                "p.recipient.call.value(p.amount)(transactionBytecode)"
+            ],
+            "jump5642": [
+                "sharesTokenAddress.balanceOf(msg.sender)",
+                "sharesTokenAddress.balanceOf(msg.sender)"
+            ],
+            "jump4709_0": [
+                "sharesTokenAddress.balanceOf(msg.sender)",
+                "sharesTokenAddress.balanceOf(msg.sender)"
+            ],
+            "jump4709": [
+                "sharesTokenAddress.balanceOf(msg.sender)",
+                "sharesTokenAddress.balanceOf(msg.sender)"
+            ],
+            "jump5939": [
+                "sharesTokenAddress.balanceOf(msg.sender)",
+                "sharesTokenAddress.balanceOf(msg.sender)"
+            ],
+            "block3306": [
+                "p.recipient.call.value(p.amount)(transactionBytecode)"
+            ],
+            "block5939": [
+                "sharesTokenAddress.balanceOf(msg.sender)"
+            ],
+            "block5642": [
+                "sharesTokenAddress.balanceOf(msg.sender)"
+            ],
+            "block4709": [
+                "sharesTokenAddress.balanceOf(msg.sender)"
+            ],
+            "jump2981": [
+                "sharesTokenAddress.balanceOf(v.voter)",
+                "sharesTokenAddress.balanceOf(v.voter)"
+            ],
+            "jump4170": [
+                "t.transferFrom(_from, this, _value)",
+                "t.transferFrom(_from, this, _value)"
+            ],
+            "block4170": [
+                "t.transferFrom(_from, this, _value)"
+            ],
+            "block4709_0": [
+                "sharesTokenAddress.balanceOf(msg.sender)"
+            ]
+        }
+    }
+}

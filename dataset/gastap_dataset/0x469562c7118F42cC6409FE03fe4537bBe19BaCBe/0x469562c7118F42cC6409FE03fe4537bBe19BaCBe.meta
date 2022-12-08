@@ -1,0 +1,189 @@
+{
+    "MyOwned": {
+        "function_list": [
+            "MyOwned()",
+            "exOwner(address)"
+        ],
+        "initial_state": {
+            "MyOwned()": {
+                "argument": {},
+                "contract": {}
+            },
+            "exOwner(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "exOwner(address)": [
+                81,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "token": {
+        "function_list": [
+            "transfer(address,uint256)"
+        ],
+        "initial_state": {
+            "transfer(address,uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "EPOpresale": {
+        "function_list": [
+            "MyOwned()",
+            "exOwner(address)",
+            "EPOpresale(uint256,uint256,uint256,uint256,uint256,address,address)",
+            "getCurrentTimestamp()",
+            "saleActive()",
+            "fallback()",
+            "saleEnd(uint256)"
+        ],
+        "initial_state": {
+            "MyOwned()": {
+                "argument": {},
+                "contract": {
+                    "startDate": "uint256",
+                    "stopDate": "uint256",
+                    "salePrice": "uint256",
+                    "saleSupply": "uint256",
+                    "fundingGoal": "uint256",
+                    "amountRaised": "uint256"
+                }
+            },
+            "exOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "startDate": "uint256",
+                    "stopDate": "uint256",
+                    "salePrice": "uint256",
+                    "saleSupply": "uint256",
+                    "fundingGoal": "uint256",
+                    "amountRaised": "uint256"
+                }
+            },
+            "EPOpresale(uint256,uint256,uint256,uint256,uint256,address,address)": {
+                "argument": {
+                    "_startDate": "uint256",
+                    "_stopDate": "uint256",
+                    "_salePrice": "uint256",
+                    "_saleSupply": "uint256",
+                    "_fundingGoal": "uint256"
+                },
+                "contract": {
+                    "startDate": "uint256",
+                    "stopDate": "uint256",
+                    "salePrice": "uint256",
+                    "saleSupply": "uint256",
+                    "fundingGoal": "uint256",
+                    "amountRaised": "uint256"
+                }
+            },
+            "getCurrentTimestamp()": {
+                "argument": {},
+                "contract": {
+                    "startDate": "uint256",
+                    "stopDate": "uint256",
+                    "salePrice": "uint256",
+                    "saleSupply": "uint256",
+                    "fundingGoal": "uint256",
+                    "amountRaised": "uint256"
+                }
+            },
+            "saleActive()": {
+                "argument": {},
+                "contract": {
+                    "startDate": "uint256",
+                    "stopDate": "uint256",
+                    "salePrice": "uint256",
+                    "saleSupply": "uint256",
+                    "fundingGoal": "uint256",
+                    "amountRaised": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "startDate": "uint256",
+                    "stopDate": "uint256",
+                    "salePrice": "uint256",
+                    "saleSupply": "uint256",
+                    "fundingGoal": "uint256",
+                    "amountRaised": "uint256"
+                }
+            },
+            "saleEnd(uint256)": {
+                "argument": {
+                    "restAmount": "uint256"
+                },
+                "contract": {
+                    "startDate": "uint256",
+                    "stopDate": "uint256",
+                    "salePrice": "uint256",
+                    "saleSupply": "uint256",
+                    "fundingGoal": "uint256",
+                    "amountRaised": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "saleActive()": [
+                924,
+                141
+            ],
+            "saleEnd(uint256)": [
+                1428,
+                317
+            ],
+            "exOwner(address)": [
+                971,
+                163
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump518": [
+                "beneficiary.transfer(msg.value)",
+                "beneficiary.transfer(msg.value)"
+            ],
+            "block518": [
+                "beneficiary.transfer(msg.value)"
+            ],
+            "block498_0": [
+                "tokenReward.transfer(msg.sender, amountSend)"
+            ],
+            "block518_0": [
+                "beneficiary.transfer(msg.value)"
+            ],
+            "jump2226": [
+                "tokenReward.transfer(beneficiary, restAmount)",
+                "tokenReward.transfer(beneficiary, restAmount)"
+            ],
+            "block498": [
+                "tokenReward.transfer(msg.sender, amountSend)"
+            ],
+            "jump498_0": [
+                "tokenReward.transfer(msg.sender, amountSend)",
+                "tokenReward.transfer(msg.sender, amountSend)"
+            ],
+            "block2226": [
+                "tokenReward.transfer(beneficiary, restAmount)"
+            ],
+            "jump498": [
+                "tokenReward.transfer(msg.sender, amountSend)",
+                "tokenReward.transfer(msg.sender, amountSend)"
+            ],
+            "jump518_0": [
+                "beneficiary.transfer(msg.value)",
+                "beneficiary.transfer(msg.value)"
+            ]
+        }
+    }
+}

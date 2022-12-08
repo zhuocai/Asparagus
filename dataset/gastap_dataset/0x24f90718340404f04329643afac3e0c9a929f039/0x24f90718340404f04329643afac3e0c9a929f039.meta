@@ -1,0 +1,80 @@
+{
+    "MassSend": {
+        "function_list": [
+            "MassSend()",
+            "send_all()",
+            "sanity_check()",
+            "safe_withdraw(uint256)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "MassSend()": {
+                "argument": {},
+                "contract": {
+                    "addresses": "address[]",
+                    "ticket_price": "uint256"
+                }
+            },
+            "send_all()": {
+                "argument": {},
+                "contract": {
+                    "addresses": "address[]",
+                    "ticket_price": "uint256"
+                }
+            },
+            "sanity_check()": {
+                "argument": {},
+                "contract": {
+                    "addresses": "address[]",
+                    "ticket_price": "uint256"
+                }
+            },
+            "safe_withdraw(uint256)": {
+                "argument": {
+                    "number_of_tokens": "uint256"
+                },
+                "contract": {
+                    "addresses": "address[]",
+                    "ticket_price": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "send_all()": [
+                139,
+                97
+            ],
+            "sanity_check()": [
+                92,
+                75
+            ],
+            "safe_withdraw(uint256)": [
+                162,
+                119
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump811": [
+                "ERC20_CALLS.transfer(addresses[i], ticket_price)",
+                "ERC20_CALLS.transfer(addresses[i], ticket_price)"
+            ],
+            "block438": [
+                "ERC20_CALLS.balanceOf(own_addr)"
+            ],
+            "block1084": [
+                "ERC20_CALLS.transfer(msg.sender, number_of_tokens)"
+            ],
+            "block811": [
+                "ERC20_CALLS.transfer(addresses[i], ticket_price)"
+            ],
+            "jump1084": [
+                "ERC20_CALLS.transfer(msg.sender, number_of_tokens)",
+                "ERC20_CALLS.transfer(msg.sender, number_of_tokens)"
+            ],
+            "jump438": [
+                "ERC20_CALLS.balanceOf(own_addr)",
+                "ERC20_CALLS.balanceOf(own_addr)"
+            ]
+        }
+    }
+}

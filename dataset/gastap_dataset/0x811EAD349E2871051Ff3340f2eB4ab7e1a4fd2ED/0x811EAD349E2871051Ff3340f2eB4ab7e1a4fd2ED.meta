@@ -1,0 +1,93 @@
+{
+    "token": {
+        "function_list": [
+            "transfer(address,uint256)"
+        ],
+        "initial_state": {
+            "transfer(address,uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transfer(address,uint256)": [
+                1038,
+                251
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump3650": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)",
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ],
+            "block3650": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ]
+        }
+    },
+    "AlphabetConvert": {
+        "function_list": [
+            "AlphabetConvert(address,token)",
+            "fallback()",
+            "withdraw()"
+        ],
+        "initial_state": {
+            "AlphabetConvert(address,token)": {
+                "argument": {},
+                "contract": {
+                    "amountRaised": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "amountRaised": "uint256"
+                }
+            },
+            "withdraw()": {
+                "argument": {},
+                "contract": {
+                    "amountRaised": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "withdraw()": [
+                648,
+                97
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump1410": [
+                "beneficiary.send(amountRaised)",
+                "beneficiary.send(amountRaised)"
+            ],
+            "block414_0": [
+                "tokenReward.transfer(msg.sender, amount / 1 ether)"
+            ],
+            "block414": [
+                "tokenReward.transfer(msg.sender, amount / 1 ether)"
+            ],
+            "jump414": [
+                "tokenReward.transfer(msg.sender, amount / 1 ether)",
+                "tokenReward.transfer(msg.sender, amount / 1 ether)"
+            ],
+            "jump1072": [
+                "msg.sender.send(amount)",
+                "msg.sender.send(amount)"
+            ],
+            "block1072": [
+                "msg.sender.send(amount)"
+            ],
+            "jump414_0": [
+                "tokenReward.transfer(msg.sender, amount / 1 ether)",
+                "tokenReward.transfer(msg.sender, amount / 1 ether)"
+            ],
+            "block1410": [
+                "beneficiary.send(amountRaised)"
+            ]
+        }
+    }
+}

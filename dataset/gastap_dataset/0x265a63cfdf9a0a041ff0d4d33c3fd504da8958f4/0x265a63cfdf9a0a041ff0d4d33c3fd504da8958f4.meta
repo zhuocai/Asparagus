@@ -1,0 +1,288 @@
+{
+    "ERC20": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                202,
+                75
+            ],
+            "transfer(address,uint256)": [
+                873,
+                273
+            ],
+            "balanceOf(address)": [
+                601,
+                185
+            ],
+            "transferFrom(address,address,uint256)": [
+                346,
+                119
+            ],
+            "allowance(address,address)": [
+                1061,
+                317
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Ownable": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "HasNoTokens": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "extractTokens(address,address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "extractTokens(address,address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "extractTokens(address,address)": [
+                179,
+                97
+            ],
+            "transferOwnership(address)": [
+                278,
+                119
+            ]
+        },
+        "block_CALL_mapping": {
+            "block988": [
+                "token.transfer(_claimer, balance)"
+            ],
+            "block508": [
+                "_claimer.transfer(this.balance)"
+            ],
+            "block764": [
+                "token.balanceOf(this)"
+            ],
+            "jump764": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "jump988": [
+                "token.transfer(_claimer, balance)",
+                "token.transfer(_claimer, balance)"
+            ],
+            "jump508": [
+                "_claimer.transfer(this.balance)",
+                "_claimer.transfer(this.balance)"
+            ]
+        }
+    },
+    "RefundVault": {
+        "function_list": [
+            "extractTokens(address,address)",
+            "Ownable()",
+            "transferOwnership(address)",
+            "RefundVault(address)",
+            "deposit(address)",
+            "close()",
+            "enableRefunds()",
+            "refund(address)"
+        ],
+        "initial_state": {
+            "extractTokens(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "RefundVault(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "deposit(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "close()": {
+                "argument": {},
+                "contract": {}
+            },
+            "enableRefunds()": {
+                "argument": {},
+                "contract": {}
+            },
+            "refund(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "enableRefunds()": [
+                279,
+                119
+            ],
+            "extractTokens(address,address)": [
+                533,
+                207
+            ],
+            "refund(address)": [
+                753,
+                273
+            ],
+            "close()": [
+                169,
+                75
+            ],
+            "deposit(address)": [
+                699,
+                251
+            ],
+            "transferOwnership(address)": [
+                632,
+                229
+            ]
+        },
+        "block_CALL_mapping": {
+            "block2121": [
+                "token.transfer(_claimer, balance)"
+            ],
+            "jump1641": [
+                "_claimer.transfer(this.balance)",
+                "_claimer.transfer(this.balance)"
+            ],
+            "block1897": [
+                "token.balanceOf(this)"
+            ],
+            "jump2121": [
+                "token.transfer(_claimer, balance)",
+                "token.transfer(_claimer, balance)"
+            ],
+            "jump1897": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "jump993": [
+                "wallet.transfer(this.balance)",
+                "wallet.transfer(this.balance)"
+            ],
+            "block993": [
+                "wallet.transfer(this.balance)"
+            ],
+            "block1641": [
+                "_claimer.transfer(this.balance)"
+            ],
+            "jump2979": [
+                "investor.transfer(depositedValue)",
+                "investor.transfer(depositedValue)"
+            ],
+            "block2979": [
+                "investor.transfer(depositedValue)"
+            ]
+        }
+    }
+}

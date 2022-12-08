@@ -1,0 +1,1016 @@
+{
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)",
+            "max64(uint64,uint64)",
+            "min64(uint64,uint64)",
+            "max256(uint256,uint256)",
+            "min256(uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "max64(uint64,uint64)": {
+                "argument": {
+                    "a": "uint64",
+                    "b": "uint64"
+                },
+                "contract": {}
+            },
+            "min64(uint64,uint64)": {
+                "argument": {
+                    "a": "uint64",
+                    "b": "uint64"
+                },
+                "contract": {}
+            },
+            "max256(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "min256(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "Controlled": {
+        "function_list": [
+            "Controlled()",
+            "changeController(address)"
+        ],
+        "initial_state": {
+            "Controlled()": {
+                "argument": {},
+                "contract": {}
+            },
+            "changeController(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "changeController(address)": [
+                81,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "ERC20Token": {
+        "function_list": [
+            "totalSupply()",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)"
+        ],
+        "initial_state": {
+            "totalSupply()": {
+                "argument": {},
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                337,
+                97
+            ],
+            "totalSupply()": [
+                438,
+                119
+            ],
+            "allowance(address,address)": [
+                1310,
+                295
+            ],
+            "balanceOf(address)": [
+                807,
+                207
+            ],
+            "transferFrom(address,address,uint256)": [
+                481,
+                141
+            ],
+            "transfer(address,uint256)": [
+                1038,
+                251
+            ]
+        },
+        "block_CALL_mapping": {
+            "block3855": [
+                "_spender.call(bytes4(bytes32(sha3(\"receiveApproval(address,uint256,address,bytes)\"))), msg.sender, _value, this, _extraData)"
+            ],
+            "jump3855": [
+                "_spender.call(bytes4(bytes32(sha3(\"receiveApproval(address,uint256,address,bytes)\"))), msg.sender, _value, this, _extraData)",
+                "_spender.call(bytes4(bytes32(sha3(\"receiveApproval(address,uint256,address,bytes)\"))), msg.sender, _value, this, _extraData)"
+            ]
+        }
+    },
+    "Burnable": {
+        "function_list": [
+            "Controlled()",
+            "changeController(address)",
+            "Burnable()",
+            "changeBurner(address)"
+        ],
+        "initial_state": {
+            "Controlled()": {
+                "argument": {},
+                "contract": {}
+            },
+            "changeController(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "Burnable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "changeBurner(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "changeController(address)": [
+                190,
+                97
+            ],
+            "changeBurner(address)": [
+                257,
+                119
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Finalizable": {
+        "function_list": [
+            "finalize()"
+        ],
+        "initial_state": {
+            "finalize()": {
+                "argument": {},
+                "contract": {
+                    "finalizedBlock": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "finalize()": [
+                114,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Contribution": {
+        "function_list": [
+            "finalize()",
+            "proxyPayment(address)",
+            "onTransfer(address,address,uint256)",
+            "onApprove(address,address,uint256)",
+            "Controlled()",
+            "changeController(address)",
+            "Contribution()",
+            "initialize(address,address,uint256,uint256,uint256,uint256,uint256,address,address,address,address,address)",
+            "setMinimumInvestment(uint256)",
+            "setExchangeRate(uint256)",
+            "fallback()",
+            "proxyPayment(address)",
+            "onTransfer(address,address,uint256)",
+            "onApprove(address,address,uint256)",
+            "doBuy(address)",
+            "isContract(address)",
+            "refund()",
+            "finalize()",
+            "percent(uint256)",
+            "tokensIssued()",
+            "tokensForSale()",
+            "getBlockNumber()",
+            "claimTokens(address)",
+            "pauseContribution()",
+            "resumeContribution()"
+        ],
+        "initial_state": {
+            "finalize()": {
+                "argument": {},
+                "contract": {
+                    "totalSupplyCap": "uint256",
+                    "exchangeRate": "uint256",
+                    "totalSold": "uint256",
+                    "totalSaleSupplyCap": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "initializedBlock": "uint256",
+                    "finalizedTime": "uint256",
+                    "minimum_investment": "uint256",
+                    "minimum_goal": "uint256"
+                }
+            },
+            "proxyPayment(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupplyCap": "uint256",
+                    "exchangeRate": "uint256",
+                    "totalSold": "uint256",
+                    "totalSaleSupplyCap": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "initializedBlock": "uint256",
+                    "finalizedTime": "uint256",
+                    "minimum_investment": "uint256",
+                    "minimum_goal": "uint256"
+                }
+            },
+            "onTransfer(address,address,uint256)": {
+                "argument": {
+                    "": "uint256"
+                },
+                "contract": {
+                    "totalSupplyCap": "uint256",
+                    "exchangeRate": "uint256",
+                    "totalSold": "uint256",
+                    "totalSaleSupplyCap": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "initializedBlock": "uint256",
+                    "finalizedTime": "uint256",
+                    "minimum_investment": "uint256",
+                    "minimum_goal": "uint256"
+                }
+            },
+            "onApprove(address,address,uint256)": {
+                "argument": {
+                    "": "uint256"
+                },
+                "contract": {
+                    "totalSupplyCap": "uint256",
+                    "exchangeRate": "uint256",
+                    "totalSold": "uint256",
+                    "totalSaleSupplyCap": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "initializedBlock": "uint256",
+                    "finalizedTime": "uint256",
+                    "minimum_investment": "uint256",
+                    "minimum_goal": "uint256"
+                }
+            },
+            "Controlled()": {
+                "argument": {},
+                "contract": {
+                    "totalSupplyCap": "uint256",
+                    "exchangeRate": "uint256",
+                    "totalSold": "uint256",
+                    "totalSaleSupplyCap": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "initializedBlock": "uint256",
+                    "finalizedTime": "uint256",
+                    "minimum_investment": "uint256",
+                    "minimum_goal": "uint256"
+                }
+            },
+            "changeController(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupplyCap": "uint256",
+                    "exchangeRate": "uint256",
+                    "totalSold": "uint256",
+                    "totalSaleSupplyCap": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "initializedBlock": "uint256",
+                    "finalizedTime": "uint256",
+                    "minimum_investment": "uint256",
+                    "minimum_goal": "uint256"
+                }
+            },
+            "Contribution()": {
+                "argument": {},
+                "contract": {
+                    "totalSupplyCap": "uint256",
+                    "exchangeRate": "uint256",
+                    "totalSold": "uint256",
+                    "totalSaleSupplyCap": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "initializedBlock": "uint256",
+                    "finalizedTime": "uint256",
+                    "minimum_investment": "uint256",
+                    "minimum_goal": "uint256"
+                }
+            },
+            "initialize(address,address,uint256,uint256,uint256,uint256,uint256,address,address,address,address,address)": {
+                "argument": {
+                    "_totalSupplyCap": "uint256",
+                    "_exchangeRate": "uint256",
+                    "_minimum_goal": "uint256",
+                    "_startBlock": "uint256",
+                    "_endBlock": "uint256"
+                },
+                "contract": {
+                    "totalSupplyCap": "uint256",
+                    "exchangeRate": "uint256",
+                    "totalSold": "uint256",
+                    "totalSaleSupplyCap": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "initializedBlock": "uint256",
+                    "finalizedTime": "uint256",
+                    "minimum_investment": "uint256",
+                    "minimum_goal": "uint256"
+                }
+            },
+            "setMinimumInvestment(uint256)": {
+                "argument": {
+                    "_minimum_investment": "uint256"
+                },
+                "contract": {
+                    "totalSupplyCap": "uint256",
+                    "exchangeRate": "uint256",
+                    "totalSold": "uint256",
+                    "totalSaleSupplyCap": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "initializedBlock": "uint256",
+                    "finalizedTime": "uint256",
+                    "minimum_investment": "uint256",
+                    "minimum_goal": "uint256"
+                }
+            },
+            "setExchangeRate(uint256)": {
+                "argument": {
+                    "_exchangeRate": "uint256"
+                },
+                "contract": {
+                    "totalSupplyCap": "uint256",
+                    "exchangeRate": "uint256",
+                    "totalSold": "uint256",
+                    "totalSaleSupplyCap": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "initializedBlock": "uint256",
+                    "finalizedTime": "uint256",
+                    "minimum_investment": "uint256",
+                    "minimum_goal": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "totalSupplyCap": "uint256",
+                    "exchangeRate": "uint256",
+                    "totalSold": "uint256",
+                    "totalSaleSupplyCap": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "initializedBlock": "uint256",
+                    "finalizedTime": "uint256",
+                    "minimum_investment": "uint256",
+                    "minimum_goal": "uint256"
+                }
+            },
+            "doBuy(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupplyCap": "uint256",
+                    "exchangeRate": "uint256",
+                    "totalSold": "uint256",
+                    "totalSaleSupplyCap": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "initializedBlock": "uint256",
+                    "finalizedTime": "uint256",
+                    "minimum_investment": "uint256",
+                    "minimum_goal": "uint256"
+                }
+            },
+            "isContract(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupplyCap": "uint256",
+                    "exchangeRate": "uint256",
+                    "totalSold": "uint256",
+                    "totalSaleSupplyCap": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "initializedBlock": "uint256",
+                    "finalizedTime": "uint256",
+                    "minimum_investment": "uint256",
+                    "minimum_goal": "uint256"
+                }
+            },
+            "refund()": {
+                "argument": {},
+                "contract": {
+                    "totalSupplyCap": "uint256",
+                    "exchangeRate": "uint256",
+                    "totalSold": "uint256",
+                    "totalSaleSupplyCap": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "initializedBlock": "uint256",
+                    "finalizedTime": "uint256",
+                    "minimum_investment": "uint256",
+                    "minimum_goal": "uint256"
+                }
+            },
+            "percent(uint256)": {
+                "argument": {
+                    "p": "uint256"
+                },
+                "contract": {
+                    "totalSupplyCap": "uint256",
+                    "exchangeRate": "uint256",
+                    "totalSold": "uint256",
+                    "totalSaleSupplyCap": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "initializedBlock": "uint256",
+                    "finalizedTime": "uint256",
+                    "minimum_investment": "uint256",
+                    "minimum_goal": "uint256"
+                }
+            },
+            "tokensIssued()": {
+                "argument": {},
+                "contract": {
+                    "totalSupplyCap": "uint256",
+                    "exchangeRate": "uint256",
+                    "totalSold": "uint256",
+                    "totalSaleSupplyCap": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "initializedBlock": "uint256",
+                    "finalizedTime": "uint256",
+                    "minimum_investment": "uint256",
+                    "minimum_goal": "uint256"
+                }
+            },
+            "tokensForSale()": {
+                "argument": {},
+                "contract": {
+                    "totalSupplyCap": "uint256",
+                    "exchangeRate": "uint256",
+                    "totalSold": "uint256",
+                    "totalSaleSupplyCap": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "initializedBlock": "uint256",
+                    "finalizedTime": "uint256",
+                    "minimum_investment": "uint256",
+                    "minimum_goal": "uint256"
+                }
+            },
+            "getBlockNumber()": {
+                "argument": {},
+                "contract": {
+                    "totalSupplyCap": "uint256",
+                    "exchangeRate": "uint256",
+                    "totalSold": "uint256",
+                    "totalSaleSupplyCap": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "initializedBlock": "uint256",
+                    "finalizedTime": "uint256",
+                    "minimum_investment": "uint256",
+                    "minimum_goal": "uint256"
+                }
+            },
+            "claimTokens(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupplyCap": "uint256",
+                    "exchangeRate": "uint256",
+                    "totalSold": "uint256",
+                    "totalSaleSupplyCap": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "initializedBlock": "uint256",
+                    "finalizedTime": "uint256",
+                    "minimum_investment": "uint256",
+                    "minimum_goal": "uint256"
+                }
+            },
+            "pauseContribution()": {
+                "argument": {},
+                "contract": {
+                    "totalSupplyCap": "uint256",
+                    "exchangeRate": "uint256",
+                    "totalSold": "uint256",
+                    "totalSaleSupplyCap": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "initializedBlock": "uint256",
+                    "finalizedTime": "uint256",
+                    "minimum_investment": "uint256",
+                    "minimum_goal": "uint256"
+                }
+            },
+            "resumeContribution()": {
+                "argument": {},
+                "contract": {
+                    "totalSupplyCap": "uint256",
+                    "exchangeRate": "uint256",
+                    "totalSold": "uint256",
+                    "totalSaleSupplyCap": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "initializedBlock": "uint256",
+                    "finalizedTime": "uint256",
+                    "minimum_investment": "uint256",
+                    "minimum_goal": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "tokensForSale()": [
+                609,
+                119
+            ],
+            "proxyPayment(address)": [
+                2589,
+                779
+            ],
+            "claimTokens(address)": [
+                9491,
+                925
+            ],
+            "refund()": [
+                1511,
+                383
+            ],
+            "tokensIssued()": [
+                1668,
+                449
+            ],
+            "onApprove(address,address,uint256)": [
+                2344,
+                713
+            ],
+            "pauseContribution()": [
+                1156,
+                317
+            ],
+            "setMinimumInvestment(uint256)": [
+                935,
+                251
+            ],
+            "changeController(address)": [
+                5316,
+                1012
+            ],
+            "onTransfer(address,address,uint256)": [
+                1023,
+                295
+            ],
+            "finalize()": [
+                1179,
+                339
+            ],
+            "setExchangeRate(uint256)": [
+                2477,
+                735
+            ],
+            "initialize(address,address,uint256,uint256,uint256,uint256,uint256,address,address,address,address,address)": [
+                1202,
+                361
+            ],
+            "resumeContribution()": [
+                2101,
+                603
+            ]
+        },
+        "block_CALL_mapping": {
+            "block5971": [
+                "msp.controller()"
+            ],
+            "jump4833": [
+                "sit.totalSupplyAt(initializedBlock)",
+                "sit.totalSupplyAt(initializedBlock)"
+            ],
+            "block9837": [
+                "token.balanceOf(this)"
+            ],
+            "block11301": [
+                "msg.sender.transfer(toReturn)"
+            ],
+            "block11226_0": [
+                "_th.transfer(toReturn)"
+            ],
+            "block11226_1": [
+                "_th.transfer(toReturn)"
+            ],
+            "block11226": [
+                "_th.transfer(toReturn)"
+            ],
+            "block8073": [
+                "Refundable(destEthDevs).refund(th, amountEther)"
+            ],
+            "block7816": [
+                "Refundable(mspController).refund(th, amountTokens)"
+            ],
+            "jump10772_1": [
+                "msp.generateTokens(_th, tokensGenerated)",
+                "msp.generateTokens(_th, tokensGenerated)"
+            ],
+            "jump7517": [
+                "msp.balanceOf(msg.sender)",
+                "msp.balanceOf(msg.sender)"
+            ],
+            "jump9215": [
+                "msp.controller()",
+                "msp.controller()"
+            ],
+            "block10907_1": [
+                "destEthDevs.transfer(toFund)"
+            ],
+            "jump9491": [
+                "msp.claimTokens(_token)",
+                "msp.claimTokens(_token)"
+            ],
+            "jump4522": [
+                "msp.generateTokens(\n        destTokensReferals,\n        percent(5).mul(totalSupplyCap).div(percent(100)))",
+                "msp.generateTokens(\n        destTokensReferals,\n        percent(5).mul(totalSupplyCap).div(percent(100)))"
+            ],
+            "block9548": [
+                "controller.transfer(this.balance)"
+            ],
+            "jump7119": [
+                "sit.totalSupplyAt(initializedBlock)",
+                "sit.totalSupplyAt(initializedBlock)"
+            ],
+            "block5025": [
+                "msp.generateTokens(\n        destTokensSit,\n        sit.totalSupplyAt(initializedBlock))"
+            ],
+            "block4522": [
+                "msp.generateTokens(\n        destTokensReferals,\n        percent(5).mul(totalSupplyCap).div(percent(100)))"
+            ],
+            "block5746": [
+                "msp.totalSupply()"
+            ],
+            "block7517": [
+                "msp.balanceOf(msg.sender)"
+            ],
+            "block10772_1": [
+                "msp.generateTokens(_th, tokensGenerated)"
+            ],
+            "block10772_0": [
+                "msp.generateTokens(_th, tokensGenerated)"
+            ],
+            "jump9548": [
+                "controller.transfer(this.balance)",
+                "controller.transfer(this.balance)"
+            ],
+            "block10772": [
+                "msp.generateTokens(_th, tokensGenerated)"
+            ],
+            "block6197": [
+                "msp.decimals()"
+            ],
+            "jump5971": [
+                "msp.controller()",
+                "msp.controller()"
+            ],
+            "jump10094": [
+                "token.transfer(controller, balance)",
+                "token.transfer(controller, balance)"
+            ],
+            "block9491": [
+                "msp.claimTokens(_token)"
+            ],
+            "jump7816": [
+                "Refundable(mspController).refund(th, amountTokens)",
+                "Refundable(mspController).refund(th, amountTokens)"
+            ],
+            "block4833": [
+                "sit.totalSupplyAt(initializedBlock)"
+            ],
+            "block8446": [
+                "msp.totalSupply()"
+            ],
+            "block4168": [
+                "msp.generateTokens(\n        destTokensTeam,\n        percent(5).mul(totalSupplyCap).div(percent(100)))"
+            ],
+            "jump11301_0": [
+                "msg.sender.transfer(toReturn)",
+                "msg.sender.transfer(toReturn)"
+            ],
+            "jump4168": [
+                "msp.generateTokens(\n        destTokensTeam,\n        percent(5).mul(totalSupplyCap).div(percent(100)))",
+                "msp.generateTokens(\n        destTokensTeam,\n        percent(5).mul(totalSupplyCap).div(percent(100)))"
+            ],
+            "jump10772": [
+                "msp.generateTokens(_th, tokensGenerated)",
+                "msp.generateTokens(_th, tokensGenerated)"
+            ],
+            "jump11226": [
+                "_th.transfer(toReturn)",
+                "_th.transfer(toReturn)"
+            ],
+            "block5316": [
+                "msp.changeController(mspController)"
+            ],
+            "block10907": [
+                "destEthDevs.transfer(toFund)"
+            ],
+            "jump6197": [
+                "msp.decimals()",
+                "msp.decimals()"
+            ],
+            "jump5025": [
+                "msp.generateTokens(\n        destTokensSit,\n        sit.totalSupplyAt(initializedBlock))",
+                "msp.generateTokens(\n        destTokensSit,\n        sit.totalSupplyAt(initializedBlock))"
+            ],
+            "jump5316": [
+                "msp.changeController(mspController)",
+                "msp.changeController(mspController)"
+            ],
+            "block9215": [
+                "msp.controller()"
+            ],
+            "block11301_0": [
+                "msg.sender.transfer(toReturn)"
+            ],
+            "block11301_1": [
+                "msg.sender.transfer(toReturn)"
+            ],
+            "jump8446": [
+                "msp.totalSupply()",
+                "msp.totalSupply()"
+            ],
+            "block10907_0": [
+                "destEthDevs.transfer(toFund)"
+            ],
+            "jump5746": [
+                "msp.totalSupply()",
+                "msp.totalSupply()"
+            ],
+            "jump11301_1": [
+                "msg.sender.transfer(toReturn)",
+                "msg.sender.transfer(toReturn)"
+            ],
+            "jump10907_1": [
+                "destEthDevs.transfer(toFund)",
+                "destEthDevs.transfer(toFund)"
+            ],
+            "jump10907_0": [
+                "destEthDevs.transfer(toFund)",
+                "destEthDevs.transfer(toFund)"
+            ],
+            "jump8073": [
+                "Refundable(destEthDevs).refund(th, amountEther)",
+                "Refundable(destEthDevs).refund(th, amountEther)"
+            ],
+            "block10094": [
+                "token.transfer(controller, balance)"
+            ],
+            "jump11226_0": [
+                "_th.transfer(toReturn)",
+                "_th.transfer(toReturn)"
+            ],
+            "jump11226_1": [
+                "_th.transfer(toReturn)",
+                "_th.transfer(toReturn)"
+            ],
+            "block7119": [
+                "sit.totalSupplyAt(initializedBlock)"
+            ],
+            "jump10907": [
+                "destEthDevs.transfer(toFund)",
+                "destEthDevs.transfer(toFund)"
+            ],
+            "jump9837": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "jump11301": [
+                "msg.sender.transfer(toReturn)",
+                "msg.sender.transfer(toReturn)"
+            ],
+            "jump10772_0": [
+                "msp.generateTokens(_th, tokensGenerated)",
+                "msp.generateTokens(_th, tokensGenerated)"
+            ]
+        }
+    },
+    "SITExchanger": {
+        "function_list": [
+            "proxyPayment(address)",
+            "onTransfer(address,address,uint256)",
+            "onApprove(address,address,uint256)",
+            "Controlled()",
+            "changeController(address)",
+            "SITExchanger(address,address,address)",
+            "collect()",
+            "proxyPayment(address)",
+            "onTransfer(address,address,uint256)",
+            "onApprove(address,address,uint256)",
+            "getBlockNumber()",
+            "claimTokens(address)"
+        ],
+        "initial_state": {
+            "proxyPayment(address)": {
+                "argument": {},
+                "contract": {
+                    "totalCollected": "uint256"
+                }
+            },
+            "onTransfer(address,address,uint256)": {
+                "argument": {
+                    "": "uint256"
+                },
+                "contract": {
+                    "totalCollected": "uint256"
+                }
+            },
+            "onApprove(address,address,uint256)": {
+                "argument": {
+                    "": "uint256"
+                },
+                "contract": {
+                    "totalCollected": "uint256"
+                }
+            },
+            "Controlled()": {
+                "argument": {},
+                "contract": {
+                    "totalCollected": "uint256"
+                }
+            },
+            "changeController(address)": {
+                "argument": {},
+                "contract": {
+                    "totalCollected": "uint256"
+                }
+            },
+            "SITExchanger(address,address,address)": {
+                "argument": {},
+                "contract": {
+                    "totalCollected": "uint256"
+                }
+            },
+            "collect()": {
+                "argument": {},
+                "contract": {
+                    "totalCollected": "uint256"
+                }
+            },
+            "getBlockNumber()": {
+                "argument": {},
+                "contract": {
+                    "totalCollected": "uint256"
+                }
+            },
+            "claimTokens(address)": {
+                "argument": {},
+                "contract": {
+                    "totalCollected": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "onApprove(address,address,uint256)": [
+                739,
+                207
+            ],
+            "proxyPayment(address)": [
+                1005,
+                295
+            ],
+            "claimTokens(address)": [
+                872,
+                229
+            ],
+            "changeController(address)": [
+                278,
+                97
+            ],
+            "onTransfer(address,address,uint256)": [
+                345,
+                119
+            ],
+            "collect()": [
+                982,
+                273
+            ]
+        },
+        "block_CALL_mapping": {
+            "block1706": [
+                "controller.transfer(this.balance)"
+            ],
+            "jump3060": [
+                "sit.balanceOfAt(msg.sender, contribution.initializedBlock())",
+                "sit.balanceOfAt(msg.sender, contribution.initializedBlock())"
+            ],
+            "block3060": [
+                "sit.balanceOfAt(msg.sender, contribution.initializedBlock())"
+            ],
+            "jump3593": [
+                "msp.transfer(msg.sender, amount)",
+                "msp.transfer(msg.sender, amount)"
+            ],
+            "block1995": [
+                "token.balanceOf(this)"
+            ],
+            "jump2252": [
+                "token.transfer(controller, balance)",
+                "token.transfer(controller, balance)"
+            ],
+            "jump2868": [
+                "contribution.initializedBlock()",
+                "contribution.initializedBlock()"
+            ],
+            "jump2595": [
+                "contribution.startBlock()",
+                "contribution.startBlock()"
+            ],
+            "jump1995": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "block2868": [
+                "contribution.initializedBlock()"
+            ],
+            "block2252": [
+                "token.transfer(controller, balance)"
+            ],
+            "block3593": [
+                "msp.transfer(msg.sender, amount)"
+            ],
+            "block2595": [
+                "contribution.startBlock()"
+            ],
+            "jump1706": [
+                "controller.transfer(this.balance)",
+                "controller.transfer(this.balance)"
+            ]
+        }
+    }
+}

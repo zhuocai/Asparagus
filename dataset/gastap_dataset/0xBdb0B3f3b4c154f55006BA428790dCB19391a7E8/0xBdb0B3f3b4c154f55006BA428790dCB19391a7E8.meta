@@ -1,0 +1,669 @@
+{
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)",
+            "max64(uint64,uint64)",
+            "min64(uint64,uint64)",
+            "max256(uint256,uint256)",
+            "min256(uint256,uint256)",
+            "assert(bool)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "max64(uint64,uint64)": {
+                "argument": {
+                    "a": "uint64",
+                    "b": "uint64"
+                },
+                "contract": {}
+            },
+            "min64(uint64,uint64)": {
+                "argument": {
+                    "a": "uint64",
+                    "b": "uint64"
+                },
+                "contract": {}
+            },
+            "max256(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "min256(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "assert(bool)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "Ownable": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "ERC20Basic": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                124,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "BasicToken": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transfer(address,uint256)",
+            "balanceOf(address)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transfer(address,uint256)": [
+                222,
+                119
+            ],
+            "balanceOf(address)": [
+                135,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "FundableToken": {
+        "function_list": [
+            "transfer(address,uint256)",
+            "balanceOf(address)",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "FundableToken()"
+        ],
+        "initial_state": {
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalFunds": "uint256"
+                }
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalFunds": "uint256"
+                }
+            },
+            "FundableToken()": {
+                "argument": {},
+                "contract": {
+                    "totalFunds": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "transfer(address,uint256)": [
+                287,
+                141
+            ],
+            "balanceOf(address)": [
+                157,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "TransformableToken": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "FundableToken()",
+            "transfer(address,uint256)",
+            "balanceOf(address)",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transform()",
+            "setTransformAgent(address)",
+            "getTransformState()"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {
+                    "totalTransformedTokens": "uint256"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "totalTransformedTokens": "uint256"
+                }
+            },
+            "FundableToken()": {
+                "argument": {},
+                "contract": {
+                    "totalTransformedTokens": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalTransformedTokens": "uint256"
+                }
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalTransformedTokens": "uint256"
+                }
+            },
+            "transform()": {
+                "argument": {},
+                "contract": {
+                    "totalTransformedTokens": "uint256"
+                }
+            },
+            "setTransformAgent(address)": {
+                "argument": {},
+                "contract": {
+                    "totalTransformedTokens": "uint256"
+                }
+            },
+            "getTransformState()": {
+                "argument": {},
+                "contract": {
+                    "totalTransformedTokens": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "setTransformAgent(address)": [
+                431,
+                163
+            ],
+            "transform()": [
+                234,
+                97
+            ],
+            "balanceOf(address)": [
+                257,
+                119
+            ],
+            "getTransformState()": [
+                498,
+                185
+            ],
+            "transfer(address,uint256)": [
+                728,
+                273
+            ],
+            "transferOwnership(address)": [
+                892,
+                317
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump2345": [
+                "transformAgent.isTransformAgent()",
+                "transformAgent.isTransformAgent()"
+            ],
+            "jump2552": [
+                "transformAgent.originalSupply()",
+                "transformAgent.originalSupply()"
+            ],
+            "jump2760": [
+                "transformAgent.originalFunds()",
+                "transformAgent.originalFunds()"
+            ],
+            "block1620": [
+                "transformAgent.transformFrom(msg.sender, tokens, investments)"
+            ],
+            "block2345": [
+                "transformAgent.isTransformAgent()"
+            ],
+            "block2552": [
+                "transformAgent.originalSupply()"
+            ],
+            "jump1620": [
+                "transformAgent.transformFrom(msg.sender, tokens, investments)",
+                "transformAgent.transformFrom(msg.sender, tokens, investments)"
+            ],
+            "block2760": [
+                "transformAgent.originalFunds()"
+            ]
+        }
+    },
+    "MintableToken": {
+        "function_list": [
+            "transfer(address,uint256)",
+            "balanceOf(address)",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "mint(address,uint256)"
+        ],
+        "initial_state": {
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "mint(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transfer(address,uint256)": [
+                222,
+                119
+            ],
+            "balanceOf(address)": [
+                135,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "UbermenschPrefundToken": {
+        "function_list": [
+            "transform()",
+            "setTransformAgent(address)",
+            "getTransformState()",
+            "Ownable()",
+            "transferOwnership(address)",
+            "FundableToken()",
+            "transfer(address,uint256)",
+            "balanceOf(address)",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "mint(address,uint256)",
+            "UbermenschPrefundToken(address)",
+            "getCurrentBonus()",
+            "invest(address)",
+            "buy()",
+            "transfer(address,uint256)",
+            "stop()",
+            "fallback()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "transform()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "TOKEN_CAP": "uint256",
+                    "investorCount": "uint256"
+                }
+            },
+            "setTransformAgent(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "TOKEN_CAP": "uint256",
+                    "investorCount": "uint256"
+                }
+            },
+            "getTransformState()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "TOKEN_CAP": "uint256",
+                    "investorCount": "uint256"
+                }
+            },
+            "Ownable()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "TOKEN_CAP": "uint256",
+                    "investorCount": "uint256"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "TOKEN_CAP": "uint256",
+                    "investorCount": "uint256"
+                }
+            },
+            "FundableToken()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "TOKEN_CAP": "uint256",
+                    "investorCount": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "TOKEN_CAP": "uint256",
+                    "investorCount": "uint256"
+                }
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "TOKEN_CAP": "uint256",
+                    "investorCount": "uint256"
+                }
+            },
+            "mint(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "TOKEN_CAP": "uint256",
+                    "investorCount": "uint256"
+                }
+            },
+            "UbermenschPrefundToken(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "TOKEN_CAP": "uint256",
+                    "investorCount": "uint256"
+                }
+            },
+            "getCurrentBonus()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "TOKEN_CAP": "uint256",
+                    "investorCount": "uint256"
+                }
+            },
+            "invest(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "TOKEN_CAP": "uint256",
+                    "investorCount": "uint256"
+                }
+            },
+            "buy()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "TOKEN_CAP": "uint256",
+                    "investorCount": "uint256"
+                }
+            },
+            "stop()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "TOKEN_CAP": "uint256",
+                    "investorCount": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "TOKEN_CAP": "uint256",
+                    "investorCount": "uint256"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "TOKEN_CAP": "uint256",
+                    "investorCount": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                701,
+                229
+            ],
+            "buy()": [
+                1493,
+                471
+            ],
+            "invest(address)": [
+                328,
+                75
+            ],
+            "getTransformState()": [
+                989,
+                317
+            ],
+            "getCurrentBonus()": [
+                658,
+                207
+            ],
+            "transferOwnership(address)": [
+                1753,
+                581
+            ],
+            "setTransformAgent(address)": [
+                922,
+                295
+            ],
+            "transform()": [
+                592,
+                163
+            ],
+            "transfer(address,uint256)": [
+                1503,
+                493
+            ],
+            "stop()": [
+                526,
+                119
+            ]
+        },
+        "block_CALL_mapping": {
+            "block2314": [
+                "multisigWallet.transfer(amount)"
+            ],
+            "jump4579": [
+                "transformAgent.originalFunds()",
+                "transformAgent.originalFunds()"
+            ],
+            "jump4164": [
+                "transformAgent.isTransformAgent()",
+                "transformAgent.isTransformAgent()"
+            ],
+            "block4371": [
+                "transformAgent.originalSupply()"
+            ],
+            "jump2314_1": [
+                "multisigWallet.transfer(amount)",
+                "multisigWallet.transfer(amount)"
+            ],
+            "jump2314_0": [
+                "multisigWallet.transfer(amount)",
+                "multisigWallet.transfer(amount)"
+            ],
+            "jump4371": [
+                "transformAgent.originalSupply()",
+                "transformAgent.originalSupply()"
+            ],
+            "block4579": [
+                "transformAgent.originalFunds()"
+            ],
+            "block3349": [
+                "transformAgent.transformFrom(msg.sender, tokens, investments)"
+            ],
+            "jump2314": [
+                "multisigWallet.transfer(amount)",
+                "multisigWallet.transfer(amount)"
+            ],
+            "block2314_2": [
+                "multisigWallet.transfer(amount)"
+            ],
+            "block2314_1": [
+                "multisigWallet.transfer(amount)"
+            ],
+            "block2314_0": [
+                "multisigWallet.transfer(amount)"
+            ],
+            "block4164": [
+                "transformAgent.isTransformAgent()"
+            ],
+            "jump2314_2": [
+                "multisigWallet.transfer(amount)",
+                "multisigWallet.transfer(amount)"
+            ],
+            "jump3349": [
+                "transformAgent.transformFrom(msg.sender, tokens, investments)",
+                "transformAgent.transformFrom(msg.sender, tokens, investments)"
+            ]
+        }
+    }
+}

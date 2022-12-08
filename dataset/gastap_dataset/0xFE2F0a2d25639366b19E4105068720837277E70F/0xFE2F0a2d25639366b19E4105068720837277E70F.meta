@@ -1,0 +1,164 @@
+{
+    "token": {
+        "function_list": [
+            "transfer(address,uint256)",
+            "balanceOf(address)"
+        ],
+        "initial_state": {
+            "transfer(address,uint256)": {
+                "argument": {
+                    "": "uint256"
+                },
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transfer(address,uint256)": [
+                162,
+                97
+            ],
+            "balanceOf(address)": [
+                78,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "FairAuction": {
+        "function_list": [
+            "FairAuction(address,uint256,uint256,uint256,token)",
+            "fallback()",
+            "finalize()",
+            "individualClaim()",
+            "beneficiarySend()",
+            "automaticWithdrawLoop(uint256,uint256)"
+        ],
+        "initial_state": {
+            "FairAuction(address,uint256,uint256,uint256,token)": {
+                "argument": {
+                    "epochStartTime": "uint256",
+                    "durationInMinutes": "uint256",
+                    "capOnCrowdsale": "uint256"
+                },
+                "contract": {
+                    "amountRaised": "uint256",
+                    "startTime": "uint256",
+                    "deadline": "uint256",
+                    "memberCount": "uint256",
+                    "crowdsaleCap": "uint256",
+                    "tokenSupply": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "amountRaised": "uint256",
+                    "startTime": "uint256",
+                    "deadline": "uint256",
+                    "memberCount": "uint256",
+                    "crowdsaleCap": "uint256",
+                    "tokenSupply": "uint256"
+                }
+            },
+            "finalize()": {
+                "argument": {},
+                "contract": {
+                    "amountRaised": "uint256",
+                    "startTime": "uint256",
+                    "deadline": "uint256",
+                    "memberCount": "uint256",
+                    "crowdsaleCap": "uint256",
+                    "tokenSupply": "uint256"
+                }
+            },
+            "individualClaim()": {
+                "argument": {},
+                "contract": {
+                    "amountRaised": "uint256",
+                    "startTime": "uint256",
+                    "deadline": "uint256",
+                    "memberCount": "uint256",
+                    "crowdsaleCap": "uint256",
+                    "tokenSupply": "uint256"
+                }
+            },
+            "beneficiarySend()": {
+                "argument": {},
+                "contract": {
+                    "amountRaised": "uint256",
+                    "startTime": "uint256",
+                    "deadline": "uint256",
+                    "memberCount": "uint256",
+                    "crowdsaleCap": "uint256",
+                    "tokenSupply": "uint256"
+                }
+            },
+            "automaticWithdrawLoop(uint256,uint256)": {
+                "argument": {
+                    "startIndex": "uint256",
+                    "endIndex": "uint256"
+                },
+                "contract": {
+                    "amountRaised": "uint256",
+                    "startTime": "uint256",
+                    "deadline": "uint256",
+                    "memberCount": "uint256",
+                    "crowdsaleCap": "uint256",
+                    "tokenSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "beneficiarySend()": [
+                834,
+                163
+            ],
+            "automaticWithdrawLoop(uint256,uint256)": [
+                1273,
+                361
+            ],
+            "finalize()": [
+                900,
+                207
+            ],
+            "individualClaim()": [
+                681,
+                97
+            ]
+        },
+        "block_CALL_mapping": {
+            "block1638": [
+                "tokenReward.transfer(msg.sender, (balanceOf[msg.sender] * tokenSupply / amountRaised))"
+            ],
+            "jump3323": [
+                "tokenReward.transfer(accountIndex[i], (balanceOf[accountIndex[i]] * tokenSupply / amountRaised))",
+                "tokenReward.transfer(accountIndex[i], (balanceOf[accountIndex[i]] * tokenSupply / amountRaised))"
+            ],
+            "block3323": [
+                "tokenReward.transfer(accountIndex[i], (balanceOf[accountIndex[i]] * tokenSupply / amountRaised))"
+            ],
+            "block1990": [
+                "beneficiary.send(amountRaised)"
+            ],
+            "jump1638": [
+                "tokenReward.transfer(msg.sender, (balanceOf[msg.sender] * tokenSupply / amountRaised))",
+                "tokenReward.transfer(msg.sender, (balanceOf[msg.sender] * tokenSupply / amountRaised))"
+            ],
+            "jump1990": [
+                "beneficiary.send(amountRaised)",
+                "beneficiary.send(amountRaised)"
+            ],
+            "jump2467": [
+                "tokenReward.balanceOf(this)",
+                "tokenReward.balanceOf(this)"
+            ],
+            "block2467": [
+                "tokenReward.balanceOf(this)"
+            ]
+        }
+    }
+}

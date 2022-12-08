@@ -1,0 +1,626 @@
+{
+    "Hut34Config": {
+        "function_list": [
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "TOTAL_TOKENS": "uint256",
+                    "START_DATE": "uint256",
+                    "VESTED_PERCENT": "uint256",
+                    "VESTING_PERIOD": "uint256",
+                    "MIN_CAP": "uint256",
+                    "KYC_THRESHOLD": "uint256",
+                    "WHOLESALE_THRESHOLD": "uint256",
+                    "WHOLESALE_TOKENS": "uint256",
+                    "PRESOLD_TOKENS": "uint256",
+                    "PRESALE_ETH_RAISE": "uint256",
+                    "RATE_WHOLESALE": "uint256",
+                    "RATE_DAY_0": "uint256",
+                    "RATE_DAY_1": "uint256",
+                    "RATE_DAY_7": "uint256",
+                    "RATE_DAY_14": "uint256",
+                    "RATE_DAY_21": "uint256",
+                    "RATE_DAY_28": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "SafeMath": {
+        "function_list": [
+            "add(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)"
+        ],
+        "initial_state": {
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "ReentryProtected": {
+        "function_list": [],
+        "initial_state": {},
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "ERC20Token": {
+        "function_list": [
+            "balanceOf(address)",
+            "allowance(address,address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "xfer(address,address,uint256)",
+            "approve(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "xfer(address,address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                125,
+                75
+            ],
+            "balanceOf(address)": [
+                402,
+                141
+            ],
+            "allowance(address,address)": [
+                590,
+                185
+            ],
+            "transferFrom(address,address,uint256)": [
+                269,
+                119
+            ],
+            "transfer(address,uint256)": [
+                489,
+                163
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Hut34TS": {
+        "function_list": [
+            "fundRaised()",
+            "fundFailed()",
+            "currentRate()",
+            "ethToTokens(uint256)",
+            "proxyPurchase(address)",
+            "finalizeTS()",
+            "clearKyc(address[])",
+            "transferToMany(address[],uint256[])",
+            "releaseVested()",
+            "refund()",
+            "refundFor(address[])",
+            "abort()",
+            "transferExternalToken(address,address,uint256)",
+            "balanceOf(address)",
+            "allowance(address,address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "xfer(address,address,uint256)",
+            "approve(address,uint256)",
+            "Hut34TS()",
+            "fallback()",
+            "fundFailed()",
+            "fundRaised()",
+            "wholeSaleValueLeft()",
+            "currentRate()",
+            "ethToTokens(uint256)",
+            "abort()",
+            "proxyPurchase(address)",
+            "finalizeTS()",
+            "clearKyc(address[])",
+            "releaseVested()",
+            "refund()",
+            "refundFor(address[])",
+            "transferToMany(address[],uint256[])",
+            "xfer(address,address,uint256)",
+            "approve(address,uint256)",
+            "changeOwner(address)",
+            "acceptOwnership()",
+            "destroy()",
+            "transferExternalToken(address,address,uint256)",
+            "calcCommission()",
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "fundRaised()": {
+                "argument": {},
+                "contract": {
+                    "TOKEN": "uint256",
+                    "VESTED_TOKENS": "uint256",
+                    "RETAINED_TOKENS": "uint256",
+                    "END_DATE": "uint256",
+                    "COMMISSION_DIV": "uint256"
+                }
+            },
+            "fundFailed()": {
+                "argument": {},
+                "contract": {
+                    "TOKEN": "uint256",
+                    "VESTED_TOKENS": "uint256",
+                    "RETAINED_TOKENS": "uint256",
+                    "END_DATE": "uint256",
+                    "COMMISSION_DIV": "uint256"
+                }
+            },
+            "currentRate()": {
+                "argument": {},
+                "contract": {
+                    "TOKEN": "uint256",
+                    "VESTED_TOKENS": "uint256",
+                    "RETAINED_TOKENS": "uint256",
+                    "END_DATE": "uint256",
+                    "COMMISSION_DIV": "uint256"
+                }
+            },
+            "ethToTokens(uint256)": {
+                "argument": {
+                    "_wei": "uint256"
+                },
+                "contract": {
+                    "TOKEN": "uint256",
+                    "VESTED_TOKENS": "uint256",
+                    "RETAINED_TOKENS": "uint256",
+                    "END_DATE": "uint256",
+                    "COMMISSION_DIV": "uint256"
+                }
+            },
+            "proxyPurchase(address)": {
+                "argument": {},
+                "contract": {
+                    "TOKEN": "uint256",
+                    "VESTED_TOKENS": "uint256",
+                    "RETAINED_TOKENS": "uint256",
+                    "END_DATE": "uint256",
+                    "COMMISSION_DIV": "uint256"
+                }
+            },
+            "finalizeTS()": {
+                "argument": {},
+                "contract": {
+                    "TOKEN": "uint256",
+                    "VESTED_TOKENS": "uint256",
+                    "RETAINED_TOKENS": "uint256",
+                    "END_DATE": "uint256",
+                    "COMMISSION_DIV": "uint256"
+                }
+            },
+            "clearKyc(address[])": {
+                "argument": {
+                    "_addrs": "address[]"
+                },
+                "contract": {
+                    "TOKEN": "uint256",
+                    "VESTED_TOKENS": "uint256",
+                    "RETAINED_TOKENS": "uint256",
+                    "END_DATE": "uint256",
+                    "COMMISSION_DIV": "uint256"
+                }
+            },
+            "transferToMany(address[],uint256[])": {
+                "argument": {
+                    "_addrs": "address[]",
+                    "_amounts": "uint256[]"
+                },
+                "contract": {
+                    "TOKEN": "uint256",
+                    "VESTED_TOKENS": "uint256",
+                    "RETAINED_TOKENS": "uint256",
+                    "END_DATE": "uint256",
+                    "COMMISSION_DIV": "uint256"
+                }
+            },
+            "releaseVested()": {
+                "argument": {},
+                "contract": {
+                    "TOKEN": "uint256",
+                    "VESTED_TOKENS": "uint256",
+                    "RETAINED_TOKENS": "uint256",
+                    "END_DATE": "uint256",
+                    "COMMISSION_DIV": "uint256"
+                }
+            },
+            "refund()": {
+                "argument": {},
+                "contract": {
+                    "TOKEN": "uint256",
+                    "VESTED_TOKENS": "uint256",
+                    "RETAINED_TOKENS": "uint256",
+                    "END_DATE": "uint256",
+                    "COMMISSION_DIV": "uint256"
+                }
+            },
+            "refundFor(address[])": {
+                "argument": {
+                    "_addrs": "address[]"
+                },
+                "contract": {
+                    "TOKEN": "uint256",
+                    "VESTED_TOKENS": "uint256",
+                    "RETAINED_TOKENS": "uint256",
+                    "END_DATE": "uint256",
+                    "COMMISSION_DIV": "uint256"
+                }
+            },
+            "abort()": {
+                "argument": {},
+                "contract": {
+                    "TOKEN": "uint256",
+                    "VESTED_TOKENS": "uint256",
+                    "RETAINED_TOKENS": "uint256",
+                    "END_DATE": "uint256",
+                    "COMMISSION_DIV": "uint256"
+                }
+            },
+            "transferExternalToken(address,address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "TOKEN": "uint256",
+                    "VESTED_TOKENS": "uint256",
+                    "RETAINED_TOKENS": "uint256",
+                    "END_DATE": "uint256",
+                    "COMMISSION_DIV": "uint256"
+                }
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "TOKEN": "uint256",
+                    "VESTED_TOKENS": "uint256",
+                    "RETAINED_TOKENS": "uint256",
+                    "END_DATE": "uint256",
+                    "COMMISSION_DIV": "uint256"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "TOKEN": "uint256",
+                    "VESTED_TOKENS": "uint256",
+                    "RETAINED_TOKENS": "uint256",
+                    "END_DATE": "uint256",
+                    "COMMISSION_DIV": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "TOKEN": "uint256",
+                    "VESTED_TOKENS": "uint256",
+                    "RETAINED_TOKENS": "uint256",
+                    "END_DATE": "uint256",
+                    "COMMISSION_DIV": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "TOKEN": "uint256",
+                    "VESTED_TOKENS": "uint256",
+                    "RETAINED_TOKENS": "uint256",
+                    "END_DATE": "uint256",
+                    "COMMISSION_DIV": "uint256"
+                }
+            },
+            "xfer(address,address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "TOKEN": "uint256",
+                    "VESTED_TOKENS": "uint256",
+                    "RETAINED_TOKENS": "uint256",
+                    "END_DATE": "uint256",
+                    "COMMISSION_DIV": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "TOKEN": "uint256",
+                    "VESTED_TOKENS": "uint256",
+                    "RETAINED_TOKENS": "uint256",
+                    "END_DATE": "uint256",
+                    "COMMISSION_DIV": "uint256"
+                }
+            },
+            "Hut34TS()": {
+                "argument": {},
+                "contract": {
+                    "TOKEN": "uint256",
+                    "VESTED_TOKENS": "uint256",
+                    "RETAINED_TOKENS": "uint256",
+                    "END_DATE": "uint256",
+                    "COMMISSION_DIV": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "TOKEN": "uint256",
+                    "VESTED_TOKENS": "uint256",
+                    "RETAINED_TOKENS": "uint256",
+                    "END_DATE": "uint256",
+                    "COMMISSION_DIV": "uint256"
+                }
+            },
+            "wholeSaleValueLeft()": {
+                "argument": {},
+                "contract": {
+                    "TOKEN": "uint256",
+                    "VESTED_TOKENS": "uint256",
+                    "RETAINED_TOKENS": "uint256",
+                    "END_DATE": "uint256",
+                    "COMMISSION_DIV": "uint256"
+                }
+            },
+            "changeOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "TOKEN": "uint256",
+                    "VESTED_TOKENS": "uint256",
+                    "RETAINED_TOKENS": "uint256",
+                    "END_DATE": "uint256",
+                    "COMMISSION_DIV": "uint256"
+                }
+            },
+            "acceptOwnership()": {
+                "argument": {},
+                "contract": {
+                    "TOKEN": "uint256",
+                    "VESTED_TOKENS": "uint256",
+                    "RETAINED_TOKENS": "uint256",
+                    "END_DATE": "uint256",
+                    "COMMISSION_DIV": "uint256"
+                }
+            },
+            "destroy()": {
+                "argument": {},
+                "contract": {
+                    "TOKEN": "uint256",
+                    "VESTED_TOKENS": "uint256",
+                    "RETAINED_TOKENS": "uint256",
+                    "END_DATE": "uint256",
+                    "COMMISSION_DIV": "uint256"
+                }
+            },
+            "calcCommission()": {
+                "argument": {},
+                "contract": {
+                    "TOKEN": "uint256",
+                    "VESTED_TOKENS": "uint256",
+                    "RETAINED_TOKENS": "uint256",
+                    "END_DATE": "uint256",
+                    "COMMISSION_DIV": "uint256"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "TOKEN": "uint256",
+                    "VESTED_TOKENS": "uint256",
+                    "RETAINED_TOKENS": "uint256",
+                    "END_DATE": "uint256",
+                    "COMMISSION_DIV": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "ethToTokens(uint256)": [
+                3811,
+                1065
+            ],
+            "destroy()": [
+                3041,
+                867
+            ],
+            "abort()": [
+                2104,
+                515
+            ],
+            "fundFailed()": [
+                2448,
+                669
+            ],
+            "allowance(address,address)": [
+                4645,
+                1351
+            ],
+            "transferFrom(address,address,uint256)": [
+                1660,
+                383
+            ],
+            "finalizeTS()": [
+                3233,
+                933
+            ],
+            "wholeSaleValueLeft()": [
+                4602,
+                1329
+            ],
+            "approve(address,uint256)": [
+                993,
+                141
+            ],
+            "fundRaised()": [
+                4334,
+                1241
+            ],
+            "acceptOwnership()": [
+                2672,
+                757
+            ],
+            "clearKyc(address[])": [
+                3280,
+                955
+            ],
+            "currentRate()": [
+                4850,
+                1417
+            ],
+            "changeOwner(address)": [
+                3926,
+                1109
+            ],
+            "transferExternalToken(address,address,uint256)": [
+                1879,
+                449
+            ],
+            "proxyPurchase(address)": [
+                2237,
+                581
+            ],
+            "refundFor(address[])": [
+                3064,
+                889
+            ],
+            "releaseVested()": [
+                1613,
+                361
+            ],
+            "balanceOf(address)": [
+                2585,
+                735
+            ],
+            "refund()": [
+                2358,
+                625
+            ],
+            "transferToMany(address[],uint256[])": [
+                2719,
+                779
+            ],
+            "transfer(address,uint256)": [
+                4104,
+                1153
+            ]
+        },
+        "block_CALL_mapping": {
+            "block11029": [
+                "COMMISSION_WALLET.transfer(devCommission)"
+            ],
+            "jump10563": [
+                "addr.transfer(value)",
+                "addr.transfer(value)"
+            ],
+            "jump7663": [
+                "ERC20Token(_kAddr).transfer(_to, _amount)",
+                "ERC20Token(_kAddr).transfer(_to, _amount)"
+            ],
+            "jump10563_0": [
+                "addr.transfer(value)",
+                "addr.transfer(value)"
+            ],
+            "block10563": [
+                "addr.transfer(value)"
+            ],
+            "block7663": [
+                "ERC20Token(_kAddr).transfer(_to, _amount)"
+            ],
+            "jump11240": [
+                "HUT34_WALLET.transfer(this.balance)",
+                "HUT34_WALLET.transfer(this.balance)"
+            ],
+            "block10563_0": [
+                "addr.transfer(value)"
+            ],
+            "jump11029": [
+                "COMMISSION_WALLET.transfer(devCommission)",
+                "COMMISSION_WALLET.transfer(devCommission)"
+            ],
+            "block11240": [
+                "HUT34_WALLET.transfer(this.balance)"
+            ]
+        }
+    }
+}

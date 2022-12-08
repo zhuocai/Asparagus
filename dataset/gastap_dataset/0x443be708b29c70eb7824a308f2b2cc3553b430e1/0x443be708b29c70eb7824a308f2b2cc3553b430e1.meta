@@ -1,0 +1,188 @@
+{
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "Ownable": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "ERC20": {
+        "function_list": [
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "balanceOf(address)"
+        ],
+        "initial_state": {
+            "transfer(address,uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                491,
+                163
+            ],
+            "transferFrom(address,address,uint256)": [
+                313,
+                119
+            ],
+            "transfer(address,uint256)": [
+                777,
+                251
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "ASTRDrop": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "multisend(address[])",
+            "setAirdropAmount(uint256)",
+            "resetAirdropAmount()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {
+                    "decimals": "uint8",
+                    "decimalsConversion": "uint256",
+                    "AIRDROP_AMOUNT": "uint256"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "decimals": "uint8",
+                    "decimalsConversion": "uint256",
+                    "AIRDROP_AMOUNT": "uint256"
+                }
+            },
+            "multisend(address[])": {
+                "argument": {
+                    "dests": "address[]"
+                },
+                "contract": {
+                    "decimals": "uint8",
+                    "decimalsConversion": "uint256",
+                    "AIRDROP_AMOUNT": "uint256"
+                }
+            },
+            "setAirdropAmount(uint256)": {
+                "argument": {
+                    "_astrAirdrop": "uint256"
+                },
+                "contract": {
+                    "decimals": "uint8",
+                    "decimalsConversion": "uint256",
+                    "AIRDROP_AMOUNT": "uint256"
+                }
+            },
+            "resetAirdropAmount()": {
+                "argument": {},
+                "contract": {
+                    "decimals": "uint8",
+                    "decimalsConversion": "uint256",
+                    "AIRDROP_AMOUNT": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "multisend(address[])": [
+                190,
+                97
+            ],
+            "setAirdropAmount(uint256)": [
+                486,
+                163
+            ],
+            "resetAirdropAmount()": [
+                531,
+                185
+            ],
+            "transferOwnership(address)": [
+                554,
+                207
+            ]
+        },
+        "block_CALL_mapping": {
+            "block1300": [
+                "token.transferFrom(ownerAddress, dests[i], AIRDROP_AMOUNT)"
+            ],
+            "jump1300": [
+                "token.transferFrom(ownerAddress, dests[i], AIRDROP_AMOUNT)",
+                "token.transferFrom(ownerAddress, dests[i], AIRDROP_AMOUNT)"
+            ]
+        }
+    }
+}

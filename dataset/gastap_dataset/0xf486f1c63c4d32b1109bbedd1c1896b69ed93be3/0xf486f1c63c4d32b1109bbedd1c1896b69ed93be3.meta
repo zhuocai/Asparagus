@@ -1,0 +1,147 @@
+{
+    "Token": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                125,
+                75
+            ],
+            "balanceOf(address)": [
+                402,
+                141
+            ],
+            "allowance(address,address)": [
+                590,
+                185
+            ],
+            "transferFrom(address,address,uint256)": [
+                269,
+                119
+            ],
+            "transfer(address,uint256)": [
+                489,
+                163
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "RecoverC20": {
+        "function_list": [
+            "RecoverC20(address)",
+            "resetIndex()",
+            "addAddresses(address[])",
+            "recoverTokens(uint256)",
+            "returnAddressList()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "RecoverC20(address)": {
+                "argument": {},
+                "contract": {
+                    "addressList": "address[]",
+                    "index": "uint256"
+                }
+            },
+            "resetIndex()": {
+                "argument": {},
+                "contract": {
+                    "addressList": "address[]",
+                    "index": "uint256"
+                }
+            },
+            "addAddresses(address[])": {
+                "argument": {
+                    "tokenHolders": "address[]"
+                },
+                "contract": {
+                    "addressList": "address[]",
+                    "index": "uint256"
+                }
+            },
+            "recoverTokens(uint256)": {
+                "argument": {
+                    "count": "uint256"
+                },
+                "contract": {
+                    "addressList": "address[]",
+                    "index": "uint256"
+                }
+            },
+            "returnAddressList()": {
+                "argument": {},
+                "contract": {
+                    "addressList": "address[]",
+                    "index": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "recoverTokens(uint256)": [
+                420,
+                163
+            ],
+            "returnAddressList()": [
+                832,
+                273
+            ],
+            "resetIndex()": [
+                267,
+                97
+            ],
+            "addAddresses(address[])": [
+                465,
+                185
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump2002": [
+                "C20Token.transferFrom(tokenHolder, receivingAddress, value)",
+                "C20Token.transferFrom(tokenHolder, receivingAddress, value)"
+            ],
+            "block2002": [
+                "C20Token.transferFrom(tokenHolder, receivingAddress, value)"
+            ],
+            "block1648": [
+                "C20Token.allowance(tokenHolder, this)"
+            ],
+            "jump1648": [
+                "C20Token.allowance(tokenHolder, this)",
+                "C20Token.allowance(tokenHolder, this)"
+            ]
+        }
+    }
+}

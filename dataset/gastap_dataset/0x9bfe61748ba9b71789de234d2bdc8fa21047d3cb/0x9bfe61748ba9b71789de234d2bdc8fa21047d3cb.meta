@@ -1,0 +1,116 @@
+{
+    "SimpleMixer": {
+        "function_list": [
+            "SimpleMixer()",
+            "newDeal(uint256,uint256,uint256,uint256,uint256)",
+            "makeClaim(uint256)",
+            "makeDeposit(uint256)",
+            "withdraw(uint256)",
+            "dealStatus(uint256)"
+        ],
+        "initial_state": {
+            "SimpleMixer()": {
+                "argument": {},
+                "contract": {
+                    "_deals": "SimpleMixer.Deal[]"
+                }
+            },
+            "newDeal(uint256,uint256,uint256,uint256,uint256)": {
+                "argument": {
+                    "_depositDurationInHours": "uint256",
+                    "_claimDurationInHours": "uint256",
+                    "_claimUnitValueInWei": "uint256",
+                    "_claimDepositInWei": "uint256",
+                    "_minNumClaims": "uint256"
+                },
+                "contract": {
+                    "_deals": "SimpleMixer.Deal[]"
+                }
+            },
+            "makeClaim(uint256)": {
+                "argument": {
+                    "dealId": "uint256"
+                },
+                "contract": {
+                    "_deals": "SimpleMixer.Deal[]"
+                }
+            },
+            "makeDeposit(uint256)": {
+                "argument": {
+                    "dealId": "uint256"
+                },
+                "contract": {
+                    "_deals": "SimpleMixer.Deal[]"
+                }
+            },
+            "withdraw(uint256)": {
+                "argument": {
+                    "dealId": "uint256"
+                },
+                "contract": {
+                    "_deals": "SimpleMixer.Deal[]"
+                }
+            },
+            "dealStatus(uint256)": {
+                "argument": {
+                    "_dealId": "uint256"
+                },
+                "contract": {
+                    "_deals": "SimpleMixer.Deal[]"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "newDeal(uint256,uint256,uint256,uint256,uint256)": [
+                430,
+                163
+            ],
+            "makeClaim(uint256)": [
+                180,
+                97
+            ],
+            "withdraw(uint256)": [
+                246,
+                119
+            ],
+            "makeDeposit(uint256)": [
+                114,
+                75
+            ],
+            "dealStatus(uint256)": [
+                325,
+                141
+            ]
+        },
+        "block_CALL_mapping": {
+            "block4154": [
+                "msg.sender.send(withdrawedValue)"
+            ],
+            "block2727": [
+                "msg.sender.send(msg.value)"
+            ],
+            "block4604": [
+                "msg.sender.send(withdrawedValue)"
+            ],
+            "block1581": [
+                "msg.sender.send(msg.value)"
+            ],
+            "jump2727": [
+                "msg.sender.send(msg.value)",
+                "msg.sender.send(msg.value)"
+            ],
+            "jump4604": [
+                "msg.sender.send(withdrawedValue)",
+                "msg.sender.send(withdrawedValue)"
+            ],
+            "jump1581": [
+                "msg.sender.send(msg.value)",
+                "msg.sender.send(msg.value)"
+            ],
+            "jump4154": [
+                "msg.sender.send(withdrawedValue)",
+                "msg.sender.send(withdrawedValue)"
+            ]
+        }
+    }
+}

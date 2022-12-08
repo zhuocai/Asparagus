@@ -1,0 +1,214 @@
+{
+    "ERC20": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                402,
+                141
+            ],
+            "transfer(address,uint256)": [
+                489,
+                163
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "Distribution": {
+        "function_list": [
+            "Distribution(address,ERC20,bytes32[],uint256)",
+            "handleTokensReceived()",
+            "_numTokensForContributor(uint256,uint256,Distribution.State)",
+            "doDistribution(uint256,address,uint256)",
+            "doDistributionRange(uint256,address[],uint256[])",
+            "numTokensForContributor(uint256)",
+            "temporaryEscapeHatch(address,uint256,bytes)",
+            "temporaryKill(address)"
+        ],
+        "initial_state": {
+            "Distribution(address,ERC20,bytes32[],uint256)": {
+                "argument": {
+                    "_contributionHashes": "bytes32[]",
+                    "_expectedTotalTokens": "uint256"
+                },
+                "contract": {
+                    "actualTotalTokens": "uint256",
+                    "tokensTransferred": "uint256",
+                    "contributionHashes": "bytes32[]",
+                    "expectedTotalTokens": "uint256"
+                }
+            },
+            "handleTokensReceived()": {
+                "argument": {},
+                "contract": {
+                    "actualTotalTokens": "uint256",
+                    "tokensTransferred": "uint256",
+                    "contributionHashes": "bytes32[]",
+                    "expectedTotalTokens": "uint256"
+                }
+            },
+            "_numTokensForContributor(uint256,uint256,Distribution.State)": {
+                "argument": {
+                    "contributorExpectedTokens": "uint256",
+                    "_tokensTransferred": "uint256"
+                },
+                "contract": {
+                    "actualTotalTokens": "uint256",
+                    "tokensTransferred": "uint256",
+                    "contributionHashes": "bytes32[]",
+                    "expectedTotalTokens": "uint256"
+                }
+            },
+            "doDistribution(uint256,address,uint256)": {
+                "argument": {
+                    "contributorIndex": "uint256",
+                    "contributorExpectedTokens": "uint256"
+                },
+                "contract": {
+                    "actualTotalTokens": "uint256",
+                    "tokensTransferred": "uint256",
+                    "contributionHashes": "bytes32[]",
+                    "expectedTotalTokens": "uint256"
+                }
+            },
+            "doDistributionRange(uint256,address[],uint256[])": {
+                "argument": {
+                    "start": "uint256",
+                    "contributors": "address[]",
+                    "contributorExpectedTokens": "uint256[]"
+                },
+                "contract": {
+                    "actualTotalTokens": "uint256",
+                    "tokensTransferred": "uint256",
+                    "contributionHashes": "bytes32[]",
+                    "expectedTotalTokens": "uint256"
+                }
+            },
+            "numTokensForContributor(uint256)": {
+                "argument": {
+                    "contributorExpectedTokens": "uint256"
+                },
+                "contract": {
+                    "actualTotalTokens": "uint256",
+                    "tokensTransferred": "uint256",
+                    "contributionHashes": "bytes32[]",
+                    "expectedTotalTokens": "uint256"
+                }
+            },
+            "temporaryEscapeHatch(address,uint256,bytes)": {
+                "argument": {
+                    "value": "uint256",
+                    "data": "bytes"
+                },
+                "contract": {
+                    "actualTotalTokens": "uint256",
+                    "tokensTransferred": "uint256",
+                    "contributionHashes": "bytes32[]",
+                    "expectedTotalTokens": "uint256"
+                }
+            },
+            "temporaryKill(address)": {
+                "argument": {},
+                "contract": {
+                    "actualTotalTokens": "uint256",
+                    "tokensTransferred": "uint256",
+                    "contributionHashes": "bytes32[]",
+                    "expectedTotalTokens": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "temporaryEscapeHatch(address,uint256,bytes)": [
+                369,
+                119
+            ],
+            "handleTokensReceived()": [
+                670,
+                185
+            ],
+            "doDistributionRange(uint256,address[],uint256[])": [
+                125,
+                75
+            ],
+            "temporaryKill(address)": [
+                516,
+                141
+            ],
+            "doDistribution(uint256,address,uint256)": [
+                583,
+                163
+            ],
+            "numTokensForContributor(uint256)": [
+                304,
+                97
+            ]
+        },
+        "block_CALL_mapping": {
+            "block1593": [
+                "to.call.value(value)(data)"
+            ],
+            "block1201": [
+                "tokenContract.transfer(contributor, numTokens)"
+            ],
+            "jump2793": [
+                "tokenContract.balanceOf(this)",
+                "tokenContract.balanceOf(this)"
+            ],
+            "block2793": [
+                "tokenContract.balanceOf(this)"
+            ],
+            "jump1201": [
+                "tokenContract.transfer(contributor, numTokens)",
+                "tokenContract.transfer(contributor, numTokens)"
+            ],
+            "block1912": [
+                "tokenContract.balanceOf(this)"
+            ],
+            "jump1593": [
+                "to.call.value(value)(data)",
+                "to.call.value(value)(data)"
+            ],
+            "jump2475": [
+                "tokenContract.transfer(contributor, numTokens)",
+                "tokenContract.transfer(contributor, numTokens)"
+            ],
+            "jump1912": [
+                "tokenContract.balanceOf(this)",
+                "tokenContract.balanceOf(this)"
+            ],
+            "block2475": [
+                "tokenContract.transfer(contributor, numTokens)"
+            ]
+        }
+    }
+}

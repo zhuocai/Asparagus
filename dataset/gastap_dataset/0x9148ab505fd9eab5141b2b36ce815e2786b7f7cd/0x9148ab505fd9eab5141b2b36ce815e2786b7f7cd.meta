@@ -1,0 +1,336 @@
+{
+    "Ownable": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "KyberAirDrop": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "KyberAirDrop(address)",
+            "airDrop(ERC20Interface,address,address[],uint256,bool,KyberGenesisToken)",
+            "tranferMinterOwnership(KyberGenesisToken,address)",
+            "emergencyERC20Drain(ERC20Interface,uint256)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {
+                    "numDrops": "uint256",
+                    "dropAmount": "uint256"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "numDrops": "uint256",
+                    "dropAmount": "uint256"
+                }
+            },
+            "KyberAirDrop(address)": {
+                "argument": {},
+                "contract": {
+                    "numDrops": "uint256",
+                    "dropAmount": "uint256"
+                }
+            },
+            "airDrop(ERC20Interface,address,address[],uint256,bool,KyberGenesisToken)": {
+                "argument": {
+                    "recipients": "address[]",
+                    "amount": "uint256"
+                },
+                "contract": {
+                    "numDrops": "uint256",
+                    "dropAmount": "uint256"
+                }
+            },
+            "tranferMinterOwnership(KyberGenesisToken,address)": {
+                "argument": {},
+                "contract": {
+                    "numDrops": "uint256",
+                    "dropAmount": "uint256"
+                }
+            },
+            "emergencyERC20Drain(ERC20Interface,uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {
+                    "numDrops": "uint256",
+                    "dropAmount": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                705,
+                207
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump1935": [
+                "kgtToken.transferOwnership(newOwner)",
+                "kgtToken.transferOwnership(newOwner)"
+            ],
+            "block1576": [
+                "kgtToken.mint(recipients)"
+            ],
+            "block2151": [
+                "token.transfer( kyberMultisig, amount )"
+            ],
+            "block1935": [
+                "kgtToken.transferOwnership(newOwner)"
+            ],
+            "jump1183": [
+                "token.transferFrom( tokenRepo, recipients[i], amount )",
+                "token.transferFrom( tokenRepo, recipients[i], amount )"
+            ],
+            "block1183": [
+                "token.transferFrom( tokenRepo, recipients[i], amount )"
+            ],
+            "jump1576": [
+                "kgtToken.mint(recipients)",
+                "kgtToken.mint(recipients)"
+            ],
+            "jump2151": [
+                "token.transfer( kyberMultisig, amount )",
+                "token.transfer( kyberMultisig, amount )"
+            ]
+        }
+    },
+    "KyberGenesisToken": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "KyberGenesisToken(address)",
+            "mint(address[])",
+            "endMinting()",
+            "burn()",
+            "emergencyERC20Drain(ERC20Interface,uint256)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "totalSupply": "uint256"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "totalSupply": "uint256"
+                }
+            },
+            "KyberGenesisToken(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "totalSupply": "uint256"
+                }
+            },
+            "mint(address[])": {
+                "argument": {
+                    "recipients": "address[]"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "totalSupply": "uint256"
+                }
+            },
+            "endMinting()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "totalSupply": "uint256"
+                }
+            },
+            "burn()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "totalSupply": "uint256"
+                }
+            },
+            "emergencyERC20Drain(ERC20Interface,uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "totalSupply": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "totalSupply": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "totalSupply": "uint256"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "totalSupply": "uint256"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "burn()": [
+                688,
+                185
+            ],
+            "approve(address,uint256)": [
+                368,
+                97
+            ],
+            "mint(address[])": [
+                1130,
+                295
+            ],
+            "endMinting()": [
+                1428,
+                361
+            ],
+            "transferFrom(address,address,uint256)": [
+                512,
+                141
+            ],
+            "transferOwnership(address)": [
+                1451,
+                383
+            ],
+            "allowance(address,address)": [
+                1309,
+                339
+            ],
+            "transfer(address,uint256)": [
+                2612,
+                871
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump2612": [
+                "token.transfer( kyberMultisig, amount )",
+                "token.transfer( kyberMultisig, amount )"
+            ],
+            "block2612": [
+                "token.transfer( kyberMultisig, amount )"
+            ]
+        }
+    },
+    "ERC20Interface": {
+        "function_list": [
+            "transferFrom(address,address,uint256)",
+            "transfer(address,uint256)",
+            "ERC20Interface()"
+        ],
+        "initial_state": {
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "ERC20Interface()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferFrom(address,address,uint256)": [
+                81,
+                75
+            ],
+            "transfer(address,uint256)": [
+                214,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    }
+}

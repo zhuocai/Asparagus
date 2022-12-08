@@ -1,0 +1,768 @@
+{
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "Ownable": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "HasNoEther": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "HasNoEther()",
+            "fallback()",
+            "reclaimEther()"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "HasNoEther()": {
+                "argument": {},
+                "contract": {}
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {}
+            },
+            "reclaimEther()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "reclaimEther()": [
+                189,
+                97
+            ],
+            "transferOwnership(address)": [
+                212,
+                119
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump407": [
+                "owner.send(this.balance)",
+                "owner.send(this.balance)"
+            ],
+            "block407": [
+                "owner.send(this.balance)"
+            ]
+        }
+    },
+    "HasNoTokens": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "tokenFallback(address,uint256,bytes)",
+            "reclaimToken(address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "tokenFallback(address,uint256,bytes)": {
+                "argument": {
+                    "value_": "uint256",
+                    "data_": "bytes"
+                },
+                "contract": {}
+            },
+            "reclaimToken(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "tokenFallback(address,uint256,bytes)": [
+                257,
+                119
+            ],
+            "reclaimToken(address)": [
+                103,
+                75
+            ],
+            "transferOwnership(address)": [
+                358,
+                141
+            ]
+        },
+        "block_CALL_mapping": {
+            "block677": [
+                "tokenInst.balanceOf(this)"
+            ],
+            "jump677": [
+                "tokenInst.balanceOf(this)",
+                "tokenInst.balanceOf(this)"
+            ],
+            "block934": [
+                "tokenInst.transfer(owner, balance)"
+            ],
+            "jump934": [
+                "tokenInst.transfer(owner, balance)",
+                "tokenInst.transfer(owner, balance)"
+            ]
+        }
+    },
+    "ERC20Basic": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                124,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "BasicToken": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transfer(address,uint256)",
+            "balanceOf(address)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transfer(address,uint256)": [
+                222,
+                119
+            ],
+            "balanceOf(address)": [
+                135,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "ERC20": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                202,
+                75
+            ],
+            "transfer(address,uint256)": [
+                873,
+                273
+            ],
+            "balanceOf(address)": [
+                601,
+                185
+            ],
+            "transferFrom(address,address,uint256)": [
+                346,
+                119
+            ],
+            "allowance(address,address)": [
+                1061,
+                317
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "StandardToken": {
+        "function_list": [
+            "transfer(address,uint256)",
+            "balanceOf(address)",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)"
+        ],
+        "initial_state": {
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                125,
+                75
+            ],
+            "balanceOf(address)": [
+                402,
+                141
+            ],
+            "allowance(address,address)": [
+                590,
+                185
+            ],
+            "transferFrom(address,address,uint256)": [
+                269,
+                119
+            ],
+            "transfer(address,uint256)": [
+                489,
+                163
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "BurnableToken": {
+        "function_list": [
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "transfer(address,uint256)",
+            "balanceOf(address)",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "burn(uint256)"
+        ],
+        "initial_state": {
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "burn(uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                136,
+                75
+            ],
+            "balanceOf(address)": [
+                458,
+                163
+            ],
+            "burn(uint256)": [
+                413,
+                141
+            ],
+            "allowance(address,address)": [
+                646,
+                207
+            ],
+            "transferFrom(address,address,uint256)": [
+                280,
+                119
+            ],
+            "transfer(address,uint256)": [
+                545,
+                185
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "MintableToken": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "transfer(address,uint256)",
+            "balanceOf(address)",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "mint(address,uint256)",
+            "finishMinting()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "mint(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {}
+            },
+            "finishMinting()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                227,
+                97
+            ],
+            "mint(address,uint256)": [
+                504,
+                163
+            ],
+            "balanceOf(address)": [
+                605,
+                185
+            ],
+            "finishMinting()": [
+                692,
+                207
+            ],
+            "allowance(address,address)": [
+                927,
+                273
+            ],
+            "transferFrom(address,address,uint256)": [
+                371,
+                141
+            ],
+            "transfer(address,uint256)": [
+                826,
+                251
+            ],
+            "transferOwnership(address)": [
+                1046,
+                295
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "onG": {
+        "function_list": [
+            "tokenFallback(address,uint256,bytes)",
+            "reclaimToken(address)",
+            "Ownable()",
+            "transferOwnership(address)",
+            "HasNoEther()",
+            "fallback()",
+            "reclaimEther()",
+            "burn(uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "transfer(address,uint256)",
+            "balanceOf(address)",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "mint(address,uint256)",
+            "finishMinting()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "tokenFallback(address,uint256,bytes)": {
+                "argument": {
+                    "value_": "uint256",
+                    "data_": "bytes"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "reclaimToken(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "Ownable()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "HasNoEther()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "reclaimEther()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "burn(uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "mint(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "finishMinting()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                458,
+                119
+            ],
+            "tokenFallback(address,uint256,bytes)": [
+                1480,
+                405
+            ],
+            "reclaimToken(address)": [
+                559,
+                141
+            ],
+            "mint(address,uint256)": [
+                845,
+                229
+            ],
+            "balanceOf(address)": [
+                991,
+                273
+            ],
+            "finishMinting()": [
+                1078,
+                295
+            ],
+            "allowance(address,address)": [
+                1581,
+                427
+            ],
+            "burn(uint256)": [
+                946,
+                251
+            ],
+            "transfer(address,uint256)": [
+                1379,
+                383
+            ],
+            "transferOwnership(address)": [
+                1700,
+                449
+            ],
+            "reclaimEther()": [
+                1356,
+                361
+            ],
+            "transferFrom(address,address,uint256)": [
+                669,
+                185
+            ]
+        },
+        "block_CALL_mapping": {
+            "block2846": [
+                "tokenInst.transfer(owner, balance)"
+            ],
+            "block4885": [
+                "owner.send(this.balance)"
+            ],
+            "jump4885": [
+                "owner.send(this.balance)",
+                "owner.send(this.balance)"
+            ],
+            "jump2846": [
+                "tokenInst.transfer(owner, balance)",
+                "tokenInst.transfer(owner, balance)"
+            ],
+            "jump2588": [
+                "tokenInst.balanceOf(this)",
+                "tokenInst.balanceOf(this)"
+            ],
+            "block2588": [
+                "tokenInst.balanceOf(this)"
+            ]
+        }
+    }
+}

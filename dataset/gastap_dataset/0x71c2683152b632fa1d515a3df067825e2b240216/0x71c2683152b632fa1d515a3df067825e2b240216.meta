@@ -1,0 +1,458 @@
+{
+    "owned": {
+        "function_list": [
+            "owned()",
+            "changeOwner(address)"
+        ],
+        "initial_state": {
+            "owned()": {
+                "argument": {},
+                "contract": {}
+            },
+            "changeOwner(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "changeOwner(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "tokenRecipient": {
+        "function_list": [
+            "receiveApproval(address,uint256,address,bytes)"
+        ],
+        "initial_state": {
+            "receiveApproval(address,uint256,address,bytes)": {
+                "argument": {
+                    "_value": "uint256",
+                    "_extraData": "bytes"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "receiveApproval(address,uint256,address,bytes)": [
+                174,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump573": [
+                "t.transferFrom(_from, this, _value)",
+                "t.transferFrom(_from, this, _value)"
+            ],
+            "block573": [
+                "t.transferFrom(_from, this, _value)"
+            ]
+        }
+    },
+    "CSToken": {
+        "function_list": [
+            "owned()",
+            "changeOwner(address)",
+            "mintToken(address,uint256,uint256)",
+            "addAgingTimesForPool(address,uint256)"
+        ],
+        "initial_state": {
+            "owned()": {
+                "argument": {},
+                "contract": {
+                    "decimals": "uint8"
+                }
+            },
+            "changeOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "decimals": "uint8"
+                }
+            },
+            "mintToken(address,uint256,uint256)": {
+                "argument": {
+                    "mintedAmount": "uint256",
+                    "agingTime": "uint256"
+                },
+                "contract": {
+                    "decimals": "uint8"
+                }
+            },
+            "addAgingTimesForPool(address,uint256)": {
+                "argument": {
+                    "agingTime": "uint256"
+                },
+                "contract": {
+                    "decimals": "uint8"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "addAgingTimesForPool(address,uint256)": [
+                1952,
+                449
+            ],
+            "changeOwner(address)": [
+                1421,
+                339
+            ],
+            "mintToken(address,uint256,uint256)": [
+                645,
+                163
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump6846": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)",
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ],
+            "block6846": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ]
+        }
+    },
+    "KICKICOCrowdsale": {
+        "function_list": [
+            "owned()",
+            "changeOwner(address)",
+            "KICKICOCrowdsale(address,address,address,address,address,address,address)",
+            "setParams()",
+            "mint(uint256,uint256,address,uint256)",
+            "processPayment(address,uint256)",
+            "fallback()",
+            "closeCurrentStage()",
+            "safeWithdrawal(uint256)",
+            "kill()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "owned()": {
+                "argument": {},
+                "contract": {
+                    "preIcoStagePeriod": "uint256[]",
+                    "IcoStagePeriod": "uint256[]",
+                    "thresholdsByState": "uint256[]",
+                    "totalCollected": "uint256",
+                    "allowedForWithdrawn": "uint256",
+                    "prices": "uint256[]",
+                    "bonuses": "uint256[]",
+                    "tokensRaised": "uint256",
+                    "etherRaisedByState": "uint256[]",
+                    "tokenMultiplier": "uint256",
+                    "agingTimeByStage": "uint256[]"
+                }
+            },
+            "changeOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "preIcoStagePeriod": "uint256[]",
+                    "IcoStagePeriod": "uint256[]",
+                    "thresholdsByState": "uint256[]",
+                    "totalCollected": "uint256",
+                    "allowedForWithdrawn": "uint256",
+                    "prices": "uint256[]",
+                    "bonuses": "uint256[]",
+                    "tokensRaised": "uint256",
+                    "etherRaisedByState": "uint256[]",
+                    "tokenMultiplier": "uint256",
+                    "agingTimeByStage": "uint256[]"
+                }
+            },
+            "KICKICOCrowdsale(address,address,address,address,address,address,address)": {
+                "argument": {},
+                "contract": {
+                    "preIcoStagePeriod": "uint256[]",
+                    "IcoStagePeriod": "uint256[]",
+                    "thresholdsByState": "uint256[]",
+                    "totalCollected": "uint256",
+                    "allowedForWithdrawn": "uint256",
+                    "prices": "uint256[]",
+                    "bonuses": "uint256[]",
+                    "tokensRaised": "uint256",
+                    "etherRaisedByState": "uint256[]",
+                    "tokenMultiplier": "uint256",
+                    "agingTimeByStage": "uint256[]"
+                }
+            },
+            "setParams()": {
+                "argument": {},
+                "contract": {
+                    "preIcoStagePeriod": "uint256[]",
+                    "IcoStagePeriod": "uint256[]",
+                    "thresholdsByState": "uint256[]",
+                    "totalCollected": "uint256",
+                    "allowedForWithdrawn": "uint256",
+                    "prices": "uint256[]",
+                    "bonuses": "uint256[]",
+                    "tokensRaised": "uint256",
+                    "etherRaisedByState": "uint256[]",
+                    "tokenMultiplier": "uint256",
+                    "agingTimeByStage": "uint256[]"
+                }
+            },
+            "mint(uint256,uint256,address,uint256)": {
+                "argument": {
+                    "amount": "uint256",
+                    "tokens": "uint256",
+                    "currentStage": "uint256"
+                },
+                "contract": {
+                    "preIcoStagePeriod": "uint256[]",
+                    "IcoStagePeriod": "uint256[]",
+                    "thresholdsByState": "uint256[]",
+                    "totalCollected": "uint256",
+                    "allowedForWithdrawn": "uint256",
+                    "prices": "uint256[]",
+                    "bonuses": "uint256[]",
+                    "tokensRaised": "uint256",
+                    "etherRaisedByState": "uint256[]",
+                    "tokenMultiplier": "uint256",
+                    "agingTimeByStage": "uint256[]"
+                }
+            },
+            "processPayment(address,uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {
+                    "preIcoStagePeriod": "uint256[]",
+                    "IcoStagePeriod": "uint256[]",
+                    "thresholdsByState": "uint256[]",
+                    "totalCollected": "uint256",
+                    "allowedForWithdrawn": "uint256",
+                    "prices": "uint256[]",
+                    "bonuses": "uint256[]",
+                    "tokensRaised": "uint256",
+                    "etherRaisedByState": "uint256[]",
+                    "tokenMultiplier": "uint256",
+                    "agingTimeByStage": "uint256[]"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "preIcoStagePeriod": "uint256[]",
+                    "IcoStagePeriod": "uint256[]",
+                    "thresholdsByState": "uint256[]",
+                    "totalCollected": "uint256",
+                    "allowedForWithdrawn": "uint256",
+                    "prices": "uint256[]",
+                    "bonuses": "uint256[]",
+                    "tokensRaised": "uint256",
+                    "etherRaisedByState": "uint256[]",
+                    "tokenMultiplier": "uint256",
+                    "agingTimeByStage": "uint256[]"
+                }
+            },
+            "closeCurrentStage()": {
+                "argument": {},
+                "contract": {
+                    "preIcoStagePeriod": "uint256[]",
+                    "IcoStagePeriod": "uint256[]",
+                    "thresholdsByState": "uint256[]",
+                    "totalCollected": "uint256",
+                    "allowedForWithdrawn": "uint256",
+                    "prices": "uint256[]",
+                    "bonuses": "uint256[]",
+                    "tokensRaised": "uint256",
+                    "etherRaisedByState": "uint256[]",
+                    "tokenMultiplier": "uint256",
+                    "agingTimeByStage": "uint256[]"
+                }
+            },
+            "safeWithdrawal(uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {
+                    "preIcoStagePeriod": "uint256[]",
+                    "IcoStagePeriod": "uint256[]",
+                    "thresholdsByState": "uint256[]",
+                    "totalCollected": "uint256",
+                    "allowedForWithdrawn": "uint256",
+                    "prices": "uint256[]",
+                    "bonuses": "uint256[]",
+                    "tokensRaised": "uint256",
+                    "etherRaisedByState": "uint256[]",
+                    "tokenMultiplier": "uint256",
+                    "agingTimeByStage": "uint256[]"
+                }
+            },
+            "kill()": {
+                "argument": {},
+                "contract": {
+                    "preIcoStagePeriod": "uint256[]",
+                    "IcoStagePeriod": "uint256[]",
+                    "thresholdsByState": "uint256[]",
+                    "totalCollected": "uint256",
+                    "allowedForWithdrawn": "uint256",
+                    "prices": "uint256[]",
+                    "bonuses": "uint256[]",
+                    "tokensRaised": "uint256",
+                    "etherRaisedByState": "uint256[]",
+                    "tokenMultiplier": "uint256",
+                    "agingTimeByStage": "uint256[]"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "safeWithdrawal(uint256)": [
+                1116,
+                185
+            ],
+            "closeCurrentStage()": [
+                2170,
+                537
+            ],
+            "changeOwner(address)": [
+                1928,
+                449
+            ],
+            "kill()": [
+                1093,
+                163
+            ],
+            "setParams()": [
+                2060,
+                493
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump6289": [
+                "tokenReward.addAgingTimesForPool(lottery, 1512118800)",
+                "tokenReward.addAgingTimesForPool(lottery, 1512118800)"
+            ],
+            "block11121": [
+                "tokenReward.mintToken(sender, tokens, agingTimeByStage[currentStage])"
+            ],
+            "jump5512": [
+                "tokenReward.addAgingTimesForPool(prPool, 1513242000)",
+                "tokenReward.addAgingTimesForPool(prPool, 1513242000)"
+            ],
+            "block6548": [
+                "tokenReward.addAgingTimesForPool(seedInvestors, 1506762000)"
+            ],
+            "jump11400": [
+                "tokenReward.mintToken(prPool, tokens * 10 / 100, 0)",
+                "tokenReward.mintToken(prPool, tokens * 10 / 100, 0)"
+            ],
+            "block3847": [
+                "tokenReward.changeOwner(owner)"
+            ],
+            "jump11121_0": [
+                "tokenReward.mintToken(sender, tokens, agingTimeByStage[currentStage])",
+                "tokenReward.mintToken(sender, tokens, agingTimeByStage[currentStage])"
+            ],
+            "block6289": [
+                "tokenReward.addAgingTimesForPool(lottery, 1512118800)"
+            ],
+            "jump7909": [
+                "tokenReward.mintToken(seedInvestors, 20000000 * tokenMultiplier, 0)",
+                "tokenReward.mintToken(seedInvestors, 20000000 * tokenMultiplier, 0)"
+            ],
+            "jump11400_0": [
+                "tokenReward.mintToken(prPool, tokens * 10 / 100, 0)",
+                "tokenReward.mintToken(prPool, tokens * 10 / 100, 0)"
+            ],
+            "block11400_0": [
+                "tokenReward.mintToken(prPool, tokens * 10 / 100, 0)"
+            ],
+            "jump4362": [
+                "owner.send(amount)",
+                "owner.send(amount)"
+            ],
+            "jump5771": [
+                "tokenReward.addAgingTimesForPool(advisory, 1507366800)",
+                "tokenReward.addAgingTimesForPool(advisory, 1507366800)"
+            ],
+            "jump7094": [
+                "tokenReward.mintToken(advisory, 10000000 * tokenMultiplier, 0)",
+                "tokenReward.mintToken(advisory, 10000000 * tokenMultiplier, 0)"
+            ],
+            "block7909": [
+                "tokenReward.mintToken(seedInvestors, 20000000 * tokenMultiplier, 0)"
+            ],
+            "block8181": [
+                "tokenReward.mintToken(prPool, 23000000 * tokenMultiplier, 0)"
+            ],
+            "block6030": [
+                "tokenReward.addAgingTimesForPool(bounties, 1509526800)"
+            ],
+            "jump6548": [
+                "tokenReward.addAgingTimesForPool(seedInvestors, 1506762000)",
+                "tokenReward.addAgingTimesForPool(seedInvestors, 1506762000)"
+            ],
+            "block5512": [
+                "tokenReward.addAgingTimesForPool(prPool, 1513242000)"
+            ],
+            "block11121_0": [
+                "tokenReward.mintToken(sender, tokens, agingTimeByStage[currentStage])"
+            ],
+            "jump11121": [
+                "tokenReward.mintToken(sender, tokens, agingTimeByStage[currentStage])",
+                "tokenReward.mintToken(sender, tokens, agingTimeByStage[currentStage])"
+            ],
+            "block11400": [
+                "tokenReward.mintToken(prPool, tokens * 10 / 100, 0)"
+            ],
+            "block7366": [
+                "tokenReward.mintToken(bounties, 25000000 * tokenMultiplier, 0)"
+            ],
+            "block3175": [
+                "from.send(change)"
+            ],
+            "jump6030": [
+                "tokenReward.addAgingTimesForPool(bounties, 1509526800)",
+                "tokenReward.addAgingTimesForPool(bounties, 1509526800)"
+            ],
+            "block3175_0": [
+                "from.send(change)"
+            ],
+            "jump8181": [
+                "tokenReward.mintToken(prPool, 23000000 * tokenMultiplier, 0)",
+                "tokenReward.mintToken(prPool, 23000000 * tokenMultiplier, 0)"
+            ],
+            "jump3175_0": [
+                "from.send(change)",
+                "from.send(change)"
+            ],
+            "jump7637": [
+                "tokenReward.mintToken(lottery, 2000000 * tokenMultiplier, 0)",
+                "tokenReward.mintToken(lottery, 2000000 * tokenMultiplier, 0)"
+            ],
+            "jump3847": [
+                "tokenReward.changeOwner(owner)",
+                "tokenReward.changeOwner(owner)"
+            ],
+            "block7094": [
+                "tokenReward.mintToken(advisory, 10000000 * tokenMultiplier, 0)"
+            ],
+            "block7637": [
+                "tokenReward.mintToken(lottery, 2000000 * tokenMultiplier, 0)"
+            ],
+            "block6823": [
+                "tokenReward.mintToken(founders, 100000000 * tokenMultiplier, 1514797200)"
+            ],
+            "block5771": [
+                "tokenReward.addAgingTimesForPool(advisory, 1507366800)"
+            ],
+            "jump3175": [
+                "from.send(change)",
+                "from.send(change)"
+            ],
+            "jump6823": [
+                "tokenReward.mintToken(founders, 100000000 * tokenMultiplier, 1514797200)",
+                "tokenReward.mintToken(founders, 100000000 * tokenMultiplier, 1514797200)"
+            ],
+            "block4362": [
+                "owner.send(amount)"
+            ],
+            "jump7366": [
+                "tokenReward.mintToken(bounties, 25000000 * tokenMultiplier, 0)",
+                "tokenReward.mintToken(bounties, 25000000 * tokenMultiplier, 0)"
+            ]
+        }
+    }
+}

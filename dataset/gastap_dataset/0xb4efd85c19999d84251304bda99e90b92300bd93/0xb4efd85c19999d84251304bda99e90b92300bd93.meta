@@ -1,0 +1,881 @@
+{
+    "Owned": {
+        "function_list": [
+            "Owned()",
+            "transferOwnership(address)",
+            "acceptOwnership()"
+        ],
+        "initial_state": {
+            "Owned()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "acceptOwnership()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                300,
+                141
+            ],
+            "acceptOwnership()": [
+                103,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Token": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                6447,
+                929
+            ],
+            "allowance(address,address)": [
+                9193,
+                961
+            ],
+            "transferFrom(address,address,uint256)": [
+                644,
+                141
+            ],
+            "approve(address,uint256)": [
+                500,
+                97
+            ],
+            "transfer(address,uint256)": [
+                2153,
+                559
+            ]
+        },
+        "block_CALL_mapping": {
+            "block2968": [
+                "controller.approve(msg.sender, _spender, _value)"
+            ],
+            "jump3709": [
+                "controller.transferFrom(msg.sender, _from, _to, _value)",
+                "controller.transferFrom(msg.sender, _from, _to, _value)"
+            ],
+            "block6188": [
+                "token.transfer(_to, token.balanceOf(this))"
+            ],
+            "jump5531": [
+                "controller.allowance(msg.sender, _spender)",
+                "controller.allowance(msg.sender, _spender)"
+            ],
+            "jump3290": [
+                "controller.totalSupply()",
+                "controller.totalSupply()"
+            ],
+            "block3290": [
+                "controller.totalSupply()"
+            ],
+            "jump2968": [
+                "controller.approve(msg.sender, _spender, _value)",
+                "controller.approve(msg.sender, _spender, _value)"
+            ],
+            "jump5996": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "jump5226": [
+                "controller.decreaseApproval(msg.sender, _spender, _subtractedValue)",
+                "controller.decreaseApproval(msg.sender, _spender, _subtractedValue)"
+            ],
+            "block5226": [
+                "controller.decreaseApproval(msg.sender, _spender, _subtractedValue)"
+            ],
+            "jump8766": [
+                "controller.allowance(msg.sender, _spender)",
+                "controller.allowance(msg.sender, _spender)"
+            ],
+            "jump6188": [
+                "token.transfer(_to, token.balanceOf(this))",
+                "token.transfer(_to, token.balanceOf(this))"
+            ],
+            "block5531": [
+                "controller.allowance(msg.sender, _spender)"
+            ],
+            "jump9193": [
+                "controller.allowance(_owner, _spender)",
+                "controller.allowance(_owner, _spender)"
+            ],
+            "block9193": [
+                "controller.allowance(_owner, _spender)"
+            ],
+            "block8461": [
+                "controller.increaseApproval(msg.sender, _spender, _addedValue)"
+            ],
+            "jump7952": [
+                "controller.transfer(msg.sender, _to, _value)",
+                "controller.transfer(msg.sender, _to, _value)"
+            ],
+            "block5996": [
+                "token.balanceOf(this)"
+            ],
+            "block3709": [
+                "controller.transferFrom(msg.sender, _from, _to, _value)"
+            ],
+            "jump4246": [
+                "controller.burn(msg.sender, _amount)",
+                "controller.burn(msg.sender, _amount)"
+            ],
+            "jump6447": [
+                "controller.balanceOf(a)",
+                "controller.balanceOf(a)"
+            ],
+            "jump8461": [
+                "controller.increaseApproval(msg.sender, _spender, _addedValue)",
+                "controller.increaseApproval(msg.sender, _spender, _addedValue)"
+            ],
+            "block7952": [
+                "controller.transfer(msg.sender, _to, _value)"
+            ],
+            "block8766": [
+                "controller.allowance(msg.sender, _spender)"
+            ],
+            "block4246": [
+                "controller.burn(msg.sender, _amount)"
+            ],
+            "block6447": [
+                "controller.balanceOf(a)"
+            ]
+        }
+    },
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)",
+            "max64(uint64,uint64)",
+            "min64(uint64,uint64)",
+            "max256(uint256,uint256)",
+            "min256(uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "max64(uint64,uint64)": {
+                "argument": {
+                    "a": "uint64",
+                    "b": "uint64"
+                },
+                "contract": {}
+            },
+            "min64(uint64,uint64)": {
+                "argument": {
+                    "a": "uint64",
+                    "b": "uint64"
+                },
+                "contract": {}
+            },
+            "max256(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "min256(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "StandardToken": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "balanceOf(address)",
+            "approve(address,uint256)",
+            "allowance(address,address)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                125,
+                75
+            ],
+            "balanceOf(address)": [
+                402,
+                141
+            ],
+            "allowance(address,address)": [
+                590,
+                185
+            ],
+            "transferFrom(address,address,uint256)": [
+                269,
+                119
+            ],
+            "transfer(address,uint256)": [
+                489,
+                163
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "RocketPoolToken": {
+        "function_list": [
+            "Owned()",
+            "transferOwnership(address)",
+            "acceptOwnership()",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "balanceOf(address)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "RocketPoolToken()",
+            "validateContribution(uint256)",
+            "validateClaimTokens(address)",
+            "mint(address,uint256)",
+            "getRemainingTokens()",
+            "setSaleAgentContract(address,string,uint256,uint256,uint256,uint256,uint256,uint256,uint256,address)",
+            "setSaleContractFinalised(address)",
+            "setSaleContractDepositAddressVerified(address)",
+            "getSaleContractIsFinalised(address)",
+            "getSaleContractTargetEtherMin(address)",
+            "getSaleContractTargetEtherMax(address)",
+            "getSaleContractDepositEtherMin(address)",
+            "getSaleContractDepositEtherMax(address)",
+            "getSaleContractDepositAddress(address)",
+            "getSaleContractDepositAddressVerified(address)",
+            "getSaleContractStartBlock(address)",
+            "getSaleContractEndBlock(address)",
+            "getSaleContractTokensLimit(address)",
+            "getSaleContractTokensMinted(address)",
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "Owned()": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "version": "string",
+                    "decimals": "uint8",
+                    "exponent": "uint256",
+                    "totalSupplyCap": "uint256",
+                    "salesAgentsAddresses": "address[]"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "version": "string",
+                    "decimals": "uint8",
+                    "exponent": "uint256",
+                    "totalSupplyCap": "uint256",
+                    "salesAgentsAddresses": "address[]"
+                }
+            },
+            "acceptOwnership()": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "version": "string",
+                    "decimals": "uint8",
+                    "exponent": "uint256",
+                    "totalSupplyCap": "uint256",
+                    "salesAgentsAddresses": "address[]"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "version": "string",
+                    "decimals": "uint8",
+                    "exponent": "uint256",
+                    "totalSupplyCap": "uint256",
+                    "salesAgentsAddresses": "address[]"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "version": "string",
+                    "decimals": "uint8",
+                    "exponent": "uint256",
+                    "totalSupplyCap": "uint256",
+                    "salesAgentsAddresses": "address[]"
+                }
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "version": "string",
+                    "decimals": "uint8",
+                    "exponent": "uint256",
+                    "totalSupplyCap": "uint256",
+                    "salesAgentsAddresses": "address[]"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "version": "string",
+                    "decimals": "uint8",
+                    "exponent": "uint256",
+                    "totalSupplyCap": "uint256",
+                    "salesAgentsAddresses": "address[]"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "version": "string",
+                    "decimals": "uint8",
+                    "exponent": "uint256",
+                    "totalSupplyCap": "uint256",
+                    "salesAgentsAddresses": "address[]"
+                }
+            },
+            "RocketPoolToken()": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "version": "string",
+                    "decimals": "uint8",
+                    "exponent": "uint256",
+                    "totalSupplyCap": "uint256",
+                    "salesAgentsAddresses": "address[]"
+                }
+            },
+            "validateContribution(uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "version": "string",
+                    "decimals": "uint8",
+                    "exponent": "uint256",
+                    "totalSupplyCap": "uint256",
+                    "salesAgentsAddresses": "address[]"
+                }
+            },
+            "validateClaimTokens(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "version": "string",
+                    "decimals": "uint8",
+                    "exponent": "uint256",
+                    "totalSupplyCap": "uint256",
+                    "salesAgentsAddresses": "address[]"
+                }
+            },
+            "mint(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "version": "string",
+                    "decimals": "uint8",
+                    "exponent": "uint256",
+                    "totalSupplyCap": "uint256",
+                    "salesAgentsAddresses": "address[]"
+                }
+            },
+            "getRemainingTokens()": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "version": "string",
+                    "decimals": "uint8",
+                    "exponent": "uint256",
+                    "totalSupplyCap": "uint256",
+                    "salesAgentsAddresses": "address[]"
+                }
+            },
+            "setSaleAgentContract(address,string,uint256,uint256,uint256,uint256,uint256,uint256,uint256,address)": {
+                "argument": {
+                    "_saleContractType": "string",
+                    "_targetEthMin": "uint256",
+                    "_targetEthMax": "uint256",
+                    "_tokensLimit": "uint256",
+                    "_minDeposit": "uint256",
+                    "_maxDeposit": "uint256",
+                    "_startBlock": "uint256",
+                    "_endBlock": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "version": "string",
+                    "decimals": "uint8",
+                    "exponent": "uint256",
+                    "totalSupplyCap": "uint256",
+                    "salesAgentsAddresses": "address[]"
+                }
+            },
+            "setSaleContractFinalised(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "version": "string",
+                    "decimals": "uint8",
+                    "exponent": "uint256",
+                    "totalSupplyCap": "uint256",
+                    "salesAgentsAddresses": "address[]"
+                }
+            },
+            "setSaleContractDepositAddressVerified(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "version": "string",
+                    "decimals": "uint8",
+                    "exponent": "uint256",
+                    "totalSupplyCap": "uint256",
+                    "salesAgentsAddresses": "address[]"
+                }
+            },
+            "getSaleContractIsFinalised(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "version": "string",
+                    "decimals": "uint8",
+                    "exponent": "uint256",
+                    "totalSupplyCap": "uint256",
+                    "salesAgentsAddresses": "address[]"
+                }
+            },
+            "getSaleContractTargetEtherMin(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "version": "string",
+                    "decimals": "uint8",
+                    "exponent": "uint256",
+                    "totalSupplyCap": "uint256",
+                    "salesAgentsAddresses": "address[]"
+                }
+            },
+            "getSaleContractTargetEtherMax(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "version": "string",
+                    "decimals": "uint8",
+                    "exponent": "uint256",
+                    "totalSupplyCap": "uint256",
+                    "salesAgentsAddresses": "address[]"
+                }
+            },
+            "getSaleContractDepositEtherMin(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "version": "string",
+                    "decimals": "uint8",
+                    "exponent": "uint256",
+                    "totalSupplyCap": "uint256",
+                    "salesAgentsAddresses": "address[]"
+                }
+            },
+            "getSaleContractDepositEtherMax(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "version": "string",
+                    "decimals": "uint8",
+                    "exponent": "uint256",
+                    "totalSupplyCap": "uint256",
+                    "salesAgentsAddresses": "address[]"
+                }
+            },
+            "getSaleContractDepositAddress(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "version": "string",
+                    "decimals": "uint8",
+                    "exponent": "uint256",
+                    "totalSupplyCap": "uint256",
+                    "salesAgentsAddresses": "address[]"
+                }
+            },
+            "getSaleContractDepositAddressVerified(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "version": "string",
+                    "decimals": "uint8",
+                    "exponent": "uint256",
+                    "totalSupplyCap": "uint256",
+                    "salesAgentsAddresses": "address[]"
+                }
+            },
+            "getSaleContractStartBlock(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "version": "string",
+                    "decimals": "uint8",
+                    "exponent": "uint256",
+                    "totalSupplyCap": "uint256",
+                    "salesAgentsAddresses": "address[]"
+                }
+            },
+            "getSaleContractEndBlock(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "version": "string",
+                    "decimals": "uint8",
+                    "exponent": "uint256",
+                    "totalSupplyCap": "uint256",
+                    "salesAgentsAddresses": "address[]"
+                }
+            },
+            "getSaleContractTokensLimit(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "version": "string",
+                    "decimals": "uint8",
+                    "exponent": "uint256",
+                    "totalSupplyCap": "uint256",
+                    "salesAgentsAddresses": "address[]"
+                }
+            },
+            "getSaleContractTokensMinted(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "version": "string",
+                    "decimals": "uint8",
+                    "exponent": "uint256",
+                    "totalSupplyCap": "uint256",
+                    "salesAgentsAddresses": "address[]"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "version": "string",
+                    "decimals": "uint8",
+                    "exponent": "uint256",
+                    "totalSupplyCap": "uint256",
+                    "salesAgentsAddresses": "address[]"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "setSaleContractDepositAddressVerified(address)": [
+                678,
+                119
+            ],
+            "validateContribution(uint256)": [
+                2260,
+                515
+            ],
+            "balanceOf(address)": [
+                1919,
+                427
+            ],
+            "allowance(address,address)": [
+                3016,
+                691
+            ],
+            "getSaleContractTokensLimit(address)": [
+                3471,
+                801
+            ],
+            "transferFrom(address,address,uint256)": [
+                875,
+                185
+            ],
+            "approve(address,uint256)": [
+                577,
+                97
+            ],
+            "getSaleContractTargetEtherMin(address)": [
+                1427,
+                317
+            ],
+            "getRemainingTokens()": [
+                2669,
+                581
+            ],
+            "getSaleContractDepositAddressVerified(address)": [
+                3135,
+                713
+            ],
+            "validateClaimTokens(address)": [
+                1245,
+                273
+            ],
+            "getSaleContractDepositEtherMax(address)": [
+                745,
+                141
+            ],
+            "setSaleContractFinalised(address)": [
+                1336,
+                295
+            ],
+            "setSaleAgentContract(address,string,uint256,uint256,uint256,uint256,uint256,uint256,uint256,address)": [
+                2329,
+                537
+            ],
+            "getSaleContractStartBlock(address)": [
+                1008,
+                207
+            ],
+            "getSaleContractTokensMinted(address)": [
+                1514,
+                339
+            ],
+            "transferOwnership(address)": [
+                3313,
+                757
+            ],
+            "getSaleContractTargetEtherMax(address)": [
+                2842,
+                647
+            ],
+            "mint(address,uint256)": [
+                1144,
+                251
+            ],
+            "getSaleContractDepositEtherMin(address)": [
+                2755,
+                625
+            ],
+            "getSaleContractDepositAddress(address)": [
+                1788,
+                405
+            ],
+            "getSaleContractEndBlock(address)": [
+                3226,
+                735
+            ],
+            "getSaleContractIsFinalised(address)": [
+                3380,
+                779
+            ],
+            "transfer(address,uint256)": [
+                2568,
+                559
+            ],
+            "acceptOwnership()": [
+                2006,
+                449
+            ]
+        },
+        "block_CALL_mapping": {
+            "block7635": [
+                "saleAgent.contributedTotal()"
+            ],
+            "block6743": [
+                "saleAgent.getContributionOf(_sender)"
+            ],
+            "block10228": [
+                "saleAgent.contributedTotal()"
+            ],
+            "jump10228": [
+                "saleAgent.contributedTotal()",
+                "saleAgent.contributedTotal()"
+            ],
+            "jump6743": [
+                "saleAgent.getContributionOf(_sender)",
+                "saleAgent.getContributionOf(_sender)"
+            ],
+            "jump7635": [
+                "saleAgent.contributedTotal()",
+                "saleAgent.contributedTotal()"
+            ]
+        }
+    }
+}

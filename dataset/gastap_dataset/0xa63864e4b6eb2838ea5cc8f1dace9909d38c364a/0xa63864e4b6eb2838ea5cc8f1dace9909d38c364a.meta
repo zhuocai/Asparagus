@@ -1,0 +1,122 @@
+{
+    "ERC20Token": {
+        "function_list": [
+            "transferFrom(address,address,uint256)",
+            "allowance(address,address)"
+        ],
+        "initial_state": {
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferFrom(address,address,uint256)": [
+                81,
+                75
+            ],
+            "allowance(address,address)": [
+                214,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "MultiSend": {
+        "function_list": [
+            "MultiSend()",
+            "dropCoinsSingle(address[],uint256)",
+            "dropCoinsMulti(address[],uint256[])",
+            "updateTokensApproved()"
+        ],
+        "initial_state": {
+            "MultiSend()": {
+                "argument": {},
+                "contract": {
+                    "tokensApproved": "uint256"
+                }
+            },
+            "dropCoinsSingle(address[],uint256)": {
+                "argument": {
+                    "dests": "address[]",
+                    "tokens": "uint256"
+                },
+                "contract": {
+                    "tokensApproved": "uint256"
+                }
+            },
+            "dropCoinsMulti(address[],uint256[])": {
+                "argument": {
+                    "dests": "address[]",
+                    "tokens": "uint256[]"
+                },
+                "contract": {
+                    "tokensApproved": "uint256"
+                }
+            },
+            "updateTokensApproved()": {
+                "argument": {},
+                "contract": {
+                    "tokensApproved": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "dropCoinsMulti(address[],uint256[])": [
+                280,
+                119
+            ],
+            "updateTokensApproved()": [
+                449,
+                141
+            ],
+            "dropCoinsSingle(address[],uint256)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {
+            "block1082": [
+                "_STCnContract.transferFrom(_multiSendOwner, dests[i], tokens)"
+            ],
+            "block1960_1": [
+                "_STCnContract.allowance(_multiSendOwner, this)"
+            ],
+            "block1960_0": [
+                "_STCnContract.allowance(_multiSendOwner, this)"
+            ],
+            "jump1960_0": [
+                "_STCnContract.allowance(_multiSendOwner, this)",
+                "_STCnContract.allowance(_multiSendOwner, this)"
+            ],
+            "jump1082": [
+                "_STCnContract.transferFrom(_multiSendOwner, dests[i], tokens)",
+                "_STCnContract.transferFrom(_multiSendOwner, dests[i], tokens)"
+            ],
+            "block1960": [
+                "_STCnContract.allowance(_multiSendOwner, this)"
+            ],
+            "block1602": [
+                "_STCnContract.transferFrom(_multiSendOwner, dests[i], tokens[i])"
+            ],
+            "jump1960_1": [
+                "_STCnContract.allowance(_multiSendOwner, this)",
+                "_STCnContract.allowance(_multiSendOwner, this)"
+            ],
+            "jump1602": [
+                "_STCnContract.transferFrom(_multiSendOwner, dests[i], tokens[i])",
+                "_STCnContract.transferFrom(_multiSendOwner, dests[i], tokens[i])"
+            ],
+            "jump1960": [
+                "_STCnContract.allowance(_multiSendOwner, this)",
+                "_STCnContract.allowance(_multiSendOwner, this)"
+            ]
+        }
+    }
+}

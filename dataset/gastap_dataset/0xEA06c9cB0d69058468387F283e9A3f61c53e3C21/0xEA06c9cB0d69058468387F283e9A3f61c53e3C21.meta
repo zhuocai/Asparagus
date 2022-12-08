@@ -1,0 +1,232 @@
+{
+    "EthMultiplier": {
+        "function_list": [
+            "EthMultiplier()",
+            "fallback()",
+            "invest()",
+            "checkInvestmentRequired(uint16,bool)",
+            "buySmartContract()",
+            "setFeePercentage(uint8)",
+            "setPayOutPercentage(uint8)",
+            "putSmartContractOnSale(bool)",
+            "setSmartContractPrice(uint256)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "EthMultiplier()": {
+                "argument": {},
+                "contract": {
+                    "id": "uint16",
+                    "payoutIdx": "uint16",
+                    "feePercentage": "uint8",
+                    "payOutPercentage": "uint8",
+                    "priceOfSmartContract": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "id": "uint16",
+                    "payoutIdx": "uint16",
+                    "feePercentage": "uint8",
+                    "payOutPercentage": "uint8",
+                    "priceOfSmartContract": "uint256"
+                }
+            },
+            "invest()": {
+                "argument": {},
+                "contract": {
+                    "id": "uint16",
+                    "payoutIdx": "uint16",
+                    "feePercentage": "uint8",
+                    "payOutPercentage": "uint8",
+                    "priceOfSmartContract": "uint256"
+                }
+            },
+            "checkInvestmentRequired(uint16,bool)": {
+                "argument": {
+                    "_investorId": "uint16"
+                },
+                "contract": {
+                    "id": "uint16",
+                    "payoutIdx": "uint16",
+                    "feePercentage": "uint8",
+                    "payOutPercentage": "uint8",
+                    "priceOfSmartContract": "uint256"
+                }
+            },
+            "buySmartContract()": {
+                "argument": {},
+                "contract": {
+                    "id": "uint16",
+                    "payoutIdx": "uint16",
+                    "feePercentage": "uint8",
+                    "payOutPercentage": "uint8",
+                    "priceOfSmartContract": "uint256"
+                }
+            },
+            "setFeePercentage(uint8)": {
+                "argument": {
+                    "_percentage": "uint8"
+                },
+                "contract": {
+                    "id": "uint16",
+                    "payoutIdx": "uint16",
+                    "feePercentage": "uint8",
+                    "payOutPercentage": "uint8",
+                    "priceOfSmartContract": "uint256"
+                }
+            },
+            "setPayOutPercentage(uint8)": {
+                "argument": {
+                    "_percentageOnTopOfDeposit": "uint8"
+                },
+                "contract": {
+                    "id": "uint16",
+                    "payoutIdx": "uint16",
+                    "feePercentage": "uint8",
+                    "payOutPercentage": "uint8",
+                    "priceOfSmartContract": "uint256"
+                }
+            },
+            "putSmartContractOnSale(bool)": {
+                "argument": {},
+                "contract": {
+                    "id": "uint16",
+                    "payoutIdx": "uint16",
+                    "feePercentage": "uint8",
+                    "payOutPercentage": "uint8",
+                    "priceOfSmartContract": "uint256"
+                }
+            },
+            "setSmartContractPrice(uint256)": {
+                "argument": {
+                    "_price": "uint256"
+                },
+                "contract": {
+                    "id": "uint16",
+                    "payoutIdx": "uint16",
+                    "feePercentage": "uint8",
+                    "payOutPercentage": "uint8",
+                    "priceOfSmartContract": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "checkInvestmentRequired(uint16,bool)": [
+                747,
+                317
+            ],
+            "setSmartContractPrice(uint256)": [
+                445,
+                141
+            ],
+            "setPayOutPercentage(uint8)": [
+                689,
+                273
+            ],
+            "putSmartContractOnSale(bool)": [
+                267,
+                97
+            ],
+            "buySmartContract()": [
+                630,
+                229
+            ],
+            "setFeePercentage(uint8)": [
+                582,
+                207
+            ],
+            "invest()": [
+                737,
+                295
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump2258": [
+                "msg.sender.transfer(msg.value - priceOfSmartContract)",
+                "msg.sender.transfer(msg.value - priceOfSmartContract)"
+            ],
+            "block1153": [
+                "owner.transfer(msg.value * feePercentage / 100)"
+            ],
+            "jump1277_0": [
+                "investors[payoutIdx].addr.transfer(investors[payoutIdx].payout)",
+                "investors[payoutIdx].addr.transfer(investors[payoutIdx].payout)"
+            ],
+            "jump1277_1": [
+                "investors[payoutIdx].addr.transfer(investors[payoutIdx].payout)",
+                "investors[payoutIdx].addr.transfer(investors[payoutIdx].payout)"
+            ],
+            "jump1992": [
+                "owner.transfer(priceOfSmartContract)",
+                "owner.transfer(priceOfSmartContract)"
+            ],
+            "block1277": [
+                "investors[payoutIdx].addr.transfer(investors[payoutIdx].payout)"
+            ],
+            "jump1277": [
+                "investors[payoutIdx].addr.transfer(investors[payoutIdx].payout)",
+                "investors[payoutIdx].addr.transfer(investors[payoutIdx].payout)"
+            ],
+            "jump2258_0": [
+                "msg.sender.transfer(msg.value - priceOfSmartContract)",
+                "msg.sender.transfer(msg.value - priceOfSmartContract)"
+            ],
+            "jump2258_1": [
+                "msg.sender.transfer(msg.value - priceOfSmartContract)",
+                "msg.sender.transfer(msg.value - priceOfSmartContract)"
+            ],
+            "block2258_0": [
+                "msg.sender.transfer(msg.value - priceOfSmartContract)"
+            ],
+            "block2258_1": [
+                "msg.sender.transfer(msg.value - priceOfSmartContract)"
+            ],
+            "block2258": [
+                "msg.sender.transfer(msg.value - priceOfSmartContract)"
+            ],
+            "block1992_0": [
+                "owner.transfer(priceOfSmartContract)"
+            ],
+            "block1992_1": [
+                "owner.transfer(priceOfSmartContract)"
+            ],
+            "block1992": [
+                "owner.transfer(priceOfSmartContract)"
+            ],
+            "jump1992_0": [
+                "owner.transfer(priceOfSmartContract)",
+                "owner.transfer(priceOfSmartContract)"
+            ],
+            "jump1992_1": [
+                "owner.transfer(priceOfSmartContract)",
+                "owner.transfer(priceOfSmartContract)"
+            ],
+            "block1277_0": [
+                "investors[payoutIdx].addr.transfer(investors[payoutIdx].payout)"
+            ],
+            "block1277_1": [
+                "investors[payoutIdx].addr.transfer(investors[payoutIdx].payout)"
+            ],
+            "jump1153": [
+                "owner.transfer(msg.value * feePercentage / 100)",
+                "owner.transfer(msg.value * feePercentage / 100)"
+            ],
+            "jump1153_1": [
+                "owner.transfer(msg.value * feePercentage / 100)",
+                "owner.transfer(msg.value * feePercentage / 100)"
+            ],
+            "jump1153_0": [
+                "owner.transfer(msg.value * feePercentage / 100)",
+                "owner.transfer(msg.value * feePercentage / 100)"
+            ],
+            "block1153_1": [
+                "owner.transfer(msg.value * feePercentage / 100)"
+            ],
+            "block1153_0": [
+                "owner.transfer(msg.value * feePercentage / 100)"
+            ]
+        }
+    }
+}

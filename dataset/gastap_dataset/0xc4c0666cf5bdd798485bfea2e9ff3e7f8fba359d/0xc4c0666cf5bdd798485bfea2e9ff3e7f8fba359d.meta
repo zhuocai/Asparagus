@@ -1,0 +1,56 @@
+{
+    "TokenERC20": {
+        "function_list": [
+            "transferFrom(address,address,uint256)"
+        ],
+        "initial_state": {
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferFrom(address,address,uint256)": [
+                68,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "MultiSend": {
+        "function_list": [
+            "MultiSend()",
+            "dropCoins(address[],uint256)"
+        ],
+        "initial_state": {
+            "MultiSend()": {
+                "argument": {},
+                "contract": {}
+            },
+            "dropCoins(address[],uint256)": {
+                "argument": {
+                    "dests": "address[]",
+                    "tokens": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "dropCoins(address[],uint256)": [
+                92,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump795": [
+                "_ERC20Contract.transferFrom(_multiSendOwner, dests[i], amount)",
+                "_ERC20Contract.transferFrom(_multiSendOwner, dests[i], amount)"
+            ],
+            "block795": [
+                "_ERC20Contract.transferFrom(_multiSendOwner, dests[i], amount)"
+            ]
+        }
+    }
+}

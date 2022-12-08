@@ -1,0 +1,245 @@
+{
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "ERC20": {
+        "function_list": [
+            "transfer(address,uint256)",
+            "balanceOf(address)"
+        ],
+        "initial_state": {
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                639,
+                185
+            ],
+            "transfer(address,uint256)": [
+                870,
+                229
+            ]
+        },
+        "block_CALL_mapping": {
+            "block2404": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ],
+            "jump2404": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)",
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ]
+        }
+    },
+    "REDISale": {
+        "function_list": [
+            "REDISale()",
+            "setHaltSale(bool)",
+            "seEnableTransfer(bool)",
+            "seIcoAddress(address)",
+            "drain(uint256)",
+            "sendTo(address,uint256)",
+            "fallback()",
+            "buy(address)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "REDISale()": {
+                "argument": {},
+                "contract": {
+                    "raisedWei": "uint256",
+                    "rate": "uint256"
+                }
+            },
+            "setHaltSale(bool)": {
+                "argument": {},
+                "contract": {
+                    "raisedWei": "uint256",
+                    "rate": "uint256"
+                }
+            },
+            "seEnableTransfer(bool)": {
+                "argument": {},
+                "contract": {
+                    "raisedWei": "uint256",
+                    "rate": "uint256"
+                }
+            },
+            "seIcoAddress(address)": {
+                "argument": {},
+                "contract": {
+                    "raisedWei": "uint256",
+                    "rate": "uint256"
+                }
+            },
+            "drain(uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "raisedWei": "uint256",
+                    "rate": "uint256"
+                }
+            },
+            "sendTo(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "raisedWei": "uint256",
+                    "rate": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "raisedWei": "uint256",
+                    "rate": "uint256"
+                }
+            },
+            "buy(address)": {
+                "argument": {},
+                "contract": {
+                    "raisedWei": "uint256",
+                    "rate": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "sendTo(address,uint256)": [
+                438,
+                185
+            ],
+            "setHaltSale(bool)": [
+                391,
+                163
+            ],
+            "seEnableTransfer(bool)": [
+                187,
+                75
+            ],
+            "seIcoAddress(address)": [
+                234,
+                97
+            ],
+            "drain(uint256)": [
+                632,
+                251
+            ],
+            "buy(address)": [
+                558,
+                229
+            ]
+        },
+        "block_CALL_mapping": {
+            "block2281": [
+                "token.transfer(_to, _amount)"
+            ],
+            "jump1250_1": [
+                "token.transfer( recipient, recievedTokens )",
+                "token.transfer( recipient, recievedTokens )"
+            ],
+            "jump1250": [
+                "token.transfer( recipient, recievedTokens )",
+                "token.transfer( recipient, recievedTokens )"
+            ],
+            "block1454": [
+                "wallet.transfer(msg.value)"
+            ],
+            "block1250_0": [
+                "token.transfer( recipient, recievedTokens )"
+            ],
+            "block1250_1": [
+                "token.transfer( recipient, recievedTokens )"
+            ],
+            "jump2281": [
+                "token.transfer(_to, _amount)",
+                "token.transfer(_to, _amount)"
+            ],
+            "jump1454_0": [
+                "wallet.transfer(msg.value)",
+                "wallet.transfer(msg.value)"
+            ],
+            "block1454_1": [
+                "wallet.transfer(msg.value)"
+            ],
+            "block1454_0": [
+                "wallet.transfer(msg.value)"
+            ],
+            "jump2813": [
+                "token.transfer(admin,_amount)",
+                "token.transfer(admin,_amount)"
+            ],
+            "block1250": [
+                "token.transfer( recipient, recievedTokens )"
+            ],
+            "jump1454_1": [
+                "wallet.transfer(msg.value)",
+                "wallet.transfer(msg.value)"
+            ],
+            "jump2452": [
+                "admin.transfer(this.balance)",
+                "admin.transfer(this.balance)"
+            ],
+            "jump1454": [
+                "wallet.transfer(msg.value)",
+                "wallet.transfer(msg.value)"
+            ],
+            "block2813": [
+                "token.transfer(admin,_amount)"
+            ],
+            "block2452": [
+                "admin.transfer(this.balance)"
+            ],
+            "jump1250_0": [
+                "token.transfer( recipient, recievedTokens )",
+                "token.transfer( recipient, recievedTokens )"
+            ]
+        }
+    }
+}

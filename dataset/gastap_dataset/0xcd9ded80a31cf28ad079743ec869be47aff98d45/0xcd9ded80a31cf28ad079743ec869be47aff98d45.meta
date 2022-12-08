@@ -1,0 +1,607 @@
+{
+    "ERC20": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "allowance(address,address)",
+            "approve(address,uint256)",
+            "transferFrom(address,address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                202,
+                75
+            ],
+            "transfer(address,uint256)": [
+                873,
+                273
+            ],
+            "balanceOf(address)": [
+                601,
+                185
+            ],
+            "transferFrom(address,address,uint256)": [
+                346,
+                119
+            ],
+            "allowance(address,address)": [
+                1061,
+                317
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Ownable": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "CrowdSale": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "CrowdSale(address,address,address,uint256)",
+            "_initStages()",
+            "getTokenAddress()",
+            "getLockedToken(address,uint256)",
+            "canTokenUnlocked(uint256)",
+            "isStarted()",
+            "isReachedGoal()",
+            "isEnded()",
+            "getCurrentStage()",
+            "getRemainingTimeInSecond()",
+            "_addPurchaser(address)",
+            "start(uint256)",
+            "stop()",
+            "fallback()",
+            "_getTokenCount(uint256)",
+            "safeWithdrawal()",
+            "unlockBonusTokens(uint256,uint256,uint256)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {
+                    "rate": "uint256",
+                    "amountGoal": "uint256",
+                    "amountRaised": "uint256",
+                    "amountTokenIssued": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "icoStages": "CrowdSale.Stage[]",
+                    "lockStages": "CrowdSale.Stage[]",
+                    "purchaserList": "address[]"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "rate": "uint256",
+                    "amountGoal": "uint256",
+                    "amountRaised": "uint256",
+                    "amountTokenIssued": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "icoStages": "CrowdSale.Stage[]",
+                    "lockStages": "CrowdSale.Stage[]",
+                    "purchaserList": "address[]"
+                }
+            },
+            "CrowdSale(address,address,address,uint256)": {
+                "argument": {
+                    "tokenRate": "uint256"
+                },
+                "contract": {
+                    "rate": "uint256",
+                    "amountGoal": "uint256",
+                    "amountRaised": "uint256",
+                    "amountTokenIssued": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "icoStages": "CrowdSale.Stage[]",
+                    "lockStages": "CrowdSale.Stage[]",
+                    "purchaserList": "address[]"
+                }
+            },
+            "_initStages()": {
+                "argument": {},
+                "contract": {
+                    "rate": "uint256",
+                    "amountGoal": "uint256",
+                    "amountRaised": "uint256",
+                    "amountTokenIssued": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "icoStages": "CrowdSale.Stage[]",
+                    "lockStages": "CrowdSale.Stage[]",
+                    "purchaserList": "address[]"
+                }
+            },
+            "getTokenAddress()": {
+                "argument": {},
+                "contract": {
+                    "rate": "uint256",
+                    "amountGoal": "uint256",
+                    "amountRaised": "uint256",
+                    "amountTokenIssued": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "icoStages": "CrowdSale.Stage[]",
+                    "lockStages": "CrowdSale.Stage[]",
+                    "purchaserList": "address[]"
+                }
+            },
+            "getLockedToken(address,uint256)": {
+                "argument": {
+                    "stageIdx": "uint256"
+                },
+                "contract": {
+                    "rate": "uint256",
+                    "amountGoal": "uint256",
+                    "amountRaised": "uint256",
+                    "amountTokenIssued": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "icoStages": "CrowdSale.Stage[]",
+                    "lockStages": "CrowdSale.Stage[]",
+                    "purchaserList": "address[]"
+                }
+            },
+            "canTokenUnlocked(uint256)": {
+                "argument": {
+                    "stageIndex": "uint256"
+                },
+                "contract": {
+                    "rate": "uint256",
+                    "amountGoal": "uint256",
+                    "amountRaised": "uint256",
+                    "amountTokenIssued": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "icoStages": "CrowdSale.Stage[]",
+                    "lockStages": "CrowdSale.Stage[]",
+                    "purchaserList": "address[]"
+                }
+            },
+            "isStarted()": {
+                "argument": {},
+                "contract": {
+                    "rate": "uint256",
+                    "amountGoal": "uint256",
+                    "amountRaised": "uint256",
+                    "amountTokenIssued": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "icoStages": "CrowdSale.Stage[]",
+                    "lockStages": "CrowdSale.Stage[]",
+                    "purchaserList": "address[]"
+                }
+            },
+            "isReachedGoal()": {
+                "argument": {},
+                "contract": {
+                    "rate": "uint256",
+                    "amountGoal": "uint256",
+                    "amountRaised": "uint256",
+                    "amountTokenIssued": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "icoStages": "CrowdSale.Stage[]",
+                    "lockStages": "CrowdSale.Stage[]",
+                    "purchaserList": "address[]"
+                }
+            },
+            "isEnded()": {
+                "argument": {},
+                "contract": {
+                    "rate": "uint256",
+                    "amountGoal": "uint256",
+                    "amountRaised": "uint256",
+                    "amountTokenIssued": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "icoStages": "CrowdSale.Stage[]",
+                    "lockStages": "CrowdSale.Stage[]",
+                    "purchaserList": "address[]"
+                }
+            },
+            "getCurrentStage()": {
+                "argument": {},
+                "contract": {
+                    "rate": "uint256",
+                    "amountGoal": "uint256",
+                    "amountRaised": "uint256",
+                    "amountTokenIssued": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "icoStages": "CrowdSale.Stage[]",
+                    "lockStages": "CrowdSale.Stage[]",
+                    "purchaserList": "address[]"
+                }
+            },
+            "getRemainingTimeInSecond()": {
+                "argument": {},
+                "contract": {
+                    "rate": "uint256",
+                    "amountGoal": "uint256",
+                    "amountRaised": "uint256",
+                    "amountTokenIssued": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "icoStages": "CrowdSale.Stage[]",
+                    "lockStages": "CrowdSale.Stage[]",
+                    "purchaserList": "address[]"
+                }
+            },
+            "_addPurchaser(address)": {
+                "argument": {},
+                "contract": {
+                    "rate": "uint256",
+                    "amountGoal": "uint256",
+                    "amountRaised": "uint256",
+                    "amountTokenIssued": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "icoStages": "CrowdSale.Stage[]",
+                    "lockStages": "CrowdSale.Stage[]",
+                    "purchaserList": "address[]"
+                }
+            },
+            "start(uint256)": {
+                "argument": {
+                    "fundingGoalInEther": "uint256"
+                },
+                "contract": {
+                    "rate": "uint256",
+                    "amountGoal": "uint256",
+                    "amountRaised": "uint256",
+                    "amountTokenIssued": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "icoStages": "CrowdSale.Stage[]",
+                    "lockStages": "CrowdSale.Stage[]",
+                    "purchaserList": "address[]"
+                }
+            },
+            "stop()": {
+                "argument": {},
+                "contract": {
+                    "rate": "uint256",
+                    "amountGoal": "uint256",
+                    "amountRaised": "uint256",
+                    "amountTokenIssued": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "icoStages": "CrowdSale.Stage[]",
+                    "lockStages": "CrowdSale.Stage[]",
+                    "purchaserList": "address[]"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "rate": "uint256",
+                    "amountGoal": "uint256",
+                    "amountRaised": "uint256",
+                    "amountTokenIssued": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "icoStages": "CrowdSale.Stage[]",
+                    "lockStages": "CrowdSale.Stage[]",
+                    "purchaserList": "address[]"
+                }
+            },
+            "_getTokenCount(uint256)": {
+                "argument": {
+                    "amountInWei": "uint256"
+                },
+                "contract": {
+                    "rate": "uint256",
+                    "amountGoal": "uint256",
+                    "amountRaised": "uint256",
+                    "amountTokenIssued": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "icoStages": "CrowdSale.Stage[]",
+                    "lockStages": "CrowdSale.Stage[]",
+                    "purchaserList": "address[]"
+                }
+            },
+            "safeWithdrawal()": {
+                "argument": {},
+                "contract": {
+                    "rate": "uint256",
+                    "amountGoal": "uint256",
+                    "amountRaised": "uint256",
+                    "amountTokenIssued": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "icoStages": "CrowdSale.Stage[]",
+                    "lockStages": "CrowdSale.Stage[]",
+                    "purchaserList": "address[]"
+                }
+            },
+            "unlockBonusTokens(uint256,uint256,uint256)": {
+                "argument": {
+                    "stageIndex": "uint256",
+                    "purchaserStartIdx": "uint256",
+                    "purchaserEndIdx": "uint256"
+                },
+                "contract": {
+                    "rate": "uint256",
+                    "amountGoal": "uint256",
+                    "amountRaised": "uint256",
+                    "amountTokenIssued": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "icoStages": "CrowdSale.Stage[]",
+                    "lockStages": "CrowdSale.Stage[]",
+                    "purchaserList": "address[]"
+                }
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "FairGameCrowdSale": {
+        "function_list": [
+            "CrowdSale(address,address,address,uint256)",
+            "_initStages()",
+            "getTokenAddress()",
+            "getLockedToken(address,uint256)",
+            "canTokenUnlocked(uint256)",
+            "isStarted()",
+            "isReachedGoal()",
+            "isEnded()",
+            "getCurrentStage()",
+            "getRemainingTimeInSecond()",
+            "_addPurchaser(address)",
+            "start(uint256)",
+            "stop()",
+            "fallback()",
+            "_getTokenCount(uint256)",
+            "safeWithdrawal()",
+            "unlockBonusTokens(uint256,uint256,uint256)",
+            "Ownable()",
+            "transferOwnership(address)",
+            "FairGameCrowdSale(address,address,address)",
+            "_initStages()"
+        ],
+        "initial_state": {
+            "CrowdSale(address,address,address,uint256)": {
+                "argument": {
+                    "tokenRate": "uint256"
+                },
+                "contract": {}
+            },
+            "_initStages()": {
+                "argument": {},
+                "contract": {}
+            },
+            "getTokenAddress()": {
+                "argument": {},
+                "contract": {}
+            },
+            "getLockedToken(address,uint256)": {
+                "argument": {
+                    "stageIdx": "uint256"
+                },
+                "contract": {}
+            },
+            "canTokenUnlocked(uint256)": {
+                "argument": {
+                    "stageIndex": "uint256"
+                },
+                "contract": {}
+            },
+            "isStarted()": {
+                "argument": {},
+                "contract": {}
+            },
+            "isReachedGoal()": {
+                "argument": {},
+                "contract": {}
+            },
+            "isEnded()": {
+                "argument": {},
+                "contract": {}
+            },
+            "getCurrentStage()": {
+                "argument": {},
+                "contract": {}
+            },
+            "getRemainingTimeInSecond()": {
+                "argument": {},
+                "contract": {}
+            },
+            "_addPurchaser(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "start(uint256)": {
+                "argument": {
+                    "fundingGoalInEther": "uint256"
+                },
+                "contract": {}
+            },
+            "stop()": {
+                "argument": {},
+                "contract": {}
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {}
+            },
+            "_getTokenCount(uint256)": {
+                "argument": {
+                    "amountInWei": "uint256"
+                },
+                "contract": {}
+            },
+            "safeWithdrawal()": {
+                "argument": {},
+                "contract": {}
+            },
+            "unlockBonusTokens(uint256,uint256,uint256)": {
+                "argument": {
+                    "stageIndex": "uint256",
+                    "purchaserStartIdx": "uint256",
+                    "purchaserEndIdx": "uint256"
+                },
+                "contract": {}
+            },
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "FairGameCrowdSale(address,address,address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "safeWithdrawal()": [
+                2915,
+                647
+            ],
+            "isReachedGoal()": [
+                1958,
+                295
+            ],
+            "getLockedToken(address,uint256)": [
+                1435,
+                141
+            ],
+            "getRemainingTimeInSecond()": [
+                2632,
+                537
+            ],
+            "start(uint256)": [
+                2475,
+                471
+            ],
+            "getCurrentStage()": [
+                2718,
+                581
+            ],
+            "isStarted()": [
+                2005,
+                317
+            ],
+            "isEnded()": [
+                2520,
+                493
+            ],
+            "unlockBonusTokens(uint256,uint256,uint256)": [
+                2567,
+                515
+            ],
+            "getTokenAddress()": [
+                1348,
+                119
+            ],
+            "transferOwnership(address)": [
+                2761,
+                603
+            ],
+            "stop()": [
+                1325,
+                97
+            ],
+            "canTokenUnlocked(uint256)": [
+                2138,
+                383
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump1061": [
+                "token.transferFrom(tokenHolder, msg.sender, buyTokenCount)",
+                "token.transferFrom(tokenHolder, msg.sender, buyTokenCount)"
+            ],
+            "jump6182": [
+                "beneficiary.transfer(amountRaised)",
+                "beneficiary.transfer(amountRaised)"
+            ],
+            "block6182": [
+                "beneficiary.transfer(amountRaised)"
+            ],
+            "block1061": [
+                "token.transferFrom(tokenHolder, msg.sender, buyTokenCount)"
+            ],
+            "jump1061_0": [
+                "token.transferFrom(tokenHolder, msg.sender, buyTokenCount)",
+                "token.transferFrom(tokenHolder, msg.sender, buyTokenCount)"
+            ],
+            "jump5093": [
+                "token.transferFrom(tokenHolder, purchaser, unlockedToken)",
+                "token.transferFrom(tokenHolder, purchaser, unlockedToken)"
+            ],
+            "block1061_0": [
+                "token.transferFrom(tokenHolder, msg.sender, buyTokenCount)"
+            ],
+            "block5093": [
+                "token.transferFrom(tokenHolder, purchaser, unlockedToken)"
+            ]
+        }
+    }
+}

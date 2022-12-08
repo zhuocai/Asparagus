@@ -1,0 +1,1215 @@
+{
+    "Token": {
+        "function_list": [
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)"
+        ],
+        "initial_state": {
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                404,
+                119
+            ],
+            "transferFrom(address,address,uint256)": [
+                548,
+                163
+            ],
+            "transfer(address,uint256)": [
+                1190,
+                317
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "LocalEthereumEscrows": {
+        "function_list": [
+            "getRelayedSender(bytes16,uint8,uint128,uint8,bytes32,bytes32)",
+            "LocalEthereumEscrows()",
+            "getEscrowAndHash(bytes16,address,address,uint256,uint16)",
+            "createEscrow(bytes16,address,address,uint256,uint16,uint32,uint32,uint8,bytes32,bytes32)",
+            "doRelease(bytes16,address,address,uint256,uint16,uint128)",
+            "doDisableSellerCancel(bytes16,address,address,uint256,uint16,uint128)",
+            "doBuyerCancel(bytes16,address,address,uint256,uint16,uint128)",
+            "doSellerCancel(bytes16,address,address,uint256,uint16,uint128)",
+            "doSellerRequestCancel(bytes16,address,address,uint256,uint16,uint128)",
+            "resolveDispute(bytes16,address,address,uint256,uint16,uint8,bytes32,bytes32,uint8)",
+            "release(bytes16,address,address,uint256,uint16)",
+            "disableSellerCancel(bytes16,address,address,uint256,uint16)",
+            "buyerCancel(bytes16,address,address,uint256,uint16)",
+            "sellerCancel(bytes16,address,address,uint256,uint16)",
+            "sellerRequestCancel(bytes16,address,address,uint256,uint16)",
+            "relaySellerCannotCancel(bytes16,address,address,uint256,uint16,uint128,uint8,bytes32,bytes32)",
+            "relayBuyerCancel(bytes16,address,address,uint256,uint16,uint128,uint8,bytes32,bytes32)",
+            "relayRelease(bytes16,address,address,uint256,uint16,uint128,uint8,bytes32,bytes32)",
+            "relaySellerCancel(bytes16,address,address,uint256,uint16,uint128,uint8,bytes32,bytes32)",
+            "relaySellerRequestCancel(bytes16,address,address,uint256,uint16,uint128,uint8,bytes32,bytes32)",
+            "relay(bytes16,address,address,uint256,uint16,uint128,uint8,bytes32,bytes32,uint8,uint128)",
+            "batchRelay(bytes16[],address[],address[],uint256[],uint16[],uint128[],uint8[],bytes32[],bytes32[],uint8[])",
+            "increaseGasSpent(bytes32,uint128)",
+            "transferMinusFees(address,uint256,uint128,uint16)",
+            "withdrawFees(address,uint256)",
+            "setArbitrator(address)",
+            "setOwner(address)",
+            "setRelayer(address)",
+            "setRequestCancellationMinimumTime(uint32)",
+            "transferToken(Token,address,uint256)",
+            "transferTokenFrom(Token,address,address,uint256)",
+            "approveToken(Token,address,uint256)",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "getRelayedSender(bytes16,uint8,uint128,uint8,bytes32,bytes32)": {
+                "argument": {
+                    "_tradeID": "bytes16",
+                    "_actionByte": "uint8",
+                    "_maximumGasPrice": "uint128",
+                    "_v": "uint8",
+                    "_r": "bytes32",
+                    "_s": "bytes32"
+                },
+                "contract": {
+                    "requestCancellationMinimumTime": "uint32",
+                    "feesAvailableForWithdraw": "uint256",
+                    "ACTION_SELLER_CANNOT_CANCEL": "uint8",
+                    "ACTION_BUYER_CANCEL": "uint8",
+                    "ACTION_SELLER_CANCEL": "uint8",
+                    "ACTION_SELLER_REQUEST_CANCEL": "uint8",
+                    "ACTION_RELEASE": "uint8",
+                    "ACTION_DISPUTE": "uint8",
+                    "GAS_doRelease": "uint16",
+                    "GAS_doDisableSellerCancel": "uint16",
+                    "GAS_doBuyerCancel": "uint16",
+                    "GAS_doSellerCancel": "uint16",
+                    "GAS_doSellerRequestCancel": "uint16",
+                    "GAS_doResolveDispute": "uint16",
+                    "GAS_batchRelayBaseCost": "uint16"
+                }
+            },
+            "LocalEthereumEscrows()": {
+                "argument": {},
+                "contract": {
+                    "requestCancellationMinimumTime": "uint32",
+                    "feesAvailableForWithdraw": "uint256",
+                    "ACTION_SELLER_CANNOT_CANCEL": "uint8",
+                    "ACTION_BUYER_CANCEL": "uint8",
+                    "ACTION_SELLER_CANCEL": "uint8",
+                    "ACTION_SELLER_REQUEST_CANCEL": "uint8",
+                    "ACTION_RELEASE": "uint8",
+                    "ACTION_DISPUTE": "uint8",
+                    "GAS_doRelease": "uint16",
+                    "GAS_doDisableSellerCancel": "uint16",
+                    "GAS_doBuyerCancel": "uint16",
+                    "GAS_doSellerCancel": "uint16",
+                    "GAS_doSellerRequestCancel": "uint16",
+                    "GAS_doResolveDispute": "uint16",
+                    "GAS_batchRelayBaseCost": "uint16"
+                }
+            },
+            "getEscrowAndHash(bytes16,address,address,uint256,uint16)": {
+                "argument": {
+                    "_tradeID": "bytes16",
+                    "_value": "uint256",
+                    "_fee": "uint16"
+                },
+                "contract": {
+                    "requestCancellationMinimumTime": "uint32",
+                    "feesAvailableForWithdraw": "uint256",
+                    "ACTION_SELLER_CANNOT_CANCEL": "uint8",
+                    "ACTION_BUYER_CANCEL": "uint8",
+                    "ACTION_SELLER_CANCEL": "uint8",
+                    "ACTION_SELLER_REQUEST_CANCEL": "uint8",
+                    "ACTION_RELEASE": "uint8",
+                    "ACTION_DISPUTE": "uint8",
+                    "GAS_doRelease": "uint16",
+                    "GAS_doDisableSellerCancel": "uint16",
+                    "GAS_doBuyerCancel": "uint16",
+                    "GAS_doSellerCancel": "uint16",
+                    "GAS_doSellerRequestCancel": "uint16",
+                    "GAS_doResolveDispute": "uint16",
+                    "GAS_batchRelayBaseCost": "uint16"
+                }
+            },
+            "createEscrow(bytes16,address,address,uint256,uint16,uint32,uint32,uint8,bytes32,bytes32)": {
+                "argument": {
+                    "_tradeID": "bytes16",
+                    "_value": "uint256",
+                    "_fee": "uint16",
+                    "_paymentWindowInSeconds": "uint32",
+                    "_expiry": "uint32",
+                    "_v": "uint8",
+                    "_r": "bytes32",
+                    "_s": "bytes32"
+                },
+                "contract": {
+                    "requestCancellationMinimumTime": "uint32",
+                    "feesAvailableForWithdraw": "uint256",
+                    "ACTION_SELLER_CANNOT_CANCEL": "uint8",
+                    "ACTION_BUYER_CANCEL": "uint8",
+                    "ACTION_SELLER_CANCEL": "uint8",
+                    "ACTION_SELLER_REQUEST_CANCEL": "uint8",
+                    "ACTION_RELEASE": "uint8",
+                    "ACTION_DISPUTE": "uint8",
+                    "GAS_doRelease": "uint16",
+                    "GAS_doDisableSellerCancel": "uint16",
+                    "GAS_doBuyerCancel": "uint16",
+                    "GAS_doSellerCancel": "uint16",
+                    "GAS_doSellerRequestCancel": "uint16",
+                    "GAS_doResolveDispute": "uint16",
+                    "GAS_batchRelayBaseCost": "uint16"
+                }
+            },
+            "doRelease(bytes16,address,address,uint256,uint16,uint128)": {
+                "argument": {
+                    "_tradeID": "bytes16",
+                    "_value": "uint256",
+                    "_fee": "uint16",
+                    "_additionalGas": "uint128"
+                },
+                "contract": {
+                    "requestCancellationMinimumTime": "uint32",
+                    "feesAvailableForWithdraw": "uint256",
+                    "ACTION_SELLER_CANNOT_CANCEL": "uint8",
+                    "ACTION_BUYER_CANCEL": "uint8",
+                    "ACTION_SELLER_CANCEL": "uint8",
+                    "ACTION_SELLER_REQUEST_CANCEL": "uint8",
+                    "ACTION_RELEASE": "uint8",
+                    "ACTION_DISPUTE": "uint8",
+                    "GAS_doRelease": "uint16",
+                    "GAS_doDisableSellerCancel": "uint16",
+                    "GAS_doBuyerCancel": "uint16",
+                    "GAS_doSellerCancel": "uint16",
+                    "GAS_doSellerRequestCancel": "uint16",
+                    "GAS_doResolveDispute": "uint16",
+                    "GAS_batchRelayBaseCost": "uint16"
+                }
+            },
+            "doDisableSellerCancel(bytes16,address,address,uint256,uint16,uint128)": {
+                "argument": {
+                    "_tradeID": "bytes16",
+                    "_value": "uint256",
+                    "_fee": "uint16",
+                    "_additionalGas": "uint128"
+                },
+                "contract": {
+                    "requestCancellationMinimumTime": "uint32",
+                    "feesAvailableForWithdraw": "uint256",
+                    "ACTION_SELLER_CANNOT_CANCEL": "uint8",
+                    "ACTION_BUYER_CANCEL": "uint8",
+                    "ACTION_SELLER_CANCEL": "uint8",
+                    "ACTION_SELLER_REQUEST_CANCEL": "uint8",
+                    "ACTION_RELEASE": "uint8",
+                    "ACTION_DISPUTE": "uint8",
+                    "GAS_doRelease": "uint16",
+                    "GAS_doDisableSellerCancel": "uint16",
+                    "GAS_doBuyerCancel": "uint16",
+                    "GAS_doSellerCancel": "uint16",
+                    "GAS_doSellerRequestCancel": "uint16",
+                    "GAS_doResolveDispute": "uint16",
+                    "GAS_batchRelayBaseCost": "uint16"
+                }
+            },
+            "doBuyerCancel(bytes16,address,address,uint256,uint16,uint128)": {
+                "argument": {
+                    "_tradeID": "bytes16",
+                    "_value": "uint256",
+                    "_fee": "uint16",
+                    "_additionalGas": "uint128"
+                },
+                "contract": {
+                    "requestCancellationMinimumTime": "uint32",
+                    "feesAvailableForWithdraw": "uint256",
+                    "ACTION_SELLER_CANNOT_CANCEL": "uint8",
+                    "ACTION_BUYER_CANCEL": "uint8",
+                    "ACTION_SELLER_CANCEL": "uint8",
+                    "ACTION_SELLER_REQUEST_CANCEL": "uint8",
+                    "ACTION_RELEASE": "uint8",
+                    "ACTION_DISPUTE": "uint8",
+                    "GAS_doRelease": "uint16",
+                    "GAS_doDisableSellerCancel": "uint16",
+                    "GAS_doBuyerCancel": "uint16",
+                    "GAS_doSellerCancel": "uint16",
+                    "GAS_doSellerRequestCancel": "uint16",
+                    "GAS_doResolveDispute": "uint16",
+                    "GAS_batchRelayBaseCost": "uint16"
+                }
+            },
+            "doSellerCancel(bytes16,address,address,uint256,uint16,uint128)": {
+                "argument": {
+                    "_tradeID": "bytes16",
+                    "_value": "uint256",
+                    "_fee": "uint16",
+                    "_additionalGas": "uint128"
+                },
+                "contract": {
+                    "requestCancellationMinimumTime": "uint32",
+                    "feesAvailableForWithdraw": "uint256",
+                    "ACTION_SELLER_CANNOT_CANCEL": "uint8",
+                    "ACTION_BUYER_CANCEL": "uint8",
+                    "ACTION_SELLER_CANCEL": "uint8",
+                    "ACTION_SELLER_REQUEST_CANCEL": "uint8",
+                    "ACTION_RELEASE": "uint8",
+                    "ACTION_DISPUTE": "uint8",
+                    "GAS_doRelease": "uint16",
+                    "GAS_doDisableSellerCancel": "uint16",
+                    "GAS_doBuyerCancel": "uint16",
+                    "GAS_doSellerCancel": "uint16",
+                    "GAS_doSellerRequestCancel": "uint16",
+                    "GAS_doResolveDispute": "uint16",
+                    "GAS_batchRelayBaseCost": "uint16"
+                }
+            },
+            "doSellerRequestCancel(bytes16,address,address,uint256,uint16,uint128)": {
+                "argument": {
+                    "_tradeID": "bytes16",
+                    "_value": "uint256",
+                    "_fee": "uint16",
+                    "_additionalGas": "uint128"
+                },
+                "contract": {
+                    "requestCancellationMinimumTime": "uint32",
+                    "feesAvailableForWithdraw": "uint256",
+                    "ACTION_SELLER_CANNOT_CANCEL": "uint8",
+                    "ACTION_BUYER_CANCEL": "uint8",
+                    "ACTION_SELLER_CANCEL": "uint8",
+                    "ACTION_SELLER_REQUEST_CANCEL": "uint8",
+                    "ACTION_RELEASE": "uint8",
+                    "ACTION_DISPUTE": "uint8",
+                    "GAS_doRelease": "uint16",
+                    "GAS_doDisableSellerCancel": "uint16",
+                    "GAS_doBuyerCancel": "uint16",
+                    "GAS_doSellerCancel": "uint16",
+                    "GAS_doSellerRequestCancel": "uint16",
+                    "GAS_doResolveDispute": "uint16",
+                    "GAS_batchRelayBaseCost": "uint16"
+                }
+            },
+            "resolveDispute(bytes16,address,address,uint256,uint16,uint8,bytes32,bytes32,uint8)": {
+                "argument": {
+                    "_tradeID": "bytes16",
+                    "_value": "uint256",
+                    "_fee": "uint16",
+                    "_v": "uint8",
+                    "_r": "bytes32",
+                    "_s": "bytes32",
+                    "_buyerPercent": "uint8"
+                },
+                "contract": {
+                    "requestCancellationMinimumTime": "uint32",
+                    "feesAvailableForWithdraw": "uint256",
+                    "ACTION_SELLER_CANNOT_CANCEL": "uint8",
+                    "ACTION_BUYER_CANCEL": "uint8",
+                    "ACTION_SELLER_CANCEL": "uint8",
+                    "ACTION_SELLER_REQUEST_CANCEL": "uint8",
+                    "ACTION_RELEASE": "uint8",
+                    "ACTION_DISPUTE": "uint8",
+                    "GAS_doRelease": "uint16",
+                    "GAS_doDisableSellerCancel": "uint16",
+                    "GAS_doBuyerCancel": "uint16",
+                    "GAS_doSellerCancel": "uint16",
+                    "GAS_doSellerRequestCancel": "uint16",
+                    "GAS_doResolveDispute": "uint16",
+                    "GAS_batchRelayBaseCost": "uint16"
+                }
+            },
+            "release(bytes16,address,address,uint256,uint16)": {
+                "argument": {
+                    "_tradeID": "bytes16",
+                    "_value": "uint256",
+                    "_fee": "uint16"
+                },
+                "contract": {
+                    "requestCancellationMinimumTime": "uint32",
+                    "feesAvailableForWithdraw": "uint256",
+                    "ACTION_SELLER_CANNOT_CANCEL": "uint8",
+                    "ACTION_BUYER_CANCEL": "uint8",
+                    "ACTION_SELLER_CANCEL": "uint8",
+                    "ACTION_SELLER_REQUEST_CANCEL": "uint8",
+                    "ACTION_RELEASE": "uint8",
+                    "ACTION_DISPUTE": "uint8",
+                    "GAS_doRelease": "uint16",
+                    "GAS_doDisableSellerCancel": "uint16",
+                    "GAS_doBuyerCancel": "uint16",
+                    "GAS_doSellerCancel": "uint16",
+                    "GAS_doSellerRequestCancel": "uint16",
+                    "GAS_doResolveDispute": "uint16",
+                    "GAS_batchRelayBaseCost": "uint16"
+                }
+            },
+            "disableSellerCancel(bytes16,address,address,uint256,uint16)": {
+                "argument": {
+                    "_tradeID": "bytes16",
+                    "_value": "uint256",
+                    "_fee": "uint16"
+                },
+                "contract": {
+                    "requestCancellationMinimumTime": "uint32",
+                    "feesAvailableForWithdraw": "uint256",
+                    "ACTION_SELLER_CANNOT_CANCEL": "uint8",
+                    "ACTION_BUYER_CANCEL": "uint8",
+                    "ACTION_SELLER_CANCEL": "uint8",
+                    "ACTION_SELLER_REQUEST_CANCEL": "uint8",
+                    "ACTION_RELEASE": "uint8",
+                    "ACTION_DISPUTE": "uint8",
+                    "GAS_doRelease": "uint16",
+                    "GAS_doDisableSellerCancel": "uint16",
+                    "GAS_doBuyerCancel": "uint16",
+                    "GAS_doSellerCancel": "uint16",
+                    "GAS_doSellerRequestCancel": "uint16",
+                    "GAS_doResolveDispute": "uint16",
+                    "GAS_batchRelayBaseCost": "uint16"
+                }
+            },
+            "buyerCancel(bytes16,address,address,uint256,uint16)": {
+                "argument": {
+                    "_tradeID": "bytes16",
+                    "_value": "uint256",
+                    "_fee": "uint16"
+                },
+                "contract": {
+                    "requestCancellationMinimumTime": "uint32",
+                    "feesAvailableForWithdraw": "uint256",
+                    "ACTION_SELLER_CANNOT_CANCEL": "uint8",
+                    "ACTION_BUYER_CANCEL": "uint8",
+                    "ACTION_SELLER_CANCEL": "uint8",
+                    "ACTION_SELLER_REQUEST_CANCEL": "uint8",
+                    "ACTION_RELEASE": "uint8",
+                    "ACTION_DISPUTE": "uint8",
+                    "GAS_doRelease": "uint16",
+                    "GAS_doDisableSellerCancel": "uint16",
+                    "GAS_doBuyerCancel": "uint16",
+                    "GAS_doSellerCancel": "uint16",
+                    "GAS_doSellerRequestCancel": "uint16",
+                    "GAS_doResolveDispute": "uint16",
+                    "GAS_batchRelayBaseCost": "uint16"
+                }
+            },
+            "sellerCancel(bytes16,address,address,uint256,uint16)": {
+                "argument": {
+                    "_tradeID": "bytes16",
+                    "_value": "uint256",
+                    "_fee": "uint16"
+                },
+                "contract": {
+                    "requestCancellationMinimumTime": "uint32",
+                    "feesAvailableForWithdraw": "uint256",
+                    "ACTION_SELLER_CANNOT_CANCEL": "uint8",
+                    "ACTION_BUYER_CANCEL": "uint8",
+                    "ACTION_SELLER_CANCEL": "uint8",
+                    "ACTION_SELLER_REQUEST_CANCEL": "uint8",
+                    "ACTION_RELEASE": "uint8",
+                    "ACTION_DISPUTE": "uint8",
+                    "GAS_doRelease": "uint16",
+                    "GAS_doDisableSellerCancel": "uint16",
+                    "GAS_doBuyerCancel": "uint16",
+                    "GAS_doSellerCancel": "uint16",
+                    "GAS_doSellerRequestCancel": "uint16",
+                    "GAS_doResolveDispute": "uint16",
+                    "GAS_batchRelayBaseCost": "uint16"
+                }
+            },
+            "sellerRequestCancel(bytes16,address,address,uint256,uint16)": {
+                "argument": {
+                    "_tradeID": "bytes16",
+                    "_value": "uint256",
+                    "_fee": "uint16"
+                },
+                "contract": {
+                    "requestCancellationMinimumTime": "uint32",
+                    "feesAvailableForWithdraw": "uint256",
+                    "ACTION_SELLER_CANNOT_CANCEL": "uint8",
+                    "ACTION_BUYER_CANCEL": "uint8",
+                    "ACTION_SELLER_CANCEL": "uint8",
+                    "ACTION_SELLER_REQUEST_CANCEL": "uint8",
+                    "ACTION_RELEASE": "uint8",
+                    "ACTION_DISPUTE": "uint8",
+                    "GAS_doRelease": "uint16",
+                    "GAS_doDisableSellerCancel": "uint16",
+                    "GAS_doBuyerCancel": "uint16",
+                    "GAS_doSellerCancel": "uint16",
+                    "GAS_doSellerRequestCancel": "uint16",
+                    "GAS_doResolveDispute": "uint16",
+                    "GAS_batchRelayBaseCost": "uint16"
+                }
+            },
+            "relaySellerCannotCancel(bytes16,address,address,uint256,uint16,uint128,uint8,bytes32,bytes32)": {
+                "argument": {
+                    "_tradeID": "bytes16",
+                    "_value": "uint256",
+                    "_fee": "uint16",
+                    "_maximumGasPrice": "uint128",
+                    "_v": "uint8",
+                    "_r": "bytes32",
+                    "_s": "bytes32"
+                },
+                "contract": {
+                    "requestCancellationMinimumTime": "uint32",
+                    "feesAvailableForWithdraw": "uint256",
+                    "ACTION_SELLER_CANNOT_CANCEL": "uint8",
+                    "ACTION_BUYER_CANCEL": "uint8",
+                    "ACTION_SELLER_CANCEL": "uint8",
+                    "ACTION_SELLER_REQUEST_CANCEL": "uint8",
+                    "ACTION_RELEASE": "uint8",
+                    "ACTION_DISPUTE": "uint8",
+                    "GAS_doRelease": "uint16",
+                    "GAS_doDisableSellerCancel": "uint16",
+                    "GAS_doBuyerCancel": "uint16",
+                    "GAS_doSellerCancel": "uint16",
+                    "GAS_doSellerRequestCancel": "uint16",
+                    "GAS_doResolveDispute": "uint16",
+                    "GAS_batchRelayBaseCost": "uint16"
+                }
+            },
+            "relayBuyerCancel(bytes16,address,address,uint256,uint16,uint128,uint8,bytes32,bytes32)": {
+                "argument": {
+                    "_tradeID": "bytes16",
+                    "_value": "uint256",
+                    "_fee": "uint16",
+                    "_maximumGasPrice": "uint128",
+                    "_v": "uint8",
+                    "_r": "bytes32",
+                    "_s": "bytes32"
+                },
+                "contract": {
+                    "requestCancellationMinimumTime": "uint32",
+                    "feesAvailableForWithdraw": "uint256",
+                    "ACTION_SELLER_CANNOT_CANCEL": "uint8",
+                    "ACTION_BUYER_CANCEL": "uint8",
+                    "ACTION_SELLER_CANCEL": "uint8",
+                    "ACTION_SELLER_REQUEST_CANCEL": "uint8",
+                    "ACTION_RELEASE": "uint8",
+                    "ACTION_DISPUTE": "uint8",
+                    "GAS_doRelease": "uint16",
+                    "GAS_doDisableSellerCancel": "uint16",
+                    "GAS_doBuyerCancel": "uint16",
+                    "GAS_doSellerCancel": "uint16",
+                    "GAS_doSellerRequestCancel": "uint16",
+                    "GAS_doResolveDispute": "uint16",
+                    "GAS_batchRelayBaseCost": "uint16"
+                }
+            },
+            "relayRelease(bytes16,address,address,uint256,uint16,uint128,uint8,bytes32,bytes32)": {
+                "argument": {
+                    "_tradeID": "bytes16",
+                    "_value": "uint256",
+                    "_fee": "uint16",
+                    "_maximumGasPrice": "uint128",
+                    "_v": "uint8",
+                    "_r": "bytes32",
+                    "_s": "bytes32"
+                },
+                "contract": {
+                    "requestCancellationMinimumTime": "uint32",
+                    "feesAvailableForWithdraw": "uint256",
+                    "ACTION_SELLER_CANNOT_CANCEL": "uint8",
+                    "ACTION_BUYER_CANCEL": "uint8",
+                    "ACTION_SELLER_CANCEL": "uint8",
+                    "ACTION_SELLER_REQUEST_CANCEL": "uint8",
+                    "ACTION_RELEASE": "uint8",
+                    "ACTION_DISPUTE": "uint8",
+                    "GAS_doRelease": "uint16",
+                    "GAS_doDisableSellerCancel": "uint16",
+                    "GAS_doBuyerCancel": "uint16",
+                    "GAS_doSellerCancel": "uint16",
+                    "GAS_doSellerRequestCancel": "uint16",
+                    "GAS_doResolveDispute": "uint16",
+                    "GAS_batchRelayBaseCost": "uint16"
+                }
+            },
+            "relaySellerCancel(bytes16,address,address,uint256,uint16,uint128,uint8,bytes32,bytes32)": {
+                "argument": {
+                    "_tradeID": "bytes16",
+                    "_value": "uint256",
+                    "_fee": "uint16",
+                    "_maximumGasPrice": "uint128",
+                    "_v": "uint8",
+                    "_r": "bytes32",
+                    "_s": "bytes32"
+                },
+                "contract": {
+                    "requestCancellationMinimumTime": "uint32",
+                    "feesAvailableForWithdraw": "uint256",
+                    "ACTION_SELLER_CANNOT_CANCEL": "uint8",
+                    "ACTION_BUYER_CANCEL": "uint8",
+                    "ACTION_SELLER_CANCEL": "uint8",
+                    "ACTION_SELLER_REQUEST_CANCEL": "uint8",
+                    "ACTION_RELEASE": "uint8",
+                    "ACTION_DISPUTE": "uint8",
+                    "GAS_doRelease": "uint16",
+                    "GAS_doDisableSellerCancel": "uint16",
+                    "GAS_doBuyerCancel": "uint16",
+                    "GAS_doSellerCancel": "uint16",
+                    "GAS_doSellerRequestCancel": "uint16",
+                    "GAS_doResolveDispute": "uint16",
+                    "GAS_batchRelayBaseCost": "uint16"
+                }
+            },
+            "relaySellerRequestCancel(bytes16,address,address,uint256,uint16,uint128,uint8,bytes32,bytes32)": {
+                "argument": {
+                    "_tradeID": "bytes16",
+                    "_value": "uint256",
+                    "_fee": "uint16",
+                    "_maximumGasPrice": "uint128",
+                    "_v": "uint8",
+                    "_r": "bytes32",
+                    "_s": "bytes32"
+                },
+                "contract": {
+                    "requestCancellationMinimumTime": "uint32",
+                    "feesAvailableForWithdraw": "uint256",
+                    "ACTION_SELLER_CANNOT_CANCEL": "uint8",
+                    "ACTION_BUYER_CANCEL": "uint8",
+                    "ACTION_SELLER_CANCEL": "uint8",
+                    "ACTION_SELLER_REQUEST_CANCEL": "uint8",
+                    "ACTION_RELEASE": "uint8",
+                    "ACTION_DISPUTE": "uint8",
+                    "GAS_doRelease": "uint16",
+                    "GAS_doDisableSellerCancel": "uint16",
+                    "GAS_doBuyerCancel": "uint16",
+                    "GAS_doSellerCancel": "uint16",
+                    "GAS_doSellerRequestCancel": "uint16",
+                    "GAS_doResolveDispute": "uint16",
+                    "GAS_batchRelayBaseCost": "uint16"
+                }
+            },
+            "relay(bytes16,address,address,uint256,uint16,uint128,uint8,bytes32,bytes32,uint8,uint128)": {
+                "argument": {
+                    "_tradeID": "bytes16",
+                    "_value": "uint256",
+                    "_fee": "uint16",
+                    "_maximumGasPrice": "uint128",
+                    "_v": "uint8",
+                    "_r": "bytes32",
+                    "_s": "bytes32",
+                    "_actionByte": "uint8",
+                    "_additionalGas": "uint128"
+                },
+                "contract": {
+                    "requestCancellationMinimumTime": "uint32",
+                    "feesAvailableForWithdraw": "uint256",
+                    "ACTION_SELLER_CANNOT_CANCEL": "uint8",
+                    "ACTION_BUYER_CANCEL": "uint8",
+                    "ACTION_SELLER_CANCEL": "uint8",
+                    "ACTION_SELLER_REQUEST_CANCEL": "uint8",
+                    "ACTION_RELEASE": "uint8",
+                    "ACTION_DISPUTE": "uint8",
+                    "GAS_doRelease": "uint16",
+                    "GAS_doDisableSellerCancel": "uint16",
+                    "GAS_doBuyerCancel": "uint16",
+                    "GAS_doSellerCancel": "uint16",
+                    "GAS_doSellerRequestCancel": "uint16",
+                    "GAS_doResolveDispute": "uint16",
+                    "GAS_batchRelayBaseCost": "uint16"
+                }
+            },
+            "batchRelay(bytes16[],address[],address[],uint256[],uint16[],uint128[],uint8[],bytes32[],bytes32[],uint8[])": {
+                "argument": {
+                    "_tradeID": "bytes16[]",
+                    "_seller": "address[]",
+                    "_buyer": "address[]",
+                    "_value": "uint256[]",
+                    "_fee": "uint16[]",
+                    "_maximumGasPrice": "uint128[]",
+                    "_v": "uint8[]",
+                    "_r": "bytes32[]",
+                    "_s": "bytes32[]",
+                    "_actionByte": "uint8[]"
+                },
+                "contract": {
+                    "requestCancellationMinimumTime": "uint32",
+                    "feesAvailableForWithdraw": "uint256",
+                    "ACTION_SELLER_CANNOT_CANCEL": "uint8",
+                    "ACTION_BUYER_CANCEL": "uint8",
+                    "ACTION_SELLER_CANCEL": "uint8",
+                    "ACTION_SELLER_REQUEST_CANCEL": "uint8",
+                    "ACTION_RELEASE": "uint8",
+                    "ACTION_DISPUTE": "uint8",
+                    "GAS_doRelease": "uint16",
+                    "GAS_doDisableSellerCancel": "uint16",
+                    "GAS_doBuyerCancel": "uint16",
+                    "GAS_doSellerCancel": "uint16",
+                    "GAS_doSellerRequestCancel": "uint16",
+                    "GAS_doResolveDispute": "uint16",
+                    "GAS_batchRelayBaseCost": "uint16"
+                }
+            },
+            "increaseGasSpent(bytes32,uint128)": {
+                "argument": {
+                    "_tradeHash": "bytes32",
+                    "_gas": "uint128"
+                },
+                "contract": {
+                    "requestCancellationMinimumTime": "uint32",
+                    "feesAvailableForWithdraw": "uint256",
+                    "ACTION_SELLER_CANNOT_CANCEL": "uint8",
+                    "ACTION_BUYER_CANCEL": "uint8",
+                    "ACTION_SELLER_CANCEL": "uint8",
+                    "ACTION_SELLER_REQUEST_CANCEL": "uint8",
+                    "ACTION_RELEASE": "uint8",
+                    "ACTION_DISPUTE": "uint8",
+                    "GAS_doRelease": "uint16",
+                    "GAS_doDisableSellerCancel": "uint16",
+                    "GAS_doBuyerCancel": "uint16",
+                    "GAS_doSellerCancel": "uint16",
+                    "GAS_doSellerRequestCancel": "uint16",
+                    "GAS_doResolveDispute": "uint16",
+                    "GAS_batchRelayBaseCost": "uint16"
+                }
+            },
+            "transferMinusFees(address,uint256,uint128,uint16)": {
+                "argument": {
+                    "_value": "uint256",
+                    "_totalGasFeesSpentByRelayer": "uint128",
+                    "_fee": "uint16"
+                },
+                "contract": {
+                    "requestCancellationMinimumTime": "uint32",
+                    "feesAvailableForWithdraw": "uint256",
+                    "ACTION_SELLER_CANNOT_CANCEL": "uint8",
+                    "ACTION_BUYER_CANCEL": "uint8",
+                    "ACTION_SELLER_CANCEL": "uint8",
+                    "ACTION_SELLER_REQUEST_CANCEL": "uint8",
+                    "ACTION_RELEASE": "uint8",
+                    "ACTION_DISPUTE": "uint8",
+                    "GAS_doRelease": "uint16",
+                    "GAS_doDisableSellerCancel": "uint16",
+                    "GAS_doBuyerCancel": "uint16",
+                    "GAS_doSellerCancel": "uint16",
+                    "GAS_doSellerRequestCancel": "uint16",
+                    "GAS_doResolveDispute": "uint16",
+                    "GAS_batchRelayBaseCost": "uint16"
+                }
+            },
+            "withdrawFees(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "requestCancellationMinimumTime": "uint32",
+                    "feesAvailableForWithdraw": "uint256",
+                    "ACTION_SELLER_CANNOT_CANCEL": "uint8",
+                    "ACTION_BUYER_CANCEL": "uint8",
+                    "ACTION_SELLER_CANCEL": "uint8",
+                    "ACTION_SELLER_REQUEST_CANCEL": "uint8",
+                    "ACTION_RELEASE": "uint8",
+                    "ACTION_DISPUTE": "uint8",
+                    "GAS_doRelease": "uint16",
+                    "GAS_doDisableSellerCancel": "uint16",
+                    "GAS_doBuyerCancel": "uint16",
+                    "GAS_doSellerCancel": "uint16",
+                    "GAS_doSellerRequestCancel": "uint16",
+                    "GAS_doResolveDispute": "uint16",
+                    "GAS_batchRelayBaseCost": "uint16"
+                }
+            },
+            "setArbitrator(address)": {
+                "argument": {},
+                "contract": {
+                    "requestCancellationMinimumTime": "uint32",
+                    "feesAvailableForWithdraw": "uint256",
+                    "ACTION_SELLER_CANNOT_CANCEL": "uint8",
+                    "ACTION_BUYER_CANCEL": "uint8",
+                    "ACTION_SELLER_CANCEL": "uint8",
+                    "ACTION_SELLER_REQUEST_CANCEL": "uint8",
+                    "ACTION_RELEASE": "uint8",
+                    "ACTION_DISPUTE": "uint8",
+                    "GAS_doRelease": "uint16",
+                    "GAS_doDisableSellerCancel": "uint16",
+                    "GAS_doBuyerCancel": "uint16",
+                    "GAS_doSellerCancel": "uint16",
+                    "GAS_doSellerRequestCancel": "uint16",
+                    "GAS_doResolveDispute": "uint16",
+                    "GAS_batchRelayBaseCost": "uint16"
+                }
+            },
+            "setOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "requestCancellationMinimumTime": "uint32",
+                    "feesAvailableForWithdraw": "uint256",
+                    "ACTION_SELLER_CANNOT_CANCEL": "uint8",
+                    "ACTION_BUYER_CANCEL": "uint8",
+                    "ACTION_SELLER_CANCEL": "uint8",
+                    "ACTION_SELLER_REQUEST_CANCEL": "uint8",
+                    "ACTION_RELEASE": "uint8",
+                    "ACTION_DISPUTE": "uint8",
+                    "GAS_doRelease": "uint16",
+                    "GAS_doDisableSellerCancel": "uint16",
+                    "GAS_doBuyerCancel": "uint16",
+                    "GAS_doSellerCancel": "uint16",
+                    "GAS_doSellerRequestCancel": "uint16",
+                    "GAS_doResolveDispute": "uint16",
+                    "GAS_batchRelayBaseCost": "uint16"
+                }
+            },
+            "setRelayer(address)": {
+                "argument": {},
+                "contract": {
+                    "requestCancellationMinimumTime": "uint32",
+                    "feesAvailableForWithdraw": "uint256",
+                    "ACTION_SELLER_CANNOT_CANCEL": "uint8",
+                    "ACTION_BUYER_CANCEL": "uint8",
+                    "ACTION_SELLER_CANCEL": "uint8",
+                    "ACTION_SELLER_REQUEST_CANCEL": "uint8",
+                    "ACTION_RELEASE": "uint8",
+                    "ACTION_DISPUTE": "uint8",
+                    "GAS_doRelease": "uint16",
+                    "GAS_doDisableSellerCancel": "uint16",
+                    "GAS_doBuyerCancel": "uint16",
+                    "GAS_doSellerCancel": "uint16",
+                    "GAS_doSellerRequestCancel": "uint16",
+                    "GAS_doResolveDispute": "uint16",
+                    "GAS_batchRelayBaseCost": "uint16"
+                }
+            },
+            "setRequestCancellationMinimumTime(uint32)": {
+                "argument": {
+                    "_newRequestCancellationMinimumTime": "uint32"
+                },
+                "contract": {
+                    "requestCancellationMinimumTime": "uint32",
+                    "feesAvailableForWithdraw": "uint256",
+                    "ACTION_SELLER_CANNOT_CANCEL": "uint8",
+                    "ACTION_BUYER_CANCEL": "uint8",
+                    "ACTION_SELLER_CANCEL": "uint8",
+                    "ACTION_SELLER_REQUEST_CANCEL": "uint8",
+                    "ACTION_RELEASE": "uint8",
+                    "ACTION_DISPUTE": "uint8",
+                    "GAS_doRelease": "uint16",
+                    "GAS_doDisableSellerCancel": "uint16",
+                    "GAS_doBuyerCancel": "uint16",
+                    "GAS_doSellerCancel": "uint16",
+                    "GAS_doSellerRequestCancel": "uint16",
+                    "GAS_doResolveDispute": "uint16",
+                    "GAS_batchRelayBaseCost": "uint16"
+                }
+            },
+            "transferToken(Token,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "requestCancellationMinimumTime": "uint32",
+                    "feesAvailableForWithdraw": "uint256",
+                    "ACTION_SELLER_CANNOT_CANCEL": "uint8",
+                    "ACTION_BUYER_CANCEL": "uint8",
+                    "ACTION_SELLER_CANCEL": "uint8",
+                    "ACTION_SELLER_REQUEST_CANCEL": "uint8",
+                    "ACTION_RELEASE": "uint8",
+                    "ACTION_DISPUTE": "uint8",
+                    "GAS_doRelease": "uint16",
+                    "GAS_doDisableSellerCancel": "uint16",
+                    "GAS_doBuyerCancel": "uint16",
+                    "GAS_doSellerCancel": "uint16",
+                    "GAS_doSellerRequestCancel": "uint16",
+                    "GAS_doResolveDispute": "uint16",
+                    "GAS_batchRelayBaseCost": "uint16"
+                }
+            },
+            "transferTokenFrom(Token,address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "requestCancellationMinimumTime": "uint32",
+                    "feesAvailableForWithdraw": "uint256",
+                    "ACTION_SELLER_CANNOT_CANCEL": "uint8",
+                    "ACTION_BUYER_CANCEL": "uint8",
+                    "ACTION_SELLER_CANCEL": "uint8",
+                    "ACTION_SELLER_REQUEST_CANCEL": "uint8",
+                    "ACTION_RELEASE": "uint8",
+                    "ACTION_DISPUTE": "uint8",
+                    "GAS_doRelease": "uint16",
+                    "GAS_doDisableSellerCancel": "uint16",
+                    "GAS_doBuyerCancel": "uint16",
+                    "GAS_doSellerCancel": "uint16",
+                    "GAS_doSellerRequestCancel": "uint16",
+                    "GAS_doResolveDispute": "uint16",
+                    "GAS_batchRelayBaseCost": "uint16"
+                }
+            },
+            "approveToken(Token,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "requestCancellationMinimumTime": "uint32",
+                    "feesAvailableForWithdraw": "uint256",
+                    "ACTION_SELLER_CANNOT_CANCEL": "uint8",
+                    "ACTION_BUYER_CANCEL": "uint8",
+                    "ACTION_SELLER_CANCEL": "uint8",
+                    "ACTION_SELLER_REQUEST_CANCEL": "uint8",
+                    "ACTION_RELEASE": "uint8",
+                    "ACTION_DISPUTE": "uint8",
+                    "GAS_doRelease": "uint16",
+                    "GAS_doDisableSellerCancel": "uint16",
+                    "GAS_doBuyerCancel": "uint16",
+                    "GAS_doSellerCancel": "uint16",
+                    "GAS_doSellerRequestCancel": "uint16",
+                    "GAS_doResolveDispute": "uint16",
+                    "GAS_batchRelayBaseCost": "uint16"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "requestCancellationMinimumTime": "uint32",
+                    "feesAvailableForWithdraw": "uint256",
+                    "ACTION_SELLER_CANNOT_CANCEL": "uint8",
+                    "ACTION_BUYER_CANCEL": "uint8",
+                    "ACTION_SELLER_CANCEL": "uint8",
+                    "ACTION_SELLER_REQUEST_CANCEL": "uint8",
+                    "ACTION_RELEASE": "uint8",
+                    "ACTION_DISPUTE": "uint8",
+                    "GAS_doRelease": "uint16",
+                    "GAS_doDisableSellerCancel": "uint16",
+                    "GAS_doBuyerCancel": "uint16",
+                    "GAS_doSellerCancel": "uint16",
+                    "GAS_doSellerRequestCancel": "uint16",
+                    "GAS_doResolveDispute": "uint16",
+                    "GAS_batchRelayBaseCost": "uint16"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "relayBuyerCancel(bytes16,address,address,uint256,uint16,uint128,uint8,bytes32,bytes32)": [
+                3816,
+                515
+            ],
+            "withdrawFees(address,uint256)": [
+                3672,
+                471
+            ],
+            "setRelayer(address)": [
+                2133,
+                317
+            ],
+            "setRequestCancellationMinimumTime(uint32)": [
+                601,
+                97
+            ],
+            "setArbitrator(address)": [
+                3749,
+                493
+            ],
+            "relayRelease(bytes16,address,address,uint256,uint16,uint128,uint8,bytes32,bytes32)": [
+                1657,
+                251
+            ],
+            "disableSellerCancel(bytes16,address,address,uint256,uint16)": [
+                1957,
+                295
+            ],
+            "createEscrow(bytes16,address,address,uint256,uint16,uint32,uint32,uint8,bytes32,bytes32)": [
+                4530,
+                625
+            ],
+            "relaySellerCancel(bytes16,address,address,uint256,uint16,uint128,uint8,bytes32,bytes32)": [
+                1236,
+                207
+            ],
+            "setOwner(address)": [
+                652,
+                119
+            ],
+            "resolveDispute(bytes16,address,address,uint256,uint16,uint8,bytes32,bytes32,uint8)": [
+                719,
+                141
+            ],
+            "release(bytes16,address,address,uint256,uint16)": [
+                4354,
+                603
+            ],
+            "relaySellerRequestCancel(bytes16,address,address,uint256,uint16,uint128,uint8,bytes32,bytes32)": [
+                356,
+                75
+            ],
+            "batchRelay(bytes16[],address[],address[],uint256[],uint16[],uint128[],uint8[],bytes32[],bytes32[],uint8[])": [
+                2637,
+                427
+            ],
+            "sellerRequestCancel(bytes16,address,address,uint256,uint16)": [
+                2200,
+                339
+            ],
+            "buyerCancel(bytes16,address,address,uint256,uint16)": [
+                925,
+                163
+            ],
+            "sellerCancel(bytes16,address,address,uint256,uint16)": [
+                1481,
+                229
+            ],
+            "relaySellerCannotCancel(bytes16,address,address,uint256,uint16,uint128,uint8,bytes32,bytes32)": [
+                3427,
+                449
+            ]
+        },
+        "block_CALL_mapping": {
+            "block13061_0": [
+                "_to.transfer(_value - _totalFees)"
+            ],
+            "block13061_7": [
+                "_to.transfer(_value - _totalFees)"
+            ],
+            "block9978": [
+                "_tokenContract.transfer(_transferTo, _value)"
+            ],
+            "jump5966": [
+                "_buyer.transfer((_value - _totalFees) * _buyerPercent / 100)",
+                "_buyer.transfer((_value - _totalFees) * _buyerPercent / 100)"
+            ],
+            "jump9978": [
+                "_tokenContract.transfer(_transferTo, _value)",
+                "_tokenContract.transfer(_transferTo, _value)"
+            ],
+            "jump12859": [
+                "ecrecover(_hash, _v, _r, _s)",
+                "ecrecover(_hash, _v, _r, _s)"
+            ],
+            "block13061_16": [
+                "_to.transfer(_value - _totalFees)"
+            ],
+            "block12859_1": [
+                "ecrecover(_hash, _v, _r, _s)"
+            ],
+            "block8538": [
+                "_tokenContract.transferFrom(_transferTo, _transferFrom, _value)"
+            ],
+            "jump13061_6": [
+                "_to.transfer(_value - _totalFees)",
+                "_to.transfer(_value - _totalFees)"
+            ],
+            "block13061": [
+                "_to.transfer(_value - _totalFees)"
+            ],
+            "jump12859_2": [
+                "ecrecover(_hash, _v, _r, _s)",
+                "ecrecover(_hash, _v, _r, _s)"
+            ],
+            "jump12859_3": [
+                "ecrecover(_hash, _v, _r, _s)",
+                "ecrecover(_hash, _v, _r, _s)"
+            ],
+            "block8160": [
+                "_tokenContract.approve(_spender, _value)"
+            ],
+            "block13061_9": [
+                "_to.transfer(_value - _totalFees)"
+            ],
+            "block13061_8": [
+                "_to.transfer(_value - _totalFees)"
+            ],
+            "block12859_3": [
+                "ecrecover(_hash, _v, _r, _s)"
+            ],
+            "block13061_3": [
+                "_to.transfer(_value - _totalFees)"
+            ],
+            "block13061_2": [
+                "_to.transfer(_value - _totalFees)"
+            ],
+            "block13061_1": [
+                "_to.transfer(_value - _totalFees)"
+            ],
+            "block12859_2": [
+                "ecrecover(_hash, _v, _r, _s)"
+            ],
+            "block13061_11": [
+                "_to.transfer(_value - _totalFees)"
+            ],
+            "block13061_6": [
+                "_to.transfer(_value - _totalFees)"
+            ],
+            "block13061_5": [
+                "_to.transfer(_value - _totalFees)"
+            ],
+            "block13061_4": [
+                "_to.transfer(_value - _totalFees)"
+            ],
+            "jump5281": [
+                "ecrecover(keccak256(_tradeID, ACTION_DISPUTE), _v, _r, _s)",
+                "ecrecover(keccak256(_tradeID, ACTION_DISPUTE), _v, _r, _s)"
+            ],
+            "jump13061_10": [
+                "_to.transfer(_value - _totalFees)",
+                "_to.transfer(_value - _totalFees)"
+            ],
+            "jump13061_13": [
+                "_to.transfer(_value - _totalFees)",
+                "_to.transfer(_value - _totalFees)"
+            ],
+            "jump13061_12": [
+                "_to.transfer(_value - _totalFees)",
+                "_to.transfer(_value - _totalFees)"
+            ],
+            "jump13061_15": [
+                "_to.transfer(_value - _totalFees)",
+                "_to.transfer(_value - _totalFees)"
+            ],
+            "jump13061_14": [
+                "_to.transfer(_value - _totalFees)",
+                "_to.transfer(_value - _totalFees)"
+            ],
+            "jump13061_17": [
+                "_to.transfer(_value - _totalFees)",
+                "_to.transfer(_value - _totalFees)"
+            ],
+            "jump13061_16": [
+                "_to.transfer(_value - _totalFees)",
+                "_to.transfer(_value - _totalFees)"
+            ],
+            "jump8538": [
+                "_tokenContract.transferFrom(_transferTo, _transferFrom, _value)",
+                "_tokenContract.transferFrom(_transferTo, _transferFrom, _value)"
+            ],
+            "jump13061_18": [
+                "_to.transfer(_value - _totalFees)",
+                "_to.transfer(_value - _totalFees)"
+            ],
+            "jump8160": [
+                "_tokenContract.approve(_spender, _value)",
+                "_tokenContract.approve(_spender, _value)"
+            ],
+            "block13061_19": [
+                "_to.transfer(_value - _totalFees)"
+            ],
+            "block6059": [
+                "_seller.transfer((_value - _totalFees) * (100 - _buyerPercent) / 100)"
+            ],
+            "block12859_4": [
+                "ecrecover(_hash, _v, _r, _s)"
+            ],
+            "jump12859_4": [
+                "ecrecover(_hash, _v, _r, _s)",
+                "ecrecover(_hash, _v, _r, _s)"
+            ],
+            "block5966": [
+                "_buyer.transfer((_value - _totalFees) * _buyerPercent / 100)"
+            ],
+            "block12859_0": [
+                "ecrecover(_hash, _v, _r, _s)"
+            ],
+            "jump12859_1": [
+                "ecrecover(_hash, _v, _r, _s)",
+                "ecrecover(_hash, _v, _r, _s)"
+            ],
+            "jump12859_0": [
+                "ecrecover(_hash, _v, _r, _s)",
+                "ecrecover(_hash, _v, _r, _s)"
+            ],
+            "block13061_17": [
+                "_to.transfer(_value - _totalFees)"
+            ],
+            "block13061_13": [
+                "_to.transfer(_value - _totalFees)"
+            ],
+            "block13061_15": [
+                "_to.transfer(_value - _totalFees)"
+            ],
+            "block13061_14": [
+                "_to.transfer(_value - _totalFees)"
+            ],
+            "jump6059": [
+                "_seller.transfer((_value - _totalFees) * (100 - _buyerPercent) / 100)",
+                "_seller.transfer((_value - _totalFees) * (100 - _buyerPercent) / 100)"
+            ],
+            "block13061_12": [
+                "_to.transfer(_value - _totalFees)"
+            ],
+            "jump13061": [
+                "_to.transfer(_value - _totalFees)",
+                "_to.transfer(_value - _totalFees)"
+            ],
+            "block13061_10": [
+                "_to.transfer(_value - _totalFees)"
+            ],
+            "jump13061_19": [
+                "_to.transfer(_value - _totalFees)",
+                "_to.transfer(_value - _totalFees)"
+            ],
+            "block9002": [
+                "ecrecover(keccak256(_tradeHash, _paymentWindowInSeconds, _expiry), _v, _r, _s)"
+            ],
+            "block12859": [
+                "ecrecover(_hash, _v, _r, _s)"
+            ],
+            "block13061_18": [
+                "_to.transfer(_value - _totalFees)"
+            ],
+            "jump9002": [
+                "ecrecover(keccak256(_tradeHash, _paymentWindowInSeconds, _expiry), _v, _r, _s)",
+                "ecrecover(keccak256(_tradeHash, _paymentWindowInSeconds, _expiry), _v, _r, _s)"
+            ],
+            "jump13061_5": [
+                "_to.transfer(_value - _totalFees)",
+                "_to.transfer(_value - _totalFees)"
+            ],
+            "jump13061_4": [
+                "_to.transfer(_value - _totalFees)",
+                "_to.transfer(_value - _totalFees)"
+            ],
+            "jump13061_7": [
+                "_to.transfer(_value - _totalFees)",
+                "_to.transfer(_value - _totalFees)"
+            ],
+            "jump7617": [
+                "_to.transfer(_amount)",
+                "_to.transfer(_amount)"
+            ],
+            "jump13061_1": [
+                "_to.transfer(_value - _totalFees)",
+                "_to.transfer(_value - _totalFees)"
+            ],
+            "jump13061_0": [
+                "_to.transfer(_value - _totalFees)",
+                "_to.transfer(_value - _totalFees)"
+            ],
+            "jump13061_3": [
+                "_to.transfer(_value - _totalFees)",
+                "_to.transfer(_value - _totalFees)"
+            ],
+            "jump13061_11": [
+                "_to.transfer(_value - _totalFees)",
+                "_to.transfer(_value - _totalFees)"
+            ],
+            "block7617": [
+                "_to.transfer(_amount)"
+            ],
+            "jump13061_2": [
+                "_to.transfer(_value - _totalFees)",
+                "_to.transfer(_value - _totalFees)"
+            ],
+            "jump13061_9": [
+                "_to.transfer(_value - _totalFees)",
+                "_to.transfer(_value - _totalFees)"
+            ],
+            "jump13061_8": [
+                "_to.transfer(_value - _totalFees)",
+                "_to.transfer(_value - _totalFees)"
+            ],
+            "block5281": [
+                "ecrecover(keccak256(_tradeID, ACTION_DISPUTE), _v, _r, _s)"
+            ]
+        }
+    }
+}

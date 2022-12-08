@@ -1,0 +1,279 @@
+{
+    "FlightDelayConstants": {
+        "function_list": [
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "MIN_OBSERVATIONS": "uint256",
+                    "MIN_PREMIUM": "uint256",
+                    "MAX_PREMIUM": "uint256",
+                    "MAX_PAYOUT": "uint256",
+                    "MIN_PREMIUM_EUR": "uint256",
+                    "MAX_PREMIUM_EUR": "uint256",
+                    "MAX_PAYOUT_EUR": "uint256",
+                    "MIN_PREMIUM_USD": "uint256",
+                    "MAX_PREMIUM_USD": "uint256",
+                    "MAX_PAYOUT_USD": "uint256",
+                    "MIN_PREMIUM_GBP": "uint256",
+                    "MAX_PREMIUM_GBP": "uint256",
+                    "MAX_PAYOUT_GBP": "uint256",
+                    "MAX_CUMULATED_WEIGHTED_PREMIUM": "uint256",
+                    "REWARD_PERCENT": "uint8",
+                    "RESERVE_PERCENT": "uint8",
+                    "WEIGHT_PATTERN": "uint8[6]",
+                    "MIN_TIME_BEFORE_DEPARTURE": "uint256",
+                    "CHECK_PAYOUT_OFFSET": "uint256",
+                    "MAX_FLIGHT_DURATION": "uint256",
+                    "CONTRACT_DEAD_LINE": "uint256",
+                    "ORACLIZE_GAS": "uint256",
+                    "ORACLIZE_GASPRICE": "uint256",
+                    "ORACLIZE_RATINGS_BASE_URL": "string",
+                    "ORACLIZE_RATINGS_QUERY": "string",
+                    "ORACLIZE_STATUS_BASE_URL": "string",
+                    "ORACLIZE_STATUS_QUERY": "string"
+                }
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "FlightDelayDatabaseModel": {
+        "function_list": [],
+        "initial_state": {},
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "FlightDelayControlledContract": {
+        "function_list": [
+            "setController(address)",
+            "destruct()",
+            "setContracts()",
+            "getContract(bytes32)"
+        ],
+        "initial_state": {
+            "setController(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "destruct()": {
+                "argument": {},
+                "contract": {}
+            },
+            "setContracts()": {
+                "argument": {},
+                "contract": {}
+            },
+            "getContract(bytes32)": {
+                "argument": {
+                    "_id": "bytes32"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "destruct()": [
+                92,
+                75
+            ],
+            "setContracts()": [
+                115,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "FlightDelayAccessController": {
+        "function_list": [
+            "setController(address)",
+            "destruct()",
+            "setContracts()",
+            "getContract(bytes32)",
+            "FlightDelayAccessController(address)",
+            "setContracts()",
+            "setPermissionById(uint8,bytes32)",
+            "fixPermission(address,address,uint8,bool)",
+            "setPermissionById(uint8,bytes32,bool)",
+            "setPermissionByAddress(uint8,address)",
+            "setPermissionByAddress(uint8,address,bool)",
+            "checkPermission(uint8,address)",
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "setController(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "destruct()": {
+                "argument": {},
+                "contract": {}
+            },
+            "setContracts()": {
+                "argument": {},
+                "contract": {}
+            },
+            "getContract(bytes32)": {
+                "argument": {
+                    "_id": "bytes32"
+                },
+                "contract": {}
+            },
+            "FlightDelayAccessController(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "setPermissionById(uint8,bytes32)": {
+                "argument": {
+                    "_perm": "uint8",
+                    "_id": "bytes32"
+                },
+                "contract": {}
+            },
+            "fixPermission(address,address,uint8,bool)": {
+                "argument": {
+                    "_perm": "uint8"
+                },
+                "contract": {}
+            },
+            "setPermissionById(uint8,bytes32,bool)": {
+                "argument": {
+                    "_perm": "uint8",
+                    "_id": "bytes32"
+                },
+                "contract": {}
+            },
+            "setPermissionByAddress(uint8,address)": {
+                "argument": {
+                    "_perm": "uint8"
+                },
+                "contract": {}
+            },
+            "setPermissionByAddress(uint8,address,bool)": {
+                "argument": {
+                    "_perm": "uint8"
+                },
+                "contract": {}
+            },
+            "checkPermission(uint8,address)": {
+                "argument": {
+                    "_perm": "uint8"
+                },
+                "contract": {}
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "fixPermission(address,address,uint8,bool)": [
+                377,
+                141
+            ],
+            "setPermissionByAddress(uint8,address,bool)": [
+                285,
+                119
+            ],
+            "checkPermission(uint8,address)": [
+                181,
+                97
+            ],
+            "setContracts()": [
+                717,
+                229
+            ],
+            "setPermissionByAddress(uint8,address)": [
+                563,
+                185
+            ],
+            "destruct()": [
+                158,
+                75
+            ],
+            "setPermissionById(uint8,bytes32,bool)": [
+                643,
+                207
+            ],
+            "setPermissionById(uint8,bytes32)": [
+                501,
+                163
+            ]
+        },
+        "block_CALL_mapping": {
+            "block2652": [
+                "FD_DB.setAccessControl(msg.sender, FD_CI.getContract(_id), _perm)"
+            ],
+            "jump2402": [
+                "FD_CI.getContract(_id)",
+                "FD_CI.getContract(_id)"
+            ],
+            "block1567": [
+                "FD_DB.setAccessControl(\n            msg.sender,\n            _addr,\n            _perm,\n            _access\n        )"
+            ],
+            "block3179": [
+                "FD_CI.getContract(_id)"
+            ],
+            "block2156": [
+                "FD_DB.setAccessControl(\n            _target,\n            _accessor,\n            _perm,\n            _access\n        )"
+            ],
+            "block2935": [
+                "FD_DB.setAccessControl(msg.sender, _addr, _perm)"
+            ],
+            "jump3860": [
+                "FD_CI.getContract(_id)",
+                "FD_CI.getContract(_id)"
+            ],
+            "block1773": [
+                "FD_CI.getContract('FD.Emergency')"
+            ],
+            "jump1773": [
+                "FD_CI.getContract('FD.Emergency')",
+                "FD_CI.getContract('FD.Emergency')"
+            ],
+            "block3860": [
+                "FD_CI.getContract(_id)"
+            ],
+            "jump2156": [
+                "FD_DB.setAccessControl(\n            _target,\n            _accessor,\n            _perm,\n            _access\n        )",
+                "FD_DB.setAccessControl(\n            _target,\n            _accessor,\n            _perm,\n            _access\n        )"
+            ],
+            "jump2935": [
+                "FD_DB.setAccessControl(msg.sender, _addr, _perm)",
+                "FD_DB.setAccessControl(msg.sender, _addr, _perm)"
+            ],
+            "block1233": [
+                "FD_DB.getAccessControl(msg.sender, _addr, _perm)"
+            ],
+            "jump3441": [
+                "FD_DB.setAccessControl(\n            msg.sender,\n            FD_CI.getContract(_id),\n            _perm,\n            _access\n        )",
+                "FD_DB.setAccessControl(\n            msg.sender,\n            FD_CI.getContract(_id),\n            _perm,\n            _access\n        )"
+            ],
+            "jump3179": [
+                "FD_CI.getContract(_id)",
+                "FD_CI.getContract(_id)"
+            ],
+            "jump2652": [
+                "FD_DB.setAccessControl(msg.sender, FD_CI.getContract(_id), _perm)",
+                "FD_DB.setAccessControl(msg.sender, FD_CI.getContract(_id), _perm)"
+            ],
+            "jump1233": [
+                "FD_DB.getAccessControl(msg.sender, _addr, _perm)",
+                "FD_DB.getAccessControl(msg.sender, _addr, _perm)"
+            ],
+            "block2402": [
+                "FD_CI.getContract(_id)"
+            ],
+            "block3441": [
+                "FD_DB.setAccessControl(\n            msg.sender,\n            FD_CI.getContract(_id),\n            _perm,\n            _access\n        )"
+            ],
+            "jump1567": [
+                "FD_DB.setAccessControl(\n            msg.sender,\n            _addr,\n            _perm,\n            _access\n        )",
+                "FD_DB.setAccessControl(\n            msg.sender,\n            _addr,\n            _perm,\n            _access\n        )"
+            ]
+        }
+    }
+}

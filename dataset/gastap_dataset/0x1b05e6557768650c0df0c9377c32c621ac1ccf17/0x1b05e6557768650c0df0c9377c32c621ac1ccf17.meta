@@ -1,0 +1,966 @@
+{
+    "NFTHouseGame": {
+        "function_list": [
+            "NFTHouseGame()",
+            "name()",
+            "symbol()",
+            "totalSupply()",
+            "balanceOf(address)",
+            "ownerOf(uint256)",
+            "approve(address,uint256)",
+            "approveAndTransfer(address,uint256)",
+            "takeOwnership(uint256)",
+            "transfer(address,uint256)",
+            "buildHouse()",
+            "buildAddition(uint256)",
+            "burnForInsurance(uint256)",
+            "purchaseAsset(uint256)",
+            "listAsset(uint256,uint256,uint256,uint256)",
+            "removeAssetListing(uint256)",
+            "getHouseTraits(uint256)",
+            "getTraitCount()",
+            "addNewColor(string)",
+            "addNewTrait(string,bool)",
+            "addNewStreetName(string)",
+            "addNewStreetType(string)",
+            "generatePresaleHouse()",
+            "setVariantCount(uint256,uint256)",
+            "withdrawFees(address)",
+            "withdrawDevFees(address)",
+            "transferGameOwnership(address)",
+            "generateHouse(address)",
+            "createListing(uint256,uint256,uint256,uint256)",
+            "calculateCurrentPrice(NFTHouseGame.Listing)",
+            "calculatePropertyValue(NFTHouseGame.HouseClasses,uint256,uint256,uint256)",
+            "randomHouseClass()",
+            "randomClassVariant(NFTHouseGame.HouseClasses)",
+            "randomBedrooms(NFTHouseGame.HouseClasses)",
+            "randomBathrooms(uint256)",
+            "calculateSquareFootage(NFTHouseGame.HouseClasses,uint256,uint256)",
+            "upgradeAsset(uint256)",
+            "processUpgrades(NFTHouseGame.House)",
+            "notRandom(uint256)",
+            "notRandomWithSeed(uint256,uint256)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "NFTHouseGame()": {
+                "argument": {},
+                "contract": {
+                    "presaleSales": "uint256",
+                    "presaleLimit": "uint256",
+                    "presaleDevFee": "uint256",
+                    "presaleProceeds": "uint256",
+                    "presaleDevPayout": "uint256",
+                    "buildPrice": "uint256",
+                    "additionPrice": "uint256",
+                    "saleFee": "uint256",
+                    "houses": "NFTHouseGame.House[]",
+                    "traits": "NFTHouseGame.Trait[]",
+                    "colors": "string[]",
+                    "streetNames": "string[]",
+                    "streetTypes": "string[]"
+                }
+            },
+            "name()": {
+                "argument": {},
+                "contract": {
+                    "presaleSales": "uint256",
+                    "presaleLimit": "uint256",
+                    "presaleDevFee": "uint256",
+                    "presaleProceeds": "uint256",
+                    "presaleDevPayout": "uint256",
+                    "buildPrice": "uint256",
+                    "additionPrice": "uint256",
+                    "saleFee": "uint256",
+                    "houses": "NFTHouseGame.House[]",
+                    "traits": "NFTHouseGame.Trait[]",
+                    "colors": "string[]",
+                    "streetNames": "string[]",
+                    "streetTypes": "string[]"
+                }
+            },
+            "symbol()": {
+                "argument": {},
+                "contract": {
+                    "presaleSales": "uint256",
+                    "presaleLimit": "uint256",
+                    "presaleDevFee": "uint256",
+                    "presaleProceeds": "uint256",
+                    "presaleDevPayout": "uint256",
+                    "buildPrice": "uint256",
+                    "additionPrice": "uint256",
+                    "saleFee": "uint256",
+                    "houses": "NFTHouseGame.House[]",
+                    "traits": "NFTHouseGame.Trait[]",
+                    "colors": "string[]",
+                    "streetNames": "string[]",
+                    "streetTypes": "string[]"
+                }
+            },
+            "totalSupply()": {
+                "argument": {},
+                "contract": {
+                    "presaleSales": "uint256",
+                    "presaleLimit": "uint256",
+                    "presaleDevFee": "uint256",
+                    "presaleProceeds": "uint256",
+                    "presaleDevPayout": "uint256",
+                    "buildPrice": "uint256",
+                    "additionPrice": "uint256",
+                    "saleFee": "uint256",
+                    "houses": "NFTHouseGame.House[]",
+                    "traits": "NFTHouseGame.Trait[]",
+                    "colors": "string[]",
+                    "streetNames": "string[]",
+                    "streetTypes": "string[]"
+                }
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "presaleSales": "uint256",
+                    "presaleLimit": "uint256",
+                    "presaleDevFee": "uint256",
+                    "presaleProceeds": "uint256",
+                    "presaleDevPayout": "uint256",
+                    "buildPrice": "uint256",
+                    "additionPrice": "uint256",
+                    "saleFee": "uint256",
+                    "houses": "NFTHouseGame.House[]",
+                    "traits": "NFTHouseGame.Trait[]",
+                    "colors": "string[]",
+                    "streetNames": "string[]",
+                    "streetTypes": "string[]"
+                }
+            },
+            "ownerOf(uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "presaleSales": "uint256",
+                    "presaleLimit": "uint256",
+                    "presaleDevFee": "uint256",
+                    "presaleProceeds": "uint256",
+                    "presaleDevPayout": "uint256",
+                    "buildPrice": "uint256",
+                    "additionPrice": "uint256",
+                    "saleFee": "uint256",
+                    "houses": "NFTHouseGame.House[]",
+                    "traits": "NFTHouseGame.Trait[]",
+                    "colors": "string[]",
+                    "streetNames": "string[]",
+                    "streetTypes": "string[]"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "presaleSales": "uint256",
+                    "presaleLimit": "uint256",
+                    "presaleDevFee": "uint256",
+                    "presaleProceeds": "uint256",
+                    "presaleDevPayout": "uint256",
+                    "buildPrice": "uint256",
+                    "additionPrice": "uint256",
+                    "saleFee": "uint256",
+                    "houses": "NFTHouseGame.House[]",
+                    "traits": "NFTHouseGame.Trait[]",
+                    "colors": "string[]",
+                    "streetNames": "string[]",
+                    "streetTypes": "string[]"
+                }
+            },
+            "approveAndTransfer(address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "presaleSales": "uint256",
+                    "presaleLimit": "uint256",
+                    "presaleDevFee": "uint256",
+                    "presaleProceeds": "uint256",
+                    "presaleDevPayout": "uint256",
+                    "buildPrice": "uint256",
+                    "additionPrice": "uint256",
+                    "saleFee": "uint256",
+                    "houses": "NFTHouseGame.House[]",
+                    "traits": "NFTHouseGame.Trait[]",
+                    "colors": "string[]",
+                    "streetNames": "string[]",
+                    "streetTypes": "string[]"
+                }
+            },
+            "takeOwnership(uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "presaleSales": "uint256",
+                    "presaleLimit": "uint256",
+                    "presaleDevFee": "uint256",
+                    "presaleProceeds": "uint256",
+                    "presaleDevPayout": "uint256",
+                    "buildPrice": "uint256",
+                    "additionPrice": "uint256",
+                    "saleFee": "uint256",
+                    "houses": "NFTHouseGame.House[]",
+                    "traits": "NFTHouseGame.Trait[]",
+                    "colors": "string[]",
+                    "streetNames": "string[]",
+                    "streetTypes": "string[]"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "presaleSales": "uint256",
+                    "presaleLimit": "uint256",
+                    "presaleDevFee": "uint256",
+                    "presaleProceeds": "uint256",
+                    "presaleDevPayout": "uint256",
+                    "buildPrice": "uint256",
+                    "additionPrice": "uint256",
+                    "saleFee": "uint256",
+                    "houses": "NFTHouseGame.House[]",
+                    "traits": "NFTHouseGame.Trait[]",
+                    "colors": "string[]",
+                    "streetNames": "string[]",
+                    "streetTypes": "string[]"
+                }
+            },
+            "buildHouse()": {
+                "argument": {},
+                "contract": {
+                    "presaleSales": "uint256",
+                    "presaleLimit": "uint256",
+                    "presaleDevFee": "uint256",
+                    "presaleProceeds": "uint256",
+                    "presaleDevPayout": "uint256",
+                    "buildPrice": "uint256",
+                    "additionPrice": "uint256",
+                    "saleFee": "uint256",
+                    "houses": "NFTHouseGame.House[]",
+                    "traits": "NFTHouseGame.Trait[]",
+                    "colors": "string[]",
+                    "streetNames": "string[]",
+                    "streetTypes": "string[]"
+                }
+            },
+            "buildAddition(uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "presaleSales": "uint256",
+                    "presaleLimit": "uint256",
+                    "presaleDevFee": "uint256",
+                    "presaleProceeds": "uint256",
+                    "presaleDevPayout": "uint256",
+                    "buildPrice": "uint256",
+                    "additionPrice": "uint256",
+                    "saleFee": "uint256",
+                    "houses": "NFTHouseGame.House[]",
+                    "traits": "NFTHouseGame.Trait[]",
+                    "colors": "string[]",
+                    "streetNames": "string[]",
+                    "streetTypes": "string[]"
+                }
+            },
+            "burnForInsurance(uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "presaleSales": "uint256",
+                    "presaleLimit": "uint256",
+                    "presaleDevFee": "uint256",
+                    "presaleProceeds": "uint256",
+                    "presaleDevPayout": "uint256",
+                    "buildPrice": "uint256",
+                    "additionPrice": "uint256",
+                    "saleFee": "uint256",
+                    "houses": "NFTHouseGame.House[]",
+                    "traits": "NFTHouseGame.Trait[]",
+                    "colors": "string[]",
+                    "streetNames": "string[]",
+                    "streetTypes": "string[]"
+                }
+            },
+            "purchaseAsset(uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "presaleSales": "uint256",
+                    "presaleLimit": "uint256",
+                    "presaleDevFee": "uint256",
+                    "presaleProceeds": "uint256",
+                    "presaleDevPayout": "uint256",
+                    "buildPrice": "uint256",
+                    "additionPrice": "uint256",
+                    "saleFee": "uint256",
+                    "houses": "NFTHouseGame.House[]",
+                    "traits": "NFTHouseGame.Trait[]",
+                    "colors": "string[]",
+                    "streetNames": "string[]",
+                    "streetTypes": "string[]"
+                }
+            },
+            "listAsset(uint256,uint256,uint256,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256",
+                    "_startPrice": "uint256",
+                    "_endPrice": "uint256",
+                    "_numDays": "uint256"
+                },
+                "contract": {
+                    "presaleSales": "uint256",
+                    "presaleLimit": "uint256",
+                    "presaleDevFee": "uint256",
+                    "presaleProceeds": "uint256",
+                    "presaleDevPayout": "uint256",
+                    "buildPrice": "uint256",
+                    "additionPrice": "uint256",
+                    "saleFee": "uint256",
+                    "houses": "NFTHouseGame.House[]",
+                    "traits": "NFTHouseGame.Trait[]",
+                    "colors": "string[]",
+                    "streetNames": "string[]",
+                    "streetTypes": "string[]"
+                }
+            },
+            "removeAssetListing(uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "presaleSales": "uint256",
+                    "presaleLimit": "uint256",
+                    "presaleDevFee": "uint256",
+                    "presaleProceeds": "uint256",
+                    "presaleDevPayout": "uint256",
+                    "buildPrice": "uint256",
+                    "additionPrice": "uint256",
+                    "saleFee": "uint256",
+                    "houses": "NFTHouseGame.House[]",
+                    "traits": "NFTHouseGame.Trait[]",
+                    "colors": "string[]",
+                    "streetNames": "string[]",
+                    "streetTypes": "string[]"
+                }
+            },
+            "getHouseTraits(uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "presaleSales": "uint256",
+                    "presaleLimit": "uint256",
+                    "presaleDevFee": "uint256",
+                    "presaleProceeds": "uint256",
+                    "presaleDevPayout": "uint256",
+                    "buildPrice": "uint256",
+                    "additionPrice": "uint256",
+                    "saleFee": "uint256",
+                    "houses": "NFTHouseGame.House[]",
+                    "traits": "NFTHouseGame.Trait[]",
+                    "colors": "string[]",
+                    "streetNames": "string[]",
+                    "streetTypes": "string[]"
+                }
+            },
+            "getTraitCount()": {
+                "argument": {},
+                "contract": {
+                    "presaleSales": "uint256",
+                    "presaleLimit": "uint256",
+                    "presaleDevFee": "uint256",
+                    "presaleProceeds": "uint256",
+                    "presaleDevPayout": "uint256",
+                    "buildPrice": "uint256",
+                    "additionPrice": "uint256",
+                    "saleFee": "uint256",
+                    "houses": "NFTHouseGame.House[]",
+                    "traits": "NFTHouseGame.Trait[]",
+                    "colors": "string[]",
+                    "streetNames": "string[]",
+                    "streetTypes": "string[]"
+                }
+            },
+            "addNewColor(string)": {
+                "argument": {
+                    "_colorCode": "string"
+                },
+                "contract": {
+                    "presaleSales": "uint256",
+                    "presaleLimit": "uint256",
+                    "presaleDevFee": "uint256",
+                    "presaleProceeds": "uint256",
+                    "presaleDevPayout": "uint256",
+                    "buildPrice": "uint256",
+                    "additionPrice": "uint256",
+                    "saleFee": "uint256",
+                    "houses": "NFTHouseGame.House[]",
+                    "traits": "NFTHouseGame.Trait[]",
+                    "colors": "string[]",
+                    "streetNames": "string[]",
+                    "streetTypes": "string[]"
+                }
+            },
+            "addNewTrait(string,bool)": {
+                "argument": {
+                    "_name": "string"
+                },
+                "contract": {
+                    "presaleSales": "uint256",
+                    "presaleLimit": "uint256",
+                    "presaleDevFee": "uint256",
+                    "presaleProceeds": "uint256",
+                    "presaleDevPayout": "uint256",
+                    "buildPrice": "uint256",
+                    "additionPrice": "uint256",
+                    "saleFee": "uint256",
+                    "houses": "NFTHouseGame.House[]",
+                    "traits": "NFTHouseGame.Trait[]",
+                    "colors": "string[]",
+                    "streetNames": "string[]",
+                    "streetTypes": "string[]"
+                }
+            },
+            "addNewStreetName(string)": {
+                "argument": {
+                    "_name": "string"
+                },
+                "contract": {
+                    "presaleSales": "uint256",
+                    "presaleLimit": "uint256",
+                    "presaleDevFee": "uint256",
+                    "presaleProceeds": "uint256",
+                    "presaleDevPayout": "uint256",
+                    "buildPrice": "uint256",
+                    "additionPrice": "uint256",
+                    "saleFee": "uint256",
+                    "houses": "NFTHouseGame.House[]",
+                    "traits": "NFTHouseGame.Trait[]",
+                    "colors": "string[]",
+                    "streetNames": "string[]",
+                    "streetTypes": "string[]"
+                }
+            },
+            "addNewStreetType(string)": {
+                "argument": {
+                    "_type": "string"
+                },
+                "contract": {
+                    "presaleSales": "uint256",
+                    "presaleLimit": "uint256",
+                    "presaleDevFee": "uint256",
+                    "presaleProceeds": "uint256",
+                    "presaleDevPayout": "uint256",
+                    "buildPrice": "uint256",
+                    "additionPrice": "uint256",
+                    "saleFee": "uint256",
+                    "houses": "NFTHouseGame.House[]",
+                    "traits": "NFTHouseGame.Trait[]",
+                    "colors": "string[]",
+                    "streetNames": "string[]",
+                    "streetTypes": "string[]"
+                }
+            },
+            "generatePresaleHouse()": {
+                "argument": {},
+                "contract": {
+                    "presaleSales": "uint256",
+                    "presaleLimit": "uint256",
+                    "presaleDevFee": "uint256",
+                    "presaleProceeds": "uint256",
+                    "presaleDevPayout": "uint256",
+                    "buildPrice": "uint256",
+                    "additionPrice": "uint256",
+                    "saleFee": "uint256",
+                    "houses": "NFTHouseGame.House[]",
+                    "traits": "NFTHouseGame.Trait[]",
+                    "colors": "string[]",
+                    "streetNames": "string[]",
+                    "streetTypes": "string[]"
+                }
+            },
+            "setVariantCount(uint256,uint256)": {
+                "argument": {
+                    "_houseClass": "uint256",
+                    "_variantCount": "uint256"
+                },
+                "contract": {
+                    "presaleSales": "uint256",
+                    "presaleLimit": "uint256",
+                    "presaleDevFee": "uint256",
+                    "presaleProceeds": "uint256",
+                    "presaleDevPayout": "uint256",
+                    "buildPrice": "uint256",
+                    "additionPrice": "uint256",
+                    "saleFee": "uint256",
+                    "houses": "NFTHouseGame.House[]",
+                    "traits": "NFTHouseGame.Trait[]",
+                    "colors": "string[]",
+                    "streetNames": "string[]",
+                    "streetTypes": "string[]"
+                }
+            },
+            "withdrawFees(address)": {
+                "argument": {},
+                "contract": {
+                    "presaleSales": "uint256",
+                    "presaleLimit": "uint256",
+                    "presaleDevFee": "uint256",
+                    "presaleProceeds": "uint256",
+                    "presaleDevPayout": "uint256",
+                    "buildPrice": "uint256",
+                    "additionPrice": "uint256",
+                    "saleFee": "uint256",
+                    "houses": "NFTHouseGame.House[]",
+                    "traits": "NFTHouseGame.Trait[]",
+                    "colors": "string[]",
+                    "streetNames": "string[]",
+                    "streetTypes": "string[]"
+                }
+            },
+            "withdrawDevFees(address)": {
+                "argument": {},
+                "contract": {
+                    "presaleSales": "uint256",
+                    "presaleLimit": "uint256",
+                    "presaleDevFee": "uint256",
+                    "presaleProceeds": "uint256",
+                    "presaleDevPayout": "uint256",
+                    "buildPrice": "uint256",
+                    "additionPrice": "uint256",
+                    "saleFee": "uint256",
+                    "houses": "NFTHouseGame.House[]",
+                    "traits": "NFTHouseGame.Trait[]",
+                    "colors": "string[]",
+                    "streetNames": "string[]",
+                    "streetTypes": "string[]"
+                }
+            },
+            "transferGameOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "presaleSales": "uint256",
+                    "presaleLimit": "uint256",
+                    "presaleDevFee": "uint256",
+                    "presaleProceeds": "uint256",
+                    "presaleDevPayout": "uint256",
+                    "buildPrice": "uint256",
+                    "additionPrice": "uint256",
+                    "saleFee": "uint256",
+                    "houses": "NFTHouseGame.House[]",
+                    "traits": "NFTHouseGame.Trait[]",
+                    "colors": "string[]",
+                    "streetNames": "string[]",
+                    "streetTypes": "string[]"
+                }
+            },
+            "generateHouse(address)": {
+                "argument": {},
+                "contract": {
+                    "presaleSales": "uint256",
+                    "presaleLimit": "uint256",
+                    "presaleDevFee": "uint256",
+                    "presaleProceeds": "uint256",
+                    "presaleDevPayout": "uint256",
+                    "buildPrice": "uint256",
+                    "additionPrice": "uint256",
+                    "saleFee": "uint256",
+                    "houses": "NFTHouseGame.House[]",
+                    "traits": "NFTHouseGame.Trait[]",
+                    "colors": "string[]",
+                    "streetNames": "string[]",
+                    "streetTypes": "string[]"
+                }
+            },
+            "createListing(uint256,uint256,uint256,uint256)": {
+                "argument": {
+                    "tokenId": "uint256",
+                    "startPrice": "uint256",
+                    "endPrice": "uint256",
+                    "numDays": "uint256"
+                },
+                "contract": {
+                    "presaleSales": "uint256",
+                    "presaleLimit": "uint256",
+                    "presaleDevFee": "uint256",
+                    "presaleProceeds": "uint256",
+                    "presaleDevPayout": "uint256",
+                    "buildPrice": "uint256",
+                    "additionPrice": "uint256",
+                    "saleFee": "uint256",
+                    "houses": "NFTHouseGame.House[]",
+                    "traits": "NFTHouseGame.Trait[]",
+                    "colors": "string[]",
+                    "streetNames": "string[]",
+                    "streetTypes": "string[]"
+                }
+            },
+            "calculateCurrentPrice(NFTHouseGame.Listing)": {
+                "argument": {},
+                "contract": {
+                    "presaleSales": "uint256",
+                    "presaleLimit": "uint256",
+                    "presaleDevFee": "uint256",
+                    "presaleProceeds": "uint256",
+                    "presaleDevPayout": "uint256",
+                    "buildPrice": "uint256",
+                    "additionPrice": "uint256",
+                    "saleFee": "uint256",
+                    "houses": "NFTHouseGame.House[]",
+                    "traits": "NFTHouseGame.Trait[]",
+                    "colors": "string[]",
+                    "streetNames": "string[]",
+                    "streetTypes": "string[]"
+                }
+            },
+            "calculatePropertyValue(NFTHouseGame.HouseClasses,uint256,uint256,uint256)": {
+                "argument": {
+                    "squareFootage": "uint256",
+                    "numBathrooms": "uint256",
+                    "numBedrooms": "uint256"
+                },
+                "contract": {
+                    "presaleSales": "uint256",
+                    "presaleLimit": "uint256",
+                    "presaleDevFee": "uint256",
+                    "presaleProceeds": "uint256",
+                    "presaleDevPayout": "uint256",
+                    "buildPrice": "uint256",
+                    "additionPrice": "uint256",
+                    "saleFee": "uint256",
+                    "houses": "NFTHouseGame.House[]",
+                    "traits": "NFTHouseGame.Trait[]",
+                    "colors": "string[]",
+                    "streetNames": "string[]",
+                    "streetTypes": "string[]"
+                }
+            },
+            "randomHouseClass()": {
+                "argument": {},
+                "contract": {
+                    "presaleSales": "uint256",
+                    "presaleLimit": "uint256",
+                    "presaleDevFee": "uint256",
+                    "presaleProceeds": "uint256",
+                    "presaleDevPayout": "uint256",
+                    "buildPrice": "uint256",
+                    "additionPrice": "uint256",
+                    "saleFee": "uint256",
+                    "houses": "NFTHouseGame.House[]",
+                    "traits": "NFTHouseGame.Trait[]",
+                    "colors": "string[]",
+                    "streetNames": "string[]",
+                    "streetTypes": "string[]"
+                }
+            },
+            "randomClassVariant(NFTHouseGame.HouseClasses)": {
+                "argument": {},
+                "contract": {
+                    "presaleSales": "uint256",
+                    "presaleLimit": "uint256",
+                    "presaleDevFee": "uint256",
+                    "presaleProceeds": "uint256",
+                    "presaleDevPayout": "uint256",
+                    "buildPrice": "uint256",
+                    "additionPrice": "uint256",
+                    "saleFee": "uint256",
+                    "houses": "NFTHouseGame.House[]",
+                    "traits": "NFTHouseGame.Trait[]",
+                    "colors": "string[]",
+                    "streetNames": "string[]",
+                    "streetTypes": "string[]"
+                }
+            },
+            "randomBedrooms(NFTHouseGame.HouseClasses)": {
+                "argument": {},
+                "contract": {
+                    "presaleSales": "uint256",
+                    "presaleLimit": "uint256",
+                    "presaleDevFee": "uint256",
+                    "presaleProceeds": "uint256",
+                    "presaleDevPayout": "uint256",
+                    "buildPrice": "uint256",
+                    "additionPrice": "uint256",
+                    "saleFee": "uint256",
+                    "houses": "NFTHouseGame.House[]",
+                    "traits": "NFTHouseGame.Trait[]",
+                    "colors": "string[]",
+                    "streetNames": "string[]",
+                    "streetTypes": "string[]"
+                }
+            },
+            "randomBathrooms(uint256)": {
+                "argument": {
+                    "numBedrooms": "uint256"
+                },
+                "contract": {
+                    "presaleSales": "uint256",
+                    "presaleLimit": "uint256",
+                    "presaleDevFee": "uint256",
+                    "presaleProceeds": "uint256",
+                    "presaleDevPayout": "uint256",
+                    "buildPrice": "uint256",
+                    "additionPrice": "uint256",
+                    "saleFee": "uint256",
+                    "houses": "NFTHouseGame.House[]",
+                    "traits": "NFTHouseGame.Trait[]",
+                    "colors": "string[]",
+                    "streetNames": "string[]",
+                    "streetTypes": "string[]"
+                }
+            },
+            "calculateSquareFootage(NFTHouseGame.HouseClasses,uint256,uint256)": {
+                "argument": {
+                    "numBedrooms": "uint256",
+                    "numBathrooms": "uint256"
+                },
+                "contract": {
+                    "presaleSales": "uint256",
+                    "presaleLimit": "uint256",
+                    "presaleDevFee": "uint256",
+                    "presaleProceeds": "uint256",
+                    "presaleDevPayout": "uint256",
+                    "buildPrice": "uint256",
+                    "additionPrice": "uint256",
+                    "saleFee": "uint256",
+                    "houses": "NFTHouseGame.House[]",
+                    "traits": "NFTHouseGame.Trait[]",
+                    "colors": "string[]",
+                    "streetNames": "string[]",
+                    "streetTypes": "string[]"
+                }
+            },
+            "upgradeAsset(uint256)": {
+                "argument": {
+                    "tokenId": "uint256"
+                },
+                "contract": {
+                    "presaleSales": "uint256",
+                    "presaleLimit": "uint256",
+                    "presaleDevFee": "uint256",
+                    "presaleProceeds": "uint256",
+                    "presaleDevPayout": "uint256",
+                    "buildPrice": "uint256",
+                    "additionPrice": "uint256",
+                    "saleFee": "uint256",
+                    "houses": "NFTHouseGame.House[]",
+                    "traits": "NFTHouseGame.Trait[]",
+                    "colors": "string[]",
+                    "streetNames": "string[]",
+                    "streetTypes": "string[]"
+                }
+            },
+            "processUpgrades(NFTHouseGame.House)": {
+                "argument": {},
+                "contract": {
+                    "presaleSales": "uint256",
+                    "presaleLimit": "uint256",
+                    "presaleDevFee": "uint256",
+                    "presaleProceeds": "uint256",
+                    "presaleDevPayout": "uint256",
+                    "buildPrice": "uint256",
+                    "additionPrice": "uint256",
+                    "saleFee": "uint256",
+                    "houses": "NFTHouseGame.House[]",
+                    "traits": "NFTHouseGame.Trait[]",
+                    "colors": "string[]",
+                    "streetNames": "string[]",
+                    "streetTypes": "string[]"
+                }
+            },
+            "notRandom(uint256)": {
+                "argument": {
+                    "lessThan": "uint256"
+                },
+                "contract": {
+                    "presaleSales": "uint256",
+                    "presaleLimit": "uint256",
+                    "presaleDevFee": "uint256",
+                    "presaleProceeds": "uint256",
+                    "presaleDevPayout": "uint256",
+                    "buildPrice": "uint256",
+                    "additionPrice": "uint256",
+                    "saleFee": "uint256",
+                    "houses": "NFTHouseGame.House[]",
+                    "traits": "NFTHouseGame.Trait[]",
+                    "colors": "string[]",
+                    "streetNames": "string[]",
+                    "streetTypes": "string[]"
+                }
+            },
+            "notRandomWithSeed(uint256,uint256)": {
+                "argument": {
+                    "lessThan": "uint256",
+                    "seed": "uint256"
+                },
+                "contract": {
+                    "presaleSales": "uint256",
+                    "presaleLimit": "uint256",
+                    "presaleDevFee": "uint256",
+                    "presaleProceeds": "uint256",
+                    "presaleDevPayout": "uint256",
+                    "buildPrice": "uint256",
+                    "additionPrice": "uint256",
+                    "saleFee": "uint256",
+                    "houses": "NFTHouseGame.House[]",
+                    "traits": "NFTHouseGame.Trait[]",
+                    "colors": "string[]",
+                    "streetNames": "string[]",
+                    "streetTypes": "string[]"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "generatePresaleHouse()": [
+                959,
+                207
+            ],
+            "notRandomWithSeed(uint256,uint256)": [
+                2055,
+                537
+            ],
+            "withdrawDevFees(address)": [
+                3395,
+                801
+            ],
+            "addNewTrait(string,bool)": [
+                3083,
+                713
+            ],
+            "name()": [
+                510,
+                75
+            ],
+            "totalSupply()": [
+                916,
+                185
+            ],
+            "addNewStreetName(string)": [
+                3462,
+                823
+            ],
+            "ownerOf(uint256)": [
+                1674,
+                427
+            ],
+            "approve(address,uint256)": [
+                654,
+                97
+            ],
+            "buildHouse()": [
+                3904,
+                955
+            ],
+            "removeAssetListing(uint256)": [
+                3772,
+                911
+            ],
+            "takeOwnership(uint256)": [
+                3038,
+                691
+            ],
+            "getTraitCount()": [
+                3200,
+                735
+            ],
+            "symbol()": [
+                2130,
+                559
+            ],
+            "listAsset(uint256,uint256,uint256,uint256)": [
+                731,
+                119
+            ],
+            "burnForInsurance(uint256)": [
+                1014,
+                251
+            ],
+            "balanceOf(address)": [
+                1968,
+                515
+            ],
+            "getHouseTraits(uint256)": [
+                1421,
+                361
+            ],
+            "buildAddition(uint256)": [
+                982,
+                229
+            ],
+            "purchaseAsset(uint256)": [
+                2379,
+                603
+            ],
+            "transferGameOwnership(address)": [
+                1826,
+                471
+            ],
+            "notRandom(uint256)": [
+                3330,
+                779
+            ],
+            "addNewStreetType(string)": [
+                1526,
+                383
+            ],
+            "setVariantCount(uint256,uint256)": [
+                1279,
+                317
+            ],
+            "withdrawFees(address)": [
+                806,
+                141
+            ],
+            "transfer(address,uint256)": [
+                2411,
+                625
+            ],
+            "addNewColor(string)": [
+                2274,
+                581
+            ]
+        },
+        "block_CALL_mapping": {
+            "block4517": [
+                "gameDeveloper.transfer(devsShare)"
+            ],
+            "block10104": [
+                "_destination.transfer(devsShare)"
+            ],
+            "block7598": [
+                "houses[_tokenId].owner.transfer(sellerProceeds)"
+            ],
+            "jump10104": [
+                "_destination.transfer(devsShare)",
+                "_destination.transfer(devsShare)"
+            ],
+            "block4638": [
+                "_destination.transfer(this.balance)"
+            ],
+            "jump4638": [
+                "_destination.transfer(this.balance)",
+                "_destination.transfer(this.balance)"
+            ],
+            "jump4517": [
+                "gameDeveloper.transfer(devsShare)",
+                "gameDeveloper.transfer(devsShare)"
+            ],
+            "jump7598": [
+                "houses[_tokenId].owner.transfer(sellerProceeds)",
+                "houses[_tokenId].owner.transfer(sellerProceeds)"
+            ]
+        }
+    }
+}

@@ -1,0 +1,233 @@
+{
+    "Token": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                626,
+                185
+            ],
+            "transfer(address,uint256)": [
+                887,
+                251
+            ]
+        },
+        "block_CALL_mapping": {
+            "block2776": [
+                "AbstractToken(tokenAddress).balanceOf(this)"
+            ],
+            "block3033": [
+                "AbstractToken(tokenAddress).transfer(owner, balance)"
+            ],
+            "jump2776": [
+                "AbstractToken(tokenAddress).balanceOf(this)",
+                "AbstractToken(tokenAddress).balanceOf(this)"
+            ],
+            "jump3033": [
+                "AbstractToken(tokenAddress).transfer(owner, balance)",
+                "AbstractToken(tokenAddress).transfer(owner, balance)"
+            ]
+        }
+    },
+    "Sale": {
+        "function_list": [
+            "Sale()",
+            "fallback()",
+            "init(uint256,uint256,uint256)",
+            "changeOwner(address)",
+            "acceptOwnership()",
+            "setNotice(string)",
+            "withdraw()",
+            "withdrawSome(uint256)",
+            "withdrawToken(address)",
+            "refundToken(address,address,uint256)"
+        ],
+        "initial_state": {
+            "Sale()": {
+                "argument": {},
+                "contract": {
+                    "notice": "string",
+                    "start": "uint256",
+                    "end": "uint256",
+                    "cap": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "notice": "string",
+                    "start": "uint256",
+                    "end": "uint256",
+                    "cap": "uint256"
+                }
+            },
+            "init(uint256,uint256,uint256)": {
+                "argument": {
+                    "_start": "uint256",
+                    "_end": "uint256",
+                    "_cap": "uint256"
+                },
+                "contract": {
+                    "notice": "string",
+                    "start": "uint256",
+                    "end": "uint256",
+                    "cap": "uint256"
+                }
+            },
+            "changeOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "notice": "string",
+                    "start": "uint256",
+                    "end": "uint256",
+                    "cap": "uint256"
+                }
+            },
+            "acceptOwnership()": {
+                "argument": {},
+                "contract": {
+                    "notice": "string",
+                    "start": "uint256",
+                    "end": "uint256",
+                    "cap": "uint256"
+                }
+            },
+            "setNotice(string)": {
+                "argument": {
+                    "note": "string"
+                },
+                "contract": {
+                    "notice": "string",
+                    "start": "uint256",
+                    "end": "uint256",
+                    "cap": "uint256"
+                }
+            },
+            "withdraw()": {
+                "argument": {},
+                "contract": {
+                    "notice": "string",
+                    "start": "uint256",
+                    "end": "uint256",
+                    "cap": "uint256"
+                }
+            },
+            "withdrawSome(uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "notice": "string",
+                    "start": "uint256",
+                    "end": "uint256",
+                    "cap": "uint256"
+                }
+            },
+            "withdrawToken(address)": {
+                "argument": {},
+                "contract": {
+                    "notice": "string",
+                    "start": "uint256",
+                    "end": "uint256",
+                    "cap": "uint256"
+                }
+            },
+            "refundToken(address,address,uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {
+                    "notice": "string",
+                    "start": "uint256",
+                    "end": "uint256",
+                    "cap": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "refundToken(address,address,uint256)": [
+                1001,
+                229
+            ],
+            "withdrawToken(address)": [
+                782,
+                163
+            ],
+            "init(uint256,uint256,uint256)": [
+                849,
+                185
+            ],
+            "setNotice(string)": [
+                654,
+                119
+            ],
+            "withdraw()": [
+                631,
+                97
+            ],
+            "withdrawSome(uint256)": [
+                1368,
+                317
+            ],
+            "changeOwner(address)": [
+                1301,
+                295
+            ],
+            "acceptOwnership()": [
+                759,
+                141
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump2400": [
+                "t.balanceOf(this)",
+                "t.balanceOf(this)"
+            ],
+            "jump3620": [
+                "msg.sender.transfer(value)",
+                "msg.sender.transfer(value)"
+            ],
+            "block2400": [
+                "t.balanceOf(this)"
+            ],
+            "block3079": [
+                "t.transfer(sender, amount)"
+            ],
+            "jump3079": [
+                "t.transfer(sender, amount)",
+                "t.transfer(sender, amount)"
+            ],
+            "block1683": [
+                "msg.sender.transfer(this.balance)"
+            ],
+            "jump2592": [
+                "t.transfer(msg.sender, t.balanceOf(this))",
+                "t.transfer(msg.sender, t.balanceOf(this))"
+            ],
+            "jump1683": [
+                "msg.sender.transfer(this.balance)",
+                "msg.sender.transfer(this.balance)"
+            ],
+            "block2592": [
+                "t.transfer(msg.sender, t.balanceOf(this))"
+            ],
+            "block3620": [
+                "msg.sender.transfer(value)"
+            ]
+        }
+    }
+}

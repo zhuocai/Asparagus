@@ -1,0 +1,961 @@
+{
+    "BasicAccessControl": {
+        "function_list": [
+            "BasicAccessControl()",
+            "ChangeOwner(address)",
+            "Kill()",
+            "AddModerator(address)",
+            "RemoveModerator(address)"
+        ],
+        "initial_state": {
+            "BasicAccessControl()": {
+                "argument": {},
+                "contract": {
+                    "moderators": "address[]"
+                }
+            },
+            "ChangeOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "moderators": "address[]"
+                }
+            },
+            "Kill()": {
+                "argument": {},
+                "contract": {
+                    "moderators": "address[]"
+                }
+            },
+            "AddModerator(address)": {
+                "argument": {},
+                "contract": {
+                    "moderators": "address[]"
+                }
+            },
+            "RemoveModerator(address)": {
+                "argument": {},
+                "contract": {
+                    "moderators": "address[]"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "Kill()": [
+                455,
+                163
+            ],
+            "RemoveModerator(address)": [
+                279,
+                119
+            ],
+            "AddModerator(address)": [
+                125,
+                75
+            ],
+            "ChangeOwner(address)": [
+                478,
+                185
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "TokenRecipient": {
+        "function_list": [
+            "receiveApproval(address,uint256,address,bytes)"
+        ],
+        "initial_state": {
+            "receiveApproval(address,uint256,address,bytes)": {
+                "argument": {
+                    "_value": "uint256",
+                    "_extraData": "bytes"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "receiveApproval(address,uint256,address,bytes)": [
+                145,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "block544": [
+                "t.transferFrom(from, this, value)"
+            ],
+            "jump544": [
+                "t.transferFrom(from, this, value)",
+                "t.transferFrom(from, this, value)"
+            ]
+        }
+    },
+    "TokenERC20": {
+        "function_list": [
+            "_transfer(address,address,uint256)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "approveAndCall(address,uint256,bytes)",
+            "burn(uint256)",
+            "burnFrom(address,uint256)"
+        ],
+        "initial_state": {
+            "_transfer(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "approveAndCall(address,uint256,bytes)": {
+                "argument": {
+                    "_value": "uint256",
+                    "_extraData": "bytes"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "burn(uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "burnFrom(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                158,
+                75
+            ],
+            "burn(uint256)": [
+                435,
+                141
+            ],
+            "burnFrom(address,uint256)": [
+                591,
+                185
+            ],
+            "transferFrom(address,address,uint256)": [
+                302,
+                119
+            ],
+            "approveAndCall(address,uint256,bytes)": [
+                769,
+                229
+            ],
+            "transfer(address,uint256)": [
+                692,
+                207
+            ]
+        },
+        "block_CALL_mapping": {
+            "block2687": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ],
+            "jump2687": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)",
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ]
+        }
+    },
+    "BTHToken": {
+        "function_list": [
+            "callbackCrossFork(uint64,uint256,bytes32)",
+            "_transfer(address,address,uint256)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "approveAndCall(address,uint256,bytes)",
+            "burn(uint256)",
+            "burnFrom(address,uint256)",
+            "BasicAccessControl()",
+            "ChangeOwner(address)",
+            "Kill()",
+            "AddModerator(address)",
+            "RemoveModerator(address)",
+            "BTHToken(address,address,address,address)",
+            "fallback()",
+            "setCrossForkDistribution(address)",
+            "setDepositAddress(address,address,address)",
+            "setPrices(uint256,uint256)",
+            "setReferBenefitRate(uint256)",
+            "toggleCrossForking()",
+            "toggleTrading()",
+            "claimReferBenefit(string,address)",
+            "revertCrossFork(string)",
+            "getCrossForkId(string)",
+            "getCrossForkData(uint64)",
+            "getReferBenefit(string)",
+            "callbackCrossFork(uint64,uint256,bytes32)",
+            "triggerCrossFork(string)",
+            "_transfer(address,address,uint256)",
+            "freezeAccount(address,bool)",
+            "buy()",
+            "sell(uint256)",
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "callbackCrossFork(uint64,uint256,bytes32)": {
+                "argument": {
+                    "_requestId": "uint64",
+                    "_amount": "uint256",
+                    "_referCodeHash": "bytes32"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "crossForkCount": "uint64",
+                    "referBenefitRate": "uint256",
+                    "satoshi_bth_decimals": "uint256",
+                    "crossForkFund": "uint256",
+                    "marketingFund": "uint256",
+                    "userPoolFund": "uint256",
+                    "developerFund": "uint256",
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256"
+                }
+            },
+            "_transfer(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "crossForkCount": "uint64",
+                    "referBenefitRate": "uint256",
+                    "satoshi_bth_decimals": "uint256",
+                    "crossForkFund": "uint256",
+                    "marketingFund": "uint256",
+                    "userPoolFund": "uint256",
+                    "developerFund": "uint256",
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "crossForkCount": "uint64",
+                    "referBenefitRate": "uint256",
+                    "satoshi_bth_decimals": "uint256",
+                    "crossForkFund": "uint256",
+                    "marketingFund": "uint256",
+                    "userPoolFund": "uint256",
+                    "developerFund": "uint256",
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "crossForkCount": "uint64",
+                    "referBenefitRate": "uint256",
+                    "satoshi_bth_decimals": "uint256",
+                    "crossForkFund": "uint256",
+                    "marketingFund": "uint256",
+                    "userPoolFund": "uint256",
+                    "developerFund": "uint256",
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "crossForkCount": "uint64",
+                    "referBenefitRate": "uint256",
+                    "satoshi_bth_decimals": "uint256",
+                    "crossForkFund": "uint256",
+                    "marketingFund": "uint256",
+                    "userPoolFund": "uint256",
+                    "developerFund": "uint256",
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256"
+                }
+            },
+            "approveAndCall(address,uint256,bytes)": {
+                "argument": {
+                    "_value": "uint256",
+                    "_extraData": "bytes"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "crossForkCount": "uint64",
+                    "referBenefitRate": "uint256",
+                    "satoshi_bth_decimals": "uint256",
+                    "crossForkFund": "uint256",
+                    "marketingFund": "uint256",
+                    "userPoolFund": "uint256",
+                    "developerFund": "uint256",
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256"
+                }
+            },
+            "burn(uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "crossForkCount": "uint64",
+                    "referBenefitRate": "uint256",
+                    "satoshi_bth_decimals": "uint256",
+                    "crossForkFund": "uint256",
+                    "marketingFund": "uint256",
+                    "userPoolFund": "uint256",
+                    "developerFund": "uint256",
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256"
+                }
+            },
+            "burnFrom(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "crossForkCount": "uint64",
+                    "referBenefitRate": "uint256",
+                    "satoshi_bth_decimals": "uint256",
+                    "crossForkFund": "uint256",
+                    "marketingFund": "uint256",
+                    "userPoolFund": "uint256",
+                    "developerFund": "uint256",
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256"
+                }
+            },
+            "BasicAccessControl()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "crossForkCount": "uint64",
+                    "referBenefitRate": "uint256",
+                    "satoshi_bth_decimals": "uint256",
+                    "crossForkFund": "uint256",
+                    "marketingFund": "uint256",
+                    "userPoolFund": "uint256",
+                    "developerFund": "uint256",
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256"
+                }
+            },
+            "ChangeOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "crossForkCount": "uint64",
+                    "referBenefitRate": "uint256",
+                    "satoshi_bth_decimals": "uint256",
+                    "crossForkFund": "uint256",
+                    "marketingFund": "uint256",
+                    "userPoolFund": "uint256",
+                    "developerFund": "uint256",
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256"
+                }
+            },
+            "Kill()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "crossForkCount": "uint64",
+                    "referBenefitRate": "uint256",
+                    "satoshi_bth_decimals": "uint256",
+                    "crossForkFund": "uint256",
+                    "marketingFund": "uint256",
+                    "userPoolFund": "uint256",
+                    "developerFund": "uint256",
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256"
+                }
+            },
+            "AddModerator(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "crossForkCount": "uint64",
+                    "referBenefitRate": "uint256",
+                    "satoshi_bth_decimals": "uint256",
+                    "crossForkFund": "uint256",
+                    "marketingFund": "uint256",
+                    "userPoolFund": "uint256",
+                    "developerFund": "uint256",
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256"
+                }
+            },
+            "RemoveModerator(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "crossForkCount": "uint64",
+                    "referBenefitRate": "uint256",
+                    "satoshi_bth_decimals": "uint256",
+                    "crossForkFund": "uint256",
+                    "marketingFund": "uint256",
+                    "userPoolFund": "uint256",
+                    "developerFund": "uint256",
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256"
+                }
+            },
+            "BTHToken(address,address,address,address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "crossForkCount": "uint64",
+                    "referBenefitRate": "uint256",
+                    "satoshi_bth_decimals": "uint256",
+                    "crossForkFund": "uint256",
+                    "marketingFund": "uint256",
+                    "userPoolFund": "uint256",
+                    "developerFund": "uint256",
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "crossForkCount": "uint64",
+                    "referBenefitRate": "uint256",
+                    "satoshi_bth_decimals": "uint256",
+                    "crossForkFund": "uint256",
+                    "marketingFund": "uint256",
+                    "userPoolFund": "uint256",
+                    "developerFund": "uint256",
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256"
+                }
+            },
+            "setCrossForkDistribution(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "crossForkCount": "uint64",
+                    "referBenefitRate": "uint256",
+                    "satoshi_bth_decimals": "uint256",
+                    "crossForkFund": "uint256",
+                    "marketingFund": "uint256",
+                    "userPoolFund": "uint256",
+                    "developerFund": "uint256",
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256"
+                }
+            },
+            "setDepositAddress(address,address,address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "crossForkCount": "uint64",
+                    "referBenefitRate": "uint256",
+                    "satoshi_bth_decimals": "uint256",
+                    "crossForkFund": "uint256",
+                    "marketingFund": "uint256",
+                    "userPoolFund": "uint256",
+                    "developerFund": "uint256",
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256"
+                }
+            },
+            "setPrices(uint256,uint256)": {
+                "argument": {
+                    "_newSellPrice": "uint256",
+                    "_newBuyPrice": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "crossForkCount": "uint64",
+                    "referBenefitRate": "uint256",
+                    "satoshi_bth_decimals": "uint256",
+                    "crossForkFund": "uint256",
+                    "marketingFund": "uint256",
+                    "userPoolFund": "uint256",
+                    "developerFund": "uint256",
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256"
+                }
+            },
+            "setReferBenefitRate(uint256)": {
+                "argument": {
+                    "_rate": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "crossForkCount": "uint64",
+                    "referBenefitRate": "uint256",
+                    "satoshi_bth_decimals": "uint256",
+                    "crossForkFund": "uint256",
+                    "marketingFund": "uint256",
+                    "userPoolFund": "uint256",
+                    "developerFund": "uint256",
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256"
+                }
+            },
+            "toggleCrossForking()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "crossForkCount": "uint64",
+                    "referBenefitRate": "uint256",
+                    "satoshi_bth_decimals": "uint256",
+                    "crossForkFund": "uint256",
+                    "marketingFund": "uint256",
+                    "userPoolFund": "uint256",
+                    "developerFund": "uint256",
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256"
+                }
+            },
+            "toggleTrading()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "crossForkCount": "uint64",
+                    "referBenefitRate": "uint256",
+                    "satoshi_bth_decimals": "uint256",
+                    "crossForkFund": "uint256",
+                    "marketingFund": "uint256",
+                    "userPoolFund": "uint256",
+                    "developerFund": "uint256",
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256"
+                }
+            },
+            "claimReferBenefit(string,address)": {
+                "argument": {
+                    "_referCode": "string"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "crossForkCount": "uint64",
+                    "referBenefitRate": "uint256",
+                    "satoshi_bth_decimals": "uint256",
+                    "crossForkFund": "uint256",
+                    "marketingFund": "uint256",
+                    "userPoolFund": "uint256",
+                    "developerFund": "uint256",
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256"
+                }
+            },
+            "revertCrossFork(string)": {
+                "argument": {
+                    "_btcAddress": "string"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "crossForkCount": "uint64",
+                    "referBenefitRate": "uint256",
+                    "satoshi_bth_decimals": "uint256",
+                    "crossForkFund": "uint256",
+                    "marketingFund": "uint256",
+                    "userPoolFund": "uint256",
+                    "developerFund": "uint256",
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256"
+                }
+            },
+            "getCrossForkId(string)": {
+                "argument": {
+                    "_btcAddress": "string"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "crossForkCount": "uint64",
+                    "referBenefitRate": "uint256",
+                    "satoshi_bth_decimals": "uint256",
+                    "crossForkFund": "uint256",
+                    "marketingFund": "uint256",
+                    "userPoolFund": "uint256",
+                    "developerFund": "uint256",
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256"
+                }
+            },
+            "getCrossForkData(uint64)": {
+                "argument": {
+                    "_id": "uint64"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "crossForkCount": "uint64",
+                    "referBenefitRate": "uint256",
+                    "satoshi_bth_decimals": "uint256",
+                    "crossForkFund": "uint256",
+                    "marketingFund": "uint256",
+                    "userPoolFund": "uint256",
+                    "developerFund": "uint256",
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256"
+                }
+            },
+            "getReferBenefit(string)": {
+                "argument": {
+                    "_referCode": "string"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "crossForkCount": "uint64",
+                    "referBenefitRate": "uint256",
+                    "satoshi_bth_decimals": "uint256",
+                    "crossForkFund": "uint256",
+                    "marketingFund": "uint256",
+                    "userPoolFund": "uint256",
+                    "developerFund": "uint256",
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256"
+                }
+            },
+            "triggerCrossFork(string)": {
+                "argument": {
+                    "_btcAddress": "string"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "crossForkCount": "uint64",
+                    "referBenefitRate": "uint256",
+                    "satoshi_bth_decimals": "uint256",
+                    "crossForkFund": "uint256",
+                    "marketingFund": "uint256",
+                    "userPoolFund": "uint256",
+                    "developerFund": "uint256",
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256"
+                }
+            },
+            "freezeAccount(address,bool)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "crossForkCount": "uint64",
+                    "referBenefitRate": "uint256",
+                    "satoshi_bth_decimals": "uint256",
+                    "crossForkFund": "uint256",
+                    "marketingFund": "uint256",
+                    "userPoolFund": "uint256",
+                    "developerFund": "uint256",
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256"
+                }
+            },
+            "buy()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "crossForkCount": "uint64",
+                    "referBenefitRate": "uint256",
+                    "satoshi_bth_decimals": "uint256",
+                    "crossForkFund": "uint256",
+                    "marketingFund": "uint256",
+                    "userPoolFund": "uint256",
+                    "developerFund": "uint256",
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256"
+                }
+            },
+            "sell(uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "crossForkCount": "uint64",
+                    "referBenefitRate": "uint256",
+                    "satoshi_bth_decimals": "uint256",
+                    "crossForkFund": "uint256",
+                    "marketingFund": "uint256",
+                    "userPoolFund": "uint256",
+                    "developerFund": "uint256",
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "crossForkCount": "uint64",
+                    "referBenefitRate": "uint256",
+                    "satoshi_bth_decimals": "uint256",
+                    "crossForkFund": "uint256",
+                    "marketingFund": "uint256",
+                    "userPoolFund": "uint256",
+                    "developerFund": "uint256",
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "triggerCrossFork(string)": [
+                1377,
+                273
+            ],
+            "setDepositAddress(address,address,address)": [
+                617,
+                75
+            ],
+            "setReferBenefitRate(uint256)": [
+                4351,
+                1043
+            ],
+            "buy()": [
+                3409,
+                801
+            ],
+            "toggleTrading()": [
+                1135,
+                185
+            ],
+            "revertCrossFork(string)": [
+                2445,
+                515
+            ],
+            "transferFrom(address,address,uint256)": [
+                1244,
+                251
+            ],
+            "getCrossForkId(string)": [
+                4087,
+                999
+            ],
+            "approve(address,uint256)": [
+                1034,
+                163
+            ],
+            "sell(uint256)": [
+                4396,
+                1065
+            ],
+            "burnFrom(address,uint256)": [
+                2794,
+                625
+            ],
+            "setPrices(uint256,uint256)": [
+                748,
+                97
+            ],
+            "callbackCrossFork(uint64,uint256,bytes32)": [
+                2366,
+                493
+            ],
+            "getCrossForkData(uint64)": [
+                1689,
+                361
+            ],
+            "Kill()": [
+                3850,
+                933
+            ],
+            "getReferBenefit(string)": [
+                4567,
+                1131
+            ],
+            "toggleCrossForking()": [
+                2550,
+                537
+            ],
+            "AddModerator(address)": [
+                2573,
+                559
+            ],
+            "approveAndCall(address,uint256,bytes)": [
+                3916,
+                977
+            ],
+            "ChangeOwner(address)": [
+                4735,
+                1175
+            ],
+            "freezeAccount(address,bool)": [
+                4441,
+                1087
+            ],
+            "setCrossForkDistribution(address)": [
+                2640,
+                581
+            ],
+            "RemoveModerator(address)": [
+                3674,
+                889
+            ],
+            "burn(uint256)": [
+                1930,
+                383
+            ],
+            "claimReferBenefit(string,address)": [
+                2229,
+                471
+            ],
+            "transfer(address,uint256)": [
+                3419,
+                823
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump15892": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)",
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ],
+            "block7312": [
+                "crossfork.getDistributedAmount(crossForkCount, _btcAddress, msg.sender)"
+            ],
+            "jump7312": [
+                "crossfork.getDistributedAmount(crossForkCount, _btcAddress, msg.sender)",
+                "crossfork.getDistributedAmount(crossForkCount, _btcAddress, msg.sender)"
+            ],
+            "jump16383": [
+                "msg.sender.transfer(amount * sellPrice)",
+                "msg.sender.transfer(amount * sellPrice)"
+            ],
+            "block16383": [
+                "msg.sender.transfer(amount * sellPrice)"
+            ],
+            "block15892": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ]
+        }
+    }
+}

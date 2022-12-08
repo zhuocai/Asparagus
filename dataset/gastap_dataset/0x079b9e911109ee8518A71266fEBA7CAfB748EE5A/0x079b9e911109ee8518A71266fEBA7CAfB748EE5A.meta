@@ -1,0 +1,272 @@
+{
+    "ERC20Basic": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                124,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Token": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "balanceOfAt(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "balanceOfAt(address,uint256)": {
+                "argument": {
+                    "_blockNumber": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                402,
+                141
+            ],
+            "transfer(address,uint256)": [
+                489,
+                163
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Ownable": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Voting": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "Voting(uint8,address,uint256)",
+            "vote(uint8)",
+            "votersCount()",
+            "getVoters(uint256,uint256)",
+            "getVotersAt(uint256,uint256,uint256)",
+            "getSummary()",
+            "claimTokens(address)",
+            "getBlockNumber()"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {
+                    "candidates": "uint8",
+                    "endBlock": "uint256",
+                    "voters": "address[]"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "candidates": "uint8",
+                    "endBlock": "uint256",
+                    "voters": "address[]"
+                }
+            },
+            "Voting(uint8,address,uint256)": {
+                "argument": {
+                    "_candidatesCount": "uint8",
+                    "_endBlock": "uint256"
+                },
+                "contract": {
+                    "candidates": "uint8",
+                    "endBlock": "uint256",
+                    "voters": "address[]"
+                }
+            },
+            "vote(uint8)": {
+                "argument": {
+                    "_candidate": "uint8"
+                },
+                "contract": {
+                    "candidates": "uint8",
+                    "endBlock": "uint256",
+                    "voters": "address[]"
+                }
+            },
+            "votersCount()": {
+                "argument": {},
+                "contract": {
+                    "candidates": "uint8",
+                    "endBlock": "uint256",
+                    "voters": "address[]"
+                }
+            },
+            "getVoters(uint256,uint256)": {
+                "argument": {
+                    "_offset": "uint256",
+                    "_limit": "uint256"
+                },
+                "contract": {
+                    "candidates": "uint8",
+                    "endBlock": "uint256",
+                    "voters": "address[]"
+                }
+            },
+            "getVotersAt(uint256,uint256,uint256)": {
+                "argument": {
+                    "_offset": "uint256",
+                    "_limit": "uint256",
+                    "_blockNumber": "uint256"
+                },
+                "contract": {
+                    "candidates": "uint8",
+                    "endBlock": "uint256",
+                    "voters": "address[]"
+                }
+            },
+            "getSummary()": {
+                "argument": {},
+                "contract": {
+                    "candidates": "uint8",
+                    "endBlock": "uint256",
+                    "voters": "address[]"
+                }
+            },
+            "claimTokens(address)": {
+                "argument": {},
+                "contract": {
+                    "candidates": "uint8",
+                    "endBlock": "uint256",
+                    "voters": "address[]"
+                }
+            },
+            "getBlockNumber()": {
+                "argument": {},
+                "contract": {
+                    "candidates": "uint8",
+                    "endBlock": "uint256",
+                    "voters": "address[]"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "claimTokens(address)": [
+                1519,
+                317
+            ],
+            "getVoters(uint256,uint256)": [
+                768,
+                163
+            ],
+            "votersCount()": [
+                1139,
+                207
+            ],
+            "getVotersAt(uint256,uint256,uint256)": [
+                202,
+                75
+            ],
+            "getSummary()": [
+                539,
+                119
+            ],
+            "vote(uint8)": [
+                1269,
+                251
+            ],
+            "transferOwnership(address)": [
+                1586,
+                339
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump4526": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "jump4783": [
+                "token.transfer(owner, balance)",
+                "token.transfer(owner, balance)"
+            ],
+            "jump2467_0": [
+                "msp.balanceOfAt(voters[i], _block)",
+                "msp.balanceOfAt(voters[i], _block)"
+            ],
+            "block4783": [
+                "token.transfer(owner, balance)"
+            ],
+            "block4526": [
+                "token.balanceOf(this)"
+            ],
+            "block2467_0": [
+                "msp.balanceOfAt(voters[i], _block)"
+            ],
+            "block4237": [
+                "owner.transfer(this.balance)"
+            ],
+            "jump3291": [
+                "msp.balanceOfAt(voters[i], _block)",
+                "msp.balanceOfAt(voters[i], _block)"
+            ],
+            "block3291": [
+                "msp.balanceOfAt(voters[i], _block)"
+            ],
+            "jump4237": [
+                "owner.transfer(this.balance)",
+                "owner.transfer(this.balance)"
+            ],
+            "jump2467": [
+                "msp.balanceOfAt(voters[i], _block)",
+                "msp.balanceOfAt(voters[i], _block)"
+            ],
+            "block2467": [
+                "msp.balanceOfAt(voters[i], _block)"
+            ]
+        }
+    }
+}

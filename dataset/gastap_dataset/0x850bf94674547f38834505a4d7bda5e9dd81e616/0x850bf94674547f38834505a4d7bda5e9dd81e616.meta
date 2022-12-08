@@ -1,0 +1,131 @@
+{
+    "ERC20Basic": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "allowance(address,address)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                124,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "DistributeTokens": {
+        "function_list": [
+            "DistributeTokens(ERC20Basic)",
+            "checkExpectedTokens(address[],uint256[],uint256)",
+            "distribute(address,uint256,address[],uint256[],uint256)"
+        ],
+        "initial_state": {
+            "DistributeTokens(ERC20Basic)": {
+                "argument": {},
+                "contract": {}
+            },
+            "checkExpectedTokens(address[],uint256[],uint256)": {
+                "argument": {
+                    "holdersList": "address[]",
+                    "expectedBalance": "uint256[]",
+                    "expectedTotalSupply": "uint256"
+                },
+                "contract": {}
+            },
+            "distribute(address,uint256,address[],uint256[],uint256)": {
+                "argument": {
+                    "amountToDistribute": "uint256",
+                    "holdersList": "address[]",
+                    "expectedBalance": "uint256[]",
+                    "expectedTotalSupply": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "distribute(address,uint256,address[],uint256[],uint256)": [
+                92,
+                75
+            ],
+            "checkExpectedTokens(address[],uint256[],uint256)": [
+                313,
+                97
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump937": [
+                "token.allowance(mainHolder,this)",
+                "token.allowance(mainHolder,this)"
+            ],
+            "jump1849_0": [
+                "token.balanceOf(holdersList[i])",
+                "token.balanceOf(holdersList[i])"
+            ],
+            "jump1849": [
+                "token.balanceOf(holdersList[i])",
+                "token.balanceOf(holdersList[i])"
+            ],
+            "jump1358": [
+                "token.transferFrom(mainHolder, holdersList[i], extraTokens)",
+                "token.transferFrom(mainHolder, holdersList[i], extraTokens)"
+            ],
+            "block1549": [
+                "token.totalSupply()"
+            ],
+            "block1849_0": [
+                "token.balanceOf(holdersList[i])"
+            ],
+            "block1358": [
+                "token.transferFrom(mainHolder, holdersList[i], extraTokens)"
+            ],
+            "block1549_0": [
+                "token.totalSupply()"
+            ],
+            "jump1549": [
+                "token.totalSupply()",
+                "token.totalSupply()"
+            ],
+            "block1849": [
+                "token.balanceOf(holdersList[i])"
+            ],
+            "jump1549_0": [
+                "token.totalSupply()",
+                "token.totalSupply()"
+            ],
+            "block937": [
+                "token.allowance(mainHolder,this)"
+            ]
+        }
+    }
+}

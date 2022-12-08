@@ -1,0 +1,1023 @@
+{
+    "ERC20Basic": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                124,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "ERC20": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                125,
+                75
+            ],
+            "balanceOf(address)": [
+                402,
+                141
+            ],
+            "allowance(address,address)": [
+                590,
+                185
+            ],
+            "transferFrom(address,address,uint256)": [
+                269,
+                119
+            ],
+            "transfer(address,uint256)": [
+                489,
+                163
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "Ownable": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "TokenDestructible": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "TokenDestructible()",
+            "destroy(address[])"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "TokenDestructible()": {
+                "argument": {},
+                "contract": {}
+            },
+            "destroy(address[])": {
+                "argument": {
+                    "tokens": "address[]"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "destroy(address[])": [
+                179,
+                97
+            ],
+            "transferOwnership(address)": [
+                281,
+                119
+            ]
+        },
+        "block_CALL_mapping": {
+            "block676": [
+                "token.balanceOf(this)"
+            ],
+            "jump933": [
+                "token.transfer(owner, balance)",
+                "token.transfer(owner, balance)"
+            ],
+            "jump676": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "block933": [
+                "token.transfer(owner, balance)"
+            ]
+        }
+    },
+    "VePortfolio": {
+        "function_list": [
+            "TokenDestructible()",
+            "destroy(address[])",
+            "Ownable()",
+            "transferOwnership(address)",
+            "VePortfolio()",
+            "setCollectibleExposure(CollectibleExposure)",
+            "setEtherDeltaExecutor(EDExecutor)",
+            "setBucketManager(address)",
+            "setPortfolioManager(address)",
+            "setTrader(address)",
+            "getAssets()",
+            "setAssets(address[])",
+            "setModel(address[],uint256[])",
+            "createBucket(bytes32[])",
+            "destroyBucket(bytes32)",
+            "executeEtherDeltaBuy(uint256,address,uint256,uint256,uint256,address,uint8,bytes32,bytes32,bytes32,uint256)",
+            "executeEtherDeltaSell(uint256,address,uint256,uint256,uint256,address,uint8,bytes32,bytes32,bytes32,uint256)",
+            "fallback()",
+            "bucketExists(bytes32)",
+            "calculateBucketId(bytes32[])",
+            "bucketHolding(bytes32,address)",
+            "bucketValue(bytes32)",
+            "numAssets()",
+            "clearModel()",
+            "validateModel(address[])",
+            "bucketClosureTime(bytes32)",
+            "isInPortfolioModel(address)"
+        ],
+        "initial_state": {
+            "TokenDestructible()": {
+                "argument": {},
+                "contract": {
+                    "assets": "address[]"
+                }
+            },
+            "destroy(address[])": {
+                "argument": {
+                    "tokens": "address[]"
+                },
+                "contract": {
+                    "assets": "address[]"
+                }
+            },
+            "Ownable()": {
+                "argument": {},
+                "contract": {
+                    "assets": "address[]"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "assets": "address[]"
+                }
+            },
+            "VePortfolio()": {
+                "argument": {},
+                "contract": {
+                    "assets": "address[]"
+                }
+            },
+            "setCollectibleExposure(CollectibleExposure)": {
+                "argument": {},
+                "contract": {
+                    "assets": "address[]"
+                }
+            },
+            "setEtherDeltaExecutor(EDExecutor)": {
+                "argument": {},
+                "contract": {
+                    "assets": "address[]"
+                }
+            },
+            "setBucketManager(address)": {
+                "argument": {},
+                "contract": {
+                    "assets": "address[]"
+                }
+            },
+            "setPortfolioManager(address)": {
+                "argument": {},
+                "contract": {
+                    "assets": "address[]"
+                }
+            },
+            "setTrader(address)": {
+                "argument": {},
+                "contract": {
+                    "assets": "address[]"
+                }
+            },
+            "getAssets()": {
+                "argument": {},
+                "contract": {
+                    "assets": "address[]"
+                }
+            },
+            "setAssets(address[])": {
+                "argument": {
+                    "_assets": "address[]"
+                },
+                "contract": {
+                    "assets": "address[]"
+                }
+            },
+            "setModel(address[],uint256[])": {
+                "argument": {
+                    "_assets": "address[]",
+                    "_alloc": "uint256[]"
+                },
+                "contract": {
+                    "assets": "address[]"
+                }
+            },
+            "createBucket(bytes32[])": {
+                "argument": {
+                    "exposureIds": "bytes32[]"
+                },
+                "contract": {
+                    "assets": "address[]"
+                }
+            },
+            "destroyBucket(bytes32)": {
+                "argument": {
+                    "bucketId": "bytes32"
+                },
+                "contract": {
+                    "assets": "address[]"
+                }
+            },
+            "executeEtherDeltaBuy(uint256,address,uint256,uint256,uint256,address,uint8,bytes32,bytes32,bytes32,uint256)": {
+                "argument": {
+                    "orderEthAmount": "uint256",
+                    "orderTokenAmount": "uint256",
+                    "orderExpires": "uint256",
+                    "orderNonce": "uint256",
+                    "v": "uint8",
+                    "r": "bytes32",
+                    "s": "bytes32",
+                    "bucketId": "bytes32",
+                    "amount": "uint256"
+                },
+                "contract": {
+                    "assets": "address[]"
+                }
+            },
+            "executeEtherDeltaSell(uint256,address,uint256,uint256,uint256,address,uint8,bytes32,bytes32,bytes32,uint256)": {
+                "argument": {
+                    "orderEthAmount": "uint256",
+                    "orderTokenAmount": "uint256",
+                    "orderExpires": "uint256",
+                    "orderNonce": "uint256",
+                    "v": "uint8",
+                    "r": "bytes32",
+                    "s": "bytes32",
+                    "bucketId": "bytes32",
+                    "amount": "uint256"
+                },
+                "contract": {
+                    "assets": "address[]"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "assets": "address[]"
+                }
+            },
+            "bucketExists(bytes32)": {
+                "argument": {
+                    "bucketId": "bytes32"
+                },
+                "contract": {
+                    "assets": "address[]"
+                }
+            },
+            "calculateBucketId(bytes32[])": {
+                "argument": {
+                    "exposures": "bytes32[]"
+                },
+                "contract": {
+                    "assets": "address[]"
+                }
+            },
+            "bucketHolding(bytes32,address)": {
+                "argument": {
+                    "_bucketId": "bytes32"
+                },
+                "contract": {
+                    "assets": "address[]"
+                }
+            },
+            "bucketValue(bytes32)": {
+                "argument": {
+                    "_bucketId": "bytes32"
+                },
+                "contract": {
+                    "assets": "address[]"
+                }
+            },
+            "numAssets()": {
+                "argument": {},
+                "contract": {
+                    "assets": "address[]"
+                }
+            },
+            "clearModel()": {
+                "argument": {},
+                "contract": {
+                    "assets": "address[]"
+                }
+            },
+            "validateModel(address[])": {
+                "argument": {
+                    "_assets": "address[]"
+                },
+                "contract": {
+                    "assets": "address[]"
+                }
+            },
+            "bucketClosureTime(bytes32)": {
+                "argument": {
+                    "bucketId": "bytes32"
+                },
+                "contract": {
+                    "assets": "address[]"
+                }
+            },
+            "isInPortfolioModel(address)": {
+                "argument": {},
+                "contract": {
+                    "assets": "address[]"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "setModel(address[],uint256[])": [
+                1856,
+                449
+            ],
+            "executeEtherDeltaSell(uint256,address,uint256,uint256,uint256,address,uint8,bytes32,bytes32,bytes32,uint256)": [
+                530,
+                119
+            ],
+            "bucketHolding(bytes32,address)": [
+                429,
+                97
+            ],
+            "createBucket(bytes32[])": [
+                734,
+                141
+            ],
+            "bucketExists(bytes32)": [
+                2672,
+                581
+            ],
+            "destroy(address[])": [
+                2229,
+                493
+            ],
+            "getAssets()": [
+                1105,
+                229
+            ],
+            "bucketClosureTime(bytes32)": [
+                1700,
+                405
+            ],
+            "bucketValue(bytes32)": [
+                1521,
+                339
+            ],
+            "numAssets()": [
+                1657,
+                383
+            ],
+            "setPortfolioManager(address)": [
+                1590,
+                361
+            ],
+            "setBucketManager(address)": [
+                1367,
+                295
+            ],
+            "transferOwnership(address)": [
+                2745,
+                603
+            ],
+            "calculateBucketId(bytes32[])": [
+                2542,
+                559
+            ],
+            "executeEtherDeltaBuy(uint256,address,uint256,uint256,uint256,address,uint8,bytes32,bytes32,bytes32,uint256)": [
+                2025,
+                471
+            ],
+            "destroyBucket(bytes32)": [
+                2812,
+                625
+            ],
+            "setTrader(address)": [
+                1789,
+                427
+            ],
+            "setAssets(address[])": [
+                2440,
+                537
+            ]
+        },
+        "block_CALL_mapping": {
+            "block9102_0": [
+                "sha256(this, exposures)"
+            ],
+            "jump9102_0": [
+                "sha256(this, exposures)",
+                "sha256(this, exposures)"
+            ],
+            "jump9102": [
+                "sha256(this, exposures)",
+                "sha256(this, exposures)"
+            ],
+            "jump10077": [
+                "collectibleExposure.close.value(exposure.value)(exposure.exposureId)",
+                "collectibleExposure.close.value(exposure.value)(exposure.exposureId)"
+            ],
+            "jump7601": [
+                "etherDeltaExecutor.buyTokens.value(amount)(\n                orderEthAmount,\n                orderToken,\n                orderTokenAmount,\n                orderExpires,\n                orderNonce,\n                orderUser,\n                v, r, s\n            )",
+                "etherDeltaExecutor.buyTokens.value(amount)(\n                orderEthAmount,\n                orderToken,\n                orderTokenAmount,\n                orderExpires,\n                orderNonce,\n                orderUser,\n                v, r, s\n            )"
+            ],
+            "block7601": [
+                "etherDeltaExecutor.buyTokens.value(amount)(\n                orderEthAmount,\n                orderToken,\n                orderTokenAmount,\n                orderExpires,\n                orderNonce,\n                orderUser,\n                v, r, s\n            )"
+            ],
+            "block8526": [
+                "token.transfer(owner, balance)"
+            ],
+            "block4936": [
+                "collectibleExposure.collect(exposureId)"
+            ],
+            "jump3404": [
+                "ERC20(orderToken).transfer(etherDeltaExecutor, amount)",
+                "ERC20(orderToken).transfer(etherDeltaExecutor, amount)"
+            ],
+            "jump4936": [
+                "collectibleExposure.collect(exposureId)",
+                "collectibleExposure.collect(exposureId)"
+            ],
+            "block3404": [
+                "ERC20(orderToken).transfer(etherDeltaExecutor, amount)"
+            ],
+            "block10077": [
+                "collectibleExposure.close.value(exposure.value)(exposure.exposureId)"
+            ],
+            "block4626": [
+                "collectibleExposure.getClosingTime(exposureId)"
+            ],
+            "jump8269": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "jump4626": [
+                "collectibleExposure.getClosingTime(exposureId)",
+                "collectibleExposure.getClosingTime(exposureId)"
+            ],
+            "block8269": [
+                "token.balanceOf(this)"
+            ],
+            "jump3782": [
+                "etherDeltaExecutor.sellTokens(\n                orderEthAmount,\n                orderToken,\n                orderTokenAmount,\n                orderExpires,\n                orderNonce,\n                orderUser,\n                v, r, s\n                )",
+                "etherDeltaExecutor.sellTokens(\n                orderEthAmount,\n                orderToken,\n                orderTokenAmount,\n                orderExpires,\n                orderNonce,\n                orderUser,\n                v, r, s\n                )"
+            ],
+            "block3782": [
+                "etherDeltaExecutor.sellTokens(\n                orderEthAmount,\n                orderToken,\n                orderTokenAmount,\n                orderExpires,\n                orderNonce,\n                orderUser,\n                v, r, s\n                )"
+            ],
+            "block9102": [
+                "sha256(this, exposures)"
+            ],
+            "jump8526": [
+                "token.transfer(owner, balance)",
+                "token.transfer(owner, balance)"
+            ]
+        }
+    },
+    "VeExposure": {
+        "function_list": [
+            "TokenDestructible()",
+            "destroy(address[])",
+            "Ownable()",
+            "transferOwnership(address)",
+            "VeExposure(ERC20,uint256,uint32,uint32,uint256,uint256)",
+            "setPortfolio(address)",
+            "setMinDuration(uint32)",
+            "setMaxDuration(uint32)",
+            "setMinVeriAmount(uint32)",
+            "setMaxVeriAmount(uint32)",
+            "open(uint256,uint32,uint256)",
+            "getClosingTime(bytes32)",
+            "collect(bytes32)",
+            "close(bytes32)",
+            "settle(bytes32)",
+            "status(bytes32)",
+            "exists(bytes32)",
+            "checkRatio(uint256,uint256)",
+            "calculateId(uint256,uint256,uint32,uint256)",
+            "fallback()",
+            "forwardTokens(uint256)",
+            "openExposure(bytes32,uint256,uint32)",
+            "hasPassed(uint64)"
+        ],
+        "initial_state": {
+            "TokenDestructible()": {
+                "argument": {},
+                "contract": {
+                    "ratio": "uint256",
+                    "minDuration": "uint32",
+                    "maxDuration": "uint32",
+                    "minVeriAmount": "uint256",
+                    "maxVeriAmount": "uint256"
+                }
+            },
+            "destroy(address[])": {
+                "argument": {
+                    "tokens": "address[]"
+                },
+                "contract": {
+                    "ratio": "uint256",
+                    "minDuration": "uint32",
+                    "maxDuration": "uint32",
+                    "minVeriAmount": "uint256",
+                    "maxVeriAmount": "uint256"
+                }
+            },
+            "Ownable()": {
+                "argument": {},
+                "contract": {
+                    "ratio": "uint256",
+                    "minDuration": "uint32",
+                    "maxDuration": "uint32",
+                    "minVeriAmount": "uint256",
+                    "maxVeriAmount": "uint256"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "ratio": "uint256",
+                    "minDuration": "uint32",
+                    "maxDuration": "uint32",
+                    "minVeriAmount": "uint256",
+                    "maxVeriAmount": "uint256"
+                }
+            },
+            "VeExposure(ERC20,uint256,uint32,uint32,uint256,uint256)": {
+                "argument": {
+                    "_ratio": "uint256",
+                    "_minDuration": "uint32",
+                    "_maxDuration": "uint32",
+                    "_minVeriAmount": "uint256",
+                    "_maxVeriAmount": "uint256"
+                },
+                "contract": {
+                    "ratio": "uint256",
+                    "minDuration": "uint32",
+                    "maxDuration": "uint32",
+                    "minVeriAmount": "uint256",
+                    "maxVeriAmount": "uint256"
+                }
+            },
+            "setPortfolio(address)": {
+                "argument": {},
+                "contract": {
+                    "ratio": "uint256",
+                    "minDuration": "uint32",
+                    "maxDuration": "uint32",
+                    "minVeriAmount": "uint256",
+                    "maxVeriAmount": "uint256"
+                }
+            },
+            "setMinDuration(uint32)": {
+                "argument": {
+                    "_minDuration": "uint32"
+                },
+                "contract": {
+                    "ratio": "uint256",
+                    "minDuration": "uint32",
+                    "maxDuration": "uint32",
+                    "minVeriAmount": "uint256",
+                    "maxVeriAmount": "uint256"
+                }
+            },
+            "setMaxDuration(uint32)": {
+                "argument": {
+                    "_maxDuration": "uint32"
+                },
+                "contract": {
+                    "ratio": "uint256",
+                    "minDuration": "uint32",
+                    "maxDuration": "uint32",
+                    "minVeriAmount": "uint256",
+                    "maxVeriAmount": "uint256"
+                }
+            },
+            "setMinVeriAmount(uint32)": {
+                "argument": {
+                    "_minVeriAmount": "uint32"
+                },
+                "contract": {
+                    "ratio": "uint256",
+                    "minDuration": "uint32",
+                    "maxDuration": "uint32",
+                    "minVeriAmount": "uint256",
+                    "maxVeriAmount": "uint256"
+                }
+            },
+            "setMaxVeriAmount(uint32)": {
+                "argument": {
+                    "_maxVeriAmount": "uint32"
+                },
+                "contract": {
+                    "ratio": "uint256",
+                    "minDuration": "uint32",
+                    "maxDuration": "uint32",
+                    "minVeriAmount": "uint256",
+                    "maxVeriAmount": "uint256"
+                }
+            },
+            "open(uint256,uint32,uint256)": {
+                "argument": {
+                    "veriAmount": "uint256",
+                    "duration": "uint32",
+                    "nonce": "uint256"
+                },
+                "contract": {
+                    "ratio": "uint256",
+                    "minDuration": "uint32",
+                    "maxDuration": "uint32",
+                    "minVeriAmount": "uint256",
+                    "maxVeriAmount": "uint256"
+                }
+            },
+            "getClosingTime(bytes32)": {
+                "argument": {
+                    "id": "bytes32"
+                },
+                "contract": {
+                    "ratio": "uint256",
+                    "minDuration": "uint32",
+                    "maxDuration": "uint32",
+                    "minVeriAmount": "uint256",
+                    "maxVeriAmount": "uint256"
+                }
+            },
+            "collect(bytes32)": {
+                "argument": {
+                    "id": "bytes32"
+                },
+                "contract": {
+                    "ratio": "uint256",
+                    "minDuration": "uint32",
+                    "maxDuration": "uint32",
+                    "minVeriAmount": "uint256",
+                    "maxVeriAmount": "uint256"
+                }
+            },
+            "close(bytes32)": {
+                "argument": {
+                    "id": "bytes32"
+                },
+                "contract": {
+                    "ratio": "uint256",
+                    "minDuration": "uint32",
+                    "maxDuration": "uint32",
+                    "minVeriAmount": "uint256",
+                    "maxVeriAmount": "uint256"
+                }
+            },
+            "settle(bytes32)": {
+                "argument": {
+                    "id": "bytes32"
+                },
+                "contract": {
+                    "ratio": "uint256",
+                    "minDuration": "uint32",
+                    "maxDuration": "uint32",
+                    "minVeriAmount": "uint256",
+                    "maxVeriAmount": "uint256"
+                }
+            },
+            "status(bytes32)": {
+                "argument": {
+                    "id": "bytes32"
+                },
+                "contract": {
+                    "ratio": "uint256",
+                    "minDuration": "uint32",
+                    "maxDuration": "uint32",
+                    "minVeriAmount": "uint256",
+                    "maxVeriAmount": "uint256"
+                }
+            },
+            "exists(bytes32)": {
+                "argument": {
+                    "id": "bytes32"
+                },
+                "contract": {
+                    "ratio": "uint256",
+                    "minDuration": "uint32",
+                    "maxDuration": "uint32",
+                    "minVeriAmount": "uint256",
+                    "maxVeriAmount": "uint256"
+                }
+            },
+            "checkRatio(uint256,uint256)": {
+                "argument": {
+                    "veriAmount": "uint256",
+                    "value": "uint256"
+                },
+                "contract": {
+                    "ratio": "uint256",
+                    "minDuration": "uint32",
+                    "maxDuration": "uint32",
+                    "minVeriAmount": "uint256",
+                    "maxVeriAmount": "uint256"
+                }
+            },
+            "calculateId(uint256,uint256,uint32,uint256)": {
+                "argument": {
+                    "veriAmount": "uint256",
+                    "value": "uint256",
+                    "duration": "uint32",
+                    "nonce": "uint256"
+                },
+                "contract": {
+                    "ratio": "uint256",
+                    "minDuration": "uint32",
+                    "maxDuration": "uint32",
+                    "minVeriAmount": "uint256",
+                    "maxVeriAmount": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "ratio": "uint256",
+                    "minDuration": "uint32",
+                    "maxDuration": "uint32",
+                    "minVeriAmount": "uint256",
+                    "maxVeriAmount": "uint256"
+                }
+            },
+            "forwardTokens(uint256)": {
+                "argument": {
+                    "veriAmount": "uint256"
+                },
+                "contract": {
+                    "ratio": "uint256",
+                    "minDuration": "uint32",
+                    "maxDuration": "uint32",
+                    "minVeriAmount": "uint256",
+                    "maxVeriAmount": "uint256"
+                }
+            },
+            "openExposure(bytes32,uint256,uint32)": {
+                "argument": {
+                    "id": "bytes32",
+                    "veriAmount": "uint256",
+                    "duration": "uint32"
+                },
+                "contract": {
+                    "ratio": "uint256",
+                    "minDuration": "uint32",
+                    "maxDuration": "uint32",
+                    "minVeriAmount": "uint256",
+                    "maxVeriAmount": "uint256"
+                }
+            },
+            "hasPassed(uint64)": {
+                "argument": {
+                    "time": "uint64"
+                },
+                "contract": {
+                    "ratio": "uint256",
+                    "minDuration": "uint32",
+                    "maxDuration": "uint32",
+                    "minVeriAmount": "uint256",
+                    "maxVeriAmount": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "status(bytes32)": [
+                879,
+                251
+            ],
+            "setMaxVeriAmount(uint32)": [
+                1357,
+                427
+            ],
+            "exists(bytes32)": [
+                525,
+                141
+            ],
+            "open(uint256,uint32,uint256)": [
+                1517,
+                471
+            ],
+            "collect(bytes32)": [
+                810,
+                229
+            ],
+            "setMaxDuration(uint32)": [
+                1799,
+                559
+            ],
+            "setMinVeriAmount(uint32)": [
+                1009,
+                295
+            ],
+            "destroy(address[])": [
+                1618,
+                515
+            ],
+            "getClosingTime(bytes32)": [
+                721,
+                207
+            ],
+            "checkRatio(uint256,uint256)": [
+                1720,
+                537
+            ],
+            "close(bytes32)": [
+                598,
+                163
+            ],
+            "setMinDuration(uint32)": [
+                474,
+                119
+            ],
+            "setPortfolio(address)": [
+                320,
+                75
+            ],
+            "calculateId(uint256,uint256,uint32,uint256)": [
+                1408,
+                449
+            ],
+            "transferOwnership(address)": [
+                1850,
+                581
+            ],
+            "settle(bytes32)": [
+                1288,
+                405
+            ]
+        },
+        "block_CALL_mapping": {
+            "block4513_0": [
+                "sha256(\n            this,\n            msg.sender,\n            value,\n            veriAmount,\n            duration,\n            nonce\n        )"
+            ],
+            "jump3255": [
+                "msg.sender.transfer(value)",
+                "msg.sender.transfer(value)"
+            ],
+            "block4513": [
+                "sha256(\n            this,\n            msg.sender,\n            value,\n            veriAmount,\n            duration,\n            nonce\n        )"
+            ],
+            "block3255": [
+                "msg.sender.transfer(value)"
+            ],
+            "jump5309": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "jump5566": [
+                "token.transfer(owner, balance)",
+                "token.transfer(owner, balance)"
+            ],
+            "block4049": [
+                "msg.sender.transfer(finalValue)"
+            ],
+            "block7105": [
+                "veToken.transferFrom(msg.sender, this, veriAmount)"
+            ],
+            "block5566": [
+                "token.transfer(owner, balance)"
+            ],
+            "jump7406": [
+                "veToken.approve(portfolio, veriAmount)",
+                "veToken.approve(portfolio, veriAmount)"
+            ],
+            "jump4049": [
+                "msg.sender.transfer(finalValue)",
+                "msg.sender.transfer(finalValue)"
+            ],
+            "block5309": [
+                "token.balanceOf(this)"
+            ],
+            "jump4513": [
+                "sha256(\n            this,\n            msg.sender,\n            value,\n            veriAmount,\n            duration,\n            nonce\n        )",
+                "sha256(\n            this,\n            msg.sender,\n            value,\n            veriAmount,\n            duration,\n            nonce\n        )"
+            ],
+            "jump7105": [
+                "veToken.transferFrom(msg.sender, this, veriAmount)",
+                "veToken.transferFrom(msg.sender, this, veriAmount)"
+            ],
+            "jump4513_0": [
+                "sha256(\n            this,\n            msg.sender,\n            value,\n            veriAmount,\n            duration,\n            nonce\n        )",
+                "sha256(\n            this,\n            msg.sender,\n            value,\n            veriAmount,\n            duration,\n            nonce\n        )"
+            ],
+            "block7406": [
+                "veToken.approve(portfolio, veriAmount)"
+            ]
+        }
+    }
+}

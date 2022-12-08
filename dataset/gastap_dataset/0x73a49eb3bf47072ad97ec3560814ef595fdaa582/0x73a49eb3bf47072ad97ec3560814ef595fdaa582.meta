@@ -1,0 +1,89 @@
+{
+    "ERC20Basic": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                124,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "TokenTimelock": {
+        "function_list": [
+            "TokenTimelock(ERC20Basic,address,uint256)",
+            "claim()"
+        ],
+        "initial_state": {
+            "TokenTimelock(ERC20Basic,address,uint256)": {
+                "argument": {
+                    "_releaseTime": "uint256"
+                },
+                "contract": {
+                    "releaseTime": "uint256"
+                }
+            },
+            "claim()": {
+                "argument": {},
+                "contract": {
+                    "releaseTime": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "claim()": [
+                201,
+                97
+            ]
+        },
+        "block_CALL_mapping": {
+            "block1189": [
+                "token.transfer(to, value)"
+            ],
+            "jump774_0": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "block774_0": [
+                "token.balanceOf(this)"
+            ],
+            "jump774": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "block774": [
+                "token.balanceOf(this)"
+            ],
+            "jump1189_0": [
+                "token.transfer(to, value)",
+                "token.transfer(to, value)"
+            ],
+            "block1189_0": [
+                "token.transfer(to, value)"
+            ],
+            "jump1189": [
+                "token.transfer(to, value)",
+                "token.transfer(to, value)"
+            ]
+        }
+    }
+}

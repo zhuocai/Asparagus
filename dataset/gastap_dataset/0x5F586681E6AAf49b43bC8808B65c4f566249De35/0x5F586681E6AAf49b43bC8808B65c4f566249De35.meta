@@ -1,0 +1,551 @@
+{
+    "Owned": {
+        "function_list": [
+            "setOwner(address)"
+        ],
+        "initial_state": {
+            "setOwner(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "setOwner(address)": [
+                81,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Destroyable": {
+        "function_list": [
+            "setHammer(address)",
+            "destroy()"
+        ],
+        "initial_state": {
+            "setHammer(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "destroy()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "setHammer(address)": [
+                202,
+                119
+            ],
+            "destroy()": [
+                179,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Object": {
+        "function_list": [
+            "setHammer(address)",
+            "destroy()",
+            "setOwner(address)",
+            "Object()"
+        ],
+        "initial_state": {
+            "setHammer(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "destroy()": {
+                "argument": {},
+                "contract": {}
+            },
+            "setOwner(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "Object()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "setHammer(address)": [
+                378,
+                163
+            ],
+            "setOwner(address)": [
+                114,
+                75
+            ],
+            "destroy()": [
+                268,
+                119
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "ERC20": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                401,
+                97
+            ],
+            "transfer(address,uint256)": [
+                1385,
+                361
+            ],
+            "allowance(address,address)": [
+                1704,
+                427
+            ],
+            "balanceOf(address)": [
+                1044,
+                273
+            ],
+            "transferFrom(address,address,uint256)": [
+                588,
+                163
+            ]
+        },
+        "block_CALL_mapping": {
+            "block3721": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ],
+            "jump3721": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)",
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ]
+        }
+    },
+    "Recipient": {
+        "function_list": [
+            "receiveApproval(address,uint256,ERC20,bytes)",
+            "fallback()"
+        ],
+        "initial_state": {
+            "receiveApproval(address,uint256,ERC20,bytes)": {
+                "argument": {
+                    "_value": "uint256",
+                    "_extraData": "bytes"
+                },
+                "contract": {}
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {
+            "block529": [
+                "_token.transferFrom(_from, this, _value)"
+            ],
+            "jump529": [
+                "_token.transferFrom(_from, this, _value)",
+                "_token.transferFrom(_from, this, _value)"
+            ]
+        }
+    },
+    "Congress": {
+        "function_list": [
+            "receiveApproval(address,uint256,ERC20,bytes)",
+            "fallback()",
+            "Object()",
+            "setHammer(address)",
+            "destroy()",
+            "setOwner(address)",
+            "numProposals()",
+            "Congress(uint256,uint256,int256,address)",
+            "addMember(address,string)",
+            "removeMember(address)",
+            "changeVotingRules(uint256,uint256,int256)",
+            "newProposal(address,uint256,string,bytes)",
+            "checkProposalCode(uint256,address,uint256,bytes)",
+            "vote(uint256,bool,string)",
+            "executeProposal(uint256,bytes)"
+        ],
+        "initial_state": {
+            "receiveApproval(address,uint256,ERC20,bytes)": {
+                "argument": {
+                    "_value": "uint256",
+                    "_extraData": "bytes"
+                },
+                "contract": {
+                    "minimumQuorum": "uint256",
+                    "debatingPeriodInMinutes": "uint256",
+                    "proposals": "Congress.Proposal[]",
+                    "members": "Congress.Member[]"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "minimumQuorum": "uint256",
+                    "debatingPeriodInMinutes": "uint256",
+                    "proposals": "Congress.Proposal[]",
+                    "members": "Congress.Member[]"
+                }
+            },
+            "Object()": {
+                "argument": {},
+                "contract": {
+                    "minimumQuorum": "uint256",
+                    "debatingPeriodInMinutes": "uint256",
+                    "proposals": "Congress.Proposal[]",
+                    "members": "Congress.Member[]"
+                }
+            },
+            "setHammer(address)": {
+                "argument": {},
+                "contract": {
+                    "minimumQuorum": "uint256",
+                    "debatingPeriodInMinutes": "uint256",
+                    "proposals": "Congress.Proposal[]",
+                    "members": "Congress.Member[]"
+                }
+            },
+            "destroy()": {
+                "argument": {},
+                "contract": {
+                    "minimumQuorum": "uint256",
+                    "debatingPeriodInMinutes": "uint256",
+                    "proposals": "Congress.Proposal[]",
+                    "members": "Congress.Member[]"
+                }
+            },
+            "setOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "minimumQuorum": "uint256",
+                    "debatingPeriodInMinutes": "uint256",
+                    "proposals": "Congress.Proposal[]",
+                    "members": "Congress.Member[]"
+                }
+            },
+            "numProposals()": {
+                "argument": {},
+                "contract": {
+                    "minimumQuorum": "uint256",
+                    "debatingPeriodInMinutes": "uint256",
+                    "proposals": "Congress.Proposal[]",
+                    "members": "Congress.Member[]"
+                }
+            },
+            "Congress(uint256,uint256,int256,address)": {
+                "argument": {
+                    "minimumQuorumForProposals": "uint256",
+                    "minutesForDebate": "uint256"
+                },
+                "contract": {
+                    "minimumQuorum": "uint256",
+                    "debatingPeriodInMinutes": "uint256",
+                    "proposals": "Congress.Proposal[]",
+                    "members": "Congress.Member[]"
+                }
+            },
+            "addMember(address,string)": {
+                "argument": {
+                    "memberName": "string"
+                },
+                "contract": {
+                    "minimumQuorum": "uint256",
+                    "debatingPeriodInMinutes": "uint256",
+                    "proposals": "Congress.Proposal[]",
+                    "members": "Congress.Member[]"
+                }
+            },
+            "removeMember(address)": {
+                "argument": {},
+                "contract": {
+                    "minimumQuorum": "uint256",
+                    "debatingPeriodInMinutes": "uint256",
+                    "proposals": "Congress.Proposal[]",
+                    "members": "Congress.Member[]"
+                }
+            },
+            "changeVotingRules(uint256,uint256,int256)": {
+                "argument": {
+                    "minimumQuorumForProposals": "uint256",
+                    "minutesForDebate": "uint256"
+                },
+                "contract": {
+                    "minimumQuorum": "uint256",
+                    "debatingPeriodInMinutes": "uint256",
+                    "proposals": "Congress.Proposal[]",
+                    "members": "Congress.Member[]"
+                }
+            },
+            "newProposal(address,uint256,string,bytes)": {
+                "argument": {
+                    "amount": "uint256",
+                    "jobDescription": "string",
+                    "transactionBytecode": "bytes"
+                },
+                "contract": {
+                    "minimumQuorum": "uint256",
+                    "debatingPeriodInMinutes": "uint256",
+                    "proposals": "Congress.Proposal[]",
+                    "members": "Congress.Member[]"
+                }
+            },
+            "checkProposalCode(uint256,address,uint256,bytes)": {
+                "argument": {
+                    "id": "uint256",
+                    "amount": "uint256",
+                    "transactionBytecode": "bytes"
+                },
+                "contract": {
+                    "minimumQuorum": "uint256",
+                    "debatingPeriodInMinutes": "uint256",
+                    "proposals": "Congress.Proposal[]",
+                    "members": "Congress.Member[]"
+                }
+            },
+            "vote(uint256,bool,string)": {
+                "argument": {
+                    "id": "uint256",
+                    "justificationText": "string"
+                },
+                "contract": {
+                    "minimumQuorum": "uint256",
+                    "debatingPeriodInMinutes": "uint256",
+                    "proposals": "Congress.Proposal[]",
+                    "members": "Congress.Member[]"
+                }
+            },
+            "executeProposal(uint256,bytes)": {
+                "argument": {
+                    "id": "uint256",
+                    "transactionBytecode": "bytes"
+                },
+                "contract": {
+                    "minimumQuorum": "uint256",
+                    "debatingPeriodInMinutes": "uint256",
+                    "proposals": "Congress.Proposal[]",
+                    "members": "Congress.Member[]"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "vote(uint256,bool,string)": [
+                2240,
+                471
+            ],
+            "numProposals()": [
+                962,
+                185
+            ],
+            "setOwner(address)": [
+                693,
+                119
+            ],
+            "checkProposalCode(uint256,address,uint256,bytes)": [
+                2387,
+                493
+            ],
+            "changeVotingRules(uint256,uint256,int256)": [
+                1971,
+                405
+            ],
+            "setHammer(address)": [
+                2173,
+                449
+            ],
+            "removeMember(address)": [
+                626,
+                97
+            ],
+            "destroy()": [
+                1402,
+                295
+            ],
+            "addMember(address,string)": [
+                2036,
+                427
+            ],
+            "executeProposal(uint256,bytes)": [
+                760,
+                141
+            ],
+            "newProposal(address,uint256,string,bytes)": [
+                1734,
+                383
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump4664": [
+                "p.recipient.call.value(p.amount)(transactionBytecode)",
+                "p.recipient.call.value(p.amount)(transactionBytecode)"
+            ],
+            "jump5532": [
+                "_token.transferFrom(_from, this, _value)",
+                "_token.transferFrom(_from, this, _value)"
+            ],
+            "block4664": [
+                "p.recipient.call.value(p.amount)(transactionBytecode)"
+            ],
+            "block5532": [
+                "_token.transferFrom(_from, this, _value)"
+            ]
+        }
+    },
+    "Builder": {
+        "function_list": [
+            "Object()",
+            "setHammer(address)",
+            "destroy()",
+            "setOwner(address)",
+            "getLastContract()",
+            "setBeneficiary(address)",
+            "setCost(uint256)",
+            "setSecurityCheck(string)"
+        ],
+        "initial_state": {
+            "Object()": {
+                "argument": {},
+                "contract": {
+                    "getContractsOf": "mapping(address => address[])",
+                    "buildingCostWei": "uint256",
+                    "securityCheckURI": "string"
+                }
+            },
+            "setHammer(address)": {
+                "argument": {},
+                "contract": {
+                    "getContractsOf": "mapping(address => address[])",
+                    "buildingCostWei": "uint256",
+                    "securityCheckURI": "string"
+                }
+            },
+            "destroy()": {
+                "argument": {},
+                "contract": {
+                    "getContractsOf": "mapping(address => address[])",
+                    "buildingCostWei": "uint256",
+                    "securityCheckURI": "string"
+                }
+            },
+            "setOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "getContractsOf": "mapping(address => address[])",
+                    "buildingCostWei": "uint256",
+                    "securityCheckURI": "string"
+                }
+            },
+            "getLastContract()": {
+                "argument": {},
+                "contract": {
+                    "getContractsOf": "mapping(address => address[])",
+                    "buildingCostWei": "uint256",
+                    "securityCheckURI": "string"
+                }
+            },
+            "setBeneficiary(address)": {
+                "argument": {},
+                "contract": {
+                    "getContractsOf": "mapping(address => address[])",
+                    "buildingCostWei": "uint256",
+                    "securityCheckURI": "string"
+                }
+            },
+            "setCost(uint256)": {
+                "argument": {
+                    "_buildingCostWei": "uint256"
+                },
+                "contract": {
+                    "getContractsOf": "mapping(address => address[])",
+                    "buildingCostWei": "uint256",
+                    "securityCheckURI": "string"
+                }
+            },
+            "setSecurityCheck(string)": {
+                "argument": {
+                    "_uri": "string"
+                },
+                "contract": {
+                    "getContractsOf": "mapping(address => address[])",
+                    "buildingCostWei": "uint256",
+                    "securityCheckURI": "string"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "setCost(uint256)": [
+                528,
+                163
+            ],
+            "setOwner(address)": [
+                307,
+                97
+            ],
+            "setHammer(address)": [
+                900,
+                295
+            ],
+            "setSecurityCheck(string)": [
+                202,
+                75
+            ],
+            "destroy()": [
+                703,
+                229
+            ],
+            "setBeneficiary(address)": [
+                374,
+                119
+            ],
+            "getLastContract()": [
+                813,
+                273
+            ]
+        },
+        "block_CALL_mapping": {}
+    }
+}

@@ -1,0 +1,209 @@
+{
+    "ERC20Token": {
+        "function_list": [
+            "totalSupply()",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)"
+        ],
+        "initial_state": {
+            "totalSupply()": {
+                "argument": {},
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                125,
+                75
+            ],
+            "balanceOf(address)": [
+                402,
+                141
+            ],
+            "totalSupply()": [
+                226,
+                97
+            ],
+            "allowance(address,address)": [
+                590,
+                185
+            ],
+            "transferFrom(address,address,uint256)": [
+                269,
+                119
+            ],
+            "transfer(address,uint256)": [
+                489,
+                163
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Controlled": {
+        "function_list": [
+            "Controlled()",
+            "changeController(address)"
+        ],
+        "initial_state": {
+            "Controlled()": {
+                "argument": {},
+                "contract": {}
+            },
+            "changeController(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "changeController(address)": [
+                81,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Burnable": {
+        "function_list": [
+            "Controlled()",
+            "changeController(address)",
+            "Burnable()",
+            "changeBurner(address)"
+        ],
+        "initial_state": {
+            "Controlled()": {
+                "argument": {},
+                "contract": {}
+            },
+            "changeController(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "Burnable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "changeBurner(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "changeController(address)": [
+                190,
+                97
+            ],
+            "changeBurner(address)": [
+                257,
+                119
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "ReferalsTokenHolder": {
+        "function_list": [
+            "Controlled()",
+            "changeController(address)",
+            "ReferalsTokenHolder(address)",
+            "spread(address[],uint256[])",
+            "claimTokens(address)"
+        ],
+        "initial_state": {
+            "Controlled()": {
+                "argument": {},
+                "contract": {}
+            },
+            "changeController(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "ReferalsTokenHolder(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "spread(address[],uint256[])": {
+                "argument": {
+                    "_addresses": "address[]",
+                    "_amounts": "uint256[]"
+                },
+                "contract": {}
+            },
+            "claimTokens(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "spread(address[],uint256[])": [
+                114,
+                75
+            ],
+            "changeController(address)": [
+                283,
+                97
+            ],
+            "claimTokens(address)": [
+                437,
+                141
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump1049": [
+                "msp.transfer(addr, amount)",
+                "msp.transfer(addr, amount)"
+            ],
+            "block2093": [
+                "token.transfer(controller, balance)"
+            ],
+            "block1836": [
+                "token.balanceOf(this)"
+            ],
+            "jump1836": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "jump1547": [
+                "controller.transfer(this.balance)",
+                "controller.transfer(this.balance)"
+            ],
+            "block1049": [
+                "msp.transfer(addr, amount)"
+            ],
+            "jump2093": [
+                "token.transfer(controller, balance)",
+                "token.transfer(controller, balance)"
+            ],
+            "block1547": [
+                "controller.transfer(this.balance)"
+            ]
+        }
+    }
+}

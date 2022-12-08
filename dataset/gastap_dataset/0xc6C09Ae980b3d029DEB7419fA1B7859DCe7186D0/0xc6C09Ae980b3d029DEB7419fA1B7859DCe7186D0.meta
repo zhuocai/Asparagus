@@ -1,0 +1,141 @@
+{
+    "ERC20Interface": {
+        "function_list": [
+            "totalSupply()",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)"
+        ],
+        "initial_state": {
+            "totalSupply()": {
+                "argument": {},
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                125,
+                75
+            ],
+            "balanceOf(address)": [
+                402,
+                141
+            ],
+            "totalSupply()": [
+                226,
+                97
+            ],
+            "allowance(address,address)": [
+                590,
+                185
+            ],
+            "transferFrom(address,address,uint256)": [
+                269,
+                119
+            ],
+            "transfer(address,uint256)": [
+                489,
+                163
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "DeDeContract": {
+        "function_list": [
+            "DeDeContract(address,address,address,uint256,uint256,address,address,uint256)",
+            "activate(address)",
+            "nullify(address)"
+        ],
+        "initial_state": {
+            "DeDeContract(address,address,address,uint256,uint256,address,address,uint256)": {
+                "argument": {
+                    "_targetAmount": "uint256",
+                    "_bulletAmount": "uint256",
+                    "_validationTime": "uint256"
+                },
+                "contract": {
+                    "validationTime": "uint256",
+                    "targetAmount": "uint256",
+                    "bulletAmount": "uint256"
+                }
+            },
+            "activate(address)": {
+                "argument": {},
+                "contract": {
+                    "validationTime": "uint256",
+                    "targetAmount": "uint256",
+                    "bulletAmount": "uint256"
+                }
+            },
+            "nullify(address)": {
+                "argument": {},
+                "contract": {
+                    "validationTime": "uint256",
+                    "targetAmount": "uint256",
+                    "bulletAmount": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "activate(address)": [
+                180,
+                75
+            ],
+            "nullify(address)": [
+                885,
+                295
+            ]
+        },
+        "block_CALL_mapping": {
+            "block1998": [
+                "ERC20Interface(bulletAddress).transferFrom(scs, dip, bulletAmount)"
+            ],
+            "block2960": [
+                "ERC20Interface(targetAddress).transfer(dip, targetAmount)"
+            ],
+            "jump1470": [
+                "ERC20Interface(targetAddress).transfer(scs, targetAmount)",
+                "ERC20Interface(targetAddress).transfer(scs, targetAmount)"
+            ],
+            "jump2960": [
+                "ERC20Interface(targetAddress).transfer(dip, targetAmount)",
+                "ERC20Interface(targetAddress).transfer(dip, targetAmount)"
+            ],
+            "block1470": [
+                "ERC20Interface(targetAddress).transfer(scs, targetAmount)"
+            ],
+            "jump1998": [
+                "ERC20Interface(bulletAddress).transferFrom(scs, dip, bulletAmount)",
+                "ERC20Interface(bulletAddress).transferFrom(scs, dip, bulletAmount)"
+            ]
+        }
+    }
+}

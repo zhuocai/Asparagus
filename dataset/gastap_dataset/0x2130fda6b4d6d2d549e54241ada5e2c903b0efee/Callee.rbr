@@ -1,0 +1,62 @@
+jump0(s(1), s(0), l(l0), callvalue)=>
+	eq(s(1), 0)
+	call(block15(s(0), l(l0)))
+
+jump0(s(1), s(0), l(l0), callvalue)=>
+	neq(s(1), 0)
+	call(block11(s(0)))
+
+block0(l(l0), callvalue)=>
+	s(0) = 128
+	nop(PUSH1)
+	s(1) = 64
+	nop(PUSH1)
+	l(l0) = s(0)
+	nop(MSTORE)
+	s(0) = callvalue
+	nop(CALLVALUE)
+	s(1) = s(0)
+	nop(DUP1)
+	call(jump0(s(1),s(0), l(l0), callvalue))
+	nop(ISZERO)
+	nop(PUSH1)
+	nop(JUMPI)
+
+block11(s(0))=>
+	s(1) = 0
+	nop(PUSH1)
+	s(2) = s(1)
+	nop(DUP1)
+	nop(REVERT)
+
+block15(s(0), l(l0))=>
+	nop(JUMPDEST)
+	nop(POP)
+	s(0) = 72126076040981978426504110486595894576140368023618228967998246608251680265026
+	nop(PUSH32)
+	s(1) = 64
+	nop(PUSH1)
+	s(1) = l(l0)
+	nop(MLOAD)
+	s(2) = 64
+	nop(PUSH1)
+	s(2) = l(l0)
+	nop(MLOAD)
+	s(3) = s(2)
+	nop(DUP1)
+	s(4) = s(1)
+	s(1) = s(3)
+	s(3) = s(4)
+	nop(SWAP2)
+	s(2) = s(3)-s(2)
+	nop(SUB)
+	s(3) = s(1)
+	s(1) = s(2)
+	s(2) = s(3)
+	nop(SWAP1)
+	nop(LOG1)
+	skip
+	nop(STOP)
+	skip
+	nop(STOP)
+

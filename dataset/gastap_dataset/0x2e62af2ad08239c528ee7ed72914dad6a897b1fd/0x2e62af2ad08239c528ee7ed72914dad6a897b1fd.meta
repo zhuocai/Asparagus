@@ -1,0 +1,942 @@
+{
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "Owned": {
+        "function_list": [
+            "Owned()",
+            "transferOwner(address)"
+        ],
+        "initial_state": {
+            "Owned()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwner(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwner(address)": [
+                81,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Payload": {
+        "function_list": [],
+        "initial_state": {},
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "CryptoTokenConstants": {
+        "function_list": [
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "PRE_ICO_ALLOCATION": "uint256",
+                    "ICO_ALLOCATION": "uint256",
+                    "TEAM_ALLOCATION": "uint256",
+                    "RESERVED_ALLOCATION": "uint256",
+                    "PRE_ICO_BONUS": "uint256",
+                    "ICO_PHASE_01_BONUS": "uint256",
+                    "ICO_PHASE_02_BONUS": "uint256",
+                    "ICO_PHASE_03_BONUS": "uint256",
+                    "ICO_PHASE_04_BONUS": "uint256",
+                    "BUY_RATE": "uint256",
+                    "BUY_PRICE": "uint256",
+                    "PRE_ICO_RATE": "uint256",
+                    "ICO_PHASE_01_RATE": "uint256",
+                    "ICO_PHASE_02_RATE": "uint256",
+                    "ICO_PHASE_03_RATE": "uint256",
+                    "ICO_PHASE_04_RATE": "uint256",
+                    "PRE_ICO_BUY_PRICE": "uint256",
+                    "ICO_PHASE_01_BUY_PRICE": "uint256",
+                    "ICO_PHASE_02_BUY_PRICE": "uint256",
+                    "ICO_PHASE_03_BUY_PRICE": "uint256",
+                    "ICO_PHASE_04_BUY_PRICE": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "CryptoToken": {
+        "function_list": [
+            "Owned()",
+            "transferOwner(address)",
+            "CryptoToken(string,string,uint8,address,uint256,uint256,uint256)",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "increaseApproval(address,uint256)",
+            "decreaseApproval(address,uint256)",
+            "freeze(address,bool)",
+            "frozen(address)",
+            "setWallet(address)",
+            "setDeveloper(address,bool)",
+            "getDeveloper(address)",
+            "getContribution(address)",
+            "setSpecialPrice(address,uint256,uint256)",
+            "delSpecialPrice(address)",
+            "price(uint256,uint256)",
+            "setBuyPrice(uint256)",
+            "setSellPrice(uint256)",
+            "getBuyPrice(address)",
+            "getSellPrice(address)",
+            "fallback()",
+            "withdraw()",
+            "buy()",
+            "sell(uint256)",
+            "refund()",
+            "setTokenStatus(bool)",
+            "setTransferStatus(bool)",
+            "setBuyStatus(bool)",
+            "setSellStatus(bool)",
+            "setRefundStatus(bool)",
+            "_transfer(address,address,uint256)",
+            "_forward(uint256)",
+            "_approve(address,address,uint256)",
+            "_addSupply(address,uint256)",
+            "_subSupply(address,uint256)",
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "Owned()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "transSupply": "uint256",
+                    "availSupply": "uint256",
+                    "totalContributors": "uint256",
+                    "totalContribution": "uint256",
+                    "buyPrice": "uint256",
+                    "sellPrice": "uint256"
+                }
+            },
+            "transferOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "transSupply": "uint256",
+                    "availSupply": "uint256",
+                    "totalContributors": "uint256",
+                    "totalContribution": "uint256",
+                    "buyPrice": "uint256",
+                    "sellPrice": "uint256"
+                }
+            },
+            "CryptoToken(string,string,uint8,address,uint256,uint256,uint256)": {
+                "argument": {
+                    "_name": "string",
+                    "_symbol": "string",
+                    "_decimals": "uint8",
+                    "_totalSupply": "uint256",
+                    "_buyPrice": "uint256",
+                    "_sellPrice": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "transSupply": "uint256",
+                    "availSupply": "uint256",
+                    "totalContributors": "uint256",
+                    "totalContribution": "uint256",
+                    "buyPrice": "uint256",
+                    "sellPrice": "uint256"
+                }
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "transSupply": "uint256",
+                    "availSupply": "uint256",
+                    "totalContributors": "uint256",
+                    "totalContribution": "uint256",
+                    "buyPrice": "uint256",
+                    "sellPrice": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "transSupply": "uint256",
+                    "availSupply": "uint256",
+                    "totalContributors": "uint256",
+                    "totalContribution": "uint256",
+                    "buyPrice": "uint256",
+                    "sellPrice": "uint256"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "transSupply": "uint256",
+                    "availSupply": "uint256",
+                    "totalContributors": "uint256",
+                    "totalContribution": "uint256",
+                    "buyPrice": "uint256",
+                    "sellPrice": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "transSupply": "uint256",
+                    "availSupply": "uint256",
+                    "totalContributors": "uint256",
+                    "totalContribution": "uint256",
+                    "buyPrice": "uint256",
+                    "sellPrice": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "transSupply": "uint256",
+                    "availSupply": "uint256",
+                    "totalContributors": "uint256",
+                    "totalContribution": "uint256",
+                    "buyPrice": "uint256",
+                    "sellPrice": "uint256"
+                }
+            },
+            "increaseApproval(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "transSupply": "uint256",
+                    "availSupply": "uint256",
+                    "totalContributors": "uint256",
+                    "totalContribution": "uint256",
+                    "buyPrice": "uint256",
+                    "sellPrice": "uint256"
+                }
+            },
+            "decreaseApproval(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "transSupply": "uint256",
+                    "availSupply": "uint256",
+                    "totalContributors": "uint256",
+                    "totalContribution": "uint256",
+                    "buyPrice": "uint256",
+                    "sellPrice": "uint256"
+                }
+            },
+            "freeze(address,bool)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "transSupply": "uint256",
+                    "availSupply": "uint256",
+                    "totalContributors": "uint256",
+                    "totalContribution": "uint256",
+                    "buyPrice": "uint256",
+                    "sellPrice": "uint256"
+                }
+            },
+            "frozen(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "transSupply": "uint256",
+                    "availSupply": "uint256",
+                    "totalContributors": "uint256",
+                    "totalContribution": "uint256",
+                    "buyPrice": "uint256",
+                    "sellPrice": "uint256"
+                }
+            },
+            "setWallet(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "transSupply": "uint256",
+                    "availSupply": "uint256",
+                    "totalContributors": "uint256",
+                    "totalContribution": "uint256",
+                    "buyPrice": "uint256",
+                    "sellPrice": "uint256"
+                }
+            },
+            "setDeveloper(address,bool)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "transSupply": "uint256",
+                    "availSupply": "uint256",
+                    "totalContributors": "uint256",
+                    "totalContribution": "uint256",
+                    "buyPrice": "uint256",
+                    "sellPrice": "uint256"
+                }
+            },
+            "getDeveloper(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "transSupply": "uint256",
+                    "availSupply": "uint256",
+                    "totalContributors": "uint256",
+                    "totalContribution": "uint256",
+                    "buyPrice": "uint256",
+                    "sellPrice": "uint256"
+                }
+            },
+            "getContribution(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "transSupply": "uint256",
+                    "availSupply": "uint256",
+                    "totalContributors": "uint256",
+                    "totalContribution": "uint256",
+                    "buyPrice": "uint256",
+                    "sellPrice": "uint256"
+                }
+            },
+            "setSpecialPrice(address,uint256,uint256)": {
+                "argument": {
+                    "_buyPrice": "uint256",
+                    "_sellPrice": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "transSupply": "uint256",
+                    "availSupply": "uint256",
+                    "totalContributors": "uint256",
+                    "totalContribution": "uint256",
+                    "buyPrice": "uint256",
+                    "sellPrice": "uint256"
+                }
+            },
+            "delSpecialPrice(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "transSupply": "uint256",
+                    "availSupply": "uint256",
+                    "totalContributors": "uint256",
+                    "totalContribution": "uint256",
+                    "buyPrice": "uint256",
+                    "sellPrice": "uint256"
+                }
+            },
+            "price(uint256,uint256)": {
+                "argument": {
+                    "_buyPrice": "uint256",
+                    "_sellPrice": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "transSupply": "uint256",
+                    "availSupply": "uint256",
+                    "totalContributors": "uint256",
+                    "totalContribution": "uint256",
+                    "buyPrice": "uint256",
+                    "sellPrice": "uint256"
+                }
+            },
+            "setBuyPrice(uint256)": {
+                "argument": {
+                    "_buyPrice": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "transSupply": "uint256",
+                    "availSupply": "uint256",
+                    "totalContributors": "uint256",
+                    "totalContribution": "uint256",
+                    "buyPrice": "uint256",
+                    "sellPrice": "uint256"
+                }
+            },
+            "setSellPrice(uint256)": {
+                "argument": {
+                    "_sellPrice": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "transSupply": "uint256",
+                    "availSupply": "uint256",
+                    "totalContributors": "uint256",
+                    "totalContribution": "uint256",
+                    "buyPrice": "uint256",
+                    "sellPrice": "uint256"
+                }
+            },
+            "getBuyPrice(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "transSupply": "uint256",
+                    "availSupply": "uint256",
+                    "totalContributors": "uint256",
+                    "totalContribution": "uint256",
+                    "buyPrice": "uint256",
+                    "sellPrice": "uint256"
+                }
+            },
+            "getSellPrice(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "transSupply": "uint256",
+                    "availSupply": "uint256",
+                    "totalContributors": "uint256",
+                    "totalContribution": "uint256",
+                    "buyPrice": "uint256",
+                    "sellPrice": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "transSupply": "uint256",
+                    "availSupply": "uint256",
+                    "totalContributors": "uint256",
+                    "totalContribution": "uint256",
+                    "buyPrice": "uint256",
+                    "sellPrice": "uint256"
+                }
+            },
+            "withdraw()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "transSupply": "uint256",
+                    "availSupply": "uint256",
+                    "totalContributors": "uint256",
+                    "totalContribution": "uint256",
+                    "buyPrice": "uint256",
+                    "sellPrice": "uint256"
+                }
+            },
+            "buy()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "transSupply": "uint256",
+                    "availSupply": "uint256",
+                    "totalContributors": "uint256",
+                    "totalContribution": "uint256",
+                    "buyPrice": "uint256",
+                    "sellPrice": "uint256"
+                }
+            },
+            "sell(uint256)": {
+                "argument": {
+                    "units": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "transSupply": "uint256",
+                    "availSupply": "uint256",
+                    "totalContributors": "uint256",
+                    "totalContribution": "uint256",
+                    "buyPrice": "uint256",
+                    "sellPrice": "uint256"
+                }
+            },
+            "refund()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "transSupply": "uint256",
+                    "availSupply": "uint256",
+                    "totalContributors": "uint256",
+                    "totalContribution": "uint256",
+                    "buyPrice": "uint256",
+                    "sellPrice": "uint256"
+                }
+            },
+            "setTokenStatus(bool)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "transSupply": "uint256",
+                    "availSupply": "uint256",
+                    "totalContributors": "uint256",
+                    "totalContribution": "uint256",
+                    "buyPrice": "uint256",
+                    "sellPrice": "uint256"
+                }
+            },
+            "setTransferStatus(bool)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "transSupply": "uint256",
+                    "availSupply": "uint256",
+                    "totalContributors": "uint256",
+                    "totalContribution": "uint256",
+                    "buyPrice": "uint256",
+                    "sellPrice": "uint256"
+                }
+            },
+            "setBuyStatus(bool)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "transSupply": "uint256",
+                    "availSupply": "uint256",
+                    "totalContributors": "uint256",
+                    "totalContribution": "uint256",
+                    "buyPrice": "uint256",
+                    "sellPrice": "uint256"
+                }
+            },
+            "setSellStatus(bool)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "transSupply": "uint256",
+                    "availSupply": "uint256",
+                    "totalContributors": "uint256",
+                    "totalContribution": "uint256",
+                    "buyPrice": "uint256",
+                    "sellPrice": "uint256"
+                }
+            },
+            "setRefundStatus(bool)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "transSupply": "uint256",
+                    "availSupply": "uint256",
+                    "totalContributors": "uint256",
+                    "totalContribution": "uint256",
+                    "buyPrice": "uint256",
+                    "sellPrice": "uint256"
+                }
+            },
+            "_transfer(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "transSupply": "uint256",
+                    "availSupply": "uint256",
+                    "totalContributors": "uint256",
+                    "totalContribution": "uint256",
+                    "buyPrice": "uint256",
+                    "sellPrice": "uint256"
+                }
+            },
+            "_forward(uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "transSupply": "uint256",
+                    "availSupply": "uint256",
+                    "totalContributors": "uint256",
+                    "totalContribution": "uint256",
+                    "buyPrice": "uint256",
+                    "sellPrice": "uint256"
+                }
+            },
+            "_approve(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "transSupply": "uint256",
+                    "availSupply": "uint256",
+                    "totalContributors": "uint256",
+                    "totalContribution": "uint256",
+                    "buyPrice": "uint256",
+                    "sellPrice": "uint256"
+                }
+            },
+            "_addSupply(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "transSupply": "uint256",
+                    "availSupply": "uint256",
+                    "totalContributors": "uint256",
+                    "totalContribution": "uint256",
+                    "buyPrice": "uint256",
+                    "sellPrice": "uint256"
+                }
+            },
+            "_subSupply(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "transSupply": "uint256",
+                    "availSupply": "uint256",
+                    "totalContributors": "uint256",
+                    "totalContribution": "uint256",
+                    "buyPrice": "uint256",
+                    "sellPrice": "uint256"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "transSupply": "uint256",
+                    "availSupply": "uint256",
+                    "totalContributors": "uint256",
+                    "totalContribution": "uint256",
+                    "buyPrice": "uint256",
+                    "sellPrice": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                2198,
+                559
+            ],
+            "getSellPrice(address)": [
+                2285,
+                581
+            ],
+            "buy()": [
+                2826,
+                757
+            ],
+            "allowance(address,address)": [
+                3489,
+                933
+            ],
+            "decreaseApproval(address,uint256)": [
+                2006,
+                515
+            ],
+            "setRefundStatus(bool)": [
+                941,
+                163
+            ],
+            "transferFrom(address,address,uint256)": [
+                1213,
+                251
+            ],
+            "sell(uint256)": [
+                3699,
+                977
+            ],
+            "approve(address,uint256)": [
+                726,
+                97
+            ],
+            "increaseApproval(address,uint256)": [
+                3388,
+                911
+            ],
+            "setBuyPrice(uint256)": [
+                1937,
+                493
+            ],
+            "price(uint256,uint256)": [
+                1489,
+                339
+            ],
+            "getContribution(address)": [
+                1126,
+                229
+            ],
+            "frozen(address)": [
+                3297,
+                889
+            ],
+            "getDeveloper(address)": [
+                2107,
+                537
+            ],
+            "freeze(address,bool)": [
+                3107,
+                845
+            ],
+            "setWallet(address)": [
+                3608,
+                955
+            ],
+            "delSpecialPrice(address)": [
+                3751,
+                999
+            ],
+            "withdraw()": [
+                1442,
+                317
+            ],
+            "setSpecialPrice(address,uint256,uint256)": [
+                3842,
+                1021
+            ],
+            "refund()": [
+                1836,
+                449
+            ],
+            "setDeveloper(address,bool)": [
+                2957,
+                801
+            ],
+            "setSellPrice(uint256)": [
+                4043,
+                1087
+            ],
+            "setBuyStatus(bool)": [
+                827,
+                119
+            ],
+            "setSellStatus(bool)": [
+                1866,
+                471
+            ],
+            "setTransferStatus(bool)": [
+                1568,
+                361
+            ],
+            "setTokenStatus(bool)": [
+                1055,
+                207
+            ],
+            "transfer(address,uint256)": [
+                2856,
+                779
+            ],
+            "getBuyPrice(address)": [
+                3210,
+                867
+            ],
+            "transferOwner(address)": [
+                1682,
+                405
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump12804_1": [
+                "wallet.transfer(value)",
+                "wallet.transfer(value)"
+            ],
+            "jump6269": [
+                "msg.sender.transfer(this.balance)",
+                "msg.sender.transfer(this.balance)"
+            ],
+            "block7124": [
+                "msg.sender.transfer(value)"
+            ],
+            "jump12804": [
+                "wallet.transfer(value)",
+                "wallet.transfer(value)"
+            ],
+            "block12804_1": [
+                "wallet.transfer(value)"
+            ],
+            "block12804_0": [
+                "wallet.transfer(value)"
+            ],
+            "block12804": [
+                "wallet.transfer(value)"
+            ],
+            "jump12804_0": [
+                "wallet.transfer(value)",
+                "wallet.transfer(value)"
+            ],
+            "block10758": [
+                "msg.sender.transfer(value)"
+            ],
+            "jump10758": [
+                "msg.sender.transfer(value)",
+                "msg.sender.transfer(value)"
+            ],
+            "block6269": [
+                "msg.sender.transfer(this.balance)"
+            ],
+            "jump7124": [
+                "msg.sender.transfer(value)",
+                "msg.sender.transfer(value)"
+            ]
+        }
+    }
+}

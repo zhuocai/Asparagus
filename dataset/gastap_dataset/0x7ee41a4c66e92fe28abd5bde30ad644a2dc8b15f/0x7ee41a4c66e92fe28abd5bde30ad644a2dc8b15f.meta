@@ -1,0 +1,344 @@
+{
+    "Owned": {
+        "function_list": [
+            "Owned()",
+            "changeOwner(address)"
+        ],
+        "initial_state": {
+            "Owned()": {
+                "argument": {},
+                "contract": {}
+            },
+            "changeOwner(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "changeOwner(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Escapable": {
+        "function_list": [
+            "Owned()",
+            "changeOwner(address)",
+            "Escapable(address,address)",
+            "escapeHatch()",
+            "changeEscapeCaller(address)"
+        ],
+        "initial_state": {
+            "Owned()": {
+                "argument": {},
+                "contract": {}
+            },
+            "changeOwner(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "Escapable(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "escapeHatch()": {
+                "argument": {},
+                "contract": {}
+            },
+            "changeEscapeCaller(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "escapeHatch()": [
+                125,
+                75
+            ],
+            "changeEscapeCaller(address)": [
+                148,
+                97
+            ],
+            "changeOwner(address)": [
+                302,
+                141
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump726": [
+                "escapeDestination.send(total)",
+                "escapeDestination.send(total)"
+            ],
+            "block726": [
+                "escapeDestination.send(total)"
+            ]
+        }
+    },
+    "Vault": {
+        "function_list": [
+            "Escapable(address,address)",
+            "escapeHatch()",
+            "changeEscapeCaller(address)",
+            "Owned()",
+            "changeOwner(address)",
+            "Vault(address,address,uint256,uint256,address,uint256)",
+            "numberOfAuthorizedPayments()",
+            "receiveEther()",
+            "fallback()",
+            "authorizePayment(string,address,uint256,uint256)",
+            "collectAuthorizedPayment(uint256)",
+            "delayPayment(uint256,uint256)",
+            "cancelPayment(uint256)",
+            "authorizeSpender(address,bool)",
+            "setSecurityGuard(address)",
+            "setTimelock(uint256)",
+            "setMaxSecurityGuardDelay(uint256)"
+        ],
+        "initial_state": {
+            "Escapable(address,address)": {
+                "argument": {},
+                "contract": {
+                    "authorizedPayments": "Vault.Payment[]",
+                    "absoluteMinTimeLock": "uint256",
+                    "timeLock": "uint256",
+                    "maxSecurityGuardDelay": "uint256"
+                }
+            },
+            "escapeHatch()": {
+                "argument": {},
+                "contract": {
+                    "authorizedPayments": "Vault.Payment[]",
+                    "absoluteMinTimeLock": "uint256",
+                    "timeLock": "uint256",
+                    "maxSecurityGuardDelay": "uint256"
+                }
+            },
+            "changeEscapeCaller(address)": {
+                "argument": {},
+                "contract": {
+                    "authorizedPayments": "Vault.Payment[]",
+                    "absoluteMinTimeLock": "uint256",
+                    "timeLock": "uint256",
+                    "maxSecurityGuardDelay": "uint256"
+                }
+            },
+            "Owned()": {
+                "argument": {},
+                "contract": {
+                    "authorizedPayments": "Vault.Payment[]",
+                    "absoluteMinTimeLock": "uint256",
+                    "timeLock": "uint256",
+                    "maxSecurityGuardDelay": "uint256"
+                }
+            },
+            "changeOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "authorizedPayments": "Vault.Payment[]",
+                    "absoluteMinTimeLock": "uint256",
+                    "timeLock": "uint256",
+                    "maxSecurityGuardDelay": "uint256"
+                }
+            },
+            "Vault(address,address,uint256,uint256,address,uint256)": {
+                "argument": {
+                    "_absoluteMinTimeLock": "uint256",
+                    "_timeLock": "uint256",
+                    "_maxSecurityGuardDelay": "uint256"
+                },
+                "contract": {
+                    "authorizedPayments": "Vault.Payment[]",
+                    "absoluteMinTimeLock": "uint256",
+                    "timeLock": "uint256",
+                    "maxSecurityGuardDelay": "uint256"
+                }
+            },
+            "numberOfAuthorizedPayments()": {
+                "argument": {},
+                "contract": {
+                    "authorizedPayments": "Vault.Payment[]",
+                    "absoluteMinTimeLock": "uint256",
+                    "timeLock": "uint256",
+                    "maxSecurityGuardDelay": "uint256"
+                }
+            },
+            "receiveEther()": {
+                "argument": {},
+                "contract": {
+                    "authorizedPayments": "Vault.Payment[]",
+                    "absoluteMinTimeLock": "uint256",
+                    "timeLock": "uint256",
+                    "maxSecurityGuardDelay": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "authorizedPayments": "Vault.Payment[]",
+                    "absoluteMinTimeLock": "uint256",
+                    "timeLock": "uint256",
+                    "maxSecurityGuardDelay": "uint256"
+                }
+            },
+            "authorizePayment(string,address,uint256,uint256)": {
+                "argument": {
+                    "_description": "string",
+                    "_amount": "uint256",
+                    "_paymentDelay": "uint256"
+                },
+                "contract": {
+                    "authorizedPayments": "Vault.Payment[]",
+                    "absoluteMinTimeLock": "uint256",
+                    "timeLock": "uint256",
+                    "maxSecurityGuardDelay": "uint256"
+                }
+            },
+            "collectAuthorizedPayment(uint256)": {
+                "argument": {
+                    "_idPayment": "uint256"
+                },
+                "contract": {
+                    "authorizedPayments": "Vault.Payment[]",
+                    "absoluteMinTimeLock": "uint256",
+                    "timeLock": "uint256",
+                    "maxSecurityGuardDelay": "uint256"
+                }
+            },
+            "delayPayment(uint256,uint256)": {
+                "argument": {
+                    "_idPayment": "uint256",
+                    "_delay": "uint256"
+                },
+                "contract": {
+                    "authorizedPayments": "Vault.Payment[]",
+                    "absoluteMinTimeLock": "uint256",
+                    "timeLock": "uint256",
+                    "maxSecurityGuardDelay": "uint256"
+                }
+            },
+            "cancelPayment(uint256)": {
+                "argument": {
+                    "_idPayment": "uint256"
+                },
+                "contract": {
+                    "authorizedPayments": "Vault.Payment[]",
+                    "absoluteMinTimeLock": "uint256",
+                    "timeLock": "uint256",
+                    "maxSecurityGuardDelay": "uint256"
+                }
+            },
+            "authorizeSpender(address,bool)": {
+                "argument": {},
+                "contract": {
+                    "authorizedPayments": "Vault.Payment[]",
+                    "absoluteMinTimeLock": "uint256",
+                    "timeLock": "uint256",
+                    "maxSecurityGuardDelay": "uint256"
+                }
+            },
+            "setSecurityGuard(address)": {
+                "argument": {},
+                "contract": {
+                    "authorizedPayments": "Vault.Payment[]",
+                    "absoluteMinTimeLock": "uint256",
+                    "timeLock": "uint256",
+                    "maxSecurityGuardDelay": "uint256"
+                }
+            },
+            "setTimelock(uint256)": {
+                "argument": {
+                    "_newTimeLock": "uint256"
+                },
+                "contract": {
+                    "authorizedPayments": "Vault.Payment[]",
+                    "absoluteMinTimeLock": "uint256",
+                    "timeLock": "uint256",
+                    "maxSecurityGuardDelay": "uint256"
+                }
+            },
+            "setMaxSecurityGuardDelay(uint256)": {
+                "argument": {
+                    "_maxSecurityGuardDelay": "uint256"
+                },
+                "contract": {
+                    "authorizedPayments": "Vault.Payment[]",
+                    "absoluteMinTimeLock": "uint256",
+                    "timeLock": "uint256",
+                    "maxSecurityGuardDelay": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "numberOfAuthorizedPayments()": [
+                484,
+                163
+            ],
+            "cancelPayment(uint256)": [
+                606,
+                207
+            ],
+            "authorizePayment(string,address,uint256,uint256)": [
+                793,
+                273
+            ],
+            "changeEscapeCaller(address)": [
+                417,
+                141
+            ],
+            "receiveEther()": [
+                1326,
+                339
+            ],
+            "setSecurityGuard(address)": [
+                1490,
+                405
+            ],
+            "changeOwner(address)": [
+                1336,
+                361
+            ],
+            "setMaxSecurityGuardDelay(uint256)": [
+                1778,
+                493
+            ],
+            "setTimelock(uint256)": [
+                372,
+                119
+            ],
+            "authorizeSpender(address,bool)": [
+                527,
+                185
+            ],
+            "escapeHatch()": [
+                349,
+                97
+            ],
+            "collectAuthorizedPayment(uint256)": [
+                970,
+                295
+            ],
+            "delayPayment(uint256,uint256)": [
+                651,
+                229
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump4484": [
+                "p.recipient.send(p.amount)",
+                "p.recipient.send(p.amount)"
+            ],
+            "block2222": [
+                "escapeDestination.send(total)"
+            ],
+            "jump2222": [
+                "escapeDestination.send(total)",
+                "escapeDestination.send(total)"
+            ],
+            "block4484": [
+                "p.recipient.send(p.amount)"
+            ]
+        }
+    }
+}

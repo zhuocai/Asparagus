@@ -1,0 +1,92 @@
+{
+    "MatchPay": {
+        "function_list": [
+            "MatchPay()",
+            "setTokenAddress(address)",
+            "redeem(uint256)",
+            "switch_period()",
+            "fallback()"
+        ],
+        "initial_state": {
+            "MatchPay()": {
+                "argument": {},
+                "contract": {
+                    "genesis_date": "uint256",
+                    "current_period": "uint256",
+                    "dividends": "uint256"
+                }
+            },
+            "setTokenAddress(address)": {
+                "argument": {},
+                "contract": {
+                    "genesis_date": "uint256",
+                    "current_period": "uint256",
+                    "dividends": "uint256"
+                }
+            },
+            "redeem(uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "genesis_date": "uint256",
+                    "current_period": "uint256",
+                    "dividends": "uint256"
+                }
+            },
+            "switch_period()": {
+                "argument": {},
+                "contract": {
+                    "genesis_date": "uint256",
+                    "current_period": "uint256",
+                    "dividends": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "genesis_date": "uint256",
+                    "current_period": "uint256",
+                    "dividends": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "switch_period()": [
+                180,
+                97
+            ],
+            "setTokenAddress(address)": [
+                89,
+                75
+            ],
+            "redeem(uint256)": [
+                227,
+                119
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump1653": [
+                "msg.sender.send(_amount)",
+                "msg.sender.send(_amount)"
+            ],
+            "block1207": [
+                "token.getSupply()"
+            ],
+            "jump994": [
+                "token.balanceOf(msg.sender)",
+                "token.balanceOf(msg.sender)"
+            ],
+            "jump1207": [
+                "token.getSupply()",
+                "token.getSupply()"
+            ],
+            "block994": [
+                "token.balanceOf(msg.sender)"
+            ],
+            "block1653": [
+                "msg.sender.send(_amount)"
+            ]
+        }
+    }
+}

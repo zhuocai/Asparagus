@@ -1,0 +1,295 @@
+{
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "Crowdsale": {
+        "function_list": [
+            "buyTokens(address)"
+        ],
+        "initial_state": {
+            "buyTokens(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {
+            "block1368_0": [
+                "owner.transfer(msg.value)"
+            ],
+            "jump1828_0": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "jump2693": [
+                "token.transfer(owner, balance)",
+                "token.transfer(owner, balance)"
+            ],
+            "block2390": [
+                "token.balanceOf(this)"
+            ],
+            "block1368_1": [
+                "owner.transfer(msg.value)"
+            ],
+            "block1828_0": [
+                "token.balanceOf(this)"
+            ],
+            "jump1368": [
+                "owner.transfer(msg.value)",
+                "owner.transfer(msg.value)"
+            ],
+            "jump1368_0": [
+                "owner.transfer(msg.value)",
+                "owner.transfer(msg.value)"
+            ],
+            "block1326_0": [
+                "token.transfer(msg.sender, tokens)"
+            ],
+            "jump1368_1": [
+                "owner.transfer(msg.value)",
+                "owner.transfer(msg.value)"
+            ],
+            "jump1326": [
+                "token.transfer(msg.sender, tokens)",
+                "token.transfer(msg.sender, tokens)"
+            ],
+            "jump2390": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "block2693": [
+                "token.transfer(owner, balance)"
+            ],
+            "block1326_1": [
+                "token.transfer(msg.sender, tokens)"
+            ],
+            "jump1326_1": [
+                "token.transfer(msg.sender, tokens)",
+                "token.transfer(msg.sender, tokens)"
+            ],
+            "jump1326_0": [
+                "token.transfer(msg.sender, tokens)",
+                "token.transfer(msg.sender, tokens)"
+            ],
+            "block1368": [
+                "owner.transfer(msg.value)"
+            ],
+            "jump1828": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "block1326": [
+                "token.transfer(msg.sender, tokens)"
+            ],
+            "block1828": [
+                "token.balanceOf(this)"
+            ]
+        }
+    },
+    "Ownable": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Preallocation": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "Preallocation(address,uint256)",
+            "fallback()",
+            "withdraw()",
+            "setInvestor(address)",
+            "buyTokens(Crowdsale)",
+            "setFailed()",
+            "stateIs(Preallocation.States)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {
+                    "maxBalance": "uint256"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "maxBalance": "uint256"
+                }
+            },
+            "Preallocation(address,uint256)": {
+                "argument": {
+                    "_maxBalance": "uint256"
+                },
+                "contract": {
+                    "maxBalance": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "maxBalance": "uint256"
+                }
+            },
+            "withdraw()": {
+                "argument": {},
+                "contract": {
+                    "maxBalance": "uint256"
+                }
+            },
+            "setInvestor(address)": {
+                "argument": {},
+                "contract": {
+                    "maxBalance": "uint256"
+                }
+            },
+            "buyTokens(Crowdsale)": {
+                "argument": {},
+                "contract": {
+                    "maxBalance": "uint256"
+                }
+            },
+            "setFailed()": {
+                "argument": {},
+                "contract": {
+                    "maxBalance": "uint256"
+                }
+            },
+            "stateIs(Preallocation.States)": {
+                "argument": {},
+                "contract": {
+                    "maxBalance": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "setInvestor(address)": [
+                559,
+                185
+            ],
+            "setFailed()": [
+                311,
+                75
+            ],
+            "withdraw()": [
+                421,
+                119
+            ],
+            "transferOwnership(address)": [
+                837,
+                273
+            ]
+        },
+        "block_CALL_mapping": {
+            "block2219": [
+                "crowdsale.buyTokens.value(bal)(investor)"
+            ],
+            "jump1262": [
+                "investor.send(bal)",
+                "investor.send(bal)"
+            ],
+            "jump2219": [
+                "crowdsale.buyTokens.value(bal)(investor)",
+                "crowdsale.buyTokens.value(bal)(investor)"
+            ],
+            "block1262": [
+                "investor.send(bal)"
+            ]
+        }
+    },
+    "Math": {
+        "function_list": [
+            "max64(uint64,uint64)",
+            "min64(uint64,uint64)",
+            "max256(uint256,uint256)",
+            "min256(uint256,uint256)"
+        ],
+        "initial_state": {
+            "max64(uint64,uint64)": {
+                "argument": {
+                    "a": "uint64",
+                    "b": "uint64"
+                },
+                "contract": {}
+            },
+            "min64(uint64,uint64)": {
+                "argument": {
+                    "a": "uint64",
+                    "b": "uint64"
+                },
+                "contract": {}
+            },
+            "max256(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "min256(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    }
+}

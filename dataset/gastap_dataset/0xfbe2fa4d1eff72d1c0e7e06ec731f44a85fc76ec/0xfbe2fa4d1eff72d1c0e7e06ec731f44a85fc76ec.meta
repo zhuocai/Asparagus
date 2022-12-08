@@ -1,0 +1,364 @@
+{
+    "Token": {
+        "function_list": [
+            "transfer(address,uint256)",
+            "approve(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "Token(uint256)",
+            "mint(address,uint256)",
+            "seal()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256",
+                    "id": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256",
+                    "id": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256",
+                    "id": "uint256"
+                }
+            },
+            "Token(uint256)": {
+                "argument": {
+                    "_id": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256",
+                    "id": "uint256"
+                }
+            },
+            "mint(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256",
+                    "id": "uint256"
+                }
+            },
+            "seal()": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "id": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                180,
+                75
+            ],
+            "mint(address,uint256)": [
+                480,
+                163
+            ],
+            "transferFrom(address,address,uint256)": [
+                324,
+                119
+            ],
+            "seal()": [
+                457,
+                141
+            ],
+            "transfer(address,uint256)": [
+                755,
+                229
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Withdraw": {
+        "function_list": [
+            "Withdraw(Token)",
+            "fallback()",
+            "withdraw()"
+        ],
+        "initial_state": {
+            "Withdraw(Token)": {
+                "argument": {},
+                "contract": {}
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {}
+            },
+            "withdraw()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "withdraw()": [
+                78,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "block324": [
+                "token.sealed()"
+            ],
+            "block584": [
+                "token.balanceOf(msg.sender)"
+            ],
+            "jump1382": [
+                "token.transferFrom(msg.sender, this, token_amount)",
+                "token.transferFrom(msg.sender, this, token_amount)"
+            ],
+            "block1448": [
+                "msg.sender.send(wei_amount)"
+            ],
+            "jump324": [
+                "token.sealed()",
+                "token.sealed()"
+            ],
+            "block843": [
+                "token.balanceOf(msg.sender)"
+            ],
+            "block1037": [
+                "token.totalSupply()"
+            ],
+            "block1382": [
+                "token.transferFrom(msg.sender, this, token_amount)"
+            ],
+            "jump584": [
+                "token.balanceOf(msg.sender)",
+                "token.balanceOf(msg.sender)"
+            ],
+            "jump843": [
+                "token.balanceOf(msg.sender)",
+                "token.balanceOf(msg.sender)"
+            ],
+            "jump1037": [
+                "token.totalSupply()",
+                "token.totalSupply()"
+            ]
+        }
+    },
+    "TokenGame": {
+        "function_list": [
+            "TokenGame(uint256)",
+            "play()",
+            "finalise()",
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "TokenGame(uint256)": {
+                "argument": {
+                    "_cap_in_wei": "uint256"
+                },
+                "contract": {
+                    "cap_in_wei": "uint256",
+                    "initial_duration": "uint256",
+                    "time_extension_from_doubling": "uint256",
+                    "time_of_half_decay": "uint256",
+                    "end_time": "uint256",
+                    "last_time": "uint256",
+                    "ema": "uint256",
+                    "total_wei_given": "uint256"
+                }
+            },
+            "play()": {
+                "argument": {},
+                "contract": {
+                    "cap_in_wei": "uint256",
+                    "initial_duration": "uint256",
+                    "time_extension_from_doubling": "uint256",
+                    "time_of_half_decay": "uint256",
+                    "end_time": "uint256",
+                    "last_time": "uint256",
+                    "ema": "uint256",
+                    "total_wei_given": "uint256"
+                }
+            },
+            "finalise()": {
+                "argument": {},
+                "contract": {
+                    "cap_in_wei": "uint256",
+                    "initial_duration": "uint256",
+                    "time_extension_from_doubling": "uint256",
+                    "time_of_half_decay": "uint256",
+                    "end_time": "uint256",
+                    "last_time": "uint256",
+                    "ema": "uint256",
+                    "total_wei_given": "uint256"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "cap_in_wei": "uint256",
+                    "initial_duration": "uint256",
+                    "time_extension_from_doubling": "uint256",
+                    "time_of_half_decay": "uint256",
+                    "end_time": "uint256",
+                    "last_time": "uint256",
+                    "ema": "uint256",
+                    "total_wei_given": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "play()": [
+                462,
+                163
+            ],
+            "finalise()": [
+                515,
+                207
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump2003": [
+                "owner.send(to_owner)",
+                "owner.send(to_owner)"
+            ],
+            "block1612": [
+                "excess_token.seal()"
+            ],
+            "jump1117": [
+                "excess_token.mint(msg.sender, msg.value)",
+                "excess_token.mint(msg.sender, msg.value)"
+            ],
+            "block1832": [
+                "excess_withdraw.send(this.balance - cap_in_wei)"
+            ],
+            "block2003": [
+                "owner.send(to_owner)"
+            ],
+            "jump1770": [
+                "game_token.seal()",
+                "game_token.seal()"
+            ],
+            "block1770": [
+                "game_token.seal()"
+            ],
+            "jump1832": [
+                "excess_withdraw.send(this.balance - cap_in_wei)",
+                "excess_withdraw.send(this.balance - cap_in_wei)"
+            ],
+            "jump1380": [
+                "game_token.mint(msg.sender, msg.value)",
+                "game_token.mint(msg.sender, msg.value)"
+            ],
+            "block1117": [
+                "excess_token.mint(msg.sender, msg.value)"
+            ],
+            "block1380": [
+                "game_token.mint(msg.sender, msg.value)"
+            ],
+            "jump1612": [
+                "excess_token.seal()",
+                "excess_token.seal()"
+            ]
+        }
+    },
+    "ZeroCap": {
+        "function_list": [
+            "TokenGame(uint256)",
+            "play()",
+            "finalise()",
+            "ZeroCap()",
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "TokenGame(uint256)": {
+                "argument": {
+                    "_cap_in_wei": "uint256"
+                },
+                "contract": {}
+            },
+            "play()": {
+                "argument": {},
+                "contract": {}
+            },
+            "finalise()": {
+                "argument": {},
+                "contract": {}
+            },
+            "ZeroCap()": {
+                "argument": {},
+                "contract": {}
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "play()": [
+                560,
+                185
+            ],
+            "finalise()": [
+                613,
+                229
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump1906": [
+                "game_token.seal()",
+                "game_token.seal()"
+            ],
+            "block2139": [
+                "owner.send(to_owner)"
+            ],
+            "block1748": [
+                "excess_token.seal()"
+            ],
+            "jump1253": [
+                "excess_token.mint(msg.sender, msg.value)",
+                "excess_token.mint(msg.sender, msg.value)"
+            ],
+            "block1968": [
+                "excess_withdraw.send(this.balance - cap_in_wei)"
+            ],
+            "jump1516": [
+                "game_token.mint(msg.sender, msg.value)",
+                "game_token.mint(msg.sender, msg.value)"
+            ],
+            "block1906": [
+                "game_token.seal()"
+            ],
+            "block1253": [
+                "excess_token.mint(msg.sender, msg.value)"
+            ],
+            "jump1968": [
+                "excess_withdraw.send(this.balance - cap_in_wei)",
+                "excess_withdraw.send(this.balance - cap_in_wei)"
+            ],
+            "block1516": [
+                "game_token.mint(msg.sender, msg.value)"
+            ],
+            "jump2139": [
+                "owner.send(to_owner)",
+                "owner.send(to_owner)"
+            ],
+            "jump1748": [
+                "excess_token.seal()",
+                "excess_token.seal()"
+            ]
+        }
+    }
+}

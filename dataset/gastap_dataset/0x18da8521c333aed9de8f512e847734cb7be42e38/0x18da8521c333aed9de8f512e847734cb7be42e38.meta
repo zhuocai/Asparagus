@@ -1,0 +1,908 @@
+{
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)",
+            "max64(uint64,uint64)",
+            "min64(uint64,uint64)",
+            "max256(uint256,uint256)",
+            "min256(uint256,uint256)",
+            "assert(bool)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "max64(uint64,uint64)": {
+                "argument": {
+                    "a": "uint64",
+                    "b": "uint64"
+                },
+                "contract": {}
+            },
+            "min64(uint64,uint64)": {
+                "argument": {
+                    "a": "uint64",
+                    "b": "uint64"
+                },
+                "contract": {}
+            },
+            "max256(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "min256(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "assert(bool)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "Ownable": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Pausable": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "emergencyStop()",
+            "release()"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "emergencyStop()": {
+                "argument": {},
+                "contract": {}
+            },
+            "release()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "emergencyStop()": [
+                114,
+                75
+            ],
+            "transferOwnership(address)": [
+                294,
+                163
+            ],
+            "release()": [
+                184,
+                119
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "ERC20Basic": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                124,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "ERC20": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                346,
+                97
+            ],
+            "balanceOf(address)": [
+                773,
+                207
+            ],
+            "transferFrom(address,address,uint256)": [
+                490,
+                141
+            ],
+            "allowance(address,address)": [
+                1394,
+                339
+            ],
+            "transfer(address,uint256)": [
+                1091,
+                273
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "PullPayment": {
+        "function_list": [
+            "asyncSend(address,uint256)",
+            "withdrawPayments()"
+        ],
+        "initial_state": {
+            "asyncSend(address,uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {}
+            },
+            "withdrawPayments()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "withdrawPayments()": [
+                81,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump312": [
+                "payee.send(payment)",
+                "payee.send(payment)"
+            ],
+            "block312": [
+                "payee.send(payment)"
+            ]
+        }
+    },
+    "BasicToken": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transfer(address,uint256)",
+            "balanceOf(address)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transfer(address,uint256)": [
+                222,
+                119
+            ],
+            "balanceOf(address)": [
+                135,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "StandardToken": {
+        "function_list": [
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transfer(address,uint256)",
+            "balanceOf(address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)"
+        ],
+        "initial_state": {
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                125,
+                75
+            ],
+            "balanceOf(address)": [
+                354,
+                141
+            ],
+            "allowance(address,address)": [
+                518,
+                185
+            ],
+            "transferFrom(address,address,uint256)": [
+                245,
+                119
+            ],
+            "transfer(address,uint256)": [
+                441,
+                163
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "ProjectX": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transfer(address,uint256)",
+            "balanceOf(address)",
+            "ProjectX()",
+            "burn(uint256)",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "ProjectX()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "burn(uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                335,
+                97
+            ],
+            "burn(uint256)": [
+                607,
+                185
+            ],
+            "balanceOf(address)": [
+                676,
+                207
+            ],
+            "transferFrom(address,address,uint256)": [
+                455,
+                141
+            ],
+            "transferOwnership(address)": [
+                1190,
+                317
+            ],
+            "allowance(address,address)": [
+                1071,
+                295
+            ],
+            "transfer(address,uint256)": [
+                994,
+                273
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Crowdsale": {
+        "function_list": [
+            "asyncSend(address,uint256)",
+            "withdrawPayments()",
+            "emergencyStop()",
+            "release()",
+            "Ownable()",
+            "transferOwnership(address)",
+            "Crowdsale(address,address)",
+            "fallback()",
+            "start()",
+            "receiveETH(address)",
+            "bonus(uint256)",
+            "finalize()",
+            "drain()",
+            "setMultisig(address)",
+            "backProjectXOwner()",
+            "getRemainCoins()",
+            "refund(uint256)",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "asyncSend(address,uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {
+                    "MIN_CAP": "uint256",
+                    "MAX_CAP": "uint256",
+                    "MIN_INVEST_ETHER": "uint256",
+                    "CROWDSALE_PERIOD": "uint256",
+                    "COIN_PER_ETHER": "uint256",
+                    "etherReceived": "uint256",
+                    "coinSentToEther": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256"
+                }
+            },
+            "withdrawPayments()": {
+                "argument": {},
+                "contract": {
+                    "MIN_CAP": "uint256",
+                    "MAX_CAP": "uint256",
+                    "MIN_INVEST_ETHER": "uint256",
+                    "CROWDSALE_PERIOD": "uint256",
+                    "COIN_PER_ETHER": "uint256",
+                    "etherReceived": "uint256",
+                    "coinSentToEther": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256"
+                }
+            },
+            "emergencyStop()": {
+                "argument": {},
+                "contract": {
+                    "MIN_CAP": "uint256",
+                    "MAX_CAP": "uint256",
+                    "MIN_INVEST_ETHER": "uint256",
+                    "CROWDSALE_PERIOD": "uint256",
+                    "COIN_PER_ETHER": "uint256",
+                    "etherReceived": "uint256",
+                    "coinSentToEther": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256"
+                }
+            },
+            "release()": {
+                "argument": {},
+                "contract": {
+                    "MIN_CAP": "uint256",
+                    "MAX_CAP": "uint256",
+                    "MIN_INVEST_ETHER": "uint256",
+                    "CROWDSALE_PERIOD": "uint256",
+                    "COIN_PER_ETHER": "uint256",
+                    "etherReceived": "uint256",
+                    "coinSentToEther": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256"
+                }
+            },
+            "Ownable()": {
+                "argument": {},
+                "contract": {
+                    "MIN_CAP": "uint256",
+                    "MAX_CAP": "uint256",
+                    "MIN_INVEST_ETHER": "uint256",
+                    "CROWDSALE_PERIOD": "uint256",
+                    "COIN_PER_ETHER": "uint256",
+                    "etherReceived": "uint256",
+                    "coinSentToEther": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "MIN_CAP": "uint256",
+                    "MAX_CAP": "uint256",
+                    "MIN_INVEST_ETHER": "uint256",
+                    "CROWDSALE_PERIOD": "uint256",
+                    "COIN_PER_ETHER": "uint256",
+                    "etherReceived": "uint256",
+                    "coinSentToEther": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256"
+                }
+            },
+            "Crowdsale(address,address)": {
+                "argument": {},
+                "contract": {
+                    "MIN_CAP": "uint256",
+                    "MAX_CAP": "uint256",
+                    "MIN_INVEST_ETHER": "uint256",
+                    "CROWDSALE_PERIOD": "uint256",
+                    "COIN_PER_ETHER": "uint256",
+                    "etherReceived": "uint256",
+                    "coinSentToEther": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "MIN_CAP": "uint256",
+                    "MAX_CAP": "uint256",
+                    "MIN_INVEST_ETHER": "uint256",
+                    "CROWDSALE_PERIOD": "uint256",
+                    "COIN_PER_ETHER": "uint256",
+                    "etherReceived": "uint256",
+                    "coinSentToEther": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256"
+                }
+            },
+            "start()": {
+                "argument": {},
+                "contract": {
+                    "MIN_CAP": "uint256",
+                    "MAX_CAP": "uint256",
+                    "MIN_INVEST_ETHER": "uint256",
+                    "CROWDSALE_PERIOD": "uint256",
+                    "COIN_PER_ETHER": "uint256",
+                    "etherReceived": "uint256",
+                    "coinSentToEther": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256"
+                }
+            },
+            "receiveETH(address)": {
+                "argument": {},
+                "contract": {
+                    "MIN_CAP": "uint256",
+                    "MAX_CAP": "uint256",
+                    "MIN_INVEST_ETHER": "uint256",
+                    "CROWDSALE_PERIOD": "uint256",
+                    "COIN_PER_ETHER": "uint256",
+                    "etherReceived": "uint256",
+                    "coinSentToEther": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256"
+                }
+            },
+            "bonus(uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {
+                    "MIN_CAP": "uint256",
+                    "MAX_CAP": "uint256",
+                    "MIN_INVEST_ETHER": "uint256",
+                    "CROWDSALE_PERIOD": "uint256",
+                    "COIN_PER_ETHER": "uint256",
+                    "etherReceived": "uint256",
+                    "coinSentToEther": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256"
+                }
+            },
+            "finalize()": {
+                "argument": {},
+                "contract": {
+                    "MIN_CAP": "uint256",
+                    "MAX_CAP": "uint256",
+                    "MIN_INVEST_ETHER": "uint256",
+                    "CROWDSALE_PERIOD": "uint256",
+                    "COIN_PER_ETHER": "uint256",
+                    "etherReceived": "uint256",
+                    "coinSentToEther": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256"
+                }
+            },
+            "drain()": {
+                "argument": {},
+                "contract": {
+                    "MIN_CAP": "uint256",
+                    "MAX_CAP": "uint256",
+                    "MIN_INVEST_ETHER": "uint256",
+                    "CROWDSALE_PERIOD": "uint256",
+                    "COIN_PER_ETHER": "uint256",
+                    "etherReceived": "uint256",
+                    "coinSentToEther": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256"
+                }
+            },
+            "setMultisig(address)": {
+                "argument": {},
+                "contract": {
+                    "MIN_CAP": "uint256",
+                    "MAX_CAP": "uint256",
+                    "MIN_INVEST_ETHER": "uint256",
+                    "CROWDSALE_PERIOD": "uint256",
+                    "COIN_PER_ETHER": "uint256",
+                    "etherReceived": "uint256",
+                    "coinSentToEther": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256"
+                }
+            },
+            "backProjectXOwner()": {
+                "argument": {},
+                "contract": {
+                    "MIN_CAP": "uint256",
+                    "MAX_CAP": "uint256",
+                    "MIN_INVEST_ETHER": "uint256",
+                    "CROWDSALE_PERIOD": "uint256",
+                    "COIN_PER_ETHER": "uint256",
+                    "etherReceived": "uint256",
+                    "coinSentToEther": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256"
+                }
+            },
+            "getRemainCoins()": {
+                "argument": {},
+                "contract": {
+                    "MIN_CAP": "uint256",
+                    "MAX_CAP": "uint256",
+                    "MIN_INVEST_ETHER": "uint256",
+                    "CROWDSALE_PERIOD": "uint256",
+                    "COIN_PER_ETHER": "uint256",
+                    "etherReceived": "uint256",
+                    "coinSentToEther": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256"
+                }
+            },
+            "refund(uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "MIN_CAP": "uint256",
+                    "MAX_CAP": "uint256",
+                    "MIN_INVEST_ETHER": "uint256",
+                    "CROWDSALE_PERIOD": "uint256",
+                    "COIN_PER_ETHER": "uint256",
+                    "etherReceived": "uint256",
+                    "coinSentToEther": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "MIN_CAP": "uint256",
+                    "MAX_CAP": "uint256",
+                    "MIN_INVEST_ETHER": "uint256",
+                    "CROWDSALE_PERIOD": "uint256",
+                    "COIN_PER_ETHER": "uint256",
+                    "etherReceived": "uint256",
+                    "coinSentToEther": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "backProjectXOwner()": [
+                622,
+                163
+            ],
+            "refund(uint256)": [
+                491,
+                97
+            ],
+            "start()": [
+                1203,
+                471
+            ],
+            "getRemainCoins()": [
+                1403,
+                559
+            ],
+            "transferOwnership(address)": [
+                1513,
+                603
+            ],
+            "withdrawPayments()": [
+                668,
+                207
+            ],
+            "emergencyStop()": [
+                691,
+                229
+            ],
+            "release()": [
+                890,
+                339
+            ],
+            "drain()": [
+                1043,
+                405
+            ],
+            "setMultisig(address)": [
+                1580,
+                625
+            ],
+            "finalize()": [
+                645,
+                185
+            ]
+        },
+        "block_CALL_mapping": {
+            "block5997": [
+                "coin.transfer(owner, remains)"
+            ],
+            "jump2031": [
+                "coin.transfer(beneficiary, coinToSend)",
+                "coin.transfer(beneficiary, coinToSend)"
+            ],
+            "block2765": [
+                "coin.transferFrom(msg.sender, address(this), _value)"
+            ],
+            "jump4212": [
+                "coin.burn(remains)",
+                "coin.burn(remains)"
+            ],
+            "jump5125": [
+                "owner.send(this.balance)",
+                "owner.send(this.balance)"
+            ],
+            "jump2031_0": [
+                "coin.transfer(beneficiary, coinToSend)",
+                "coin.transfer(beneficiary, coinToSend)"
+            ],
+            "jump2765": [
+                "coin.transferFrom(msg.sender, address(this), _value)",
+                "coin.transferFrom(msg.sender, address(this), _value)"
+            ],
+            "block2031": [
+                "coin.transfer(beneficiary, coinToSend)"
+            ],
+            "jump5997": [
+                "coin.transfer(owner, remains)",
+                "coin.transfer(owner, remains)"
+            ],
+            "block4212": [
+                "coin.burn(remains)"
+            ],
+            "jump3997": [
+                "coin.balanceOf(this)",
+                "coin.balanceOf(this)"
+            ],
+            "block5125": [
+                "owner.send(this.balance)"
+            ],
+            "block4435": [
+                "payee.send(payment)"
+            ],
+            "jump3687": [
+                "multisigEther.send(this.balance)",
+                "multisigEther.send(this.balance)"
+            ],
+            "block3687": [
+                "multisigEther.send(this.balance)"
+            ],
+            "block2934": [
+                "coin.burn(_value)"
+            ],
+            "jump4435": [
+                "payee.send(payment)",
+                "payee.send(payment)"
+            ],
+            "jump2934": [
+                "coin.burn(_value)",
+                "coin.burn(_value)"
+            ],
+            "block2031_0": [
+                "coin.transfer(beneficiary, coinToSend)"
+            ],
+            "jump3494": [
+                "coin.transferOwnership(owner)",
+                "coin.transferOwnership(owner)"
+            ],
+            "block3494": [
+                "coin.transferOwnership(owner)"
+            ],
+            "block3997": [
+                "coin.balanceOf(this)"
+            ]
+        }
+    }
+}

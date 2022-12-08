@@ -1,0 +1,208 @@
+{
+    "ERC20": {
+        "function_list": [
+            "transfer(address,uint256)",
+            "balanceOf(address)"
+        ],
+        "initial_state": {
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transfer(address,uint256)": [
+                873,
+                273
+            ],
+            "balanceOf(address)": [
+                601,
+                185
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "MonethaBuyer": {
+        "function_list": [
+            "set_addresses(address,address)",
+            "activate_kill_switch(string)",
+            "withdraw(address)",
+            "add_to_buy_bounty()",
+            "add_to_withdraw_bounty()",
+            "claim_bounty()",
+            "fallback()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "set_addresses(address,address)": {
+                "argument": {},
+                "contract": {
+                    "buy_bounty": "uint256",
+                    "withdraw_bounty": "uint256",
+                    "contract_eth_value": "uint256",
+                    "password_hash": "bytes32",
+                    "earliest_buy_time": "uint256",
+                    "eth_cap": "uint256"
+                }
+            },
+            "activate_kill_switch(string)": {
+                "argument": {
+                    "password": "string"
+                },
+                "contract": {
+                    "buy_bounty": "uint256",
+                    "withdraw_bounty": "uint256",
+                    "contract_eth_value": "uint256",
+                    "password_hash": "bytes32",
+                    "earliest_buy_time": "uint256",
+                    "eth_cap": "uint256"
+                }
+            },
+            "withdraw(address)": {
+                "argument": {},
+                "contract": {
+                    "buy_bounty": "uint256",
+                    "withdraw_bounty": "uint256",
+                    "contract_eth_value": "uint256",
+                    "password_hash": "bytes32",
+                    "earliest_buy_time": "uint256",
+                    "eth_cap": "uint256"
+                }
+            },
+            "add_to_buy_bounty()": {
+                "argument": {},
+                "contract": {
+                    "buy_bounty": "uint256",
+                    "withdraw_bounty": "uint256",
+                    "contract_eth_value": "uint256",
+                    "password_hash": "bytes32",
+                    "earliest_buy_time": "uint256",
+                    "eth_cap": "uint256"
+                }
+            },
+            "add_to_withdraw_bounty()": {
+                "argument": {},
+                "contract": {
+                    "buy_bounty": "uint256",
+                    "withdraw_bounty": "uint256",
+                    "contract_eth_value": "uint256",
+                    "password_hash": "bytes32",
+                    "earliest_buy_time": "uint256",
+                    "eth_cap": "uint256"
+                }
+            },
+            "claim_bounty()": {
+                "argument": {},
+                "contract": {
+                    "buy_bounty": "uint256",
+                    "withdraw_bounty": "uint256",
+                    "contract_eth_value": "uint256",
+                    "password_hash": "bytes32",
+                    "earliest_buy_time": "uint256",
+                    "eth_cap": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "buy_bounty": "uint256",
+                    "withdraw_bounty": "uint256",
+                    "contract_eth_value": "uint256",
+                    "password_hash": "bytes32",
+                    "earliest_buy_time": "uint256",
+                    "eth_cap": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "claim_bounty()": [
+                414,
+                75
+            ],
+            "set_addresses(address,address)": [
+                577,
+                163
+            ],
+            "activate_kill_switch(string)": [
+                1107,
+                361
+            ],
+            "add_to_buy_bounty()": [
+                877,
+                251
+            ],
+            "withdraw(address)": [
+                676,
+                185
+            ],
+            "add_to_withdraw_bounty()": [
+                567,
+                141
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump4202": [
+                "msg.sender.transfer(claimed_bounty)",
+                "msg.sender.transfer(claimed_bounty)"
+            ],
+            "jump3301": [
+                "token.transfer(developer, fee)",
+                "token.transfer(developer, fee)"
+            ],
+            "jump1693": [
+                "msg.sender.transfer(claimed_bounty)",
+                "msg.sender.transfer(claimed_bounty)"
+            ],
+            "jump2355": [
+                "user.transfer(eth_to_withdraw)",
+                "user.transfer(eth_to_withdraw)"
+            ],
+            "block1693": [
+                "msg.sender.transfer(claimed_bounty)"
+            ],
+            "block2355": [
+                "user.transfer(eth_to_withdraw)"
+            ],
+            "block4202": [
+                "msg.sender.transfer(claimed_bounty)"
+            ],
+            "block3655": [
+                "msg.sender.transfer(claimed_bounty)"
+            ],
+            "jump3655": [
+                "msg.sender.transfer(claimed_bounty)",
+                "msg.sender.transfer(claimed_bounty)"
+            ],
+            "jump1526": [
+                "sale.call.value(contract_eth_value)()",
+                "sale.call.value(contract_eth_value)()"
+            ],
+            "block3570": [
+                "token.transfer(user, tokens_to_withdraw - fee)"
+            ],
+            "block3301": [
+                "token.transfer(developer, fee)"
+            ],
+            "block2752": [
+                "token.balanceOf(address(this))"
+            ],
+            "block1526": [
+                "sale.call.value(contract_eth_value)()"
+            ],
+            "jump2752": [
+                "token.balanceOf(address(this))",
+                "token.balanceOf(address(this))"
+            ],
+            "jump3570": [
+                "token.transfer(user, tokens_to_withdraw - fee)",
+                "token.transfer(user, tokens_to_withdraw - fee)"
+            ]
+        }
+    }
+}

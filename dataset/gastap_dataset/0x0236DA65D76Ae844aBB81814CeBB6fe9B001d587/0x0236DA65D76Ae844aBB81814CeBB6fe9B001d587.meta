@@ -1,0 +1,324 @@
+{
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "Ownable": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Claimable": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "transferOwnership(address)",
+            "claimOwnership()"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "claimOwnership()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "claimOwnership()": [
+                103,
+                75
+            ],
+            "transferOwnership(address)": [
+                300,
+                141
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "TokenHolder": {
+        "function_list": [
+            "withdrawTokens(IERC20Token,address,uint256)",
+            "Ownable()",
+            "transferOwnership(address)",
+            "TokenHolder()",
+            "withdrawTokens(IERC20Token,address,uint256)"
+        ],
+        "initial_state": {
+            "withdrawTokens(IERC20Token,address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {}
+            },
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "TokenHolder()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                288,
+                119
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump788": [
+                "_token.transfer(_to, _amount)",
+                "_token.transfer(_to, _amount)"
+            ],
+            "block788": [
+                "_token.transfer(_to, _amount)"
+            ]
+        }
+    },
+    "CrowdFunding": {
+        "function_list": [
+            "TokenHolder()",
+            "withdrawTokens(IERC20Token,address,uint256)",
+            "withdrawTokens(IERC20Token,address,uint256)",
+            "Ownable()",
+            "transferOwnership(address)",
+            "transferOwnership(address)",
+            "claimOwnership()",
+            "CrowdFunding(address)",
+            "deposit()",
+            "fallback()",
+            "donate()",
+            "finalizeDonation(address)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "TokenHolder()": {
+                "argument": {},
+                "contract": {
+                    "weiRaised": "uint256"
+                }
+            },
+            "withdrawTokens(IERC20Token,address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "weiRaised": "uint256"
+                }
+            },
+            "Ownable()": {
+                "argument": {},
+                "contract": {
+                    "weiRaised": "uint256"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "weiRaised": "uint256"
+                }
+            },
+            "claimOwnership()": {
+                "argument": {},
+                "contract": {
+                    "weiRaised": "uint256"
+                }
+            },
+            "CrowdFunding(address)": {
+                "argument": {},
+                "contract": {
+                    "weiRaised": "uint256"
+                }
+            },
+            "deposit()": {
+                "argument": {},
+                "contract": {
+                    "weiRaised": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "weiRaised": "uint256"
+                }
+            },
+            "donate()": {
+                "argument": {},
+                "contract": {
+                    "weiRaised": "uint256"
+                }
+            },
+            "finalizeDonation(address)": {
+                "argument": {},
+                "contract": {
+                    "weiRaised": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "finalizeDonation(address)": [
+                213,
+                75
+            ],
+            "claimOwnership()": [
+                410,
+                141
+            ],
+            "donate()": [
+                773,
+                273
+            ],
+            "deposit()": [
+                676,
+                229
+            ],
+            "transferOwnership(address)": [
+                783,
+                295
+            ]
+        },
+        "block_CALL_mapping": {
+            "block1218": [
+                "walletBeneficiary.transfer(weiAmount)"
+            ],
+            "block919": [
+                "walletBeneficiary.transfer(weiAmount)"
+            ],
+            "jump3132": [
+                "_token.transfer(_to, _amount)",
+                "_token.transfer(_to, _amount)"
+            ],
+            "jump1990": [
+                "beneficiary.transfer(weiAmount)",
+                "beneficiary.transfer(weiAmount)"
+            ],
+            "block1218_1": [
+                "walletBeneficiary.transfer(weiAmount)"
+            ],
+            "block1218_0": [
+                "walletBeneficiary.transfer(weiAmount)"
+            ],
+            "jump1218": [
+                "walletBeneficiary.transfer(weiAmount)",
+                "walletBeneficiary.transfer(weiAmount)"
+            ],
+            "block1513": [
+                "walletBeneficiary.transfer(this.balance)"
+            ],
+            "jump1513": [
+                "walletBeneficiary.transfer(this.balance)",
+                "walletBeneficiary.transfer(this.balance)"
+            ],
+            "block3132": [
+                "_token.transfer(_to, _amount)"
+            ],
+            "jump919_1": [
+                "walletBeneficiary.transfer(weiAmount)",
+                "walletBeneficiary.transfer(weiAmount)"
+            ],
+            "jump919_0": [
+                "walletBeneficiary.transfer(weiAmount)",
+                "walletBeneficiary.transfer(weiAmount)"
+            ],
+            "jump1218_1": [
+                "walletBeneficiary.transfer(weiAmount)",
+                "walletBeneficiary.transfer(weiAmount)"
+            ],
+            "jump1218_0": [
+                "walletBeneficiary.transfer(weiAmount)",
+                "walletBeneficiary.transfer(weiAmount)"
+            ],
+            "jump919": [
+                "walletBeneficiary.transfer(weiAmount)",
+                "walletBeneficiary.transfer(weiAmount)"
+            ],
+            "block1990": [
+                "beneficiary.transfer(weiAmount)"
+            ],
+            "block1513_1": [
+                "walletBeneficiary.transfer(this.balance)"
+            ],
+            "block1513_0": [
+                "walletBeneficiary.transfer(this.balance)"
+            ],
+            "block919_1": [
+                "walletBeneficiary.transfer(weiAmount)"
+            ],
+            "block919_0": [
+                "walletBeneficiary.transfer(weiAmount)"
+            ],
+            "jump1513_1": [
+                "walletBeneficiary.transfer(this.balance)",
+                "walletBeneficiary.transfer(this.balance)"
+            ],
+            "jump1513_0": [
+                "walletBeneficiary.transfer(this.balance)",
+                "walletBeneficiary.transfer(this.balance)"
+            ]
+        }
+    }
+}

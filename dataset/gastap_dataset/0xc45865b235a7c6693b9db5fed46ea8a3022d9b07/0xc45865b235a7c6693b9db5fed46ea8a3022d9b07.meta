@@ -1,0 +1,161 @@
+{
+    "Ownership": {
+        "function_list": [
+            "isOwner(address)",
+            "getOwner()",
+            "Ownership()",
+            "isOwner(address)",
+            "getOwner()"
+        ],
+        "initial_state": {
+            "isOwner(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "getOwner()": {
+                "argument": {},
+                "contract": {}
+            },
+            "Ownership()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "isOwner(address)": [
+                81,
+                75
+            ],
+            "getOwner()": [
+                172,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "IToken": {
+        "function_list": [
+            "totalSupply()",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)"
+        ],
+        "initial_state": {
+            "totalSupply()": {
+                "argument": {},
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                319,
+                119
+            ],
+            "totalSupply()": [
+                147,
+                75
+            ],
+            "allowance(address,address)": [
+                901,
+                207
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "TokenRetriever": {
+        "function_list": [
+            "retrieveTokens(address)",
+            "retrieveTokens(address)"
+        ],
+        "initial_state": {
+            "retrieveTokens(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "retrieveTokens(address)": [
+                70,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "block298": [
+                "tokenInstance.balanceOf(this)"
+            ],
+            "block531": [
+                "tokenInstance.transfer(msg.sender, tokenBalance)"
+            ],
+            "jump531": [
+                "tokenInstance.transfer(msg.sender, tokenBalance)",
+                "tokenInstance.transfer(msg.sender, tokenBalance)"
+            ],
+            "jump298": [
+                "tokenInstance.balanceOf(this)",
+                "tokenInstance.balanceOf(this)"
+            ]
+        }
+    },
+    "DcorpPersonalCrowdsaleProxy": {
+        "function_list": [
+            "fallback()",
+            "DcorpPersonalCrowdsaleProxy(address,address)",
+            "fallback()"
+        ],
+        "initial_state": {
+            "fallback()": {
+                "argument": {},
+                "contract": {}
+            },
+            "DcorpPersonalCrowdsaleProxy(address,address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {
+            "block298": [
+                "target.contributeFor.value(msg.value)(member)"
+            ],
+            "jump298_0": [
+                "target.contributeFor.value(msg.value)(member)",
+                "target.contributeFor.value(msg.value)(member)"
+            ],
+            "jump298": [
+                "target.contributeFor.value(msg.value)(member)",
+                "target.contributeFor.value(msg.value)(member)"
+            ],
+            "block298_0": [
+                "target.contributeFor.value(msg.value)(member)"
+            ]
+        }
+    }
+}

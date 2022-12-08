@@ -1,0 +1,779 @@
+{
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "ERC20Basic": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                124,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "ERC20": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                125,
+                75
+            ],
+            "balanceOf(address)": [
+                402,
+                141
+            ],
+            "allowance(address,address)": [
+                590,
+                185
+            ],
+            "transferFrom(address,address,uint256)": [
+                269,
+                119
+            ],
+            "transfer(address,uint256)": [
+                489,
+                163
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "TokenLocker": {
+        "function_list": [
+            "TokenLocker(ERC20)",
+            "transfer(address,uint256)"
+        ],
+        "initial_state": {
+            "TokenLocker(ERC20)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transfer(address,uint256)": [
+                694,
+                946
+            ]
+        },
+        "block_CALL_mapping": {
+            "block694": [
+                "token.transfer(dest, amount)"
+            ],
+            "jump694": [
+                "token.transfer(dest, amount)",
+                "token.transfer(dest, amount)"
+            ]
+        }
+    },
+    "TokenRecipient": {
+        "function_list": [
+            "receiveApproval(address,uint256,address,bytes)",
+            "fallback()"
+        ],
+        "initial_state": {
+            "receiveApproval(address,uint256,address,bytes)": {
+                "argument": {
+                    "value": "uint256",
+                    "extraData": "bytes"
+                },
+                "contract": {}
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "receiveApproval(address,uint256,address,bytes)": [
+                145,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "block544": [
+                "t.transferFrom(from, this, value)"
+            ],
+            "jump544": [
+                "t.transferFrom(from, this, value)",
+                "t.transferFrom(from, this, value)"
+            ]
+        }
+    },
+    "DelegatedShareholderAssociation": {
+        "function_list": [
+            "receiveApproval(address,uint256,address,bytes)",
+            "fallback()",
+            "setDelegateAndLockTokens(uint256,address)",
+            "clearDelegateAndUnlockTokens()",
+            "changeVotingRules(uint256,uint256,uint256)",
+            "newProposal(address,uint256,bytes,bytes)",
+            "checkProposalCode(uint256,address,uint256,bytes)",
+            "vote(uint256,bool)",
+            "hasVoted(uint256,address)",
+            "countVotes(uint256)",
+            "executeProposal(uint256,bytes)"
+        ],
+        "initial_state": {
+            "receiveApproval(address,uint256,address,bytes)": {
+                "argument": {
+                    "value": "uint256",
+                    "extraData": "bytes"
+                },
+                "contract": {
+                    "minimumQuorum": "uint256",
+                    "debatingPeriodInMinutes": "uint256",
+                    "proposals": "DelegatedShareholderAssociation.Proposal[]",
+                    "numProposals": "uint256",
+                    "totalLockedTokens": "uint256",
+                    "requiredSharesToBeBoardMember": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "minimumQuorum": "uint256",
+                    "debatingPeriodInMinutes": "uint256",
+                    "proposals": "DelegatedShareholderAssociation.Proposal[]",
+                    "numProposals": "uint256",
+                    "totalLockedTokens": "uint256",
+                    "requiredSharesToBeBoardMember": "uint256"
+                }
+            },
+            "setDelegateAndLockTokens(uint256,address)": {
+                "argument": {
+                    "tokensToLock": "uint256"
+                },
+                "contract": {
+                    "minimumQuorum": "uint256",
+                    "debatingPeriodInMinutes": "uint256",
+                    "proposals": "DelegatedShareholderAssociation.Proposal[]",
+                    "numProposals": "uint256",
+                    "totalLockedTokens": "uint256",
+                    "requiredSharesToBeBoardMember": "uint256"
+                }
+            },
+            "clearDelegateAndUnlockTokens()": {
+                "argument": {},
+                "contract": {
+                    "minimumQuorum": "uint256",
+                    "debatingPeriodInMinutes": "uint256",
+                    "proposals": "DelegatedShareholderAssociation.Proposal[]",
+                    "numProposals": "uint256",
+                    "totalLockedTokens": "uint256",
+                    "requiredSharesToBeBoardMember": "uint256"
+                }
+            },
+            "changeVotingRules(uint256,uint256,uint256)": {
+                "argument": {
+                    "minimumSharesToPassAVote": "uint256",
+                    "minutesForDebate": "uint256",
+                    "sharesToBeBoardMember": "uint256"
+                },
+                "contract": {
+                    "minimumQuorum": "uint256",
+                    "debatingPeriodInMinutes": "uint256",
+                    "proposals": "DelegatedShareholderAssociation.Proposal[]",
+                    "numProposals": "uint256",
+                    "totalLockedTokens": "uint256",
+                    "requiredSharesToBeBoardMember": "uint256"
+                }
+            },
+            "newProposal(address,uint256,bytes,bytes)": {
+                "argument": {
+                    "weiAmount": "uint256",
+                    "jobMetadataHash": "bytes",
+                    "transactionBytecode": "bytes"
+                },
+                "contract": {
+                    "minimumQuorum": "uint256",
+                    "debatingPeriodInMinutes": "uint256",
+                    "proposals": "DelegatedShareholderAssociation.Proposal[]",
+                    "numProposals": "uint256",
+                    "totalLockedTokens": "uint256",
+                    "requiredSharesToBeBoardMember": "uint256"
+                }
+            },
+            "checkProposalCode(uint256,address,uint256,bytes)": {
+                "argument": {
+                    "proposalNumber": "uint256",
+                    "weiAmount": "uint256",
+                    "transactionBytecode": "bytes"
+                },
+                "contract": {
+                    "minimumQuorum": "uint256",
+                    "debatingPeriodInMinutes": "uint256",
+                    "proposals": "DelegatedShareholderAssociation.Proposal[]",
+                    "numProposals": "uint256",
+                    "totalLockedTokens": "uint256",
+                    "requiredSharesToBeBoardMember": "uint256"
+                }
+            },
+            "vote(uint256,bool)": {
+                "argument": {
+                    "proposalNumber": "uint256"
+                },
+                "contract": {
+                    "minimumQuorum": "uint256",
+                    "debatingPeriodInMinutes": "uint256",
+                    "proposals": "DelegatedShareholderAssociation.Proposal[]",
+                    "numProposals": "uint256",
+                    "totalLockedTokens": "uint256",
+                    "requiredSharesToBeBoardMember": "uint256"
+                }
+            },
+            "hasVoted(uint256,address)": {
+                "argument": {
+                    "proposalNumber": "uint256"
+                },
+                "contract": {
+                    "minimumQuorum": "uint256",
+                    "debatingPeriodInMinutes": "uint256",
+                    "proposals": "DelegatedShareholderAssociation.Proposal[]",
+                    "numProposals": "uint256",
+                    "totalLockedTokens": "uint256",
+                    "requiredSharesToBeBoardMember": "uint256"
+                }
+            },
+            "countVotes(uint256)": {
+                "argument": {
+                    "proposalNumber": "uint256"
+                },
+                "contract": {
+                    "minimumQuorum": "uint256",
+                    "debatingPeriodInMinutes": "uint256",
+                    "proposals": "DelegatedShareholderAssociation.Proposal[]",
+                    "numProposals": "uint256",
+                    "totalLockedTokens": "uint256",
+                    "requiredSharesToBeBoardMember": "uint256"
+                }
+            },
+            "executeProposal(uint256,bytes)": {
+                "argument": {
+                    "proposalNumber": "uint256",
+                    "transactionBytecode": "bytes"
+                },
+                "contract": {
+                    "minimumQuorum": "uint256",
+                    "debatingPeriodInMinutes": "uint256",
+                    "proposals": "DelegatedShareholderAssociation.Proposal[]",
+                    "numProposals": "uint256",
+                    "totalLockedTokens": "uint256",
+                    "requiredSharesToBeBoardMember": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "checkProposalCode(uint256,address,uint256,bytes)": [
+                2271,
+                493
+            ],
+            "vote(uint256,bool)": [
+                1957,
+                449
+            ],
+            "changeVotingRules(uint256,uint256,uint256)": [
+                1540,
+                339
+            ],
+            "clearDelegateAndUnlockTokens()": [
+                1454,
+                295
+            ],
+            "hasVoted(uint256,address)": [
+                1276,
+                251
+            ],
+            "countVotes(uint256)": [
+                865,
+                141
+            ],
+            "newProposal(address,uint256,bytes,bytes)": [
+                2034,
+                471
+            ],
+            "setDelegateAndLockTokens(uint256,address)": [
+                1377,
+                273
+            ],
+            "executeProposal(uint256,bytes)": [
+                944,
+                163
+            ],
+            "receiveApproval(address,uint256,address,bytes)": [
+                1648,
+                383
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump5571": [
+                "sharesTokenAddress.transferFrom(msg.sender, tokenLocker, tokensToLock)",
+                "sharesTokenAddress.transferFrom(msg.sender, tokenLocker, tokensToLock)"
+            ],
+            "jump7904": [
+                "t.transferFrom(from, this, value)",
+                "t.transferFrom(from, this, value)"
+            ],
+            "block3204_0": [
+                "sharesTokenAddress.balanceOf(v.voter)"
+            ],
+            "block6946": [
+                "tokenLocker.transfer(msg.sender, lockedTokens)"
+            ],
+            "jump3204_0": [
+                "sharesTokenAddress.balanceOf(v.voter)",
+                "sharesTokenAddress.balanceOf(v.voter)"
+            ],
+            "block7242": [
+                "sharesTokenAddress.balanceOf(tokenLocker)"
+            ],
+            "block5571": [
+                "sharesTokenAddress.transferFrom(msg.sender, tokenLocker, tokensToLock)"
+            ],
+            "block7904": [
+                "t.transferFrom(from, this, value)"
+            ],
+            "jump9316": [
+                "ERC20(sharesTokenAddress).balanceOf(msg.sender)",
+                "ERC20(sharesTokenAddress).balanceOf(msg.sender)"
+            ],
+            "block3204": [
+                "sharesTokenAddress.balanceOf(v.voter)"
+            ],
+            "jump3204": [
+                "sharesTokenAddress.balanceOf(v.voter)",
+                "sharesTokenAddress.balanceOf(v.voter)"
+            ],
+            "block5867": [
+                "sharesTokenAddress.balanceOf(tokenLocker)"
+            ],
+            "jump4652": [
+                "ERC20(sharesTokenAddress).balanceOf(msg.sender)",
+                "ERC20(sharesTokenAddress).balanceOf(msg.sender)"
+            ],
+            "block8429": [
+                "ERC20(sharesTokenAddress).balanceOf(msg.sender)"
+            ],
+            "jump7242": [
+                "sharesTokenAddress.balanceOf(tokenLocker)",
+                "sharesTokenAddress.balanceOf(tokenLocker)"
+            ],
+            "block4652": [
+                "ERC20(sharesTokenAddress).balanceOf(msg.sender)"
+            ],
+            "jump5867": [
+                "sharesTokenAddress.balanceOf(tokenLocker)",
+                "sharesTokenAddress.balanceOf(tokenLocker)"
+            ],
+            "block9316": [
+                "ERC20(sharesTokenAddress).balanceOf(msg.sender)"
+            ],
+            "jump4088": [
+                "p.recipient.call.value(p.amount)(transactionBytecode)",
+                "p.recipient.call.value(p.amount)(transactionBytecode)"
+            ],
+            "jump6946": [
+                "tokenLocker.transfer(msg.sender, lockedTokens)",
+                "tokenLocker.transfer(msg.sender, lockedTokens)"
+            ],
+            "block4088": [
+                "p.recipient.call.value(p.amount)(transactionBytecode)"
+            ],
+            "jump8429": [
+                "ERC20(sharesTokenAddress).balanceOf(msg.sender)",
+                "ERC20(sharesTokenAddress).balanceOf(msg.sender)"
+            ]
+        }
+    },
+    "WyvernDAO": {
+        "function_list": [
+            "setDelegateAndLockTokens(uint256,address)",
+            "clearDelegateAndUnlockTokens()",
+            "changeVotingRules(uint256,uint256,uint256)",
+            "newProposal(address,uint256,bytes,bytes)",
+            "checkProposalCode(uint256,address,uint256,bytes)",
+            "vote(uint256,bool)",
+            "hasVoted(uint256,address)",
+            "countVotes(uint256)",
+            "executeProposal(uint256,bytes)",
+            "receiveApproval(address,uint256,address,bytes)",
+            "fallback()",
+            "WyvernDAO(ERC20)",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "setDelegateAndLockTokens(uint256,address)": {
+                "argument": {
+                    "tokensToLock": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "TOKEN_DECIMALS": "uint256",
+                    "REQUIRED_SHARES_TO_BE_BOARD_MEMBER": "uint256",
+                    "MINIMUM_QUORUM": "uint256",
+                    "DEBATE_PERIOD_MINUTES": "uint256"
+                }
+            },
+            "clearDelegateAndUnlockTokens()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "TOKEN_DECIMALS": "uint256",
+                    "REQUIRED_SHARES_TO_BE_BOARD_MEMBER": "uint256",
+                    "MINIMUM_QUORUM": "uint256",
+                    "DEBATE_PERIOD_MINUTES": "uint256"
+                }
+            },
+            "changeVotingRules(uint256,uint256,uint256)": {
+                "argument": {
+                    "minimumSharesToPassAVote": "uint256",
+                    "minutesForDebate": "uint256",
+                    "sharesToBeBoardMember": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "TOKEN_DECIMALS": "uint256",
+                    "REQUIRED_SHARES_TO_BE_BOARD_MEMBER": "uint256",
+                    "MINIMUM_QUORUM": "uint256",
+                    "DEBATE_PERIOD_MINUTES": "uint256"
+                }
+            },
+            "newProposal(address,uint256,bytes,bytes)": {
+                "argument": {
+                    "weiAmount": "uint256",
+                    "jobMetadataHash": "bytes",
+                    "transactionBytecode": "bytes"
+                },
+                "contract": {
+                    "name": "string",
+                    "TOKEN_DECIMALS": "uint256",
+                    "REQUIRED_SHARES_TO_BE_BOARD_MEMBER": "uint256",
+                    "MINIMUM_QUORUM": "uint256",
+                    "DEBATE_PERIOD_MINUTES": "uint256"
+                }
+            },
+            "checkProposalCode(uint256,address,uint256,bytes)": {
+                "argument": {
+                    "proposalNumber": "uint256",
+                    "weiAmount": "uint256",
+                    "transactionBytecode": "bytes"
+                },
+                "contract": {
+                    "name": "string",
+                    "TOKEN_DECIMALS": "uint256",
+                    "REQUIRED_SHARES_TO_BE_BOARD_MEMBER": "uint256",
+                    "MINIMUM_QUORUM": "uint256",
+                    "DEBATE_PERIOD_MINUTES": "uint256"
+                }
+            },
+            "vote(uint256,bool)": {
+                "argument": {
+                    "proposalNumber": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "TOKEN_DECIMALS": "uint256",
+                    "REQUIRED_SHARES_TO_BE_BOARD_MEMBER": "uint256",
+                    "MINIMUM_QUORUM": "uint256",
+                    "DEBATE_PERIOD_MINUTES": "uint256"
+                }
+            },
+            "hasVoted(uint256,address)": {
+                "argument": {
+                    "proposalNumber": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "TOKEN_DECIMALS": "uint256",
+                    "REQUIRED_SHARES_TO_BE_BOARD_MEMBER": "uint256",
+                    "MINIMUM_QUORUM": "uint256",
+                    "DEBATE_PERIOD_MINUTES": "uint256"
+                }
+            },
+            "countVotes(uint256)": {
+                "argument": {
+                    "proposalNumber": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "TOKEN_DECIMALS": "uint256",
+                    "REQUIRED_SHARES_TO_BE_BOARD_MEMBER": "uint256",
+                    "MINIMUM_QUORUM": "uint256",
+                    "DEBATE_PERIOD_MINUTES": "uint256"
+                }
+            },
+            "executeProposal(uint256,bytes)": {
+                "argument": {
+                    "proposalNumber": "uint256",
+                    "transactionBytecode": "bytes"
+                },
+                "contract": {
+                    "name": "string",
+                    "TOKEN_DECIMALS": "uint256",
+                    "REQUIRED_SHARES_TO_BE_BOARD_MEMBER": "uint256",
+                    "MINIMUM_QUORUM": "uint256",
+                    "DEBATE_PERIOD_MINUTES": "uint256"
+                }
+            },
+            "receiveApproval(address,uint256,address,bytes)": {
+                "argument": {
+                    "value": "uint256",
+                    "extraData": "bytes"
+                },
+                "contract": {
+                    "name": "string",
+                    "TOKEN_DECIMALS": "uint256",
+                    "REQUIRED_SHARES_TO_BE_BOARD_MEMBER": "uint256",
+                    "MINIMUM_QUORUM": "uint256",
+                    "DEBATE_PERIOD_MINUTES": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "TOKEN_DECIMALS": "uint256",
+                    "REQUIRED_SHARES_TO_BE_BOARD_MEMBER": "uint256",
+                    "MINIMUM_QUORUM": "uint256",
+                    "DEBATE_PERIOD_MINUTES": "uint256"
+                }
+            },
+            "WyvernDAO(ERC20)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "TOKEN_DECIMALS": "uint256",
+                    "REQUIRED_SHARES_TO_BE_BOARD_MEMBER": "uint256",
+                    "MINIMUM_QUORUM": "uint256",
+                    "DEBATE_PERIOD_MINUTES": "uint256"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "TOKEN_DECIMALS": "uint256",
+                    "REQUIRED_SHARES_TO_BE_BOARD_MEMBER": "uint256",
+                    "MINIMUM_QUORUM": "uint256",
+                    "DEBATE_PERIOD_MINUTES": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "countVotes(uint256)": [
+                1107,
+                185
+            ],
+            "checkProposalCode(uint256,address,uint256,bytes)": [
+                2642,
+                603
+            ],
+            "changeVotingRules(uint256,uint256,uint256)": [
+                1825,
+                405
+            ],
+            "clearDelegateAndUnlockTokens()": [
+                1739,
+                361
+            ],
+            "receiveApproval(address,uint256,address,bytes)": [
+                1933,
+                449
+            ],
+            "setDelegateAndLockTokens(uint256,address)": [
+                1662,
+                339
+            ],
+            "vote(uint256,bool)": [
+                2285,
+                537
+            ],
+            "hasVoted(uint256,address)": [
+                1518,
+                295
+            ],
+            "newProposal(address,uint256,bytes,bytes)": [
+                2362,
+                559
+            ],
+            "executeProposal(uint256,bytes)": [
+                1186,
+                207
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump7687": [
+                "sharesTokenAddress.balanceOf(tokenLocker)",
+                "sharesTokenAddress.balanceOf(tokenLocker)"
+            ],
+            "block8887": [
+                "ERC20(sharesTokenAddress).balanceOf(msg.sender)"
+            ],
+            "jump3644": [
+                "sharesTokenAddress.balanceOf(v.voter)",
+                "sharesTokenAddress.balanceOf(v.voter)"
+            ],
+            "jump3644_0": [
+                "sharesTokenAddress.balanceOf(v.voter)",
+                "sharesTokenAddress.balanceOf(v.voter)"
+            ],
+            "block8349": [
+                "t.transferFrom(from, this, value)"
+            ],
+            "jump5097": [
+                "ERC20(sharesTokenAddress).balanceOf(msg.sender)",
+                "ERC20(sharesTokenAddress).balanceOf(msg.sender)"
+            ],
+            "block4528": [
+                "p.recipient.call.value(p.amount)(transactionBytecode)"
+            ],
+            "jump8349": [
+                "t.transferFrom(from, this, value)",
+                "t.transferFrom(from, this, value)"
+            ],
+            "jump4528": [
+                "p.recipient.call.value(p.amount)(transactionBytecode)",
+                "p.recipient.call.value(p.amount)(transactionBytecode)"
+            ],
+            "block7687": [
+                "sharesTokenAddress.balanceOf(tokenLocker)"
+            ],
+            "jump6016": [
+                "sharesTokenAddress.transferFrom(msg.sender, tokenLocker, tokensToLock)",
+                "sharesTokenAddress.transferFrom(msg.sender, tokenLocker, tokensToLock)"
+            ],
+            "block3644": [
+                "sharesTokenAddress.balanceOf(v.voter)"
+            ],
+            "jump8887": [
+                "ERC20(sharesTokenAddress).balanceOf(msg.sender)",
+                "ERC20(sharesTokenAddress).balanceOf(msg.sender)"
+            ],
+            "jump6312": [
+                "sharesTokenAddress.balanceOf(tokenLocker)",
+                "sharesTokenAddress.balanceOf(tokenLocker)"
+            ],
+            "block5097": [
+                "ERC20(sharesTokenAddress).balanceOf(msg.sender)"
+            ],
+            "block6016": [
+                "sharesTokenAddress.transferFrom(msg.sender, tokenLocker, tokensToLock)"
+            ],
+            "jump9774": [
+                "ERC20(sharesTokenAddress).balanceOf(msg.sender)",
+                "ERC20(sharesTokenAddress).balanceOf(msg.sender)"
+            ],
+            "block6312": [
+                "sharesTokenAddress.balanceOf(tokenLocker)"
+            ],
+            "block9774": [
+                "ERC20(sharesTokenAddress).balanceOf(msg.sender)"
+            ],
+            "block7391": [
+                "tokenLocker.transfer(msg.sender, lockedTokens)"
+            ],
+            "jump7391": [
+                "tokenLocker.transfer(msg.sender, lockedTokens)",
+                "tokenLocker.transfer(msg.sender, lockedTokens)"
+            ],
+            "block3644_0": [
+                "sharesTokenAddress.balanceOf(v.voter)"
+            ]
+        }
+    }
+}

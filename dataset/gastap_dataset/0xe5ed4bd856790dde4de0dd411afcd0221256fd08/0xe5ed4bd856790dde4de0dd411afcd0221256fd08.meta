@@ -1,0 +1,205 @@
+{
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "TokenSyndicate": {
+        "function_list": [
+            "TokenSyndicate(address,address,uint256)",
+            "fallback()",
+            "invest()",
+            "balanceOf(address)",
+            "enableRefunds()",
+            "buyTokens()",
+            "withdrawSyndicateTokens()",
+            "withdrawTokens()",
+            "refund()"
+        ],
+        "initial_state": {
+            "TokenSyndicate(address,address,uint256)": {
+                "argument": {
+                    "_refundStart": "uint256"
+                },
+                "contract": {
+                    "tokenExchangeRate": "uint256",
+                    "refundStart": "uint256",
+                    "totalPresale": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "tokenExchangeRate": "uint256",
+                    "refundStart": "uint256",
+                    "totalPresale": "uint256"
+                }
+            },
+            "invest()": {
+                "argument": {},
+                "contract": {
+                    "tokenExchangeRate": "uint256",
+                    "refundStart": "uint256",
+                    "totalPresale": "uint256"
+                }
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "tokenExchangeRate": "uint256",
+                    "refundStart": "uint256",
+                    "totalPresale": "uint256"
+                }
+            },
+            "enableRefunds()": {
+                "argument": {},
+                "contract": {
+                    "tokenExchangeRate": "uint256",
+                    "refundStart": "uint256",
+                    "totalPresale": "uint256"
+                }
+            },
+            "buyTokens()": {
+                "argument": {},
+                "contract": {
+                    "tokenExchangeRate": "uint256",
+                    "refundStart": "uint256",
+                    "totalPresale": "uint256"
+                }
+            },
+            "withdrawSyndicateTokens()": {
+                "argument": {},
+                "contract": {
+                    "tokenExchangeRate": "uint256",
+                    "refundStart": "uint256",
+                    "totalPresale": "uint256"
+                }
+            },
+            "withdrawTokens()": {
+                "argument": {},
+                "contract": {
+                    "tokenExchangeRate": "uint256",
+                    "refundStart": "uint256",
+                    "totalPresale": "uint256"
+                }
+            },
+            "refund()": {
+                "argument": {},
+                "contract": {
+                    "tokenExchangeRate": "uint256",
+                    "refundStart": "uint256",
+                    "totalPresale": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "enableRefunds()": [
+                593,
+                229
+            ],
+            "invest()": [
+                973,
+                405
+            ],
+            "balanceOf(address)": [
+                419,
+                185
+            ],
+            "refund()": [
+                353,
+                141
+            ],
+            "withdrawSyndicateTokens()": [
+                283,
+                97
+            ],
+            "buyTokens()": [
+                3339,
+                1294
+            ],
+            "withdrawTokens()": [
+                616,
+                251
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump1851": [
+                "msg.sender.transfer(totalValue)",
+                "msg.sender.transfer(totalValue)"
+            ],
+            "jump3339": [
+                "tokenContract.buyTokens.value(this.balance)()",
+                "tokenContract.buyTokens.value(this.balance)()"
+            ],
+            "jump3868": [
+                "tokenContract.tokenSaleBalanceOf(this)",
+                "tokenContract.tokenSaleBalanceOf(this)"
+            ],
+            "jump3552": [
+                "tokenContract.getCurrentPrice(this)",
+                "tokenContract.getCurrentPrice(this)"
+            ],
+            "jump1510": [
+                "tokenContract.withdraw()",
+                "tokenContract.withdraw()"
+            ],
+            "block1851": [
+                "msg.sender.transfer(totalValue)"
+            ],
+            "block1510": [
+                "tokenContract.withdraw()"
+            ],
+            "block2747": [
+                "tokenContract.transfer( msg.sender, tokens)"
+            ],
+            "block3868": [
+                "tokenContract.tokenSaleBalanceOf(this)"
+            ],
+            "jump2747": [
+                "tokenContract.transfer( msg.sender, tokens)",
+                "tokenContract.transfer( msg.sender, tokens)"
+            ],
+            "block3339": [
+                "tokenContract.buyTokens.value(this.balance)()"
+            ],
+            "block3552": [
+                "tokenContract.getCurrentPrice(this)"
+            ]
+        }
+    }
+}

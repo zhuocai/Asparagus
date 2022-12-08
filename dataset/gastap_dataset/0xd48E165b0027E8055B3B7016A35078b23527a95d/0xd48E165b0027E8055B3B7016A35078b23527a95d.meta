@@ -1,0 +1,909 @@
+{
+    "owned": {
+        "function_list": [
+            "owned()",
+            "changeOwner(address)",
+            "changeServer(address)"
+        ],
+        "initial_state": {
+            "owned()": {
+                "argument": {},
+                "contract": {}
+            },
+            "changeOwner(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "changeServer(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "changeServer(address)": [
+                103,
+                75
+            ],
+            "changeOwner(address)": [
+                257,
+                119
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "tokenRecipient": {
+        "function_list": [
+            "receiveApproval(address,uint256,address,bytes)"
+        ],
+        "initial_state": {
+            "receiveApproval(address,uint256,address,bytes)": {
+                "argument": {
+                    "_value": "uint256",
+                    "_extraData": "bytes"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "receiveApproval(address,uint256,address,bytes)": [
+                174,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump573": [
+                "t.transferFrom(_from, this, _value)",
+                "t.transferFrom(_from, this, _value)"
+            ],
+            "block573": [
+                "t.transferFrom(_from, this, _value)"
+            ]
+        }
+    },
+    "CSToken": {
+        "function_list": [
+            "owned()",
+            "changeOwner(address)",
+            "changeServer(address)",
+            "balanceOf(address)",
+            "mintToken(address,uint256,uint256)",
+            "addAgingTime(uint256)",
+            "allAgingTimesAdded()",
+            "addAgingTimesForPool(address,uint256)",
+            "countAddresses()"
+        ],
+        "initial_state": {
+            "owned()": {
+                "argument": {},
+                "contract": {
+                    "decimals": "uint8",
+                    "agingTimes": "uint256[]",
+                    "addressByIndex": "address[]"
+                }
+            },
+            "changeOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "decimals": "uint8",
+                    "agingTimes": "uint256[]",
+                    "addressByIndex": "address[]"
+                }
+            },
+            "changeServer(address)": {
+                "argument": {},
+                "contract": {
+                    "decimals": "uint8",
+                    "agingTimes": "uint256[]",
+                    "addressByIndex": "address[]"
+                }
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "decimals": "uint8",
+                    "agingTimes": "uint256[]",
+                    "addressByIndex": "address[]"
+                }
+            },
+            "mintToken(address,uint256,uint256)": {
+                "argument": {
+                    "mintedAmount": "uint256",
+                    "agingTime": "uint256"
+                },
+                "contract": {
+                    "decimals": "uint8",
+                    "agingTimes": "uint256[]",
+                    "addressByIndex": "address[]"
+                }
+            },
+            "addAgingTime(uint256)": {
+                "argument": {
+                    "time": "uint256"
+                },
+                "contract": {
+                    "decimals": "uint8",
+                    "agingTimes": "uint256[]",
+                    "addressByIndex": "address[]"
+                }
+            },
+            "allAgingTimesAdded()": {
+                "argument": {},
+                "contract": {
+                    "decimals": "uint8",
+                    "agingTimes": "uint256[]",
+                    "addressByIndex": "address[]"
+                }
+            },
+            "addAgingTimesForPool(address,uint256)": {
+                "argument": {
+                    "agingTime": "uint256"
+                },
+                "contract": {
+                    "decimals": "uint8",
+                    "agingTimes": "uint256[]",
+                    "addressByIndex": "address[]"
+                }
+            },
+            "countAddresses()": {
+                "argument": {},
+                "contract": {
+                    "decimals": "uint8",
+                    "agingTimes": "uint256[]",
+                    "addressByIndex": "address[]"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                840,
+                207
+            ],
+            "changeOwner(address)": [
+                1235,
+                295
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump4534": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)",
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ],
+            "block4534": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ]
+        }
+    },
+    "KickicoCrowdsale": {
+        "function_list": [
+            "owned()",
+            "changeOwner(address)",
+            "changeServer(address)",
+            "KickicoCrowdsale(address,address,address,address,address,address,address,address,address)",
+            "setParams()",
+            "mint(uint256,uint256,address)",
+            "contractBalance()",
+            "processPayment(address,uint256,bool)",
+            "getBonusByRaised()",
+            "closeICO()",
+            "safeWithdrawal(uint256)",
+            "isReachedThreshold()",
+            "isIcoClosed()",
+            "customPayment(address,uint256)",
+            "mintTokens(address[])",
+            "disableManuallyMintTokens()",
+            "fallback()",
+            "changeTokenOwner(address)",
+            "kill()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "owned()": {
+                "argument": {},
+                "contract": {
+                    "IcoStagePeriod": "uint256[]",
+                    "threshold": "uint256",
+                    "goal": "uint256",
+                    "totalCollected": "uint256",
+                    "pricePerTokenInWei": "uint256",
+                    "agingTime": "uint256",
+                    "prPoolAgingTime": "uint256",
+                    "advisoryPoolAgingTime": "uint256",
+                    "bountiesPoolAgingTime": "uint256",
+                    "lotteryPoolAgingTime": "uint256",
+                    "angelInvestorsPoolAgingTime": "uint256",
+                    "foundersPoolAgingTime": "uint256",
+                    "chinaPoolAgingTime": "uint256",
+                    "bonuses": "uint256[]",
+                    "bonusesAfterClose": "uint256[]",
+                    "tokenMultiplier": "uint256"
+                }
+            },
+            "changeOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "IcoStagePeriod": "uint256[]",
+                    "threshold": "uint256",
+                    "goal": "uint256",
+                    "totalCollected": "uint256",
+                    "pricePerTokenInWei": "uint256",
+                    "agingTime": "uint256",
+                    "prPoolAgingTime": "uint256",
+                    "advisoryPoolAgingTime": "uint256",
+                    "bountiesPoolAgingTime": "uint256",
+                    "lotteryPoolAgingTime": "uint256",
+                    "angelInvestorsPoolAgingTime": "uint256",
+                    "foundersPoolAgingTime": "uint256",
+                    "chinaPoolAgingTime": "uint256",
+                    "bonuses": "uint256[]",
+                    "bonusesAfterClose": "uint256[]",
+                    "tokenMultiplier": "uint256"
+                }
+            },
+            "changeServer(address)": {
+                "argument": {},
+                "contract": {
+                    "IcoStagePeriod": "uint256[]",
+                    "threshold": "uint256",
+                    "goal": "uint256",
+                    "totalCollected": "uint256",
+                    "pricePerTokenInWei": "uint256",
+                    "agingTime": "uint256",
+                    "prPoolAgingTime": "uint256",
+                    "advisoryPoolAgingTime": "uint256",
+                    "bountiesPoolAgingTime": "uint256",
+                    "lotteryPoolAgingTime": "uint256",
+                    "angelInvestorsPoolAgingTime": "uint256",
+                    "foundersPoolAgingTime": "uint256",
+                    "chinaPoolAgingTime": "uint256",
+                    "bonuses": "uint256[]",
+                    "bonusesAfterClose": "uint256[]",
+                    "tokenMultiplier": "uint256"
+                }
+            },
+            "KickicoCrowdsale(address,address,address,address,address,address,address,address,address)": {
+                "argument": {},
+                "contract": {
+                    "IcoStagePeriod": "uint256[]",
+                    "threshold": "uint256",
+                    "goal": "uint256",
+                    "totalCollected": "uint256",
+                    "pricePerTokenInWei": "uint256",
+                    "agingTime": "uint256",
+                    "prPoolAgingTime": "uint256",
+                    "advisoryPoolAgingTime": "uint256",
+                    "bountiesPoolAgingTime": "uint256",
+                    "lotteryPoolAgingTime": "uint256",
+                    "angelInvestorsPoolAgingTime": "uint256",
+                    "foundersPoolAgingTime": "uint256",
+                    "chinaPoolAgingTime": "uint256",
+                    "bonuses": "uint256[]",
+                    "bonusesAfterClose": "uint256[]",
+                    "tokenMultiplier": "uint256"
+                }
+            },
+            "setParams()": {
+                "argument": {},
+                "contract": {
+                    "IcoStagePeriod": "uint256[]",
+                    "threshold": "uint256",
+                    "goal": "uint256",
+                    "totalCollected": "uint256",
+                    "pricePerTokenInWei": "uint256",
+                    "agingTime": "uint256",
+                    "prPoolAgingTime": "uint256",
+                    "advisoryPoolAgingTime": "uint256",
+                    "bountiesPoolAgingTime": "uint256",
+                    "lotteryPoolAgingTime": "uint256",
+                    "angelInvestorsPoolAgingTime": "uint256",
+                    "foundersPoolAgingTime": "uint256",
+                    "chinaPoolAgingTime": "uint256",
+                    "bonuses": "uint256[]",
+                    "bonusesAfterClose": "uint256[]",
+                    "tokenMultiplier": "uint256"
+                }
+            },
+            "mint(uint256,uint256,address)": {
+                "argument": {
+                    "amount": "uint256",
+                    "tokens": "uint256"
+                },
+                "contract": {
+                    "IcoStagePeriod": "uint256[]",
+                    "threshold": "uint256",
+                    "goal": "uint256",
+                    "totalCollected": "uint256",
+                    "pricePerTokenInWei": "uint256",
+                    "agingTime": "uint256",
+                    "prPoolAgingTime": "uint256",
+                    "advisoryPoolAgingTime": "uint256",
+                    "bountiesPoolAgingTime": "uint256",
+                    "lotteryPoolAgingTime": "uint256",
+                    "angelInvestorsPoolAgingTime": "uint256",
+                    "foundersPoolAgingTime": "uint256",
+                    "chinaPoolAgingTime": "uint256",
+                    "bonuses": "uint256[]",
+                    "bonusesAfterClose": "uint256[]",
+                    "tokenMultiplier": "uint256"
+                }
+            },
+            "contractBalance()": {
+                "argument": {},
+                "contract": {
+                    "IcoStagePeriod": "uint256[]",
+                    "threshold": "uint256",
+                    "goal": "uint256",
+                    "totalCollected": "uint256",
+                    "pricePerTokenInWei": "uint256",
+                    "agingTime": "uint256",
+                    "prPoolAgingTime": "uint256",
+                    "advisoryPoolAgingTime": "uint256",
+                    "bountiesPoolAgingTime": "uint256",
+                    "lotteryPoolAgingTime": "uint256",
+                    "angelInvestorsPoolAgingTime": "uint256",
+                    "foundersPoolAgingTime": "uint256",
+                    "chinaPoolAgingTime": "uint256",
+                    "bonuses": "uint256[]",
+                    "bonusesAfterClose": "uint256[]",
+                    "tokenMultiplier": "uint256"
+                }
+            },
+            "processPayment(address,uint256,bool)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {
+                    "IcoStagePeriod": "uint256[]",
+                    "threshold": "uint256",
+                    "goal": "uint256",
+                    "totalCollected": "uint256",
+                    "pricePerTokenInWei": "uint256",
+                    "agingTime": "uint256",
+                    "prPoolAgingTime": "uint256",
+                    "advisoryPoolAgingTime": "uint256",
+                    "bountiesPoolAgingTime": "uint256",
+                    "lotteryPoolAgingTime": "uint256",
+                    "angelInvestorsPoolAgingTime": "uint256",
+                    "foundersPoolAgingTime": "uint256",
+                    "chinaPoolAgingTime": "uint256",
+                    "bonuses": "uint256[]",
+                    "bonusesAfterClose": "uint256[]",
+                    "tokenMultiplier": "uint256"
+                }
+            },
+            "getBonusByRaised()": {
+                "argument": {},
+                "contract": {
+                    "IcoStagePeriod": "uint256[]",
+                    "threshold": "uint256",
+                    "goal": "uint256",
+                    "totalCollected": "uint256",
+                    "pricePerTokenInWei": "uint256",
+                    "agingTime": "uint256",
+                    "prPoolAgingTime": "uint256",
+                    "advisoryPoolAgingTime": "uint256",
+                    "bountiesPoolAgingTime": "uint256",
+                    "lotteryPoolAgingTime": "uint256",
+                    "angelInvestorsPoolAgingTime": "uint256",
+                    "foundersPoolAgingTime": "uint256",
+                    "chinaPoolAgingTime": "uint256",
+                    "bonuses": "uint256[]",
+                    "bonusesAfterClose": "uint256[]",
+                    "tokenMultiplier": "uint256"
+                }
+            },
+            "closeICO()": {
+                "argument": {},
+                "contract": {
+                    "IcoStagePeriod": "uint256[]",
+                    "threshold": "uint256",
+                    "goal": "uint256",
+                    "totalCollected": "uint256",
+                    "pricePerTokenInWei": "uint256",
+                    "agingTime": "uint256",
+                    "prPoolAgingTime": "uint256",
+                    "advisoryPoolAgingTime": "uint256",
+                    "bountiesPoolAgingTime": "uint256",
+                    "lotteryPoolAgingTime": "uint256",
+                    "angelInvestorsPoolAgingTime": "uint256",
+                    "foundersPoolAgingTime": "uint256",
+                    "chinaPoolAgingTime": "uint256",
+                    "bonuses": "uint256[]",
+                    "bonusesAfterClose": "uint256[]",
+                    "tokenMultiplier": "uint256"
+                }
+            },
+            "safeWithdrawal(uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {
+                    "IcoStagePeriod": "uint256[]",
+                    "threshold": "uint256",
+                    "goal": "uint256",
+                    "totalCollected": "uint256",
+                    "pricePerTokenInWei": "uint256",
+                    "agingTime": "uint256",
+                    "prPoolAgingTime": "uint256",
+                    "advisoryPoolAgingTime": "uint256",
+                    "bountiesPoolAgingTime": "uint256",
+                    "lotteryPoolAgingTime": "uint256",
+                    "angelInvestorsPoolAgingTime": "uint256",
+                    "foundersPoolAgingTime": "uint256",
+                    "chinaPoolAgingTime": "uint256",
+                    "bonuses": "uint256[]",
+                    "bonusesAfterClose": "uint256[]",
+                    "tokenMultiplier": "uint256"
+                }
+            },
+            "isReachedThreshold()": {
+                "argument": {},
+                "contract": {
+                    "IcoStagePeriod": "uint256[]",
+                    "threshold": "uint256",
+                    "goal": "uint256",
+                    "totalCollected": "uint256",
+                    "pricePerTokenInWei": "uint256",
+                    "agingTime": "uint256",
+                    "prPoolAgingTime": "uint256",
+                    "advisoryPoolAgingTime": "uint256",
+                    "bountiesPoolAgingTime": "uint256",
+                    "lotteryPoolAgingTime": "uint256",
+                    "angelInvestorsPoolAgingTime": "uint256",
+                    "foundersPoolAgingTime": "uint256",
+                    "chinaPoolAgingTime": "uint256",
+                    "bonuses": "uint256[]",
+                    "bonusesAfterClose": "uint256[]",
+                    "tokenMultiplier": "uint256"
+                }
+            },
+            "isIcoClosed()": {
+                "argument": {},
+                "contract": {
+                    "IcoStagePeriod": "uint256[]",
+                    "threshold": "uint256",
+                    "goal": "uint256",
+                    "totalCollected": "uint256",
+                    "pricePerTokenInWei": "uint256",
+                    "agingTime": "uint256",
+                    "prPoolAgingTime": "uint256",
+                    "advisoryPoolAgingTime": "uint256",
+                    "bountiesPoolAgingTime": "uint256",
+                    "lotteryPoolAgingTime": "uint256",
+                    "angelInvestorsPoolAgingTime": "uint256",
+                    "foundersPoolAgingTime": "uint256",
+                    "chinaPoolAgingTime": "uint256",
+                    "bonuses": "uint256[]",
+                    "bonusesAfterClose": "uint256[]",
+                    "tokenMultiplier": "uint256"
+                }
+            },
+            "customPayment(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "IcoStagePeriod": "uint256[]",
+                    "threshold": "uint256",
+                    "goal": "uint256",
+                    "totalCollected": "uint256",
+                    "pricePerTokenInWei": "uint256",
+                    "agingTime": "uint256",
+                    "prPoolAgingTime": "uint256",
+                    "advisoryPoolAgingTime": "uint256",
+                    "bountiesPoolAgingTime": "uint256",
+                    "lotteryPoolAgingTime": "uint256",
+                    "angelInvestorsPoolAgingTime": "uint256",
+                    "foundersPoolAgingTime": "uint256",
+                    "chinaPoolAgingTime": "uint256",
+                    "bonuses": "uint256[]",
+                    "bonusesAfterClose": "uint256[]",
+                    "tokenMultiplier": "uint256"
+                }
+            },
+            "mintTokens(address[])": {
+                "argument": {
+                    "recipients": "address[]"
+                },
+                "contract": {
+                    "IcoStagePeriod": "uint256[]",
+                    "threshold": "uint256",
+                    "goal": "uint256",
+                    "totalCollected": "uint256",
+                    "pricePerTokenInWei": "uint256",
+                    "agingTime": "uint256",
+                    "prPoolAgingTime": "uint256",
+                    "advisoryPoolAgingTime": "uint256",
+                    "bountiesPoolAgingTime": "uint256",
+                    "lotteryPoolAgingTime": "uint256",
+                    "angelInvestorsPoolAgingTime": "uint256",
+                    "foundersPoolAgingTime": "uint256",
+                    "chinaPoolAgingTime": "uint256",
+                    "bonuses": "uint256[]",
+                    "bonusesAfterClose": "uint256[]",
+                    "tokenMultiplier": "uint256"
+                }
+            },
+            "disableManuallyMintTokens()": {
+                "argument": {},
+                "contract": {
+                    "IcoStagePeriod": "uint256[]",
+                    "threshold": "uint256",
+                    "goal": "uint256",
+                    "totalCollected": "uint256",
+                    "pricePerTokenInWei": "uint256",
+                    "agingTime": "uint256",
+                    "prPoolAgingTime": "uint256",
+                    "advisoryPoolAgingTime": "uint256",
+                    "bountiesPoolAgingTime": "uint256",
+                    "lotteryPoolAgingTime": "uint256",
+                    "angelInvestorsPoolAgingTime": "uint256",
+                    "foundersPoolAgingTime": "uint256",
+                    "chinaPoolAgingTime": "uint256",
+                    "bonuses": "uint256[]",
+                    "bonusesAfterClose": "uint256[]",
+                    "tokenMultiplier": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "IcoStagePeriod": "uint256[]",
+                    "threshold": "uint256",
+                    "goal": "uint256",
+                    "totalCollected": "uint256",
+                    "pricePerTokenInWei": "uint256",
+                    "agingTime": "uint256",
+                    "prPoolAgingTime": "uint256",
+                    "advisoryPoolAgingTime": "uint256",
+                    "bountiesPoolAgingTime": "uint256",
+                    "lotteryPoolAgingTime": "uint256",
+                    "angelInvestorsPoolAgingTime": "uint256",
+                    "foundersPoolAgingTime": "uint256",
+                    "chinaPoolAgingTime": "uint256",
+                    "bonuses": "uint256[]",
+                    "bonusesAfterClose": "uint256[]",
+                    "tokenMultiplier": "uint256"
+                }
+            },
+            "changeTokenOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "IcoStagePeriod": "uint256[]",
+                    "threshold": "uint256",
+                    "goal": "uint256",
+                    "totalCollected": "uint256",
+                    "pricePerTokenInWei": "uint256",
+                    "agingTime": "uint256",
+                    "prPoolAgingTime": "uint256",
+                    "advisoryPoolAgingTime": "uint256",
+                    "bountiesPoolAgingTime": "uint256",
+                    "lotteryPoolAgingTime": "uint256",
+                    "angelInvestorsPoolAgingTime": "uint256",
+                    "foundersPoolAgingTime": "uint256",
+                    "chinaPoolAgingTime": "uint256",
+                    "bonuses": "uint256[]",
+                    "bonusesAfterClose": "uint256[]",
+                    "tokenMultiplier": "uint256"
+                }
+            },
+            "kill()": {
+                "argument": {},
+                "contract": {
+                    "IcoStagePeriod": "uint256[]",
+                    "threshold": "uint256",
+                    "goal": "uint256",
+                    "totalCollected": "uint256",
+                    "pricePerTokenInWei": "uint256",
+                    "agingTime": "uint256",
+                    "prPoolAgingTime": "uint256",
+                    "advisoryPoolAgingTime": "uint256",
+                    "bountiesPoolAgingTime": "uint256",
+                    "lotteryPoolAgingTime": "uint256",
+                    "angelInvestorsPoolAgingTime": "uint256",
+                    "foundersPoolAgingTime": "uint256",
+                    "chinaPoolAgingTime": "uint256",
+                    "bonuses": "uint256[]",
+                    "bonusesAfterClose": "uint256[]",
+                    "tokenMultiplier": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "changeTokenOwner(address)": [
+                684,
+                97
+            ],
+            "changeServer(address)": [
+                617,
+                75
+            ],
+            "disableManuallyMintTokens()": [
+                2355,
+                669
+            ],
+            "closeICO()": [
+                1321,
+                317
+            ],
+            "safeWithdrawal(uint256)": [
+                1391,
+                361
+            ],
+            "customPayment(address,uint256)": [
+                1244,
+                295
+            ],
+            "changeOwner(address)": [
+                1939,
+                537
+            ],
+            "isIcoClosed()": [
+                1344,
+                339
+            ],
+            "mintTokens(address[])": [
+                903,
+                163
+            ],
+            "kill()": [
+                1178,
+                251
+            ],
+            "contractBalance()": [
+                1675,
+                449
+            ],
+            "setParams()": [
+                2158,
+                603
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump8580": [
+                "tokenReward.mintToken(bounties, 25000000 * tokenMultiplier, 0)",
+                "tokenReward.mintToken(bounties, 25000000 * tokenMultiplier, 0)"
+            ],
+            "jump8851": [
+                "tokenReward.mintToken(lottery, 1000000 * tokenMultiplier, 0)",
+                "tokenReward.mintToken(lottery, 1000000 * tokenMultiplier, 0)"
+            ],
+            "block13759_1": [
+                "tokenReward.mintToken(sender, tokens, agingTime)"
+            ],
+            "jump3933": [
+                "tokenReward.changeOwner(_owner)",
+                "tokenReward.changeOwner(_owner)"
+            ],
+            "jump9837": [
+                "tokenReward.addAgingTime(agingTime)",
+                "tokenReward.addAgingTime(agingTime)"
+            ],
+            "block10521": [
+                "tokenReward.addAgingTime(lotteryPoolAgingTime)"
+            ],
+            "jump5962": [
+                "owner.send(amount)",
+                "owner.send(amount)"
+            ],
+            "block9666": [
+                "tokenReward.mintToken(china, 8000000 * tokenMultiplier, 0)"
+            ],
+            "jump13759": [
+                "tokenReward.mintToken(sender, tokens, agingTime)",
+                "tokenReward.mintToken(sender, tokens, agingTime)"
+            ],
+            "block13759": [
+                "tokenReward.mintToken(sender, tokens, agingTime)"
+            ],
+            "block10179": [
+                "tokenReward.addAgingTime(advisoryPoolAgingTime)"
+            ],
+            "jump3294": [
+                "from.send(change)",
+                "from.send(change)"
+            ],
+            "block3294": [
+                "from.send(change)"
+            ],
+            "jump7780": [
+                "tokenReward.addAgingTimesForPool(lottery, lotteryPoolAgingTime)",
+                "tokenReward.addAgingTimesForPool(lottery, lotteryPoolAgingTime)"
+            ],
+            "jump8308": [
+                "tokenReward.mintToken(advisory, 10000000 * tokenMultiplier, 0)",
+                "tokenReward.mintToken(advisory, 10000000 * tokenMultiplier, 0)"
+            ],
+            "block10692": [
+                "tokenReward.addAgingTime(angelInvestorsPoolAgingTime)"
+            ],
+            "jump9395": [
+                "tokenReward.mintToken(prPool, 23000000 * tokenMultiplier, 0)",
+                "tokenReward.mintToken(prPool, 23000000 * tokenMultiplier, 0)"
+            ],
+            "block8580": [
+                "tokenReward.mintToken(bounties, 25000000 * tokenMultiplier, 0)"
+            ],
+            "jump10521": [
+                "tokenReward.addAgingTime(lotteryPoolAgingTime)",
+                "tokenReward.addAgingTime(lotteryPoolAgingTime)"
+            ],
+            "block13759_0": [
+                "tokenReward.mintToken(sender, tokens, agingTime)"
+            ],
+            "jump11192": [
+                "tokenReward.allAgingTimesAdded()",
+                "tokenReward.allAgingTimesAdded()"
+            ],
+            "jump14036_0": [
+                "tokenReward.mintToken(founders, tokens / 10, foundersPoolAgingTime)",
+                "tokenReward.mintToken(founders, tokens / 10, foundersPoolAgingTime)"
+            ],
+            "block11192": [
+                "tokenReward.allAgingTimesAdded()"
+            ],
+            "jump4466": [
+                "oldTokenReward.balanceOf(recipients[i])",
+                "oldTokenReward.balanceOf(recipients[i])"
+            ],
+            "block8308": [
+                "tokenReward.mintToken(advisory, 10000000 * tokenMultiplier, 0)"
+            ],
+            "block9837": [
+                "tokenReward.addAgingTime(agingTime)"
+            ],
+            "block8851": [
+                "tokenReward.mintToken(lottery, 1000000 * tokenMultiplier, 0)"
+            ],
+            "block11034": [
+                "tokenReward.addAgingTime(chinaPoolAgingTime)"
+            ],
+            "jump10179": [
+                "tokenReward.addAgingTime(advisoryPoolAgingTime)",
+                "tokenReward.addAgingTime(advisoryPoolAgingTime)"
+            ],
+            "block7009": [
+                "tokenReward.addAgingTimesForPool(prPool, prPoolAgingTime)"
+            ],
+            "block14036_1": [
+                "tokenReward.mintToken(founders, tokens / 10, foundersPoolAgingTime)"
+            ],
+            "jump14036": [
+                "tokenReward.mintToken(founders, tokens / 10, foundersPoolAgingTime)",
+                "tokenReward.mintToken(founders, tokens / 10, foundersPoolAgingTime)"
+            ],
+            "block7780": [
+                "tokenReward.addAgingTimesForPool(lottery, lotteryPoolAgingTime)"
+            ],
+            "block7266": [
+                "tokenReward.addAgingTimesForPool(advisory, advisoryPoolAgingTime)"
+            ],
+            "jump3294_1": [
+                "from.send(change)",
+                "from.send(change)"
+            ],
+            "jump3294_0": [
+                "from.send(change)",
+                "from.send(change)"
+            ],
+            "block5962": [
+                "owner.send(amount)"
+            ],
+            "block10008": [
+                "tokenReward.addAgingTime(prPoolAgingTime)"
+            ],
+            "jump13759_0": [
+                "tokenReward.mintToken(sender, tokens, agingTime)",
+                "tokenReward.mintToken(sender, tokens, agingTime)"
+            ],
+            "jump4904": [
+                "owner.transfer(this.balance)",
+                "owner.transfer(this.balance)"
+            ],
+            "block3294_1": [
+                "from.send(change)"
+            ],
+            "block4904": [
+                "owner.transfer(this.balance)"
+            ],
+            "jump4670": [
+                "tokenReward.mintToken(recipients[i], oldTokenReward.balanceOf(recipients[i]), 1538902800)",
+                "tokenReward.mintToken(recipients[i], oldTokenReward.balanceOf(recipients[i]), 1538902800)"
+            ],
+            "block3933": [
+                "tokenReward.changeOwner(_owner)"
+            ],
+            "jump7523": [
+                "tokenReward.addAgingTimesForPool(bounties, bountiesPoolAgingTime)",
+                "tokenReward.addAgingTimesForPool(bounties, bountiesPoolAgingTime)"
+            ],
+            "jump7266": [
+                "tokenReward.addAgingTimesForPool(advisory, advisoryPoolAgingTime)",
+                "tokenReward.addAgingTimesForPool(advisory, advisoryPoolAgingTime)"
+            ],
+            "block9395": [
+                "tokenReward.mintToken(prPool, 23000000 * tokenMultiplier, 0)"
+            ],
+            "block14036_0": [
+                "tokenReward.mintToken(founders, tokens / 10, foundersPoolAgingTime)"
+            ],
+            "block14036": [
+                "tokenReward.mintToken(founders, tokens / 10, foundersPoolAgingTime)"
+            ],
+            "jump10692": [
+                "tokenReward.addAgingTime(angelInvestorsPoolAgingTime)",
+                "tokenReward.addAgingTime(angelInvestorsPoolAgingTime)"
+            ],
+            "jump14036_1": [
+                "tokenReward.mintToken(founders, tokens / 10, foundersPoolAgingTime)",
+                "tokenReward.mintToken(founders, tokens / 10, foundersPoolAgingTime)"
+            ],
+            "block9123": [
+                "tokenReward.mintToken(angelInvestors, 30000000 * tokenMultiplier, 0)"
+            ],
+            "jump9123": [
+                "tokenReward.mintToken(angelInvestors, 30000000 * tokenMultiplier, 0)",
+                "tokenReward.mintToken(angelInvestors, 30000000 * tokenMultiplier, 0)"
+            ],
+            "block3294_0": [
+                "from.send(change)"
+            ],
+            "jump10350": [
+                "tokenReward.addAgingTime(bountiesPoolAgingTime)",
+                "tokenReward.addAgingTime(bountiesPoolAgingTime)"
+            ],
+            "jump8037": [
+                "tokenReward.addAgingTimesForPool(angelInvestors, angelInvestorsPoolAgingTime)",
+                "tokenReward.addAgingTimesForPool(angelInvestors, angelInvestorsPoolAgingTime)"
+            ],
+            "block4670": [
+                "tokenReward.mintToken(recipients[i], oldTokenReward.balanceOf(recipients[i]), 1538902800)"
+            ],
+            "block10350": [
+                "tokenReward.addAgingTime(bountiesPoolAgingTime)"
+            ],
+            "block7523": [
+                "tokenReward.addAgingTimesForPool(bounties, bountiesPoolAgingTime)"
+            ],
+            "block3933_0": [
+                "tokenReward.changeOwner(_owner)"
+            ],
+            "block8037": [
+                "tokenReward.addAgingTimesForPool(angelInvestors, angelInvestorsPoolAgingTime)"
+            ],
+            "block10863": [
+                "tokenReward.addAgingTime(foundersPoolAgingTime)"
+            ],
+            "jump3933_0": [
+                "tokenReward.changeOwner(_owner)",
+                "tokenReward.changeOwner(_owner)"
+            ],
+            "jump11034": [
+                "tokenReward.addAgingTime(chinaPoolAgingTime)",
+                "tokenReward.addAgingTime(chinaPoolAgingTime)"
+            ],
+            "jump9666": [
+                "tokenReward.mintToken(china, 8000000 * tokenMultiplier, 0)",
+                "tokenReward.mintToken(china, 8000000 * tokenMultiplier, 0)"
+            ],
+            "jump7009": [
+                "tokenReward.addAgingTimesForPool(prPool, prPoolAgingTime)",
+                "tokenReward.addAgingTimesForPool(prPool, prPoolAgingTime)"
+            ],
+            "jump10863": [
+                "tokenReward.addAgingTime(foundersPoolAgingTime)",
+                "tokenReward.addAgingTime(foundersPoolAgingTime)"
+            ],
+            "jump10008": [
+                "tokenReward.addAgingTime(prPoolAgingTime)",
+                "tokenReward.addAgingTime(prPoolAgingTime)"
+            ],
+            "block4466": [
+                "oldTokenReward.balanceOf(recipients[i])"
+            ],
+            "jump13759_1": [
+                "tokenReward.mintToken(sender, tokens, agingTime)",
+                "tokenReward.mintToken(sender, tokens, agingTime)"
+            ]
+        }
+    }
+}

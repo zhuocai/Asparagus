@@ -1,0 +1,977 @@
+{
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "ERC20Basic": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                124,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "ERC20": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                313,
+                97
+            ],
+            "balanceOf(address)": [
+                639,
+                185
+            ],
+            "allowance(address,address)": [
+                1118,
+                273
+            ],
+            "transferFrom(address,address,uint256)": [
+                457,
+                141
+            ],
+            "transfer(address,uint256)": [
+                870,
+                229
+            ]
+        },
+        "block_CALL_mapping": {
+            "block2404": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ],
+            "jump2404": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)",
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ]
+        }
+    },
+    "BasicToken": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transfer(address,uint256)",
+            "balanceOf(address)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transfer(address,uint256)": [
+                222,
+                119
+            ],
+            "balanceOf(address)": [
+                135,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Shareable": {
+        "function_list": [
+            "Shareable(address[],uint256)",
+            "changeRequirement(uint256)",
+            "addOwner(address)",
+            "removeOwner(address)",
+            "revoke(bytes32)",
+            "hasConfirmed(bytes32,address)",
+            "confirmAndCheck(bytes32)",
+            "clearOwnersDone(bytes32)",
+            "clearPending()"
+        ],
+        "initial_state": {
+            "Shareable(address[],uint256)": {
+                "argument": {
+                    "_additionalOwners": "address[]",
+                    "_required": "uint256"
+                },
+                "contract": {
+                    "required": "uint256",
+                    "owners": "address[]",
+                    "pendingsIndex": "bytes32[]"
+                }
+            },
+            "changeRequirement(uint256)": {
+                "argument": {
+                    "_required": "uint256"
+                },
+                "contract": {
+                    "required": "uint256",
+                    "owners": "address[]",
+                    "pendingsIndex": "bytes32[]"
+                }
+            },
+            "addOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "required": "uint256",
+                    "owners": "address[]",
+                    "pendingsIndex": "bytes32[]"
+                }
+            },
+            "removeOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "required": "uint256",
+                    "owners": "address[]",
+                    "pendingsIndex": "bytes32[]"
+                }
+            },
+            "revoke(bytes32)": {
+                "argument": {
+                    "_operation": "bytes32"
+                },
+                "contract": {
+                    "required": "uint256",
+                    "owners": "address[]",
+                    "pendingsIndex": "bytes32[]"
+                }
+            },
+            "hasConfirmed(bytes32,address)": {
+                "argument": {
+                    "_operation": "bytes32"
+                },
+                "contract": {
+                    "required": "uint256",
+                    "owners": "address[]",
+                    "pendingsIndex": "bytes32[]"
+                }
+            },
+            "confirmAndCheck(bytes32)": {
+                "argument": {
+                    "_operation": "bytes32"
+                },
+                "contract": {
+                    "required": "uint256",
+                    "owners": "address[]",
+                    "pendingsIndex": "bytes32[]"
+                }
+            },
+            "clearOwnersDone(bytes32)": {
+                "argument": {
+                    "_operation": "bytes32"
+                },
+                "contract": {
+                    "required": "uint256",
+                    "owners": "address[]",
+                    "pendingsIndex": "bytes32[]"
+                }
+            },
+            "clearPending()": {
+                "argument": {},
+                "contract": {
+                    "required": "uint256",
+                    "owners": "address[]",
+                    "pendingsIndex": "bytes32[]"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "revoke(bytes32)": [
+                259,
+                119
+            ],
+            "addOwner(address)": [
+                192,
+                97
+            ],
+            "hasConfirmed(bytes32,address)": [
+                353,
+                163
+            ],
+            "removeOwner(address)": [
+                125,
+                75
+            ],
+            "changeRequirement(uint256)": [
+                308,
+                141
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "StandardToken": {
+        "function_list": [
+            "transfer(address,uint256)",
+            "balanceOf(address)",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "increaseApproval(address,uint256)",
+            "decreaseApproval(address,uint256)"
+        ],
+        "initial_state": {
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "increaseApproval(address,uint256)": {
+                "argument": {
+                    "_addedValue": "uint256"
+                },
+                "contract": {}
+            },
+            "decreaseApproval(address,uint256)": {
+                "argument": {
+                    "_subtractedValue": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                147,
+                75
+            ],
+            "increaseApproval(address,uint256)": [
+                713,
+                207
+            ],
+            "balanceOf(address)": [
+                525,
+                163
+            ],
+            "allowance(address,address)": [
+                814,
+                229
+            ],
+            "decreaseApproval(address,uint256)": [
+                424,
+                141
+            ],
+            "transferFrom(address,address,uint256)": [
+                291,
+                119
+            ],
+            "transfer(address,uint256)": [
+                612,
+                185
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "MintableToken": {
+        "function_list": [
+            "Shareable(address[],uint256)",
+            "changeRequirement(uint256)",
+            "addOwner(address)",
+            "removeOwner(address)",
+            "revoke(bytes32)",
+            "hasConfirmed(bytes32,address)",
+            "confirmAndCheck(bytes32)",
+            "clearOwnersDone(bytes32)",
+            "clearPending()",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "increaseApproval(address,uint256)",
+            "decreaseApproval(address,uint256)",
+            "transfer(address,uint256)",
+            "balanceOf(address)",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "MintableToken(address,uint256,uint256,uint256,uint256,address[],uint256)",
+            "currentIterationSupplyLimit()",
+            "mint(address,uint256)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "Shareable(address[],uint256)": {
+                "argument": {
+                    "_additionalOwners": "address[]",
+                    "_required": "uint256"
+                },
+                "contract": {
+                    "totalSupplyLimit": "uint256",
+                    "numberOfBlocksBetweenSupplies": "uint256",
+                    "nextSupplyAfterBlock": "uint256",
+                    "currentIteration": "uint256",
+                    "prevIterationSupplyLimit": "uint256"
+                }
+            },
+            "changeRequirement(uint256)": {
+                "argument": {
+                    "_required": "uint256"
+                },
+                "contract": {
+                    "totalSupplyLimit": "uint256",
+                    "numberOfBlocksBetweenSupplies": "uint256",
+                    "nextSupplyAfterBlock": "uint256",
+                    "currentIteration": "uint256",
+                    "prevIterationSupplyLimit": "uint256"
+                }
+            },
+            "addOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupplyLimit": "uint256",
+                    "numberOfBlocksBetweenSupplies": "uint256",
+                    "nextSupplyAfterBlock": "uint256",
+                    "currentIteration": "uint256",
+                    "prevIterationSupplyLimit": "uint256"
+                }
+            },
+            "removeOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupplyLimit": "uint256",
+                    "numberOfBlocksBetweenSupplies": "uint256",
+                    "nextSupplyAfterBlock": "uint256",
+                    "currentIteration": "uint256",
+                    "prevIterationSupplyLimit": "uint256"
+                }
+            },
+            "revoke(bytes32)": {
+                "argument": {
+                    "_operation": "bytes32"
+                },
+                "contract": {
+                    "totalSupplyLimit": "uint256",
+                    "numberOfBlocksBetweenSupplies": "uint256",
+                    "nextSupplyAfterBlock": "uint256",
+                    "currentIteration": "uint256",
+                    "prevIterationSupplyLimit": "uint256"
+                }
+            },
+            "hasConfirmed(bytes32,address)": {
+                "argument": {
+                    "_operation": "bytes32"
+                },
+                "contract": {
+                    "totalSupplyLimit": "uint256",
+                    "numberOfBlocksBetweenSupplies": "uint256",
+                    "nextSupplyAfterBlock": "uint256",
+                    "currentIteration": "uint256",
+                    "prevIterationSupplyLimit": "uint256"
+                }
+            },
+            "confirmAndCheck(bytes32)": {
+                "argument": {
+                    "_operation": "bytes32"
+                },
+                "contract": {
+                    "totalSupplyLimit": "uint256",
+                    "numberOfBlocksBetweenSupplies": "uint256",
+                    "nextSupplyAfterBlock": "uint256",
+                    "currentIteration": "uint256",
+                    "prevIterationSupplyLimit": "uint256"
+                }
+            },
+            "clearOwnersDone(bytes32)": {
+                "argument": {
+                    "_operation": "bytes32"
+                },
+                "contract": {
+                    "totalSupplyLimit": "uint256",
+                    "numberOfBlocksBetweenSupplies": "uint256",
+                    "nextSupplyAfterBlock": "uint256",
+                    "currentIteration": "uint256",
+                    "prevIterationSupplyLimit": "uint256"
+                }
+            },
+            "clearPending()": {
+                "argument": {},
+                "contract": {
+                    "totalSupplyLimit": "uint256",
+                    "numberOfBlocksBetweenSupplies": "uint256",
+                    "nextSupplyAfterBlock": "uint256",
+                    "currentIteration": "uint256",
+                    "prevIterationSupplyLimit": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalSupplyLimit": "uint256",
+                    "numberOfBlocksBetweenSupplies": "uint256",
+                    "nextSupplyAfterBlock": "uint256",
+                    "currentIteration": "uint256",
+                    "prevIterationSupplyLimit": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalSupplyLimit": "uint256",
+                    "numberOfBlocksBetweenSupplies": "uint256",
+                    "nextSupplyAfterBlock": "uint256",
+                    "currentIteration": "uint256",
+                    "prevIterationSupplyLimit": "uint256"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupplyLimit": "uint256",
+                    "numberOfBlocksBetweenSupplies": "uint256",
+                    "nextSupplyAfterBlock": "uint256",
+                    "currentIteration": "uint256",
+                    "prevIterationSupplyLimit": "uint256"
+                }
+            },
+            "increaseApproval(address,uint256)": {
+                "argument": {
+                    "_addedValue": "uint256"
+                },
+                "contract": {
+                    "totalSupplyLimit": "uint256",
+                    "numberOfBlocksBetweenSupplies": "uint256",
+                    "nextSupplyAfterBlock": "uint256",
+                    "currentIteration": "uint256",
+                    "prevIterationSupplyLimit": "uint256"
+                }
+            },
+            "decreaseApproval(address,uint256)": {
+                "argument": {
+                    "_subtractedValue": "uint256"
+                },
+                "contract": {
+                    "totalSupplyLimit": "uint256",
+                    "numberOfBlocksBetweenSupplies": "uint256",
+                    "nextSupplyAfterBlock": "uint256",
+                    "currentIteration": "uint256",
+                    "prevIterationSupplyLimit": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalSupplyLimit": "uint256",
+                    "numberOfBlocksBetweenSupplies": "uint256",
+                    "nextSupplyAfterBlock": "uint256",
+                    "currentIteration": "uint256",
+                    "prevIterationSupplyLimit": "uint256"
+                }
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupplyLimit": "uint256",
+                    "numberOfBlocksBetweenSupplies": "uint256",
+                    "nextSupplyAfterBlock": "uint256",
+                    "currentIteration": "uint256",
+                    "prevIterationSupplyLimit": "uint256"
+                }
+            },
+            "MintableToken(address,uint256,uint256,uint256,uint256,address[],uint256)": {
+                "argument": {
+                    "_initialSupply": "uint256",
+                    "_firstIterationSupplyLimit": "uint256",
+                    "_totalSupplyLimit": "uint256",
+                    "_numberOfBlocksBetweenSupplies": "uint256",
+                    "_additionalOwners": "address[]",
+                    "_required": "uint256"
+                },
+                "contract": {
+                    "totalSupplyLimit": "uint256",
+                    "numberOfBlocksBetweenSupplies": "uint256",
+                    "nextSupplyAfterBlock": "uint256",
+                    "currentIteration": "uint256",
+                    "prevIterationSupplyLimit": "uint256"
+                }
+            },
+            "currentIterationSupplyLimit()": {
+                "argument": {},
+                "contract": {
+                    "totalSupplyLimit": "uint256",
+                    "numberOfBlocksBetweenSupplies": "uint256",
+                    "nextSupplyAfterBlock": "uint256",
+                    "currentIteration": "uint256",
+                    "prevIterationSupplyLimit": "uint256"
+                }
+            },
+            "mint(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "totalSupplyLimit": "uint256",
+                    "numberOfBlocksBetweenSupplies": "uint256",
+                    "nextSupplyAfterBlock": "uint256",
+                    "currentIteration": "uint256",
+                    "prevIterationSupplyLimit": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                279,
+                75
+            ],
+            "revoke(bytes32)": [
+                1166,
+                317
+            ],
+            "addOwner(address)": [
+                825,
+                207
+            ],
+            "hasConfirmed(bytes32,address)": [
+                1303,
+                383
+            ],
+            "mint(address,uint256)": [
+                623,
+                163
+            ],
+            "removeOwner(address)": [
+                380,
+                97
+            ],
+            "changeRequirement(uint256)": [
+                1215,
+                339
+            ],
+            "currentIterationSupplyLimit()": [
+                1714,
+                493
+            ],
+            "balanceOf(address)": [
+                892,
+                229
+            ],
+            "decreaseApproval(address,uint256)": [
+                724,
+                185
+            ],
+            "increaseApproval(address,uint256)": [
+                1408,
+                405
+            ],
+            "transferFrom(address,address,uint256)": [
+                490,
+                141
+            ],
+            "transfer(address,uint256)": [
+                1065,
+                295
+            ],
+            "allowance(address,address)": [
+                1552,
+                449
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "OTNToken": {
+        "function_list": [
+            "MintableToken(address,uint256,uint256,uint256,uint256,address[],uint256)",
+            "currentIterationSupplyLimit()",
+            "mint(address,uint256)",
+            "Shareable(address[],uint256)",
+            "changeRequirement(uint256)",
+            "addOwner(address)",
+            "removeOwner(address)",
+            "revoke(bytes32)",
+            "hasConfirmed(bytes32,address)",
+            "confirmAndCheck(bytes32)",
+            "clearOwnersDone(bytes32)",
+            "clearPending()",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "increaseApproval(address,uint256)",
+            "decreaseApproval(address,uint256)",
+            "transfer(address,uint256)",
+            "balanceOf(address)",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "OTNToken(address,address[])",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "MintableToken(address,uint256,uint256,uint256,uint256,address[],uint256)": {
+                "argument": {
+                    "_initialSupply": "uint256",
+                    "_firstIterationSupplyLimit": "uint256",
+                    "_totalSupplyLimit": "uint256",
+                    "_numberOfBlocksBetweenSupplies": "uint256",
+                    "_additionalOwners": "address[]",
+                    "_required": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "currentIterationSupplyLimit()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "mint(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "Shareable(address[],uint256)": {
+                "argument": {
+                    "_additionalOwners": "address[]",
+                    "_required": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "changeRequirement(uint256)": {
+                "argument": {
+                    "_required": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "addOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "removeOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "revoke(bytes32)": {
+                "argument": {
+                    "_operation": "bytes32"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "hasConfirmed(bytes32,address)": {
+                "argument": {
+                    "_operation": "bytes32"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "confirmAndCheck(bytes32)": {
+                "argument": {
+                    "_operation": "bytes32"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "clearOwnersDone(bytes32)": {
+                "argument": {
+                    "_operation": "bytes32"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "clearPending()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "increaseApproval(address,uint256)": {
+                "argument": {
+                    "_addedValue": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "decreaseApproval(address,uint256)": {
+                "argument": {
+                    "_subtractedValue": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "OTNToken(address,address[])": {
+                "argument": {
+                    "_additionalOwners": "address[]"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "revoke(bytes32)": [
+                1530,
+                383
+            ],
+            "addOwner(address)": [
+                1045,
+                251
+            ],
+            "balanceOf(address)": [
+                1112,
+                273
+            ],
+            "allowance(address,address)": [
+                1916,
+                515
+            ],
+            "decreaseApproval(address,uint256)": [
+                944,
+                229
+            ],
+            "transferFrom(address,address,uint256)": [
+                667,
+                163
+            ],
+            "approve(address,uint256)": [
+                456,
+                97
+            ],
+            "increaseApproval(address,uint256)": [
+                1772,
+                471
+            ],
+            "changeRequirement(uint256)": [
+                1579,
+                405
+            ],
+            "removeOwner(address)": [
+                557,
+                119
+            ],
+            "currentIterationSupplyLimit()": [
+                2078,
+                559
+            ],
+            "hasConfirmed(bytes32,address)": [
+                1667,
+                449
+            ],
+            "mint(address,uint256)": [
+                843,
+                207
+            ],
+            "transfer(address,uint256)": [
+                1429,
+                361
+            ]
+        },
+        "block_CALL_mapping": {}
+    }
+}

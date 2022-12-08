@@ -1,0 +1,787 @@
+{
+    "DSAuthEvents": {
+        "function_list": [],
+        "initial_state": {},
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "DSAuth": {
+        "function_list": [
+            "DSAuth()",
+            "setOwner(address)",
+            "setAuthority(DSAuthority)",
+            "isAuthorized(address,bytes4)",
+            "assert(bool)"
+        ],
+        "initial_state": {
+            "DSAuth()": {
+                "argument": {},
+                "contract": {}
+            },
+            "setOwner(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "setAuthority(DSAuthority)": {
+                "argument": {},
+                "contract": {}
+            },
+            "isAuthorized(address,bytes4)": {
+                "argument": {
+                    "sig": "bytes4"
+                },
+                "contract": {}
+            },
+            "assert(bool)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "setOwner(address)": [
+                103,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump1432_0": [
+                "authority.canCall(src, this, sig)",
+                "authority.canCall(src, this, sig)"
+            ],
+            "jump1432": [
+                "authority.canCall(src, this, sig)",
+                "authority.canCall(src, this, sig)"
+            ],
+            "block1432_0": [
+                "authority.canCall(src, this, sig)"
+            ],
+            "block1432": [
+                "authority.canCall(src, this, sig)"
+            ]
+        }
+    },
+    "ERC20": {
+        "function_list": [
+            "totalSupply()",
+            "balanceOf(address)",
+            "allowance(address,address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)"
+        ],
+        "initial_state": {
+            "totalSupply()": {
+                "argument": {},
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                202,
+                75
+            ],
+            "transfer(address,uint256)": [
+                873,
+                273
+            ],
+            "balanceOf(address)": [
+                601,
+                185
+            ],
+            "totalSupply()": [
+                303,
+                97
+            ],
+            "transferFrom(address,address,uint256)": [
+                346,
+                119
+            ],
+            "allowance(address,address)": [
+                1061,
+                317
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "EventfulMarket": {
+        "function_list": [],
+        "initial_state": {},
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "SimpleMarket": {
+        "function_list": [
+            "assert(bool)",
+            "next_id()",
+            "isActive(uint256)",
+            "getOwner(uint256)",
+            "getOffer(uint256)",
+            "safeSub(uint256,uint256)",
+            "safeMul(uint256,uint256)",
+            "trade(address,uint256,ERC20,address,uint256,ERC20)",
+            "make(ERC20,ERC20,uint128,uint128)",
+            "take(bytes32,uint128)",
+            "kill(bytes32)",
+            "offer(uint256,ERC20,uint256,ERC20)",
+            "bump(bytes32)",
+            "buy(uint256,uint256)",
+            "cancel(uint256)"
+        ],
+        "initial_state": {
+            "assert(bool)": {
+                "argument": {},
+                "contract": {
+                    "last_offer_id": "uint256"
+                }
+            },
+            "next_id()": {
+                "argument": {},
+                "contract": {
+                    "last_offer_id": "uint256"
+                }
+            },
+            "isActive(uint256)": {
+                "argument": {
+                    "id": "uint256"
+                },
+                "contract": {
+                    "last_offer_id": "uint256"
+                }
+            },
+            "getOwner(uint256)": {
+                "argument": {
+                    "id": "uint256"
+                },
+                "contract": {
+                    "last_offer_id": "uint256"
+                }
+            },
+            "getOffer(uint256)": {
+                "argument": {
+                    "id": "uint256"
+                },
+                "contract": {
+                    "last_offer_id": "uint256"
+                }
+            },
+            "safeSub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "last_offer_id": "uint256"
+                }
+            },
+            "safeMul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "last_offer_id": "uint256"
+                }
+            },
+            "trade(address,uint256,ERC20,address,uint256,ERC20)": {
+                "argument": {
+                    "sell_how_much": "uint256",
+                    "buy_how_much": "uint256"
+                },
+                "contract": {
+                    "last_offer_id": "uint256"
+                }
+            },
+            "make(ERC20,ERC20,uint128,uint128)": {
+                "argument": {
+                    "haveAmount": "uint128",
+                    "wantAmount": "uint128"
+                },
+                "contract": {
+                    "last_offer_id": "uint256"
+                }
+            },
+            "take(bytes32,uint128)": {
+                "argument": {
+                    "id": "bytes32",
+                    "maxTakeAmount": "uint128"
+                },
+                "contract": {
+                    "last_offer_id": "uint256"
+                }
+            },
+            "kill(bytes32)": {
+                "argument": {
+                    "id": "bytes32"
+                },
+                "contract": {
+                    "last_offer_id": "uint256"
+                }
+            },
+            "offer(uint256,ERC20,uint256,ERC20)": {
+                "argument": {
+                    "sell_how_much": "uint256",
+                    "buy_how_much": "uint256"
+                },
+                "contract": {
+                    "last_offer_id": "uint256"
+                }
+            },
+            "bump(bytes32)": {
+                "argument": {
+                    "id_": "bytes32"
+                },
+                "contract": {
+                    "last_offer_id": "uint256"
+                }
+            },
+            "buy(uint256,uint256)": {
+                "argument": {
+                    "id": "uint256",
+                    "quantity": "uint256"
+                },
+                "contract": {
+                    "last_offer_id": "uint256"
+                }
+            },
+            "cancel(uint256)": {
+                "argument": {
+                    "id": "uint256"
+                },
+                "contract": {
+                    "last_offer_id": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "buy(uint256,uint256)": [
+                1276,
+                295
+            ],
+            "kill(bytes32)": [
+                1118,
+                251
+            ],
+            "getOffer(uint256)": [
+                486,
+                141
+            ],
+            "getOwner(uint256)": [
+                1167,
+                273
+            ],
+            "isActive(uint256)": [
+                786,
+                207
+            ],
+            "cancel(uint256)": [
+                417,
+                119
+            ],
+            "take(bytes32,uint128)": [
+                660,
+                163
+            ],
+            "bump(bytes32)": [
+                737,
+                185
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump8613_1": [
+                "buy_which_token.transferFrom( buyer, seller, buy_how_much )",
+                "buy_which_token.transferFrom( buyer, seller, buy_how_much )"
+            ],
+            "jump8613_0": [
+                "buy_which_token.transferFrom( buyer, seller, buy_how_much )",
+                "buy_which_token.transferFrom( buyer, seller, buy_how_much )"
+            ],
+            "jump8613_2": [
+                "buy_which_token.transferFrom( buyer, seller, buy_how_much )",
+                "buy_which_token.transferFrom( buyer, seller, buy_how_much )"
+            ],
+            "jump2471_0": [
+                "offer.sell_which_token.transfer( offer.owner , offer.sell_how_much )",
+                "offer.sell_which_token.transfer( offer.owner , offer.sell_how_much )"
+            ],
+            "block8846_1": [
+                "sell_which_token.transfer( buyer, sell_how_much )"
+            ],
+            "block8846_0": [
+                "sell_which_token.transfer( buyer, sell_how_much )"
+            ],
+            "block8613": [
+                "buy_which_token.transferFrom( buyer, seller, buy_how_much )"
+            ],
+            "block2471_0": [
+                "offer.sell_which_token.transfer( offer.owner , offer.sell_how_much )"
+            ],
+            "jump8613": [
+                "buy_which_token.transferFrom( buyer, seller, buy_how_much )",
+                "buy_which_token.transferFrom( buyer, seller, buy_how_much )"
+            ],
+            "jump7723": [
+                "sell_which_token.transferFrom( msg.sender, this, sell_how_much )",
+                "sell_which_token.transferFrom( msg.sender, this, sell_how_much )"
+            ],
+            "block7723": [
+                "sell_which_token.transferFrom( msg.sender, this, sell_how_much )"
+            ],
+            "block2471": [
+                "offer.sell_which_token.transfer( offer.owner , offer.sell_how_much )"
+            ],
+            "block8613_2": [
+                "buy_which_token.transferFrom( buyer, seller, buy_how_much )"
+            ],
+            "block8613_1": [
+                "buy_which_token.transferFrom( buyer, seller, buy_how_much )"
+            ],
+            "block8613_0": [
+                "buy_which_token.transferFrom( buyer, seller, buy_how_much )"
+            ],
+            "jump8846": [
+                "sell_which_token.transfer( buyer, sell_how_much )",
+                "sell_which_token.transfer( buyer, sell_how_much )"
+            ],
+            "block8846_2": [
+                "sell_which_token.transfer( buyer, sell_how_much )"
+            ],
+            "jump7723_0": [
+                "sell_which_token.transferFrom( msg.sender, this, sell_how_much )",
+                "sell_which_token.transferFrom( msg.sender, this, sell_how_much )"
+            ],
+            "block7723_0": [
+                "sell_which_token.transferFrom( msg.sender, this, sell_how_much )"
+            ],
+            "jump8846_1": [
+                "sell_which_token.transfer( buyer, sell_how_much )",
+                "sell_which_token.transfer( buyer, sell_how_much )"
+            ],
+            "jump8846_0": [
+                "sell_which_token.transfer( buyer, sell_how_much )",
+                "sell_which_token.transfer( buyer, sell_how_much )"
+            ],
+            "jump8846_2": [
+                "sell_which_token.transfer( buyer, sell_how_much )",
+                "sell_which_token.transfer( buyer, sell_how_much )"
+            ],
+            "block8846": [
+                "sell_which_token.transfer( buyer, sell_how_much )"
+            ],
+            "jump2471": [
+                "offer.sell_which_token.transfer( offer.owner , offer.sell_how_much )",
+                "offer.sell_which_token.transfer( offer.owner , offer.sell_how_much )"
+            ]
+        }
+    },
+    "ExpiringMarket": {
+        "function_list": [
+            "assert(bool)",
+            "next_id()",
+            "isActive(uint256)",
+            "getOwner(uint256)",
+            "getOffer(uint256)",
+            "safeSub(uint256,uint256)",
+            "safeMul(uint256,uint256)",
+            "trade(address,uint256,ERC20,address,uint256,ERC20)",
+            "make(ERC20,ERC20,uint128,uint128)",
+            "take(bytes32,uint128)",
+            "kill(bytes32)",
+            "offer(uint256,ERC20,uint256,ERC20)",
+            "bump(bytes32)",
+            "buy(uint256,uint256)",
+            "cancel(uint256)",
+            "DSAuth()",
+            "setOwner(address)",
+            "setAuthority(DSAuthority)",
+            "isAuthorized(address,bytes4)",
+            "assert(bool)",
+            "stop()",
+            "ExpiringMarket(uint256)",
+            "getTime()",
+            "isClosed()"
+        ],
+        "initial_state": {
+            "assert(bool)": {
+                "argument": {},
+                "contract": {
+                    "lifetime": "uint256",
+                    "close_time": "uint256"
+                }
+            },
+            "next_id()": {
+                "argument": {},
+                "contract": {
+                    "lifetime": "uint256",
+                    "close_time": "uint256"
+                }
+            },
+            "isActive(uint256)": {
+                "argument": {
+                    "id": "uint256"
+                },
+                "contract": {
+                    "lifetime": "uint256",
+                    "close_time": "uint256"
+                }
+            },
+            "getOwner(uint256)": {
+                "argument": {
+                    "id": "uint256"
+                },
+                "contract": {
+                    "lifetime": "uint256",
+                    "close_time": "uint256"
+                }
+            },
+            "getOffer(uint256)": {
+                "argument": {
+                    "id": "uint256"
+                },
+                "contract": {
+                    "lifetime": "uint256",
+                    "close_time": "uint256"
+                }
+            },
+            "safeSub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "lifetime": "uint256",
+                    "close_time": "uint256"
+                }
+            },
+            "safeMul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "lifetime": "uint256",
+                    "close_time": "uint256"
+                }
+            },
+            "trade(address,uint256,ERC20,address,uint256,ERC20)": {
+                "argument": {
+                    "sell_how_much": "uint256",
+                    "buy_how_much": "uint256"
+                },
+                "contract": {
+                    "lifetime": "uint256",
+                    "close_time": "uint256"
+                }
+            },
+            "make(ERC20,ERC20,uint128,uint128)": {
+                "argument": {
+                    "haveAmount": "uint128",
+                    "wantAmount": "uint128"
+                },
+                "contract": {
+                    "lifetime": "uint256",
+                    "close_time": "uint256"
+                }
+            },
+            "take(bytes32,uint128)": {
+                "argument": {
+                    "id": "bytes32",
+                    "maxTakeAmount": "uint128"
+                },
+                "contract": {
+                    "lifetime": "uint256",
+                    "close_time": "uint256"
+                }
+            },
+            "kill(bytes32)": {
+                "argument": {
+                    "id": "bytes32"
+                },
+                "contract": {
+                    "lifetime": "uint256",
+                    "close_time": "uint256"
+                }
+            },
+            "offer(uint256,ERC20,uint256,ERC20)": {
+                "argument": {
+                    "sell_how_much": "uint256",
+                    "buy_how_much": "uint256"
+                },
+                "contract": {
+                    "lifetime": "uint256",
+                    "close_time": "uint256"
+                }
+            },
+            "bump(bytes32)": {
+                "argument": {
+                    "id_": "bytes32"
+                },
+                "contract": {
+                    "lifetime": "uint256",
+                    "close_time": "uint256"
+                }
+            },
+            "buy(uint256,uint256)": {
+                "argument": {
+                    "id": "uint256",
+                    "quantity": "uint256"
+                },
+                "contract": {
+                    "lifetime": "uint256",
+                    "close_time": "uint256"
+                }
+            },
+            "cancel(uint256)": {
+                "argument": {
+                    "id": "uint256"
+                },
+                "contract": {
+                    "lifetime": "uint256",
+                    "close_time": "uint256"
+                }
+            },
+            "DSAuth()": {
+                "argument": {},
+                "contract": {
+                    "lifetime": "uint256",
+                    "close_time": "uint256"
+                }
+            },
+            "setOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "lifetime": "uint256",
+                    "close_time": "uint256"
+                }
+            },
+            "setAuthority(DSAuthority)": {
+                "argument": {},
+                "contract": {
+                    "lifetime": "uint256",
+                    "close_time": "uint256"
+                }
+            },
+            "isAuthorized(address,bytes4)": {
+                "argument": {
+                    "sig": "bytes4"
+                },
+                "contract": {
+                    "lifetime": "uint256",
+                    "close_time": "uint256"
+                }
+            },
+            "stop()": {
+                "argument": {},
+                "contract": {
+                    "lifetime": "uint256",
+                    "close_time": "uint256"
+                }
+            },
+            "ExpiringMarket(uint256)": {
+                "argument": {
+                    "lifetime_": "uint256"
+                },
+                "contract": {
+                    "lifetime": "uint256",
+                    "close_time": "uint256"
+                }
+            },
+            "getTime()": {
+                "argument": {},
+                "contract": {
+                    "lifetime": "uint256",
+                    "close_time": "uint256"
+                }
+            },
+            "isClosed()": {
+                "argument": {},
+                "contract": {
+                    "lifetime": "uint256",
+                    "close_time": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "buy(uint256,uint256)": [
+                1940,
+                515
+            ],
+            "isClosed()": [
+                1784,
+                471
+            ],
+            "kill(bytes32)": [
+                1648,
+                427
+            ],
+            "getTime()": [
+                937,
+                229
+            ],
+            "setOwner(address)": [
+                507,
+                119
+            ],
+            "getOwner(uint256)": [
+                1831,
+                493
+            ],
+            "getOffer(uint256)": [
+                686,
+                185
+            ],
+            "isActive(uint256)": [
+                1229,
+                361
+            ],
+            "cancel(uint256)": [
+                617,
+                163
+            ],
+            "take(bytes32,uint128)": [
+                860,
+                207
+            ],
+            "bump(bytes32)": [
+                1113,
+                317
+            ],
+            "stop()": [
+                301,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump10602": [
+                "buy_which_token.transferFrom( buyer, seller, buy_how_much )",
+                "buy_which_token.transferFrom( buyer, seller, buy_how_much )"
+            ],
+            "block10255": [
+                "authority.canCall(src, this, sig)"
+            ],
+            "jump10255_1": [
+                "authority.canCall(src, this, sig)",
+                "authority.canCall(src, this, sig)"
+            ],
+            "jump10255_0": [
+                "authority.canCall(src, this, sig)",
+                "authority.canCall(src, this, sig)"
+            ],
+            "block10255_1": [
+                "authority.canCall(src, this, sig)"
+            ],
+            "block10255_0": [
+                "authority.canCall(src, this, sig)"
+            ],
+            "jump9141_0": [
+                "sell_which_token.transferFrom( msg.sender, this, sell_how_much )",
+                "sell_which_token.transferFrom( msg.sender, this, sell_how_much )"
+            ],
+            "block3457": [
+                "offer.sell_which_token.transfer( offer.owner , offer.sell_how_much )"
+            ],
+            "block9141_0": [
+                "sell_which_token.transferFrom( msg.sender, this, sell_how_much )"
+            ],
+            "block10835": [
+                "sell_which_token.transfer( buyer, sell_how_much )"
+            ],
+            "jump10835_2": [
+                "sell_which_token.transfer( buyer, sell_how_much )",
+                "sell_which_token.transfer( buyer, sell_how_much )"
+            ],
+            "jump10835_1": [
+                "sell_which_token.transfer( buyer, sell_how_much )",
+                "sell_which_token.transfer( buyer, sell_how_much )"
+            ],
+            "jump10835_0": [
+                "sell_which_token.transfer( buyer, sell_how_much )",
+                "sell_which_token.transfer( buyer, sell_how_much )"
+            ],
+            "jump10835": [
+                "sell_which_token.transfer( buyer, sell_how_much )",
+                "sell_which_token.transfer( buyer, sell_how_much )"
+            ],
+            "jump10602_2": [
+                "buy_which_token.transferFrom( buyer, seller, buy_how_much )",
+                "buy_which_token.transferFrom( buyer, seller, buy_how_much )"
+            ],
+            "jump10602_1": [
+                "buy_which_token.transferFrom( buyer, seller, buy_how_much )",
+                "buy_which_token.transferFrom( buyer, seller, buy_how_much )"
+            ],
+            "jump10602_0": [
+                "buy_which_token.transferFrom( buyer, seller, buy_how_much )",
+                "buy_which_token.transferFrom( buyer, seller, buy_how_much )"
+            ],
+            "block3457_0": [
+                "offer.sell_which_token.transfer( offer.owner , offer.sell_how_much )"
+            ],
+            "jump3457": [
+                "offer.sell_which_token.transfer( offer.owner , offer.sell_how_much )",
+                "offer.sell_which_token.transfer( offer.owner , offer.sell_how_much )"
+            ],
+            "jump10255": [
+                "authority.canCall(src, this, sig)",
+                "authority.canCall(src, this, sig)"
+            ],
+            "jump3457_0": [
+                "offer.sell_which_token.transfer( offer.owner , offer.sell_how_much )",
+                "offer.sell_which_token.transfer( offer.owner , offer.sell_how_much )"
+            ],
+            "jump9141": [
+                "sell_which_token.transferFrom( msg.sender, this, sell_how_much )",
+                "sell_which_token.transferFrom( msg.sender, this, sell_how_much )"
+            ],
+            "block10835_1": [
+                "sell_which_token.transfer( buyer, sell_how_much )"
+            ],
+            "block9141": [
+                "sell_which_token.transferFrom( msg.sender, this, sell_how_much )"
+            ],
+            "block10835_2": [
+                "sell_which_token.transfer( buyer, sell_how_much )"
+            ],
+            "block10602_1": [
+                "buy_which_token.transferFrom( buyer, seller, buy_how_much )"
+            ],
+            "block10602_0": [
+                "buy_which_token.transferFrom( buyer, seller, buy_how_much )"
+            ],
+            "block10602_2": [
+                "buy_which_token.transferFrom( buyer, seller, buy_how_much )"
+            ],
+            "block10602": [
+                "buy_which_token.transferFrom( buyer, seller, buy_how_much )"
+            ],
+            "block10835_0": [
+                "sell_which_token.transfer( buyer, sell_how_much )"
+            ]
+        }
+    }
+}

@@ -1,0 +1,179 @@
+{
+    "Base": {
+        "function_list": [
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {},
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "TokenTimeLock": {
+        "function_list": [
+            "TokenTimeLock(IToken,address,uint256,uint256)",
+            "releaseFirst()"
+        ],
+        "initial_state": {
+            "TokenTimeLock(IToken,address,uint256,uint256)": {
+                "argument": {
+                    "_releaseTimeFirst": "uint256",
+                    "_amountFirst": "uint256"
+                },
+                "contract": {
+                    "releaseTimeFirst": "uint256",
+                    "amountFirst": "uint256"
+                }
+            },
+            "releaseFirst()": {
+                "argument": {},
+                "contract": {
+                    "releaseTimeFirst": "uint256",
+                    "amountFirst": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "releaseFirst()": [
+                287,
+                141
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump976": [
+                "token.transfer(beneficiary, amountFirst)",
+                "token.transfer(beneficiary, amountFirst)"
+            ],
+            "jump654": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "block976": [
+                "token.transfer(beneficiary, amountFirst)"
+            ],
+            "block654": [
+                "token.balanceOf(this)"
+            ]
+        }
+    },
+    "IToken": {
+        "function_list": [
+            "mint(address,uint256)",
+            "start()",
+            "getTotalSupply()",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)"
+        ],
+        "initial_state": {
+            "mint(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {}
+            },
+            "start()": {
+                "argument": {},
+                "contract": {}
+            },
+            "getTotalSupply()": {
+                "argument": {},
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                319,
+                119
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "Owned": {
+        "function_list": [
+            "Owned()",
+            "transferOwnership(address)",
+            "acceptOwnership()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "Owned()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "acceptOwnership()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                202,
+                119
+            ],
+            "acceptOwnership()": [
+                92,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    }
+}

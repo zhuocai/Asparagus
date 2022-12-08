@@ -1,0 +1,811 @@
+{
+    "Ownable": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "PulsarToken": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "PulsarToken()",
+            "calcBonusPercent()",
+            "calcAmountWithBonus(uint256,uint8)",
+            "calcEthersToTokens(uint256,uint8)",
+            "calcTokensToEthers(uint256)",
+            "_transfer(address,address,uint256)",
+            "getContractState()",
+            "getContractTokenBalance()",
+            "getTokenBalance(address)",
+            "getDistributedTokens()",
+            "getContractEtherBalance()",
+            "getEtherBalance(address)",
+            "invest()",
+            "fallback()",
+            "buyback(uint256)",
+            "setICOStartTime(uint256)",
+            "setSellingPrice(uint256)",
+            "startICO(uint256)",
+            "stopICO()",
+            "transferEthersToOwner(uint256)",
+            "setTrustedSender(address)",
+            "transferTokens(address,uint256)",
+            "grantBounty(address,uint256)",
+            "refundInvestment(address,uint256)",
+            "setBuybackPrice(uint256)",
+            "enableBuyback(uint256)",
+            "pauseBuyback()",
+            "destroyContract()",
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {
+                    "TOKEN_SCALE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "ICO_START_TIME": "uint256",
+                    "MIN_ACCEPTED_VALUE": "uint256",
+                    "MIN_BUYBACK_VALUE": "uint256",
+                    "NAME": "string",
+                    "SYMBOL": "string",
+                    "bountyTokens": "uint256",
+                    "sellingPrice": "uint256",
+                    "buybackPrice": "uint256",
+                    "etherAccumulator": "uint256",
+                    "icoStartTime": "uint256",
+                    "bonuses": "uint8[4]",
+                    "staging": "uint256[4]"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "TOKEN_SCALE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "ICO_START_TIME": "uint256",
+                    "MIN_ACCEPTED_VALUE": "uint256",
+                    "MIN_BUYBACK_VALUE": "uint256",
+                    "NAME": "string",
+                    "SYMBOL": "string",
+                    "bountyTokens": "uint256",
+                    "sellingPrice": "uint256",
+                    "buybackPrice": "uint256",
+                    "etherAccumulator": "uint256",
+                    "icoStartTime": "uint256",
+                    "bonuses": "uint8[4]",
+                    "staging": "uint256[4]"
+                }
+            },
+            "PulsarToken()": {
+                "argument": {},
+                "contract": {
+                    "TOKEN_SCALE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "ICO_START_TIME": "uint256",
+                    "MIN_ACCEPTED_VALUE": "uint256",
+                    "MIN_BUYBACK_VALUE": "uint256",
+                    "NAME": "string",
+                    "SYMBOL": "string",
+                    "bountyTokens": "uint256",
+                    "sellingPrice": "uint256",
+                    "buybackPrice": "uint256",
+                    "etherAccumulator": "uint256",
+                    "icoStartTime": "uint256",
+                    "bonuses": "uint8[4]",
+                    "staging": "uint256[4]"
+                }
+            },
+            "calcBonusPercent()": {
+                "argument": {},
+                "contract": {
+                    "TOKEN_SCALE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "ICO_START_TIME": "uint256",
+                    "MIN_ACCEPTED_VALUE": "uint256",
+                    "MIN_BUYBACK_VALUE": "uint256",
+                    "NAME": "string",
+                    "SYMBOL": "string",
+                    "bountyTokens": "uint256",
+                    "sellingPrice": "uint256",
+                    "buybackPrice": "uint256",
+                    "etherAccumulator": "uint256",
+                    "icoStartTime": "uint256",
+                    "bonuses": "uint8[4]",
+                    "staging": "uint256[4]"
+                }
+            },
+            "calcAmountWithBonus(uint256,uint8)": {
+                "argument": {
+                    "token_value": "uint256",
+                    "bonus": "uint8"
+                },
+                "contract": {
+                    "TOKEN_SCALE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "ICO_START_TIME": "uint256",
+                    "MIN_ACCEPTED_VALUE": "uint256",
+                    "MIN_BUYBACK_VALUE": "uint256",
+                    "NAME": "string",
+                    "SYMBOL": "string",
+                    "bountyTokens": "uint256",
+                    "sellingPrice": "uint256",
+                    "buybackPrice": "uint256",
+                    "etherAccumulator": "uint256",
+                    "icoStartTime": "uint256",
+                    "bonuses": "uint8[4]",
+                    "staging": "uint256[4]"
+                }
+            },
+            "calcEthersToTokens(uint256,uint8)": {
+                "argument": {
+                    "ether_value": "uint256",
+                    "bonus": "uint8"
+                },
+                "contract": {
+                    "TOKEN_SCALE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "ICO_START_TIME": "uint256",
+                    "MIN_ACCEPTED_VALUE": "uint256",
+                    "MIN_BUYBACK_VALUE": "uint256",
+                    "NAME": "string",
+                    "SYMBOL": "string",
+                    "bountyTokens": "uint256",
+                    "sellingPrice": "uint256",
+                    "buybackPrice": "uint256",
+                    "etherAccumulator": "uint256",
+                    "icoStartTime": "uint256",
+                    "bonuses": "uint8[4]",
+                    "staging": "uint256[4]"
+                }
+            },
+            "calcTokensToEthers(uint256)": {
+                "argument": {
+                    "token_value": "uint256"
+                },
+                "contract": {
+                    "TOKEN_SCALE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "ICO_START_TIME": "uint256",
+                    "MIN_ACCEPTED_VALUE": "uint256",
+                    "MIN_BUYBACK_VALUE": "uint256",
+                    "NAME": "string",
+                    "SYMBOL": "string",
+                    "bountyTokens": "uint256",
+                    "sellingPrice": "uint256",
+                    "buybackPrice": "uint256",
+                    "etherAccumulator": "uint256",
+                    "icoStartTime": "uint256",
+                    "bonuses": "uint8[4]",
+                    "staging": "uint256[4]"
+                }
+            },
+            "_transfer(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "TOKEN_SCALE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "ICO_START_TIME": "uint256",
+                    "MIN_ACCEPTED_VALUE": "uint256",
+                    "MIN_BUYBACK_VALUE": "uint256",
+                    "NAME": "string",
+                    "SYMBOL": "string",
+                    "bountyTokens": "uint256",
+                    "sellingPrice": "uint256",
+                    "buybackPrice": "uint256",
+                    "etherAccumulator": "uint256",
+                    "icoStartTime": "uint256",
+                    "bonuses": "uint8[4]",
+                    "staging": "uint256[4]"
+                }
+            },
+            "getContractState()": {
+                "argument": {},
+                "contract": {
+                    "TOKEN_SCALE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "ICO_START_TIME": "uint256",
+                    "MIN_ACCEPTED_VALUE": "uint256",
+                    "MIN_BUYBACK_VALUE": "uint256",
+                    "NAME": "string",
+                    "SYMBOL": "string",
+                    "bountyTokens": "uint256",
+                    "sellingPrice": "uint256",
+                    "buybackPrice": "uint256",
+                    "etherAccumulator": "uint256",
+                    "icoStartTime": "uint256",
+                    "bonuses": "uint8[4]",
+                    "staging": "uint256[4]"
+                }
+            },
+            "getContractTokenBalance()": {
+                "argument": {},
+                "contract": {
+                    "TOKEN_SCALE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "ICO_START_TIME": "uint256",
+                    "MIN_ACCEPTED_VALUE": "uint256",
+                    "MIN_BUYBACK_VALUE": "uint256",
+                    "NAME": "string",
+                    "SYMBOL": "string",
+                    "bountyTokens": "uint256",
+                    "sellingPrice": "uint256",
+                    "buybackPrice": "uint256",
+                    "etherAccumulator": "uint256",
+                    "icoStartTime": "uint256",
+                    "bonuses": "uint8[4]",
+                    "staging": "uint256[4]"
+                }
+            },
+            "getTokenBalance(address)": {
+                "argument": {},
+                "contract": {
+                    "TOKEN_SCALE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "ICO_START_TIME": "uint256",
+                    "MIN_ACCEPTED_VALUE": "uint256",
+                    "MIN_BUYBACK_VALUE": "uint256",
+                    "NAME": "string",
+                    "SYMBOL": "string",
+                    "bountyTokens": "uint256",
+                    "sellingPrice": "uint256",
+                    "buybackPrice": "uint256",
+                    "etherAccumulator": "uint256",
+                    "icoStartTime": "uint256",
+                    "bonuses": "uint8[4]",
+                    "staging": "uint256[4]"
+                }
+            },
+            "getDistributedTokens()": {
+                "argument": {},
+                "contract": {
+                    "TOKEN_SCALE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "ICO_START_TIME": "uint256",
+                    "MIN_ACCEPTED_VALUE": "uint256",
+                    "MIN_BUYBACK_VALUE": "uint256",
+                    "NAME": "string",
+                    "SYMBOL": "string",
+                    "bountyTokens": "uint256",
+                    "sellingPrice": "uint256",
+                    "buybackPrice": "uint256",
+                    "etherAccumulator": "uint256",
+                    "icoStartTime": "uint256",
+                    "bonuses": "uint8[4]",
+                    "staging": "uint256[4]"
+                }
+            },
+            "getContractEtherBalance()": {
+                "argument": {},
+                "contract": {
+                    "TOKEN_SCALE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "ICO_START_TIME": "uint256",
+                    "MIN_ACCEPTED_VALUE": "uint256",
+                    "MIN_BUYBACK_VALUE": "uint256",
+                    "NAME": "string",
+                    "SYMBOL": "string",
+                    "bountyTokens": "uint256",
+                    "sellingPrice": "uint256",
+                    "buybackPrice": "uint256",
+                    "etherAccumulator": "uint256",
+                    "icoStartTime": "uint256",
+                    "bonuses": "uint8[4]",
+                    "staging": "uint256[4]"
+                }
+            },
+            "getEtherBalance(address)": {
+                "argument": {},
+                "contract": {
+                    "TOKEN_SCALE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "ICO_START_TIME": "uint256",
+                    "MIN_ACCEPTED_VALUE": "uint256",
+                    "MIN_BUYBACK_VALUE": "uint256",
+                    "NAME": "string",
+                    "SYMBOL": "string",
+                    "bountyTokens": "uint256",
+                    "sellingPrice": "uint256",
+                    "buybackPrice": "uint256",
+                    "etherAccumulator": "uint256",
+                    "icoStartTime": "uint256",
+                    "bonuses": "uint8[4]",
+                    "staging": "uint256[4]"
+                }
+            },
+            "invest()": {
+                "argument": {},
+                "contract": {
+                    "TOKEN_SCALE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "ICO_START_TIME": "uint256",
+                    "MIN_ACCEPTED_VALUE": "uint256",
+                    "MIN_BUYBACK_VALUE": "uint256",
+                    "NAME": "string",
+                    "SYMBOL": "string",
+                    "bountyTokens": "uint256",
+                    "sellingPrice": "uint256",
+                    "buybackPrice": "uint256",
+                    "etherAccumulator": "uint256",
+                    "icoStartTime": "uint256",
+                    "bonuses": "uint8[4]",
+                    "staging": "uint256[4]"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "TOKEN_SCALE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "ICO_START_TIME": "uint256",
+                    "MIN_ACCEPTED_VALUE": "uint256",
+                    "MIN_BUYBACK_VALUE": "uint256",
+                    "NAME": "string",
+                    "SYMBOL": "string",
+                    "bountyTokens": "uint256",
+                    "sellingPrice": "uint256",
+                    "buybackPrice": "uint256",
+                    "etherAccumulator": "uint256",
+                    "icoStartTime": "uint256",
+                    "bonuses": "uint8[4]",
+                    "staging": "uint256[4]"
+                }
+            },
+            "buyback(uint256)": {
+                "argument": {
+                    "token_value": "uint256"
+                },
+                "contract": {
+                    "TOKEN_SCALE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "ICO_START_TIME": "uint256",
+                    "MIN_ACCEPTED_VALUE": "uint256",
+                    "MIN_BUYBACK_VALUE": "uint256",
+                    "NAME": "string",
+                    "SYMBOL": "string",
+                    "bountyTokens": "uint256",
+                    "sellingPrice": "uint256",
+                    "buybackPrice": "uint256",
+                    "etherAccumulator": "uint256",
+                    "icoStartTime": "uint256",
+                    "bonuses": "uint8[4]",
+                    "staging": "uint256[4]"
+                }
+            },
+            "setICOStartTime(uint256)": {
+                "argument": {
+                    "start_time": "uint256"
+                },
+                "contract": {
+                    "TOKEN_SCALE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "ICO_START_TIME": "uint256",
+                    "MIN_ACCEPTED_VALUE": "uint256",
+                    "MIN_BUYBACK_VALUE": "uint256",
+                    "NAME": "string",
+                    "SYMBOL": "string",
+                    "bountyTokens": "uint256",
+                    "sellingPrice": "uint256",
+                    "buybackPrice": "uint256",
+                    "etherAccumulator": "uint256",
+                    "icoStartTime": "uint256",
+                    "bonuses": "uint8[4]",
+                    "staging": "uint256[4]"
+                }
+            },
+            "setSellingPrice(uint256)": {
+                "argument": {
+                    "selling_price": "uint256"
+                },
+                "contract": {
+                    "TOKEN_SCALE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "ICO_START_TIME": "uint256",
+                    "MIN_ACCEPTED_VALUE": "uint256",
+                    "MIN_BUYBACK_VALUE": "uint256",
+                    "NAME": "string",
+                    "SYMBOL": "string",
+                    "bountyTokens": "uint256",
+                    "sellingPrice": "uint256",
+                    "buybackPrice": "uint256",
+                    "etherAccumulator": "uint256",
+                    "icoStartTime": "uint256",
+                    "bonuses": "uint8[4]",
+                    "staging": "uint256[4]"
+                }
+            },
+            "startICO(uint256)": {
+                "argument": {
+                    "selling_price": "uint256"
+                },
+                "contract": {
+                    "TOKEN_SCALE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "ICO_START_TIME": "uint256",
+                    "MIN_ACCEPTED_VALUE": "uint256",
+                    "MIN_BUYBACK_VALUE": "uint256",
+                    "NAME": "string",
+                    "SYMBOL": "string",
+                    "bountyTokens": "uint256",
+                    "sellingPrice": "uint256",
+                    "buybackPrice": "uint256",
+                    "etherAccumulator": "uint256",
+                    "icoStartTime": "uint256",
+                    "bonuses": "uint8[4]",
+                    "staging": "uint256[4]"
+                }
+            },
+            "stopICO()": {
+                "argument": {},
+                "contract": {
+                    "TOKEN_SCALE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "ICO_START_TIME": "uint256",
+                    "MIN_ACCEPTED_VALUE": "uint256",
+                    "MIN_BUYBACK_VALUE": "uint256",
+                    "NAME": "string",
+                    "SYMBOL": "string",
+                    "bountyTokens": "uint256",
+                    "sellingPrice": "uint256",
+                    "buybackPrice": "uint256",
+                    "etherAccumulator": "uint256",
+                    "icoStartTime": "uint256",
+                    "bonuses": "uint8[4]",
+                    "staging": "uint256[4]"
+                }
+            },
+            "transferEthersToOwner(uint256)": {
+                "argument": {
+                    "ether_value": "uint256"
+                },
+                "contract": {
+                    "TOKEN_SCALE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "ICO_START_TIME": "uint256",
+                    "MIN_ACCEPTED_VALUE": "uint256",
+                    "MIN_BUYBACK_VALUE": "uint256",
+                    "NAME": "string",
+                    "SYMBOL": "string",
+                    "bountyTokens": "uint256",
+                    "sellingPrice": "uint256",
+                    "buybackPrice": "uint256",
+                    "etherAccumulator": "uint256",
+                    "icoStartTime": "uint256",
+                    "bonuses": "uint8[4]",
+                    "staging": "uint256[4]"
+                }
+            },
+            "setTrustedSender(address)": {
+                "argument": {},
+                "contract": {
+                    "TOKEN_SCALE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "ICO_START_TIME": "uint256",
+                    "MIN_ACCEPTED_VALUE": "uint256",
+                    "MIN_BUYBACK_VALUE": "uint256",
+                    "NAME": "string",
+                    "SYMBOL": "string",
+                    "bountyTokens": "uint256",
+                    "sellingPrice": "uint256",
+                    "buybackPrice": "uint256",
+                    "etherAccumulator": "uint256",
+                    "icoStartTime": "uint256",
+                    "bonuses": "uint8[4]",
+                    "staging": "uint256[4]"
+                }
+            },
+            "transferTokens(address,uint256)": {
+                "argument": {
+                    "token_value": "uint256"
+                },
+                "contract": {
+                    "TOKEN_SCALE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "ICO_START_TIME": "uint256",
+                    "MIN_ACCEPTED_VALUE": "uint256",
+                    "MIN_BUYBACK_VALUE": "uint256",
+                    "NAME": "string",
+                    "SYMBOL": "string",
+                    "bountyTokens": "uint256",
+                    "sellingPrice": "uint256",
+                    "buybackPrice": "uint256",
+                    "etherAccumulator": "uint256",
+                    "icoStartTime": "uint256",
+                    "bonuses": "uint8[4]",
+                    "staging": "uint256[4]"
+                }
+            },
+            "grantBounty(address,uint256)": {
+                "argument": {
+                    "token_value": "uint256"
+                },
+                "contract": {
+                    "TOKEN_SCALE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "ICO_START_TIME": "uint256",
+                    "MIN_ACCEPTED_VALUE": "uint256",
+                    "MIN_BUYBACK_VALUE": "uint256",
+                    "NAME": "string",
+                    "SYMBOL": "string",
+                    "bountyTokens": "uint256",
+                    "sellingPrice": "uint256",
+                    "buybackPrice": "uint256",
+                    "etherAccumulator": "uint256",
+                    "icoStartTime": "uint256",
+                    "bonuses": "uint8[4]",
+                    "staging": "uint256[4]"
+                }
+            },
+            "refundInvestment(address,uint256)": {
+                "argument": {
+                    "ether_value": "uint256"
+                },
+                "contract": {
+                    "TOKEN_SCALE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "ICO_START_TIME": "uint256",
+                    "MIN_ACCEPTED_VALUE": "uint256",
+                    "MIN_BUYBACK_VALUE": "uint256",
+                    "NAME": "string",
+                    "SYMBOL": "string",
+                    "bountyTokens": "uint256",
+                    "sellingPrice": "uint256",
+                    "buybackPrice": "uint256",
+                    "etherAccumulator": "uint256",
+                    "icoStartTime": "uint256",
+                    "bonuses": "uint8[4]",
+                    "staging": "uint256[4]"
+                }
+            },
+            "setBuybackPrice(uint256)": {
+                "argument": {
+                    "buyback_price": "uint256"
+                },
+                "contract": {
+                    "TOKEN_SCALE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "ICO_START_TIME": "uint256",
+                    "MIN_ACCEPTED_VALUE": "uint256",
+                    "MIN_BUYBACK_VALUE": "uint256",
+                    "NAME": "string",
+                    "SYMBOL": "string",
+                    "bountyTokens": "uint256",
+                    "sellingPrice": "uint256",
+                    "buybackPrice": "uint256",
+                    "etherAccumulator": "uint256",
+                    "icoStartTime": "uint256",
+                    "bonuses": "uint8[4]",
+                    "staging": "uint256[4]"
+                }
+            },
+            "enableBuyback(uint256)": {
+                "argument": {
+                    "buyback_price": "uint256"
+                },
+                "contract": {
+                    "TOKEN_SCALE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "ICO_START_TIME": "uint256",
+                    "MIN_ACCEPTED_VALUE": "uint256",
+                    "MIN_BUYBACK_VALUE": "uint256",
+                    "NAME": "string",
+                    "SYMBOL": "string",
+                    "bountyTokens": "uint256",
+                    "sellingPrice": "uint256",
+                    "buybackPrice": "uint256",
+                    "etherAccumulator": "uint256",
+                    "icoStartTime": "uint256",
+                    "bonuses": "uint8[4]",
+                    "staging": "uint256[4]"
+                }
+            },
+            "pauseBuyback()": {
+                "argument": {},
+                "contract": {
+                    "TOKEN_SCALE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "ICO_START_TIME": "uint256",
+                    "MIN_ACCEPTED_VALUE": "uint256",
+                    "MIN_BUYBACK_VALUE": "uint256",
+                    "NAME": "string",
+                    "SYMBOL": "string",
+                    "bountyTokens": "uint256",
+                    "sellingPrice": "uint256",
+                    "buybackPrice": "uint256",
+                    "etherAccumulator": "uint256",
+                    "icoStartTime": "uint256",
+                    "bonuses": "uint8[4]",
+                    "staging": "uint256[4]"
+                }
+            },
+            "destroyContract()": {
+                "argument": {},
+                "contract": {
+                    "TOKEN_SCALE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "ICO_START_TIME": "uint256",
+                    "MIN_ACCEPTED_VALUE": "uint256",
+                    "MIN_BUYBACK_VALUE": "uint256",
+                    "NAME": "string",
+                    "SYMBOL": "string",
+                    "bountyTokens": "uint256",
+                    "sellingPrice": "uint256",
+                    "buybackPrice": "uint256",
+                    "etherAccumulator": "uint256",
+                    "icoStartTime": "uint256",
+                    "bonuses": "uint8[4]",
+                    "staging": "uint256[4]"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "TOKEN_SCALE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "ICO_START_TIME": "uint256",
+                    "MIN_ACCEPTED_VALUE": "uint256",
+                    "MIN_BUYBACK_VALUE": "uint256",
+                    "NAME": "string",
+                    "SYMBOL": "string",
+                    "bountyTokens": "uint256",
+                    "sellingPrice": "uint256",
+                    "buybackPrice": "uint256",
+                    "etherAccumulator": "uint256",
+                    "icoStartTime": "uint256",
+                    "bonuses": "uint8[4]",
+                    "staging": "uint256[4]"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "getEtherBalance(address)": [
+                2436,
+                823
+            ],
+            "getTokenBalance(address)": [
+                999,
+                295
+            ],
+            "destroyContract()": [
+                515,
+                75
+            ],
+            "setTrustedSender(address)": [
+                2260,
+                735
+            ],
+            "getDistributedTokens()": [
+                2621,
+                911
+            ],
+            "startICO(uint256)": [
+                1705,
+                559
+            ],
+            "getContractEtherBalance()": [
+                835,
+                229
+            ],
+            "invest()": [
+                2568,
+                867
+            ],
+            "calcTokensToEthers(uint256)": [
+                1487,
+                471
+            ],
+            "transferTokens(address,uint256)": [
+                2183,
+                713
+            ],
+            "refundInvestment(address,uint256)": [
+                1937,
+                625
+            ],
+            "getContractTokenBalance()": [
+                878,
+                251
+            ],
+            "transferOwnership(address)": [
+                2664,
+                933
+            ],
+            "pauseBuyback()": [
+                1682,
+                537
+            ],
+            "stopICO()": [
+                2327,
+                757
+            ],
+            "setBuybackPrice(uint256)": [
+                1174,
+                361
+            ],
+            "setSellingPrice(uint256)": [
+                538,
+                97
+            ],
+            "calcAmountWithBonus(uint256,uint8)": [
+                583,
+                119
+            ],
+            "getContractState()": [
+                1438,
+                449
+            ],
+            "enableBuyback(uint256)": [
+                704,
+                163
+            ],
+            "setICOStartTime(uint256)": [
+                1129,
+                339
+            ],
+            "calcBonusPercent()": [
+                2057,
+                669
+            ],
+            "grantBounty(address,uint256)": [
+                2106,
+                691
+            ],
+            "calcEthersToTokens(uint256,uint8)": [
+                921,
+                273
+            ],
+            "transferEthersToOwner(uint256)": [
+                2523,
+                845
+            ],
+            "buyback(uint256)": [
+                1393,
+                427
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump4724": [
+                "msg.sender.transfer(_ethers)",
+                "msg.sender.transfer(_ethers)"
+            ],
+            "block6137": [
+                "investor_address.transfer(ether_value)"
+            ],
+            "jump6137": [
+                "investor_address.transfer(ether_value)",
+                "investor_address.transfer(ether_value)"
+            ],
+            "block7537": [
+                "msg.sender.transfer(ether_value)"
+            ],
+            "jump7537": [
+                "msg.sender.transfer(ether_value)",
+                "msg.sender.transfer(ether_value)"
+            ],
+            "block4724": [
+                "msg.sender.transfer(_ethers)"
+            ]
+        }
+    }
+}

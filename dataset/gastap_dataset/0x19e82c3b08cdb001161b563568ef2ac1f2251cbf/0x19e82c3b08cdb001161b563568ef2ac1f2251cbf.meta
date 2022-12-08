@@ -1,0 +1,164 @@
+{
+    "ERC20Basic": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                124,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "ERC20": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                346,
+                97
+            ],
+            "balanceOf(address)": [
+                773,
+                207
+            ],
+            "transferFrom(address,address,uint256)": [
+                490,
+                141
+            ],
+            "allowance(address,address)": [
+                1394,
+                339
+            ],
+            "transfer(address,uint256)": [
+                1091,
+                273
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "SafeERC20": {
+        "function_list": [
+            "safeTransfer(ERC20Basic,address,uint256)",
+            "safeTransferFrom(ERC20,address,address,uint256)",
+            "safeApprove(ERC20,address,uint256)"
+        ],
+        "initial_state": {
+            "safeTransfer(ERC20Basic,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "safeTransferFrom(ERC20,address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "safeApprove(ERC20,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "TokenTimelock": {
+        "function_list": [
+            "TokenTimelock(ERC20Basic,address,uint256)",
+            "release()"
+        ],
+        "initial_state": {
+            "TokenTimelock(ERC20Basic,address,uint256)": {
+                "argument": {
+                    "_releaseTime": "uint256"
+                },
+                "contract": {
+                    "releaseTime": "uint256"
+                }
+            },
+            "release()": {
+                "argument": {},
+                "contract": {
+                    "releaseTime": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "release()": [
+                190,
+                97
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump983": [
+                "token.transfer(to, value)",
+                "token.transfer(to, value)"
+            ],
+            "block983": [
+                "token.transfer(to, value)"
+            ],
+            "block588": [
+                "token.balanceOf(this)"
+            ],
+            "jump588": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ]
+        }
+    }
+}

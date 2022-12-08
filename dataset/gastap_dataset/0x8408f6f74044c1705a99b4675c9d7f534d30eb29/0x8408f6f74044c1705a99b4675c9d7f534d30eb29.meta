@@ -1,0 +1,168 @@
+{
+    "Ownable": {
+        "function_list": [
+            "Ownable()",
+            "changeOwner(address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "changeOwner(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "changeOwner(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Withdrawable": {
+        "function_list": [
+            "withdraw()"
+        ],
+        "initial_state": {
+            "withdraw()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "withdraw()": [
+                81,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump311": [
+                "msg.sender.transfer(amount)",
+                "msg.sender.transfer(amount)"
+            ],
+            "block311": [
+                "msg.sender.transfer(amount)"
+            ]
+        }
+    },
+    "EthLottery": {
+        "function_list": [
+            "Ownable()",
+            "changeOwner(address)",
+            "withdraw()",
+            "initLottery(uint16,uint256,uint8,bytes32)",
+            "getLotteryDetails(uint16)",
+            "purchaseTicket(uint16,uint16[])",
+            "finalizeLottery(uint16,bytes32,uint256)",
+            "lotteryCloseInsurance(uint16)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {
+                    "lotteryId": "uint32"
+                }
+            },
+            "changeOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "lotteryId": "uint32"
+                }
+            },
+            "withdraw()": {
+                "argument": {},
+                "contract": {
+                    "lotteryId": "uint32"
+                }
+            },
+            "initLottery(uint16,uint256,uint8,bytes32)": {
+                "argument": {
+                    "numTickets": "uint16",
+                    "ticketPrice": "uint256",
+                    "ownerCut": "uint8",
+                    "serverHash": "bytes32"
+                },
+                "contract": {
+                    "lotteryId": "uint32"
+                }
+            },
+            "getLotteryDetails(uint16)": {
+                "argument": {
+                    "lottId": "uint16"
+                },
+                "contract": {
+                    "lotteryId": "uint32"
+                }
+            },
+            "purchaseTicket(uint16,uint16[])": {
+                "argument": {
+                    "lottId": "uint16",
+                    "tickets": "uint16[]"
+                },
+                "contract": {
+                    "lotteryId": "uint32"
+                }
+            },
+            "finalizeLottery(uint16,bytes32,uint256)": {
+                "argument": {
+                    "lottId": "uint16",
+                    "serverSalt": "bytes32",
+                    "serverRoll": "uint256"
+                },
+                "contract": {
+                    "lotteryId": "uint32"
+                }
+            },
+            "lotteryCloseInsurance(uint16)": {
+                "argument": {
+                    "lottId": "uint16"
+                },
+                "contract": {
+                    "lotteryId": "uint32"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "initLottery(uint16,uint256,uint8,bytes32)": [
+                192,
+                97
+            ],
+            "purchaseTicket(uint16,uint16[])": [
+                832,
+                207
+            ],
+            "lotteryCloseInsurance(uint16)": [
+                716,
+                163
+            ],
+            "withdraw()": [
+                169,
+                75
+            ],
+            "finalizeLottery(uint16,bytes32,uint256)": [
+                990,
+                251
+            ],
+            "getLotteryDetails(uint16)": [
+                278,
+                119
+            ],
+            "changeOwner(address)": [
+                765,
+                185
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump1270": [
+                "msg.sender.transfer(amount)",
+                "msg.sender.transfer(amount)"
+            ],
+            "block1270": [
+                "msg.sender.transfer(amount)"
+            ]
+        }
+    }
+}

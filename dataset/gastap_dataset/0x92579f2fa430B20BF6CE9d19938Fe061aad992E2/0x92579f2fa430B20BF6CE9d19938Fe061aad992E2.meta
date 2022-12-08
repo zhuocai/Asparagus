@@ -1,0 +1,212 @@
+{
+    "token": {
+        "function_list": [
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "getBalanceOf(address)"
+        ],
+        "initial_state": {
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "getBalanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferFrom(address,address,uint256)": [
+                68,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "DCY_preICO": {
+        "function_list": [
+            "DCY_preICO(address,token,uint256,uint256,uint256)",
+            "fallback()",
+            "updateTokensAvailable()",
+            "checkGoalReached()",
+            "safeWithdrawal()",
+            "bringBackTokens()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "DCY_preICO(address,token,uint256,uint256,uint256)": {
+                "argument": {
+                    "fundingGoalInEthers": "uint256",
+                    "durationInMinutes": "uint256",
+                    "weiPrice": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "fundingGoal": "uint256",
+                    "amountRaised": "uint256",
+                    "deadline": "uint256",
+                    "price": "uint256",
+                    "tokensLeft": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "fundingGoal": "uint256",
+                    "amountRaised": "uint256",
+                    "deadline": "uint256",
+                    "price": "uint256",
+                    "tokensLeft": "uint256"
+                }
+            },
+            "updateTokensAvailable()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "fundingGoal": "uint256",
+                    "amountRaised": "uint256",
+                    "deadline": "uint256",
+                    "price": "uint256",
+                    "tokensLeft": "uint256"
+                }
+            },
+            "checkGoalReached()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "fundingGoal": "uint256",
+                    "amountRaised": "uint256",
+                    "deadline": "uint256",
+                    "price": "uint256",
+                    "tokensLeft": "uint256"
+                }
+            },
+            "safeWithdrawal()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "fundingGoal": "uint256",
+                    "amountRaised": "uint256",
+                    "deadline": "uint256",
+                    "price": "uint256",
+                    "tokensLeft": "uint256"
+                }
+            },
+            "bringBackTokens()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "fundingGoal": "uint256",
+                    "amountRaised": "uint256",
+                    "deadline": "uint256",
+                    "price": "uint256",
+                    "tokensLeft": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "checkGoalReached()": [
+                1025,
+                75
+            ],
+            "bringBackTokens()": [
+                1048,
+                97
+            ],
+            "safeWithdrawal()": [
+                1808,
+                383
+            ],
+            "updateTokensAvailable()": [
+                1785,
+                361
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump918_0": [
+                "tokenReward.getBalanceOf(address(this))",
+                "tokenReward.getBalanceOf(address(this))"
+            ],
+            "block585": [
+                "tokenReward.transfer(msg.sender, amount / price)"
+            ],
+            "jump3200": [
+                "tokenReward.getBalanceOf(address(this))",
+                "tokenReward.getBalanceOf(address(this))"
+            ],
+            "block2616": [
+                "tokenReward.getBalanceOf(address(this))"
+            ],
+            "jump2403": [
+                "tokenReward.transfer(beneficiary, tokensLeft)",
+                "tokenReward.transfer(beneficiary, tokensLeft)"
+            ],
+            "block918": [
+                "tokenReward.getBalanceOf(address(this))"
+            ],
+            "block918_0": [
+                "tokenReward.getBalanceOf(address(this))"
+            ],
+            "jump3447": [
+                "msg.sender.send(amount)",
+                "msg.sender.send(amount)"
+            ],
+            "block2403": [
+                "tokenReward.transfer(beneficiary, tokensLeft)"
+            ],
+            "jump2616": [
+                "tokenReward.getBalanceOf(address(this))",
+                "tokenReward.getBalanceOf(address(this))"
+            ],
+            "jump585_0": [
+                "tokenReward.transfer(msg.sender, amount / price)",
+                "tokenReward.transfer(msg.sender, amount / price)"
+            ],
+            "jump3811": [
+                "beneficiary.send(amountRaised)",
+                "beneficiary.send(amountRaised)"
+            ],
+            "block585_0": [
+                "tokenReward.transfer(msg.sender, amount / price)"
+            ],
+            "block3447": [
+                "msg.sender.send(amount)"
+            ],
+            "block3811": [
+                "beneficiary.send(amountRaised)"
+            ],
+            "jump585": [
+                "tokenReward.transfer(msg.sender, amount / price)",
+                "tokenReward.transfer(msg.sender, amount / price)"
+            ],
+            "block3200": [
+                "tokenReward.getBalanceOf(address(this))"
+            ],
+            "jump918": [
+                "tokenReward.getBalanceOf(address(this))",
+                "tokenReward.getBalanceOf(address(this))"
+            ]
+        }
+    }
+}

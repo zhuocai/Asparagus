@@ -1,0 +1,759 @@
+{
+    "SafeMath": {
+        "function_list": [
+            "safeAdd(uint256,uint256)",
+            "safeSub(uint256,uint256)",
+            "safeMul(uint256,uint256)",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "safeAdd(uint256,uint256)": {
+                "argument": {
+                    "x": "uint256",
+                    "y": "uint256"
+                },
+                "contract": {
+                    "MAX_UINT256": "uint256"
+                }
+            },
+            "safeSub(uint256,uint256)": {
+                "argument": {
+                    "x": "uint256",
+                    "y": "uint256"
+                },
+                "contract": {
+                    "MAX_UINT256": "uint256"
+                }
+            },
+            "safeMul(uint256,uint256)": {
+                "argument": {
+                    "x": "uint256",
+                    "y": "uint256"
+                },
+                "contract": {
+                    "MAX_UINT256": "uint256"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "MAX_UINT256": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "ReentrancyHandlingContract": {
+        "function_list": [],
+        "initial_state": {},
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "Owned": {
+        "function_list": [
+            "Owned()",
+            "transferOwnership(address)",
+            "acceptOwnership()"
+        ],
+        "initial_state": {
+            "Owned()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "acceptOwnership()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Lockable": {
+        "function_list": [
+            "Owned()",
+            "transferOwnership(address)",
+            "acceptOwnership()",
+            "lockFromSelf(uint256,string)",
+            "lockUntil(uint256,string)"
+        ],
+        "initial_state": {
+            "Owned()": {
+                "argument": {},
+                "contract": {
+                    "lockedUntilBlock": "uint256"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "lockedUntilBlock": "uint256"
+                }
+            },
+            "acceptOwnership()": {
+                "argument": {},
+                "contract": {
+                    "lockedUntilBlock": "uint256"
+                }
+            },
+            "lockFromSelf(uint256,string)": {
+                "argument": {
+                    "_untilBlock": "uint256",
+                    "_reason": "string"
+                },
+                "contract": {
+                    "lockedUntilBlock": "uint256"
+                }
+            },
+            "lockUntil(uint256,string)": {
+                "argument": {
+                    "_untilBlock": "uint256",
+                    "_reason": "string"
+                },
+                "contract": {
+                    "lockedUntilBlock": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "Crowdsale": {
+        "function_list": [
+            "Owned()",
+            "transferOwnership(address)",
+            "acceptOwnership()",
+            "fallback()",
+            "checkCrowdsaleState()",
+            "refundTransaction(bool)",
+            "calculateEthToToken(uint256,uint256)",
+            "calculateTokenToEth(uint256,uint256)",
+            "processTransaction(address,uint256)",
+            "pushAngelInvestmentData(address,uint256)",
+            "depositAngelInvestmentEth()",
+            "salvageTokensFromContract(address,address,uint256)",
+            "withdrawEth()",
+            "claimEthIfFailed()",
+            "batchReturnEthIfFailed(uint256)",
+            "withdrawRemainingBalanceForManualRecovery()",
+            "claimTeamTokens(address,uint256)",
+            "setMultisigAddress(address)",
+            "setToken(address)",
+            "setKycAddress(address)",
+            "getTokenAddress()",
+            "investorCount()",
+            "setCrowdsaleStartBlock(uint256)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "Owned()": {
+                "argument": {},
+                "contract": {
+                    "nextContributorIndex": "uint256",
+                    "crowdsaleStartBlock": "uint256",
+                    "crowdsaleEndedBlock": "uint256",
+                    "decimals": "uint256",
+                    "minCap": "uint256",
+                    "maxCap": "uint256",
+                    "ethRaised": "uint256",
+                    "tokenTotalSupply": "uint256",
+                    "tokensIssued": "uint256",
+                    "blocksInADay": "uint256",
+                    "nextContributorToClaim": "uint256",
+                    "crowdsaleTokenCap": "uint256",
+                    "founders": "uint256",
+                    "insurePalTeam": "uint256",
+                    "tcsSupportTeam": "uint256",
+                    "advisorsAndAmbassadors": "uint256",
+                    "incentives": "uint256",
+                    "earlyInvestors": "uint256"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "nextContributorIndex": "uint256",
+                    "crowdsaleStartBlock": "uint256",
+                    "crowdsaleEndedBlock": "uint256",
+                    "decimals": "uint256",
+                    "minCap": "uint256",
+                    "maxCap": "uint256",
+                    "ethRaised": "uint256",
+                    "tokenTotalSupply": "uint256",
+                    "tokensIssued": "uint256",
+                    "blocksInADay": "uint256",
+                    "nextContributorToClaim": "uint256",
+                    "crowdsaleTokenCap": "uint256",
+                    "founders": "uint256",
+                    "insurePalTeam": "uint256",
+                    "tcsSupportTeam": "uint256",
+                    "advisorsAndAmbassadors": "uint256",
+                    "incentives": "uint256",
+                    "earlyInvestors": "uint256"
+                }
+            },
+            "acceptOwnership()": {
+                "argument": {},
+                "contract": {
+                    "nextContributorIndex": "uint256",
+                    "crowdsaleStartBlock": "uint256",
+                    "crowdsaleEndedBlock": "uint256",
+                    "decimals": "uint256",
+                    "minCap": "uint256",
+                    "maxCap": "uint256",
+                    "ethRaised": "uint256",
+                    "tokenTotalSupply": "uint256",
+                    "tokensIssued": "uint256",
+                    "blocksInADay": "uint256",
+                    "nextContributorToClaim": "uint256",
+                    "crowdsaleTokenCap": "uint256",
+                    "founders": "uint256",
+                    "insurePalTeam": "uint256",
+                    "tcsSupportTeam": "uint256",
+                    "advisorsAndAmbassadors": "uint256",
+                    "incentives": "uint256",
+                    "earlyInvestors": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "nextContributorIndex": "uint256",
+                    "crowdsaleStartBlock": "uint256",
+                    "crowdsaleEndedBlock": "uint256",
+                    "decimals": "uint256",
+                    "minCap": "uint256",
+                    "maxCap": "uint256",
+                    "ethRaised": "uint256",
+                    "tokenTotalSupply": "uint256",
+                    "tokensIssued": "uint256",
+                    "blocksInADay": "uint256",
+                    "nextContributorToClaim": "uint256",
+                    "crowdsaleTokenCap": "uint256",
+                    "founders": "uint256",
+                    "insurePalTeam": "uint256",
+                    "tcsSupportTeam": "uint256",
+                    "advisorsAndAmbassadors": "uint256",
+                    "incentives": "uint256",
+                    "earlyInvestors": "uint256"
+                }
+            },
+            "checkCrowdsaleState()": {
+                "argument": {},
+                "contract": {
+                    "nextContributorIndex": "uint256",
+                    "crowdsaleStartBlock": "uint256",
+                    "crowdsaleEndedBlock": "uint256",
+                    "decimals": "uint256",
+                    "minCap": "uint256",
+                    "maxCap": "uint256",
+                    "ethRaised": "uint256",
+                    "tokenTotalSupply": "uint256",
+                    "tokensIssued": "uint256",
+                    "blocksInADay": "uint256",
+                    "nextContributorToClaim": "uint256",
+                    "crowdsaleTokenCap": "uint256",
+                    "founders": "uint256",
+                    "insurePalTeam": "uint256",
+                    "tcsSupportTeam": "uint256",
+                    "advisorsAndAmbassadors": "uint256",
+                    "incentives": "uint256",
+                    "earlyInvestors": "uint256"
+                }
+            },
+            "refundTransaction(bool)": {
+                "argument": {},
+                "contract": {
+                    "nextContributorIndex": "uint256",
+                    "crowdsaleStartBlock": "uint256",
+                    "crowdsaleEndedBlock": "uint256",
+                    "decimals": "uint256",
+                    "minCap": "uint256",
+                    "maxCap": "uint256",
+                    "ethRaised": "uint256",
+                    "tokenTotalSupply": "uint256",
+                    "tokensIssued": "uint256",
+                    "blocksInADay": "uint256",
+                    "nextContributorToClaim": "uint256",
+                    "crowdsaleTokenCap": "uint256",
+                    "founders": "uint256",
+                    "insurePalTeam": "uint256",
+                    "tcsSupportTeam": "uint256",
+                    "advisorsAndAmbassadors": "uint256",
+                    "incentives": "uint256",
+                    "earlyInvestors": "uint256"
+                }
+            },
+            "calculateEthToToken(uint256,uint256)": {
+                "argument": {
+                    "_eth": "uint256",
+                    "_blockNumber": "uint256"
+                },
+                "contract": {
+                    "nextContributorIndex": "uint256",
+                    "crowdsaleStartBlock": "uint256",
+                    "crowdsaleEndedBlock": "uint256",
+                    "decimals": "uint256",
+                    "minCap": "uint256",
+                    "maxCap": "uint256",
+                    "ethRaised": "uint256",
+                    "tokenTotalSupply": "uint256",
+                    "tokensIssued": "uint256",
+                    "blocksInADay": "uint256",
+                    "nextContributorToClaim": "uint256",
+                    "crowdsaleTokenCap": "uint256",
+                    "founders": "uint256",
+                    "insurePalTeam": "uint256",
+                    "tcsSupportTeam": "uint256",
+                    "advisorsAndAmbassadors": "uint256",
+                    "incentives": "uint256",
+                    "earlyInvestors": "uint256"
+                }
+            },
+            "calculateTokenToEth(uint256,uint256)": {
+                "argument": {
+                    "_token": "uint256",
+                    "_blockNumber": "uint256"
+                },
+                "contract": {
+                    "nextContributorIndex": "uint256",
+                    "crowdsaleStartBlock": "uint256",
+                    "crowdsaleEndedBlock": "uint256",
+                    "decimals": "uint256",
+                    "minCap": "uint256",
+                    "maxCap": "uint256",
+                    "ethRaised": "uint256",
+                    "tokenTotalSupply": "uint256",
+                    "tokensIssued": "uint256",
+                    "blocksInADay": "uint256",
+                    "nextContributorToClaim": "uint256",
+                    "crowdsaleTokenCap": "uint256",
+                    "founders": "uint256",
+                    "insurePalTeam": "uint256",
+                    "tcsSupportTeam": "uint256",
+                    "advisorsAndAmbassadors": "uint256",
+                    "incentives": "uint256",
+                    "earlyInvestors": "uint256"
+                }
+            },
+            "processTransaction(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "nextContributorIndex": "uint256",
+                    "crowdsaleStartBlock": "uint256",
+                    "crowdsaleEndedBlock": "uint256",
+                    "decimals": "uint256",
+                    "minCap": "uint256",
+                    "maxCap": "uint256",
+                    "ethRaised": "uint256",
+                    "tokenTotalSupply": "uint256",
+                    "tokensIssued": "uint256",
+                    "blocksInADay": "uint256",
+                    "nextContributorToClaim": "uint256",
+                    "crowdsaleTokenCap": "uint256",
+                    "founders": "uint256",
+                    "insurePalTeam": "uint256",
+                    "tcsSupportTeam": "uint256",
+                    "advisorsAndAmbassadors": "uint256",
+                    "incentives": "uint256",
+                    "earlyInvestors": "uint256"
+                }
+            },
+            "pushAngelInvestmentData(address,uint256)": {
+                "argument": {
+                    "_ethContributed": "uint256"
+                },
+                "contract": {
+                    "nextContributorIndex": "uint256",
+                    "crowdsaleStartBlock": "uint256",
+                    "crowdsaleEndedBlock": "uint256",
+                    "decimals": "uint256",
+                    "minCap": "uint256",
+                    "maxCap": "uint256",
+                    "ethRaised": "uint256",
+                    "tokenTotalSupply": "uint256",
+                    "tokensIssued": "uint256",
+                    "blocksInADay": "uint256",
+                    "nextContributorToClaim": "uint256",
+                    "crowdsaleTokenCap": "uint256",
+                    "founders": "uint256",
+                    "insurePalTeam": "uint256",
+                    "tcsSupportTeam": "uint256",
+                    "advisorsAndAmbassadors": "uint256",
+                    "incentives": "uint256",
+                    "earlyInvestors": "uint256"
+                }
+            },
+            "depositAngelInvestmentEth()": {
+                "argument": {},
+                "contract": {
+                    "nextContributorIndex": "uint256",
+                    "crowdsaleStartBlock": "uint256",
+                    "crowdsaleEndedBlock": "uint256",
+                    "decimals": "uint256",
+                    "minCap": "uint256",
+                    "maxCap": "uint256",
+                    "ethRaised": "uint256",
+                    "tokenTotalSupply": "uint256",
+                    "tokensIssued": "uint256",
+                    "blocksInADay": "uint256",
+                    "nextContributorToClaim": "uint256",
+                    "crowdsaleTokenCap": "uint256",
+                    "founders": "uint256",
+                    "insurePalTeam": "uint256",
+                    "tcsSupportTeam": "uint256",
+                    "advisorsAndAmbassadors": "uint256",
+                    "incentives": "uint256",
+                    "earlyInvestors": "uint256"
+                }
+            },
+            "salvageTokensFromContract(address,address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "nextContributorIndex": "uint256",
+                    "crowdsaleStartBlock": "uint256",
+                    "crowdsaleEndedBlock": "uint256",
+                    "decimals": "uint256",
+                    "minCap": "uint256",
+                    "maxCap": "uint256",
+                    "ethRaised": "uint256",
+                    "tokenTotalSupply": "uint256",
+                    "tokensIssued": "uint256",
+                    "blocksInADay": "uint256",
+                    "nextContributorToClaim": "uint256",
+                    "crowdsaleTokenCap": "uint256",
+                    "founders": "uint256",
+                    "insurePalTeam": "uint256",
+                    "tcsSupportTeam": "uint256",
+                    "advisorsAndAmbassadors": "uint256",
+                    "incentives": "uint256",
+                    "earlyInvestors": "uint256"
+                }
+            },
+            "withdrawEth()": {
+                "argument": {},
+                "contract": {
+                    "nextContributorIndex": "uint256",
+                    "crowdsaleStartBlock": "uint256",
+                    "crowdsaleEndedBlock": "uint256",
+                    "decimals": "uint256",
+                    "minCap": "uint256",
+                    "maxCap": "uint256",
+                    "ethRaised": "uint256",
+                    "tokenTotalSupply": "uint256",
+                    "tokensIssued": "uint256",
+                    "blocksInADay": "uint256",
+                    "nextContributorToClaim": "uint256",
+                    "crowdsaleTokenCap": "uint256",
+                    "founders": "uint256",
+                    "insurePalTeam": "uint256",
+                    "tcsSupportTeam": "uint256",
+                    "advisorsAndAmbassadors": "uint256",
+                    "incentives": "uint256",
+                    "earlyInvestors": "uint256"
+                }
+            },
+            "claimEthIfFailed()": {
+                "argument": {},
+                "contract": {
+                    "nextContributorIndex": "uint256",
+                    "crowdsaleStartBlock": "uint256",
+                    "crowdsaleEndedBlock": "uint256",
+                    "decimals": "uint256",
+                    "minCap": "uint256",
+                    "maxCap": "uint256",
+                    "ethRaised": "uint256",
+                    "tokenTotalSupply": "uint256",
+                    "tokensIssued": "uint256",
+                    "blocksInADay": "uint256",
+                    "nextContributorToClaim": "uint256",
+                    "crowdsaleTokenCap": "uint256",
+                    "founders": "uint256",
+                    "insurePalTeam": "uint256",
+                    "tcsSupportTeam": "uint256",
+                    "advisorsAndAmbassadors": "uint256",
+                    "incentives": "uint256",
+                    "earlyInvestors": "uint256"
+                }
+            },
+            "batchReturnEthIfFailed(uint256)": {
+                "argument": {
+                    "_numberOfReturns": "uint256"
+                },
+                "contract": {
+                    "nextContributorIndex": "uint256",
+                    "crowdsaleStartBlock": "uint256",
+                    "crowdsaleEndedBlock": "uint256",
+                    "decimals": "uint256",
+                    "minCap": "uint256",
+                    "maxCap": "uint256",
+                    "ethRaised": "uint256",
+                    "tokenTotalSupply": "uint256",
+                    "tokensIssued": "uint256",
+                    "blocksInADay": "uint256",
+                    "nextContributorToClaim": "uint256",
+                    "crowdsaleTokenCap": "uint256",
+                    "founders": "uint256",
+                    "insurePalTeam": "uint256",
+                    "tcsSupportTeam": "uint256",
+                    "advisorsAndAmbassadors": "uint256",
+                    "incentives": "uint256",
+                    "earlyInvestors": "uint256"
+                }
+            },
+            "withdrawRemainingBalanceForManualRecovery()": {
+                "argument": {},
+                "contract": {
+                    "nextContributorIndex": "uint256",
+                    "crowdsaleStartBlock": "uint256",
+                    "crowdsaleEndedBlock": "uint256",
+                    "decimals": "uint256",
+                    "minCap": "uint256",
+                    "maxCap": "uint256",
+                    "ethRaised": "uint256",
+                    "tokenTotalSupply": "uint256",
+                    "tokensIssued": "uint256",
+                    "blocksInADay": "uint256",
+                    "nextContributorToClaim": "uint256",
+                    "crowdsaleTokenCap": "uint256",
+                    "founders": "uint256",
+                    "insurePalTeam": "uint256",
+                    "tcsSupportTeam": "uint256",
+                    "advisorsAndAmbassadors": "uint256",
+                    "incentives": "uint256",
+                    "earlyInvestors": "uint256"
+                }
+            },
+            "claimTeamTokens(address,uint256)": {
+                "argument": {
+                    "_choice": "uint256"
+                },
+                "contract": {
+                    "nextContributorIndex": "uint256",
+                    "crowdsaleStartBlock": "uint256",
+                    "crowdsaleEndedBlock": "uint256",
+                    "decimals": "uint256",
+                    "minCap": "uint256",
+                    "maxCap": "uint256",
+                    "ethRaised": "uint256",
+                    "tokenTotalSupply": "uint256",
+                    "tokensIssued": "uint256",
+                    "blocksInADay": "uint256",
+                    "nextContributorToClaim": "uint256",
+                    "crowdsaleTokenCap": "uint256",
+                    "founders": "uint256",
+                    "insurePalTeam": "uint256",
+                    "tcsSupportTeam": "uint256",
+                    "advisorsAndAmbassadors": "uint256",
+                    "incentives": "uint256",
+                    "earlyInvestors": "uint256"
+                }
+            },
+            "setMultisigAddress(address)": {
+                "argument": {},
+                "contract": {
+                    "nextContributorIndex": "uint256",
+                    "crowdsaleStartBlock": "uint256",
+                    "crowdsaleEndedBlock": "uint256",
+                    "decimals": "uint256",
+                    "minCap": "uint256",
+                    "maxCap": "uint256",
+                    "ethRaised": "uint256",
+                    "tokenTotalSupply": "uint256",
+                    "tokensIssued": "uint256",
+                    "blocksInADay": "uint256",
+                    "nextContributorToClaim": "uint256",
+                    "crowdsaleTokenCap": "uint256",
+                    "founders": "uint256",
+                    "insurePalTeam": "uint256",
+                    "tcsSupportTeam": "uint256",
+                    "advisorsAndAmbassadors": "uint256",
+                    "incentives": "uint256",
+                    "earlyInvestors": "uint256"
+                }
+            },
+            "setToken(address)": {
+                "argument": {},
+                "contract": {
+                    "nextContributorIndex": "uint256",
+                    "crowdsaleStartBlock": "uint256",
+                    "crowdsaleEndedBlock": "uint256",
+                    "decimals": "uint256",
+                    "minCap": "uint256",
+                    "maxCap": "uint256",
+                    "ethRaised": "uint256",
+                    "tokenTotalSupply": "uint256",
+                    "tokensIssued": "uint256",
+                    "blocksInADay": "uint256",
+                    "nextContributorToClaim": "uint256",
+                    "crowdsaleTokenCap": "uint256",
+                    "founders": "uint256",
+                    "insurePalTeam": "uint256",
+                    "tcsSupportTeam": "uint256",
+                    "advisorsAndAmbassadors": "uint256",
+                    "incentives": "uint256",
+                    "earlyInvestors": "uint256"
+                }
+            },
+            "setKycAddress(address)": {
+                "argument": {},
+                "contract": {
+                    "nextContributorIndex": "uint256",
+                    "crowdsaleStartBlock": "uint256",
+                    "crowdsaleEndedBlock": "uint256",
+                    "decimals": "uint256",
+                    "minCap": "uint256",
+                    "maxCap": "uint256",
+                    "ethRaised": "uint256",
+                    "tokenTotalSupply": "uint256",
+                    "tokensIssued": "uint256",
+                    "blocksInADay": "uint256",
+                    "nextContributorToClaim": "uint256",
+                    "crowdsaleTokenCap": "uint256",
+                    "founders": "uint256",
+                    "insurePalTeam": "uint256",
+                    "tcsSupportTeam": "uint256",
+                    "advisorsAndAmbassadors": "uint256",
+                    "incentives": "uint256",
+                    "earlyInvestors": "uint256"
+                }
+            },
+            "getTokenAddress()": {
+                "argument": {},
+                "contract": {
+                    "nextContributorIndex": "uint256",
+                    "crowdsaleStartBlock": "uint256",
+                    "crowdsaleEndedBlock": "uint256",
+                    "decimals": "uint256",
+                    "minCap": "uint256",
+                    "maxCap": "uint256",
+                    "ethRaised": "uint256",
+                    "tokenTotalSupply": "uint256",
+                    "tokensIssued": "uint256",
+                    "blocksInADay": "uint256",
+                    "nextContributorToClaim": "uint256",
+                    "crowdsaleTokenCap": "uint256",
+                    "founders": "uint256",
+                    "insurePalTeam": "uint256",
+                    "tcsSupportTeam": "uint256",
+                    "advisorsAndAmbassadors": "uint256",
+                    "incentives": "uint256",
+                    "earlyInvestors": "uint256"
+                }
+            },
+            "investorCount()": {
+                "argument": {},
+                "contract": {
+                    "nextContributorIndex": "uint256",
+                    "crowdsaleStartBlock": "uint256",
+                    "crowdsaleEndedBlock": "uint256",
+                    "decimals": "uint256",
+                    "minCap": "uint256",
+                    "maxCap": "uint256",
+                    "ethRaised": "uint256",
+                    "tokenTotalSupply": "uint256",
+                    "tokensIssued": "uint256",
+                    "blocksInADay": "uint256",
+                    "nextContributorToClaim": "uint256",
+                    "crowdsaleTokenCap": "uint256",
+                    "founders": "uint256",
+                    "insurePalTeam": "uint256",
+                    "tcsSupportTeam": "uint256",
+                    "advisorsAndAmbassadors": "uint256",
+                    "incentives": "uint256",
+                    "earlyInvestors": "uint256"
+                }
+            },
+            "setCrowdsaleStartBlock(uint256)": {
+                "argument": {
+                    "_block": "uint256"
+                },
+                "contract": {
+                    "nextContributorIndex": "uint256",
+                    "crowdsaleStartBlock": "uint256",
+                    "crowdsaleEndedBlock": "uint256",
+                    "decimals": "uint256",
+                    "minCap": "uint256",
+                    "maxCap": "uint256",
+                    "ethRaised": "uint256",
+                    "tokenTotalSupply": "uint256",
+                    "tokensIssued": "uint256",
+                    "blocksInADay": "uint256",
+                    "nextContributorToClaim": "uint256",
+                    "crowdsaleTokenCap": "uint256",
+                    "founders": "uint256",
+                    "insurePalTeam": "uint256",
+                    "tcsSupportTeam": "uint256",
+                    "advisorsAndAmbassadors": "uint256",
+                    "incentives": "uint256",
+                    "earlyInvestors": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {
+            "jump1164": [
+                "tokenReward.transfer(beneficiary, tokens)",
+                "tokenReward.transfer(beneficiary, tokens)"
+            ],
+            "block2499_1": [
+                "wallet.send(msg.value)"
+            ],
+            "block2499_0": [
+                "wallet.send(msg.value)"
+            ],
+            "jump1650": [
+                "tokenReward.transfer(wallet,_amount)",
+                "tokenReward.transfer(wallet,_amount)"
+            ],
+            "jump1164_1": [
+                "tokenReward.transfer(beneficiary, tokens)",
+                "tokenReward.transfer(beneficiary, tokens)"
+            ],
+            "jump1164_0": [
+                "tokenReward.transfer(beneficiary, tokens)",
+                "tokenReward.transfer(beneficiary, tokens)"
+            ],
+            "block1164_1": [
+                "tokenReward.transfer(beneficiary, tokens)"
+            ],
+            "block1164_0": [
+                "tokenReward.transfer(beneficiary, tokens)"
+            ],
+            "block1164": [
+                "tokenReward.transfer(beneficiary, tokens)"
+            ],
+            "jump2499_1": [
+                "wallet.send(msg.value)",
+                "wallet.send(msg.value)"
+            ],
+            "jump2499_0": [
+                "wallet.send(msg.value)",
+                "wallet.send(msg.value)"
+            ],
+            "jump2499": [
+                "wallet.send(msg.value)",
+                "wallet.send(msg.value)"
+            ],
+            "block2499": [
+                "wallet.send(msg.value)"
+            ],
+            "block1650": [
+                "tokenReward.transfer(wallet,_amount)"
+            ]
+        }
+    }
+}

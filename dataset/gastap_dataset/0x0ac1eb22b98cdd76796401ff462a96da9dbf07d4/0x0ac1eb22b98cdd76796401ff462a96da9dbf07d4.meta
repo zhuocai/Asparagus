@@ -1,0 +1,445 @@
+{
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "Token": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                404,
+                119
+            ],
+            "balanceOf(address)": [
+                825,
+                229
+            ],
+            "transferFrom(address,address,uint256)": [
+                548,
+                163
+            ],
+            "allowance(address,address)": [
+                1291,
+                339
+            ],
+            "transfer(address,uint256)": [
+                1190,
+                317
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Disbursement": {
+        "function_list": [
+            "Disbursement(address,uint256,uint256)",
+            "setup(Token)",
+            "withdraw(address,uint256)",
+            "calcMaxWithdraw()"
+        ],
+        "initial_state": {
+            "Disbursement(address,uint256,uint256)": {
+                "argument": {
+                    "_disbursementPeriod": "uint256",
+                    "_startDate": "uint256"
+                },
+                "contract": {
+                    "disbursementPeriod": "uint256",
+                    "startDate": "uint256",
+                    "withdrawnTokens": "uint256"
+                }
+            },
+            "setup(Token)": {
+                "argument": {},
+                "contract": {
+                    "disbursementPeriod": "uint256",
+                    "startDate": "uint256",
+                    "withdrawnTokens": "uint256"
+                }
+            },
+            "withdraw(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "disbursementPeriod": "uint256",
+                    "startDate": "uint256",
+                    "withdrawnTokens": "uint256"
+                }
+            },
+            "calcMaxWithdraw()": {
+                "argument": {},
+                "contract": {
+                    "disbursementPeriod": "uint256",
+                    "startDate": "uint256",
+                    "withdrawnTokens": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "withdraw(address,uint256)": [
+                484,
+                207
+            ],
+            "calcMaxWithdraw()": [
+                244,
+                119
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump1210_0": [
+                "token.totalSupply()",
+                "token.totalSupply()"
+            ],
+            "block1210_0": [
+                "token.totalSupply()"
+            ],
+            "block1210": [
+                "token.totalSupply()"
+            ],
+            "block1421": [
+                "token.totalSupply()"
+            ],
+            "jump948": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "block1421_0": [
+                "token.totalSupply()"
+            ],
+            "jump1210": [
+                "token.totalSupply()",
+                "token.totalSupply()"
+            ],
+            "jump1421_0": [
+                "token.totalSupply()",
+                "token.totalSupply()"
+            ],
+            "block948": [
+                "token.balanceOf(this)"
+            ],
+            "jump948_0": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "jump2214": [
+                "token.transfer(_to, _value)",
+                "token.transfer(_to, _value)"
+            ],
+            "jump1421": [
+                "token.totalSupply()",
+                "token.totalSupply()"
+            ],
+            "block948_0": [
+                "token.balanceOf(this)"
+            ],
+            "block2214": [
+                "token.transfer(_to, _value)"
+            ]
+        }
+    },
+    "Owned": {
+        "function_list": [
+            "setOperator(address)",
+            "removeOwner(address)",
+            "addOwner(address)",
+            "setOwners(address[])",
+            "getOwners()"
+        ],
+        "initial_state": {
+            "setOperator(address)": {
+                "argument": {},
+                "contract": {
+                    "owners": "address[]"
+                }
+            },
+            "removeOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "owners": "address[]"
+                }
+            },
+            "addOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "owners": "address[]"
+                }
+            },
+            "setOwners(address[])": {
+                "argument": {
+                    "_owners": "address[]"
+                },
+                "contract": {
+                    "owners": "address[]"
+                }
+            },
+            "getOwners()": {
+                "argument": {},
+                "contract": {
+                    "owners": "address[]"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "getOwners()": [
+                557,
+                185
+            ],
+            "removeOwner(address)": [
+                245,
+                97
+            ],
+            "setOperator(address)": [
+                665,
+                207
+            ],
+            "addOwner(address)": [
+                490,
+                163
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "TokenLock": {
+        "function_list": [
+            "setOperator(address)",
+            "removeOwner(address)",
+            "addOwner(address)",
+            "setOwners(address[])",
+            "getOwners()",
+            "TokenLock(address[],uint256,uint256,uint256)",
+            "setup(address,address)",
+            "transferShortTermTokens(address)",
+            "transferLongTermTokens(address)"
+        ],
+        "initial_state": {
+            "setOperator(address)": {
+                "argument": {},
+                "contract": {
+                    "shortLock": "uint256",
+                    "longLock": "uint256",
+                    "shortShare": "uint256",
+                    "longTermTokens": "uint256"
+                }
+            },
+            "removeOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "shortLock": "uint256",
+                    "longLock": "uint256",
+                    "shortShare": "uint256",
+                    "longTermTokens": "uint256"
+                }
+            },
+            "addOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "shortLock": "uint256",
+                    "longLock": "uint256",
+                    "shortShare": "uint256",
+                    "longTermTokens": "uint256"
+                }
+            },
+            "setOwners(address[])": {
+                "argument": {
+                    "_owners": "address[]"
+                },
+                "contract": {
+                    "shortLock": "uint256",
+                    "longLock": "uint256",
+                    "shortShare": "uint256",
+                    "longTermTokens": "uint256"
+                }
+            },
+            "getOwners()": {
+                "argument": {},
+                "contract": {
+                    "shortLock": "uint256",
+                    "longLock": "uint256",
+                    "shortShare": "uint256",
+                    "longTermTokens": "uint256"
+                }
+            },
+            "TokenLock(address[],uint256,uint256,uint256)": {
+                "argument": {
+                    "_owners": "address[]",
+                    "_shortLock": "uint256",
+                    "_longLock": "uint256",
+                    "_shortShare": "uint256"
+                },
+                "contract": {
+                    "shortLock": "uint256",
+                    "longLock": "uint256",
+                    "shortShare": "uint256",
+                    "longTermTokens": "uint256"
+                }
+            },
+            "setup(address,address)": {
+                "argument": {},
+                "contract": {
+                    "shortLock": "uint256",
+                    "longLock": "uint256",
+                    "shortShare": "uint256",
+                    "longTermTokens": "uint256"
+                }
+            },
+            "transferShortTermTokens(address)": {
+                "argument": {},
+                "contract": {
+                    "shortLock": "uint256",
+                    "longLock": "uint256",
+                    "shortShare": "uint256",
+                    "longTermTokens": "uint256"
+                }
+            },
+            "transferLongTermTokens(address)": {
+                "argument": {},
+                "contract": {
+                    "shortLock": "uint256",
+                    "longLock": "uint256",
+                    "shortShare": "uint256",
+                    "longTermTokens": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "getOwners()": [
+                1038,
+                317
+            ],
+            "setup(address,address)": [
+                454,
+                141
+            ],
+            "setOperator(address)": [
+                1146,
+                339
+            ],
+            "transferShortTermTokens(address)": [
+                971,
+                295
+            ],
+            "removeOwner(address)": [
+                344,
+                97
+            ],
+            "addOwner(address)": [
+                861,
+                251
+            ],
+            "transferLongTermTokens(address)": [
+                1256,
+                383
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump4521": [
+                "Token(levAddress).balanceOf(disbursement)",
+                "Token(levAddress).balanceOf(disbursement)"
+            ],
+            "block3403": [
+                "Token(levAddress).balanceOf(disbursement)"
+            ],
+            "jump3403": [
+                "Token(levAddress).balanceOf(disbursement)",
+                "Token(levAddress).balanceOf(disbursement)"
+            ],
+            "block4521": [
+                "Token(levAddress).balanceOf(disbursement)"
+            ],
+            "block4779": [
+                "Disbursement(disbursement).withdraw(_wallet, tokenBalance)"
+            ],
+            "jump3761": [
+                "Disbursement(disbursement).withdraw(_wallet, amountToSend)",
+                "Disbursement(disbursement).withdraw(_wallet, amountToSend)"
+            ],
+            "block3761": [
+                "Disbursement(disbursement).withdraw(_wallet, amountToSend)"
+            ],
+            "jump4779": [
+                "Disbursement(disbursement).withdraw(_wallet, tokenBalance)",
+                "Disbursement(disbursement).withdraw(_wallet, tokenBalance)"
+            ]
+        }
+    }
+}

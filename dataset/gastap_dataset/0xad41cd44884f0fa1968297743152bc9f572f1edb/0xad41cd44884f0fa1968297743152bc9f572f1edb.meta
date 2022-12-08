@@ -1,0 +1,88 @@
+{
+    "ERC20Basic": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                124,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "GVTTeamAllocator": {
+        "function_list": [
+            "init(address)",
+            "GVTTeamAllocator()",
+            "init(address)",
+            "unlock()"
+        ],
+        "initial_state": {
+            "init(address)": {
+                "argument": {},
+                "contract": {
+                    "unlockedAt": "uint256",
+                    "tokensForAllocation": "uint256"
+                }
+            },
+            "GVTTeamAllocator()": {
+                "argument": {},
+                "contract": {
+                    "unlockedAt": "uint256",
+                    "tokensForAllocation": "uint256"
+                }
+            },
+            "unlock()": {
+                "argument": {},
+                "contract": {
+                    "unlockedAt": "uint256",
+                    "tokensForAllocation": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "init(address)": [
+                81,
+                75
+            ],
+            "unlock()": [
+                148,
+                97
+            ]
+        },
+        "block_CALL_mapping": {
+            "block966": [
+                "gvt.transfer(msg.sender, amount)"
+            ],
+            "block551": [
+                "gvt.balanceOf(this)"
+            ],
+            "jump551": [
+                "gvt.balanceOf(this)",
+                "gvt.balanceOf(this)"
+            ],
+            "jump966": [
+                "gvt.transfer(msg.sender, amount)",
+                "gvt.transfer(msg.sender, amount)"
+            ]
+        }
+    }
+}

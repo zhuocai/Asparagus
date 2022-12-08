@@ -1,0 +1,504 @@
+{
+    "owned": {
+        "function_list": [
+            "owned()",
+            "transferOwnership(address)"
+        ],
+        "initial_state": {
+            "owned()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "tokenRecipient": {
+        "function_list": [
+            "receiveApproval(address,uint256,address,bytes)"
+        ],
+        "initial_state": {
+            "receiveApproval(address,uint256,address,bytes)": {
+                "argument": {
+                    "_value": "uint256",
+                    "_extraData": "bytes"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "receiveApproval(address,uint256,address,bytes)": [
+                174,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump573": [
+                "t.transferFrom(_from, this, _value)",
+                "t.transferFrom(_from, this, _value)"
+            ],
+            "block573": [
+                "t.transferFrom(_from, this, _value)"
+            ]
+        }
+    },
+    "token": {
+        "function_list": [
+            "token(uint256,string,uint8,string)",
+            "transfer(address,uint256)",
+            "approve(address,uint256)",
+            "approveAndCall(address,uint256,bytes)",
+            "transferFrom(address,address,uint256)",
+            "fallback()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "token(uint256,string,uint8,string)": {
+                "argument": {
+                    "initialSupply": "uint256",
+                    "tokenName": "string",
+                    "decimalUnits": "uint8",
+                    "tokenSymbol": "string"
+                },
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256"
+                }
+            },
+            "approveAndCall(address,uint256,bytes)": {
+                "argument": {
+                    "_value": "uint256",
+                    "_extraData": "bytes"
+                },
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                324,
+                97
+            ],
+            "transferFrom(address,address,uint256)": [
+                468,
+                141
+            ],
+            "approveAndCall(address,uint256,bytes)": [
+                1102,
+                273
+            ],
+            "transfer(address,uint256)": [
+                1025,
+                251
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump3642": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)",
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ],
+            "block3642": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ]
+        }
+    },
+    "MyAdvancedToken": {
+        "function_list": [
+            "token(uint256,string,uint8,string)",
+            "transfer(address,uint256)",
+            "approve(address,uint256)",
+            "approveAndCall(address,uint256,bytes)",
+            "transferFrom(address,address,uint256)",
+            "fallback()",
+            "owned()",
+            "transferOwnership(address)",
+            "MyAdvancedToken(uint256,string,uint8,string,address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "mintToken(address,uint256)",
+            "freezeAccount(address,bool)",
+            "setPrices(uint256,uint256)",
+            "buy()",
+            "sell(uint256)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "token(uint256,string,uint8,string)": {
+                "argument": {
+                    "initialSupply": "uint256",
+                    "tokenName": "string",
+                    "decimalUnits": "uint8",
+                    "tokenSymbol": "string"
+                },
+                "contract": {
+                    "totalSupply": "uint256",
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256",
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256",
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256"
+                }
+            },
+            "approveAndCall(address,uint256,bytes)": {
+                "argument": {
+                    "_value": "uint256",
+                    "_extraData": "bytes"
+                },
+                "contract": {
+                    "totalSupply": "uint256",
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256",
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256"
+                }
+            },
+            "owned()": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256"
+                }
+            },
+            "MyAdvancedToken(uint256,string,uint8,string,address)": {
+                "argument": {
+                    "initialSupply": "uint256",
+                    "tokenName": "string",
+                    "decimalUnits": "uint8",
+                    "tokenSymbol": "string"
+                },
+                "contract": {
+                    "totalSupply": "uint256",
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256"
+                }
+            },
+            "mintToken(address,uint256)": {
+                "argument": {
+                    "mintedAmount": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256",
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256"
+                }
+            },
+            "freezeAccount(address,bool)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256"
+                }
+            },
+            "setPrices(uint256,uint256)": {
+                "argument": {
+                    "newSellPrice": "uint256",
+                    "newBuyPrice": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256",
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256"
+                }
+            },
+            "buy()": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256"
+                }
+            },
+            "sell(uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256",
+                    "sellPrice": "uint256",
+                    "buyPrice": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                489,
+                119
+            ],
+            "freezeAccount(address,bool)": [
+                1953,
+                493
+            ],
+            "transfer(address,uint256)": [
+                1450,
+                383
+            ],
+            "mintToken(address,uint256)": [
+                1089,
+                273
+            ],
+            "sell(uint256)": [
+                1908,
+                471
+            ],
+            "buy()": [
+                1440,
+                361
+            ],
+            "transferFrom(address,address,uint256)": [
+                633,
+                163
+            ],
+            "transferOwnership(address)": [
+                2032,
+                515
+            ],
+            "approveAndCall(address,uint256,bytes)": [
+                1618,
+                427
+            ],
+            "setPrices(uint256,uint256)": [
+                290,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "block5589": [
+                "msg.sender.send(amount * sellPrice)"
+            ],
+            "block5434": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ],
+            "jump5434": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)",
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ],
+            "jump5589": [
+                "msg.sender.send(amount * sellPrice)",
+                "msg.sender.send(amount * sellPrice)"
+            ]
+        }
+    },
+    "cashBackMintable": {
+        "function_list": [
+            "token(uint256,string,uint8,string)",
+            "transfer(address,uint256)",
+            "approve(address,uint256)",
+            "approveAndCall(address,uint256,bytes)",
+            "transferFrom(address,address,uint256)",
+            "fallback()",
+            "cashBackMintable(string,uint8,string,uint256)",
+            "fallback()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "token(uint256,string,uint8,string)": {
+                "argument": {
+                    "initialSupply": "uint256",
+                    "tokenName": "string",
+                    "decimalUnits": "uint8",
+                    "tokenSymbol": "string"
+                },
+                "contract": {
+                    "tokensForWei": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "tokensForWei": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "tokensForWei": "uint256"
+                }
+            },
+            "approveAndCall(address,uint256,bytes)": {
+                "argument": {
+                    "_value": "uint256",
+                    "_extraData": "bytes"
+                },
+                "contract": {
+                    "tokensForWei": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "tokensForWei": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "tokensForWei": "uint256"
+                }
+            },
+            "cashBackMintable(string,uint8,string,uint256)": {
+                "argument": {
+                    "tokenName": "string",
+                    "decimalUnits": "uint8",
+                    "tokenSymbol": "string",
+                    "_tokensForWei": "uint256"
+                },
+                "contract": {
+                    "tokensForWei": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                585,
+                97
+            ],
+            "transferFrom(address,address,uint256)": [
+                729,
+                141
+            ],
+            "approveAndCall(address,uint256,bytes)": [
+                1363,
+                273
+            ],
+            "transfer(address,uint256)": [
+                1286,
+                251
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump175": [
+                "msg.sender.transfer(msg.value)",
+                "msg.sender.transfer(msg.value)"
+            ],
+            "jump175_0": [
+                "msg.sender.transfer(msg.value)",
+                "msg.sender.transfer(msg.value)"
+            ],
+            "block175_0": [
+                "msg.sender.transfer(msg.value)"
+            ],
+            "block175": [
+                "msg.sender.transfer(msg.value)"
+            ],
+            "block3903": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ],
+            "jump3903": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)",
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ]
+        }
+    }
+}

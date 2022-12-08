@@ -1,0 +1,105 @@
+{
+    "token": {
+        "function_list": [
+            "transfer(address,uint256)"
+        ],
+        "initial_state": {
+            "transfer(address,uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transfer(address,uint256)": [
+                68,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "PornTokenV2Crowdsale": {
+        "function_list": [
+            "PornTokenV2Crowdsale(address,uint256,uint256,address)",
+            "fallback()",
+            "checkGoalReached()",
+            "safeWithdrawal()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "PornTokenV2Crowdsale(address,uint256,uint256,address)": {
+                "argument": {
+                    "fundingGoalInEthers": "uint256",
+                    "durationInMinutes": "uint256"
+                },
+                "contract": {
+                    "fundingGoal": "uint256",
+                    "amountRaised": "uint256",
+                    "deadline": "uint256",
+                    "price": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "fundingGoal": "uint256",
+                    "amountRaised": "uint256",
+                    "deadline": "uint256",
+                    "price": "uint256"
+                }
+            },
+            "checkGoalReached()": {
+                "argument": {},
+                "contract": {
+                    "fundingGoal": "uint256",
+                    "amountRaised": "uint256",
+                    "deadline": "uint256",
+                    "price": "uint256"
+                }
+            },
+            "safeWithdrawal()": {
+                "argument": {},
+                "contract": {
+                    "fundingGoal": "uint256",
+                    "amountRaised": "uint256",
+                    "deadline": "uint256",
+                    "price": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "checkGoalReached()": [
+                669,
+                75
+            ],
+            "safeWithdrawal()": [
+                1125,
+                251
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump489_0": [
+                "tokenReward.transfer(msg.sender, amount / price)",
+                "tokenReward.transfer(msg.sender, amount / price)"
+            ],
+            "block1592": [
+                "beneficiary.send(amountRaised)"
+            ],
+            "block489": [
+                "tokenReward.transfer(msg.sender, amount / price)"
+            ],
+            "jump1592": [
+                "beneficiary.send(amountRaised)",
+                "beneficiary.send(amountRaised)"
+            ],
+            "block489_0": [
+                "tokenReward.transfer(msg.sender, amount / price)"
+            ],
+            "jump489": [
+                "tokenReward.transfer(msg.sender, amount / price)",
+                "tokenReward.transfer(msg.sender, amount / price)"
+            ]
+        }
+    }
+}

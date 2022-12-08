@@ -1,0 +1,232 @@
+{
+    "Token": {
+        "function_list": [
+            "approve(address,uint256)"
+        ],
+        "initial_state": {
+            "approve(address,uint256)": {
+                "argument": {
+                    "": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                368,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "StickerRegistry": {
+        "function_list": [
+            "StickerRegistry(address)",
+            "setOwner(address)",
+            "withdraw(address,uint256)",
+            "approveToken(address,uint256)",
+            "createSeries(bytes32,string,bytes32,uint256)",
+            "bestow(bytes32,uint256,address)",
+            "claim(bytes32,uint256,address,uint8,bytes32,bytes32,bytes32[])",
+            "transfer(bytes32,uint256,address)",
+            "owner()",
+            "seriesInfo(bytes32)",
+            "itemOwner(bytes32,uint256)",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "StickerRegistry(address)": {
+                "argument": {},
+                "contract": {
+                    "RR_NODE": "bytes32"
+                }
+            },
+            "setOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "RR_NODE": "bytes32"
+                }
+            },
+            "withdraw(address,uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {
+                    "RR_NODE": "bytes32"
+                }
+            },
+            "approveToken(address,uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {
+                    "RR_NODE": "bytes32"
+                }
+            },
+            "createSeries(bytes32,string,bytes32,uint256)": {
+                "argument": {
+                    "nodehash": "bytes32",
+                    "seriesName": "string",
+                    "rootHash": "bytes32",
+                    "initialCount": "uint256"
+                },
+                "contract": {
+                    "RR_NODE": "bytes32"
+                }
+            },
+            "bestow(bytes32,uint256,address)": {
+                "argument": {
+                    "nodehash": "bytes32",
+                    "itemIndex": "uint256"
+                },
+                "contract": {
+                    "RR_NODE": "bytes32"
+                }
+            },
+            "claim(bytes32,uint256,address,uint8,bytes32,bytes32,bytes32[])": {
+                "argument": {
+                    "nodehash": "bytes32",
+                    "itemIndex": "uint256",
+                    "sigV": "uint8",
+                    "sigR": "bytes32",
+                    "sigS": "bytes32",
+                    "merkleProof": "bytes32[]"
+                },
+                "contract": {
+                    "RR_NODE": "bytes32"
+                }
+            },
+            "transfer(bytes32,uint256,address)": {
+                "argument": {
+                    "nodehash": "bytes32",
+                    "itemIndex": "uint256"
+                },
+                "contract": {
+                    "RR_NODE": "bytes32"
+                }
+            },
+            "owner()": {
+                "argument": {},
+                "contract": {
+                    "RR_NODE": "bytes32"
+                }
+            },
+            "seriesInfo(bytes32)": {
+                "argument": {
+                    "nodehash": "bytes32"
+                },
+                "contract": {
+                    "RR_NODE": "bytes32"
+                }
+            },
+            "itemOwner(bytes32,uint256)": {
+                "argument": {
+                    "nodehash": "bytes32",
+                    "itemIndex": "uint256"
+                },
+                "contract": {
+                    "RR_NODE": "bytes32"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "RR_NODE": "bytes32"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "seriesInfo(bytes32)": [
+                710,
+                185
+            ],
+            "setOwner(address)": [
+                246,
+                97
+            ],
+            "itemOwner(bytes32,uint256)": [
+                1003,
+                229
+            ],
+            "createSeries(bytes32,string,bytes32,uint256)": [
+                543,
+                163
+            ],
+            "owner()": [
+                916,
+                207
+            ],
+            "approveToken(address,uint256)": [
+                169,
+                75
+            ],
+            "withdraw(address,uint256)": [
+                1349,
+                273
+            ],
+            "bestow(bytes32,uint256,address)": [
+                313,
+                119
+            ],
+            "transfer(bytes32,uint256,address)": [
+                428,
+                141
+            ],
+            "claim(bytes32,uint256,address,uint8,bytes32,bytes32,bytes32[])": [
+                1126,
+                251
+            ]
+        },
+        "block_CALL_mapping": {
+            "block1715": [
+                "Token(token).approve(_owner, amount)"
+            ],
+            "jump3716": [
+                "_ens.owner(nodehash)",
+                "_ens.owner(nodehash)"
+            ],
+            "block5345": [
+                "target.send(amount)"
+            ],
+            "block2130": [
+                "_ens.owner(RR_NODE)"
+            ],
+            "jump2377": [
+                "ReverseRegistrar(_ens.owner(RR_NODE)).claim(_owner)",
+                "ReverseRegistrar(_ens.owner(RR_NODE)).claim(_owner)"
+            ],
+            "block4560": [
+                "ecrecover(bytes32(owner), sigV, sigR, sigS)"
+            ],
+            "block2618": [
+                "_ens.owner(nodehash)"
+            ],
+            "jump1715": [
+                "Token(token).approve(_owner, amount)",
+                "Token(token).approve(_owner, amount)"
+            ],
+            "jump5345": [
+                "target.send(amount)",
+                "target.send(amount)"
+            ],
+            "block3716": [
+                "_ens.owner(nodehash)"
+            ],
+            "jump2618": [
+                "_ens.owner(nodehash)",
+                "_ens.owner(nodehash)"
+            ],
+            "jump4560": [
+                "ecrecover(bytes32(owner), sigV, sigR, sigS)",
+                "ecrecover(bytes32(owner), sigV, sigR, sigS)"
+            ],
+            "jump2130": [
+                "_ens.owner(RR_NODE)",
+                "_ens.owner(RR_NODE)"
+            ],
+            "block2377": [
+                "ReverseRegistrar(_ens.owner(RR_NODE)).claim(_owner)"
+            ]
+        }
+    }
+}

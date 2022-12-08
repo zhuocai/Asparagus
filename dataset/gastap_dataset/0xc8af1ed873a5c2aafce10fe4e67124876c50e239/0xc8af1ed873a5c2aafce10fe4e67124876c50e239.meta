@@ -1,0 +1,134 @@
+{
+    "ERC20": {
+        "function_list": [
+            "transferFrom(address,address,uint256)"
+        ],
+        "initial_state": {
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferFrom(address,address,uint256)": [
+                599,
+                163
+            ]
+        },
+        "block_CALL_mapping": {
+            "block4085": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ],
+            "jump4085": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)",
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ]
+        }
+    },
+    "P2PFuturesTrading": {
+        "function_list": [
+            "startTrade(address,address,uint256,uint256,uint256)",
+            "finalizeTrade(address,uint256,address,uint256,uint256)",
+            "completeTrade(address)",
+            "cancelTrade(address)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "startTrade(address,address,uint256,uint256,uint256)": {
+                "argument": {
+                    "tokenAmount": "uint256",
+                    "etherCollateralAmount": "uint256",
+                    "endTradeBlock": "uint256"
+                },
+                "contract": {}
+            },
+            "finalizeTrade(address,uint256,address,uint256,uint256)": {
+                "argument": {
+                    "etherAmount": "uint256",
+                    "tokenAmount": "uint256",
+                    "endTradeBlock": "uint256"
+                },
+                "contract": {}
+            },
+            "completeTrade(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "cancelTrade(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "completeTrade(address)": [
+                443,
+                119
+            ],
+            "startTrade(address,address,uint256,uint256,uint256)": [
+                510,
+                141
+            ],
+            "finalizeTrade(address,uint256,address,uint256,uint256)": [
+                114,
+                75
+            ],
+            "cancelTrade(address)": [
+                626,
+                163
+            ]
+        },
+        "block_CALL_mapping": {
+            "block1981": [
+                "token.transferFrom(tokenSellerAddress, tokenBuyerAddress, t.tokenAmount - tokenSellerFee)"
+            ],
+            "jump2572": [
+                "tokenSellerAddress.transfer(t.etherAmount + t.etherCollateralAmount - tokenBuyerFee)",
+                "tokenSellerAddress.transfer(t.etherAmount + t.etherCollateralAmount - tokenBuyerFee)"
+            ],
+            "block2654": [
+                "developerAddress.transfer(tokenBuyerFee)"
+            ],
+            "block2296": [
+                "token.transferFrom(tokenSellerAddress, developerAddress, tokenSellerFee)"
+            ],
+            "block3689": [
+                "msg.sender.transfer(t.etherAmount)"
+            ],
+            "jump2375": [
+                "tokenBuyerAddress.transfer(t.etherAmount + t.etherCollateralAmount - collateralFee)",
+                "tokenBuyerAddress.transfer(t.etherAmount + t.etherCollateralAmount - collateralFee)"
+            ],
+            "jump3689": [
+                "msg.sender.transfer(t.etherAmount)",
+                "msg.sender.transfer(t.etherAmount)"
+            ],
+            "jump2296": [
+                "token.transferFrom(tokenSellerAddress, developerAddress, tokenSellerFee)",
+                "token.transferFrom(tokenSellerAddress, developerAddress, tokenSellerFee)"
+            ],
+            "block2572": [
+                "tokenSellerAddress.transfer(t.etherAmount + t.etherCollateralAmount - tokenBuyerFee)"
+            ],
+            "jump2456": [
+                "developerAddress.transfer(collateralFee)",
+                "developerAddress.transfer(collateralFee)"
+            ],
+            "block2375": [
+                "tokenBuyerAddress.transfer(t.etherAmount + t.etherCollateralAmount - collateralFee)"
+            ],
+            "block2456": [
+                "developerAddress.transfer(collateralFee)"
+            ],
+            "jump2654": [
+                "developerAddress.transfer(tokenBuyerFee)",
+                "developerAddress.transfer(tokenBuyerFee)"
+            ],
+            "jump1981": [
+                "token.transferFrom(tokenSellerAddress, tokenBuyerAddress, t.tokenAmount - tokenSellerFee)",
+                "token.transferFrom(tokenSellerAddress, tokenBuyerAddress, t.tokenAmount - tokenSellerFee)"
+            ]
+        }
+    }
+}

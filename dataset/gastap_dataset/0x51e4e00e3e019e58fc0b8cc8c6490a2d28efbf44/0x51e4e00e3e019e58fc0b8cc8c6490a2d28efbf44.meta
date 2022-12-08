@@ -1,0 +1,241 @@
+{
+    "ERC20": {
+        "function_list": [
+            "transfer(address,uint256)",
+            "balanceOf(address)"
+        ],
+        "initial_state": {
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                491,
+                163
+            ],
+            "transfer(address,uint256)": [
+                777,
+                251
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Controller": {
+        "function_list": [
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {},
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "SanityPools": {
+        "function_list": [
+            "createPool(string,uint256,uint256)",
+            "setSale(uint256,address)",
+            "setToken(uint256,address)",
+            "buyTokens(uint256)",
+            "emergency_withdraw(uint256,address)",
+            "change_delay(uint256)",
+            "getPoolName(uint256)",
+            "refund(uint256)",
+            "withdraw(uint256)",
+            "contribute(uint256)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "createPool(string,uint256,uint256)": {
+                "argument": {
+                    "_name": "string",
+                    "_min": "uint256",
+                    "_max": "uint256"
+                },
+                "contract": {
+                    "index_active": "uint256",
+                    "week_in_blocs": "uint256"
+                }
+            },
+            "setSale(uint256,address)": {
+                "argument": {
+                    "_index": "uint256"
+                },
+                "contract": {
+                    "index_active": "uint256",
+                    "week_in_blocs": "uint256"
+                }
+            },
+            "setToken(uint256,address)": {
+                "argument": {
+                    "_index": "uint256"
+                },
+                "contract": {
+                    "index_active": "uint256",
+                    "week_in_blocs": "uint256"
+                }
+            },
+            "buyTokens(uint256)": {
+                "argument": {
+                    "_index": "uint256"
+                },
+                "contract": {
+                    "index_active": "uint256",
+                    "week_in_blocs": "uint256"
+                }
+            },
+            "emergency_withdraw(uint256,address)": {
+                "argument": {
+                    "_index": "uint256"
+                },
+                "contract": {
+                    "index_active": "uint256",
+                    "week_in_blocs": "uint256"
+                }
+            },
+            "change_delay(uint256)": {
+                "argument": {
+                    "_delay": "uint256"
+                },
+                "contract": {
+                    "index_active": "uint256",
+                    "week_in_blocs": "uint256"
+                }
+            },
+            "getPoolName(uint256)": {
+                "argument": {
+                    "_index": "uint256"
+                },
+                "contract": {
+                    "index_active": "uint256",
+                    "week_in_blocs": "uint256"
+                }
+            },
+            "refund(uint256)": {
+                "argument": {
+                    "_index": "uint256"
+                },
+                "contract": {
+                    "index_active": "uint256",
+                    "week_in_blocs": "uint256"
+                }
+            },
+            "withdraw(uint256)": {
+                "argument": {
+                    "_index": "uint256"
+                },
+                "contract": {
+                    "index_active": "uint256",
+                    "week_in_blocs": "uint256"
+                }
+            },
+            "contribute(uint256)": {
+                "argument": {
+                    "_index": "uint256"
+                },
+                "contract": {
+                    "index_active": "uint256",
+                    "week_in_blocs": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "change_delay(uint256)": [
+                492,
+                163
+            ],
+            "emergency_withdraw(uint256,address)": [
+                739,
+                229
+            ],
+            "withdraw(uint256)": [
+                402,
+                119
+            ],
+            "setToken(uint256,address)": [
+                662,
+                207
+            ],
+            "buyTokens(uint256)": [
+                447,
+                141
+            ],
+            "contribute(uint256)": [
+                816,
+                251
+            ],
+            "getPoolName(uint256)": [
+                191,
+                75
+            ],
+            "setSale(uint256,address)": [
+                978,
+                317
+            ],
+            "createPool(string,uint256,uint256)": [
+                537,
+                185
+            ],
+            "refund(uint256)": [
+                357,
+                97
+            ]
+        },
+        "block_CALL_mapping": {
+            "block4653": [
+                "token.transfer(msg.sender, contract_token_balance)"
+            ],
+            "jump4413": [
+                "token.balanceOf(address(this))",
+                "token.balanceOf(address(this))"
+            ],
+            "jump4653": [
+                "token.transfer(msg.sender, contract_token_balance)",
+                "token.transfer(msg.sender, contract_token_balance)"
+            ],
+            "jump3123": [
+                "pool.sale.transfer(pool.pool_eth_value)",
+                "pool.sale.transfer(pool.pool_eth_value)"
+            ],
+            "block1868": [
+                "pool.token.balanceOf(address(this))"
+            ],
+            "block1338": [
+                "msg.sender.transfer(eth_to_withdraw)"
+            ],
+            "jump1868": [
+                "pool.token.balanceOf(address(this))",
+                "pool.token.balanceOf(address(this))"
+            ],
+            "block2747": [
+                "pool.token.transfer(developer, fee)"
+            ],
+            "block2445": [
+                "pool.token.transfer(msg.sender, tokens_to_withdraw - fee)"
+            ],
+            "jump2747": [
+                "pool.token.transfer(developer, fee)",
+                "pool.token.transfer(developer, fee)"
+            ],
+            "jump2445": [
+                "pool.token.transfer(msg.sender, tokens_to_withdraw - fee)",
+                "pool.token.transfer(msg.sender, tokens_to_withdraw - fee)"
+            ],
+            "block4413": [
+                "token.balanceOf(address(this))"
+            ],
+            "jump1338": [
+                "msg.sender.transfer(eth_to_withdraw)",
+                "msg.sender.transfer(eth_to_withdraw)"
+            ],
+            "block3123": [
+                "pool.sale.transfer(pool.pool_eth_value)"
+            ]
+        }
+    }
+}

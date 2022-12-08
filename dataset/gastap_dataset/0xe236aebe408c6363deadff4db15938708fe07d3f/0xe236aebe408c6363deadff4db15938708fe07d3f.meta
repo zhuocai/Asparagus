@@ -1,0 +1,104 @@
+{
+    "ERC20Interface": {
+        "function_list": [
+            "transfer(address,uint256)",
+            "balanceOf(address)"
+        ],
+        "initial_state": {
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                402,
+                141
+            ],
+            "transfer(address,uint256)": [
+                489,
+                163
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Forwarder": {
+        "function_list": [
+            "Forwarder()",
+            "fallback()",
+            "flushTokens(address)",
+            "flush()"
+        ],
+        "initial_state": {
+            "Forwarder()": {
+                "argument": {},
+                "contract": {}
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {}
+            },
+            "flushTokens(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "flush()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "flush()": [
+                491,
+                44
+            ],
+            "flushTokens(address)": [
+                424,
+                22
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump1263": [
+                "parentAddress.call.value(this.balance)()",
+                "parentAddress.call.value(this.balance)()"
+            ],
+            "jump86_0": [
+                "parentAddress.call.value(msg.value)(msg.data)",
+                "parentAddress.call.value(msg.value)(msg.data)"
+            ],
+            "block1079": [
+                "instance.transfer(parentAddress, forwarderBalance)"
+            ],
+            "jump1079": [
+                "instance.transfer(parentAddress, forwarderBalance)",
+                "instance.transfer(parentAddress, forwarderBalance)"
+            ],
+            "block86": [
+                "parentAddress.call.value(msg.value)(msg.data)"
+            ],
+            "jump808": [
+                "instance.balanceOf(forwarderAddress)",
+                "instance.balanceOf(forwarderAddress)"
+            ],
+            "block808": [
+                "instance.balanceOf(forwarderAddress)"
+            ],
+            "block1263": [
+                "parentAddress.call.value(this.balance)()"
+            ],
+            "jump86": [
+                "parentAddress.call.value(msg.value)(msg.data)",
+                "parentAddress.call.value(msg.value)(msg.data)"
+            ],
+            "block86_0": [
+                "parentAddress.call.value(msg.value)(msg.data)"
+            ]
+        }
+    }
+}

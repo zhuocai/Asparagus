@@ -1,0 +1,864 @@
+{
+    "ERC20": {
+        "function_list": [
+            "totalSupply()",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)"
+        ],
+        "initial_state": {
+            "totalSupply()": {
+                "argument": {},
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                412,
+                97
+            ],
+            "transfer(address,uint256)": [
+                1396,
+                361
+            ],
+            "totalSupply()": [
+                556,
+                141
+            ],
+            "allowance(address,address)": [
+                1802,
+                449
+            ],
+            "balanceOf(address)": [
+                1055,
+                273
+            ],
+            "transferFrom(address,address,uint256)": [
+                599,
+                163
+            ]
+        },
+        "block_CALL_mapping": {
+            "block4085": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ],
+            "jump4085": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)",
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ]
+        }
+    },
+    "SafeMath": {
+        "function_list": [
+            "ADD(uint256,uint256)",
+            "SUB(uint256,uint256)"
+        ],
+        "initial_state": {
+            "ADD(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "SUB(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "Ownable": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                70,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Trustable": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "Trustable()",
+            "addTrusted(address)",
+            "removeTrusted(address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "Trustable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "addTrusted(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "removeTrusted(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "addTrusted(address)": [
+                92,
+                75
+            ],
+            "removeTrusted(address)": [
+                159,
+                97
+            ],
+            "transferOwnership(address)": [
+                226,
+                119
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Pausable": {
+        "function_list": [
+            "Trustable()",
+            "addTrusted(address)",
+            "removeTrusted(address)",
+            "Ownable()",
+            "transferOwnership(address)",
+            "pause()",
+            "unpause()"
+        ],
+        "initial_state": {
+            "Trustable()": {
+                "argument": {},
+                "contract": {
+                    "pauseBlockNumber": "uint256",
+                    "resumeBlockNumber": "uint256"
+                }
+            },
+            "addTrusted(address)": {
+                "argument": {},
+                "contract": {
+                    "pauseBlockNumber": "uint256",
+                    "resumeBlockNumber": "uint256"
+                }
+            },
+            "removeTrusted(address)": {
+                "argument": {},
+                "contract": {
+                    "pauseBlockNumber": "uint256",
+                    "resumeBlockNumber": "uint256"
+                }
+            },
+            "Ownable()": {
+                "argument": {},
+                "contract": {
+                    "pauseBlockNumber": "uint256",
+                    "resumeBlockNumber": "uint256"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "pauseBlockNumber": "uint256",
+                    "resumeBlockNumber": "uint256"
+                }
+            },
+            "pause()": {
+                "argument": {},
+                "contract": {
+                    "pauseBlockNumber": "uint256",
+                    "resumeBlockNumber": "uint256"
+                }
+            },
+            "unpause()": {
+                "argument": {},
+                "contract": {
+                    "pauseBlockNumber": "uint256",
+                    "resumeBlockNumber": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "pause()": [
+                217,
+                119
+            ],
+            "addTrusted(address)": [
+                326,
+                185
+            ],
+            "unpause()": [
+                147,
+                75
+            ],
+            "removeTrusted(address)": [
+                393,
+                207
+            ],
+            "transferOwnership(address)": [
+                460,
+                229
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Token": {
+        "function_list": [
+            "pause()",
+            "unpause()",
+            "Trustable()",
+            "addTrusted(address)",
+            "removeTrusted(address)",
+            "Ownable()",
+            "transferOwnership(address)",
+            "totalSupply()",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "totalSupply()",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "increaseApproval(address,uint256)",
+            "decreaseApproval(address,uint256)",
+            "burn(uint256)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "pause()": {
+                "argument": {},
+                "contract": {
+                    "_totalSupply": "uint256"
+                }
+            },
+            "unpause()": {
+                "argument": {},
+                "contract": {
+                    "_totalSupply": "uint256"
+                }
+            },
+            "Trustable()": {
+                "argument": {},
+                "contract": {
+                    "_totalSupply": "uint256"
+                }
+            },
+            "addTrusted(address)": {
+                "argument": {},
+                "contract": {
+                    "_totalSupply": "uint256"
+                }
+            },
+            "removeTrusted(address)": {
+                "argument": {},
+                "contract": {
+                    "_totalSupply": "uint256"
+                }
+            },
+            "Ownable()": {
+                "argument": {},
+                "contract": {
+                    "_totalSupply": "uint256"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "_totalSupply": "uint256"
+                }
+            },
+            "totalSupply()": {
+                "argument": {},
+                "contract": {
+                    "_totalSupply": "uint256"
+                }
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "_totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "_totalSupply": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "_totalSupply": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "_totalSupply": "uint256"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "_totalSupply": "uint256"
+                }
+            },
+            "increaseApproval(address,uint256)": {
+                "argument": {
+                    "_addedValue": "uint256"
+                },
+                "contract": {
+                    "_totalSupply": "uint256"
+                }
+            },
+            "decreaseApproval(address,uint256)": {
+                "argument": {
+                    "_subtractedValue": "uint256"
+                },
+                "contract": {
+                    "_totalSupply": "uint256"
+                }
+            },
+            "burn(uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "_totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "pause()": [
+                850,
+                251
+            ],
+            "approve(address,uint256)": [
+                246,
+                75
+            ],
+            "addTrusted(address)": [
+                1060,
+                339
+            ],
+            "unpause()": [
+                523,
+                141
+            ],
+            "increaseApproval(address,uint256)": [
+                1194,
+                383
+            ],
+            "balanceOf(address)": [
+                763,
+                229
+            ],
+            "totalSupply()": [
+                347,
+                97
+            ],
+            "removeTrusted(address)": [
+                1127,
+                361
+            ],
+            "burn(uint256)": [
+                546,
+                163
+            ],
+            "decreaseApproval(address,uint256)": [
+                662,
+                207
+            ],
+            "transferFrom(address,address,uint256)": [
+                390,
+                119
+            ],
+            "transferOwnership(address)": [
+                1414,
+                427
+            ],
+            "allowance(address,address)": [
+                1295,
+                405
+            ],
+            "transfer(address,uint256)": [
+                916,
+                295
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "OutingToken": {
+        "function_list": [
+            "totalSupply()",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "increaseApproval(address,uint256)",
+            "decreaseApproval(address,uint256)",
+            "burn(uint256)",
+            "pause()",
+            "unpause()",
+            "Trustable()",
+            "addTrusted(address)",
+            "removeTrusted(address)",
+            "Ownable()",
+            "transferOwnership(address)",
+            "totalSupply()",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "OutingToken()",
+            "unlockTokens(address)",
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "totalSupply()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "UNLOCK_OUTINGRESERVE": "uint256",
+                    "UNLOCK_TEAM": "uint256",
+                    "outingreserveBalance": "uint256",
+                    "teamBalance": "uint256",
+                    "OUTINGRESERVE_THOUSANDTH": "uint256",
+                    "TEAM_THOUSANDTH": "uint256",
+                    "ICO_THOUSANDTH": "uint256",
+                    "DENOMINATOR": "uint256"
+                }
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "UNLOCK_OUTINGRESERVE": "uint256",
+                    "UNLOCK_TEAM": "uint256",
+                    "outingreserveBalance": "uint256",
+                    "teamBalance": "uint256",
+                    "OUTINGRESERVE_THOUSANDTH": "uint256",
+                    "TEAM_THOUSANDTH": "uint256",
+                    "ICO_THOUSANDTH": "uint256",
+                    "DENOMINATOR": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "UNLOCK_OUTINGRESERVE": "uint256",
+                    "UNLOCK_TEAM": "uint256",
+                    "outingreserveBalance": "uint256",
+                    "teamBalance": "uint256",
+                    "OUTINGRESERVE_THOUSANDTH": "uint256",
+                    "TEAM_THOUSANDTH": "uint256",
+                    "ICO_THOUSANDTH": "uint256",
+                    "DENOMINATOR": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "UNLOCK_OUTINGRESERVE": "uint256",
+                    "UNLOCK_TEAM": "uint256",
+                    "outingreserveBalance": "uint256",
+                    "teamBalance": "uint256",
+                    "OUTINGRESERVE_THOUSANDTH": "uint256",
+                    "TEAM_THOUSANDTH": "uint256",
+                    "ICO_THOUSANDTH": "uint256",
+                    "DENOMINATOR": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "UNLOCK_OUTINGRESERVE": "uint256",
+                    "UNLOCK_TEAM": "uint256",
+                    "outingreserveBalance": "uint256",
+                    "teamBalance": "uint256",
+                    "OUTINGRESERVE_THOUSANDTH": "uint256",
+                    "TEAM_THOUSANDTH": "uint256",
+                    "ICO_THOUSANDTH": "uint256",
+                    "DENOMINATOR": "uint256"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "UNLOCK_OUTINGRESERVE": "uint256",
+                    "UNLOCK_TEAM": "uint256",
+                    "outingreserveBalance": "uint256",
+                    "teamBalance": "uint256",
+                    "OUTINGRESERVE_THOUSANDTH": "uint256",
+                    "TEAM_THOUSANDTH": "uint256",
+                    "ICO_THOUSANDTH": "uint256",
+                    "DENOMINATOR": "uint256"
+                }
+            },
+            "increaseApproval(address,uint256)": {
+                "argument": {
+                    "_addedValue": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "UNLOCK_OUTINGRESERVE": "uint256",
+                    "UNLOCK_TEAM": "uint256",
+                    "outingreserveBalance": "uint256",
+                    "teamBalance": "uint256",
+                    "OUTINGRESERVE_THOUSANDTH": "uint256",
+                    "TEAM_THOUSANDTH": "uint256",
+                    "ICO_THOUSANDTH": "uint256",
+                    "DENOMINATOR": "uint256"
+                }
+            },
+            "decreaseApproval(address,uint256)": {
+                "argument": {
+                    "_subtractedValue": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "UNLOCK_OUTINGRESERVE": "uint256",
+                    "UNLOCK_TEAM": "uint256",
+                    "outingreserveBalance": "uint256",
+                    "teamBalance": "uint256",
+                    "OUTINGRESERVE_THOUSANDTH": "uint256",
+                    "TEAM_THOUSANDTH": "uint256",
+                    "ICO_THOUSANDTH": "uint256",
+                    "DENOMINATOR": "uint256"
+                }
+            },
+            "burn(uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "UNLOCK_OUTINGRESERVE": "uint256",
+                    "UNLOCK_TEAM": "uint256",
+                    "outingreserveBalance": "uint256",
+                    "teamBalance": "uint256",
+                    "OUTINGRESERVE_THOUSANDTH": "uint256",
+                    "TEAM_THOUSANDTH": "uint256",
+                    "ICO_THOUSANDTH": "uint256",
+                    "DENOMINATOR": "uint256"
+                }
+            },
+            "pause()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "UNLOCK_OUTINGRESERVE": "uint256",
+                    "UNLOCK_TEAM": "uint256",
+                    "outingreserveBalance": "uint256",
+                    "teamBalance": "uint256",
+                    "OUTINGRESERVE_THOUSANDTH": "uint256",
+                    "TEAM_THOUSANDTH": "uint256",
+                    "ICO_THOUSANDTH": "uint256",
+                    "DENOMINATOR": "uint256"
+                }
+            },
+            "unpause()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "UNLOCK_OUTINGRESERVE": "uint256",
+                    "UNLOCK_TEAM": "uint256",
+                    "outingreserveBalance": "uint256",
+                    "teamBalance": "uint256",
+                    "OUTINGRESERVE_THOUSANDTH": "uint256",
+                    "TEAM_THOUSANDTH": "uint256",
+                    "ICO_THOUSANDTH": "uint256",
+                    "DENOMINATOR": "uint256"
+                }
+            },
+            "Trustable()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "UNLOCK_OUTINGRESERVE": "uint256",
+                    "UNLOCK_TEAM": "uint256",
+                    "outingreserveBalance": "uint256",
+                    "teamBalance": "uint256",
+                    "OUTINGRESERVE_THOUSANDTH": "uint256",
+                    "TEAM_THOUSANDTH": "uint256",
+                    "ICO_THOUSANDTH": "uint256",
+                    "DENOMINATOR": "uint256"
+                }
+            },
+            "addTrusted(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "UNLOCK_OUTINGRESERVE": "uint256",
+                    "UNLOCK_TEAM": "uint256",
+                    "outingreserveBalance": "uint256",
+                    "teamBalance": "uint256",
+                    "OUTINGRESERVE_THOUSANDTH": "uint256",
+                    "TEAM_THOUSANDTH": "uint256",
+                    "ICO_THOUSANDTH": "uint256",
+                    "DENOMINATOR": "uint256"
+                }
+            },
+            "removeTrusted(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "UNLOCK_OUTINGRESERVE": "uint256",
+                    "UNLOCK_TEAM": "uint256",
+                    "outingreserveBalance": "uint256",
+                    "teamBalance": "uint256",
+                    "OUTINGRESERVE_THOUSANDTH": "uint256",
+                    "TEAM_THOUSANDTH": "uint256",
+                    "ICO_THOUSANDTH": "uint256",
+                    "DENOMINATOR": "uint256"
+                }
+            },
+            "Ownable()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "UNLOCK_OUTINGRESERVE": "uint256",
+                    "UNLOCK_TEAM": "uint256",
+                    "outingreserveBalance": "uint256",
+                    "teamBalance": "uint256",
+                    "OUTINGRESERVE_THOUSANDTH": "uint256",
+                    "TEAM_THOUSANDTH": "uint256",
+                    "ICO_THOUSANDTH": "uint256",
+                    "DENOMINATOR": "uint256"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "UNLOCK_OUTINGRESERVE": "uint256",
+                    "UNLOCK_TEAM": "uint256",
+                    "outingreserveBalance": "uint256",
+                    "teamBalance": "uint256",
+                    "OUTINGRESERVE_THOUSANDTH": "uint256",
+                    "TEAM_THOUSANDTH": "uint256",
+                    "ICO_THOUSANDTH": "uint256",
+                    "DENOMINATOR": "uint256"
+                }
+            },
+            "OutingToken()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "UNLOCK_OUTINGRESERVE": "uint256",
+                    "UNLOCK_TEAM": "uint256",
+                    "outingreserveBalance": "uint256",
+                    "teamBalance": "uint256",
+                    "OUTINGRESERVE_THOUSANDTH": "uint256",
+                    "TEAM_THOUSANDTH": "uint256",
+                    "ICO_THOUSANDTH": "uint256",
+                    "DENOMINATOR": "uint256"
+                }
+            },
+            "unlockTokens(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "UNLOCK_OUTINGRESERVE": "uint256",
+                    "UNLOCK_TEAM": "uint256",
+                    "outingreserveBalance": "uint256",
+                    "teamBalance": "uint256",
+                    "OUTINGRESERVE_THOUSANDTH": "uint256",
+                    "TEAM_THOUSANDTH": "uint256",
+                    "ICO_THOUSANDTH": "uint256",
+                    "DENOMINATOR": "uint256"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "UNLOCK_OUTINGRESERVE": "uint256",
+                    "UNLOCK_TEAM": "uint256",
+                    "outingreserveBalance": "uint256",
+                    "teamBalance": "uint256",
+                    "OUTINGRESERVE_THOUSANDTH": "uint256",
+                    "TEAM_THOUSANDTH": "uint256",
+                    "ICO_THOUSANDTH": "uint256",
+                    "DENOMINATOR": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "totalSupply()": [
+                601,
+                119
+            ],
+            "removeTrusted(address)": [
+                1987,
+                581
+            ],
+            "allowance(address,address)": [
+                2155,
+                625
+            ],
+            "decreaseApproval(address,uint256)": [
+                1008,
+                273
+            ],
+            "transferFrom(address,address,uint256)": [
+                644,
+                141
+            ],
+            "pause()": [
+                1196,
+                317
+            ],
+            "approve(address,uint256)": [
+                500,
+                97
+            ],
+            "unpause()": [
+                826,
+                185
+            ],
+            "increaseApproval(address,uint256)": [
+                2054,
+                603
+            ],
+            "burn(uint256)": [
+                849,
+                207
+            ],
+            "balanceOf(address)": [
+                1109,
+                295
+            ],
+            "transferOwnership(address)": [
+                2274,
+                647
+            ],
+            "addTrusted(address)": [
+                1920,
+                559
+            ],
+            "unlockTokens(address)": [
+                1766,
+                515
+            ],
+            "transfer(address,uint256)": [
+                1449,
+                405
+            ]
+        },
+        "block_CALL_mapping": {}
+    }
+}

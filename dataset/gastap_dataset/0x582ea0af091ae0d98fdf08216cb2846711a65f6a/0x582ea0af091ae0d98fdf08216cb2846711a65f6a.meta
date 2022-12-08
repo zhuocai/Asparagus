@@ -1,0 +1,364 @@
+{
+    "ERC20": {
+        "function_list": [
+            "totalSupply()",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "decimals()"
+        ],
+        "initial_state": {
+            "totalSupply()": {
+                "argument": {},
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "decimals()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                346,
+                97
+            ],
+            "totalSupply()": [
+                447,
+                119
+            ],
+            "balanceOf(address)": [
+                773,
+                207
+            ],
+            "transferFrom(address,address,uint256)": [
+                490,
+                141
+            ],
+            "allowance(address,address)": [
+                1394,
+                339
+            ],
+            "transfer(address,uint256)": [
+                1091,
+                273
+            ],
+            "decimals()": [
+                623,
+                163
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "KyberReserve": {
+        "function_list": [
+            "KyberReserve(address,address)",
+            "isPairListed(ERC20,ERC20,uint256)",
+            "getConversionRate(ERC20,ERC20,uint256)",
+            "getDecimals(ERC20)",
+            "doTrade(ERC20,uint256,ERC20,address,bool)",
+            "trade(ERC20,uint256,ERC20,address,bool)",
+            "setRate(ERC20[],ERC20[],uint256[],uint256[],bool)",
+            "enableTrade(bool)",
+            "fallback()",
+            "depositEther()",
+            "depositToken(ERC20,uint256)",
+            "withdraw(ERC20,uint256,address)",
+            "changeOwner(address)",
+            "getPairInfo(ERC20,ERC20)",
+            "getBalance(ERC20)",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "KyberReserve(address,address)": {
+                "argument": {},
+                "contract": {
+                    "PRECISION": "uint256"
+                }
+            },
+            "isPairListed(ERC20,ERC20,uint256)": {
+                "argument": {
+                    "blockNumber": "uint256"
+                },
+                "contract": {
+                    "PRECISION": "uint256"
+                }
+            },
+            "getConversionRate(ERC20,ERC20,uint256)": {
+                "argument": {
+                    "blockNumber": "uint256"
+                },
+                "contract": {
+                    "PRECISION": "uint256"
+                }
+            },
+            "getDecimals(ERC20)": {
+                "argument": {},
+                "contract": {
+                    "PRECISION": "uint256"
+                }
+            },
+            "doTrade(ERC20,uint256,ERC20,address,bool)": {
+                "argument": {
+                    "sourceAmount": "uint256"
+                },
+                "contract": {
+                    "PRECISION": "uint256"
+                }
+            },
+            "trade(ERC20,uint256,ERC20,address,bool)": {
+                "argument": {
+                    "sourceAmount": "uint256"
+                },
+                "contract": {
+                    "PRECISION": "uint256"
+                }
+            },
+            "setRate(ERC20[],ERC20[],uint256[],uint256[],bool)": {
+                "argument": {
+                    "sources": "ERC20[]",
+                    "dests": "ERC20[]",
+                    "conversionRates": "uint256[]",
+                    "expiryBlocks": "uint256[]"
+                },
+                "contract": {
+                    "PRECISION": "uint256"
+                }
+            },
+            "enableTrade(bool)": {
+                "argument": {},
+                "contract": {
+                    "PRECISION": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "PRECISION": "uint256"
+                }
+            },
+            "depositEther()": {
+                "argument": {},
+                "contract": {
+                    "PRECISION": "uint256"
+                }
+            },
+            "depositToken(ERC20,uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {
+                    "PRECISION": "uint256"
+                }
+            },
+            "withdraw(ERC20,uint256,address)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {
+                    "PRECISION": "uint256"
+                }
+            },
+            "changeOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "PRECISION": "uint256"
+                }
+            },
+            "getPairInfo(ERC20,ERC20)": {
+                "argument": {},
+                "contract": {
+                    "PRECISION": "uint256"
+                }
+            },
+            "getBalance(ERC20)": {
+                "argument": {},
+                "contract": {
+                    "PRECISION": "uint256"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "PRECISION": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "depositEther()": [
+                955,
+                185
+            ],
+            "enableTrade(bool)": [
+                1143,
+                251
+            ],
+            "changeOwner(address)": [
+                989,
+                207
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump2270": [
+                "msg.sender.send(msg.value)",
+                "msg.sender.send(msg.value)"
+            ],
+            "block3517": [
+                "token.transferFrom(msg.sender, this, amount )"
+            ],
+            "block1987": [
+                "msg.sender.send(msg.value)"
+            ],
+            "block4671": [
+                "destination.send(amount)"
+            ],
+            "block8474": [
+                "sourceToken.allowance(msg.sender, this )"
+            ],
+            "jump10502": [
+                "destToken.transfer(destAddress, destAmount)",
+                "destToken.transfer(destAddress, destAmount)"
+            ],
+            "jump8474": [
+                "sourceToken.allowance(msg.sender, this )",
+                "sourceToken.allowance(msg.sender, this )"
+            ],
+            "jump6338_1": [
+                "token.decimals()",
+                "token.decimals()"
+            ],
+            "jump6338_0": [
+                "token.decimals()",
+                "token.decimals()"
+            ],
+            "block10502": [
+                "destToken.transfer(destAddress, destAmount)"
+            ],
+            "block9893": [
+                "sourceToken.transferFrom(msg.sender,this,sourceAmount)"
+            ],
+            "block2270": [
+                "msg.sender.send(msg.value)"
+            ],
+            "jump4304": [
+                "dest.balanceOf(this)",
+                "dest.balanceOf(this)"
+            ],
+            "jump8808": [
+                "sourceToken.allowance(msg.sender, this )",
+                "sourceToken.allowance(msg.sender, this )"
+            ],
+            "jump3206": [
+                "token.allowance( msg.sender, this )",
+                "token.allowance( msg.sender, this )"
+            ],
+            "block3206": [
+                "token.allowance( msg.sender, this )"
+            ],
+            "jump9417": [
+                "destToken.balanceOf(this)",
+                "destToken.balanceOf(this)"
+            ],
+            "jump4902": [
+                "token.transfer(destination,amount)",
+                "token.transfer(destination,amount)"
+            ],
+            "jump10154": [
+                "destAddress.send(destAmount)",
+                "destAddress.send(destAmount)"
+            ],
+            "block4902": [
+                "token.transfer(destination,amount)"
+            ],
+            "jump4671": [
+                "destination.send(amount)",
+                "destination.send(amount)"
+            ],
+            "jump3517": [
+                "token.transferFrom(msg.sender, this, amount )",
+                "token.transferFrom(msg.sender, this, amount )"
+            ],
+            "block2872": [
+                "token.allowance( msg.sender, this )"
+            ],
+            "jump1987": [
+                "msg.sender.send(msg.value)",
+                "msg.sender.send(msg.value)"
+            ],
+            "block9417": [
+                "destToken.balanceOf(this)"
+            ],
+            "jump7775": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "jump6338": [
+                "token.decimals()",
+                "token.decimals()"
+            ],
+            "block6338_0": [
+                "token.decimals()"
+            ],
+            "jump9893": [
+                "sourceToken.transferFrom(msg.sender,this,sourceAmount)",
+                "sourceToken.transferFrom(msg.sender,this,sourceAmount)"
+            ],
+            "block6338_1": [
+                "token.decimals()"
+            ],
+            "block4304": [
+                "dest.balanceOf(this)"
+            ],
+            "block6338": [
+                "token.decimals()"
+            ],
+            "block7775": [
+                "token.balanceOf(this)"
+            ],
+            "jump2464": [
+                "msg.sender.send(msg.value)",
+                "msg.sender.send(msg.value)"
+            ],
+            "jump2872": [
+                "token.allowance( msg.sender, this )",
+                "token.allowance( msg.sender, this )"
+            ],
+            "block8808": [
+                "sourceToken.allowance(msg.sender, this )"
+            ],
+            "block10154": [
+                "destAddress.send(destAmount)"
+            ],
+            "block2464": [
+                "msg.sender.send(msg.value)"
+            ]
+        }
+    }
+}

@@ -1,0 +1,531 @@
+{
+    "ERC20": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                401,
+                97
+            ],
+            "transfer(address,uint256)": [
+                1385,
+                361
+            ],
+            "allowance(address,address)": [
+                1704,
+                427
+            ],
+            "balanceOf(address)": [
+                1044,
+                273
+            ],
+            "transferFrom(address,address,uint256)": [
+                588,
+                163
+            ]
+        },
+        "block_CALL_mapping": {
+            "block3721": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ],
+            "jump3721": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)",
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ]
+        }
+    },
+    "Ownable": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "Controlled": {
+        "function_list": [
+            "Controlled()",
+            "changeController(address)"
+        ],
+        "initial_state": {
+            "Controlled()": {
+                "argument": {},
+                "contract": {}
+            },
+            "changeController(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "changeController(address)": [
+                81,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Hodler": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "Hodler(uint256,uint256,uint256)",
+            "addHodlerStake(address,uint256)",
+            "setHodlerStake(address,uint256)",
+            "setHodlerTime(uint256)",
+            "invalidate(address)",
+            "claimHodlReward()",
+            "claimHodlRewardFor(address)",
+            "claimHodlRewardsFor(address[])",
+            "updateAndGetHodlTotalValue()"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {
+                    "hodlerTotalValue": "uint256",
+                    "hodlerTotalCount": "uint256",
+                    "hodlerTotalValue3M": "uint256",
+                    "hodlerTotalValue6M": "uint256",
+                    "hodlerTotalValue9M": "uint256",
+                    "hodlerTimeStart": "uint256",
+                    "hodlerTime3M": "uint256",
+                    "hodlerTime6M": "uint256",
+                    "hodlerTime9M": "uint256",
+                    "TOKEN_HODL_3M": "uint256",
+                    "TOKEN_HODL_6M": "uint256",
+                    "TOKEN_HODL_9M": "uint256",
+                    "claimedTokens": "uint256"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "hodlerTotalValue": "uint256",
+                    "hodlerTotalCount": "uint256",
+                    "hodlerTotalValue3M": "uint256",
+                    "hodlerTotalValue6M": "uint256",
+                    "hodlerTotalValue9M": "uint256",
+                    "hodlerTimeStart": "uint256",
+                    "hodlerTime3M": "uint256",
+                    "hodlerTime6M": "uint256",
+                    "hodlerTime9M": "uint256",
+                    "TOKEN_HODL_3M": "uint256",
+                    "TOKEN_HODL_6M": "uint256",
+                    "TOKEN_HODL_9M": "uint256",
+                    "claimedTokens": "uint256"
+                }
+            },
+            "Hodler(uint256,uint256,uint256)": {
+                "argument": {
+                    "_stake3m": "uint256",
+                    "_stake6m": "uint256",
+                    "_stake9m": "uint256"
+                },
+                "contract": {
+                    "hodlerTotalValue": "uint256",
+                    "hodlerTotalCount": "uint256",
+                    "hodlerTotalValue3M": "uint256",
+                    "hodlerTotalValue6M": "uint256",
+                    "hodlerTotalValue9M": "uint256",
+                    "hodlerTimeStart": "uint256",
+                    "hodlerTime3M": "uint256",
+                    "hodlerTime6M": "uint256",
+                    "hodlerTime9M": "uint256",
+                    "TOKEN_HODL_3M": "uint256",
+                    "TOKEN_HODL_6M": "uint256",
+                    "TOKEN_HODL_9M": "uint256",
+                    "claimedTokens": "uint256"
+                }
+            },
+            "addHodlerStake(address,uint256)": {
+                "argument": {
+                    "_stake": "uint256"
+                },
+                "contract": {
+                    "hodlerTotalValue": "uint256",
+                    "hodlerTotalCount": "uint256",
+                    "hodlerTotalValue3M": "uint256",
+                    "hodlerTotalValue6M": "uint256",
+                    "hodlerTotalValue9M": "uint256",
+                    "hodlerTimeStart": "uint256",
+                    "hodlerTime3M": "uint256",
+                    "hodlerTime6M": "uint256",
+                    "hodlerTime9M": "uint256",
+                    "TOKEN_HODL_3M": "uint256",
+                    "TOKEN_HODL_6M": "uint256",
+                    "TOKEN_HODL_9M": "uint256",
+                    "claimedTokens": "uint256"
+                }
+            },
+            "setHodlerStake(address,uint256)": {
+                "argument": {
+                    "_stake": "uint256"
+                },
+                "contract": {
+                    "hodlerTotalValue": "uint256",
+                    "hodlerTotalCount": "uint256",
+                    "hodlerTotalValue3M": "uint256",
+                    "hodlerTotalValue6M": "uint256",
+                    "hodlerTotalValue9M": "uint256",
+                    "hodlerTimeStart": "uint256",
+                    "hodlerTime3M": "uint256",
+                    "hodlerTime6M": "uint256",
+                    "hodlerTime9M": "uint256",
+                    "TOKEN_HODL_3M": "uint256",
+                    "TOKEN_HODL_6M": "uint256",
+                    "TOKEN_HODL_9M": "uint256",
+                    "claimedTokens": "uint256"
+                }
+            },
+            "setHodlerTime(uint256)": {
+                "argument": {
+                    "_time": "uint256"
+                },
+                "contract": {
+                    "hodlerTotalValue": "uint256",
+                    "hodlerTotalCount": "uint256",
+                    "hodlerTotalValue3M": "uint256",
+                    "hodlerTotalValue6M": "uint256",
+                    "hodlerTotalValue9M": "uint256",
+                    "hodlerTimeStart": "uint256",
+                    "hodlerTime3M": "uint256",
+                    "hodlerTime6M": "uint256",
+                    "hodlerTime9M": "uint256",
+                    "TOKEN_HODL_3M": "uint256",
+                    "TOKEN_HODL_6M": "uint256",
+                    "TOKEN_HODL_9M": "uint256",
+                    "claimedTokens": "uint256"
+                }
+            },
+            "invalidate(address)": {
+                "argument": {},
+                "contract": {
+                    "hodlerTotalValue": "uint256",
+                    "hodlerTotalCount": "uint256",
+                    "hodlerTotalValue3M": "uint256",
+                    "hodlerTotalValue6M": "uint256",
+                    "hodlerTotalValue9M": "uint256",
+                    "hodlerTimeStart": "uint256",
+                    "hodlerTime3M": "uint256",
+                    "hodlerTime6M": "uint256",
+                    "hodlerTime9M": "uint256",
+                    "TOKEN_HODL_3M": "uint256",
+                    "TOKEN_HODL_6M": "uint256",
+                    "TOKEN_HODL_9M": "uint256",
+                    "claimedTokens": "uint256"
+                }
+            },
+            "claimHodlReward()": {
+                "argument": {},
+                "contract": {
+                    "hodlerTotalValue": "uint256",
+                    "hodlerTotalCount": "uint256",
+                    "hodlerTotalValue3M": "uint256",
+                    "hodlerTotalValue6M": "uint256",
+                    "hodlerTotalValue9M": "uint256",
+                    "hodlerTimeStart": "uint256",
+                    "hodlerTime3M": "uint256",
+                    "hodlerTime6M": "uint256",
+                    "hodlerTime9M": "uint256",
+                    "TOKEN_HODL_3M": "uint256",
+                    "TOKEN_HODL_6M": "uint256",
+                    "TOKEN_HODL_9M": "uint256",
+                    "claimedTokens": "uint256"
+                }
+            },
+            "claimHodlRewardFor(address)": {
+                "argument": {},
+                "contract": {
+                    "hodlerTotalValue": "uint256",
+                    "hodlerTotalCount": "uint256",
+                    "hodlerTotalValue3M": "uint256",
+                    "hodlerTotalValue6M": "uint256",
+                    "hodlerTotalValue9M": "uint256",
+                    "hodlerTimeStart": "uint256",
+                    "hodlerTime3M": "uint256",
+                    "hodlerTime6M": "uint256",
+                    "hodlerTime9M": "uint256",
+                    "TOKEN_HODL_3M": "uint256",
+                    "TOKEN_HODL_6M": "uint256",
+                    "TOKEN_HODL_9M": "uint256",
+                    "claimedTokens": "uint256"
+                }
+            },
+            "claimHodlRewardsFor(address[])": {
+                "argument": {
+                    "_beneficiaries": "address[]"
+                },
+                "contract": {
+                    "hodlerTotalValue": "uint256",
+                    "hodlerTotalCount": "uint256",
+                    "hodlerTotalValue3M": "uint256",
+                    "hodlerTotalValue6M": "uint256",
+                    "hodlerTotalValue9M": "uint256",
+                    "hodlerTimeStart": "uint256",
+                    "hodlerTime3M": "uint256",
+                    "hodlerTime6M": "uint256",
+                    "hodlerTime9M": "uint256",
+                    "TOKEN_HODL_3M": "uint256",
+                    "TOKEN_HODL_6M": "uint256",
+                    "TOKEN_HODL_9M": "uint256",
+                    "claimedTokens": "uint256"
+                }
+            },
+            "updateAndGetHodlTotalValue()": {
+                "argument": {},
+                "contract": {
+                    "hodlerTotalValue": "uint256",
+                    "hodlerTotalCount": "uint256",
+                    "hodlerTotalValue3M": "uint256",
+                    "hodlerTotalValue6M": "uint256",
+                    "hodlerTotalValue9M": "uint256",
+                    "hodlerTimeStart": "uint256",
+                    "hodlerTime3M": "uint256",
+                    "hodlerTime6M": "uint256",
+                    "hodlerTime9M": "uint256",
+                    "TOKEN_HODL_3M": "uint256",
+                    "TOKEN_HODL_6M": "uint256",
+                    "TOKEN_HODL_9M": "uint256",
+                    "claimedTokens": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "updateAndGetHodlTotalValue()": [
+                1471,
+                462
+            ],
+            "addHodlerStake(address,uint256)": [
+                979,
+                286
+            ],
+            "setHodlerTime(uint256)": [
+                1056,
+                308
+            ],
+            "claimHodlRewardsFor(address[])": [
+                790,
+                220
+            ],
+            "invalidate(address)": [
+                614,
+                132
+            ],
+            "transferOwnership(address)": [
+                1514,
+                484
+            ],
+            "claimHodlRewardFor(address)": [
+                1230,
+                396
+            ],
+            "claimHodlReward()": [
+                767,
+                198
+            ]
+        },
+        "block_CALL_mapping": {
+            "block5830_1": [
+                "TokenController(owner).ethealToken().transfer(_beneficiary, _stake)"
+            ],
+            "block5830_0": [
+                "TokenController(owner).ethealToken().transfer(_beneficiary, _stake)"
+            ],
+            "block5609_1": [
+                "TokenController(owner).ethealToken()"
+            ],
+            "block5609_0": [
+                "TokenController(owner).ethealToken()"
+            ],
+            "jump5609_1": [
+                "TokenController(owner).ethealToken()",
+                "TokenController(owner).ethealToken()"
+            ],
+            "jump5609_0": [
+                "TokenController(owner).ethealToken()",
+                "TokenController(owner).ethealToken()"
+            ],
+            "jump6588": [
+                "TokenController(owner).ethealToken().balanceOf(this)",
+                "TokenController(owner).ethealToken().balanceOf(this)"
+            ],
+            "jump6375_2": [
+                "TokenController(owner).ethealToken()",
+                "TokenController(owner).ethealToken()"
+            ],
+            "jump6375_3": [
+                "TokenController(owner).ethealToken()",
+                "TokenController(owner).ethealToken()"
+            ],
+            "jump6375_0": [
+                "TokenController(owner).ethealToken()",
+                "TokenController(owner).ethealToken()"
+            ],
+            "jump6375_1": [
+                "TokenController(owner).ethealToken()",
+                "TokenController(owner).ethealToken()"
+            ],
+            "jump5830": [
+                "TokenController(owner).ethealToken().transfer(_beneficiary, _stake)",
+                "TokenController(owner).ethealToken().transfer(_beneficiary, _stake)"
+            ],
+            "jump6588_0": [
+                "TokenController(owner).ethealToken().balanceOf(this)",
+                "TokenController(owner).ethealToken().balanceOf(this)"
+            ],
+            "jump6588_1": [
+                "TokenController(owner).ethealToken().balanceOf(this)",
+                "TokenController(owner).ethealToken().balanceOf(this)"
+            ],
+            "jump6588_2": [
+                "TokenController(owner).ethealToken().balanceOf(this)",
+                "TokenController(owner).ethealToken().balanceOf(this)"
+            ],
+            "jump6588_3": [
+                "TokenController(owner).ethealToken().balanceOf(this)",
+                "TokenController(owner).ethealToken().balanceOf(this)"
+            ],
+            "block6588_2": [
+                "TokenController(owner).ethealToken().balanceOf(this)"
+            ],
+            "jump5830_1": [
+                "TokenController(owner).ethealToken().transfer(_beneficiary, _stake)",
+                "TokenController(owner).ethealToken().transfer(_beneficiary, _stake)"
+            ],
+            "jump5830_0": [
+                "TokenController(owner).ethealToken().transfer(_beneficiary, _stake)",
+                "TokenController(owner).ethealToken().transfer(_beneficiary, _stake)"
+            ],
+            "block6588_0": [
+                "TokenController(owner).ethealToken().balanceOf(this)"
+            ],
+            "block6588_1": [
+                "TokenController(owner).ethealToken().balanceOf(this)"
+            ],
+            "block6375_0": [
+                "TokenController(owner).ethealToken()"
+            ],
+            "block6375_1": [
+                "TokenController(owner).ethealToken()"
+            ],
+            "block6375_2": [
+                "TokenController(owner).ethealToken()"
+            ],
+            "block6375_3": [
+                "TokenController(owner).ethealToken()"
+            ],
+            "jump6375": [
+                "TokenController(owner).ethealToken()",
+                "TokenController(owner).ethealToken()"
+            ],
+            "block6375": [
+                "TokenController(owner).ethealToken()"
+            ],
+            "block5830": [
+                "TokenController(owner).ethealToken().transfer(_beneficiary, _stake)"
+            ],
+            "jump5609": [
+                "TokenController(owner).ethealToken()",
+                "TokenController(owner).ethealToken()"
+            ],
+            "block6588": [
+                "TokenController(owner).ethealToken().balanceOf(this)"
+            ],
+            "block5609": [
+                "TokenController(owner).ethealToken()"
+            ],
+            "block6588_3": [
+                "TokenController(owner).ethealToken().balanceOf(this)"
+            ]
+        }
+    }
+}

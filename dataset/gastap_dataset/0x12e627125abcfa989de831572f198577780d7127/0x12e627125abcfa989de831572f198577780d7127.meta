@@ -1,0 +1,300 @@
+{
+    "ArrayLib": {
+        "function_list": [
+            "findAddress(address,address[])",
+            "removeAddress(uint256,address[])"
+        ],
+        "initial_state": {
+            "findAddress(address,address[])": {
+                "argument": {
+                    "arry": "address[]"
+                },
+                "contract": {}
+            },
+            "removeAddress(uint256,address[])": {
+                "argument": {
+                    "i": "uint256",
+                    "arry": "address[]"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "Owned": {
+        "function_list": [
+            "Owned()",
+            "isOwner(address)",
+            "transfer(address)"
+        ],
+        "initial_state": {
+            "Owned()": {
+                "argument": {},
+                "contract": {}
+            },
+            "isOwner(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "isOwner(address)": [
+                159,
+                97
+            ],
+            "transfer(address)": [
+                92,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Proxy": {
+        "function_list": [
+            "Owned()",
+            "isOwner(address)",
+            "transfer(address)",
+            "fallback()",
+            "forward(address,uint256,bytes)"
+        ],
+        "initial_state": {
+            "Owned()": {
+                "argument": {},
+                "contract": {}
+            },
+            "isOwner(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {}
+            },
+            "forward(address,uint256,bytes)": {
+                "argument": {
+                    "value": "uint256",
+                    "data": "bytes"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "isOwner(address)": [
+                245,
+                97
+            ],
+            "forward(address,uint256,bytes)": [
+                423,
+                141
+            ],
+            "transfer(address)": [
+                178,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump907": [
+                "destination.call.value(value)(data)",
+                "destination.call.value(value)(data)"
+            ],
+            "block907": [
+                "destination.call.value(value)(data)"
+            ]
+        }
+    },
+    "RecoverableController": {
+        "function_list": [
+            "RecoverableController(address,address,uint256,uint256)",
+            "forward(address,uint256,bytes)",
+            "signRecoveryChange(address)",
+            "changeRecovery()",
+            "signControllerChange(address)",
+            "changeController()",
+            "signUserKeyChange(address)",
+            "changeUserKey()",
+            "changeRecoveryFromRecovery(address)",
+            "changeUserKeyFromRecovery(address)"
+        ],
+        "initial_state": {
+            "RecoverableController(address,address,uint256,uint256)": {
+                "argument": {
+                    "_longTimeLock": "uint256",
+                    "_shortTimeLock": "uint256"
+                },
+                "contract": {
+                    "version": "uint256",
+                    "proposedUserKeyPendingUntil": "uint256",
+                    "proposedRecoveryKeyPendingUntil": "uint256",
+                    "proposedControllerPendingUntil": "uint256",
+                    "shortTimeLock": "uint256",
+                    "longTimeLock": "uint256"
+                }
+            },
+            "forward(address,uint256,bytes)": {
+                "argument": {
+                    "value": "uint256",
+                    "data": "bytes"
+                },
+                "contract": {
+                    "version": "uint256",
+                    "proposedUserKeyPendingUntil": "uint256",
+                    "proposedRecoveryKeyPendingUntil": "uint256",
+                    "proposedControllerPendingUntil": "uint256",
+                    "shortTimeLock": "uint256",
+                    "longTimeLock": "uint256"
+                }
+            },
+            "signRecoveryChange(address)": {
+                "argument": {},
+                "contract": {
+                    "version": "uint256",
+                    "proposedUserKeyPendingUntil": "uint256",
+                    "proposedRecoveryKeyPendingUntil": "uint256",
+                    "proposedControllerPendingUntil": "uint256",
+                    "shortTimeLock": "uint256",
+                    "longTimeLock": "uint256"
+                }
+            },
+            "changeRecovery()": {
+                "argument": {},
+                "contract": {
+                    "version": "uint256",
+                    "proposedUserKeyPendingUntil": "uint256",
+                    "proposedRecoveryKeyPendingUntil": "uint256",
+                    "proposedControllerPendingUntil": "uint256",
+                    "shortTimeLock": "uint256",
+                    "longTimeLock": "uint256"
+                }
+            },
+            "signControllerChange(address)": {
+                "argument": {},
+                "contract": {
+                    "version": "uint256",
+                    "proposedUserKeyPendingUntil": "uint256",
+                    "proposedRecoveryKeyPendingUntil": "uint256",
+                    "proposedControllerPendingUntil": "uint256",
+                    "shortTimeLock": "uint256",
+                    "longTimeLock": "uint256"
+                }
+            },
+            "changeController()": {
+                "argument": {},
+                "contract": {
+                    "version": "uint256",
+                    "proposedUserKeyPendingUntil": "uint256",
+                    "proposedRecoveryKeyPendingUntil": "uint256",
+                    "proposedControllerPendingUntil": "uint256",
+                    "shortTimeLock": "uint256",
+                    "longTimeLock": "uint256"
+                }
+            },
+            "signUserKeyChange(address)": {
+                "argument": {},
+                "contract": {
+                    "version": "uint256",
+                    "proposedUserKeyPendingUntil": "uint256",
+                    "proposedRecoveryKeyPendingUntil": "uint256",
+                    "proposedControllerPendingUntil": "uint256",
+                    "shortTimeLock": "uint256",
+                    "longTimeLock": "uint256"
+                }
+            },
+            "changeUserKey()": {
+                "argument": {},
+                "contract": {
+                    "version": "uint256",
+                    "proposedUserKeyPendingUntil": "uint256",
+                    "proposedRecoveryKeyPendingUntil": "uint256",
+                    "proposedControllerPendingUntil": "uint256",
+                    "shortTimeLock": "uint256",
+                    "longTimeLock": "uint256"
+                }
+            },
+            "changeRecoveryFromRecovery(address)": {
+                "argument": {},
+                "contract": {
+                    "version": "uint256",
+                    "proposedUserKeyPendingUntil": "uint256",
+                    "proposedRecoveryKeyPendingUntil": "uint256",
+                    "proposedControllerPendingUntil": "uint256",
+                    "shortTimeLock": "uint256",
+                    "longTimeLock": "uint256"
+                }
+            },
+            "changeUserKeyFromRecovery(address)": {
+                "argument": {},
+                "contract": {
+                    "version": "uint256",
+                    "proposedUserKeyPendingUntil": "uint256",
+                    "proposedRecoveryKeyPendingUntil": "uint256",
+                    "proposedControllerPendingUntil": "uint256",
+                    "shortTimeLock": "uint256",
+                    "longTimeLock": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "signRecoveryChange(address)": [
+                790,
+                251
+            ],
+            "changeController()": [
+                857,
+                273
+            ],
+            "changeUserKey()": [
+                880,
+                295
+            ],
+            "changeRecoveryFromRecovery(address)": [
+                990,
+                339
+            ],
+            "changeUserKeyFromRecovery(address)": [
+                1057,
+                361
+            ],
+            "forward(address,uint256,bytes)": [
+                4409,
+                26
+            ],
+            "changeRecovery()": [
+                1234,
+                427
+            ],
+            "signControllerChange(address)": [
+                723,
+                229
+            ],
+            "signUserKeyChange(address)": [
+                1124,
+                383
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump2705": [
+                "proxy.transfer(proposedController)",
+                "proxy.transfer(proposedController)"
+            ],
+            "block2705": [
+                "proxy.transfer(proposedController)"
+            ],
+            "jump4487": [
+                "proxy.forward(destination, value, data)",
+                "proxy.forward(destination, value, data)"
+            ],
+            "block4487": [
+                "proxy.forward(destination, value, data)"
+            ]
+        }
+    }
+}

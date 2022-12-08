@@ -1,0 +1,835 @@
+block0(g(investors), l(l3), l(l2), l(l1), l(l0), calldataload, calldatasize, callvalue, inv)=>
+	s(0) = 128
+	nop(PUSH1)
+	s(1) = 64
+	nop(PUSH1)
+	l(l0) = s(0)
+	nop(MSTORE)
+	s(0) = 4
+	nop(PUSH1)
+	s(1) = calldatasize
+	nop(CALLDATASIZE)
+	call(jump0(s(1),s(0),g(investors), l(l3), l(l2), l(l1), l(l0), calldataload, calldatasize, callvalue, inv))
+	nop(LT)
+	nop(PUSH2)
+	nop(JUMPI)
+
+jump0(s(1), s(0), g(investors), l(l3), l(l2), l(l1), l(l0), calldataload, calldatasize, callvalue, inv)=>
+	lt(s(1), s(0))
+	call(block76())
+
+jump0(s(1), s(0), g(investors), l(l3), l(l2), l(l1), l(l0), calldataload, calldatasize, callvalue, inv)=>
+	geq(s(1), s(0))
+	call(block13(g(investors), l(l3), l(l2), l(l1), l(l0), calldataload, calldatasize, callvalue, inv))
+
+block13(g(investors), l(l3), l(l2), l(l1), l(l0), calldataload, calldatasize, callvalue, inv)=>
+	s(0) = 0
+	nop(PUSH1)
+	s(0) = calldataload
+	nop(CALLDATALOAD)
+	s(1) = 26959946667150639794667015087019630673637144422540572481103610249216
+	nop(PUSH29)
+	s(2) = s(0)
+	s(0) = s(1)
+	s(1) = s(2)
+	nop(SWAP1)
+	s(0) = s(1)/s(0)
+	nop(DIV)
+	s(1) = 4294967295
+	nop(PUSH4)
+	s(0) = and(s(1), s(0))
+	nop(AND)
+	s(1) = s(0)
+	nop(DUP1)
+	s(2) = 1072389931
+	nop(PUSH4)
+	call(jump13(s(2),s(1),s(0),g(investors), l(l3), l(l2), l(l1), l(l0), calldataload, calldatasize, callvalue, inv))
+	nop(EQ)
+	nop(PUSH2)
+	nop(JUMPI)
+
+jump13(s(2), s(1), s(0), g(investors), l(l3), l(l2), l(l1), l(l0), calldataload, calldatasize, callvalue, inv)=>
+	eq(s(2), s(1))
+	call(block81(s(0),g(investors), l(l2), l(l1), l(l0), calldataload, calldatasize, callvalue))
+
+jump13(s(2), s(1), s(0), g(investors), l(l3), l(l2), l(l1), l(l0), calldataload, calldatasize, callvalue, inv)=>
+	neq(s(2), s(1))
+	call(block65(s(0),g(investors), l(l3), l(l2), calldatasize, callvalue, inv))
+
+jump65(s(2), s(1), s(0), g(investors), l(l3), l(l2), calldatasize, callvalue, inv)=>
+	eq(s(2), s(1))
+	call(block190(s(0),g(investors), l(l3), l(l2), calldatasize, callvalue, inv))
+
+jump65(s(2), s(1), s(0), g(investors), l(l3), l(l2), calldatasize, callvalue, inv)=>
+	neq(s(2), s(1))
+	call(block76_0(s(0)))
+
+block65(s(0), g(investors), l(l3), l(l2), calldatasize, callvalue, inv)=>
+	s(1) = s(0)
+	nop(DUP1)
+	s(2) = 3863068129
+	nop(PUSH4)
+	call(jump65(s(2),s(1),s(0),g(investors), l(l3), l(l2), calldatasize, callvalue, inv))
+	nop(EQ)
+	nop(PUSH2)
+	nop(JUMPI)
+
+block76()=>
+	nop(JUMPDEST)
+	s(0) = 0
+	nop(PUSH1)
+	s(1) = s(0)
+	nop(DUP1)
+	nop(REVERT)
+
+jump81(s(2), s(1), s(0), g(investors), l(l2), l(l1), l(l0), calldataload, calldatasize, callvalue)=>
+	eq(s(2), 0)
+	call(block93(s(1), s(0),g(investors), l(l2), l(l1), l(l0), calldataload, calldatasize))
+
+jump81(s(2), s(1), s(0), g(investors), l(l2), l(l1), l(l0), calldataload, calldatasize, callvalue)=>
+	neq(s(2), 0)
+	call(block89(s(1), s(0)))
+
+block81(s(0), g(investors), l(l2), l(l1), l(l0), calldataload, calldatasize, callvalue)=>
+	nop(JUMPDEST)
+	s(1) = callvalue
+	nop(CALLVALUE)
+	s(2) = s(1)
+	nop(DUP1)
+	call(jump81(s(2),s(1),s(0),g(investors), l(l2), l(l1), l(l0), calldataload, calldatasize, callvalue))
+	nop(ISZERO)
+	nop(PUSH2)
+	nop(JUMPI)
+
+block89(s(1), s(0))=>
+	s(2) = 0
+	nop(PUSH1)
+	s(3) = s(2)
+	nop(DUP1)
+	nop(REVERT)
+
+block93(s(1), s(0), g(investors), l(l2), l(l1), l(l0), calldataload, calldatasize)=>
+	nop(JUMPDEST)
+	nop(POP)
+	s(1) = 124
+	nop(PUSH2)
+	s(2) = 4
+	nop(PUSH1)
+	s(3) = s(2)
+	nop(DUP1)
+	s(4) = calldatasize
+	nop(CALLDATASIZE)
+	s(3) = s(4)-s(3)
+	nop(SUB)
+	s(4) = s(2)
+	nop(DUP2)
+	s(3) = s(4)+s(3)
+	nop(ADD)
+	s(4) = s(2)
+	s(2) = s(3)
+	s(3) = s(4)
+	nop(SWAP1)
+	s(4) = s(3)
+	nop(DUP1)
+	s(5) = s(4)
+	nop(DUP1)
+	s(5) = calldataload
+	nop(CALLDATALOAD)
+	s(6) = s(4)
+	s(4) = s(5)
+	s(5) = s(6)
+	nop(SWAP1)
+	s(6) = 32
+	nop(PUSH1)
+	s(5) = s(6)+s(5)
+	nop(ADD)
+	s(6) = s(4)
+	s(4) = s(5)
+	s(5) = s(6)
+	nop(SWAP1)
+	s(6) = s(2)
+	s(2) = s(5)
+	s(5) = s(6)
+	nop(SWAP3)
+	s(6) = s(3)
+	s(3) = s(5)
+	s(5) = s(6)
+	nop(SWAP2)
+	s(6) = s(4)
+	s(4) = s(5)
+	s(5) = s(6)
+	nop(SWAP1)
+	nop(POP)
+	nop(POP)
+	nop(POP)
+	s(3) = 257
+	nop(PUSH2)
+	call(block257(s(2),s(1),s(0),g(investors), l(l2), l(l1), l(l0)))
+	nop(JUMP)
+
+block124(s(2), s(1), s(0), l(l1), l(l0))=>
+	nop(JUMPDEST)
+	s(3) = 64
+	nop(PUSH1)
+	s(3) = l(l0)
+	nop(MLOAD)
+	s(4) = s(3)
+	nop(DUP1)
+	s(5) = s(2)
+	nop(DUP3)
+	s(6) = 1461501637330902918203684832716283019655932542975
+	nop(PUSH20)
+	s(5) = and(s(6), s(5))
+	nop(AND)
+	s(6) = 1461501637330902918203684832716283019655932542975
+	nop(PUSH20)
+	s(5) = and(s(6), s(5))
+	nop(AND)
+	s(6) = s(4)
+	nop(DUP2)
+	l(l1) = s(5)
+	nop(MSTORE)
+	s(5) = 32
+	nop(PUSH1)
+	s(4) = s(5)+s(4)
+	nop(ADD)
+	s(5) = s(2)
+	s(2) = s(4)
+	s(4) = s(5)
+	nop(SWAP2)
+	nop(POP)
+	nop(POP)
+	s(3) = 64
+	nop(PUSH1)
+	s(3) = l(l0)
+	nop(MLOAD)
+	s(4) = s(3)
+	nop(DUP1)
+	s(5) = s(2)
+	s(2) = s(4)
+	s(4) = s(5)
+	nop(SWAP2)
+	s(3) = s(4)-s(3)
+	nop(SUB)
+	s(4) = s(2)
+	s(2) = s(3)
+	s(3) = s(4)
+	nop(SWAP1)
+	nop(RETURN)
+
+jump190(s(2), s(1), s(0), g(investors), l(l3), l(l2), calldatasize, callvalue, inv)=>
+	eq(s(2), 0)
+	call(block202(s(1), s(0),g(investors), l(l3), l(l2), calldatasize, inv))
+
+jump190(s(2), s(1), s(0), g(investors), l(l3), l(l2), calldatasize, callvalue, inv)=>
+	neq(s(2), 0)
+	call(block198(s(1), s(0)))
+
+block190(s(0), g(investors), l(l3), l(l2), calldatasize, callvalue, inv)=>
+	nop(JUMPDEST)
+	s(1) = callvalue
+	nop(CALLVALUE)
+	s(2) = s(1)
+	nop(DUP1)
+	call(jump190(s(2),s(1),s(0),g(investors), l(l3), l(l2), calldatasize, callvalue, inv))
+	nop(ISZERO)
+	nop(PUSH2)
+	nop(JUMPI)
+
+block198(s(1), s(0))=>
+	s(2) = 0
+	nop(PUSH1)
+	s(3) = s(2)
+	nop(DUP1)
+	nop(REVERT)
+
+block202(s(1), s(0), g(investors), l(l3), l(l2), calldatasize, inv)=>
+	nop(JUMPDEST)
+	nop(POP)
+	s(1) = 255
+	nop(PUSH2)
+	s(2) = 4
+	nop(PUSH1)
+	s(3) = s(2)
+	nop(DUP1)
+	s(4) = calldatasize
+	nop(CALLDATASIZE)
+	s(3) = s(4)-s(3)
+	nop(SUB)
+	s(4) = s(2)
+	nop(DUP2)
+	s(3) = s(4)+s(3)
+	nop(ADD)
+	s(4) = s(2)
+	s(2) = s(3)
+	s(3) = s(4)
+	nop(SWAP1)
+	s(4) = s(3)
+	nop(DUP1)
+	s(5) = s(4)
+	nop(DUP1)
+	s(5) = inv
+	nop(CALLDATALOAD)
+	s(6) = 1461501637330902918203684832716283019655932542975
+	nop(PUSH20)
+	s(5) = and(s(6), s(5))
+	nop(AND)
+	s(6) = s(4)
+	s(4) = s(5)
+	s(5) = s(6)
+	nop(SWAP1)
+	s(6) = 32
+	nop(PUSH1)
+	s(5) = s(6)+s(5)
+	nop(ADD)
+	s(6) = s(4)
+	s(4) = s(5)
+	s(5) = s(6)
+	nop(SWAP1)
+	s(6) = s(2)
+	s(2) = s(5)
+	s(5) = s(6)
+	nop(SWAP3)
+	s(6) = s(3)
+	s(3) = s(5)
+	s(5) = s(6)
+	nop(SWAP2)
+	s(6) = s(4)
+	s(4) = s(5)
+	s(5) = s(6)
+	nop(SWAP1)
+	nop(POP)
+	nop(POP)
+	nop(POP)
+	s(3) = 319
+	nop(PUSH2)
+	call(block319(s(2),s(1),s(0),g(investors), l(l3), l(l2)))
+	nop(JUMP)
+
+block255(s(0))=>
+	nop(JUMPDEST)
+	skip
+	nop(STOP)
+
+jump257(s(6), s(5), s(4), s(3), s(2), s(1), s(0), g(investors), l(l2), l(l1), l(l0))=>
+	lt(s(6), s(5))
+	call(block272(s(4), s(3), s(2), s(1), s(0), l(l2), l(l1), l(l0)))
+
+jump257(s(6), s(5), s(4), s(3), s(2), s(1), s(0), g(investors), l(l2), l(l1), l(l0))=>
+	geq(s(6), s(5))
+	call(block271(s(4), s(3), s(2), s(1), s(0)))
+
+block257(s(2), s(1), s(0), g(investors), l(l2), l(l1), l(l0))=>
+	nop(JUMPDEST)
+	s(3) = 0
+	nop(PUSH1)
+	s(4) = s(2)
+	nop(DUP2)
+	s(5) = s(3)
+	nop(DUP2)
+	s(5) = g(investors)
+	nop(SLOAD)
+	s(6) = s(4)
+	nop(DUP2)
+	call(jump257(s(6),s(5),s(4),s(3),s(2),s(1),s(0),g(investors), l(l2), l(l1), l(l0)))
+	nop(LT)
+	nop(ISZERO)
+	nop(ISZERO)
+	nop(PUSH2)
+	nop(JUMPI)
+
+block271(s(4), s(3), s(2), s(1), s(0))=>
+	nop(ASSERTFAIL)
+
+block272(s(4), s(3), s(2), s(1), s(0), l(l2), l(l1), l(l0))=>
+	nop(JUMPDEST)
+	s(5) = s(3)
+	s(3) = s(4)
+	s(4) = s(5)
+	nop(SWAP1)
+	s(5) = 0
+	nop(PUSH1)
+	l(l2) = s(4)
+	nop(MSTORE)
+	s(4) = 32
+	nop(PUSH1)
+	s(5) = 0
+	nop(PUSH1)
+	s(4) = sha3(s(5), s(4))
+	nop(SHA3)
+	s(3) = s(4)+s(3)
+	nop(ADD)
+	s(4) = 0
+	nop(PUSH1)
+	s(5) = s(2)
+	s(2) = s(4)
+	s(4) = s(5)
+	nop(SWAP2)
+	nop(POP)
+	gl = s(3)
+	s(3) = fresh(0)
+	nop(SLOAD)
+	s(4) = s(2)
+	s(2) = s(3)
+	s(3) = s(4)
+	nop(SWAP1)
+	s(4) = 256
+	nop(PUSH2)
+	s(3) = s(4)^s(3)
+	nop(EXP)
+	s(4) = s(2)
+	s(2) = s(3)
+	s(3) = s(4)
+	nop(SWAP1)
+	s(2) = s(3)/s(2)
+	nop(DIV)
+	s(3) = 1461501637330902918203684832716283019655932542975
+	nop(PUSH20)
+	s(2) = and(s(3), s(2))
+	nop(AND)
+	s(3) = s(1)
+	nop(DUP2)
+	call(block124(s(2),s(1),s(0), l(l1), l(l0)))
+	nop(JUMP)
+
+jump319(s(4), s(3), s(2), s(1), s(0), g(investors), l(l3), l(l2))=>
+	gt(s(4), s(3))
+	call(block583(s(2), s(1), s(0)))
+
+jump319(s(4), s(3), s(2), s(1), s(0), g(investors), l(l3), l(l2))=>
+	leq(s(4), s(3))
+	call(block393(s(2), s(1), s(0),g(investors), l(l3), l(l2)))
+
+block319(s(2), s(1), s(0), g(investors), l(l3), l(l2))=>
+	nop(JUMPDEST)
+	s(3) = 0
+	nop(PUSH1)
+	s(4) = 1
+	nop(PUSH1)
+	s(5) = 0
+	nop(PUSH1)
+	s(6) = s(2)
+	nop(DUP4)
+	s(7) = 1461501637330902918203684832716283019655932542975
+	nop(PUSH20)
+	s(6) = and(s(7), s(6))
+	nop(AND)
+	s(7) = 1461501637330902918203684832716283019655932542975
+	nop(PUSH20)
+	s(6) = and(s(7), s(6))
+	nop(AND)
+	s(7) = s(5)
+	nop(DUP2)
+	l(l2) = s(6)
+	nop(MSTORE)
+	s(6) = 32
+	nop(PUSH1)
+	s(5) = s(6)+s(5)
+	nop(ADD)
+	s(6) = s(4)
+	s(4) = s(5)
+	s(5) = s(6)
+	nop(SWAP1)
+	s(6) = s(4)
+	nop(DUP2)
+	l(l3) = s(5)
+	nop(MSTORE)
+	s(5) = 32
+	nop(PUSH1)
+	s(4) = s(5)+s(4)
+	nop(ADD)
+	s(5) = 0
+	nop(PUSH1)
+	s(4) = sha3(s(5), s(4))
+	nop(SHA3)
+	gl = s(4)
+	s(4) = fresh(0)
+	nop(SLOAD)
+	call(jump319(s(4),s(3),s(2),s(1),s(0),g(investors), l(l3), l(l2)))
+	nop(GT)
+	nop(ISZERO)
+	nop(ISZERO)
+	nop(PUSH2)
+	nop(JUMPI)
+
+block393(s(2), s(1), s(0), g(investors), l(l3), l(l2))=>
+	s(3) = 0
+	nop(PUSH1)
+	s(4) = s(3)
+	nop(DUP1)
+	s(4) = g(investors)
+	nop(SLOAD)
+	s(5) = s(3)
+	s(3) = s(4)
+	s(4) = s(5)
+	nop(SWAP1)
+	nop(POP)
+	s(4) = 1
+	nop(PUSH1)
+	s(5) = 0
+	nop(PUSH1)
+	s(6) = s(2)
+	nop(DUP4)
+	s(7) = 1461501637330902918203684832716283019655932542975
+	nop(PUSH20)
+	s(6) = and(s(7), s(6))
+	nop(AND)
+	s(7) = 1461501637330902918203684832716283019655932542975
+	nop(PUSH20)
+	s(6) = and(s(7), s(6))
+	nop(AND)
+	s(7) = s(5)
+	nop(DUP2)
+	l(l2) = s(6)
+	nop(MSTORE)
+	s(6) = 32
+	nop(PUSH1)
+	s(5) = s(6)+s(5)
+	nop(ADD)
+	s(6) = s(4)
+	s(4) = s(5)
+	s(5) = s(6)
+	nop(SWAP1)
+	s(6) = s(4)
+	nop(DUP2)
+	l(l3) = s(5)
+	nop(MSTORE)
+	s(5) = 32
+	nop(PUSH1)
+	s(4) = s(5)+s(4)
+	nop(ADD)
+	s(5) = 0
+	nop(PUSH1)
+	s(4) = sha3(s(5), s(4))
+	nop(SHA3)
+	s(5) = s(3)
+	nop(DUP2)
+	s(6) = s(4)
+	s(4) = s(5)
+	s(5) = s(6)
+	nop(SWAP1)
+	gs(1) = s(5)
+	gs(2) = s(4)
+	nop(SSTORE)
+	nop(POP)
+	s(3) = 0
+	nop(PUSH1)
+	s(4) = s(3)
+	nop(DUP1)
+	s(4) = g(investors)
+	nop(SLOAD)
+	s(5) = s(4)
+	nop(DUP1)
+	s(6) = s(3)
+	s(3) = s(5)
+	s(5) = s(6)
+	nop(SWAP2)
+	s(6) = s(4)
+	s(4) = s(5)
+	s(5) = s(6)
+	nop(SWAP1)
+	s(6) = 1
+	nop(PUSH1)
+	s(5) = s(6)+s(5)
+	nop(ADD)
+	s(6) = 485
+	nop(PUSH2)
+	s(7) = s(4)
+	s(4) = s(6)
+	s(6) = s(7)
+	nop(SWAP2)
+	s(7) = s(5)
+	s(5) = s(6)
+	s(6) = s(7)
+	nop(SWAP1)
+	s(7) = 586
+	nop(PUSH2)
+	call(block586(s(6),s(5),s(4),s(3),s(2),s(1),s(0),g(investors), l(l2)))
+	nop(JUMP)
+
+block485(s(3), s(2), s(1), s(0), g(investors), l(l2))=>
+	nop(JUMPDEST)
+	nop(POP)
+	s(3) = s(2)
+	nop(DUP1)
+	s(4) = 0
+	nop(PUSH1)
+	s(5) = 1
+	nop(PUSH1)
+	s(6) = 0
+	nop(PUSH1)
+	s(7) = s(6)
+	nop(DUP1)
+	s(7) = g(investors)
+	nop(SLOAD)
+	s(8) = s(6)
+	s(6) = s(7)
+	s(7) = s(8)
+	nop(SWAP1)
+	nop(POP)
+	s(5) = s(6)-s(5)
+	nop(SUB)
+	s(6) = s(4)
+	nop(DUP2)
+	s(6) = g(investors)
+	nop(SLOAD)
+	s(7) = s(5)
+	nop(DUP2)
+	call(jump485(s(7),s(6),s(5),s(4),s(3),s(2),s(1),s(0),g(investors), l(l2)))
+	nop(LT)
+	nop(ISZERO)
+	nop(ISZERO)
+	nop(PUSH2)
+	nop(JUMPI)
+
+jump485(s(7), s(6), s(5), s(4), s(3), s(2), s(1), s(0), g(investors), l(l2))=>
+	lt(s(7), s(6))
+	call(block510(s(5), s(4), s(3), s(2), s(1), s(0), l(l2)))
+
+jump485(s(7), s(6), s(5), s(4), s(3), s(2), s(1), s(0), g(investors), l(l2))=>
+	geq(s(7), s(6))
+	call(block509(s(5), s(4), s(3), s(2), s(1), s(0)))
+
+block509(s(5), s(4), s(3), s(2), s(1), s(0))=>
+	nop(ASSERTFAIL)
+
+block510(s(5), s(4), s(3), s(2), s(1), s(0), l(l2))=>
+	nop(JUMPDEST)
+	s(6) = s(4)
+	s(4) = s(5)
+	s(5) = s(6)
+	nop(SWAP1)
+	s(6) = 0
+	nop(PUSH1)
+	l(l2) = s(5)
+	nop(MSTORE)
+	s(5) = 32
+	nop(PUSH1)
+	s(6) = 0
+	nop(PUSH1)
+	s(5) = sha3(s(6), s(5))
+	nop(SHA3)
+	s(4) = s(5)+s(4)
+	nop(ADD)
+	s(5) = 0
+	nop(PUSH1)
+	s(6) = 256
+	nop(PUSH2)
+	s(5) = s(6)^s(5)
+	nop(EXP)
+	s(6) = s(4)
+	nop(DUP2)
+	gl = s(6)
+	s(6) = fresh(0)
+	nop(SLOAD)
+	s(7) = s(5)
+	nop(DUP2)
+	s(8) = 1461501637330902918203684832716283019655932542975
+	nop(PUSH20)
+	s(7) = s(8)*s(7)
+	nop(MUL)
+	s(7) = not(s(7))
+	nop(NOT)
+	s(6) = and(s(7), s(6))
+	nop(AND)
+	s(7) = s(5)
+	s(5) = s(6)
+	s(6) = s(7)
+	nop(SWAP1)
+	s(7) = s(3)
+	nop(DUP4)
+	s(8) = 1461501637330902918203684832716283019655932542975
+	nop(PUSH20)
+	s(7) = and(s(8), s(7))
+	nop(AND)
+	s(6) = s(7)*s(6)
+	nop(MUL)
+	s(5) = or(s(6), s(5))
+	nop(OR)
+	s(6) = s(4)
+	s(4) = s(5)
+	s(5) = s(6)
+	nop(SWAP1)
+	gs(1) = s(5)
+	gs(2) = s(4)
+	nop(SSTORE)
+	nop(POP)
+	call(block583(s(2),s(1),s(0)))
+
+block583(s(2), s(1), s(0))=>
+	nop(JUMPDEST)
+	nop(POP)
+	call(block255(s(0)))
+	nop(JUMP)
+
+block586(s(6), s(5), s(4), s(3), s(2), s(1), s(0), g(investors), l(l2))=>
+	nop(JUMPDEST)
+	s(7) = s(5)
+	nop(DUP2)
+	s(7) = g(investors)
+	nop(SLOAD)
+	s(8) = s(6)
+	nop(DUP2)
+	s(9) = s(5)
+	nop(DUP4)
+	g(investors) = s(8)
+	nop(SSTORE)
+	s(8) = s(6)
+	nop(DUP2)
+	s(9) = s(7)
+	nop(DUP2)
+	call(jump586(s(9),s(8),s(7),s(6),s(5),s(4),s(3),s(2),s(1),s(0),g(investors), l(l2)))
+	nop(GT)
+	nop(ISZERO)
+	nop(PUSH2)
+	nop(JUMPI)
+
+jump586(s(9), s(8), s(7), s(6), s(5), s(4), s(3), s(2), s(1), s(0), g(investors), l(l2))=>
+	leq(s(9), s(8))
+	call(block625(s(7), s(6), s(5), s(4), s(3), s(2), s(1), s(0),g(investors), l(l2)))
+
+jump586(s(9), s(8), s(7), s(6), s(5), s(4), s(3), s(2), s(1), s(0), g(investors), l(l2))=>
+	gt(s(9), s(8))
+	call(block600(s(7), s(6), s(5), s(4), s(3), s(2), s(1), s(0),g(investors), l(l2)))
+
+block600(s(7), s(6), s(5), s(4), s(3), s(2), s(1), s(0), g(investors), l(l2))=>
+	s(8) = s(6)
+	nop(DUP2)
+	s(9) = s(5)
+	nop(DUP4)
+	s(10) = 0
+	nop(PUSH1)
+	l(l2) = s(9)
+	nop(MSTORE)
+	s(9) = 32
+	nop(PUSH1)
+	s(10) = 0
+	nop(PUSH1)
+	s(9) = sha3(s(10), s(9))
+	nop(SHA3)
+	s(10) = s(7)
+	s(7) = s(9)
+	s(9) = s(10)
+	nop(SWAP2)
+	s(10) = s(7)
+	nop(DUP3)
+	s(9) = s(10)+s(9)
+	nop(ADD)
+	s(10) = s(7)
+	s(7) = s(9)
+	s(9) = s(10)
+	nop(SWAP2)
+	s(8) = s(9)+s(8)
+	nop(ADD)
+	s(9) = 624
+	nop(PUSH2)
+	s(10) = s(7)
+	s(7) = s(9)
+	s(9) = s(10)
+	nop(SWAP2)
+	s(10) = s(8)
+	s(8) = s(9)
+	s(9) = s(10)
+	nop(SWAP1)
+	s(10) = 630
+	nop(PUSH2)
+	call(block630(s(9),s(8),s(7),s(6),s(5),s(4),s(3),s(2),s(1),s(0),g(investors), l(l2)))
+	nop(JUMP)
+
+block624(s(7), s(6), s(5), s(4), s(3), s(2), s(1), s(0), g(investors), l(l2))=>
+	nop(JUMPDEST)
+	call(block625(s(7),s(6),s(5),s(4),s(3),s(2),s(1),s(0),g(investors), l(l2)))
+
+block625(s(7), s(6), s(5), s(4), s(3), s(2), s(1), s(0), g(investors), l(l2))=>
+	nop(JUMPDEST)
+	nop(POP)
+	nop(POP)
+	nop(POP)
+	call(block485(s(3),s(2),s(1),s(0),g(investors), l(l2)))
+	nop(JUMP)
+
+block630(s(9), s(8), s(7), s(6), s(5), s(4), s(3), s(2), s(1), s(0), g(investors), l(l2))=>
+	nop(JUMPDEST)
+	s(10) = 664
+	nop(PUSH2)
+	s(11) = s(8)
+	s(8) = s(10)
+	s(10) = s(11)
+	nop(SWAP2)
+	s(11) = s(9)
+	s(9) = s(10)
+	s(10) = s(11)
+	nop(SWAP1)
+	call(block636(s(10),s(9),s(8),s(7),s(6),s(5),s(4),s(3),s(2),s(1),s(0),g(investors), l(l2)))
+
+block636(s(10), s(9), s(8), s(7), s(6), s(5), s(4), s(3), s(2), s(1), s(0), g(investors), l(l2))=>
+	nop(JUMPDEST)
+	s(11) = s(10)
+	nop(DUP1)
+	s(12) = s(9)
+	nop(DUP3)
+	call(jump636(s(12),s(11),s(10),s(9),s(8),s(7),s(6),s(5),s(4),s(3),s(2),s(1),s(0),g(investors), l(l2)))
+	nop(GT)
+	nop(ISZERO)
+	nop(PUSH2)
+	nop(JUMPI)
+
+jump636(s(12), s(11), s(10), s(9), s(8), s(7), s(6), s(5), s(4), s(3), s(2), s(1), s(0), g(investors), l(l2))=>
+	leq(s(12), s(11))
+	call(block660(s(10), s(9), s(8), s(7), s(6), s(5), s(4), s(3), s(2), s(1), s(0),g(investors), l(l2)))
+
+jump636(s(12), s(11), s(10), s(9), s(8), s(7), s(6), s(5), s(4), s(3), s(2), s(1), s(0), g(investors), l(l2))=>
+	gt(s(12), s(11))
+	call(block645(s(10), s(9), s(8), s(7), s(6), s(5), s(4), s(3), s(2), s(1), s(0),g(investors), l(l2)))
+
+block645(s(10), s(9), s(8), s(7), s(6), s(5), s(4), s(3), s(2), s(1), s(0), g(investors), l(l2))=>
+	s(11) = 0
+	nop(PUSH1)
+	s(12) = s(10)
+	nop(DUP2)
+	s(13) = 0
+	nop(PUSH1)
+	s(14) = s(12)
+	s(12) = s(13)
+	s(13) = s(14)
+	nop(SWAP1)
+	gs(1) = s(13)
+	gs(2) = s(12)
+	nop(SSTORE)
+	nop(POP)
+	s(11) = 1
+	nop(PUSH1)
+	s(10) = s(11)+s(10)
+	nop(ADD)
+	s(11) = 636
+	nop(PUSH2)
+	call(block636(s(10),s(9),s(8),s(7),s(6),s(5),s(4),s(3),s(2),s(1),s(0),g(investors), l(l2)))
+	nop(JUMP)
+
+block660(s(10), s(9), s(8), s(7), s(6), s(5), s(4), s(3), s(2), s(1), s(0), g(investors), l(l2))=>
+	nop(JUMPDEST)
+	nop(POP)
+	s(10) = s(8)
+	s(8) = s(9)
+	s(9) = s(10)
+	nop(SWAP1)
+	call(block664(s(8),s(7),s(6),s(5),s(4),s(3),s(2),s(1),s(0),g(investors), l(l2)))
+	nop(JUMP)
+
+block664(s(8), s(7), s(6), s(5), s(4), s(3), s(2), s(1), s(0), g(investors), l(l2))=>
+	nop(JUMPDEST)
+	s(9) = s(7)
+	s(7) = s(8)
+	s(8) = s(9)
+	nop(SWAP1)
+	call(block624(s(7),s(6),s(5),s(4),s(3),s(2),s(1),s(0),g(investors), l(l2)))
+	nop(JUMP)
+
+block76_0(s(0))=>
+	nop(JUMPDEST)
+	s(1) = 0
+	nop(PUSH1)
+	s(2) = s(1)
+	nop(DUP1)
+	nop(REVERT)
+

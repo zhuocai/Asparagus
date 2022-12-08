@@ -1,0 +1,167 @@
+{
+    "Owned": {
+        "function_list": [
+            "Owned()",
+            "changeOwner(address)",
+            "acceptOwnership()"
+        ],
+        "initial_state": {
+            "Owned()": {
+                "argument": {},
+                "contract": {}
+            },
+            "changeOwner(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "acceptOwnership()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "changeOwner(address)": [
+                213,
+                119
+            ],
+            "acceptOwnership()": [
+                103,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "ERC20Basic": {
+        "function_list": [
+            "transfer(address,uint256)",
+            "balanceOf(address)"
+        ],
+        "initial_state": {
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                124,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Distribute": {
+        "function_list": [
+            "Owned()",
+            "changeOwner(address)",
+            "acceptOwnership()",
+            "Distribute(address)",
+            "setAmount(address[],uint256[])",
+            "withdrawAllTokens()",
+            "fallback()",
+            "collect()"
+        ],
+        "initial_state": {
+            "Owned()": {
+                "argument": {},
+                "contract": {}
+            },
+            "changeOwner(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "acceptOwnership()": {
+                "argument": {},
+                "contract": {}
+            },
+            "Distribute(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "setAmount(address[],uint256[])": {
+                "argument": {
+                    "contributors": "address[]",
+                    "amounts": "uint256[]"
+                },
+                "contract": {}
+            },
+            "withdrawAllTokens()": {
+                "argument": {},
+                "contract": {}
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {}
+            },
+            "collect()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "withdrawAllTokens()": [
+                152,
+                75
+            ],
+            "collect()": [
+                695,
+                229
+            ],
+            "setAmount(address[],uint256[])": [
+                285,
+                141
+            ],
+            "acceptOwnership()": [
+                262,
+                119
+            ],
+            "changeOwner(address)": [
+                541,
+                185
+            ]
+        },
+        "block_CALL_mapping": {
+            "block1613": [
+                "token.balanceOf(address(this))"
+            ],
+            "jump1067_1": [
+                "token.transfer(msg.sender, amount)",
+                "token.transfer(msg.sender, amount)"
+            ],
+            "jump1067_0": [
+                "token.transfer(msg.sender, amount)",
+                "token.transfer(msg.sender, amount)"
+            ],
+            "jump1067": [
+                "token.transfer(msg.sender, amount)",
+                "token.transfer(msg.sender, amount)"
+            ],
+            "block1067_1": [
+                "token.transfer(msg.sender, amount)"
+            ],
+            "block1067_0": [
+                "token.transfer(msg.sender, amount)"
+            ],
+            "block1067": [
+                "token.transfer(msg.sender, amount)"
+            ],
+            "block1805": [
+                "token.transfer(owner, token.balanceOf(address(this)))"
+            ],
+            "jump1805": [
+                "token.transfer(owner, token.balanceOf(address(this)))",
+                "token.transfer(owner, token.balanceOf(address(this)))"
+            ],
+            "jump1613": [
+                "token.balanceOf(address(this))",
+                "token.balanceOf(address(this))"
+            ]
+        }
+    }
+}

@@ -1,0 +1,266 @@
+{
+    "DaoCasinoToken": {
+        "function_list": [
+            "proxyPayment(address)",
+            "transfer(address,uint256)"
+        ],
+        "initial_state": {
+            "proxyPayment(address)": {
+                "argument": {},
+                "contract": {
+                    "CAP": "uint256",
+                    "totalEthers": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "CAP": "uint256",
+                    "totalEthers": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "transfer(address,uint256)": [
+                5370,
+                946
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump5370": [
+                "ERC20Token(tokenAddress).transfer(owner, amount)",
+                "ERC20Token(tokenAddress).transfer(owner, amount)"
+            ],
+            "block5370": [
+                "ERC20Token(tokenAddress).transfer(owner, amount)"
+            ]
+        }
+    },
+    "BetBuyer": {
+        "function_list": [
+            "activate_kill_switch()",
+            "withdraw()",
+            "add_to_bounty()",
+            "claim_bounty()",
+            "default_helper()",
+            "fallback()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "activate_kill_switch()": {
+                "argument": {},
+                "contract": {
+                    "bounty": "uint256",
+                    "time_bought": "uint256",
+                    "bet_per_eth": "uint256"
+                }
+            },
+            "withdraw()": {
+                "argument": {},
+                "contract": {
+                    "bounty": "uint256",
+                    "time_bought": "uint256",
+                    "bet_per_eth": "uint256"
+                }
+            },
+            "add_to_bounty()": {
+                "argument": {},
+                "contract": {
+                    "bounty": "uint256",
+                    "time_bought": "uint256",
+                    "bet_per_eth": "uint256"
+                }
+            },
+            "claim_bounty()": {
+                "argument": {},
+                "contract": {
+                    "bounty": "uint256",
+                    "time_bought": "uint256",
+                    "bet_per_eth": "uint256"
+                }
+            },
+            "default_helper()": {
+                "argument": {},
+                "contract": {
+                    "bounty": "uint256",
+                    "time_bought": "uint256",
+                    "bet_per_eth": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "bounty": "uint256",
+                    "time_bought": "uint256",
+                    "bet_per_eth": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "claim_bounty()": [
+                196,
+                75
+            ],
+            "add_to_bounty()": [
+                430,
+                185
+            ],
+            "default_helper()": [
+                420,
+                163
+            ],
+            "withdraw()": [
+                306,
+                119
+            ],
+            "activate_kill_switch()": [
+                487,
+                229
+            ]
+        },
+        "block_CALL_mapping": {
+            "block1704": [
+                "token.proxyPayment.value(this.balance - bounty)(address(this))"
+            ],
+            "jump2805_0": [
+                "token.transfer(msg.sender, bet_amount - fee)",
+                "token.transfer(msg.sender, bet_amount - fee)"
+            ],
+            "jump2805_1": [
+                "token.transfer(msg.sender, bet_amount - fee)",
+                "token.transfer(msg.sender, bet_amount - fee)"
+            ],
+            "block1094": [
+                "token.totalEthers()"
+            ],
+            "jump1857": [
+                "msg.sender.transfer(eth_amount)",
+                "msg.sender.transfer(eth_amount)"
+            ],
+            "jump901_0": [
+                "token.CAP()",
+                "token.CAP()"
+            ],
+            "block1094_1": [
+                "token.totalEthers()"
+            ],
+            "jump2805_2": [
+                "token.transfer(msg.sender, bet_amount - fee)",
+                "token.transfer(msg.sender, bet_amount - fee)"
+            ],
+            "jump901": [
+                "token.CAP()",
+                "token.CAP()"
+            ],
+            "jump1857_1": [
+                "msg.sender.transfer(eth_amount)",
+                "msg.sender.transfer(eth_amount)"
+            ],
+            "block2805": [
+                "token.transfer(msg.sender, bet_amount - fee)"
+            ],
+            "block2535_2": [
+                "token.transfer(developer, fee)"
+            ],
+            "block2535_0": [
+                "token.transfer(developer, fee)"
+            ],
+            "jump1094_1": [
+                "token.totalEthers()",
+                "token.totalEthers()"
+            ],
+            "jump1094_0": [
+                "token.totalEthers()",
+                "token.totalEthers()"
+            ],
+            "block1857": [
+                "msg.sender.transfer(eth_amount)"
+            ],
+            "block2535_1": [
+                "token.transfer(developer, fee)"
+            ],
+            "jump1857_0": [
+                "msg.sender.transfer(eth_amount)",
+                "msg.sender.transfer(eth_amount)"
+            ],
+            "block1094_0": [
+                "token.totalEthers()"
+            ],
+            "jump1857_2": [
+                "msg.sender.transfer(eth_amount)",
+                "msg.sender.transfer(eth_amount)"
+            ],
+            "jump2805": [
+                "token.transfer(msg.sender, bet_amount - fee)",
+                "token.transfer(msg.sender, bet_amount - fee)"
+            ],
+            "jump2535": [
+                "token.transfer(developer, fee)",
+                "token.transfer(developer, fee)"
+            ],
+            "jump901_1": [
+                "token.CAP()",
+                "token.CAP()"
+            ],
+            "block901": [
+                "token.CAP()"
+            ],
+            "block1857_2": [
+                "msg.sender.transfer(eth_amount)"
+            ],
+            "block1857_0": [
+                "msg.sender.transfer(eth_amount)"
+            ],
+            "block1857_1": [
+                "msg.sender.transfer(eth_amount)"
+            ],
+            "jump1094": [
+                "token.totalEthers()",
+                "token.totalEthers()"
+            ],
+            "block901_1": [
+                "token.CAP()"
+            ],
+            "block2805_2": [
+                "token.transfer(msg.sender, bet_amount - fee)"
+            ],
+            "block2805_0": [
+                "token.transfer(msg.sender, bet_amount - fee)"
+            ],
+            "block2805_1": [
+                "token.transfer(msg.sender, bet_amount - fee)"
+            ],
+            "jump2535_0": [
+                "token.transfer(developer, fee)",
+                "token.transfer(developer, fee)"
+            ],
+            "jump2535_1": [
+                "token.transfer(developer, fee)",
+                "token.transfer(developer, fee)"
+            ],
+            "jump2535_2": [
+                "token.transfer(developer, fee)",
+                "token.transfer(developer, fee)"
+            ],
+            "block901_0": [
+                "token.CAP()"
+            ],
+            "block2535": [
+                "token.transfer(developer, fee)"
+            ],
+            "block1724": [
+                "msg.sender.transfer(bounty)"
+            ],
+            "jump1724": [
+                "msg.sender.transfer(bounty)",
+                "msg.sender.transfer(bounty)"
+            ],
+            "jump1704": [
+                "token.proxyPayment.value(this.balance - bounty)(address(this))",
+                "token.proxyPayment.value(this.balance - bounty)(address(this))"
+            ]
+        }
+    }
+}

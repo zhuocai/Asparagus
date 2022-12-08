@@ -1,0 +1,1684 @@
+{
+    "owned": {
+        "function_list": [
+            "owned()",
+            "changeOwner(address)"
+        ],
+        "initial_state": {
+            "owned()": {
+                "argument": {},
+                "contract": {}
+            },
+            "changeOwner(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "changeOwner(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Crowdsale": {
+        "function_list": [
+            "owned()",
+            "changeOwner(address)",
+            "fallback()",
+            "startTokensSale(address,uint256)",
+            "timeToFinishTokensSale()",
+            "finishTokensSale(uint256)",
+            "withdrawBack()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "owned()": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "etherPrice": "uint256",
+                    "totalLimitUSD": "uint256",
+                    "minimalSuccessUSD": "uint256",
+                    "collectedUSD": "uint256",
+                    "crowdsaleStartTime": "uint256",
+                    "crowdsaleFinishTime": "uint256",
+                    "numberOfInvestors": "uint256"
+                }
+            },
+            "changeOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "etherPrice": "uint256",
+                    "totalLimitUSD": "uint256",
+                    "minimalSuccessUSD": "uint256",
+                    "collectedUSD": "uint256",
+                    "crowdsaleStartTime": "uint256",
+                    "crowdsaleFinishTime": "uint256",
+                    "numberOfInvestors": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "etherPrice": "uint256",
+                    "totalLimitUSD": "uint256",
+                    "minimalSuccessUSD": "uint256",
+                    "collectedUSD": "uint256",
+                    "crowdsaleStartTime": "uint256",
+                    "crowdsaleFinishTime": "uint256",
+                    "numberOfInvestors": "uint256"
+                }
+            },
+            "startTokensSale(address,uint256)": {
+                "argument": {
+                    "_etherPrice": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256",
+                    "etherPrice": "uint256",
+                    "totalLimitUSD": "uint256",
+                    "minimalSuccessUSD": "uint256",
+                    "collectedUSD": "uint256",
+                    "crowdsaleStartTime": "uint256",
+                    "crowdsaleFinishTime": "uint256",
+                    "numberOfInvestors": "uint256"
+                }
+            },
+            "timeToFinishTokensSale()": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "etherPrice": "uint256",
+                    "totalLimitUSD": "uint256",
+                    "minimalSuccessUSD": "uint256",
+                    "collectedUSD": "uint256",
+                    "crowdsaleStartTime": "uint256",
+                    "crowdsaleFinishTime": "uint256",
+                    "numberOfInvestors": "uint256"
+                }
+            },
+            "finishTokensSale(uint256)": {
+                "argument": {
+                    "_investorsToProcess": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256",
+                    "etherPrice": "uint256",
+                    "totalLimitUSD": "uint256",
+                    "minimalSuccessUSD": "uint256",
+                    "collectedUSD": "uint256",
+                    "crowdsaleStartTime": "uint256",
+                    "crowdsaleFinishTime": "uint256",
+                    "numberOfInvestors": "uint256"
+                }
+            },
+            "withdrawBack()": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "etherPrice": "uint256",
+                    "totalLimitUSD": "uint256",
+                    "minimalSuccessUSD": "uint256",
+                    "collectedUSD": "uint256",
+                    "crowdsaleStartTime": "uint256",
+                    "crowdsaleFinishTime": "uint256",
+                    "numberOfInvestors": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "withdrawBack()": [
+                1308,
+                97
+            ],
+            "timeToFinishTokensSale()": [
+                1729,
+                273
+            ],
+            "startTokensSale(address,uint256)": [
+                2142,
+                427
+            ],
+            "changeOwner(address)": [
+                2075,
+                405
+            ],
+            "finishTokensSale(uint256)": [
+                1503,
+                207
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump2550": [
+                "msg.sender.transfer(value)",
+                "msg.sender.transfer(value)"
+            ],
+            "block3693": [
+                "crowdsaleOwner.send(this.balance)"
+            ],
+            "jump3693": [
+                "crowdsaleOwner.send(this.balance)",
+                "crowdsaleOwner.send(this.balance)"
+            ],
+            "block616_0": [
+                "msg.sender.transfer(msg.value - valueWei)"
+            ],
+            "block616": [
+                "msg.sender.transfer(msg.value - valueWei)"
+            ],
+            "jump616_0": [
+                "msg.sender.transfer(msg.value - valueWei)",
+                "msg.sender.transfer(msg.value - valueWei)"
+            ],
+            "block2550": [
+                "msg.sender.transfer(value)"
+            ],
+            "block3938": [
+                "crowdsaleOwner.send(1500000 * 1000000000000000000 / etherPrice)"
+            ],
+            "jump616": [
+                "msg.sender.transfer(msg.value - valueWei)",
+                "msg.sender.transfer(msg.value - valueWei)"
+            ],
+            "jump3938": [
+                "crowdsaleOwner.send(1500000 * 1000000000000000000 / etherPrice)",
+                "crowdsaleOwner.send(1500000 * 1000000000000000000 / etherPrice)"
+            ]
+        }
+    },
+    "Token": {
+        "function_list": [
+            "fallback()",
+            "startTokensSale(address,uint256)",
+            "timeToFinishTokensSale()",
+            "finishTokensSale(uint256)",
+            "withdrawBack()",
+            "owned()",
+            "changeOwner(address)",
+            "Token()",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8"
+                }
+            },
+            "startTokensSale(address,uint256)": {
+                "argument": {
+                    "_etherPrice": "uint256"
+                },
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8"
+                }
+            },
+            "timeToFinishTokensSale()": {
+                "argument": {},
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8"
+                }
+            },
+            "finishTokensSale(uint256)": {
+                "argument": {
+                    "_investorsToProcess": "uint256"
+                },
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8"
+                }
+            },
+            "withdrawBack()": {
+                "argument": {},
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8"
+                }
+            },
+            "owned()": {
+                "argument": {},
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8"
+                }
+            },
+            "changeOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8"
+                }
+            },
+            "Token()": {
+                "argument": {},
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "allowance(address,address)": [
+                3238,
+                647
+            ],
+            "transferFrom(address,address,uint256)": [
+                1823,
+                251
+            ],
+            "finishTokensSale(uint256)": [
+                1981,
+                295
+            ],
+            "approve(address,uint256)": [
+                1551,
+                119
+            ],
+            "startTokensSale(address,uint256)": [
+                3104,
+                603
+            ],
+            "changeOwner(address)": [
+                2960,
+                559
+            ],
+            "withdrawBack()": [
+                1628,
+                141
+            ],
+            "timeToFinishTokensSale()": [
+                2470,
+                405
+            ],
+            "transfer(address,uint256)": [
+                3027,
+                581
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump715": [
+                "msg.sender.transfer(msg.value - valueWei)",
+                "msg.sender.transfer(msg.value - valueWei)"
+            ],
+            "jump6047": [
+                "crowdsaleOwner.send(this.balance)",
+                "crowdsaleOwner.send(this.balance)"
+            ],
+            "jump715_0": [
+                "msg.sender.transfer(msg.value - valueWei)",
+                "msg.sender.transfer(msg.value - valueWei)"
+            ],
+            "block4075": [
+                "msg.sender.transfer(value)"
+            ],
+            "block6047": [
+                "crowdsaleOwner.send(this.balance)"
+            ],
+            "jump4075": [
+                "msg.sender.transfer(value)",
+                "msg.sender.transfer(value)"
+            ],
+            "block715": [
+                "msg.sender.transfer(msg.value - valueWei)"
+            ],
+            "block715_0": [
+                "msg.sender.transfer(msg.value - valueWei)"
+            ],
+            "jump6292": [
+                "crowdsaleOwner.send(1500000 * 1000000000000000000 / etherPrice)",
+                "crowdsaleOwner.send(1500000 * 1000000000000000000 / etherPrice)"
+            ],
+            "block6292": [
+                "crowdsaleOwner.send(1500000 * 1000000000000000000 / etherPrice)"
+            ]
+        }
+    },
+    "TokenMigration": {
+        "function_list": [
+            "Token()",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "fallback()",
+            "startTokensSale(address,uint256)",
+            "timeToFinishTokensSale()",
+            "finishTokensSale(uint256)",
+            "withdrawBack()",
+            "owned()",
+            "changeOwner(address)",
+            "TokenMigration()",
+            "migrate(uint256)",
+            "setMigrationAgent(address)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "Token()": {
+                "argument": {},
+                "contract": {
+                    "totalMigrated": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalMigrated": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalMigrated": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalMigrated": "uint256"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "totalMigrated": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "totalMigrated": "uint256"
+                }
+            },
+            "startTokensSale(address,uint256)": {
+                "argument": {
+                    "_etherPrice": "uint256"
+                },
+                "contract": {
+                    "totalMigrated": "uint256"
+                }
+            },
+            "timeToFinishTokensSale()": {
+                "argument": {},
+                "contract": {
+                    "totalMigrated": "uint256"
+                }
+            },
+            "finishTokensSale(uint256)": {
+                "argument": {
+                    "_investorsToProcess": "uint256"
+                },
+                "contract": {
+                    "totalMigrated": "uint256"
+                }
+            },
+            "withdrawBack()": {
+                "argument": {},
+                "contract": {
+                    "totalMigrated": "uint256"
+                }
+            },
+            "owned()": {
+                "argument": {},
+                "contract": {
+                    "totalMigrated": "uint256"
+                }
+            },
+            "changeOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "totalMigrated": "uint256"
+                }
+            },
+            "TokenMigration()": {
+                "argument": {},
+                "contract": {
+                    "totalMigrated": "uint256"
+                }
+            },
+            "migrate(uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalMigrated": "uint256"
+                }
+            },
+            "setMigrationAgent(address)": {
+                "argument": {},
+                "contract": {
+                    "totalMigrated": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "allowance(address,address)": [
+                3524,
+                735
+            ],
+            "transferFrom(address,address,uint256)": [
+                1867,
+                251
+            ],
+            "finishTokensSale(uint256)": [
+                2070,
+                317
+            ],
+            "approve(address,uint256)": [
+                1595,
+                119
+            ],
+            "migrate(uint256)": [
+                2025,
+                295
+            ],
+            "startTokensSale(address,uint256)": [
+                3390,
+                691
+            ],
+            "setMigrationAgent(address)": [
+                2559,
+                427
+            ],
+            "withdrawBack()": [
+                1672,
+                141
+            ],
+            "timeToFinishTokensSale()": [
+                2626,
+                449
+            ],
+            "changeOwner(address)": [
+                3246,
+                647
+            ],
+            "transfer(address,uint256)": [
+                3313,
+                669
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump759": [
+                "msg.sender.transfer(msg.value - valueWei)",
+                "msg.sender.transfer(msg.value - valueWei)"
+            ],
+            "block759_0": [
+                "msg.sender.transfer(msg.value - valueWei)"
+            ],
+            "block759": [
+                "msg.sender.transfer(msg.value - valueWei)"
+            ],
+            "jump7263": [
+                "crowdsaleOwner.send(1500000 * 1000000000000000000 / etherPrice)",
+                "crowdsaleOwner.send(1500000 * 1000000000000000000 / etherPrice)"
+            ],
+            "jump759_0": [
+                "msg.sender.transfer(msg.value - valueWei)",
+                "msg.sender.transfer(msg.value - valueWei)"
+            ],
+            "jump5893": [
+                "MigrationAgent(migrationAgent).migrateFrom(msg.sender, _value)",
+                "MigrationAgent(migrationAgent).migrateFrom(msg.sender, _value)"
+            ],
+            "block7018": [
+                "crowdsaleOwner.send(this.balance)"
+            ],
+            "block5893": [
+                "MigrationAgent(migrationAgent).migrateFrom(msg.sender, _value)"
+            ],
+            "jump7018": [
+                "crowdsaleOwner.send(this.balance)",
+                "crowdsaleOwner.send(this.balance)"
+            ],
+            "block7263": [
+                "crowdsaleOwner.send(1500000 * 1000000000000000000 / etherPrice)"
+            ],
+            "jump4361": [
+                "msg.sender.transfer(value)",
+                "msg.sender.transfer(value)"
+            ],
+            "block4361": [
+                "msg.sender.transfer(value)"
+            ]
+        }
+    },
+    "ProofTeamVote": {
+        "function_list": [
+            "TokenMigration()",
+            "migrate(uint256)",
+            "setMigrationAgent(address)",
+            "Token()",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "fallback()",
+            "startTokensSale(address,uint256)",
+            "timeToFinishTokensSale()",
+            "finishTokensSale(uint256)",
+            "withdrawBack()",
+            "owned()",
+            "changeOwner(address)",
+            "ProofTeamVote()",
+            "startVoting(uint256)",
+            "votingInfo()",
+            "vote(bool)",
+            "finishVoting(uint256)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "TokenMigration()": {
+                "argument": {},
+                "contract": {
+                    "weiReqFund": "uint256",
+                    "votingDeadline": "uint256",
+                    "numberOfVotes": "uint256",
+                    "yea": "uint256",
+                    "nay": "uint256"
+                }
+            },
+            "migrate(uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "weiReqFund": "uint256",
+                    "votingDeadline": "uint256",
+                    "numberOfVotes": "uint256",
+                    "yea": "uint256",
+                    "nay": "uint256"
+                }
+            },
+            "setMigrationAgent(address)": {
+                "argument": {},
+                "contract": {
+                    "weiReqFund": "uint256",
+                    "votingDeadline": "uint256",
+                    "numberOfVotes": "uint256",
+                    "yea": "uint256",
+                    "nay": "uint256"
+                }
+            },
+            "Token()": {
+                "argument": {},
+                "contract": {
+                    "weiReqFund": "uint256",
+                    "votingDeadline": "uint256",
+                    "numberOfVotes": "uint256",
+                    "yea": "uint256",
+                    "nay": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "weiReqFund": "uint256",
+                    "votingDeadline": "uint256",
+                    "numberOfVotes": "uint256",
+                    "yea": "uint256",
+                    "nay": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "weiReqFund": "uint256",
+                    "votingDeadline": "uint256",
+                    "numberOfVotes": "uint256",
+                    "yea": "uint256",
+                    "nay": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "weiReqFund": "uint256",
+                    "votingDeadline": "uint256",
+                    "numberOfVotes": "uint256",
+                    "yea": "uint256",
+                    "nay": "uint256"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "weiReqFund": "uint256",
+                    "votingDeadline": "uint256",
+                    "numberOfVotes": "uint256",
+                    "yea": "uint256",
+                    "nay": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "weiReqFund": "uint256",
+                    "votingDeadline": "uint256",
+                    "numberOfVotes": "uint256",
+                    "yea": "uint256",
+                    "nay": "uint256"
+                }
+            },
+            "startTokensSale(address,uint256)": {
+                "argument": {
+                    "_etherPrice": "uint256"
+                },
+                "contract": {
+                    "weiReqFund": "uint256",
+                    "votingDeadline": "uint256",
+                    "numberOfVotes": "uint256",
+                    "yea": "uint256",
+                    "nay": "uint256"
+                }
+            },
+            "timeToFinishTokensSale()": {
+                "argument": {},
+                "contract": {
+                    "weiReqFund": "uint256",
+                    "votingDeadline": "uint256",
+                    "numberOfVotes": "uint256",
+                    "yea": "uint256",
+                    "nay": "uint256"
+                }
+            },
+            "finishTokensSale(uint256)": {
+                "argument": {
+                    "_investorsToProcess": "uint256"
+                },
+                "contract": {
+                    "weiReqFund": "uint256",
+                    "votingDeadline": "uint256",
+                    "numberOfVotes": "uint256",
+                    "yea": "uint256",
+                    "nay": "uint256"
+                }
+            },
+            "withdrawBack()": {
+                "argument": {},
+                "contract": {
+                    "weiReqFund": "uint256",
+                    "votingDeadline": "uint256",
+                    "numberOfVotes": "uint256",
+                    "yea": "uint256",
+                    "nay": "uint256"
+                }
+            },
+            "owned()": {
+                "argument": {},
+                "contract": {
+                    "weiReqFund": "uint256",
+                    "votingDeadline": "uint256",
+                    "numberOfVotes": "uint256",
+                    "yea": "uint256",
+                    "nay": "uint256"
+                }
+            },
+            "changeOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "weiReqFund": "uint256",
+                    "votingDeadline": "uint256",
+                    "numberOfVotes": "uint256",
+                    "yea": "uint256",
+                    "nay": "uint256"
+                }
+            },
+            "ProofTeamVote()": {
+                "argument": {},
+                "contract": {
+                    "weiReqFund": "uint256",
+                    "votingDeadline": "uint256",
+                    "numberOfVotes": "uint256",
+                    "yea": "uint256",
+                    "nay": "uint256"
+                }
+            },
+            "startVoting(uint256)": {
+                "argument": {
+                    "_weiReqFund": "uint256"
+                },
+                "contract": {
+                    "weiReqFund": "uint256",
+                    "votingDeadline": "uint256",
+                    "numberOfVotes": "uint256",
+                    "yea": "uint256",
+                    "nay": "uint256"
+                }
+            },
+            "votingInfo()": {
+                "argument": {},
+                "contract": {
+                    "weiReqFund": "uint256",
+                    "votingDeadline": "uint256",
+                    "numberOfVotes": "uint256",
+                    "yea": "uint256",
+                    "nay": "uint256"
+                }
+            },
+            "vote(bool)": {
+                "argument": {},
+                "contract": {
+                    "weiReqFund": "uint256",
+                    "votingDeadline": "uint256",
+                    "numberOfVotes": "uint256",
+                    "yea": "uint256",
+                    "nay": "uint256"
+                }
+            },
+            "finishVoting(uint256)": {
+                "argument": {
+                    "_votesToProcess": "uint256"
+                },
+                "contract": {
+                    "weiReqFund": "uint256",
+                    "votingDeadline": "uint256",
+                    "numberOfVotes": "uint256",
+                    "yea": "uint256",
+                    "nay": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "votingInfo()": [
+                2031,
+                273
+            ],
+            "allowance(address,address)": [
+                4150,
+                933
+            ],
+            "transferFrom(address,address,uint256)": [
+                2167,
+                339
+            ],
+            "finishTokensSale(uint256)": [
+                2458,
+                449
+            ],
+            "approve(address,uint256)": [
+                1759,
+                141
+            ],
+            "migrate(uint256)": [
+                2413,
+                427
+            ],
+            "startTokensSale(address,uint256)": [
+                3914,
+                867
+            ],
+            "vote(bool)": [
+                2503,
+                471
+            ],
+            "setMigrationAgent(address)": [
+                3014,
+                581
+            ],
+            "withdrawBack()": [
+                1836,
+                163
+            ],
+            "timeToFinishTokensSale()": [
+                3081,
+                603
+            ],
+            "startVoting(uint256)": [
+                2368,
+                405
+            ],
+            "changeOwner(address)": [
+                3701,
+                801
+            ],
+            "finishVoting(uint256)": [
+                3845,
+                845
+            ],
+            "transfer(address,uint256)": [
+                3768,
+                823
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump8547": [
+                "crowdsaleOwner.send(1500000 * 1000000000000000000 / etherPrice)",
+                "crowdsaleOwner.send(1500000 * 1000000000000000000 / etherPrice)"
+            ],
+            "jump5145": [
+                "msg.sender.transfer(value)",
+                "msg.sender.transfer(value)"
+            ],
+            "block7177": [
+                "MigrationAgent(migrationAgent).migrateFrom(msg.sender, _value)"
+            ],
+            "block880_0": [
+                "msg.sender.transfer(msg.value - valueWei)"
+            ],
+            "jump880_0": [
+                "msg.sender.transfer(msg.value - valueWei)",
+                "msg.sender.transfer(msg.value - valueWei)"
+            ],
+            "jump7177": [
+                "MigrationAgent(migrationAgent).migrateFrom(msg.sender, _value)",
+                "MigrationAgent(migrationAgent).migrateFrom(msg.sender, _value)"
+            ],
+            "jump880": [
+                "msg.sender.transfer(msg.value - valueWei)",
+                "msg.sender.transfer(msg.value - valueWei)"
+            ],
+            "block11946": [
+                "owner.send(weiForSend)"
+            ],
+            "block12047": [
+                "migrationAgent.send(this.balance)"
+            ],
+            "jump11946": [
+                "owner.send(weiForSend)",
+                "owner.send(weiForSend)"
+            ],
+            "block880": [
+                "msg.sender.transfer(msg.value - valueWei)"
+            ],
+            "block8302": [
+                "crowdsaleOwner.send(this.balance)"
+            ],
+            "block5145": [
+                "msg.sender.transfer(value)"
+            ],
+            "block8547": [
+                "crowdsaleOwner.send(1500000 * 1000000000000000000 / etherPrice)"
+            ],
+            "jump8302": [
+                "crowdsaleOwner.send(this.balance)",
+                "crowdsaleOwner.send(this.balance)"
+            ],
+            "jump12047": [
+                "migrationAgent.send(this.balance)",
+                "migrationAgent.send(this.balance)"
+            ]
+        }
+    },
+    "ProofPublicVote": {
+        "function_list": [
+            "ProofTeamVote()",
+            "startVoting(uint256)",
+            "votingInfo()",
+            "vote(bool)",
+            "finishVoting(uint256)",
+            "TokenMigration()",
+            "migrate(uint256)",
+            "setMigrationAgent(address)",
+            "Token()",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "fallback()",
+            "startTokensSale(address,uint256)",
+            "timeToFinishTokensSale()",
+            "finishTokensSale(uint256)",
+            "withdrawBack()",
+            "owned()",
+            "changeOwner(address)",
+            "ProofPublicVote()",
+            "deployProject(uint256,string)",
+            "projectInfo(address)",
+            "vote(address,bool)",
+            "finishVoting(address,uint256)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "ProofTeamVote()": {
+                "argument": {},
+                "contract": {}
+            },
+            "startVoting(uint256)": {
+                "argument": {
+                    "_weiReqFund": "uint256"
+                },
+                "contract": {}
+            },
+            "votingInfo()": {
+                "argument": {},
+                "contract": {}
+            },
+            "vote(bool)": {
+                "argument": {},
+                "contract": {}
+            },
+            "finishVoting(uint256)": {
+                "argument": {
+                    "_votesToProcess": "uint256"
+                },
+                "contract": {}
+            },
+            "TokenMigration()": {
+                "argument": {},
+                "contract": {}
+            },
+            "migrate(uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "setMigrationAgent(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "Token()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {}
+            },
+            "startTokensSale(address,uint256)": {
+                "argument": {
+                    "_etherPrice": "uint256"
+                },
+                "contract": {}
+            },
+            "timeToFinishTokensSale()": {
+                "argument": {},
+                "contract": {}
+            },
+            "finishTokensSale(uint256)": {
+                "argument": {
+                    "_investorsToProcess": "uint256"
+                },
+                "contract": {}
+            },
+            "withdrawBack()": {
+                "argument": {},
+                "contract": {}
+            },
+            "owned()": {
+                "argument": {},
+                "contract": {}
+            },
+            "changeOwner(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "ProofPublicVote()": {
+                "argument": {},
+                "contract": {}
+            },
+            "deployProject(uint256,string)": {
+                "argument": {
+                    "_proofReqFund": "uint256",
+                    "_urlInfo": "string"
+                },
+                "contract": {}
+            },
+            "projectInfo(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "vote(address,bool)": {
+                "argument": {},
+                "contract": {}
+            },
+            "finishVoting(address,uint256)": {
+                "argument": {
+                    "_votesToProcess": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "votingInfo()": [
+                2086,
+                273
+            ],
+            "allowance(address,address)": [
+                4945,
+                1043
+            ],
+            "transferFrom(address,address,uint256)": [
+                2222,
+                339
+            ],
+            "finishTokensSale(uint256)": [
+                2614,
+                471
+            ],
+            "approve(address,uint256)": [
+                1814,
+                141
+            ],
+            "migrate(uint256)": [
+                2569,
+                449
+            ],
+            "startTokensSale(address,uint256)": [
+                4610,
+                955
+            ],
+            "projectInfo(address)": [
+                4080,
+                845
+            ],
+            "vote(bool)": [
+                2659,
+                493
+            ],
+            "setMigrationAgent(address)": [
+                3170,
+                603
+            ],
+            "vote(address,bool)": [
+                4687,
+                977
+            ],
+            "withdrawBack()": [
+                1891,
+                163
+            ],
+            "deployProject(uint256,string)": [
+                4495,
+                933
+            ],
+            "timeToFinishTokensSale()": [
+                3237,
+                625
+            ],
+            "startVoting(uint256)": [
+                2423,
+                405
+            ],
+            "finishVoting(address,uint256)": [
+                2468,
+                427
+            ],
+            "changeOwner(address)": [
+                4282,
+                867
+            ],
+            "finishVoting(uint256)": [
+                4426,
+                911
+            ],
+            "transfer(address,uint256)": [
+                4349,
+                889
+            ]
+        },
+        "block_CALL_mapping": {
+            "block15101": [
+                "migrationAgent.send(this.balance)"
+            ],
+            "jump935": [
+                "msg.sender.transfer(msg.value - valueWei)",
+                "msg.sender.transfer(msg.value - valueWei)"
+            ],
+            "jump10586": [
+                "crowdsaleOwner.send(this.balance)",
+                "crowdsaleOwner.send(this.balance)"
+            ],
+            "jump9461": [
+                "MigrationAgent(migrationAgent).migrateFrom(msg.sender, _value)",
+                "MigrationAgent(migrationAgent).migrateFrom(msg.sender, _value)"
+            ],
+            "block15000": [
+                "owner.send(weiForSend)"
+            ],
+            "block9461": [
+                "MigrationAgent(migrationAgent).migrateFrom(msg.sender, _value)"
+            ],
+            "jump935_0": [
+                "msg.sender.transfer(msg.value - valueWei)",
+                "msg.sender.transfer(msg.value - valueWei)"
+            ],
+            "block935_0": [
+                "msg.sender.transfer(msg.value - valueWei)"
+            ],
+            "jump10831": [
+                "crowdsaleOwner.send(1500000 * 1000000000000000000 / etherPrice)",
+                "crowdsaleOwner.send(1500000 * 1000000000000000000 / etherPrice)"
+            ],
+            "jump5940": [
+                "msg.sender.transfer(value)",
+                "msg.sender.transfer(value)"
+            ],
+            "jump15101": [
+                "migrationAgent.send(this.balance)",
+                "migrationAgent.send(this.balance)"
+            ],
+            "block5940": [
+                "msg.sender.transfer(value)"
+            ],
+            "block10586": [
+                "crowdsaleOwner.send(this.balance)"
+            ],
+            "block10831": [
+                "crowdsaleOwner.send(1500000 * 1000000000000000000 / etherPrice)"
+            ],
+            "block935": [
+                "msg.sender.transfer(msg.value - valueWei)"
+            ],
+            "jump15000": [
+                "owner.send(weiForSend)",
+                "owner.send(weiForSend)"
+            ]
+        }
+    },
+    "Proof": {
+        "function_list": [
+            "ProofPublicVote()",
+            "deployProject(uint256,string)",
+            "projectInfo(address)",
+            "vote(address,bool)",
+            "finishVoting(address,uint256)",
+            "ProofTeamVote()",
+            "startVoting(uint256)",
+            "votingInfo()",
+            "vote(bool)",
+            "finishVoting(uint256)",
+            "TokenMigration()",
+            "migrate(uint256)",
+            "setMigrationAgent(address)",
+            "Token()",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "fallback()",
+            "startTokensSale(address,uint256)",
+            "timeToFinishTokensSale()",
+            "finishTokensSale(uint256)",
+            "withdrawBack()",
+            "owned()",
+            "changeOwner(address)",
+            "Proof()",
+            "setPrice(uint256)",
+            "swypeCode()",
+            "setHash(uint16,bytes32)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "ProofPublicVote()": {
+                "argument": {},
+                "contract": {
+                    "priceInTokens": "uint256",
+                    "teamFee": "uint256"
+                }
+            },
+            "deployProject(uint256,string)": {
+                "argument": {
+                    "_proofReqFund": "uint256",
+                    "_urlInfo": "string"
+                },
+                "contract": {
+                    "priceInTokens": "uint256",
+                    "teamFee": "uint256"
+                }
+            },
+            "projectInfo(address)": {
+                "argument": {},
+                "contract": {
+                    "priceInTokens": "uint256",
+                    "teamFee": "uint256"
+                }
+            },
+            "vote(address,bool)": {
+                "argument": {},
+                "contract": {
+                    "priceInTokens": "uint256",
+                    "teamFee": "uint256"
+                }
+            },
+            "finishVoting(address,uint256)": {
+                "argument": {
+                    "_votesToProcess": "uint256"
+                },
+                "contract": {
+                    "priceInTokens": "uint256",
+                    "teamFee": "uint256"
+                }
+            },
+            "ProofTeamVote()": {
+                "argument": {},
+                "contract": {
+                    "priceInTokens": "uint256",
+                    "teamFee": "uint256"
+                }
+            },
+            "startVoting(uint256)": {
+                "argument": {
+                    "_weiReqFund": "uint256"
+                },
+                "contract": {
+                    "priceInTokens": "uint256",
+                    "teamFee": "uint256"
+                }
+            },
+            "votingInfo()": {
+                "argument": {},
+                "contract": {
+                    "priceInTokens": "uint256",
+                    "teamFee": "uint256"
+                }
+            },
+            "vote(bool)": {
+                "argument": {},
+                "contract": {
+                    "priceInTokens": "uint256",
+                    "teamFee": "uint256"
+                }
+            },
+            "finishVoting(uint256)": {
+                "argument": {
+                    "_votesToProcess": "uint256"
+                },
+                "contract": {
+                    "priceInTokens": "uint256",
+                    "teamFee": "uint256"
+                }
+            },
+            "TokenMigration()": {
+                "argument": {},
+                "contract": {
+                    "priceInTokens": "uint256",
+                    "teamFee": "uint256"
+                }
+            },
+            "migrate(uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "priceInTokens": "uint256",
+                    "teamFee": "uint256"
+                }
+            },
+            "setMigrationAgent(address)": {
+                "argument": {},
+                "contract": {
+                    "priceInTokens": "uint256",
+                    "teamFee": "uint256"
+                }
+            },
+            "Token()": {
+                "argument": {},
+                "contract": {
+                    "priceInTokens": "uint256",
+                    "teamFee": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "priceInTokens": "uint256",
+                    "teamFee": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "priceInTokens": "uint256",
+                    "teamFee": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "priceInTokens": "uint256",
+                    "teamFee": "uint256"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "priceInTokens": "uint256",
+                    "teamFee": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "priceInTokens": "uint256",
+                    "teamFee": "uint256"
+                }
+            },
+            "startTokensSale(address,uint256)": {
+                "argument": {
+                    "_etherPrice": "uint256"
+                },
+                "contract": {
+                    "priceInTokens": "uint256",
+                    "teamFee": "uint256"
+                }
+            },
+            "timeToFinishTokensSale()": {
+                "argument": {},
+                "contract": {
+                    "priceInTokens": "uint256",
+                    "teamFee": "uint256"
+                }
+            },
+            "finishTokensSale(uint256)": {
+                "argument": {
+                    "_investorsToProcess": "uint256"
+                },
+                "contract": {
+                    "priceInTokens": "uint256",
+                    "teamFee": "uint256"
+                }
+            },
+            "withdrawBack()": {
+                "argument": {},
+                "contract": {
+                    "priceInTokens": "uint256",
+                    "teamFee": "uint256"
+                }
+            },
+            "owned()": {
+                "argument": {},
+                "contract": {
+                    "priceInTokens": "uint256",
+                    "teamFee": "uint256"
+                }
+            },
+            "changeOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "priceInTokens": "uint256",
+                    "teamFee": "uint256"
+                }
+            },
+            "Proof()": {
+                "argument": {},
+                "contract": {
+                    "priceInTokens": "uint256",
+                    "teamFee": "uint256"
+                }
+            },
+            "setPrice(uint256)": {
+                "argument": {
+                    "_priceInTokens": "uint256"
+                },
+                "contract": {
+                    "priceInTokens": "uint256",
+                    "teamFee": "uint256"
+                }
+            },
+            "swypeCode()": {
+                "argument": {},
+                "contract": {
+                    "priceInTokens": "uint256",
+                    "teamFee": "uint256"
+                }
+            },
+            "setHash(uint16,bytes32)": {
+                "argument": {
+                    "_swype": "uint16",
+                    "_hash": "bytes32"
+                },
+                "contract": {
+                    "priceInTokens": "uint256",
+                    "teamFee": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "votingInfo()": [
+                2141,
+                273
+            ],
+            "allowance(address,address)": [
+                5403,
+                1153
+            ],
+            "transferFrom(address,address,uint256)": [
+                2277,
+                339
+            ],
+            "finishTokensSale(uint256)": [
+                2720,
+                493
+            ],
+            "approve(address,uint256)": [
+                1869,
+                141
+            ],
+            "migrate(uint256)": [
+                2624,
+                449
+            ],
+            "startTokensSale(address,uint256)": [
+                5005,
+                1043
+            ],
+            "projectInfo(address)": [
+                4475,
+                933
+            ],
+            "vote(bool)": [
+                2765,
+                515
+            ],
+            "setMigrationAgent(address)": [
+                3378,
+                647
+            ],
+            "swypeCode()": [
+                2669,
+                471
+            ],
+            "vote(address,bool)": [
+                5082,
+                1065
+            ],
+            "withdrawBack()": [
+                1946,
+                163
+            ],
+            "setPrice(uint256)": [
+                4015,
+                801
+            ],
+            "deployProject(uint256,string)": [
+                4890,
+                1021
+            ],
+            "timeToFinishTokensSale()": [
+                3445,
+                669
+            ],
+            "startVoting(uint256)": [
+                2478,
+                405
+            ],
+            "finishVoting(address,uint256)": [
+                2523,
+                427
+            ],
+            "changeOwner(address)": [
+                4677,
+                955
+            ],
+            "finishVoting(uint256)": [
+                4821,
+                999
+            ],
+            "transfer(address,uint256)": [
+                4744,
+                977
+            ],
+            "setHash(uint16,bytes32)": [
+                5238,
+                1109
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump990_0": [
+                "msg.sender.transfer(msg.value - valueWei)",
+                "msg.sender.transfer(msg.value - valueWei)"
+            ],
+            "block990_0": [
+                "msg.sender.transfer(msg.value - valueWei)"
+            ],
+            "block11614": [
+                "crowdsaleOwner.send(1500000 * 1000000000000000000 / etherPrice)"
+            ],
+            "block9919": [
+                "MigrationAgent(migrationAgent).migrateFrom(msg.sender, _value)"
+            ],
+            "block16188": [
+                "migrationAgent.send(this.balance)"
+            ],
+            "jump9919": [
+                "MigrationAgent(migrationAgent).migrateFrom(msg.sender, _value)",
+                "MigrationAgent(migrationAgent).migrateFrom(msg.sender, _value)"
+            ],
+            "jump6398": [
+                "msg.sender.transfer(value)",
+                "msg.sender.transfer(value)"
+            ],
+            "jump16188": [
+                "migrationAgent.send(this.balance)",
+                "migrationAgent.send(this.balance)"
+            ],
+            "jump16087": [
+                "owner.send(weiForSend)",
+                "owner.send(weiForSend)"
+            ],
+            "block6398": [
+                "msg.sender.transfer(value)"
+            ],
+            "block11369": [
+                "crowdsaleOwner.send(this.balance)"
+            ],
+            "jump990": [
+                "msg.sender.transfer(msg.value - valueWei)",
+                "msg.sender.transfer(msg.value - valueWei)"
+            ],
+            "block16087": [
+                "owner.send(weiForSend)"
+            ],
+            "jump11614": [
+                "crowdsaleOwner.send(1500000 * 1000000000000000000 / etherPrice)",
+                "crowdsaleOwner.send(1500000 * 1000000000000000000 / etherPrice)"
+            ],
+            "block990": [
+                "msg.sender.transfer(msg.value - valueWei)"
+            ],
+            "jump11369": [
+                "crowdsaleOwner.send(this.balance)",
+                "crowdsaleOwner.send(this.balance)"
+            ]
+        }
+    }
+}

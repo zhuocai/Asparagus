@@ -1,0 +1,150 @@
+{
+    "ERC20": {
+        "function_list": [
+            "balanceOf(address)",
+            "allowance(address,address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                445,
+                97
+            ],
+            "balanceOf(address)": [
+                818,
+                207
+            ],
+            "transferFrom(address,address,uint256)": [
+                589,
+                141
+            ],
+            "allowance(address,address)": [
+                1237,
+                295
+            ],
+            "transfer(address,uint256)": [
+                1136,
+                273
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Ownable": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Issuer": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "Issuer(address,address,ERC20)",
+            "issue(address,uint256)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {
+                    "issuedCount": "uint256"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "issuedCount": "uint256"
+                }
+            },
+            "Issuer(address,address,ERC20)": {
+                "argument": {},
+                "contract": {
+                    "issuedCount": "uint256"
+                }
+            },
+            "issue(address,uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {
+                    "issuedCount": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "issue(address,uint256)": [
+                179,
+                97
+            ],
+            "transferOwnership(address)": [
+                521,
+                185
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump1142": [
+                "token.transferFrom(allower, benefactor, amount)",
+                "token.transferFrom(allower, benefactor, amount)"
+            ],
+            "block1142": [
+                "token.transferFrom(allower, benefactor, amount)"
+            ]
+        }
+    }
+}

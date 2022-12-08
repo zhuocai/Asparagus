@@ -1,0 +1,987 @@
+{
+    "Timed": {
+        "function_list": [
+            "Timed(uint256,uint256)"
+        ],
+        "initial_state": {
+            "Timed(uint256,uint256)": {
+                "argument": {
+                    "_beginTime": "uint256",
+                    "_duration": "uint256"
+                },
+                "contract": {
+                    "beginTime": "uint256",
+                    "endTime": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "Owned": {
+        "function_list": [
+            "Owned()",
+            "updateOwner(address)"
+        ],
+        "initial_state": {
+            "Owned()": {
+                "argument": {},
+                "contract": {}
+            },
+            "updateOwner(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "updateOwner(address)": [
+                81,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "EthVestICO": {
+        "function_list": [
+            "Owned()",
+            "updateOwner(address)",
+            "Timed(uint256,uint256)",
+            "EthVestICO(uint256)",
+            "fallback()",
+            "purchase(address)",
+            "finish()",
+            "withdraw()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "Owned()": {
+                "argument": {},
+                "contract": {
+                    "ICO_LENGTH": "uint256",
+                    "RATE": "uint256",
+                    "REWARD": "uint256"
+                }
+            },
+            "updateOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "ICO_LENGTH": "uint256",
+                    "RATE": "uint256",
+                    "REWARD": "uint256"
+                }
+            },
+            "Timed(uint256,uint256)": {
+                "argument": {
+                    "_beginTime": "uint256",
+                    "_duration": "uint256"
+                },
+                "contract": {
+                    "ICO_LENGTH": "uint256",
+                    "RATE": "uint256",
+                    "REWARD": "uint256"
+                }
+            },
+            "EthVestICO(uint256)": {
+                "argument": {
+                    "_beginTime": "uint256"
+                },
+                "contract": {
+                    "ICO_LENGTH": "uint256",
+                    "RATE": "uint256",
+                    "REWARD": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "ICO_LENGTH": "uint256",
+                    "RATE": "uint256",
+                    "REWARD": "uint256"
+                }
+            },
+            "purchase(address)": {
+                "argument": {},
+                "contract": {
+                    "ICO_LENGTH": "uint256",
+                    "RATE": "uint256",
+                    "REWARD": "uint256"
+                }
+            },
+            "finish()": {
+                "argument": {},
+                "contract": {
+                    "ICO_LENGTH": "uint256",
+                    "RATE": "uint256",
+                    "REWARD": "uint256"
+                }
+            },
+            "withdraw()": {
+                "argument": {},
+                "contract": {
+                    "ICO_LENGTH": "uint256",
+                    "RATE": "uint256",
+                    "REWARD": "uint256"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "ICO_LENGTH": "uint256",
+                    "RATE": "uint256",
+                    "REWARD": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "updateOwner(address)": [
+                2832,
+                1020
+            ],
+            "withdraw()": [
+                281,
+                119
+            ],
+            "finish()": [
+                588,
+                229
+            ],
+            "purchase(address)": [
+                184,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "block903_0": [
+                "ethVest.mint(_beneficiary, _mintValue)"
+            ],
+            "block903_1": [
+                "ethVest.mint(_beneficiary, _mintValue)"
+            ],
+            "block903": [
+                "ethVest.mint(_beneficiary, _mintValue)"
+            ],
+            "block2085": [
+                "ethVest.mint(owner, ethVest.totalSupply() >> 2)"
+            ],
+            "jump903_0": [
+                "ethVest.mint(_beneficiary, _mintValue)",
+                "ethVest.mint(_beneficiary, _mintValue)"
+            ],
+            "jump903_1": [
+                "ethVest.mint(_beneficiary, _mintValue)",
+                "ethVest.mint(_beneficiary, _mintValue)"
+            ],
+            "jump903": [
+                "ethVest.mint(_beneficiary, _mintValue)",
+                "ethVest.mint(_beneficiary, _mintValue)"
+            ],
+            "block1887": [
+                "ethVest.totalSupply()"
+            ],
+            "jump2391": [
+                "ethVest.mint(owner, REWARD)",
+                "ethVest.mint(owner, REWARD)"
+            ],
+            "jump1887": [
+                "ethVest.totalSupply()",
+                "ethVest.totalSupply()"
+            ],
+            "block1174": [
+                "owner.transfer(this.balance)"
+            ],
+            "jump2585": [
+                "ethVest.start()",
+                "ethVest.start()"
+            ],
+            "jump1174": [
+                "owner.transfer(this.balance)",
+                "owner.transfer(this.balance)"
+            ],
+            "jump2832": [
+                "ethVest.updateOwner(owner)",
+                "ethVest.updateOwner(owner)"
+            ],
+            "block2585": [
+                "ethVest.start()"
+            ],
+            "block2832": [
+                "ethVest.updateOwner(owner)"
+            ],
+            "block2391": [
+                "ethVest.mint(owner, REWARD)"
+            ],
+            "jump2085": [
+                "ethVest.mint(owner, ethVest.totalSupply() >> 2)",
+                "ethVest.mint(owner, ethVest.totalSupply() >> 2)"
+            ]
+        }
+    },
+    "ERC20Basic": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                124,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "ERC20": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                158,
+                75
+            ],
+            "transfer(address,uint256)": [
+                719,
+                229
+            ],
+            "balanceOf(address)": [
+                557,
+                185
+            ],
+            "transferFrom(address,address,uint256)": [
+                302,
+                119
+            ],
+            "allowance(address,address)": [
+                820,
+                251
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "SafeArithmetic": {
+        "function_list": [
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)",
+            "mul(uint256,uint256)",
+            "min(uint256,uint256)"
+        ],
+        "initial_state": {
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "min(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "Startable": {
+        "function_list": [
+            "Owned()",
+            "updateOwner(address)",
+            "start()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "Owned()": {
+                "argument": {},
+                "contract": {}
+            },
+            "updateOwner(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "start()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "start()": [
+                246,
+                119
+            ],
+            "updateOwner(address)": [
+                92,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Stoppable": {
+        "function_list": [
+            "Owned()",
+            "updateOwner(address)",
+            "stop(bytes32)",
+            "_stop(bytes32)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "Owned()": {
+                "argument": {},
+                "contract": {}
+            },
+            "updateOwner(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "stop(bytes32)": {
+                "argument": {
+                    "message": "bytes32"
+                },
+                "contract": {}
+            },
+            "_stop(bytes32)": {
+                "argument": {
+                    "message": "bytes32"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "stop(bytes32)": [
+                92,
+                75
+            ],
+            "updateOwner(address)": [
+                141,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "BasicToken": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transfer(address,uint256)",
+            "balanceOf(address)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transfer(address,uint256)": [
+                222,
+                119
+            ],
+            "balanceOf(address)": [
+                135,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "StandardToken": {
+        "function_list": [
+            "transfer(address,uint256)",
+            "balanceOf(address)",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "increaseApproval(address,uint256)",
+            "decreaseApproval(address,uint256)"
+        ],
+        "initial_state": {
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "increaseApproval(address,uint256)": {
+                "argument": {
+                    "_addedValue": "uint256"
+                },
+                "contract": {}
+            },
+            "decreaseApproval(address,uint256)": {
+                "argument": {
+                    "_subtractedValue": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                147,
+                75
+            ],
+            "increaseApproval(address,uint256)": [
+                713,
+                207
+            ],
+            "balanceOf(address)": [
+                525,
+                163
+            ],
+            "allowance(address,address)": [
+                814,
+                229
+            ],
+            "decreaseApproval(address,uint256)": [
+                424,
+                141
+            ],
+            "transferFrom(address,address,uint256)": [
+                291,
+                119
+            ],
+            "transfer(address,uint256)": [
+                612,
+                185
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "EthVest": {
+        "function_list": [
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)",
+            "mul(uint256,uint256)",
+            "min(uint256,uint256)",
+            "start()",
+            "Owned()",
+            "updateOwner(address)",
+            "stop(bytes32)",
+            "_stop(bytes32)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "increaseApproval(address,uint256)",
+            "decreaseApproval(address,uint256)",
+            "transfer(address,uint256)",
+            "balanceOf(address)",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "investmentOf(address)",
+            "invest()",
+            "divest(uint256)",
+            "divest()",
+            "claim()",
+            "EthVest()",
+            "mint(address,uint256)",
+            "_mint(address,uint256)",
+            "investmentOf(address)",
+            "invest()",
+            "divest(uint256)",
+            "divest()",
+            "claim()",
+            "fallback()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "decimals": "uint8",
+                    "symbol": "string",
+                    "version": "string",
+                    "totalWorth": "uint256"
+                }
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "decimals": "uint8",
+                    "symbol": "string",
+                    "version": "string",
+                    "totalWorth": "uint256"
+                }
+            },
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "decimals": "uint8",
+                    "symbol": "string",
+                    "version": "string",
+                    "totalWorth": "uint256"
+                }
+            },
+            "min(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "decimals": "uint8",
+                    "symbol": "string",
+                    "version": "string",
+                    "totalWorth": "uint256"
+                }
+            },
+            "start()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "decimals": "uint8",
+                    "symbol": "string",
+                    "version": "string",
+                    "totalWorth": "uint256"
+                }
+            },
+            "Owned()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "decimals": "uint8",
+                    "symbol": "string",
+                    "version": "string",
+                    "totalWorth": "uint256"
+                }
+            },
+            "updateOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "decimals": "uint8",
+                    "symbol": "string",
+                    "version": "string",
+                    "totalWorth": "uint256"
+                }
+            },
+            "stop(bytes32)": {
+                "argument": {
+                    "message": "bytes32"
+                },
+                "contract": {
+                    "name": "string",
+                    "decimals": "uint8",
+                    "symbol": "string",
+                    "version": "string",
+                    "totalWorth": "uint256"
+                }
+            },
+            "_stop(bytes32)": {
+                "argument": {
+                    "message": "bytes32"
+                },
+                "contract": {
+                    "name": "string",
+                    "decimals": "uint8",
+                    "symbol": "string",
+                    "version": "string",
+                    "totalWorth": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "decimals": "uint8",
+                    "symbol": "string",
+                    "version": "string",
+                    "totalWorth": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "decimals": "uint8",
+                    "symbol": "string",
+                    "version": "string",
+                    "totalWorth": "uint256"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "decimals": "uint8",
+                    "symbol": "string",
+                    "version": "string",
+                    "totalWorth": "uint256"
+                }
+            },
+            "increaseApproval(address,uint256)": {
+                "argument": {
+                    "_addedValue": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "decimals": "uint8",
+                    "symbol": "string",
+                    "version": "string",
+                    "totalWorth": "uint256"
+                }
+            },
+            "decreaseApproval(address,uint256)": {
+                "argument": {
+                    "_subtractedValue": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "decimals": "uint8",
+                    "symbol": "string",
+                    "version": "string",
+                    "totalWorth": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "decimals": "uint8",
+                    "symbol": "string",
+                    "version": "string",
+                    "totalWorth": "uint256"
+                }
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "decimals": "uint8",
+                    "symbol": "string",
+                    "version": "string",
+                    "totalWorth": "uint256"
+                }
+            },
+            "investmentOf(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "decimals": "uint8",
+                    "symbol": "string",
+                    "version": "string",
+                    "totalWorth": "uint256"
+                }
+            },
+            "invest()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "decimals": "uint8",
+                    "symbol": "string",
+                    "version": "string",
+                    "totalWorth": "uint256"
+                }
+            },
+            "divest(uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "decimals": "uint8",
+                    "symbol": "string",
+                    "version": "string",
+                    "totalWorth": "uint256"
+                }
+            },
+            "divest()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "decimals": "uint8",
+                    "symbol": "string",
+                    "version": "string",
+                    "totalWorth": "uint256"
+                }
+            },
+            "claim()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "decimals": "uint8",
+                    "symbol": "string",
+                    "version": "string",
+                    "totalWorth": "uint256"
+                }
+            },
+            "EthVest()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "decimals": "uint8",
+                    "symbol": "string",
+                    "version": "string",
+                    "totalWorth": "uint256"
+                }
+            },
+            "mint(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "decimals": "uint8",
+                    "symbol": "string",
+                    "version": "string",
+                    "totalWorth": "uint256"
+                }
+            },
+            "_mint(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "decimals": "uint8",
+                    "symbol": "string",
+                    "version": "string",
+                    "totalWorth": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "decimals": "uint8",
+                    "symbol": "string",
+                    "version": "string",
+                    "totalWorth": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "allowance(address,address)": [
+                2144,
+                537
+            ],
+            "decreaseApproval(address,uint256)": [
+                1176,
+                295
+            ],
+            "transferFrom(address,address,uint256)": [
+                653,
+                163
+            ],
+            "approve(address,uint256)": [
+                509,
+                119
+            ],
+            "increaseApproval(address,uint256)": [
+                2043,
+                515
+            ],
+            "start()": [
+                2020,
+                493
+            ],
+            "claim()": [
+                936,
+                229
+            ],
+            "investmentOf(address)": [
+                1587,
+                405
+            ],
+            "updateOwner(address)": [
+                1364,
+                339
+            ],
+            "balanceOf(address)": [
+                1277,
+                317
+            ],
+            "divest()": [
+                318,
+                75
+            ],
+            "invest()": [
+                2263,
+                559
+            ],
+            "divest(uint256)": [
+                1431,
+                361
+            ],
+            "stop(bytes32)": [
+                1127,
+                273
+            ],
+            "mint(address,uint256)": [
+                835,
+                207
+            ],
+            "transfer(address,uint256)": [
+                1919,
+                471
+            ]
+        },
+        "block_CALL_mapping": {
+            "block5768_0": [
+                "msg.sender.send(_value)"
+            ],
+            "block5768": [
+                "msg.sender.send(_value)"
+            ],
+            "jump5768_0": [
+                "msg.sender.send(_value)",
+                "msg.sender.send(_value)"
+            ],
+            "jump5768": [
+                "msg.sender.send(_value)",
+                "msg.sender.send(_value)"
+            ]
+        }
+    }
+}

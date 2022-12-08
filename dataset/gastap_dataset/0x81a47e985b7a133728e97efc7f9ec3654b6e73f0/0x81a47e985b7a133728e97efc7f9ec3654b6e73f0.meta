@@ -1,0 +1,133 @@
+{
+    "Omnipurse": {
+        "function_list": [
+            "searchPursesByAddress(address)",
+            "getPurseDetails(uint256)",
+            "getPurseContributions(uint256,uint256)",
+            "createPurse(string)",
+            "contributeToPurse(uint256)",
+            "dissmisPurse(uint256)",
+            "finishPurse(uint256)",
+            "registerNickname(string)"
+        ],
+        "initial_state": {
+            "searchPursesByAddress(address)": {
+                "argument": {},
+                "contract": {
+                    "numPurse": "uint256",
+                    "pursesByCreator": "mapping(address => uint256[])"
+                }
+            },
+            "getPurseDetails(uint256)": {
+                "argument": {
+                    "purseId": "uint256"
+                },
+                "contract": {
+                    "numPurse": "uint256",
+                    "pursesByCreator": "mapping(address => uint256[])"
+                }
+            },
+            "getPurseContributions(uint256,uint256)": {
+                "argument": {
+                    "purseId": "uint256",
+                    "contributionId": "uint256"
+                },
+                "contract": {
+                    "numPurse": "uint256",
+                    "pursesByCreator": "mapping(address => uint256[])"
+                }
+            },
+            "createPurse(string)": {
+                "argument": {
+                    "title": "string"
+                },
+                "contract": {
+                    "numPurse": "uint256",
+                    "pursesByCreator": "mapping(address => uint256[])"
+                }
+            },
+            "contributeToPurse(uint256)": {
+                "argument": {
+                    "purseId": "uint256"
+                },
+                "contract": {
+                    "numPurse": "uint256",
+                    "pursesByCreator": "mapping(address => uint256[])"
+                }
+            },
+            "dissmisPurse(uint256)": {
+                "argument": {
+                    "purseId": "uint256"
+                },
+                "contract": {
+                    "numPurse": "uint256",
+                    "pursesByCreator": "mapping(address => uint256[])"
+                }
+            },
+            "finishPurse(uint256)": {
+                "argument": {
+                    "purseId": "uint256"
+                },
+                "contract": {
+                    "numPurse": "uint256",
+                    "pursesByCreator": "mapping(address => uint256[])"
+                }
+            },
+            "registerNickname(string)": {
+                "argument": {
+                    "nickname": "string"
+                },
+                "contract": {
+                    "numPurse": "uint256",
+                    "pursesByCreator": "mapping(address => uint256[])"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "dissmisPurse(uint256)": [
+                383,
+                163
+            ],
+            "contributeToPurse(uint256)": [
+                351,
+                141
+            ],
+            "searchPursesByAddress(address)": [
+                428,
+                185
+            ],
+            "getPurseContributions(uint256,uint256)": [
+                956,
+                251
+            ],
+            "finishPurse(uint256)": [
+                201,
+                97
+            ],
+            "getPurseDetails(uint256)": [
+                705,
+                229
+            ],
+            "createPurse(string)": [
+                580,
+                207
+            ],
+            "registerNickname(string)": [
+                246,
+                119
+            ]
+        },
+        "block_CALL_mapping": {
+            "block2142": [
+                "c.sender.send(c.value)"
+            ],
+            "jump1363": [
+                "p.creator.send(p.totalContributed)",
+                "p.creator.send(p.totalContributed)"
+            ],
+            "block1363": [
+                "p.creator.send(p.totalContributed)"
+            ]
+        }
+    }
+}

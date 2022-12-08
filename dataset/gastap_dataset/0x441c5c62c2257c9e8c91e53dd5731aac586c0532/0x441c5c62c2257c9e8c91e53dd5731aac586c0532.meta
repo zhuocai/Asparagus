@@ -1,0 +1,459 @@
+{
+    "ERC20": {
+        "function_list": [
+            "totalSupply()",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)"
+        ],
+        "initial_state": {
+            "totalSupply()": {
+                "argument": {},
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                125,
+                75
+            ],
+            "balanceOf(address)": [
+                402,
+                141
+            ],
+            "totalSupply()": [
+                226,
+                97
+            ],
+            "allowance(address,address)": [
+                590,
+                185
+            ],
+            "transferFrom(address,address,uint256)": [
+                269,
+                119
+            ],
+            "transfer(address,uint256)": [
+                489,
+                163
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Owned": {
+        "function_list": [
+            "Owned()",
+            "changeOwnership(address)",
+            "proposeOwnership(address)",
+            "acceptOwnership()",
+            "removeOwnership(address)"
+        ],
+        "initial_state": {
+            "Owned()": {
+                "argument": {},
+                "contract": {}
+            },
+            "changeOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "proposeOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "acceptOwnership()": {
+                "argument": {},
+                "contract": {}
+            },
+            "removeOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "proposeOwnership(address)": [
+                259,
+                119
+            ],
+            "removeOwnership(address)": [
+                192,
+                97
+            ],
+            "changeOwnership(address)": [
+                125,
+                75
+            ],
+            "acceptOwnership()": [
+                326,
+                141
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Escapable": {
+        "function_list": [
+            "Owned()",
+            "changeOwnership(address)",
+            "proposeOwnership(address)",
+            "acceptOwnership()",
+            "removeOwnership(address)",
+            "Escapable(address,address)",
+            "blacklistEscapeToken(address)",
+            "isTokenEscapable(address)",
+            "escapeHatch(address)",
+            "changeEscapeCaller(address)"
+        ],
+        "initial_state": {
+            "Owned()": {
+                "argument": {},
+                "contract": {}
+            },
+            "changeOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "proposeOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "acceptOwnership()": {
+                "argument": {},
+                "contract": {}
+            },
+            "removeOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "Escapable(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "blacklistEscapeToken(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "isTokenEscapable(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "escapeHatch(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "changeEscapeCaller(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "proposeOwnership(address)": [
+                468,
+                163
+            ],
+            "removeOwnership(address)": [
+                334,
+                119
+            ],
+            "changeEscapeCaller(address)": [
+                401,
+                141
+            ],
+            "changeOwnership(address)": [
+                267,
+                97
+            ],
+            "escapeHatch(address)": [
+                736,
+                251
+            ],
+            "isTokenEscapable(address)": [
+                558,
+                207
+            ],
+            "acceptOwnership()": [
+                535,
+                185
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump3129": [
+                "escapeHatchDestination.transfer(balance)",
+                "escapeHatchDestination.transfer(balance)"
+            ],
+            "block3529": [
+                "token.balanceOf(this)"
+            ],
+            "block3129": [
+                "escapeHatchDestination.transfer(balance)"
+            ],
+            "jump3529": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "jump3787": [
+                "token.transfer(escapeHatchDestination, balance)",
+                "token.transfer(escapeHatchDestination, balance)"
+            ],
+            "block3787": [
+                "token.transfer(escapeHatchDestination, balance)"
+            ]
+        }
+    },
+    "Campaign": {
+        "function_list": [
+            "proxyPayment(address)"
+        ],
+        "initial_state": {
+            "proxyPayment(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "proxyPayment(address)": [
+                1269,
+                405
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump1937": [
+                "tokenContract.generateTokens(_owner, msg.value)",
+                "tokenContract.generateTokens(_owner, msg.value)"
+            ],
+            "jump1937_1": [
+                "tokenContract.generateTokens(_owner, msg.value)",
+                "tokenContract.generateTokens(_owner, msg.value)"
+            ],
+            "jump1937_0": [
+                "tokenContract.generateTokens(_owner, msg.value)",
+                "tokenContract.generateTokens(_owner, msg.value)"
+            ],
+            "jump2701": [
+                "tokenContract.generateTokens(dth, amount)",
+                "tokenContract.generateTokens(dth, amount)"
+            ],
+            "block1626": [
+                "vaultAddress.send(msg.value)"
+            ],
+            "block1626_0": [
+                "vaultAddress.send(msg.value)"
+            ],
+            "block1626_1": [
+                "vaultAddress.send(msg.value)"
+            ],
+            "jump1506_1": [
+                "tokenContract.controller()",
+                "tokenContract.controller()"
+            ],
+            "jump1506_0": [
+                "tokenContract.controller()",
+                "tokenContract.controller()"
+            ],
+            "block1506_1": [
+                "tokenContract.controller()"
+            ],
+            "block1506_0": [
+                "tokenContract.controller()"
+            ],
+            "block1506": [
+                "tokenContract.controller()"
+            ],
+            "block1937": [
+                "tokenContract.generateTokens(_owner, msg.value)"
+            ],
+            "jump3047": [
+                "tokenContract.changeController(0)",
+                "tokenContract.changeController(0)"
+            ],
+            "block1937_1": [
+                "tokenContract.generateTokens(_owner, msg.value)"
+            ],
+            "block1937_0": [
+                "tokenContract.generateTokens(_owner, msg.value)"
+            ],
+            "block2701": [
+                "tokenContract.generateTokens(dth, amount)"
+            ],
+            "jump1506": [
+                "tokenContract.controller()",
+                "tokenContract.controller()"
+            ],
+            "jump1626_0": [
+                "vaultAddress.send(msg.value)",
+                "vaultAddress.send(msg.value)"
+            ],
+            "jump1626_1": [
+                "vaultAddress.send(msg.value)",
+                "vaultAddress.send(msg.value)"
+            ],
+            "block3047": [
+                "tokenContract.changeController(0)"
+            ],
+            "jump1626": [
+                "vaultAddress.send(msg.value)",
+                "vaultAddress.send(msg.value)"
+            ]
+        }
+    },
+    "FundForwarder": {
+        "function_list": [
+            "Escapable(address,address)",
+            "blacklistEscapeToken(address)",
+            "isTokenEscapable(address)",
+            "escapeHatch(address)",
+            "changeEscapeCaller(address)",
+            "Owned()",
+            "changeOwnership(address)",
+            "proposeOwnership(address)",
+            "acceptOwnership()",
+            "removeOwnership(address)",
+            "FundForwarder(Campaign,address,address)",
+            "fallback()"
+        ],
+        "initial_state": {
+            "Escapable(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "blacklistEscapeToken(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "isTokenEscapable(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "escapeHatch(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "changeEscapeCaller(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "Owned()": {
+                "argument": {},
+                "contract": {}
+            },
+            "changeOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "proposeOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "acceptOwnership()": {
+                "argument": {},
+                "contract": {}
+            },
+            "removeOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "FundForwarder(Campaign,address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "proposeOwnership(address)": [
+                907,
+                185
+            ],
+            "removeOwnership(address)": [
+                773,
+                141
+            ],
+            "changeEscapeCaller(address)": [
+                840,
+                163
+            ],
+            "changeOwnership(address)": [
+                619,
+                97
+            ],
+            "escapeHatch(address)": [
+                1175,
+                273
+            ],
+            "isTokenEscapable(address)": [
+                997,
+                229
+            ],
+            "acceptOwnership()": [
+                974,
+                207
+            ]
+        },
+        "block_CALL_mapping": {
+            "block380": [
+                "beneficiary.proxyPayment.value(amount)\n        (msg.sender)"
+            ],
+            "jump4264": [
+                "token.transfer(escapeHatchDestination, balance)",
+                "token.transfer(escapeHatchDestination, balance)"
+            ],
+            "jump4006": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "jump380": [
+                "beneficiary.proxyPayment.value(amount)\n        (msg.sender)",
+                "beneficiary.proxyPayment.value(amount)\n        (msg.sender)"
+            ],
+            "jump380_0": [
+                "beneficiary.proxyPayment.value(amount)\n        (msg.sender)",
+                "beneficiary.proxyPayment.value(amount)\n        (msg.sender)"
+            ],
+            "block4006": [
+                "token.balanceOf(this)"
+            ],
+            "block380_0": [
+                "beneficiary.proxyPayment.value(amount)\n        (msg.sender)"
+            ],
+            "jump3606": [
+                "escapeHatchDestination.transfer(balance)",
+                "escapeHatchDestination.transfer(balance)"
+            ],
+            "block4264": [
+                "token.transfer(escapeHatchDestination, balance)"
+            ],
+            "block3606": [
+                "escapeHatchDestination.transfer(balance)"
+            ]
+        }
+    }
+}

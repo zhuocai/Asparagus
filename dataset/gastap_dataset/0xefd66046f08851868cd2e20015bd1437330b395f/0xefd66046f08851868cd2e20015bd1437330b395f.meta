@@ -1,0 +1,112 @@
+{
+    "TheBurner": {
+        "function_list": [
+            "TheBurner()",
+            "setRaffleAddress(address)",
+            "getPercent(uint8,uint256)",
+            "registerBurn(uint256)",
+            "dSET_XBL_ADDRESS(address)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "TheBurner()": {
+                "argument": {},
+                "contract": {
+                    "DECIMALS": "uint256",
+                    "extra_bonus": "uint8"
+                }
+            },
+            "setRaffleAddress(address)": {
+                "argument": {},
+                "contract": {
+                    "DECIMALS": "uint256",
+                    "extra_bonus": "uint8"
+                }
+            },
+            "getPercent(uint8,uint256)": {
+                "argument": {
+                    "percent": "uint8",
+                    "number": "uint256"
+                },
+                "contract": {
+                    "DECIMALS": "uint256",
+                    "extra_bonus": "uint8"
+                }
+            },
+            "registerBurn(uint256)": {
+                "argument": {
+                    "user_input": "uint256"
+                },
+                "contract": {
+                    "DECIMALS": "uint256",
+                    "extra_bonus": "uint8"
+                }
+            },
+            "dSET_XBL_ADDRESS(address)": {
+                "argument": {},
+                "contract": {
+                    "DECIMALS": "uint256",
+                    "extra_bonus": "uint8"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "registerBurn(uint256)": [
+                308,
+                141
+            ],
+            "setRaffleAddress(address)": [
+                241,
+                119
+            ],
+            "dSET_XBL_ADDRESS(address)": [
+                174,
+                97
+            ]
+        },
+        "block_CALL_mapping": {
+            "block1638": [
+                "RAFFLE_CALLS.getLastWeekStake(msg.sender)"
+            ],
+            "jump2233": [
+                "ERC20_CALLS.burnFrom(msg.sender, tokens_registered)",
+                "ERC20_CALLS.burnFrom(msg.sender, tokens_registered)"
+            ],
+            "block1963": [
+                "ERC20_CALLS.balanceOf(burner_addr)"
+            ],
+            "jump1638": [
+                "RAFFLE_CALLS.getLastWeekStake(msg.sender)",
+                "RAFFLE_CALLS.getLastWeekStake(msg.sender)"
+            ],
+            "jump2490": [
+                "ERC20_CALLS.transfer(msg.sender, eligible_reward)",
+                "ERC20_CALLS.transfer(msg.sender, eligible_reward)"
+            ],
+            "block2490": [
+                "ERC20_CALLS.transfer(msg.sender, eligible_reward)"
+            ],
+            "block1377": [
+                "ERC20_CALLS.allowance(msg.sender, burner_addr)"
+            ],
+            "jump2747": [
+                "RAFFLE_CALLS.reduceLastWeekStake(msg.sender, tokens_registered)",
+                "RAFFLE_CALLS.reduceLastWeekStake(msg.sender, tokens_registered)"
+            ],
+            "block2747": [
+                "RAFFLE_CALLS.reduceLastWeekStake(msg.sender, tokens_registered)"
+            ],
+            "block2233": [
+                "ERC20_CALLS.burnFrom(msg.sender, tokens_registered)"
+            ],
+            "jump1377": [
+                "ERC20_CALLS.allowance(msg.sender, burner_addr)",
+                "ERC20_CALLS.allowance(msg.sender, burner_addr)"
+            ],
+            "jump1963": [
+                "ERC20_CALLS.balanceOf(burner_addr)",
+                "ERC20_CALLS.balanceOf(burner_addr)"
+            ]
+        }
+    }
+}

@@ -1,0 +1,535 @@
+{
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "Math": {
+        "function_list": [
+            "max64(uint64,uint64)",
+            "min64(uint64,uint64)",
+            "max256(uint256,uint256)",
+            "min256(uint256,uint256)"
+        ],
+        "initial_state": {
+            "max64(uint64,uint64)": {
+                "argument": {
+                    "a": "uint64",
+                    "b": "uint64"
+                },
+                "contract": {}
+            },
+            "min64(uint64,uint64)": {
+                "argument": {
+                    "a": "uint64",
+                    "b": "uint64"
+                },
+                "contract": {}
+            },
+            "max256(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "min256(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "Token": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                293,
+                97
+            ],
+            "balanceOf(address)": [
+                720,
+                207
+            ],
+            "transferFrom(address,address,uint256)": [
+                437,
+                141
+            ],
+            "allowance(address,address)": [
+                1252,
+                361
+            ],
+            "transfer(address,uint256)": [
+                1128,
+                317
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "LRCLongTermHoldingContract": {
+        "function_list": [
+            "LRCLongTermHoldingContract(address,address)",
+            "start()",
+            "drain()",
+            "fallback()",
+            "lrcBalance()",
+            "depositLRC()",
+            "withdrawLRC()",
+            "getBonus(uint256)",
+            "internalCalculateBonus(uint256,uint256,uint256)",
+            "sqrt(uint256)",
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "LRCLongTermHoldingContract(address,address)": {
+                "argument": {},
+                "contract": {
+                    "DEPOSIT_PERIOD": "uint256",
+                    "WITHDRAWAL_DELAY": "uint256",
+                    "WITHDRAWAL_SCALE": "uint256",
+                    "DRAIN_DELAY": "uint256",
+                    "lrcDeposited": "uint256",
+                    "depositStartTime": "uint256",
+                    "depositStopTime": "uint256",
+                    "depositId": "uint256",
+                    "withdrawId": "uint256"
+                }
+            },
+            "start()": {
+                "argument": {},
+                "contract": {
+                    "DEPOSIT_PERIOD": "uint256",
+                    "WITHDRAWAL_DELAY": "uint256",
+                    "WITHDRAWAL_SCALE": "uint256",
+                    "DRAIN_DELAY": "uint256",
+                    "lrcDeposited": "uint256",
+                    "depositStartTime": "uint256",
+                    "depositStopTime": "uint256",
+                    "depositId": "uint256",
+                    "withdrawId": "uint256"
+                }
+            },
+            "drain()": {
+                "argument": {},
+                "contract": {
+                    "DEPOSIT_PERIOD": "uint256",
+                    "WITHDRAWAL_DELAY": "uint256",
+                    "WITHDRAWAL_SCALE": "uint256",
+                    "DRAIN_DELAY": "uint256",
+                    "lrcDeposited": "uint256",
+                    "depositStartTime": "uint256",
+                    "depositStopTime": "uint256",
+                    "depositId": "uint256",
+                    "withdrawId": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "DEPOSIT_PERIOD": "uint256",
+                    "WITHDRAWAL_DELAY": "uint256",
+                    "WITHDRAWAL_SCALE": "uint256",
+                    "DRAIN_DELAY": "uint256",
+                    "lrcDeposited": "uint256",
+                    "depositStartTime": "uint256",
+                    "depositStopTime": "uint256",
+                    "depositId": "uint256",
+                    "withdrawId": "uint256"
+                }
+            },
+            "lrcBalance()": {
+                "argument": {},
+                "contract": {
+                    "DEPOSIT_PERIOD": "uint256",
+                    "WITHDRAWAL_DELAY": "uint256",
+                    "WITHDRAWAL_SCALE": "uint256",
+                    "DRAIN_DELAY": "uint256",
+                    "lrcDeposited": "uint256",
+                    "depositStartTime": "uint256",
+                    "depositStopTime": "uint256",
+                    "depositId": "uint256",
+                    "withdrawId": "uint256"
+                }
+            },
+            "depositLRC()": {
+                "argument": {},
+                "contract": {
+                    "DEPOSIT_PERIOD": "uint256",
+                    "WITHDRAWAL_DELAY": "uint256",
+                    "WITHDRAWAL_SCALE": "uint256",
+                    "DRAIN_DELAY": "uint256",
+                    "lrcDeposited": "uint256",
+                    "depositStartTime": "uint256",
+                    "depositStopTime": "uint256",
+                    "depositId": "uint256",
+                    "withdrawId": "uint256"
+                }
+            },
+            "withdrawLRC()": {
+                "argument": {},
+                "contract": {
+                    "DEPOSIT_PERIOD": "uint256",
+                    "WITHDRAWAL_DELAY": "uint256",
+                    "WITHDRAWAL_SCALE": "uint256",
+                    "DRAIN_DELAY": "uint256",
+                    "lrcDeposited": "uint256",
+                    "depositStartTime": "uint256",
+                    "depositStopTime": "uint256",
+                    "depositId": "uint256",
+                    "withdrawId": "uint256"
+                }
+            },
+            "getBonus(uint256)": {
+                "argument": {
+                    "_lrcWithdrawalBase": "uint256"
+                },
+                "contract": {
+                    "DEPOSIT_PERIOD": "uint256",
+                    "WITHDRAWAL_DELAY": "uint256",
+                    "WITHDRAWAL_SCALE": "uint256",
+                    "DRAIN_DELAY": "uint256",
+                    "lrcDeposited": "uint256",
+                    "depositStartTime": "uint256",
+                    "depositStopTime": "uint256",
+                    "depositId": "uint256",
+                    "withdrawId": "uint256"
+                }
+            },
+            "internalCalculateBonus(uint256,uint256,uint256)": {
+                "argument": {
+                    "_totalBonusRemaining": "uint256",
+                    "_lrcDeposited": "uint256",
+                    "_lrcWithdrawalBase": "uint256"
+                },
+                "contract": {
+                    "DEPOSIT_PERIOD": "uint256",
+                    "WITHDRAWAL_DELAY": "uint256",
+                    "WITHDRAWAL_SCALE": "uint256",
+                    "DRAIN_DELAY": "uint256",
+                    "lrcDeposited": "uint256",
+                    "depositStartTime": "uint256",
+                    "depositStopTime": "uint256",
+                    "depositId": "uint256",
+                    "withdrawId": "uint256"
+                }
+            },
+            "sqrt(uint256)": {
+                "argument": {
+                    "x": "uint256"
+                },
+                "contract": {
+                    "DEPOSIT_PERIOD": "uint256",
+                    "WITHDRAWAL_DELAY": "uint256",
+                    "WITHDRAWAL_SCALE": "uint256",
+                    "DRAIN_DELAY": "uint256",
+                    "lrcDeposited": "uint256",
+                    "depositStartTime": "uint256",
+                    "depositStopTime": "uint256",
+                    "depositId": "uint256",
+                    "withdrawId": "uint256"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "DEPOSIT_PERIOD": "uint256",
+                    "WITHDRAWAL_DELAY": "uint256",
+                    "WITHDRAWAL_SCALE": "uint256",
+                    "DRAIN_DELAY": "uint256",
+                    "lrcDeposited": "uint256",
+                    "depositStartTime": "uint256",
+                    "depositStopTime": "uint256",
+                    "depositId": "uint256",
+                    "withdrawId": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "drain()": [
+                834,
+                295
+            ],
+            "depositLRC()": [
+                1009,
+                405
+            ],
+            "getBonus(uint256)": [
+                456,
+                141
+            ],
+            "start()": [
+                943,
+                361
+            ],
+            "withdrawLRC()": [
+                651,
+                207
+            ],
+            "lrcBalance()": [
+                370,
+                97
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump2191_0": [
+                "lrcToken.transferFrom(msg.sender, address(this), lrcAmount)",
+                "lrcToken.transferFrom(msg.sender, address(this), lrcAmount)"
+            ],
+            "jump1589_0": [
+                "lrcToken\n            .balanceOf(msg.sender)",
+                "lrcToken\n            .balanceOf(msg.sender)"
+            ],
+            "jump1589_1": [
+                "lrcToken\n            .balanceOf(msg.sender)",
+                "lrcToken\n            .balanceOf(msg.sender)"
+            ],
+            "block3119_0": [
+                "msg.sender.transfer(msg.value)"
+            ],
+            "block2191": [
+                "lrcToken.transferFrom(msg.sender, address(this), lrcAmount)"
+            ],
+            "block3395": [
+                "Token(lrcTokenAddress).balanceOf(address(this))"
+            ],
+            "jump3395": [
+                "Token(lrcTokenAddress).balanceOf(address(this))",
+                "Token(lrcTokenAddress).balanceOf(address(this))"
+            ],
+            "jump3395_0": [
+                "Token(lrcTokenAddress).balanceOf(address(this))",
+                "Token(lrcTokenAddress).balanceOf(address(this))"
+            ],
+            "block3395_6": [
+                "Token(lrcTokenAddress).balanceOf(address(this))"
+            ],
+            "block1375_1": [
+                "lrcToken.allowance(msg.sender, address(this))"
+            ],
+            "block1375_0": [
+                "lrcToken.allowance(msg.sender, address(this))"
+            ],
+            "jump3977": [
+                "Token(lrcTokenAddress).transfer(owner, balance)",
+                "Token(lrcTokenAddress).transfer(owner, balance)"
+            ],
+            "block3395_5": [
+                "Token(lrcTokenAddress).balanceOf(address(this))"
+            ],
+            "block3395_4": [
+                "Token(lrcTokenAddress).balanceOf(address(this))"
+            ],
+            "block3395_7": [
+                "Token(lrcTokenAddress).balanceOf(address(this))"
+            ],
+            "jump3039_1": [
+                "Token(lrcTokenAddress).transfer(msg.sender, lrcAmount)",
+                "Token(lrcTokenAddress).transfer(msg.sender, lrcAmount)"
+            ],
+            "block3395_1": [
+                "Token(lrcTokenAddress).balanceOf(address(this))"
+            ],
+            "block3395_0": [
+                "Token(lrcTokenAddress).balanceOf(address(this))"
+            ],
+            "block3395_3": [
+                "Token(lrcTokenAddress).balanceOf(address(this))"
+            ],
+            "block3395_2": [
+                "Token(lrcTokenAddress).balanceOf(address(this))"
+            ],
+            "jump1375": [
+                "lrcToken.allowance(msg.sender, address(this))",
+                "lrcToken.allowance(msg.sender, address(this))"
+            ],
+            "jump3119_1": [
+                "msg.sender.transfer(msg.value)",
+                "msg.sender.transfer(msg.value)"
+            ],
+            "jump3119_0": [
+                "msg.sender.transfer(msg.value)",
+                "msg.sender.transfer(msg.value)"
+            ],
+            "jump3039": [
+                "Token(lrcTokenAddress).transfer(msg.sender, lrcAmount)",
+                "Token(lrcTokenAddress).transfer(msg.sender, lrcAmount)"
+            ],
+            "jump3119": [
+                "msg.sender.transfer(msg.value)",
+                "msg.sender.transfer(msg.value)"
+            ],
+            "block3119_1": [
+                "msg.sender.transfer(msg.value)"
+            ],
+            "jump2191": [
+                "lrcToken.transferFrom(msg.sender, address(this), lrcAmount)",
+                "lrcToken.transferFrom(msg.sender, address(this), lrcAmount)"
+            ],
+            "block3039": [
+                "Token(lrcTokenAddress).transfer(msg.sender, lrcAmount)"
+            ],
+            "block1589": [
+                "lrcToken\n            .balanceOf(msg.sender)"
+            ],
+            "block1589_0": [
+                "lrcToken\n            .balanceOf(msg.sender)"
+            ],
+            "block1589_1": [
+                "lrcToken\n            .balanceOf(msg.sender)"
+            ],
+            "block3119": [
+                "msg.sender.transfer(msg.value)"
+            ],
+            "jump1375_1": [
+                "lrcToken.allowance(msg.sender, address(this))",
+                "lrcToken.allowance(msg.sender, address(this))"
+            ],
+            "jump1375_0": [
+                "lrcToken.allowance(msg.sender, address(this))",
+                "lrcToken.allowance(msg.sender, address(this))"
+            ],
+            "jump3395_3": [
+                "Token(lrcTokenAddress).balanceOf(address(this))",
+                "Token(lrcTokenAddress).balanceOf(address(this))"
+            ],
+            "jump3395_2": [
+                "Token(lrcTokenAddress).balanceOf(address(this))",
+                "Token(lrcTokenAddress).balanceOf(address(this))"
+            ],
+            "jump3039_0": [
+                "Token(lrcTokenAddress).transfer(msg.sender, lrcAmount)",
+                "Token(lrcTokenAddress).transfer(msg.sender, lrcAmount)"
+            ],
+            "jump1589": [
+                "lrcToken\n            .balanceOf(msg.sender)",
+                "lrcToken\n            .balanceOf(msg.sender)"
+            ],
+            "jump3395_7": [
+                "Token(lrcTokenAddress).balanceOf(address(this))",
+                "Token(lrcTokenAddress).balanceOf(address(this))"
+            ],
+            "jump3395_6": [
+                "Token(lrcTokenAddress).balanceOf(address(this))",
+                "Token(lrcTokenAddress).balanceOf(address(this))"
+            ],
+            "jump3395_5": [
+                "Token(lrcTokenAddress).balanceOf(address(this))",
+                "Token(lrcTokenAddress).balanceOf(address(this))"
+            ],
+            "jump3395_4": [
+                "Token(lrcTokenAddress).balanceOf(address(this))",
+                "Token(lrcTokenAddress).balanceOf(address(this))"
+            ],
+            "block3977": [
+                "Token(lrcTokenAddress).transfer(owner, balance)"
+            ],
+            "jump3395_1": [
+                "Token(lrcTokenAddress).balanceOf(address(this))",
+                "Token(lrcTokenAddress).balanceOf(address(this))"
+            ],
+            "block2191_0": [
+                "lrcToken.transferFrom(msg.sender, address(this), lrcAmount)"
+            ],
+            "block2191_1": [
+                "lrcToken.transferFrom(msg.sender, address(this), lrcAmount)"
+            ],
+            "block1375": [
+                "lrcToken.allowance(msg.sender, address(this))"
+            ],
+            "jump2191_1": [
+                "lrcToken.transferFrom(msg.sender, address(this), lrcAmount)",
+                "lrcToken.transferFrom(msg.sender, address(this), lrcAmount)"
+            ],
+            "block3039_0": [
+                "Token(lrcTokenAddress).transfer(msg.sender, lrcAmount)"
+            ],
+            "block3039_1": [
+                "Token(lrcTokenAddress).transfer(msg.sender, lrcAmount)"
+            ]
+        }
+    }
+}

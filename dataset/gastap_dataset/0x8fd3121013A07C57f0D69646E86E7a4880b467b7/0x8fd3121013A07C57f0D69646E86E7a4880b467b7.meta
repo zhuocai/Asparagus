@@ -1,0 +1,286 @@
+{
+    "Token": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                125,
+                75
+            ],
+            "balanceOf(address)": [
+                402,
+                141
+            ],
+            "allowance(address,address)": [
+                590,
+                185
+            ],
+            "transferFrom(address,address,uint256)": [
+                269,
+                119
+            ],
+            "transfer(address,uint256)": [
+                489,
+                163
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "ERC20": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "balanceOf(address)",
+            "approve(address,uint256)",
+            "allowance(address,address)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                147,
+                75
+            ],
+            "transfer(address,uint256)": [
+                717,
+                207
+            ],
+            "balanceOf(address)": [
+                630,
+                185
+            ],
+            "allowance(address,address)": [
+                818,
+                229
+            ],
+            "transferFrom(address,address,uint256)": [
+                291,
+                119
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "AirSwapExchange": {
+        "function_list": [
+            "fill(address,uint256,address,address,uint256,address,uint256,uint256,uint8,bytes32,bytes32)",
+            "cancel(address,uint256,address,address,uint256,address,uint256,uint256,uint8,bytes32,bytes32)",
+            "trade(address,uint256,address,address,uint256,address)",
+            "transfer(address,address,uint256,address)",
+            "validate(address,uint256,address,address,uint256,address,uint256,uint256,uint8,bytes32,bytes32)"
+        ],
+        "initial_state": {
+            "fill(address,uint256,address,address,uint256,address,uint256,uint256,uint8,bytes32,bytes32)": {
+                "argument": {
+                    "makerAmount": "uint256",
+                    "takerAmount": "uint256",
+                    "expiration": "uint256",
+                    "nonce": "uint256",
+                    "v": "uint8",
+                    "r": "bytes32",
+                    "s": "bytes32"
+                },
+                "contract": {}
+            },
+            "cancel(address,uint256,address,address,uint256,address,uint256,uint256,uint8,bytes32,bytes32)": {
+                "argument": {
+                    "makerAmount": "uint256",
+                    "takerAmount": "uint256",
+                    "expiration": "uint256",
+                    "nonce": "uint256",
+                    "v": "uint8",
+                    "r": "bytes32",
+                    "s": "bytes32"
+                },
+                "contract": {}
+            },
+            "trade(address,uint256,address,address,uint256,address)": {
+                "argument": {
+                    "makerAmount": "uint256",
+                    "takerAmount": "uint256"
+                },
+                "contract": {}
+            },
+            "transfer(address,address,uint256,address)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {}
+            },
+            "validate(address,uint256,address,address,uint256,address,uint256,uint256,uint8,bytes32,bytes32)": {
+                "argument": {
+                    "makerAmount": "uint256",
+                    "takerAmount": "uint256",
+                    "expiration": "uint256",
+                    "nonce": "uint256",
+                    "v": "uint8",
+                    "r": "bytes32",
+                    "s": "bytes32"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "cancel(address,uint256,address,address,uint256,address,uint256,uint256,uint8,bytes32,bytes32)": [
+                396,
+                119
+            ],
+            "fill(address,uint256,address,address,uint256,address,uint256,uint256,uint8,bytes32,bytes32)": [
+                92,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump695": [
+                "msg.sender.transfer(msg.value)",
+                "msg.sender.transfer(msg.value)"
+            ],
+            "jump4728_0": [
+                "ERC20(token).transferFrom(from, to, amount)",
+                "ERC20(token).transferFrom(from, to, amount)"
+            ],
+            "jump4728_1": [
+                "ERC20(token).transferFrom(from, to, amount)",
+                "ERC20(token).transferFrom(from, to, amount)"
+            ],
+            "block4728_0": [
+                "ERC20(token).transferFrom(from, to, amount)"
+            ],
+            "block4728_1": [
+                "ERC20(token).transferFrom(from, to, amount)"
+            ],
+            "block1339": [
+                "msg.sender.transfer(msg.value)"
+            ],
+            "jump988": [
+                "msg.sender.transfer(msg.value)",
+                "msg.sender.transfer(msg.value)"
+            ],
+            "jump1339": [
+                "msg.sender.transfer(msg.value)",
+                "msg.sender.transfer(msg.value)"
+            ],
+            "block2328": [
+                "msg.sender.transfer(msg.value)"
+            ],
+            "jump4242_0": [
+                "ecrecover(prefixedHash, v, r, s)",
+                "ecrecover(prefixedHash, v, r, s)"
+            ],
+            "jump1755": [
+                "makerAddress.transfer(msg.value)",
+                "makerAddress.transfer(msg.value)"
+            ],
+            "block4728": [
+                "ERC20(token).transferFrom(from, to, amount)"
+            ],
+            "block1755": [
+                "makerAddress.transfer(msg.value)"
+            ],
+            "jump4728": [
+                "ERC20(token).transferFrom(from, to, amount)",
+                "ERC20(token).transferFrom(from, to, amount)"
+            ],
+            "block988": [
+                "msg.sender.transfer(msg.value)"
+            ],
+            "jump2031": [
+                "msg.sender.transfer(msg.value)",
+                "msg.sender.transfer(msg.value)"
+            ],
+            "jump2328": [
+                "msg.sender.transfer(msg.value)",
+                "msg.sender.transfer(msg.value)"
+            ],
+            "jump4242": [
+                "ecrecover(prefixedHash, v, r, s)",
+                "ecrecover(prefixedHash, v, r, s)"
+            ],
+            "block2031": [
+                "msg.sender.transfer(msg.value)"
+            ],
+            "block4242_0": [
+                "ecrecover(prefixedHash, v, r, s)"
+            ],
+            "block4242": [
+                "ecrecover(prefixedHash, v, r, s)"
+            ],
+            "block695": [
+                "msg.sender.transfer(msg.value)"
+            ]
+        }
+    }
+}

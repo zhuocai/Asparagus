@@ -1,0 +1,87 @@
+{
+    "Rental": {
+        "function_list": [
+            "getItemsLength()",
+            "getRequestsLength()",
+            "addItem(string,string)",
+            "addRequest(uint256,string,string)",
+            "cancelRequest(uint256)",
+            "acceptRequest(uint256)",
+            "acceptReturning(uint256)"
+        ],
+        "initial_state": {
+            "getItemsLength()": {
+                "argument": {},
+                "contract": {
+                    "items": "Rental.Item[]",
+                    "requests": "Rental.Request[]"
+                }
+            },
+            "getRequestsLength()": {
+                "argument": {},
+                "contract": {
+                    "items": "Rental.Item[]",
+                    "requests": "Rental.Request[]"
+                }
+            },
+            "addItem(string,string)": {
+                "argument": {
+                    "_name": "string",
+                    "_serialNumber": "string"
+                },
+                "contract": {
+                    "items": "Rental.Item[]",
+                    "requests": "Rental.Request[]"
+                }
+            },
+            "addRequest(uint256,string,string)": {
+                "argument": {
+                    "_itemId": "uint256",
+                    "_start": "string",
+                    "_end": "string"
+                },
+                "contract": {
+                    "items": "Rental.Item[]",
+                    "requests": "Rental.Request[]"
+                }
+            },
+            "cancelRequest(uint256)": {
+                "argument": {
+                    "_requestId": "uint256"
+                },
+                "contract": {
+                    "items": "Rental.Item[]",
+                    "requests": "Rental.Request[]"
+                }
+            },
+            "acceptRequest(uint256)": {
+                "argument": {
+                    "_requestId": "uint256"
+                },
+                "contract": {
+                    "items": "Rental.Item[]",
+                    "requests": "Rental.Request[]"
+                }
+            },
+            "acceptReturning(uint256)": {
+                "argument": {
+                    "_requestId": "uint256"
+                },
+                "contract": {
+                    "items": "Rental.Item[]",
+                    "requests": "Rental.Request[]"
+                }
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {
+            "block594": [
+                "dest.call(msg.data)"
+            ],
+            "jump594": [
+                "dest.call(msg.data)",
+                "dest.call(msg.data)"
+            ]
+        }
+    }
+}

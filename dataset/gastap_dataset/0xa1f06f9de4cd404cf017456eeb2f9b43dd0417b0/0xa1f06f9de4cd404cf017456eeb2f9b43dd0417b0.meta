@@ -1,0 +1,171 @@
+{
+    "token": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transfer(address,uint256)": [
+                68,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "admined": {
+        "function_list": [
+            "admined()",
+            "transferAdminship(address)"
+        ],
+        "initial_state": {
+            "admined()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferAdminship(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferAdminship(address)": [
+                81,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Sender": {
+        "function_list": [
+            "admined()",
+            "transferAdminship(address)",
+            "Sender(token,uint256)",
+            "updatePrice(uint256)",
+            "contribute()",
+            "withdraw()",
+            "fallback()"
+        ],
+        "initial_state": {
+            "admined()": {
+                "argument": {},
+                "contract": {
+                    "price": "uint256"
+                }
+            },
+            "transferAdminship(address)": {
+                "argument": {},
+                "contract": {
+                    "price": "uint256"
+                }
+            },
+            "Sender(token,uint256)": {
+                "argument": {
+                    "_initialPrice": "uint256"
+                },
+                "contract": {
+                    "price": "uint256"
+                }
+            },
+            "updatePrice(uint256)": {
+                "argument": {
+                    "_newPrice": "uint256"
+                },
+                "contract": {
+                    "price": "uint256"
+                }
+            },
+            "contribute()": {
+                "argument": {},
+                "contract": {
+                    "price": "uint256"
+                }
+            },
+            "withdraw()": {
+                "argument": {},
+                "contract": {
+                    "price": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "price": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "transferAdminship(address)": [
+                175,
+                97
+            ],
+            "contribute()": [
+                417,
+                185
+            ],
+            "updatePrice(uint256)": [
+                329,
+                141
+            ],
+            "withdraw()": [
+                152,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "block987_1": [
+                "ERC20Token.transfer(msg.sender,price)"
+            ],
+            "jump987_0": [
+                "ERC20Token.transfer(msg.sender,price)",
+                "ERC20Token.transfer(msg.sender,price)"
+            ],
+            "jump987_1": [
+                "ERC20Token.transfer(msg.sender,price)",
+                "ERC20Token.transfer(msg.sender,price)"
+            ],
+            "block1140": [
+                "admin.send(this.balance)"
+            ],
+            "block987_0": [
+                "ERC20Token.transfer(msg.sender,price)"
+            ],
+            "jump987": [
+                "ERC20Token.transfer(msg.sender,price)",
+                "ERC20Token.transfer(msg.sender,price)"
+            ],
+            "jump1737": [
+                "ERC20Token.transfer(admin, ERC20Token.balanceOf(this))",
+                "ERC20Token.transfer(admin, ERC20Token.balanceOf(this))"
+            ],
+            "jump1140": [
+                "admin.send(this.balance)",
+                "admin.send(this.balance)"
+            ],
+            "jump1545": [
+                "ERC20Token.balanceOf(this)",
+                "ERC20Token.balanceOf(this)"
+            ],
+            "block1737": [
+                "ERC20Token.transfer(admin, ERC20Token.balanceOf(this))"
+            ],
+            "block1545": [
+                "ERC20Token.balanceOf(this)"
+            ],
+            "block987": [
+                "ERC20Token.transfer(msg.sender,price)"
+            ]
+        }
+    }
+}

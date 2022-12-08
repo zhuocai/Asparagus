@@ -1,0 +1,325 @@
+{
+    "helper": {
+        "function_list": [
+            "derive_sha256(string,uint256)",
+            "blind_sha256(string,address)",
+            "double_blind_sha256(string,address,address)"
+        ],
+        "initial_state": {
+            "derive_sha256(string,uint256)": {
+                "argument": {
+                    "key": "string",
+                    "rounds": "uint256"
+                },
+                "contract": {}
+            },
+            "blind_sha256(string,address)": {
+                "argument": {
+                    "key": "string"
+                },
+                "contract": {}
+            },
+            "double_blind_sha256(string,address,address)": {
+                "argument": {
+                    "key": "string"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "double_blind_sha256(string,address,address)": [
+                235,
+                97
+            ],
+            "blind_sha256(string,address)": [
+                432,
+                119
+            ],
+            "derive_sha256(string,uint256)": [
+                92,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump1059": [
+                "sha256(sha256(key),caller)",
+                "sha256(sha256(key),caller)"
+            ],
+            "block1216": [
+                "sha256(sha256(sha256(key),caller),receiver)"
+            ],
+            "jump670": [
+                "sha256(key)",
+                "sha256(key)"
+            ],
+            "block1547": [
+                "sha256(sha256(key),caller)"
+            ],
+            "jump1216": [
+                "sha256(sha256(sha256(key),caller),receiver)",
+                "sha256(sha256(sha256(key),caller),receiver)"
+            ],
+            "block970": [
+                "sha256(key)"
+            ],
+            "jump1547": [
+                "sha256(sha256(key),caller)",
+                "sha256(sha256(key),caller)"
+            ],
+            "jump1458": [
+                "sha256(key)",
+                "sha256(key)"
+            ],
+            "jump795": [
+                "sha256(hash)",
+                "sha256(hash)"
+            ],
+            "block1059": [
+                "sha256(sha256(key),caller)"
+            ],
+            "block795": [
+                "sha256(hash)"
+            ],
+            "block1458": [
+                "sha256(key)"
+            ],
+            "block670": [
+                "sha256(key)"
+            ],
+            "jump970": [
+                "sha256(key)",
+                "sha256(key)"
+            ]
+        }
+    },
+    "owned": {
+        "function_list": [
+            "owned()"
+        ],
+        "initial_state": {
+            "owned()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "QuantumLocksmith": {
+        "function_list": [
+            "derive_sha256(string,uint256)",
+            "blind_sha256(string,address)",
+            "double_blind_sha256(string,address,address)",
+            "owned()",
+            "QuantumLocksmith(bytes32)",
+            "lockDeposit(bytes32,string)",
+            "unlockDeposit(string,address)",
+            "depositToLock(bytes32)",
+            "fallback()",
+            "kill(string)"
+        ],
+        "initial_state": {
+            "derive_sha256(string,uint256)": {
+                "argument": {
+                    "key": "string",
+                    "rounds": "uint256"
+                },
+                "contract": {
+                    "m_pending": "uint256"
+                }
+            },
+            "blind_sha256(string,address)": {
+                "argument": {
+                    "key": "string"
+                },
+                "contract": {
+                    "m_pending": "uint256"
+                }
+            },
+            "double_blind_sha256(string,address,address)": {
+                "argument": {
+                    "key": "string"
+                },
+                "contract": {
+                    "m_pending": "uint256"
+                }
+            },
+            "owned()": {
+                "argument": {},
+                "contract": {
+                    "m_pending": "uint256"
+                }
+            },
+            "QuantumLocksmith(bytes32)": {
+                "argument": {
+                    "ownerChallenge": "bytes32"
+                },
+                "contract": {
+                    "m_pending": "uint256"
+                }
+            },
+            "lockDeposit(bytes32,string)": {
+                "argument": {
+                    "challenge": "bytes32",
+                    "_protocol": "string"
+                },
+                "contract": {
+                    "m_pending": "uint256"
+                }
+            },
+            "unlockDeposit(string,address)": {
+                "argument": {
+                    "key": "string"
+                },
+                "contract": {
+                    "m_pending": "uint256"
+                }
+            },
+            "depositToLock(bytes32)": {
+                "argument": {
+                    "challenge": "bytes32"
+                },
+                "contract": {
+                    "m_pending": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "m_pending": "uint256"
+                }
+            },
+            "kill(string)": {
+                "argument": {
+                    "key": "string"
+                },
+                "contract": {
+                    "m_pending": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "double_blind_sha256(string,address,address)": [
+                447,
+                141
+            ],
+            "blind_sha256(string,address)": [
+                687,
+                185
+            ],
+            "lockDeposit(bytes32,string)": [
+                852,
+                207
+            ],
+            "unlockDeposit(string,address)": [
+                958,
+                229
+            ],
+            "kill(string)": [
+                1095,
+                251
+            ],
+            "depositToLock(bytes32)": [
+                181,
+                75
+            ],
+            "derive_sha256(string,uint256)": [
+                217,
+                97
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump2407": [
+                "sha256(sha256(sha256(key),caller),receiver)",
+                "sha256(sha256(sha256(key),caller),receiver)"
+            ],
+            "jump3449": [
+                "sha256(sha256(key),msg.sender)",
+                "sha256(sha256(key),msg.sender)"
+            ],
+            "jump2250": [
+                "sha256(sha256(key),caller)",
+                "sha256(sha256(key),caller)"
+            ],
+            "jump2744": [
+                "sha256(sha256(key),caller)",
+                "sha256(sha256(key),caller)"
+            ],
+            "jump4347": [
+                "sha256(key)",
+                "sha256(key)"
+            ],
+            "block2161": [
+                "sha256(key)"
+            ],
+            "block2655": [
+                "sha256(key)"
+            ],
+            "block4095": [
+                "to.send(sendValue)"
+            ],
+            "jump1824": [
+                "sha256(key)",
+                "sha256(key)"
+            ],
+            "block2250": [
+                "sha256(sha256(key),caller)"
+            ],
+            "block4436": [
+                "sha256(sha256(key),msg.sender)"
+            ],
+            "jump1949": [
+                "sha256(hash)",
+                "sha256(hash)"
+            ],
+            "jump3360": [
+                "sha256(key)",
+                "sha256(key)"
+            ],
+            "jump4095": [
+                "to.send(sendValue)",
+                "to.send(sendValue)"
+            ],
+            "block3360": [
+                "sha256(key)"
+            ],
+            "jump2161": [
+                "sha256(key)",
+                "sha256(key)"
+            ],
+            "block3660": [
+                "sha256(k,receiver)"
+            ],
+            "jump3660": [
+                "sha256(k,receiver)",
+                "sha256(k,receiver)"
+            ],
+            "block3449": [
+                "sha256(sha256(key),msg.sender)"
+            ],
+            "block2744": [
+                "sha256(sha256(key),caller)"
+            ],
+            "jump4436": [
+                "sha256(sha256(key),msg.sender)",
+                "sha256(sha256(key),msg.sender)"
+            ],
+            "jump2655": [
+                "sha256(key)",
+                "sha256(key)"
+            ],
+            "block2407": [
+                "sha256(sha256(sha256(key),caller),receiver)"
+            ],
+            "block1949": [
+                "sha256(hash)"
+            ],
+            "block1824": [
+                "sha256(key)"
+            ],
+            "block4347": [
+                "sha256(key)"
+            ]
+        }
+    }
+}

@@ -1,0 +1,1826 @@
+{
+    "AbstractToken": {
+        "function_list": [
+            "totalSupply()",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)"
+        ],
+        "initial_state": {
+            "totalSupply()": {
+                "argument": {},
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                125,
+                75
+            ],
+            "balanceOf(address)": [
+                402,
+                141
+            ],
+            "totalSupply()": [
+                226,
+                97
+            ],
+            "allowance(address,address)": [
+                590,
+                185
+            ],
+            "transferFrom(address,address,uint256)": [
+                269,
+                119
+            ],
+            "transfer(address,uint256)": [
+                489,
+                163
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)",
+            "mulByFraction(uint256,uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "mulByFraction(uint256,uint256,uint256)": {
+                "argument": {
+                    "number": "uint256",
+                    "numerator": "uint256",
+                    "denominator": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "PreIco": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)",
+            "mulByFraction(uint256,uint256,uint256)",
+            "PreIco(address,address,address,address,uint256)",
+            "balanceOf(address)",
+            "isIcoActive()",
+            "isIcoSuccessful()",
+            "getTokensAmount(uint256,uint256,uint256)",
+            "getTokensAmountWithEth(uint256)",
+            "getTokensAmountByTokens(address,uint256)",
+            "buyTokens(address,uint256)",
+            "addToken(address,uint256,uint256)",
+            "removeToken(address)",
+            "addUserToList(address)",
+            "burnTokens(uint256)",
+            "buyWithTokens(address)",
+            "buyWithTokensBy(address,address)",
+            "addTokensToReturn(address,address,uint256,bool)",
+            "addTokenToUser(address,address)",
+            "returnFunds()",
+            "moveIcoTokens(address,address,uint256)",
+            "returnFundsFor(address)",
+            "returnFundsForMultiple(address[])",
+            "returnFundsForAll()",
+            "withdrawEtherTo(address)",
+            "withdrawEther()",
+            "withdrawEtherToReserveEscrow()",
+            "runIco()",
+            "stopIco()",
+            "fallback()",
+            "giveReward(address,uint256)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "BASE": "uint256",
+                    "tokensSupplied": "uint256",
+                    "bountySupplied": "uint256",
+                    "SOFT_CAPACITY": "uint256",
+                    "TOKENS_SUPPLY": "uint256",
+                    "BOUNTY_SUPPLY": "uint256",
+                    "totalSupply": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "tokenAmount1": "uint256",
+                    "tokenAmount2": "uint256",
+                    "tokenAmount3": "uint256",
+                    "tokenPriceMultiply1": "uint256",
+                    "tokenPriceDivide1": "uint256",
+                    "tokenPriceMultiply2": "uint256",
+                    "tokenPriceDivide2": "uint256",
+                    "tokenPriceMultiply3": "uint256",
+                    "tokenPriceDivide3": "uint256",
+                    "tokenPriceMultiplies": "uint256[]",
+                    "tokenPriceDivides": "uint256[]",
+                    "tokenAmounts": "uint256[]",
+                    "prices": "uint256[]",
+                    "amounts": "uint256[]",
+                    "defaultDeadline": "uint256",
+                    "deadline": "uint256",
+                    "allowedTokens": "address[]",
+                    "usersList": "address[]",
+                    "numberOfUsersReturned": "uint256",
+                    "userTokens": "mapping(address => address[])"
+                }
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "BASE": "uint256",
+                    "tokensSupplied": "uint256",
+                    "bountySupplied": "uint256",
+                    "SOFT_CAPACITY": "uint256",
+                    "TOKENS_SUPPLY": "uint256",
+                    "BOUNTY_SUPPLY": "uint256",
+                    "totalSupply": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "tokenAmount1": "uint256",
+                    "tokenAmount2": "uint256",
+                    "tokenAmount3": "uint256",
+                    "tokenPriceMultiply1": "uint256",
+                    "tokenPriceDivide1": "uint256",
+                    "tokenPriceMultiply2": "uint256",
+                    "tokenPriceDivide2": "uint256",
+                    "tokenPriceMultiply3": "uint256",
+                    "tokenPriceDivide3": "uint256",
+                    "tokenPriceMultiplies": "uint256[]",
+                    "tokenPriceDivides": "uint256[]",
+                    "tokenAmounts": "uint256[]",
+                    "prices": "uint256[]",
+                    "amounts": "uint256[]",
+                    "defaultDeadline": "uint256",
+                    "deadline": "uint256",
+                    "allowedTokens": "address[]",
+                    "usersList": "address[]",
+                    "numberOfUsersReturned": "uint256",
+                    "userTokens": "mapping(address => address[])"
+                }
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "BASE": "uint256",
+                    "tokensSupplied": "uint256",
+                    "bountySupplied": "uint256",
+                    "SOFT_CAPACITY": "uint256",
+                    "TOKENS_SUPPLY": "uint256",
+                    "BOUNTY_SUPPLY": "uint256",
+                    "totalSupply": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "tokenAmount1": "uint256",
+                    "tokenAmount2": "uint256",
+                    "tokenAmount3": "uint256",
+                    "tokenPriceMultiply1": "uint256",
+                    "tokenPriceDivide1": "uint256",
+                    "tokenPriceMultiply2": "uint256",
+                    "tokenPriceDivide2": "uint256",
+                    "tokenPriceMultiply3": "uint256",
+                    "tokenPriceDivide3": "uint256",
+                    "tokenPriceMultiplies": "uint256[]",
+                    "tokenPriceDivides": "uint256[]",
+                    "tokenAmounts": "uint256[]",
+                    "prices": "uint256[]",
+                    "amounts": "uint256[]",
+                    "defaultDeadline": "uint256",
+                    "deadline": "uint256",
+                    "allowedTokens": "address[]",
+                    "usersList": "address[]",
+                    "numberOfUsersReturned": "uint256",
+                    "userTokens": "mapping(address => address[])"
+                }
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "BASE": "uint256",
+                    "tokensSupplied": "uint256",
+                    "bountySupplied": "uint256",
+                    "SOFT_CAPACITY": "uint256",
+                    "TOKENS_SUPPLY": "uint256",
+                    "BOUNTY_SUPPLY": "uint256",
+                    "totalSupply": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "tokenAmount1": "uint256",
+                    "tokenAmount2": "uint256",
+                    "tokenAmount3": "uint256",
+                    "tokenPriceMultiply1": "uint256",
+                    "tokenPriceDivide1": "uint256",
+                    "tokenPriceMultiply2": "uint256",
+                    "tokenPriceDivide2": "uint256",
+                    "tokenPriceMultiply3": "uint256",
+                    "tokenPriceDivide3": "uint256",
+                    "tokenPriceMultiplies": "uint256[]",
+                    "tokenPriceDivides": "uint256[]",
+                    "tokenAmounts": "uint256[]",
+                    "prices": "uint256[]",
+                    "amounts": "uint256[]",
+                    "defaultDeadline": "uint256",
+                    "deadline": "uint256",
+                    "allowedTokens": "address[]",
+                    "usersList": "address[]",
+                    "numberOfUsersReturned": "uint256",
+                    "userTokens": "mapping(address => address[])"
+                }
+            },
+            "mulByFraction(uint256,uint256,uint256)": {
+                "argument": {
+                    "number": "uint256",
+                    "numerator": "uint256",
+                    "denominator": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "BASE": "uint256",
+                    "tokensSupplied": "uint256",
+                    "bountySupplied": "uint256",
+                    "SOFT_CAPACITY": "uint256",
+                    "TOKENS_SUPPLY": "uint256",
+                    "BOUNTY_SUPPLY": "uint256",
+                    "totalSupply": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "tokenAmount1": "uint256",
+                    "tokenAmount2": "uint256",
+                    "tokenAmount3": "uint256",
+                    "tokenPriceMultiply1": "uint256",
+                    "tokenPriceDivide1": "uint256",
+                    "tokenPriceMultiply2": "uint256",
+                    "tokenPriceDivide2": "uint256",
+                    "tokenPriceMultiply3": "uint256",
+                    "tokenPriceDivide3": "uint256",
+                    "tokenPriceMultiplies": "uint256[]",
+                    "tokenPriceDivides": "uint256[]",
+                    "tokenAmounts": "uint256[]",
+                    "prices": "uint256[]",
+                    "amounts": "uint256[]",
+                    "defaultDeadline": "uint256",
+                    "deadline": "uint256",
+                    "allowedTokens": "address[]",
+                    "usersList": "address[]",
+                    "numberOfUsersReturned": "uint256",
+                    "userTokens": "mapping(address => address[])"
+                }
+            },
+            "PreIco(address,address,address,address,uint256)": {
+                "argument": {
+                    "_deadline": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "BASE": "uint256",
+                    "tokensSupplied": "uint256",
+                    "bountySupplied": "uint256",
+                    "SOFT_CAPACITY": "uint256",
+                    "TOKENS_SUPPLY": "uint256",
+                    "BOUNTY_SUPPLY": "uint256",
+                    "totalSupply": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "tokenAmount1": "uint256",
+                    "tokenAmount2": "uint256",
+                    "tokenAmount3": "uint256",
+                    "tokenPriceMultiply1": "uint256",
+                    "tokenPriceDivide1": "uint256",
+                    "tokenPriceMultiply2": "uint256",
+                    "tokenPriceDivide2": "uint256",
+                    "tokenPriceMultiply3": "uint256",
+                    "tokenPriceDivide3": "uint256",
+                    "tokenPriceMultiplies": "uint256[]",
+                    "tokenPriceDivides": "uint256[]",
+                    "tokenAmounts": "uint256[]",
+                    "prices": "uint256[]",
+                    "amounts": "uint256[]",
+                    "defaultDeadline": "uint256",
+                    "deadline": "uint256",
+                    "allowedTokens": "address[]",
+                    "usersList": "address[]",
+                    "numberOfUsersReturned": "uint256",
+                    "userTokens": "mapping(address => address[])"
+                }
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "BASE": "uint256",
+                    "tokensSupplied": "uint256",
+                    "bountySupplied": "uint256",
+                    "SOFT_CAPACITY": "uint256",
+                    "TOKENS_SUPPLY": "uint256",
+                    "BOUNTY_SUPPLY": "uint256",
+                    "totalSupply": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "tokenAmount1": "uint256",
+                    "tokenAmount2": "uint256",
+                    "tokenAmount3": "uint256",
+                    "tokenPriceMultiply1": "uint256",
+                    "tokenPriceDivide1": "uint256",
+                    "tokenPriceMultiply2": "uint256",
+                    "tokenPriceDivide2": "uint256",
+                    "tokenPriceMultiply3": "uint256",
+                    "tokenPriceDivide3": "uint256",
+                    "tokenPriceMultiplies": "uint256[]",
+                    "tokenPriceDivides": "uint256[]",
+                    "tokenAmounts": "uint256[]",
+                    "prices": "uint256[]",
+                    "amounts": "uint256[]",
+                    "defaultDeadline": "uint256",
+                    "deadline": "uint256",
+                    "allowedTokens": "address[]",
+                    "usersList": "address[]",
+                    "numberOfUsersReturned": "uint256",
+                    "userTokens": "mapping(address => address[])"
+                }
+            },
+            "isIcoActive()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "BASE": "uint256",
+                    "tokensSupplied": "uint256",
+                    "bountySupplied": "uint256",
+                    "SOFT_CAPACITY": "uint256",
+                    "TOKENS_SUPPLY": "uint256",
+                    "BOUNTY_SUPPLY": "uint256",
+                    "totalSupply": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "tokenAmount1": "uint256",
+                    "tokenAmount2": "uint256",
+                    "tokenAmount3": "uint256",
+                    "tokenPriceMultiply1": "uint256",
+                    "tokenPriceDivide1": "uint256",
+                    "tokenPriceMultiply2": "uint256",
+                    "tokenPriceDivide2": "uint256",
+                    "tokenPriceMultiply3": "uint256",
+                    "tokenPriceDivide3": "uint256",
+                    "tokenPriceMultiplies": "uint256[]",
+                    "tokenPriceDivides": "uint256[]",
+                    "tokenAmounts": "uint256[]",
+                    "prices": "uint256[]",
+                    "amounts": "uint256[]",
+                    "defaultDeadline": "uint256",
+                    "deadline": "uint256",
+                    "allowedTokens": "address[]",
+                    "usersList": "address[]",
+                    "numberOfUsersReturned": "uint256",
+                    "userTokens": "mapping(address => address[])"
+                }
+            },
+            "isIcoSuccessful()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "BASE": "uint256",
+                    "tokensSupplied": "uint256",
+                    "bountySupplied": "uint256",
+                    "SOFT_CAPACITY": "uint256",
+                    "TOKENS_SUPPLY": "uint256",
+                    "BOUNTY_SUPPLY": "uint256",
+                    "totalSupply": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "tokenAmount1": "uint256",
+                    "tokenAmount2": "uint256",
+                    "tokenAmount3": "uint256",
+                    "tokenPriceMultiply1": "uint256",
+                    "tokenPriceDivide1": "uint256",
+                    "tokenPriceMultiply2": "uint256",
+                    "tokenPriceDivide2": "uint256",
+                    "tokenPriceMultiply3": "uint256",
+                    "tokenPriceDivide3": "uint256",
+                    "tokenPriceMultiplies": "uint256[]",
+                    "tokenPriceDivides": "uint256[]",
+                    "tokenAmounts": "uint256[]",
+                    "prices": "uint256[]",
+                    "amounts": "uint256[]",
+                    "defaultDeadline": "uint256",
+                    "deadline": "uint256",
+                    "allowedTokens": "address[]",
+                    "usersList": "address[]",
+                    "numberOfUsersReturned": "uint256",
+                    "userTokens": "mapping(address => address[])"
+                }
+            },
+            "getTokensAmount(uint256,uint256,uint256)": {
+                "argument": {
+                    "_amountOfToken": "uint256",
+                    "_priceAmountOfToken": "uint256",
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "BASE": "uint256",
+                    "tokensSupplied": "uint256",
+                    "bountySupplied": "uint256",
+                    "SOFT_CAPACITY": "uint256",
+                    "TOKENS_SUPPLY": "uint256",
+                    "BOUNTY_SUPPLY": "uint256",
+                    "totalSupply": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "tokenAmount1": "uint256",
+                    "tokenAmount2": "uint256",
+                    "tokenAmount3": "uint256",
+                    "tokenPriceMultiply1": "uint256",
+                    "tokenPriceDivide1": "uint256",
+                    "tokenPriceMultiply2": "uint256",
+                    "tokenPriceDivide2": "uint256",
+                    "tokenPriceMultiply3": "uint256",
+                    "tokenPriceDivide3": "uint256",
+                    "tokenPriceMultiplies": "uint256[]",
+                    "tokenPriceDivides": "uint256[]",
+                    "tokenAmounts": "uint256[]",
+                    "prices": "uint256[]",
+                    "amounts": "uint256[]",
+                    "defaultDeadline": "uint256",
+                    "deadline": "uint256",
+                    "allowedTokens": "address[]",
+                    "usersList": "address[]",
+                    "numberOfUsersReturned": "uint256",
+                    "userTokens": "mapping(address => address[])"
+                }
+            },
+            "getTokensAmountWithEth(uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "BASE": "uint256",
+                    "tokensSupplied": "uint256",
+                    "bountySupplied": "uint256",
+                    "SOFT_CAPACITY": "uint256",
+                    "TOKENS_SUPPLY": "uint256",
+                    "BOUNTY_SUPPLY": "uint256",
+                    "totalSupply": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "tokenAmount1": "uint256",
+                    "tokenAmount2": "uint256",
+                    "tokenAmount3": "uint256",
+                    "tokenPriceMultiply1": "uint256",
+                    "tokenPriceDivide1": "uint256",
+                    "tokenPriceMultiply2": "uint256",
+                    "tokenPriceDivide2": "uint256",
+                    "tokenPriceMultiply3": "uint256",
+                    "tokenPriceDivide3": "uint256",
+                    "tokenPriceMultiplies": "uint256[]",
+                    "tokenPriceDivides": "uint256[]",
+                    "tokenAmounts": "uint256[]",
+                    "prices": "uint256[]",
+                    "amounts": "uint256[]",
+                    "defaultDeadline": "uint256",
+                    "deadline": "uint256",
+                    "allowedTokens": "address[]",
+                    "usersList": "address[]",
+                    "numberOfUsersReturned": "uint256",
+                    "userTokens": "mapping(address => address[])"
+                }
+            },
+            "getTokensAmountByTokens(address,uint256)": {
+                "argument": {
+                    "_tokenValue": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "BASE": "uint256",
+                    "tokensSupplied": "uint256",
+                    "bountySupplied": "uint256",
+                    "SOFT_CAPACITY": "uint256",
+                    "TOKENS_SUPPLY": "uint256",
+                    "BOUNTY_SUPPLY": "uint256",
+                    "totalSupply": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "tokenAmount1": "uint256",
+                    "tokenAmount2": "uint256",
+                    "tokenAmount3": "uint256",
+                    "tokenPriceMultiply1": "uint256",
+                    "tokenPriceDivide1": "uint256",
+                    "tokenPriceMultiply2": "uint256",
+                    "tokenPriceDivide2": "uint256",
+                    "tokenPriceMultiply3": "uint256",
+                    "tokenPriceDivide3": "uint256",
+                    "tokenPriceMultiplies": "uint256[]",
+                    "tokenPriceDivides": "uint256[]",
+                    "tokenAmounts": "uint256[]",
+                    "prices": "uint256[]",
+                    "amounts": "uint256[]",
+                    "defaultDeadline": "uint256",
+                    "deadline": "uint256",
+                    "allowedTokens": "address[]",
+                    "usersList": "address[]",
+                    "numberOfUsersReturned": "uint256",
+                    "userTokens": "mapping(address => address[])"
+                }
+            },
+            "buyTokens(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "BASE": "uint256",
+                    "tokensSupplied": "uint256",
+                    "bountySupplied": "uint256",
+                    "SOFT_CAPACITY": "uint256",
+                    "TOKENS_SUPPLY": "uint256",
+                    "BOUNTY_SUPPLY": "uint256",
+                    "totalSupply": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "tokenAmount1": "uint256",
+                    "tokenAmount2": "uint256",
+                    "tokenAmount3": "uint256",
+                    "tokenPriceMultiply1": "uint256",
+                    "tokenPriceDivide1": "uint256",
+                    "tokenPriceMultiply2": "uint256",
+                    "tokenPriceDivide2": "uint256",
+                    "tokenPriceMultiply3": "uint256",
+                    "tokenPriceDivide3": "uint256",
+                    "tokenPriceMultiplies": "uint256[]",
+                    "tokenPriceDivides": "uint256[]",
+                    "tokenAmounts": "uint256[]",
+                    "prices": "uint256[]",
+                    "amounts": "uint256[]",
+                    "defaultDeadline": "uint256",
+                    "deadline": "uint256",
+                    "allowedTokens": "address[]",
+                    "usersList": "address[]",
+                    "numberOfUsersReturned": "uint256",
+                    "userTokens": "mapping(address => address[])"
+                }
+            },
+            "addToken(address,uint256,uint256)": {
+                "argument": {
+                    "_amount": "uint256",
+                    "_price": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "BASE": "uint256",
+                    "tokensSupplied": "uint256",
+                    "bountySupplied": "uint256",
+                    "SOFT_CAPACITY": "uint256",
+                    "TOKENS_SUPPLY": "uint256",
+                    "BOUNTY_SUPPLY": "uint256",
+                    "totalSupply": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "tokenAmount1": "uint256",
+                    "tokenAmount2": "uint256",
+                    "tokenAmount3": "uint256",
+                    "tokenPriceMultiply1": "uint256",
+                    "tokenPriceDivide1": "uint256",
+                    "tokenPriceMultiply2": "uint256",
+                    "tokenPriceDivide2": "uint256",
+                    "tokenPriceMultiply3": "uint256",
+                    "tokenPriceDivide3": "uint256",
+                    "tokenPriceMultiplies": "uint256[]",
+                    "tokenPriceDivides": "uint256[]",
+                    "tokenAmounts": "uint256[]",
+                    "prices": "uint256[]",
+                    "amounts": "uint256[]",
+                    "defaultDeadline": "uint256",
+                    "deadline": "uint256",
+                    "allowedTokens": "address[]",
+                    "usersList": "address[]",
+                    "numberOfUsersReturned": "uint256",
+                    "userTokens": "mapping(address => address[])"
+                }
+            },
+            "removeToken(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "BASE": "uint256",
+                    "tokensSupplied": "uint256",
+                    "bountySupplied": "uint256",
+                    "SOFT_CAPACITY": "uint256",
+                    "TOKENS_SUPPLY": "uint256",
+                    "BOUNTY_SUPPLY": "uint256",
+                    "totalSupply": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "tokenAmount1": "uint256",
+                    "tokenAmount2": "uint256",
+                    "tokenAmount3": "uint256",
+                    "tokenPriceMultiply1": "uint256",
+                    "tokenPriceDivide1": "uint256",
+                    "tokenPriceMultiply2": "uint256",
+                    "tokenPriceDivide2": "uint256",
+                    "tokenPriceMultiply3": "uint256",
+                    "tokenPriceDivide3": "uint256",
+                    "tokenPriceMultiplies": "uint256[]",
+                    "tokenPriceDivides": "uint256[]",
+                    "tokenAmounts": "uint256[]",
+                    "prices": "uint256[]",
+                    "amounts": "uint256[]",
+                    "defaultDeadline": "uint256",
+                    "deadline": "uint256",
+                    "allowedTokens": "address[]",
+                    "usersList": "address[]",
+                    "numberOfUsersReturned": "uint256",
+                    "userTokens": "mapping(address => address[])"
+                }
+            },
+            "addUserToList(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "BASE": "uint256",
+                    "tokensSupplied": "uint256",
+                    "bountySupplied": "uint256",
+                    "SOFT_CAPACITY": "uint256",
+                    "TOKENS_SUPPLY": "uint256",
+                    "BOUNTY_SUPPLY": "uint256",
+                    "totalSupply": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "tokenAmount1": "uint256",
+                    "tokenAmount2": "uint256",
+                    "tokenAmount3": "uint256",
+                    "tokenPriceMultiply1": "uint256",
+                    "tokenPriceDivide1": "uint256",
+                    "tokenPriceMultiply2": "uint256",
+                    "tokenPriceDivide2": "uint256",
+                    "tokenPriceMultiply3": "uint256",
+                    "tokenPriceDivide3": "uint256",
+                    "tokenPriceMultiplies": "uint256[]",
+                    "tokenPriceDivides": "uint256[]",
+                    "tokenAmounts": "uint256[]",
+                    "prices": "uint256[]",
+                    "amounts": "uint256[]",
+                    "defaultDeadline": "uint256",
+                    "deadline": "uint256",
+                    "allowedTokens": "address[]",
+                    "usersList": "address[]",
+                    "numberOfUsersReturned": "uint256",
+                    "userTokens": "mapping(address => address[])"
+                }
+            },
+            "burnTokens(uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "BASE": "uint256",
+                    "tokensSupplied": "uint256",
+                    "bountySupplied": "uint256",
+                    "SOFT_CAPACITY": "uint256",
+                    "TOKENS_SUPPLY": "uint256",
+                    "BOUNTY_SUPPLY": "uint256",
+                    "totalSupply": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "tokenAmount1": "uint256",
+                    "tokenAmount2": "uint256",
+                    "tokenAmount3": "uint256",
+                    "tokenPriceMultiply1": "uint256",
+                    "tokenPriceDivide1": "uint256",
+                    "tokenPriceMultiply2": "uint256",
+                    "tokenPriceDivide2": "uint256",
+                    "tokenPriceMultiply3": "uint256",
+                    "tokenPriceDivide3": "uint256",
+                    "tokenPriceMultiplies": "uint256[]",
+                    "tokenPriceDivides": "uint256[]",
+                    "tokenAmounts": "uint256[]",
+                    "prices": "uint256[]",
+                    "amounts": "uint256[]",
+                    "defaultDeadline": "uint256",
+                    "deadline": "uint256",
+                    "allowedTokens": "address[]",
+                    "usersList": "address[]",
+                    "numberOfUsersReturned": "uint256",
+                    "userTokens": "mapping(address => address[])"
+                }
+            },
+            "buyWithTokens(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "BASE": "uint256",
+                    "tokensSupplied": "uint256",
+                    "bountySupplied": "uint256",
+                    "SOFT_CAPACITY": "uint256",
+                    "TOKENS_SUPPLY": "uint256",
+                    "BOUNTY_SUPPLY": "uint256",
+                    "totalSupply": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "tokenAmount1": "uint256",
+                    "tokenAmount2": "uint256",
+                    "tokenAmount3": "uint256",
+                    "tokenPriceMultiply1": "uint256",
+                    "tokenPriceDivide1": "uint256",
+                    "tokenPriceMultiply2": "uint256",
+                    "tokenPriceDivide2": "uint256",
+                    "tokenPriceMultiply3": "uint256",
+                    "tokenPriceDivide3": "uint256",
+                    "tokenPriceMultiplies": "uint256[]",
+                    "tokenPriceDivides": "uint256[]",
+                    "tokenAmounts": "uint256[]",
+                    "prices": "uint256[]",
+                    "amounts": "uint256[]",
+                    "defaultDeadline": "uint256",
+                    "deadline": "uint256",
+                    "allowedTokens": "address[]",
+                    "usersList": "address[]",
+                    "numberOfUsersReturned": "uint256",
+                    "userTokens": "mapping(address => address[])"
+                }
+            },
+            "buyWithTokensBy(address,address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "BASE": "uint256",
+                    "tokensSupplied": "uint256",
+                    "bountySupplied": "uint256",
+                    "SOFT_CAPACITY": "uint256",
+                    "TOKENS_SUPPLY": "uint256",
+                    "BOUNTY_SUPPLY": "uint256",
+                    "totalSupply": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "tokenAmount1": "uint256",
+                    "tokenAmount2": "uint256",
+                    "tokenAmount3": "uint256",
+                    "tokenPriceMultiply1": "uint256",
+                    "tokenPriceDivide1": "uint256",
+                    "tokenPriceMultiply2": "uint256",
+                    "tokenPriceDivide2": "uint256",
+                    "tokenPriceMultiply3": "uint256",
+                    "tokenPriceDivide3": "uint256",
+                    "tokenPriceMultiplies": "uint256[]",
+                    "tokenPriceDivides": "uint256[]",
+                    "tokenAmounts": "uint256[]",
+                    "prices": "uint256[]",
+                    "amounts": "uint256[]",
+                    "defaultDeadline": "uint256",
+                    "deadline": "uint256",
+                    "allowedTokens": "address[]",
+                    "usersList": "address[]",
+                    "numberOfUsersReturned": "uint256",
+                    "userTokens": "mapping(address => address[])"
+                }
+            },
+            "addTokensToReturn(address,address,uint256,bool)": {
+                "argument": {
+                    "_tokenValue": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "BASE": "uint256",
+                    "tokensSupplied": "uint256",
+                    "bountySupplied": "uint256",
+                    "SOFT_CAPACITY": "uint256",
+                    "TOKENS_SUPPLY": "uint256",
+                    "BOUNTY_SUPPLY": "uint256",
+                    "totalSupply": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "tokenAmount1": "uint256",
+                    "tokenAmount2": "uint256",
+                    "tokenAmount3": "uint256",
+                    "tokenPriceMultiply1": "uint256",
+                    "tokenPriceDivide1": "uint256",
+                    "tokenPriceMultiply2": "uint256",
+                    "tokenPriceDivide2": "uint256",
+                    "tokenPriceMultiply3": "uint256",
+                    "tokenPriceDivide3": "uint256",
+                    "tokenPriceMultiplies": "uint256[]",
+                    "tokenPriceDivides": "uint256[]",
+                    "tokenAmounts": "uint256[]",
+                    "prices": "uint256[]",
+                    "amounts": "uint256[]",
+                    "defaultDeadline": "uint256",
+                    "deadline": "uint256",
+                    "allowedTokens": "address[]",
+                    "usersList": "address[]",
+                    "numberOfUsersReturned": "uint256",
+                    "userTokens": "mapping(address => address[])"
+                }
+            },
+            "addTokenToUser(address,address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "BASE": "uint256",
+                    "tokensSupplied": "uint256",
+                    "bountySupplied": "uint256",
+                    "SOFT_CAPACITY": "uint256",
+                    "TOKENS_SUPPLY": "uint256",
+                    "BOUNTY_SUPPLY": "uint256",
+                    "totalSupply": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "tokenAmount1": "uint256",
+                    "tokenAmount2": "uint256",
+                    "tokenAmount3": "uint256",
+                    "tokenPriceMultiply1": "uint256",
+                    "tokenPriceDivide1": "uint256",
+                    "tokenPriceMultiply2": "uint256",
+                    "tokenPriceDivide2": "uint256",
+                    "tokenPriceMultiply3": "uint256",
+                    "tokenPriceDivide3": "uint256",
+                    "tokenPriceMultiplies": "uint256[]",
+                    "tokenPriceDivides": "uint256[]",
+                    "tokenAmounts": "uint256[]",
+                    "prices": "uint256[]",
+                    "amounts": "uint256[]",
+                    "defaultDeadline": "uint256",
+                    "deadline": "uint256",
+                    "allowedTokens": "address[]",
+                    "usersList": "address[]",
+                    "numberOfUsersReturned": "uint256",
+                    "userTokens": "mapping(address => address[])"
+                }
+            },
+            "returnFunds()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "BASE": "uint256",
+                    "tokensSupplied": "uint256",
+                    "bountySupplied": "uint256",
+                    "SOFT_CAPACITY": "uint256",
+                    "TOKENS_SUPPLY": "uint256",
+                    "BOUNTY_SUPPLY": "uint256",
+                    "totalSupply": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "tokenAmount1": "uint256",
+                    "tokenAmount2": "uint256",
+                    "tokenAmount3": "uint256",
+                    "tokenPriceMultiply1": "uint256",
+                    "tokenPriceDivide1": "uint256",
+                    "tokenPriceMultiply2": "uint256",
+                    "tokenPriceDivide2": "uint256",
+                    "tokenPriceMultiply3": "uint256",
+                    "tokenPriceDivide3": "uint256",
+                    "tokenPriceMultiplies": "uint256[]",
+                    "tokenPriceDivides": "uint256[]",
+                    "tokenAmounts": "uint256[]",
+                    "prices": "uint256[]",
+                    "amounts": "uint256[]",
+                    "defaultDeadline": "uint256",
+                    "deadline": "uint256",
+                    "allowedTokens": "address[]",
+                    "usersList": "address[]",
+                    "numberOfUsersReturned": "uint256",
+                    "userTokens": "mapping(address => address[])"
+                }
+            },
+            "moveIcoTokens(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "BASE": "uint256",
+                    "tokensSupplied": "uint256",
+                    "bountySupplied": "uint256",
+                    "SOFT_CAPACITY": "uint256",
+                    "TOKENS_SUPPLY": "uint256",
+                    "BOUNTY_SUPPLY": "uint256",
+                    "totalSupply": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "tokenAmount1": "uint256",
+                    "tokenAmount2": "uint256",
+                    "tokenAmount3": "uint256",
+                    "tokenPriceMultiply1": "uint256",
+                    "tokenPriceDivide1": "uint256",
+                    "tokenPriceMultiply2": "uint256",
+                    "tokenPriceDivide2": "uint256",
+                    "tokenPriceMultiply3": "uint256",
+                    "tokenPriceDivide3": "uint256",
+                    "tokenPriceMultiplies": "uint256[]",
+                    "tokenPriceDivides": "uint256[]",
+                    "tokenAmounts": "uint256[]",
+                    "prices": "uint256[]",
+                    "amounts": "uint256[]",
+                    "defaultDeadline": "uint256",
+                    "deadline": "uint256",
+                    "allowedTokens": "address[]",
+                    "usersList": "address[]",
+                    "numberOfUsersReturned": "uint256",
+                    "userTokens": "mapping(address => address[])"
+                }
+            },
+            "returnFundsFor(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "BASE": "uint256",
+                    "tokensSupplied": "uint256",
+                    "bountySupplied": "uint256",
+                    "SOFT_CAPACITY": "uint256",
+                    "TOKENS_SUPPLY": "uint256",
+                    "BOUNTY_SUPPLY": "uint256",
+                    "totalSupply": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "tokenAmount1": "uint256",
+                    "tokenAmount2": "uint256",
+                    "tokenAmount3": "uint256",
+                    "tokenPriceMultiply1": "uint256",
+                    "tokenPriceDivide1": "uint256",
+                    "tokenPriceMultiply2": "uint256",
+                    "tokenPriceDivide2": "uint256",
+                    "tokenPriceMultiply3": "uint256",
+                    "tokenPriceDivide3": "uint256",
+                    "tokenPriceMultiplies": "uint256[]",
+                    "tokenPriceDivides": "uint256[]",
+                    "tokenAmounts": "uint256[]",
+                    "prices": "uint256[]",
+                    "amounts": "uint256[]",
+                    "defaultDeadline": "uint256",
+                    "deadline": "uint256",
+                    "allowedTokens": "address[]",
+                    "usersList": "address[]",
+                    "numberOfUsersReturned": "uint256",
+                    "userTokens": "mapping(address => address[])"
+                }
+            },
+            "returnFundsForMultiple(address[])": {
+                "argument": {
+                    "_users": "address[]"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "BASE": "uint256",
+                    "tokensSupplied": "uint256",
+                    "bountySupplied": "uint256",
+                    "SOFT_CAPACITY": "uint256",
+                    "TOKENS_SUPPLY": "uint256",
+                    "BOUNTY_SUPPLY": "uint256",
+                    "totalSupply": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "tokenAmount1": "uint256",
+                    "tokenAmount2": "uint256",
+                    "tokenAmount3": "uint256",
+                    "tokenPriceMultiply1": "uint256",
+                    "tokenPriceDivide1": "uint256",
+                    "tokenPriceMultiply2": "uint256",
+                    "tokenPriceDivide2": "uint256",
+                    "tokenPriceMultiply3": "uint256",
+                    "tokenPriceDivide3": "uint256",
+                    "tokenPriceMultiplies": "uint256[]",
+                    "tokenPriceDivides": "uint256[]",
+                    "tokenAmounts": "uint256[]",
+                    "prices": "uint256[]",
+                    "amounts": "uint256[]",
+                    "defaultDeadline": "uint256",
+                    "deadline": "uint256",
+                    "allowedTokens": "address[]",
+                    "usersList": "address[]",
+                    "numberOfUsersReturned": "uint256",
+                    "userTokens": "mapping(address => address[])"
+                }
+            },
+            "returnFundsForAll()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "BASE": "uint256",
+                    "tokensSupplied": "uint256",
+                    "bountySupplied": "uint256",
+                    "SOFT_CAPACITY": "uint256",
+                    "TOKENS_SUPPLY": "uint256",
+                    "BOUNTY_SUPPLY": "uint256",
+                    "totalSupply": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "tokenAmount1": "uint256",
+                    "tokenAmount2": "uint256",
+                    "tokenAmount3": "uint256",
+                    "tokenPriceMultiply1": "uint256",
+                    "tokenPriceDivide1": "uint256",
+                    "tokenPriceMultiply2": "uint256",
+                    "tokenPriceDivide2": "uint256",
+                    "tokenPriceMultiply3": "uint256",
+                    "tokenPriceDivide3": "uint256",
+                    "tokenPriceMultiplies": "uint256[]",
+                    "tokenPriceDivides": "uint256[]",
+                    "tokenAmounts": "uint256[]",
+                    "prices": "uint256[]",
+                    "amounts": "uint256[]",
+                    "defaultDeadline": "uint256",
+                    "deadline": "uint256",
+                    "allowedTokens": "address[]",
+                    "usersList": "address[]",
+                    "numberOfUsersReturned": "uint256",
+                    "userTokens": "mapping(address => address[])"
+                }
+            },
+            "withdrawEtherTo(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "BASE": "uint256",
+                    "tokensSupplied": "uint256",
+                    "bountySupplied": "uint256",
+                    "SOFT_CAPACITY": "uint256",
+                    "TOKENS_SUPPLY": "uint256",
+                    "BOUNTY_SUPPLY": "uint256",
+                    "totalSupply": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "tokenAmount1": "uint256",
+                    "tokenAmount2": "uint256",
+                    "tokenAmount3": "uint256",
+                    "tokenPriceMultiply1": "uint256",
+                    "tokenPriceDivide1": "uint256",
+                    "tokenPriceMultiply2": "uint256",
+                    "tokenPriceDivide2": "uint256",
+                    "tokenPriceMultiply3": "uint256",
+                    "tokenPriceDivide3": "uint256",
+                    "tokenPriceMultiplies": "uint256[]",
+                    "tokenPriceDivides": "uint256[]",
+                    "tokenAmounts": "uint256[]",
+                    "prices": "uint256[]",
+                    "amounts": "uint256[]",
+                    "defaultDeadline": "uint256",
+                    "deadline": "uint256",
+                    "allowedTokens": "address[]",
+                    "usersList": "address[]",
+                    "numberOfUsersReturned": "uint256",
+                    "userTokens": "mapping(address => address[])"
+                }
+            },
+            "withdrawEther()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "BASE": "uint256",
+                    "tokensSupplied": "uint256",
+                    "bountySupplied": "uint256",
+                    "SOFT_CAPACITY": "uint256",
+                    "TOKENS_SUPPLY": "uint256",
+                    "BOUNTY_SUPPLY": "uint256",
+                    "totalSupply": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "tokenAmount1": "uint256",
+                    "tokenAmount2": "uint256",
+                    "tokenAmount3": "uint256",
+                    "tokenPriceMultiply1": "uint256",
+                    "tokenPriceDivide1": "uint256",
+                    "tokenPriceMultiply2": "uint256",
+                    "tokenPriceDivide2": "uint256",
+                    "tokenPriceMultiply3": "uint256",
+                    "tokenPriceDivide3": "uint256",
+                    "tokenPriceMultiplies": "uint256[]",
+                    "tokenPriceDivides": "uint256[]",
+                    "tokenAmounts": "uint256[]",
+                    "prices": "uint256[]",
+                    "amounts": "uint256[]",
+                    "defaultDeadline": "uint256",
+                    "deadline": "uint256",
+                    "allowedTokens": "address[]",
+                    "usersList": "address[]",
+                    "numberOfUsersReturned": "uint256",
+                    "userTokens": "mapping(address => address[])"
+                }
+            },
+            "withdrawEtherToReserveEscrow()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "BASE": "uint256",
+                    "tokensSupplied": "uint256",
+                    "bountySupplied": "uint256",
+                    "SOFT_CAPACITY": "uint256",
+                    "TOKENS_SUPPLY": "uint256",
+                    "BOUNTY_SUPPLY": "uint256",
+                    "totalSupply": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "tokenAmount1": "uint256",
+                    "tokenAmount2": "uint256",
+                    "tokenAmount3": "uint256",
+                    "tokenPriceMultiply1": "uint256",
+                    "tokenPriceDivide1": "uint256",
+                    "tokenPriceMultiply2": "uint256",
+                    "tokenPriceDivide2": "uint256",
+                    "tokenPriceMultiply3": "uint256",
+                    "tokenPriceDivide3": "uint256",
+                    "tokenPriceMultiplies": "uint256[]",
+                    "tokenPriceDivides": "uint256[]",
+                    "tokenAmounts": "uint256[]",
+                    "prices": "uint256[]",
+                    "amounts": "uint256[]",
+                    "defaultDeadline": "uint256",
+                    "deadline": "uint256",
+                    "allowedTokens": "address[]",
+                    "usersList": "address[]",
+                    "numberOfUsersReturned": "uint256",
+                    "userTokens": "mapping(address => address[])"
+                }
+            },
+            "runIco()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "BASE": "uint256",
+                    "tokensSupplied": "uint256",
+                    "bountySupplied": "uint256",
+                    "SOFT_CAPACITY": "uint256",
+                    "TOKENS_SUPPLY": "uint256",
+                    "BOUNTY_SUPPLY": "uint256",
+                    "totalSupply": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "tokenAmount1": "uint256",
+                    "tokenAmount2": "uint256",
+                    "tokenAmount3": "uint256",
+                    "tokenPriceMultiply1": "uint256",
+                    "tokenPriceDivide1": "uint256",
+                    "tokenPriceMultiply2": "uint256",
+                    "tokenPriceDivide2": "uint256",
+                    "tokenPriceMultiply3": "uint256",
+                    "tokenPriceDivide3": "uint256",
+                    "tokenPriceMultiplies": "uint256[]",
+                    "tokenPriceDivides": "uint256[]",
+                    "tokenAmounts": "uint256[]",
+                    "prices": "uint256[]",
+                    "amounts": "uint256[]",
+                    "defaultDeadline": "uint256",
+                    "deadline": "uint256",
+                    "allowedTokens": "address[]",
+                    "usersList": "address[]",
+                    "numberOfUsersReturned": "uint256",
+                    "userTokens": "mapping(address => address[])"
+                }
+            },
+            "stopIco()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "BASE": "uint256",
+                    "tokensSupplied": "uint256",
+                    "bountySupplied": "uint256",
+                    "SOFT_CAPACITY": "uint256",
+                    "TOKENS_SUPPLY": "uint256",
+                    "BOUNTY_SUPPLY": "uint256",
+                    "totalSupply": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "tokenAmount1": "uint256",
+                    "tokenAmount2": "uint256",
+                    "tokenAmount3": "uint256",
+                    "tokenPriceMultiply1": "uint256",
+                    "tokenPriceDivide1": "uint256",
+                    "tokenPriceMultiply2": "uint256",
+                    "tokenPriceDivide2": "uint256",
+                    "tokenPriceMultiply3": "uint256",
+                    "tokenPriceDivide3": "uint256",
+                    "tokenPriceMultiplies": "uint256[]",
+                    "tokenPriceDivides": "uint256[]",
+                    "tokenAmounts": "uint256[]",
+                    "prices": "uint256[]",
+                    "amounts": "uint256[]",
+                    "defaultDeadline": "uint256",
+                    "deadline": "uint256",
+                    "allowedTokens": "address[]",
+                    "usersList": "address[]",
+                    "numberOfUsersReturned": "uint256",
+                    "userTokens": "mapping(address => address[])"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "BASE": "uint256",
+                    "tokensSupplied": "uint256",
+                    "bountySupplied": "uint256",
+                    "SOFT_CAPACITY": "uint256",
+                    "TOKENS_SUPPLY": "uint256",
+                    "BOUNTY_SUPPLY": "uint256",
+                    "totalSupply": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "tokenAmount1": "uint256",
+                    "tokenAmount2": "uint256",
+                    "tokenAmount3": "uint256",
+                    "tokenPriceMultiply1": "uint256",
+                    "tokenPriceDivide1": "uint256",
+                    "tokenPriceMultiply2": "uint256",
+                    "tokenPriceDivide2": "uint256",
+                    "tokenPriceMultiply3": "uint256",
+                    "tokenPriceDivide3": "uint256",
+                    "tokenPriceMultiplies": "uint256[]",
+                    "tokenPriceDivides": "uint256[]",
+                    "tokenAmounts": "uint256[]",
+                    "prices": "uint256[]",
+                    "amounts": "uint256[]",
+                    "defaultDeadline": "uint256",
+                    "deadline": "uint256",
+                    "allowedTokens": "address[]",
+                    "usersList": "address[]",
+                    "numberOfUsersReturned": "uint256",
+                    "userTokens": "mapping(address => address[])"
+                }
+            },
+            "giveReward(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "BASE": "uint256",
+                    "tokensSupplied": "uint256",
+                    "bountySupplied": "uint256",
+                    "SOFT_CAPACITY": "uint256",
+                    "TOKENS_SUPPLY": "uint256",
+                    "BOUNTY_SUPPLY": "uint256",
+                    "totalSupply": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "tokenAmount1": "uint256",
+                    "tokenAmount2": "uint256",
+                    "tokenAmount3": "uint256",
+                    "tokenPriceMultiply1": "uint256",
+                    "tokenPriceDivide1": "uint256",
+                    "tokenPriceMultiply2": "uint256",
+                    "tokenPriceDivide2": "uint256",
+                    "tokenPriceMultiply3": "uint256",
+                    "tokenPriceDivide3": "uint256",
+                    "tokenPriceMultiplies": "uint256[]",
+                    "tokenPriceDivides": "uint256[]",
+                    "tokenAmounts": "uint256[]",
+                    "prices": "uint256[]",
+                    "amounts": "uint256[]",
+                    "defaultDeadline": "uint256",
+                    "deadline": "uint256",
+                    "allowedTokens": "address[]",
+                    "usersList": "address[]",
+                    "numberOfUsersReturned": "uint256",
+                    "userTokens": "mapping(address => address[])"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "BASE": "uint256",
+                    "tokensSupplied": "uint256",
+                    "bountySupplied": "uint256",
+                    "SOFT_CAPACITY": "uint256",
+                    "TOKENS_SUPPLY": "uint256",
+                    "BOUNTY_SUPPLY": "uint256",
+                    "totalSupply": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "tokenAmount1": "uint256",
+                    "tokenAmount2": "uint256",
+                    "tokenAmount3": "uint256",
+                    "tokenPriceMultiply1": "uint256",
+                    "tokenPriceDivide1": "uint256",
+                    "tokenPriceMultiply2": "uint256",
+                    "tokenPriceDivide2": "uint256",
+                    "tokenPriceMultiply3": "uint256",
+                    "tokenPriceDivide3": "uint256",
+                    "tokenPriceMultiplies": "uint256[]",
+                    "tokenPriceDivides": "uint256[]",
+                    "tokenAmounts": "uint256[]",
+                    "prices": "uint256[]",
+                    "amounts": "uint256[]",
+                    "defaultDeadline": "uint256",
+                    "deadline": "uint256",
+                    "allowedTokens": "address[]",
+                    "usersList": "address[]",
+                    "numberOfUsersReturned": "uint256",
+                    "userTokens": "mapping(address => address[])"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "BASE": "uint256",
+                    "tokensSupplied": "uint256",
+                    "bountySupplied": "uint256",
+                    "SOFT_CAPACITY": "uint256",
+                    "TOKENS_SUPPLY": "uint256",
+                    "BOUNTY_SUPPLY": "uint256",
+                    "totalSupply": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "tokenAmount1": "uint256",
+                    "tokenAmount2": "uint256",
+                    "tokenAmount3": "uint256",
+                    "tokenPriceMultiply1": "uint256",
+                    "tokenPriceDivide1": "uint256",
+                    "tokenPriceMultiply2": "uint256",
+                    "tokenPriceDivide2": "uint256",
+                    "tokenPriceMultiply3": "uint256",
+                    "tokenPriceDivide3": "uint256",
+                    "tokenPriceMultiplies": "uint256[]",
+                    "tokenPriceDivides": "uint256[]",
+                    "tokenAmounts": "uint256[]",
+                    "prices": "uint256[]",
+                    "amounts": "uint256[]",
+                    "defaultDeadline": "uint256",
+                    "deadline": "uint256",
+                    "allowedTokens": "address[]",
+                    "usersList": "address[]",
+                    "numberOfUsersReturned": "uint256",
+                    "userTokens": "mapping(address => address[])"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "BASE": "uint256",
+                    "tokensSupplied": "uint256",
+                    "bountySupplied": "uint256",
+                    "SOFT_CAPACITY": "uint256",
+                    "TOKENS_SUPPLY": "uint256",
+                    "BOUNTY_SUPPLY": "uint256",
+                    "totalSupply": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "tokenAmount1": "uint256",
+                    "tokenAmount2": "uint256",
+                    "tokenAmount3": "uint256",
+                    "tokenPriceMultiply1": "uint256",
+                    "tokenPriceDivide1": "uint256",
+                    "tokenPriceMultiply2": "uint256",
+                    "tokenPriceDivide2": "uint256",
+                    "tokenPriceMultiply3": "uint256",
+                    "tokenPriceDivide3": "uint256",
+                    "tokenPriceMultiplies": "uint256[]",
+                    "tokenPriceDivides": "uint256[]",
+                    "tokenAmounts": "uint256[]",
+                    "prices": "uint256[]",
+                    "amounts": "uint256[]",
+                    "defaultDeadline": "uint256",
+                    "deadline": "uint256",
+                    "allowedTokens": "address[]",
+                    "usersList": "address[]",
+                    "numberOfUsersReturned": "uint256",
+                    "userTokens": "mapping(address => address[])"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "BASE": "uint256",
+                    "tokensSupplied": "uint256",
+                    "bountySupplied": "uint256",
+                    "SOFT_CAPACITY": "uint256",
+                    "TOKENS_SUPPLY": "uint256",
+                    "BOUNTY_SUPPLY": "uint256",
+                    "totalSupply": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "tokenAmount1": "uint256",
+                    "tokenAmount2": "uint256",
+                    "tokenAmount3": "uint256",
+                    "tokenPriceMultiply1": "uint256",
+                    "tokenPriceDivide1": "uint256",
+                    "tokenPriceMultiply2": "uint256",
+                    "tokenPriceDivide2": "uint256",
+                    "tokenPriceMultiply3": "uint256",
+                    "tokenPriceDivide3": "uint256",
+                    "tokenPriceMultiplies": "uint256[]",
+                    "tokenPriceDivides": "uint256[]",
+                    "tokenAmounts": "uint256[]",
+                    "prices": "uint256[]",
+                    "amounts": "uint256[]",
+                    "defaultDeadline": "uint256",
+                    "deadline": "uint256",
+                    "allowedTokens": "address[]",
+                    "usersList": "address[]",
+                    "numberOfUsersReturned": "uint256",
+                    "userTokens": "mapping(address => address[])"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "BASE": "uint256",
+                    "tokensSupplied": "uint256",
+                    "bountySupplied": "uint256",
+                    "SOFT_CAPACITY": "uint256",
+                    "TOKENS_SUPPLY": "uint256",
+                    "BOUNTY_SUPPLY": "uint256",
+                    "totalSupply": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "tokenAmount1": "uint256",
+                    "tokenAmount2": "uint256",
+                    "tokenAmount3": "uint256",
+                    "tokenPriceMultiply1": "uint256",
+                    "tokenPriceDivide1": "uint256",
+                    "tokenPriceMultiply2": "uint256",
+                    "tokenPriceDivide2": "uint256",
+                    "tokenPriceMultiply3": "uint256",
+                    "tokenPriceDivide3": "uint256",
+                    "tokenPriceMultiplies": "uint256[]",
+                    "tokenPriceDivides": "uint256[]",
+                    "tokenAmounts": "uint256[]",
+                    "prices": "uint256[]",
+                    "amounts": "uint256[]",
+                    "defaultDeadline": "uint256",
+                    "deadline": "uint256",
+                    "allowedTokens": "address[]",
+                    "usersList": "address[]",
+                    "numberOfUsersReturned": "uint256",
+                    "userTokens": "mapping(address => address[])"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "isIcoActive()": [
+                1321,
+                273
+            ],
+            "runIco()": [
+                2185,
+                537
+            ],
+            "allowance(address,address)": [
+                12190,
+                879
+            ],
+            "transferFrom(address,address,uint256)": [
+                12855,
+                941
+            ],
+            "removeToken(address)": [
+                2317,
+                581
+            ],
+            "approve(address,uint256)": [
+                814,
+                119
+            ],
+            "isIcoSuccessful()": [
+                2651,
+                713
+            ],
+            "addTokensToReturn(address,address,uint256,bool)": [
+                1587,
+                361
+            ],
+            "returnFundsFor(address)": [
+                2560,
+                691
+            ],
+            "buyWithTokensBy(address,address)": [
+                4134,
+                1131
+            ],
+            "stopIco()": [
+                2494,
+                647
+            ],
+            "moveIcoTokens(address,address,uint256)": [
+                962,
+                163
+            ],
+            "withdrawEther()": [
+                2471,
+                625
+            ],
+            "giveReward(address,uint256)": [
+                3611,
+                977
+            ],
+            "balanceOf(address)": [
+                15396,
+                978
+            ],
+            "returnFunds()": [
+                1298,
+                251
+            ],
+            "returnFundsForMultiple(address[])": [
+                3486,
+                933
+            ],
+            "returnFundsForAll()": [
+                3588,
+                955
+            ],
+            "addToken(address,uint256,uint256)": [
+                3850,
+                1043
+            ],
+            "buyWithTokens(address)": [
+                3937,
+                1065
+            ],
+            "transfer(address,uint256)": [
+                15629,
+                859
+            ],
+            "withdrawEtherToReserveEscrow()": [
+                4374,
+                1175
+            ]
+        },
+        "block_CALL_mapping": {
+            "block9341_0": [
+                "token.transfer(_user, userTokenValue)"
+            ],
+            "block8507_2": [
+                "_user.send(ethBalances[_user])"
+            ],
+            "block8507_1": [
+                "_user.send(ethBalances[_user])"
+            ],
+            "block8507_0": [
+                "_user.send(ethBalances[_user])"
+            ],
+            "jump13079": [
+                "token.balanceOf(address(this))",
+                "token.balanceOf(address(this))"
+            ],
+            "block15396": [
+                "token.balanceOf(address(this))"
+            ],
+            "jump14980": [
+                "_escrow.send(this.balance)",
+                "_escrow.send(this.balance)"
+            ],
+            "jump12855": [
+                "token.transferFrom(_user, address(this), tokensToSend)",
+                "token.transferFrom(_user, address(this), tokensToSend)"
+            ],
+            "jump15396": [
+                "token.balanceOf(address(this))",
+                "token.balanceOf(address(this))"
+            ],
+            "block12579_0": [
+                "token.balanceOf(address(this))"
+            ],
+            "block9341_1": [
+                "token.transfer(_user, userTokenValue)"
+            ],
+            "block13079_0": [
+                "token.balanceOf(address(this))"
+            ],
+            "block9341_2": [
+                "token.transfer(_user, userTokenValue)"
+            ],
+            "block9341": [
+                "token.transfer(_user, userTokenValue)"
+            ],
+            "block15629": [
+                "token.transfer(_escrow, tokenBalance)"
+            ],
+            "block15629_0": [
+                "token.transfer(_escrow, tokenBalance)"
+            ],
+            "block12855_0": [
+                "token.transferFrom(_user, address(this), tokensToSend)"
+            ],
+            "block12190": [
+                "token.allowance(_user, address(this))"
+            ],
+            "jump8507_1": [
+                "_user.send(ethBalances[_user])",
+                "_user.send(ethBalances[_user])"
+            ],
+            "block14980_0": [
+                "_escrow.send(this.balance)"
+            ],
+            "jump8507_0": [
+                "_user.send(ethBalances[_user])",
+                "_user.send(ethBalances[_user])"
+            ],
+            "jump14980_0": [
+                "_escrow.send(this.balance)",
+                "_escrow.send(this.balance)"
+            ],
+            "block14980": [
+                "_escrow.send(this.balance)"
+            ],
+            "jump12190": [
+                "token.allowance(_user, address(this))",
+                "token.allowance(_user, address(this))"
+            ],
+            "block12855": [
+                "token.transferFrom(_user, address(this), tokensToSend)"
+            ],
+            "jump12579": [
+                "token.balanceOf(address(this))",
+                "token.balanceOf(address(this))"
+            ],
+            "jump15629_0": [
+                "token.transfer(_escrow, tokenBalance)",
+                "token.transfer(_escrow, tokenBalance)"
+            ],
+            "block8507": [
+                "_user.send(ethBalances[_user])"
+            ],
+            "jump15396_0": [
+                "token.balanceOf(address(this))",
+                "token.balanceOf(address(this))"
+            ],
+            "block12190_0": [
+                "token.allowance(_user, address(this))"
+            ],
+            "block13079": [
+                "token.balanceOf(address(this))"
+            ],
+            "jump12855_0": [
+                "token.transferFrom(_user, address(this), tokensToSend)",
+                "token.transferFrom(_user, address(this), tokensToSend)"
+            ],
+            "jump9341_2": [
+                "token.transfer(_user, userTokenValue)",
+                "token.transfer(_user, userTokenValue)"
+            ],
+            "jump9341_0": [
+                "token.transfer(_user, userTokenValue)",
+                "token.transfer(_user, userTokenValue)"
+            ],
+            "jump9341_1": [
+                "token.transfer(_user, userTokenValue)",
+                "token.transfer(_user, userTokenValue)"
+            ],
+            "jump13079_0": [
+                "token.balanceOf(address(this))",
+                "token.balanceOf(address(this))"
+            ],
+            "jump15629": [
+                "token.transfer(_escrow, tokenBalance)",
+                "token.transfer(_escrow, tokenBalance)"
+            ],
+            "block15396_0": [
+                "token.balanceOf(address(this))"
+            ],
+            "block12579": [
+                "token.balanceOf(address(this))"
+            ],
+            "jump8507": [
+                "_user.send(ethBalances[_user])",
+                "_user.send(ethBalances[_user])"
+            ],
+            "jump12579_0": [
+                "token.balanceOf(address(this))",
+                "token.balanceOf(address(this))"
+            ],
+            "jump12190_0": [
+                "token.allowance(_user, address(this))",
+                "token.allowance(_user, address(this))"
+            ],
+            "jump9341": [
+                "token.transfer(_user, userTokenValue)",
+                "token.transfer(_user, userTokenValue)"
+            ],
+            "jump8507_2": [
+                "_user.send(ethBalances[_user])",
+                "_user.send(ethBalances[_user])"
+            ]
+        }
+    }
+}

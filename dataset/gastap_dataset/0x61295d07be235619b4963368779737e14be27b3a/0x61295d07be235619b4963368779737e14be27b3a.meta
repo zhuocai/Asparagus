@@ -1,0 +1,387 @@
+{
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "ERC20Basic": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                124,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "BasicToken": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transfer(address,uint256)",
+            "balanceOf(address)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transfer(address,uint256)": [
+                222,
+                119
+            ],
+            "balanceOf(address)": [
+                135,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Escapable": {
+        "function_list": [
+            "Escapable(address,address,address)",
+            "escapeHatch()",
+            "changeEscapeHatchCaller(address)",
+            "getBalance()",
+            "transfer(address,uint256)",
+            "receiveEther()",
+            "claimTokens(address)",
+            "fallback()"
+        ],
+        "initial_state": {
+            "Escapable(address,address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "escapeHatch()": {
+                "argument": {},
+                "contract": {}
+            },
+            "changeEscapeHatchCaller(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "getBalance()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {}
+            },
+            "receiveEther()": {
+                "argument": {},
+                "contract": {}
+            },
+            "claimTokens(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "claimTokens(address)": [
+                469,
+                207
+            ],
+            "escapeHatch()": [
+                195,
+                97
+            ],
+            "changeEscapeHatchCaller(address)": [
+                305,
+                141
+            ],
+            "receiveEther()": [
+                372,
+                163
+            ],
+            "getBalance()": [
+                152,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump1792": [
+                "escapeHatchDestination.transfer(this.balance)",
+                "escapeHatchDestination.transfer(this.balance)"
+            ],
+            "block2082": [
+                "token.balanceOf(this)"
+            ],
+            "jump2340": [
+                "token.transfer(escapeHatchDestination, balance)",
+                "token.transfer(escapeHatchDestination, balance)"
+            ],
+            "jump2915": [
+                "_to.send(_amount)",
+                "_to.send(_amount)"
+            ],
+            "block2840": [
+                "baseToken.transfer(_to, _amount)"
+            ],
+            "block1792": [
+                "escapeHatchDestination.transfer(this.balance)"
+            ],
+            "jump2082": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "jump1027_0": [
+                "baseToken.balanceOf(this)",
+                "baseToken.balanceOf(this)"
+            ],
+            "block2340": [
+                "token.transfer(escapeHatchDestination, balance)"
+            ],
+            "block1027": [
+                "baseToken.balanceOf(this)"
+            ],
+            "jump1027": [
+                "baseToken.balanceOf(this)",
+                "baseToken.balanceOf(this)"
+            ],
+            "block1027_0": [
+                "baseToken.balanceOf(this)"
+            ],
+            "jump2840": [
+                "baseToken.transfer(_to, _amount)",
+                "baseToken.transfer(_to, _amount)"
+            ],
+            "block2915": [
+                "_to.send(_amount)"
+            ]
+        }
+    },
+    "MexicoMatcher": {
+        "function_list": [
+            "Escapable(address,address,address)",
+            "escapeHatch()",
+            "changeEscapeHatchCaller(address)",
+            "getBalance()",
+            "transfer(address,uint256)",
+            "receiveEther()",
+            "claimTokens(address)",
+            "fallback()",
+            "MexicoMatcher(address,address,address)",
+            "depositETH()",
+            "fallback()"
+        ],
+        "initial_state": {
+            "Escapable(address,address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "escapeHatch()": {
+                "argument": {},
+                "contract": {}
+            },
+            "changeEscapeHatchCaller(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "getBalance()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {}
+            },
+            "receiveEther()": {
+                "argument": {},
+                "contract": {}
+            },
+            "claimTokens(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {}
+            },
+            "MexicoMatcher(address,address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "depositETH()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "claimTokens(address)": [
+                998,
+                229
+            ],
+            "depositETH()": [
+                1152,
+                273
+            ],
+            "escapeHatch()": [
+                637,
+                97
+            ],
+            "changeEscapeHatchCaller(address)": [
+                747,
+                141
+            ],
+            "receiveEther()": [
+                901,
+                185
+            ],
+            "getBalance()": [
+                594,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump388": [
+                "beneficiary.send(amount)",
+                "beneficiary.send(amount)"
+            ],
+            "jump1416_0": [
+                "baseToken.balanceOf(this)",
+                "baseToken.balanceOf(this)"
+            ],
+            "block388": [
+                "beneficiary.send(amount)"
+            ],
+            "block202": [
+                "beneficiary.send(amount)"
+            ],
+            "block202_0": [
+                "beneficiary.send(amount)"
+            ],
+            "jump1416": [
+                "baseToken.balanceOf(this)",
+                "baseToken.balanceOf(this)"
+            ],
+            "block388_0": [
+                "beneficiary.send(amount)"
+            ],
+            "block2659": [
+                "token.balanceOf(this)"
+            ],
+            "block2369": [
+                "escapeHatchDestination.transfer(this.balance)"
+            ],
+            "jump2369": [
+                "escapeHatchDestination.transfer(this.balance)",
+                "escapeHatchDestination.transfer(this.balance)"
+            ],
+            "jump3572": [
+                "_to.send(_amount)",
+                "_to.send(_amount)"
+            ],
+            "jump202_0": [
+                "beneficiary.send(amount)",
+                "beneficiary.send(amount)"
+            ],
+            "jump2659": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "block2917": [
+                "token.transfer(escapeHatchDestination, balance)"
+            ],
+            "block1416_0": [
+                "baseToken.balanceOf(this)"
+            ],
+            "jump2917": [
+                "token.transfer(escapeHatchDestination, balance)",
+                "token.transfer(escapeHatchDestination, balance)"
+            ],
+            "jump3497": [
+                "baseToken.transfer(_to, _amount)",
+                "baseToken.transfer(_to, _amount)"
+            ],
+            "jump388_0": [
+                "beneficiary.send(amount)",
+                "beneficiary.send(amount)"
+            ],
+            "block3572": [
+                "_to.send(_amount)"
+            ],
+            "block3497": [
+                "baseToken.transfer(_to, _amount)"
+            ],
+            "block1416": [
+                "baseToken.balanceOf(this)"
+            ],
+            "jump202": [
+                "beneficiary.send(amount)",
+                "beneficiary.send(amount)"
+            ]
+        }
+    }
+}

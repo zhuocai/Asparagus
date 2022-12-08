@@ -1,0 +1,493 @@
+{
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "add(uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "Token": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "allowance(address,address)": [
+                9964,
+                961
+            ],
+            "transferFrom(address,address,uint256)": [
+                914,
+                207
+            ],
+            "approve(address,uint256)": [
+                533,
+                97
+            ],
+            "balanceOf(address)": [
+                7218,
+                929
+            ],
+            "transfer(address,uint256)": [
+                2423,
+                625
+            ]
+        },
+        "block_CALL_mapping": {
+            "block7218": [
+                "controller.balanceOf(a)"
+            ],
+            "block5997": [
+                "controller.decreaseApproval(msg.sender, _spender, _subtractedValue)"
+            ],
+            "jump3560": [
+                "controller.totalSupply()",
+                "controller.totalSupply()"
+            ],
+            "block6767": [
+                "token.balanceOf(this)"
+            ],
+            "jump6767": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "block9232": [
+                "controller.increaseApproval(msg.sender, _spender, _addedValue)"
+            ],
+            "jump6302": [
+                "controller.allowance(msg.sender, _spender)",
+                "controller.allowance(msg.sender, _spender)"
+            ],
+            "jump5997": [
+                "controller.decreaseApproval(msg.sender, _spender, _subtractedValue)",
+                "controller.decreaseApproval(msg.sender, _spender, _subtractedValue)"
+            ],
+            "block6959": [
+                "token.transfer(_to, token.balanceOf(this))"
+            ],
+            "jump7218": [
+                "controller.balanceOf(a)",
+                "controller.balanceOf(a)"
+            ],
+            "jump8723_0": [
+                "controller.transfer(msg.sender, _to, _value)",
+                "controller.transfer(msg.sender, _to, _value)"
+            ],
+            "jump5017": [
+                "controller.burn(msg.sender, _amount)",
+                "controller.burn(msg.sender, _amount)"
+            ],
+            "jump6959": [
+                "token.transfer(_to, token.balanceOf(this))",
+                "token.transfer(_to, token.balanceOf(this))"
+            ],
+            "jump8723": [
+                "controller.transfer(msg.sender, _to, _value)",
+                "controller.transfer(msg.sender, _to, _value)"
+            ],
+            "block3560": [
+                "controller.totalSupply()"
+            ],
+            "jump9232": [
+                "controller.increaseApproval(msg.sender, _spender, _addedValue)",
+                "controller.increaseApproval(msg.sender, _spender, _addedValue)"
+            ],
+            "block6302": [
+                "controller.allowance(msg.sender, _spender)"
+            ],
+            "jump9964": [
+                "controller.allowance(_owner, _spender)",
+                "controller.allowance(_owner, _spender)"
+            ],
+            "block9964": [
+                "controller.allowance(_owner, _spender)"
+            ],
+            "jump4480": [
+                "controller.transferFrom(msg.sender, _from, _to, _value)",
+                "controller.transferFrom(msg.sender, _from, _to, _value)"
+            ],
+            "block9537": [
+                "controller.allowance(msg.sender, _spender)"
+            ],
+            "block8723": [
+                "controller.transfer(msg.sender, _to, _value)"
+            ],
+            "block4480": [
+                "controller.transferFrom(msg.sender, _from, _to, _value)"
+            ],
+            "jump9537": [
+                "controller.allowance(msg.sender, _spender)",
+                "controller.allowance(msg.sender, _spender)"
+            ],
+            "block5017": [
+                "controller.burn(msg.sender, _amount)"
+            ],
+            "jump3238": [
+                "controller.approve(msg.sender, _spender, _value)",
+                "controller.approve(msg.sender, _spender, _value)"
+            ],
+            "block3238": [
+                "controller.approve(msg.sender, _spender, _value)"
+            ],
+            "block8723_0": [
+                "controller.transfer(msg.sender, _to, _value)"
+            ]
+        }
+    },
+    "StandardToken": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "balanceOf(address)",
+            "approve(address,uint256)",
+            "allowance(address,address)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                125,
+                75
+            ],
+            "balanceOf(address)": [
+                402,
+                141
+            ],
+            "allowance(address,address)": [
+                590,
+                185
+            ],
+            "transferFrom(address,address,uint256)": [
+                269,
+                119
+            ],
+            "transfer(address,uint256)": [
+                489,
+                163
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "LudumToken": {
+        "function_list": [
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "balanceOf(address)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "ludumTokensPerEther()",
+            "LudumToken(address,address,address,address)",
+            "makeTokens()",
+            "fallback()",
+            "finalizeCrowdsale()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "maximumSupply": "uint256",
+                    "crowdsaleStart": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "teamPercent": "uint256",
+                    "operationsPercent": "uint256",
+                    "marketingPercent": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "maximumSupply": "uint256",
+                    "crowdsaleStart": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "teamPercent": "uint256",
+                    "operationsPercent": "uint256",
+                    "marketingPercent": "uint256"
+                }
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "maximumSupply": "uint256",
+                    "crowdsaleStart": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "teamPercent": "uint256",
+                    "operationsPercent": "uint256",
+                    "marketingPercent": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "maximumSupply": "uint256",
+                    "crowdsaleStart": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "teamPercent": "uint256",
+                    "operationsPercent": "uint256",
+                    "marketingPercent": "uint256"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "maximumSupply": "uint256",
+                    "crowdsaleStart": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "teamPercent": "uint256",
+                    "operationsPercent": "uint256",
+                    "marketingPercent": "uint256"
+                }
+            },
+            "ludumTokensPerEther()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "maximumSupply": "uint256",
+                    "crowdsaleStart": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "teamPercent": "uint256",
+                    "operationsPercent": "uint256",
+                    "marketingPercent": "uint256"
+                }
+            },
+            "LudumToken(address,address,address,address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "maximumSupply": "uint256",
+                    "crowdsaleStart": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "teamPercent": "uint256",
+                    "operationsPercent": "uint256",
+                    "marketingPercent": "uint256"
+                }
+            },
+            "makeTokens()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "maximumSupply": "uint256",
+                    "crowdsaleStart": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "teamPercent": "uint256",
+                    "operationsPercent": "uint256",
+                    "marketingPercent": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "maximumSupply": "uint256",
+                    "crowdsaleStart": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "teamPercent": "uint256",
+                    "operationsPercent": "uint256",
+                    "marketingPercent": "uint256"
+                }
+            },
+            "finalizeCrowdsale()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "maximumSupply": "uint256",
+                    "crowdsaleStart": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "teamPercent": "uint256",
+                    "operationsPercent": "uint256",
+                    "marketingPercent": "uint256"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "maximumSupply": "uint256",
+                    "crowdsaleStart": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "teamPercent": "uint256",
+                    "operationsPercent": "uint256",
+                    "marketingPercent": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                896,
+                251
+            ],
+            "allowance(address,address)": [
+                1762,
+                515
+            ],
+            "transferFrom(address,address,uint256)": [
+                671,
+                185
+            ],
+            "approve(address,uint256)": [
+                504,
+                119
+            ],
+            "finalizeCrowdsale()": [
+                605,
+                141
+            ],
+            "ludumTokensPerEther()": [
+                1070,
+                295
+            ],
+            "makeTokens()": [
+                1666,
+                449
+            ],
+            "transfer(address,uint256)": [
+                1391,
+                383
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump3779": [
+                "ethDepositAddress.send(this.balance)",
+                "ethDepositAddress.send(this.balance)"
+            ],
+            "block3779": [
+                "ethDepositAddress.send(this.balance)"
+            ]
+        }
+    }
+}

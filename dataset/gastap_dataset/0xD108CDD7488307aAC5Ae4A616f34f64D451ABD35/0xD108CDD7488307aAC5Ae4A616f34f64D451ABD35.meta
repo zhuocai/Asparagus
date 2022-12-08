@@ -1,0 +1,774 @@
+{
+    "ERC20Basic": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                124,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "ERC20": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                401,
+                97
+            ],
+            "transfer(address,uint256)": [
+                1385,
+                361
+            ],
+            "allowance(address,address)": [
+                1704,
+                427
+            ],
+            "balanceOf(address)": [
+                1044,
+                273
+            ],
+            "transferFrom(address,address,uint256)": [
+                588,
+                163
+            ]
+        },
+        "block_CALL_mapping": {
+            "block3721": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ],
+            "jump3721": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)",
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ]
+        }
+    },
+    "Ownable": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "CCMToken": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "CCMToken()",
+            "etherProceeds()",
+            "processFunding(address,uint256,uint256)",
+            "withdrawToPartner(address,uint256)",
+            "fallback()",
+            "withdrawToTeam()",
+            "withdrawForOneYear()",
+            "withdrawForTwoYear()",
+            "withdrawForThreeYear()",
+            "transfer(address,uint256)",
+            "balanceOf(address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "getCurrentBlockNum()",
+            "setSymbol(string)",
+            "setRate(uint256)",
+            "setLockRate(uint256)",
+            "setupFundingInfo(uint256,uint256)",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "version": "string",
+                    "decimals": "uint256",
+                    "MAX_SUPPLY": "uint256",
+                    "PARTNER_SUPPLY": "uint256",
+                    "totalPartnerSupply": "uint256",
+                    "MAX_FUNDING_SUPPLY": "uint256",
+                    "rate": "uint256",
+                    "totalFundingSupply": "uint256",
+                    "TEAM_KEEPING": "uint256",
+                    "ONE_YEAR_KEEPING": "uint256",
+                    "TWO_YEAR_KEEPING": "uint256",
+                    "THREE_YEAR_KEEPING": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "lockRate": "uint256"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "version": "string",
+                    "decimals": "uint256",
+                    "MAX_SUPPLY": "uint256",
+                    "PARTNER_SUPPLY": "uint256",
+                    "totalPartnerSupply": "uint256",
+                    "MAX_FUNDING_SUPPLY": "uint256",
+                    "rate": "uint256",
+                    "totalFundingSupply": "uint256",
+                    "TEAM_KEEPING": "uint256",
+                    "ONE_YEAR_KEEPING": "uint256",
+                    "TWO_YEAR_KEEPING": "uint256",
+                    "THREE_YEAR_KEEPING": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "lockRate": "uint256"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "version": "string",
+                    "decimals": "uint256",
+                    "MAX_SUPPLY": "uint256",
+                    "PARTNER_SUPPLY": "uint256",
+                    "totalPartnerSupply": "uint256",
+                    "MAX_FUNDING_SUPPLY": "uint256",
+                    "rate": "uint256",
+                    "totalFundingSupply": "uint256",
+                    "TEAM_KEEPING": "uint256",
+                    "ONE_YEAR_KEEPING": "uint256",
+                    "TWO_YEAR_KEEPING": "uint256",
+                    "THREE_YEAR_KEEPING": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "lockRate": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "version": "string",
+                    "decimals": "uint256",
+                    "MAX_SUPPLY": "uint256",
+                    "PARTNER_SUPPLY": "uint256",
+                    "totalPartnerSupply": "uint256",
+                    "MAX_FUNDING_SUPPLY": "uint256",
+                    "rate": "uint256",
+                    "totalFundingSupply": "uint256",
+                    "TEAM_KEEPING": "uint256",
+                    "ONE_YEAR_KEEPING": "uint256",
+                    "TWO_YEAR_KEEPING": "uint256",
+                    "THREE_YEAR_KEEPING": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "lockRate": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "version": "string",
+                    "decimals": "uint256",
+                    "MAX_SUPPLY": "uint256",
+                    "PARTNER_SUPPLY": "uint256",
+                    "totalPartnerSupply": "uint256",
+                    "MAX_FUNDING_SUPPLY": "uint256",
+                    "rate": "uint256",
+                    "totalFundingSupply": "uint256",
+                    "TEAM_KEEPING": "uint256",
+                    "ONE_YEAR_KEEPING": "uint256",
+                    "TWO_YEAR_KEEPING": "uint256",
+                    "THREE_YEAR_KEEPING": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "lockRate": "uint256"
+                }
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "version": "string",
+                    "decimals": "uint256",
+                    "MAX_SUPPLY": "uint256",
+                    "PARTNER_SUPPLY": "uint256",
+                    "totalPartnerSupply": "uint256",
+                    "MAX_FUNDING_SUPPLY": "uint256",
+                    "rate": "uint256",
+                    "totalFundingSupply": "uint256",
+                    "TEAM_KEEPING": "uint256",
+                    "ONE_YEAR_KEEPING": "uint256",
+                    "TWO_YEAR_KEEPING": "uint256",
+                    "THREE_YEAR_KEEPING": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "lockRate": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "version": "string",
+                    "decimals": "uint256",
+                    "MAX_SUPPLY": "uint256",
+                    "PARTNER_SUPPLY": "uint256",
+                    "totalPartnerSupply": "uint256",
+                    "MAX_FUNDING_SUPPLY": "uint256",
+                    "rate": "uint256",
+                    "totalFundingSupply": "uint256",
+                    "TEAM_KEEPING": "uint256",
+                    "ONE_YEAR_KEEPING": "uint256",
+                    "TWO_YEAR_KEEPING": "uint256",
+                    "THREE_YEAR_KEEPING": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "lockRate": "uint256"
+                }
+            },
+            "CCMToken()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "version": "string",
+                    "decimals": "uint256",
+                    "MAX_SUPPLY": "uint256",
+                    "PARTNER_SUPPLY": "uint256",
+                    "totalPartnerSupply": "uint256",
+                    "MAX_FUNDING_SUPPLY": "uint256",
+                    "rate": "uint256",
+                    "totalFundingSupply": "uint256",
+                    "TEAM_KEEPING": "uint256",
+                    "ONE_YEAR_KEEPING": "uint256",
+                    "TWO_YEAR_KEEPING": "uint256",
+                    "THREE_YEAR_KEEPING": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "lockRate": "uint256"
+                }
+            },
+            "etherProceeds()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "version": "string",
+                    "decimals": "uint256",
+                    "MAX_SUPPLY": "uint256",
+                    "PARTNER_SUPPLY": "uint256",
+                    "totalPartnerSupply": "uint256",
+                    "MAX_FUNDING_SUPPLY": "uint256",
+                    "rate": "uint256",
+                    "totalFundingSupply": "uint256",
+                    "TEAM_KEEPING": "uint256",
+                    "ONE_YEAR_KEEPING": "uint256",
+                    "TWO_YEAR_KEEPING": "uint256",
+                    "THREE_YEAR_KEEPING": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "lockRate": "uint256"
+                }
+            },
+            "processFunding(address,uint256,uint256)": {
+                "argument": {
+                    "_value": "uint256",
+                    "_rate": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "version": "string",
+                    "decimals": "uint256",
+                    "MAX_SUPPLY": "uint256",
+                    "PARTNER_SUPPLY": "uint256",
+                    "totalPartnerSupply": "uint256",
+                    "MAX_FUNDING_SUPPLY": "uint256",
+                    "rate": "uint256",
+                    "totalFundingSupply": "uint256",
+                    "TEAM_KEEPING": "uint256",
+                    "ONE_YEAR_KEEPING": "uint256",
+                    "TWO_YEAR_KEEPING": "uint256",
+                    "THREE_YEAR_KEEPING": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "lockRate": "uint256"
+                }
+            },
+            "withdrawToPartner(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "version": "string",
+                    "decimals": "uint256",
+                    "MAX_SUPPLY": "uint256",
+                    "PARTNER_SUPPLY": "uint256",
+                    "totalPartnerSupply": "uint256",
+                    "MAX_FUNDING_SUPPLY": "uint256",
+                    "rate": "uint256",
+                    "totalFundingSupply": "uint256",
+                    "TEAM_KEEPING": "uint256",
+                    "ONE_YEAR_KEEPING": "uint256",
+                    "TWO_YEAR_KEEPING": "uint256",
+                    "THREE_YEAR_KEEPING": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "lockRate": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "version": "string",
+                    "decimals": "uint256",
+                    "MAX_SUPPLY": "uint256",
+                    "PARTNER_SUPPLY": "uint256",
+                    "totalPartnerSupply": "uint256",
+                    "MAX_FUNDING_SUPPLY": "uint256",
+                    "rate": "uint256",
+                    "totalFundingSupply": "uint256",
+                    "TEAM_KEEPING": "uint256",
+                    "ONE_YEAR_KEEPING": "uint256",
+                    "TWO_YEAR_KEEPING": "uint256",
+                    "THREE_YEAR_KEEPING": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "lockRate": "uint256"
+                }
+            },
+            "withdrawToTeam()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "version": "string",
+                    "decimals": "uint256",
+                    "MAX_SUPPLY": "uint256",
+                    "PARTNER_SUPPLY": "uint256",
+                    "totalPartnerSupply": "uint256",
+                    "MAX_FUNDING_SUPPLY": "uint256",
+                    "rate": "uint256",
+                    "totalFundingSupply": "uint256",
+                    "TEAM_KEEPING": "uint256",
+                    "ONE_YEAR_KEEPING": "uint256",
+                    "TWO_YEAR_KEEPING": "uint256",
+                    "THREE_YEAR_KEEPING": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "lockRate": "uint256"
+                }
+            },
+            "withdrawForOneYear()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "version": "string",
+                    "decimals": "uint256",
+                    "MAX_SUPPLY": "uint256",
+                    "PARTNER_SUPPLY": "uint256",
+                    "totalPartnerSupply": "uint256",
+                    "MAX_FUNDING_SUPPLY": "uint256",
+                    "rate": "uint256",
+                    "totalFundingSupply": "uint256",
+                    "TEAM_KEEPING": "uint256",
+                    "ONE_YEAR_KEEPING": "uint256",
+                    "TWO_YEAR_KEEPING": "uint256",
+                    "THREE_YEAR_KEEPING": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "lockRate": "uint256"
+                }
+            },
+            "withdrawForTwoYear()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "version": "string",
+                    "decimals": "uint256",
+                    "MAX_SUPPLY": "uint256",
+                    "PARTNER_SUPPLY": "uint256",
+                    "totalPartnerSupply": "uint256",
+                    "MAX_FUNDING_SUPPLY": "uint256",
+                    "rate": "uint256",
+                    "totalFundingSupply": "uint256",
+                    "TEAM_KEEPING": "uint256",
+                    "ONE_YEAR_KEEPING": "uint256",
+                    "TWO_YEAR_KEEPING": "uint256",
+                    "THREE_YEAR_KEEPING": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "lockRate": "uint256"
+                }
+            },
+            "withdrawForThreeYear()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "version": "string",
+                    "decimals": "uint256",
+                    "MAX_SUPPLY": "uint256",
+                    "PARTNER_SUPPLY": "uint256",
+                    "totalPartnerSupply": "uint256",
+                    "MAX_FUNDING_SUPPLY": "uint256",
+                    "rate": "uint256",
+                    "totalFundingSupply": "uint256",
+                    "TEAM_KEEPING": "uint256",
+                    "ONE_YEAR_KEEPING": "uint256",
+                    "TWO_YEAR_KEEPING": "uint256",
+                    "THREE_YEAR_KEEPING": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "lockRate": "uint256"
+                }
+            },
+            "getCurrentBlockNum()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "version": "string",
+                    "decimals": "uint256",
+                    "MAX_SUPPLY": "uint256",
+                    "PARTNER_SUPPLY": "uint256",
+                    "totalPartnerSupply": "uint256",
+                    "MAX_FUNDING_SUPPLY": "uint256",
+                    "rate": "uint256",
+                    "totalFundingSupply": "uint256",
+                    "TEAM_KEEPING": "uint256",
+                    "ONE_YEAR_KEEPING": "uint256",
+                    "TWO_YEAR_KEEPING": "uint256",
+                    "THREE_YEAR_KEEPING": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "lockRate": "uint256"
+                }
+            },
+            "setSymbol(string)": {
+                "argument": {
+                    "_symbol": "string"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "version": "string",
+                    "decimals": "uint256",
+                    "MAX_SUPPLY": "uint256",
+                    "PARTNER_SUPPLY": "uint256",
+                    "totalPartnerSupply": "uint256",
+                    "MAX_FUNDING_SUPPLY": "uint256",
+                    "rate": "uint256",
+                    "totalFundingSupply": "uint256",
+                    "TEAM_KEEPING": "uint256",
+                    "ONE_YEAR_KEEPING": "uint256",
+                    "TWO_YEAR_KEEPING": "uint256",
+                    "THREE_YEAR_KEEPING": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "lockRate": "uint256"
+                }
+            },
+            "setRate(uint256)": {
+                "argument": {
+                    "_rate": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "version": "string",
+                    "decimals": "uint256",
+                    "MAX_SUPPLY": "uint256",
+                    "PARTNER_SUPPLY": "uint256",
+                    "totalPartnerSupply": "uint256",
+                    "MAX_FUNDING_SUPPLY": "uint256",
+                    "rate": "uint256",
+                    "totalFundingSupply": "uint256",
+                    "TEAM_KEEPING": "uint256",
+                    "ONE_YEAR_KEEPING": "uint256",
+                    "TWO_YEAR_KEEPING": "uint256",
+                    "THREE_YEAR_KEEPING": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "lockRate": "uint256"
+                }
+            },
+            "setLockRate(uint256)": {
+                "argument": {
+                    "_lockRate": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "version": "string",
+                    "decimals": "uint256",
+                    "MAX_SUPPLY": "uint256",
+                    "PARTNER_SUPPLY": "uint256",
+                    "totalPartnerSupply": "uint256",
+                    "MAX_FUNDING_SUPPLY": "uint256",
+                    "rate": "uint256",
+                    "totalFundingSupply": "uint256",
+                    "TEAM_KEEPING": "uint256",
+                    "ONE_YEAR_KEEPING": "uint256",
+                    "TWO_YEAR_KEEPING": "uint256",
+                    "THREE_YEAR_KEEPING": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "lockRate": "uint256"
+                }
+            },
+            "setupFundingInfo(uint256,uint256)": {
+                "argument": {
+                    "_startBlock": "uint256",
+                    "_endBlock": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "version": "string",
+                    "decimals": "uint256",
+                    "MAX_SUPPLY": "uint256",
+                    "PARTNER_SUPPLY": "uint256",
+                    "totalPartnerSupply": "uint256",
+                    "MAX_FUNDING_SUPPLY": "uint256",
+                    "rate": "uint256",
+                    "totalFundingSupply": "uint256",
+                    "TEAM_KEEPING": "uint256",
+                    "ONE_YEAR_KEEPING": "uint256",
+                    "TWO_YEAR_KEEPING": "uint256",
+                    "THREE_YEAR_KEEPING": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "lockRate": "uint256"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "version": "string",
+                    "decimals": "uint256",
+                    "MAX_SUPPLY": "uint256",
+                    "PARTNER_SUPPLY": "uint256",
+                    "totalPartnerSupply": "uint256",
+                    "MAX_FUNDING_SUPPLY": "uint256",
+                    "rate": "uint256",
+                    "totalFundingSupply": "uint256",
+                    "TEAM_KEEPING": "uint256",
+                    "ONE_YEAR_KEEPING": "uint256",
+                    "TWO_YEAR_KEEPING": "uint256",
+                    "THREE_YEAR_KEEPING": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "lockRate": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "setRate(uint256)": [
+                1661,
+                383
+            ],
+            "allowance(address,address)": [
+                3001,
+                867
+            ],
+            "withdrawForTwoYear()": [
+                2978,
+                845
+            ],
+            "transferFrom(address,address,uint256)": [
+                1352,
+                273
+            ],
+            "approve(address,uint256)": [
+                1009,
+                119
+            ],
+            "withdrawToTeam()": [
+                3242,
+                933
+            ],
+            "etherProceeds()": [
+                2339,
+                625
+            ],
+            "setSymbol(string)": [
+                2876,
+                801
+            ],
+            "withdrawForThreeYear()": [
+                1200,
+                185
+            ],
+            "setLockRate(uint256)": [
+                2640,
+                713
+            ],
+            "balanceOf(address)": [
+                2122,
+                559
+            ],
+            "transferOwnership(address)": [
+                3120,
+                889
+            ],
+            "withdrawToPartner(address,uint256)": [
+                2045,
+                537
+            ],
+            "setupFundingInfo(uint256,uint256)": [
+                3187,
+                911
+            ],
+            "withdrawForOneYear()": [
+                2022,
+                515
+            ],
+            "transfer(address,uint256)": [
+                2732,
+                757
+            ]
+        },
+        "block_CALL_mapping": {
+            "block6196": [
+                "msg.sender.send(this.balance)"
+            ],
+            "jump6196": [
+                "msg.sender.send(this.balance)",
+                "msg.sender.send(this.balance)"
+            ]
+        }
+    }
+}

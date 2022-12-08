@@ -1,0 +1,122 @@
+{
+    "token": {
+        "function_list": [
+            "transfer(address,uint256)"
+        ],
+        "initial_state": {
+            "transfer(address,uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transfer(address,uint256)": [
+                68,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Crowdsale": {
+        "function_list": [
+            "fallback()",
+            "closeCrowdsale(bool)",
+            "getUnsoldTokensVal(uint256)",
+            "checkAdmin()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "amountRaised": "uint256",
+                    "tokensCounter": "uint256",
+                    "tokensForSending": "uint256",
+                    "price": "uint256"
+                }
+            },
+            "closeCrowdsale(bool)": {
+                "argument": {},
+                "contract": {
+                    "amountRaised": "uint256",
+                    "tokensCounter": "uint256",
+                    "tokensForSending": "uint256",
+                    "price": "uint256"
+                }
+            },
+            "getUnsoldTokensVal(uint256)": {
+                "argument": {
+                    "val_": "uint256"
+                },
+                "contract": {
+                    "amountRaised": "uint256",
+                    "tokensCounter": "uint256",
+                    "tokensForSending": "uint256",
+                    "price": "uint256"
+                }
+            },
+            "checkAdmin()": {
+                "argument": {},
+                "contract": {
+                    "amountRaised": "uint256",
+                    "tokensCounter": "uint256",
+                    "tokensForSending": "uint256",
+                    "price": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "closeCrowdsale(bool)": [
+                1452,
+                273
+            ],
+            "checkAdmin()": [
+                1382,
+                229
+            ],
+            "getUnsoldTokensVal(uint256)": [
+                947,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "block535": [
+                "tokenReward.transfer(msg.sender, tokensForSending)"
+            ],
+            "block1863": [
+                "tokenReward.transfer(beneficiary, val_)"
+            ],
+            "jump535": [
+                "tokenReward.transfer(msg.sender, tokensForSending)",
+                "tokenReward.transfer(msg.sender, tokensForSending)"
+            ],
+            "block535_0": [
+                "tokenReward.transfer(msg.sender, tokensForSending)"
+            ],
+            "jump535_0": [
+                "tokenReward.transfer(msg.sender, tokensForSending)",
+                "tokenReward.transfer(msg.sender, tokensForSending)"
+            ],
+            "block555_0": [
+                "beneficiary.send(amount)"
+            ],
+            "block555": [
+                "beneficiary.send(amount)"
+            ],
+            "jump555": [
+                "beneficiary.send(amount)",
+                "beneficiary.send(amount)"
+            ],
+            "jump1863": [
+                "tokenReward.transfer(beneficiary, val_)",
+                "tokenReward.transfer(beneficiary, val_)"
+            ],
+            "jump555_0": [
+                "beneficiary.send(amount)",
+                "beneficiary.send(amount)"
+            ]
+        }
+    }
+}

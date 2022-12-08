@@ -1,0 +1,819 @@
+{
+    "E4RowEscrow": {
+        "function_list": [
+            "E4RowEscrow()",
+            "applySettings(E4RowEscrow.SettingStateValue,uint256,uint256,uint256,uint256,uint256,uint256)",
+            "ArbTokFromHGame(uint256)",
+            "HaraKiri()",
+            "fallback()",
+            "blackHole()",
+            "validPlayer(uint256,address)",
+            "validArb(address,uint256)",
+            "validArb2(address)",
+            "arbLocked(address)",
+            "activeGame(uint256)",
+            "registerArbiter(uint256,uint256,uint256,uint256,uint256)",
+            "startGame(uint256,int256,address[])",
+            "abortGame(uint256,E4RowEscrow.EndReason)",
+            "winnerDecided(uint256,address,uint256)",
+            "handleBet(uint256)",
+            "arbTokenExists(uint256)",
+            "getArbInfo(uint256)",
+            "houseKeep(int256,uint256)",
+            "getGameInfo(uint256)",
+            "checkHGame(uint256)",
+            "getOpGas()",
+            "setOpGas(uint256,uint256)",
+            "setArbiterLocked(address,bool)",
+            "flushHouseFees()",
+            "withdrawArbFunds()",
+            "setTokenPartner(address)",
+            "changeOwner(address)",
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "E4RowEscrow()": {
+                "argument": {},
+                "contract": {
+                    "MAX_PLAYERS": "uint256",
+                    "numArbiters": "uint256",
+                    "numGamesCompleted": "uint256",
+                    "numGamesCanceled": "uint256",
+                    "numGamesTimedOut": "uint256",
+                    "houseFeeHoldover": "uint256",
+                    "lastPayoutTime": "uint256",
+                    "gameTimeOut": "uint256",
+                    "registrationFee": "uint256",
+                    "houseFeeThreshold": "uint256",
+                    "payoutInterval": "uint256",
+                    "acctCallGas": "uint256",
+                    "tokCallGas": "uint256",
+                    "startGameGas": "uint256",
+                    "winnerDecidedGas": "uint256"
+                }
+            },
+            "applySettings(E4RowEscrow.SettingStateValue,uint256,uint256,uint256,uint256,uint256,uint256)": {
+                "argument": {
+                    "_fee": "uint256",
+                    "_threshold": "uint256",
+                    "_timeout": "uint256",
+                    "_interval": "uint256",
+                    "_startGameGas": "uint256",
+                    "_winnerDecidedGas": "uint256"
+                },
+                "contract": {
+                    "MAX_PLAYERS": "uint256",
+                    "numArbiters": "uint256",
+                    "numGamesCompleted": "uint256",
+                    "numGamesCanceled": "uint256",
+                    "numGamesTimedOut": "uint256",
+                    "houseFeeHoldover": "uint256",
+                    "lastPayoutTime": "uint256",
+                    "gameTimeOut": "uint256",
+                    "registrationFee": "uint256",
+                    "houseFeeThreshold": "uint256",
+                    "payoutInterval": "uint256",
+                    "acctCallGas": "uint256",
+                    "tokCallGas": "uint256",
+                    "startGameGas": "uint256",
+                    "winnerDecidedGas": "uint256"
+                }
+            },
+            "ArbTokFromHGame(uint256)": {
+                "argument": {
+                    "_hGame": "uint256"
+                },
+                "contract": {
+                    "MAX_PLAYERS": "uint256",
+                    "numArbiters": "uint256",
+                    "numGamesCompleted": "uint256",
+                    "numGamesCanceled": "uint256",
+                    "numGamesTimedOut": "uint256",
+                    "houseFeeHoldover": "uint256",
+                    "lastPayoutTime": "uint256",
+                    "gameTimeOut": "uint256",
+                    "registrationFee": "uint256",
+                    "houseFeeThreshold": "uint256",
+                    "payoutInterval": "uint256",
+                    "acctCallGas": "uint256",
+                    "tokCallGas": "uint256",
+                    "startGameGas": "uint256",
+                    "winnerDecidedGas": "uint256"
+                }
+            },
+            "HaraKiri()": {
+                "argument": {},
+                "contract": {
+                    "MAX_PLAYERS": "uint256",
+                    "numArbiters": "uint256",
+                    "numGamesCompleted": "uint256",
+                    "numGamesCanceled": "uint256",
+                    "numGamesTimedOut": "uint256",
+                    "houseFeeHoldover": "uint256",
+                    "lastPayoutTime": "uint256",
+                    "gameTimeOut": "uint256",
+                    "registrationFee": "uint256",
+                    "houseFeeThreshold": "uint256",
+                    "payoutInterval": "uint256",
+                    "acctCallGas": "uint256",
+                    "tokCallGas": "uint256",
+                    "startGameGas": "uint256",
+                    "winnerDecidedGas": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "MAX_PLAYERS": "uint256",
+                    "numArbiters": "uint256",
+                    "numGamesCompleted": "uint256",
+                    "numGamesCanceled": "uint256",
+                    "numGamesTimedOut": "uint256",
+                    "houseFeeHoldover": "uint256",
+                    "lastPayoutTime": "uint256",
+                    "gameTimeOut": "uint256",
+                    "registrationFee": "uint256",
+                    "houseFeeThreshold": "uint256",
+                    "payoutInterval": "uint256",
+                    "acctCallGas": "uint256",
+                    "tokCallGas": "uint256",
+                    "startGameGas": "uint256",
+                    "winnerDecidedGas": "uint256"
+                }
+            },
+            "blackHole()": {
+                "argument": {},
+                "contract": {
+                    "MAX_PLAYERS": "uint256",
+                    "numArbiters": "uint256",
+                    "numGamesCompleted": "uint256",
+                    "numGamesCanceled": "uint256",
+                    "numGamesTimedOut": "uint256",
+                    "houseFeeHoldover": "uint256",
+                    "lastPayoutTime": "uint256",
+                    "gameTimeOut": "uint256",
+                    "registrationFee": "uint256",
+                    "houseFeeThreshold": "uint256",
+                    "payoutInterval": "uint256",
+                    "acctCallGas": "uint256",
+                    "tokCallGas": "uint256",
+                    "startGameGas": "uint256",
+                    "winnerDecidedGas": "uint256"
+                }
+            },
+            "validPlayer(uint256,address)": {
+                "argument": {
+                    "_hGame": "uint256"
+                },
+                "contract": {
+                    "MAX_PLAYERS": "uint256",
+                    "numArbiters": "uint256",
+                    "numGamesCompleted": "uint256",
+                    "numGamesCanceled": "uint256",
+                    "numGamesTimedOut": "uint256",
+                    "houseFeeHoldover": "uint256",
+                    "lastPayoutTime": "uint256",
+                    "gameTimeOut": "uint256",
+                    "registrationFee": "uint256",
+                    "houseFeeThreshold": "uint256",
+                    "payoutInterval": "uint256",
+                    "acctCallGas": "uint256",
+                    "tokCallGas": "uint256",
+                    "startGameGas": "uint256",
+                    "winnerDecidedGas": "uint256"
+                }
+            },
+            "validArb(address,uint256)": {
+                "argument": {
+                    "_tok": "uint256"
+                },
+                "contract": {
+                    "MAX_PLAYERS": "uint256",
+                    "numArbiters": "uint256",
+                    "numGamesCompleted": "uint256",
+                    "numGamesCanceled": "uint256",
+                    "numGamesTimedOut": "uint256",
+                    "houseFeeHoldover": "uint256",
+                    "lastPayoutTime": "uint256",
+                    "gameTimeOut": "uint256",
+                    "registrationFee": "uint256",
+                    "houseFeeThreshold": "uint256",
+                    "payoutInterval": "uint256",
+                    "acctCallGas": "uint256",
+                    "tokCallGas": "uint256",
+                    "startGameGas": "uint256",
+                    "winnerDecidedGas": "uint256"
+                }
+            },
+            "validArb2(address)": {
+                "argument": {},
+                "contract": {
+                    "MAX_PLAYERS": "uint256",
+                    "numArbiters": "uint256",
+                    "numGamesCompleted": "uint256",
+                    "numGamesCanceled": "uint256",
+                    "numGamesTimedOut": "uint256",
+                    "houseFeeHoldover": "uint256",
+                    "lastPayoutTime": "uint256",
+                    "gameTimeOut": "uint256",
+                    "registrationFee": "uint256",
+                    "houseFeeThreshold": "uint256",
+                    "payoutInterval": "uint256",
+                    "acctCallGas": "uint256",
+                    "tokCallGas": "uint256",
+                    "startGameGas": "uint256",
+                    "winnerDecidedGas": "uint256"
+                }
+            },
+            "arbLocked(address)": {
+                "argument": {},
+                "contract": {
+                    "MAX_PLAYERS": "uint256",
+                    "numArbiters": "uint256",
+                    "numGamesCompleted": "uint256",
+                    "numGamesCanceled": "uint256",
+                    "numGamesTimedOut": "uint256",
+                    "houseFeeHoldover": "uint256",
+                    "lastPayoutTime": "uint256",
+                    "gameTimeOut": "uint256",
+                    "registrationFee": "uint256",
+                    "houseFeeThreshold": "uint256",
+                    "payoutInterval": "uint256",
+                    "acctCallGas": "uint256",
+                    "tokCallGas": "uint256",
+                    "startGameGas": "uint256",
+                    "winnerDecidedGas": "uint256"
+                }
+            },
+            "activeGame(uint256)": {
+                "argument": {
+                    "_hGame": "uint256"
+                },
+                "contract": {
+                    "MAX_PLAYERS": "uint256",
+                    "numArbiters": "uint256",
+                    "numGamesCompleted": "uint256",
+                    "numGamesCanceled": "uint256",
+                    "numGamesTimedOut": "uint256",
+                    "houseFeeHoldover": "uint256",
+                    "lastPayoutTime": "uint256",
+                    "gameTimeOut": "uint256",
+                    "registrationFee": "uint256",
+                    "houseFeeThreshold": "uint256",
+                    "payoutInterval": "uint256",
+                    "acctCallGas": "uint256",
+                    "tokCallGas": "uint256",
+                    "startGameGas": "uint256",
+                    "winnerDecidedGas": "uint256"
+                }
+            },
+            "registerArbiter(uint256,uint256,uint256,uint256,uint256)": {
+                "argument": {
+                    "_numPlayers": "uint256",
+                    "_arbToken": "uint256",
+                    "_escFeePctX10": "uint256",
+                    "_arbFeePctX10": "uint256",
+                    "_feeCap": "uint256"
+                },
+                "contract": {
+                    "MAX_PLAYERS": "uint256",
+                    "numArbiters": "uint256",
+                    "numGamesCompleted": "uint256",
+                    "numGamesCanceled": "uint256",
+                    "numGamesTimedOut": "uint256",
+                    "houseFeeHoldover": "uint256",
+                    "lastPayoutTime": "uint256",
+                    "gameTimeOut": "uint256",
+                    "registrationFee": "uint256",
+                    "houseFeeThreshold": "uint256",
+                    "payoutInterval": "uint256",
+                    "acctCallGas": "uint256",
+                    "tokCallGas": "uint256",
+                    "startGameGas": "uint256",
+                    "winnerDecidedGas": "uint256"
+                }
+            },
+            "startGame(uint256,int256,address[])": {
+                "argument": {
+                    "_hGame": "uint256",
+                    "_players": "address[]"
+                },
+                "contract": {
+                    "MAX_PLAYERS": "uint256",
+                    "numArbiters": "uint256",
+                    "numGamesCompleted": "uint256",
+                    "numGamesCanceled": "uint256",
+                    "numGamesTimedOut": "uint256",
+                    "houseFeeHoldover": "uint256",
+                    "lastPayoutTime": "uint256",
+                    "gameTimeOut": "uint256",
+                    "registrationFee": "uint256",
+                    "houseFeeThreshold": "uint256",
+                    "payoutInterval": "uint256",
+                    "acctCallGas": "uint256",
+                    "tokCallGas": "uint256",
+                    "startGameGas": "uint256",
+                    "winnerDecidedGas": "uint256"
+                }
+            },
+            "abortGame(uint256,E4RowEscrow.EndReason)": {
+                "argument": {
+                    "_hGame": "uint256"
+                },
+                "contract": {
+                    "MAX_PLAYERS": "uint256",
+                    "numArbiters": "uint256",
+                    "numGamesCompleted": "uint256",
+                    "numGamesCanceled": "uint256",
+                    "numGamesTimedOut": "uint256",
+                    "houseFeeHoldover": "uint256",
+                    "lastPayoutTime": "uint256",
+                    "gameTimeOut": "uint256",
+                    "registrationFee": "uint256",
+                    "houseFeeThreshold": "uint256",
+                    "payoutInterval": "uint256",
+                    "acctCallGas": "uint256",
+                    "tokCallGas": "uint256",
+                    "startGameGas": "uint256",
+                    "winnerDecidedGas": "uint256"
+                }
+            },
+            "winnerDecided(uint256,address,uint256)": {
+                "argument": {
+                    "_hGame": "uint256",
+                    "_winnerBal": "uint256"
+                },
+                "contract": {
+                    "MAX_PLAYERS": "uint256",
+                    "numArbiters": "uint256",
+                    "numGamesCompleted": "uint256",
+                    "numGamesCanceled": "uint256",
+                    "numGamesTimedOut": "uint256",
+                    "houseFeeHoldover": "uint256",
+                    "lastPayoutTime": "uint256",
+                    "gameTimeOut": "uint256",
+                    "registrationFee": "uint256",
+                    "houseFeeThreshold": "uint256",
+                    "payoutInterval": "uint256",
+                    "acctCallGas": "uint256",
+                    "tokCallGas": "uint256",
+                    "startGameGas": "uint256",
+                    "winnerDecidedGas": "uint256"
+                }
+            },
+            "handleBet(uint256)": {
+                "argument": {
+                    "_hGame": "uint256"
+                },
+                "contract": {
+                    "MAX_PLAYERS": "uint256",
+                    "numArbiters": "uint256",
+                    "numGamesCompleted": "uint256",
+                    "numGamesCanceled": "uint256",
+                    "numGamesTimedOut": "uint256",
+                    "houseFeeHoldover": "uint256",
+                    "lastPayoutTime": "uint256",
+                    "gameTimeOut": "uint256",
+                    "registrationFee": "uint256",
+                    "houseFeeThreshold": "uint256",
+                    "payoutInterval": "uint256",
+                    "acctCallGas": "uint256",
+                    "tokCallGas": "uint256",
+                    "startGameGas": "uint256",
+                    "winnerDecidedGas": "uint256"
+                }
+            },
+            "arbTokenExists(uint256)": {
+                "argument": {
+                    "_tok": "uint256"
+                },
+                "contract": {
+                    "MAX_PLAYERS": "uint256",
+                    "numArbiters": "uint256",
+                    "numGamesCompleted": "uint256",
+                    "numGamesCanceled": "uint256",
+                    "numGamesTimedOut": "uint256",
+                    "houseFeeHoldover": "uint256",
+                    "lastPayoutTime": "uint256",
+                    "gameTimeOut": "uint256",
+                    "registrationFee": "uint256",
+                    "houseFeeThreshold": "uint256",
+                    "payoutInterval": "uint256",
+                    "acctCallGas": "uint256",
+                    "tokCallGas": "uint256",
+                    "startGameGas": "uint256",
+                    "winnerDecidedGas": "uint256"
+                }
+            },
+            "getArbInfo(uint256)": {
+                "argument": {
+                    "_tok": "uint256"
+                },
+                "contract": {
+                    "MAX_PLAYERS": "uint256",
+                    "numArbiters": "uint256",
+                    "numGamesCompleted": "uint256",
+                    "numGamesCanceled": "uint256",
+                    "numGamesTimedOut": "uint256",
+                    "houseFeeHoldover": "uint256",
+                    "lastPayoutTime": "uint256",
+                    "gameTimeOut": "uint256",
+                    "registrationFee": "uint256",
+                    "houseFeeThreshold": "uint256",
+                    "payoutInterval": "uint256",
+                    "acctCallGas": "uint256",
+                    "tokCallGas": "uint256",
+                    "startGameGas": "uint256",
+                    "winnerDecidedGas": "uint256"
+                }
+            },
+            "houseKeep(int256,uint256)": {
+                "argument": {
+                    "_arbToken": "uint256"
+                },
+                "contract": {
+                    "MAX_PLAYERS": "uint256",
+                    "numArbiters": "uint256",
+                    "numGamesCompleted": "uint256",
+                    "numGamesCanceled": "uint256",
+                    "numGamesTimedOut": "uint256",
+                    "houseFeeHoldover": "uint256",
+                    "lastPayoutTime": "uint256",
+                    "gameTimeOut": "uint256",
+                    "registrationFee": "uint256",
+                    "houseFeeThreshold": "uint256",
+                    "payoutInterval": "uint256",
+                    "acctCallGas": "uint256",
+                    "tokCallGas": "uint256",
+                    "startGameGas": "uint256",
+                    "winnerDecidedGas": "uint256"
+                }
+            },
+            "getGameInfo(uint256)": {
+                "argument": {
+                    "_hGame": "uint256"
+                },
+                "contract": {
+                    "MAX_PLAYERS": "uint256",
+                    "numArbiters": "uint256",
+                    "numGamesCompleted": "uint256",
+                    "numGamesCanceled": "uint256",
+                    "numGamesTimedOut": "uint256",
+                    "houseFeeHoldover": "uint256",
+                    "lastPayoutTime": "uint256",
+                    "gameTimeOut": "uint256",
+                    "registrationFee": "uint256",
+                    "houseFeeThreshold": "uint256",
+                    "payoutInterval": "uint256",
+                    "acctCallGas": "uint256",
+                    "tokCallGas": "uint256",
+                    "startGameGas": "uint256",
+                    "winnerDecidedGas": "uint256"
+                }
+            },
+            "checkHGame(uint256)": {
+                "argument": {
+                    "_hGame": "uint256"
+                },
+                "contract": {
+                    "MAX_PLAYERS": "uint256",
+                    "numArbiters": "uint256",
+                    "numGamesCompleted": "uint256",
+                    "numGamesCanceled": "uint256",
+                    "numGamesTimedOut": "uint256",
+                    "houseFeeHoldover": "uint256",
+                    "lastPayoutTime": "uint256",
+                    "gameTimeOut": "uint256",
+                    "registrationFee": "uint256",
+                    "houseFeeThreshold": "uint256",
+                    "payoutInterval": "uint256",
+                    "acctCallGas": "uint256",
+                    "tokCallGas": "uint256",
+                    "startGameGas": "uint256",
+                    "winnerDecidedGas": "uint256"
+                }
+            },
+            "getOpGas()": {
+                "argument": {},
+                "contract": {
+                    "MAX_PLAYERS": "uint256",
+                    "numArbiters": "uint256",
+                    "numGamesCompleted": "uint256",
+                    "numGamesCanceled": "uint256",
+                    "numGamesTimedOut": "uint256",
+                    "houseFeeHoldover": "uint256",
+                    "lastPayoutTime": "uint256",
+                    "gameTimeOut": "uint256",
+                    "registrationFee": "uint256",
+                    "houseFeeThreshold": "uint256",
+                    "payoutInterval": "uint256",
+                    "acctCallGas": "uint256",
+                    "tokCallGas": "uint256",
+                    "startGameGas": "uint256",
+                    "winnerDecidedGas": "uint256"
+                }
+            },
+            "setOpGas(uint256,uint256)": {
+                "argument": {
+                    "_ag": "uint256",
+                    "_tg": "uint256"
+                },
+                "contract": {
+                    "MAX_PLAYERS": "uint256",
+                    "numArbiters": "uint256",
+                    "numGamesCompleted": "uint256",
+                    "numGamesCanceled": "uint256",
+                    "numGamesTimedOut": "uint256",
+                    "houseFeeHoldover": "uint256",
+                    "lastPayoutTime": "uint256",
+                    "gameTimeOut": "uint256",
+                    "registrationFee": "uint256",
+                    "houseFeeThreshold": "uint256",
+                    "payoutInterval": "uint256",
+                    "acctCallGas": "uint256",
+                    "tokCallGas": "uint256",
+                    "startGameGas": "uint256",
+                    "winnerDecidedGas": "uint256"
+                }
+            },
+            "setArbiterLocked(address,bool)": {
+                "argument": {},
+                "contract": {
+                    "MAX_PLAYERS": "uint256",
+                    "numArbiters": "uint256",
+                    "numGamesCompleted": "uint256",
+                    "numGamesCanceled": "uint256",
+                    "numGamesTimedOut": "uint256",
+                    "houseFeeHoldover": "uint256",
+                    "lastPayoutTime": "uint256",
+                    "gameTimeOut": "uint256",
+                    "registrationFee": "uint256",
+                    "houseFeeThreshold": "uint256",
+                    "payoutInterval": "uint256",
+                    "acctCallGas": "uint256",
+                    "tokCallGas": "uint256",
+                    "startGameGas": "uint256",
+                    "winnerDecidedGas": "uint256"
+                }
+            },
+            "flushHouseFees()": {
+                "argument": {},
+                "contract": {
+                    "MAX_PLAYERS": "uint256",
+                    "numArbiters": "uint256",
+                    "numGamesCompleted": "uint256",
+                    "numGamesCanceled": "uint256",
+                    "numGamesTimedOut": "uint256",
+                    "houseFeeHoldover": "uint256",
+                    "lastPayoutTime": "uint256",
+                    "gameTimeOut": "uint256",
+                    "registrationFee": "uint256",
+                    "houseFeeThreshold": "uint256",
+                    "payoutInterval": "uint256",
+                    "acctCallGas": "uint256",
+                    "tokCallGas": "uint256",
+                    "startGameGas": "uint256",
+                    "winnerDecidedGas": "uint256"
+                }
+            },
+            "withdrawArbFunds()": {
+                "argument": {},
+                "contract": {
+                    "MAX_PLAYERS": "uint256",
+                    "numArbiters": "uint256",
+                    "numGamesCompleted": "uint256",
+                    "numGamesCanceled": "uint256",
+                    "numGamesTimedOut": "uint256",
+                    "houseFeeHoldover": "uint256",
+                    "lastPayoutTime": "uint256",
+                    "gameTimeOut": "uint256",
+                    "registrationFee": "uint256",
+                    "houseFeeThreshold": "uint256",
+                    "payoutInterval": "uint256",
+                    "acctCallGas": "uint256",
+                    "tokCallGas": "uint256",
+                    "startGameGas": "uint256",
+                    "winnerDecidedGas": "uint256"
+                }
+            },
+            "setTokenPartner(address)": {
+                "argument": {},
+                "contract": {
+                    "MAX_PLAYERS": "uint256",
+                    "numArbiters": "uint256",
+                    "numGamesCompleted": "uint256",
+                    "numGamesCanceled": "uint256",
+                    "numGamesTimedOut": "uint256",
+                    "houseFeeHoldover": "uint256",
+                    "lastPayoutTime": "uint256",
+                    "gameTimeOut": "uint256",
+                    "registrationFee": "uint256",
+                    "houseFeeThreshold": "uint256",
+                    "payoutInterval": "uint256",
+                    "acctCallGas": "uint256",
+                    "tokCallGas": "uint256",
+                    "startGameGas": "uint256",
+                    "winnerDecidedGas": "uint256"
+                }
+            },
+            "changeOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "MAX_PLAYERS": "uint256",
+                    "numArbiters": "uint256",
+                    "numGamesCompleted": "uint256",
+                    "numGamesCanceled": "uint256",
+                    "numGamesTimedOut": "uint256",
+                    "houseFeeHoldover": "uint256",
+                    "lastPayoutTime": "uint256",
+                    "gameTimeOut": "uint256",
+                    "registrationFee": "uint256",
+                    "houseFeeThreshold": "uint256",
+                    "payoutInterval": "uint256",
+                    "acctCallGas": "uint256",
+                    "tokCallGas": "uint256",
+                    "startGameGas": "uint256",
+                    "winnerDecidedGas": "uint256"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "MAX_PLAYERS": "uint256",
+                    "numArbiters": "uint256",
+                    "numGamesCompleted": "uint256",
+                    "numGamesCanceled": "uint256",
+                    "numGamesTimedOut": "uint256",
+                    "houseFeeHoldover": "uint256",
+                    "lastPayoutTime": "uint256",
+                    "gameTimeOut": "uint256",
+                    "registrationFee": "uint256",
+                    "houseFeeThreshold": "uint256",
+                    "payoutInterval": "uint256",
+                    "acctCallGas": "uint256",
+                    "tokCallGas": "uint256",
+                    "startGameGas": "uint256",
+                    "winnerDecidedGas": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "setTokenPartner(address)": [
+                1396,
+                383
+            ],
+            "setOpGas(uint256,uint256)": [
+                1549,
+                449
+            ],
+            "withdrawArbFunds()": [
+                902,
+                207
+            ],
+            "getGameInfo(uint256)": [
+                798,
+                185
+            ],
+            "ArbTokFromHGame(uint256)": [
+                733,
+                163
+            ],
+            "arbTokenExists(uint256)": [
+                2536,
+                801
+            ],
+            "handleBet(uint256)": [
+                925,
+                229
+            ],
+            "winnerDecided(uint256,address,uint256)": [
+                1237,
+                339
+            ],
+            "blackHole()": [
+                2098,
+                625
+            ],
+            "getArbInfo(uint256)": [
+                1000,
+                273
+            ],
+            "changeOwner(address)": [
+                2108,
+                647
+            ],
+            "startGame(uint256,int256,address[])": [
+                2218,
+                691
+            ],
+            "HaraKiri()": [
+                2605,
+                823
+            ],
+            "checkHGame(uint256)": [
+                2026,
+                603
+            ],
+            "flushHouseFees()": [
+                2383,
+                735
+            ],
+            "getOpGas()": [
+                1976,
+                581
+            ],
+            "registerArbiter(uint256,uint256,uint256,uint256,uint256)": [
+                1324,
+                361
+            ],
+            "setArbiterLocked(address,bool)": [
+                1604,
+                471
+            ],
+            "houseKeep(int256,uint256)": [
+                1770,
+                515
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump11469": [
+                "tokenPartner.call.gas(tokCallGas).value(ntmpho)()",
+                "tokenPartner.call.gas(tokCallGas).value(ntmpho)()"
+            ],
+            "block13260_4": [
+                "a.call.gas(acctCallGas).value(nsend)()"
+            ],
+            "block13260_0": [
+                "a.call.gas(acctCallGas).value(nsend)()"
+            ],
+            "block13260_1": [
+                "a.call.gas(acctCallGas).value(nsend)()"
+            ],
+            "block13260_2": [
+                "a.call.gas(acctCallGas).value(nsend)()"
+            ],
+            "block13260_3": [
+                "a.call.gas(acctCallGas).value(nsend)()"
+            ],
+            "jump5773": [
+                "_winner.call.gas(acctCallGas).value(uint(_payout))()",
+                "_winner.call.gas(acctCallGas).value(uint(_payout))()"
+            ],
+            "block3197": [
+                "msg.sender.call.gas(acctCallGas).value(_amount)()"
+            ],
+            "jump13260": [
+                "a.call.gas(acctCallGas).value(nsend)()",
+                "a.call.gas(acctCallGas).value(nsend)()"
+            ],
+            "jump7118": [
+                "tokenPartner.call.gas(tokCallGas).value(msg.value)()",
+                "tokenPartner.call.gas(tokCallGas).value(msg.value)()"
+            ],
+            "block11469": [
+                "tokenPartner.call.gas(tokCallGas).value(ntmpho)()"
+            ],
+            "jump5543": [
+                "tokenPartner.call.gas(tokCallGas).value(ntmpho)()",
+                "tokenPartner.call.gas(tokCallGas).value(ntmpho)()"
+            ],
+            "block13260": [
+                "a.call.gas(acctCallGas).value(nsend)()"
+            ],
+            "jump13260_2": [
+                "a.call.gas(acctCallGas).value(nsend)()",
+                "a.call.gas(acctCallGas).value(nsend)()"
+            ],
+            "jump13260_3": [
+                "a.call.gas(acctCallGas).value(nsend)()",
+                "a.call.gas(acctCallGas).value(nsend)()"
+            ],
+            "jump13260_0": [
+                "a.call.gas(acctCallGas).value(nsend)()",
+                "a.call.gas(acctCallGas).value(nsend)()"
+            ],
+            "jump13260_1": [
+                "a.call.gas(acctCallGas).value(nsend)()",
+                "a.call.gas(acctCallGas).value(nsend)()"
+            ],
+            "jump13260_4": [
+                "a.call.gas(acctCallGas).value(nsend)()",
+                "a.call.gas(acctCallGas).value(nsend)()"
+            ],
+            "block5543": [
+                "tokenPartner.call.gas(tokCallGas).value(ntmpho)()"
+            ],
+            "block5773": [
+                "_winner.call.gas(acctCallGas).value(uint(_payout))()"
+            ],
+            "jump3197": [
+                "msg.sender.call.gas(acctCallGas).value(_amount)()",
+                "msg.sender.call.gas(acctCallGas).value(_amount)()"
+            ],
+            "block7118": [
+                "tokenPartner.call.gas(tokCallGas).value(msg.value)()"
+            ]
+        }
+    }
+}

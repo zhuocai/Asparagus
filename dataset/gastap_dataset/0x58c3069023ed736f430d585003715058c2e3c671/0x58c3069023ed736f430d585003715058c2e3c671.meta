@@ -1,0 +1,230 @@
+{
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "Ownable": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "KYC": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "KYC()",
+            "setAdmin(address,bool)",
+            "isRegistered(address,bool)",
+            "register(address,bool)",
+            "registerByList(address[],bool)",
+            "unregister(address,bool)",
+            "unregisterByList(address[],bool)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "KYC()": {
+                "argument": {},
+                "contract": {}
+            },
+            "setAdmin(address,bool)": {
+                "argument": {},
+                "contract": {}
+            },
+            "isRegistered(address,bool)": {
+                "argument": {},
+                "contract": {}
+            },
+            "register(address,bool)": {
+                "argument": {},
+                "contract": {}
+            },
+            "registerByList(address[],bool)": {
+                "argument": {
+                    "_addrs": "address[]"
+                },
+                "contract": {}
+            },
+            "unregister(address,bool)": {
+                "argument": {},
+                "contract": {}
+            },
+            "unregisterByList(address[],bool)": {
+                "argument": {
+                    "_addrs": "address[]"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "setAdmin(address,bool)": [
+                283,
+                97
+            ],
+            "unregisterByList(address[],bool)": [
+                386,
+                119
+            ],
+            "unregister(address,bool)": [
+                860,
+                229
+            ],
+            "register(address,bool)": [
+                678,
+                185
+            ],
+            "isRegistered(address,bool)": [
+                757,
+                207
+            ],
+            "registerByList(address[],bool)": [
+                169,
+                75
+            ],
+            "transferOwnership(address)": [
+                939,
+                251
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "BTCPayment": {
+        "function_list": [
+            "presaleFallBack(uint256)",
+            "Ownable()",
+            "transferOwnership(address)",
+            "addPayment(address,uint256)",
+            "setPresale(address)",
+            "setMainsale(address)",
+            "presaleFallBack(uint256)"
+        ],
+        "initial_state": {
+            "presaleFallBack(uint256)": {
+                "argument": {
+                    "": "uint256"
+                },
+                "contract": {}
+            },
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "addPayment(address,uint256)": {
+                "argument": {
+                    "_tokens": "uint256"
+                },
+                "contract": {}
+            },
+            "setPresale(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "setMainsale(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "presaleFallBack(uint256)": [
+                436,
+                163
+            ],
+            "setPresale(address)": [
+                505,
+                185
+            ],
+            "setMainsale(address)": [
+                205,
+                97
+            ],
+            "addPayment(address,uint256)": [
+                272,
+                119
+            ],
+            "transferOwnership(address)": [
+                572,
+                207
+            ]
+        },
+        "block_CALL_mapping": {
+            "block1620": [
+                "mainsale.paymentFallBack(_beneficiary, _tokens)"
+            ],
+            "jump1394": [
+                "presale.paymentFallBack(_beneficiary, _tokens)",
+                "presale.paymentFallBack(_beneficiary, _tokens)"
+            ],
+            "block1394": [
+                "presale.paymentFallBack(_beneficiary, _tokens)"
+            ],
+            "jump1620": [
+                "mainsale.paymentFallBack(_beneficiary, _tokens)",
+                "mainsale.paymentFallBack(_beneficiary, _tokens)"
+            ]
+        }
+    }
+}

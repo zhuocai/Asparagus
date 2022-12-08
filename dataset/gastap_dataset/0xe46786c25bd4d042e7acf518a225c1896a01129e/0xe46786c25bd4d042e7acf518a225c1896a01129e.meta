@@ -1,0 +1,54 @@
+{
+    "GiftEth": {
+        "function_list": [
+            "GiftEth(address,address,uint256,string)",
+            "withdraw()",
+            "changeRecipient(address)"
+        ],
+        "initial_state": {
+            "GiftEth(address,address,uint256,string)": {
+                "argument": {
+                    "_lockTs": "uint256",
+                    "_giftMessage": "string"
+                },
+                "contract": {
+                    "lockTs": "uint256",
+                    "giftMessage": "string"
+                }
+            },
+            "withdraw()": {
+                "argument": {},
+                "contract": {
+                    "lockTs": "uint256",
+                    "giftMessage": "string"
+                }
+            },
+            "changeRecipient(address)": {
+                "argument": {},
+                "contract": {
+                    "lockTs": "uint256",
+                    "giftMessage": "string"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "withdraw()": [
+                125,
+                75
+            ],
+            "changeRecipient(address)": [
+                322,
+                141
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump685": [
+                "msg.sender.transfer(this.balance)",
+                "msg.sender.transfer(this.balance)"
+            ],
+            "block685": [
+                "msg.sender.transfer(this.balance)"
+            ]
+        }
+    }
+}

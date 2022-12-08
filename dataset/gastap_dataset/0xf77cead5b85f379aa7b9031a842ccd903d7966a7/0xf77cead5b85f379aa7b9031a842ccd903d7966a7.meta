@@ -1,0 +1,934 @@
+{
+    "SafeMath": {
+        "function_list": [
+            "SafeMath()",
+            "safeAdd(uint256,uint256)",
+            "safeSub(uint256,uint256)",
+            "safeMul(uint256,uint256)"
+        ],
+        "initial_state": {
+            "SafeMath()": {
+                "argument": {},
+                "contract": {}
+            },
+            "safeAdd(uint256,uint256)": {
+                "argument": {
+                    "_x": "uint256",
+                    "_y": "uint256"
+                },
+                "contract": {}
+            },
+            "safeSub(uint256,uint256)": {
+                "argument": {
+                    "_x": "uint256",
+                    "_y": "uint256"
+                },
+                "contract": {}
+            },
+            "safeMul(uint256,uint256)": {
+                "argument": {
+                    "_x": "uint256",
+                    "_y": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "BancorFormula": {
+        "function_list": [
+            "SafeMath()",
+            "safeAdd(uint256,uint256)",
+            "safeSub(uint256,uint256)",
+            "safeMul(uint256,uint256)",
+            "BancorFormula()",
+            "calculatePurchaseReturn(uint256,uint256,uint8,uint256)",
+            "calculateSaleReturn(uint256,uint256,uint8,uint256)",
+            "calculateBestPrecision(uint256,uint256,uint256,uint256)",
+            "power(uint256,uint256,uint256,uint256,uint8)",
+            "ln(uint256,uint256,uint8)",
+            "lnUpperBound32(uint256,uint256)",
+            "fixedLoge(uint256,uint8)",
+            "fixedLog2(uint256,uint8)",
+            "floorLog2(uint256)",
+            "fixedExp(uint256,uint8)",
+            "fixedExpUnsafe(uint256,uint8)",
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "SafeMath()": {
+                "argument": {},
+                "contract": {
+                    "ONE": "uint256",
+                    "TWO": "uint256",
+                    "MAX_FIXED_EXP_32": "uint256",
+                    "version": "string"
+                }
+            },
+            "safeAdd(uint256,uint256)": {
+                "argument": {
+                    "_x": "uint256",
+                    "_y": "uint256"
+                },
+                "contract": {
+                    "ONE": "uint256",
+                    "TWO": "uint256",
+                    "MAX_FIXED_EXP_32": "uint256",
+                    "version": "string"
+                }
+            },
+            "safeSub(uint256,uint256)": {
+                "argument": {
+                    "_x": "uint256",
+                    "_y": "uint256"
+                },
+                "contract": {
+                    "ONE": "uint256",
+                    "TWO": "uint256",
+                    "MAX_FIXED_EXP_32": "uint256",
+                    "version": "string"
+                }
+            },
+            "safeMul(uint256,uint256)": {
+                "argument": {
+                    "_x": "uint256",
+                    "_y": "uint256"
+                },
+                "contract": {
+                    "ONE": "uint256",
+                    "TWO": "uint256",
+                    "MAX_FIXED_EXP_32": "uint256",
+                    "version": "string"
+                }
+            },
+            "BancorFormula()": {
+                "argument": {},
+                "contract": {
+                    "ONE": "uint256",
+                    "TWO": "uint256",
+                    "MAX_FIXED_EXP_32": "uint256",
+                    "version": "string"
+                }
+            },
+            "calculatePurchaseReturn(uint256,uint256,uint8,uint256)": {
+                "argument": {
+                    "_supply": "uint256",
+                    "_reserveBalance": "uint256",
+                    "_reserveRatio": "uint8",
+                    "_depositAmount": "uint256"
+                },
+                "contract": {
+                    "ONE": "uint256",
+                    "TWO": "uint256",
+                    "MAX_FIXED_EXP_32": "uint256",
+                    "version": "string"
+                }
+            },
+            "calculateSaleReturn(uint256,uint256,uint8,uint256)": {
+                "argument": {
+                    "_supply": "uint256",
+                    "_reserveBalance": "uint256",
+                    "_reserveRatio": "uint8",
+                    "_sellAmount": "uint256"
+                },
+                "contract": {
+                    "ONE": "uint256",
+                    "TWO": "uint256",
+                    "MAX_FIXED_EXP_32": "uint256",
+                    "version": "string"
+                }
+            },
+            "calculateBestPrecision(uint256,uint256,uint256,uint256)": {
+                "argument": {
+                    "_baseN": "uint256",
+                    "_baseD": "uint256",
+                    "_expN": "uint256",
+                    "_expD": "uint256"
+                },
+                "contract": {
+                    "ONE": "uint256",
+                    "TWO": "uint256",
+                    "MAX_FIXED_EXP_32": "uint256",
+                    "version": "string"
+                }
+            },
+            "power(uint256,uint256,uint256,uint256,uint8)": {
+                "argument": {
+                    "_baseN": "uint256",
+                    "_baseD": "uint256",
+                    "_expN": "uint256",
+                    "_expD": "uint256",
+                    "_precision": "uint8"
+                },
+                "contract": {
+                    "ONE": "uint256",
+                    "TWO": "uint256",
+                    "MAX_FIXED_EXP_32": "uint256",
+                    "version": "string"
+                }
+            },
+            "ln(uint256,uint256,uint8)": {
+                "argument": {
+                    "_numerator": "uint256",
+                    "_denominator": "uint256",
+                    "_precision": "uint8"
+                },
+                "contract": {
+                    "ONE": "uint256",
+                    "TWO": "uint256",
+                    "MAX_FIXED_EXP_32": "uint256",
+                    "version": "string"
+                }
+            },
+            "lnUpperBound32(uint256,uint256)": {
+                "argument": {
+                    "_baseN": "uint256",
+                    "_baseD": "uint256"
+                },
+                "contract": {
+                    "ONE": "uint256",
+                    "TWO": "uint256",
+                    "MAX_FIXED_EXP_32": "uint256",
+                    "version": "string"
+                }
+            },
+            "fixedLoge(uint256,uint8)": {
+                "argument": {
+                    "_x": "uint256",
+                    "_precision": "uint8"
+                },
+                "contract": {
+                    "ONE": "uint256",
+                    "TWO": "uint256",
+                    "MAX_FIXED_EXP_32": "uint256",
+                    "version": "string"
+                }
+            },
+            "fixedLog2(uint256,uint8)": {
+                "argument": {
+                    "_x": "uint256",
+                    "_precision": "uint8"
+                },
+                "contract": {
+                    "ONE": "uint256",
+                    "TWO": "uint256",
+                    "MAX_FIXED_EXP_32": "uint256",
+                    "version": "string"
+                }
+            },
+            "floorLog2(uint256)": {
+                "argument": {
+                    "_n": "uint256"
+                },
+                "contract": {
+                    "ONE": "uint256",
+                    "TWO": "uint256",
+                    "MAX_FIXED_EXP_32": "uint256",
+                    "version": "string"
+                }
+            },
+            "fixedExp(uint256,uint8)": {
+                "argument": {
+                    "_x": "uint256",
+                    "_precision": "uint8"
+                },
+                "contract": {
+                    "ONE": "uint256",
+                    "TWO": "uint256",
+                    "MAX_FIXED_EXP_32": "uint256",
+                    "version": "string"
+                }
+            },
+            "fixedExpUnsafe(uint256,uint8)": {
+                "argument": {
+                    "_x": "uint256",
+                    "_precision": "uint8"
+                },
+                "contract": {
+                    "ONE": "uint256",
+                    "TWO": "uint256",
+                    "MAX_FIXED_EXP_32": "uint256",
+                    "version": "string"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "ONE": "uint256",
+                    "TWO": "uint256",
+                    "MAX_FIXED_EXP_32": "uint256",
+                    "version": "string"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "ln(uint256,uint256,uint8)": [
+                191,
+                75
+            ],
+            "fixedLog2(uint256,uint8)": [
+                357,
+                119
+            ],
+            "calculatePurchaseReturn(uint256,uint256,uint8,uint256)": [
+                823,
+                229
+            ],
+            "power(uint256,uint256,uint256,uint256,uint8)": [
+                996,
+                273
+            ],
+            "fixedLoge(uint256,uint8)": [
+                536,
+                163
+            ],
+            "lnUpperBound32(uint256,uint256)": [
+                921,
+                251
+            ],
+            "fixedExp(uint256,uint8)": [
+                279,
+                97
+            ],
+            "floorLog2(uint256)": [
+                614,
+                185
+            ],
+            "fixedExpUnsafe(uint256,uint8)": [
+                1202,
+                317
+            ],
+            "calculateBestPrecision(uint256,uint256,uint256,uint256)": [
+                435,
+                141
+            ],
+            "calculateSaleReturn(uint256,uint256,uint8,uint256)": [
+                1104,
+                295
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "BasicERC20Token": {
+        "function_list": [
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "balanceOf(address)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "deposit()",
+            "withdraw(uint256)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256"
+                }
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256"
+                }
+            },
+            "deposit()": {
+                "argument": {},
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256"
+                }
+            },
+            "withdraw(uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                357,
+                97
+            ],
+            "deposit()": [
+                1434,
+                339
+            ],
+            "withdraw(uint256)": [
+                721,
+                185
+            ],
+            "transfer(address,uint256)": [
+                1333,
+                317
+            ],
+            "balanceOf(address)": [
+                1102,
+                273
+            ],
+            "transferFrom(address,address,uint256)": [
+                501,
+                141
+            ],
+            "allowance(address,address)": [
+                1468,
+                361
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump2735": [
+                "msg.sender.send(amount)",
+                "msg.sender.send(amount)"
+            ],
+            "block2735": [
+                "msg.sender.send(amount)"
+            ]
+        }
+    },
+    "DummyBancorToken": {
+        "function_list": [
+            "BancorFormula()",
+            "calculatePurchaseReturn(uint256,uint256,uint8,uint256)",
+            "calculateSaleReturn(uint256,uint256,uint8,uint256)",
+            "calculateBestPrecision(uint256,uint256,uint256,uint256)",
+            "power(uint256,uint256,uint256,uint256,uint8)",
+            "ln(uint256,uint256,uint8)",
+            "lnUpperBound32(uint256,uint256)",
+            "fixedLoge(uint256,uint8)",
+            "fixedLog2(uint256,uint8)",
+            "floorLog2(uint256)",
+            "fixedExp(uint256,uint8)",
+            "fixedExpUnsafe(uint256,uint8)",
+            "SafeMath()",
+            "safeAdd(uint256,uint256)",
+            "safeSub(uint256,uint256)",
+            "safeMul(uint256,uint256)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "balanceOf(address)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "deposit()",
+            "withdraw(uint256)",
+            "setUp(uint256)",
+            "tearDown()",
+            "reserveBalance()",
+            "deposit()",
+            "withdraw(uint256)",
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "BancorFormula()": {
+                "argument": {},
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "ratio": "uint8"
+                }
+            },
+            "calculatePurchaseReturn(uint256,uint256,uint8,uint256)": {
+                "argument": {
+                    "_supply": "uint256",
+                    "_reserveBalance": "uint256",
+                    "_reserveRatio": "uint8",
+                    "_depositAmount": "uint256"
+                },
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "ratio": "uint8"
+                }
+            },
+            "calculateSaleReturn(uint256,uint256,uint8,uint256)": {
+                "argument": {
+                    "_supply": "uint256",
+                    "_reserveBalance": "uint256",
+                    "_reserveRatio": "uint8",
+                    "_sellAmount": "uint256"
+                },
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "ratio": "uint8"
+                }
+            },
+            "calculateBestPrecision(uint256,uint256,uint256,uint256)": {
+                "argument": {
+                    "_baseN": "uint256",
+                    "_baseD": "uint256",
+                    "_expN": "uint256",
+                    "_expD": "uint256"
+                },
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "ratio": "uint8"
+                }
+            },
+            "power(uint256,uint256,uint256,uint256,uint8)": {
+                "argument": {
+                    "_baseN": "uint256",
+                    "_baseD": "uint256",
+                    "_expN": "uint256",
+                    "_expD": "uint256",
+                    "_precision": "uint8"
+                },
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "ratio": "uint8"
+                }
+            },
+            "ln(uint256,uint256,uint8)": {
+                "argument": {
+                    "_numerator": "uint256",
+                    "_denominator": "uint256",
+                    "_precision": "uint8"
+                },
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "ratio": "uint8"
+                }
+            },
+            "lnUpperBound32(uint256,uint256)": {
+                "argument": {
+                    "_baseN": "uint256",
+                    "_baseD": "uint256"
+                },
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "ratio": "uint8"
+                }
+            },
+            "fixedLoge(uint256,uint8)": {
+                "argument": {
+                    "_x": "uint256",
+                    "_precision": "uint8"
+                },
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "ratio": "uint8"
+                }
+            },
+            "fixedLog2(uint256,uint8)": {
+                "argument": {
+                    "_x": "uint256",
+                    "_precision": "uint8"
+                },
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "ratio": "uint8"
+                }
+            },
+            "floorLog2(uint256)": {
+                "argument": {
+                    "_n": "uint256"
+                },
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "ratio": "uint8"
+                }
+            },
+            "fixedExp(uint256,uint8)": {
+                "argument": {
+                    "_x": "uint256",
+                    "_precision": "uint8"
+                },
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "ratio": "uint8"
+                }
+            },
+            "fixedExpUnsafe(uint256,uint8)": {
+                "argument": {
+                    "_x": "uint256",
+                    "_precision": "uint8"
+                },
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "ratio": "uint8"
+                }
+            },
+            "SafeMath()": {
+                "argument": {},
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "ratio": "uint8"
+                }
+            },
+            "safeAdd(uint256,uint256)": {
+                "argument": {
+                    "_x": "uint256",
+                    "_y": "uint256"
+                },
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "ratio": "uint8"
+                }
+            },
+            "safeSub(uint256,uint256)": {
+                "argument": {
+                    "_x": "uint256",
+                    "_y": "uint256"
+                },
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "ratio": "uint8"
+                }
+            },
+            "safeMul(uint256,uint256)": {
+                "argument": {
+                    "_x": "uint256",
+                    "_y": "uint256"
+                },
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "ratio": "uint8"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "ratio": "uint8"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "ratio": "uint8"
+                }
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "ratio": "uint8"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "ratio": "uint8"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "ratio": "uint8"
+                }
+            },
+            "deposit()": {
+                "argument": {},
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "ratio": "uint8"
+                }
+            },
+            "withdraw(uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "ratio": "uint8"
+                }
+            },
+            "setUp(uint256)": {
+                "argument": {
+                    "_initialSupply": "uint256"
+                },
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "ratio": "uint8"
+                }
+            },
+            "tearDown()": {
+                "argument": {},
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "ratio": "uint8"
+                }
+            },
+            "reserveBalance()": {
+                "argument": {},
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "ratio": "uint8"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256",
+                    "ratio": "uint8"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "allowance(address,address)": [
+                2747,
+                647
+            ],
+            "fixedExp(uint256,uint8)": [
+                909,
+                185
+            ],
+            "reserveBalance()": [
+                2461,
+                559
+            ],
+            "transferFrom(address,address,uint256)": [
+                776,
+                163
+            ],
+            "calculateSaleReturn(uint256,uint256,uint8,uint256)": [
+                2921,
+                713
+            ],
+            "approve(address,uint256)": [
+                632,
+                119
+            ],
+            "ln(uint256,uint256,uint8)": [
+                400,
+                75
+            ],
+            "calculatePurchaseReturn(uint256,uint256,uint8,uint256)": [
+                2144,
+                493
+            ],
+            "power(uint256,uint256,uint256,uint256,uint8)": [
+                2605,
+                603
+            ],
+            "floorLog2(uint256)": [
+                1449,
+                339
+            ],
+            "fixedExpUnsafe(uint256,uint8)": [
+                3019,
+                735
+            ],
+            "withdraw(uint256)": [
+                1152,
+                251
+            ],
+            "lnUpperBound32(uint256,uint256)": [
+                2386,
+                537
+            ],
+            "balanceOf(address)": [
+                1921,
+                427
+            ],
+            "deposit()": [
+                2713,
+                625
+            ],
+            "tearDown()": [
+                2898,
+                691
+            ],
+            "fixedLog2(uint256,uint8)": [
+                1074,
+                229
+            ],
+            "fixedLoge(uint256,uint8)": [
+                1371,
+                317
+            ],
+            "setUp(uint256)": [
+                2866,
+                669
+            ],
+            "transfer(address,uint256)": [
+                2504,
+                581
+            ],
+            "calculateBestPrecision(uint256,uint256,uint256,uint256)": [
+                1221,
+                273
+            ]
+        },
+        "block_CALL_mapping": {
+            "block4683": [
+                "msg.sender.send(ethAmount)"
+            ],
+            "jump4683": [
+                "msg.sender.send(ethAmount)",
+                "msg.sender.send(ethAmount)"
+            ]
+        }
+    }
+}

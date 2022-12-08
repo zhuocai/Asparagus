@@ -1,0 +1,345 @@
+{
+    "ERC20": {
+        "function_list": [
+            "totalSupply()",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)"
+        ],
+        "initial_state": {
+            "totalSupply()": {
+                "argument": {},
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                346,
+                97
+            ],
+            "totalSupply()": [
+                447,
+                119
+            ],
+            "balanceOf(address)": [
+                773,
+                207
+            ],
+            "transferFrom(address,address,uint256)": [
+                490,
+                141
+            ],
+            "allowance(address,address)": [
+                1394,
+                339
+            ],
+            "transfer(address,uint256)": [
+                1091,
+                273
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "IOwned": {
+        "function_list": [
+            "owner()",
+            "transferOwnership(address)",
+            "acceptOwnership()"
+        ],
+        "initial_state": {
+            "owner()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "acceptOwnership()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "owner()": [
+                68,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "MarginBanc": {
+        "function_list": [
+            "MarginBanc()",
+            "long()",
+            "release()",
+            "getBuyReturn(uint256)",
+            "getSellReturn(uint256)",
+            "getReturn(IERC20Token,IERC20Token,uint256)",
+            "closeLong()",
+            "moo()",
+            "getReturn()",
+            "withdraw(uint256)",
+            "getETHBalance(address)",
+            "getBNTBalance(address)",
+            "marginCall()"
+        ],
+        "initial_state": {
+            "MarginBanc()": {
+                "argument": {},
+                "contract": {}
+            },
+            "long()": {
+                "argument": {},
+                "contract": {}
+            },
+            "release()": {
+                "argument": {},
+                "contract": {}
+            },
+            "getBuyReturn(uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {}
+            },
+            "getSellReturn(uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {}
+            },
+            "getReturn(IERC20Token,IERC20Token,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {}
+            },
+            "closeLong()": {
+                "argument": {},
+                "contract": {}
+            },
+            "moo()": {
+                "argument": {},
+                "contract": {}
+            },
+            "getReturn()": {
+                "argument": {},
+                "contract": {}
+            },
+            "withdraw(uint256)": {
+                "argument": {
+                    "returnAmount": "uint256"
+                },
+                "contract": {}
+            },
+            "getETHBalance(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "getBNTBalance(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "marginCall()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "moo()": [
+                960,
+                295
+            ],
+            "getETHBalance(address)": [
+                699,
+                229
+            ],
+            "getBuyReturn(uint256)": [
+                287,
+                97
+            ],
+            "withdraw(uint256)": [
+                4629,
+                914
+            ],
+            "getReturn()": [
+                352,
+                119
+            ],
+            "long()": [
+                257,
+                75
+            ],
+            "getSellReturn(uint256)": [
+                1180,
+                383
+            ],
+            "getBNTBalance(address)": [
+                983,
+                317
+            ],
+            "marginCall()": [
+                1419,
+                449
+            ],
+            "closeLong()": [
+                524,
+                163
+            ],
+            "release()": [
+                1070,
+                339
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump3701": [
+                "tokenChanger.getReturn(smartToken, etherToken, getBNTBalance(msg.sender))",
+                "tokenChanger.getReturn(smartToken, etherToken, getBNTBalance(msg.sender))"
+            ],
+            "block5600_0": [
+                "bnt.balanceOf(a)"
+            ],
+            "jump2337": [
+                "tokenChanger.token()",
+                "tokenChanger.token()"
+            ],
+            "jump4629": [
+                "etherToken.withdraw(returnAmount)",
+                "etherToken.withdraw(returnAmount)"
+            ],
+            "jump4420": [
+                "tokenChanger.change(smartToken, etherToken, getBNTBalance(msg.sender), 1)",
+                "tokenChanger.change(smartToken, etherToken, getBNTBalance(msg.sender), 1)"
+            ],
+            "block4016": [
+                "tokenChanger.getReturn(_fromToken, _toToken, _amount)"
+            ],
+            "jump5600_0": [
+                "bnt.balanceOf(a)",
+                "bnt.balanceOf(a)"
+            ],
+            "block1838": [
+                "etherToken.approve(tokenChanger, 0)"
+            ],
+            "jump5347": [
+                "tokenChanger.change(smartToken, etherToken, 877843110001289470, 1)",
+                "tokenChanger.change(smartToken, etherToken, 877843110001289470, 1)"
+            ],
+            "jump4016": [
+                "tokenChanger.getReturn(_fromToken, _toToken, _amount)",
+                "tokenChanger.getReturn(_fromToken, _toToken, _amount)"
+            ],
+            "block6171": [
+                "tokenChanger.getReturn(smartToken, etherToken, _amount)"
+            ],
+            "block4885": [
+                "etherToken.balanceOf(a)"
+            ],
+            "block2690": [
+                "tokenChanger.change(etherToken, smartToken, msg.value, 1)"
+            ],
+            "block4629": [
+                "etherToken.withdraw(returnAmount)"
+            ],
+            "block3308": [
+                "tokenChanger.getReturn(etherToken, smartToken, _amount)"
+            ],
+            "jump2690": [
+                "tokenChanger.change(etherToken, smartToken, msg.value, 1)",
+                "tokenChanger.change(etherToken, smartToken, msg.value, 1)"
+            ],
+            "jump4885": [
+                "etherToken.balanceOf(a)",
+                "etherToken.balanceOf(a)"
+            ],
+            "block1581": [
+                "etherToken.deposit.value(msg.value)()"
+            ],
+            "jump3308": [
+                "tokenChanger.getReturn(etherToken, smartToken, _amount)",
+                "tokenChanger.getReturn(etherToken, smartToken, _amount)"
+            ],
+            "jump5600_1": [
+                "bnt.balanceOf(a)",
+                "bnt.balanceOf(a)"
+            ],
+            "block3701": [
+                "tokenChanger.getReturn(smartToken, etherToken, getBNTBalance(msg.sender))"
+            ],
+            "jump1581": [
+                "etherToken.deposit.value(msg.value)()",
+                "etherToken.deposit.value(msg.value)()"
+            ],
+            "jump6171": [
+                "tokenChanger.getReturn(smartToken, etherToken, _amount)",
+                "tokenChanger.getReturn(smartToken, etherToken, _amount)"
+            ],
+            "jump2136": [
+                "etherToken.approve(tokenChanger, msg.value)",
+                "etherToken.approve(tokenChanger, msg.value)"
+            ],
+            "block5600_1": [
+                "bnt.balanceOf(a)"
+            ],
+            "jump5600": [
+                "bnt.balanceOf(a)",
+                "bnt.balanceOf(a)"
+            ],
+            "block2914": [
+                "smartToken.transfer(msg.sender, returnAmount)"
+            ],
+            "block5347": [
+                "tokenChanger.change(smartToken, etherToken, 877843110001289470, 1)"
+            ],
+            "block5600": [
+                "bnt.balanceOf(a)"
+            ],
+            "jump2914": [
+                "smartToken.transfer(msg.sender, returnAmount)",
+                "smartToken.transfer(msg.sender, returnAmount)"
+            ],
+            "block2337": [
+                "tokenChanger.token()"
+            ],
+            "block2136": [
+                "etherToken.approve(tokenChanger, msg.value)"
+            ],
+            "block4420": [
+                "tokenChanger.change(smartToken, etherToken, getBNTBalance(msg.sender), 1)"
+            ],
+            "jump1838": [
+                "etherToken.approve(tokenChanger, 0)",
+                "etherToken.approve(tokenChanger, 0)"
+            ]
+        }
+    }
+}

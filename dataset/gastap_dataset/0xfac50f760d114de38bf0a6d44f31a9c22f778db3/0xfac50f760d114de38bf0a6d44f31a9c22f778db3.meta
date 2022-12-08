@@ -1,0 +1,143 @@
+{
+    "Crowdsale": {
+        "function_list": [
+            "invest(address)"
+        ],
+        "initial_state": {
+            "invest(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "invest(address)": [
+                68,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "SafeMath": {
+        "function_list": [
+            "safeAdd(uint256,uint256)",
+            "assert(bool)"
+        ],
+        "initial_state": {
+            "safeAdd(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "assert(bool)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "Investment": {
+        "function_list": [
+            "safeAdd(uint256,uint256)",
+            "assert(bool)",
+            "Investment()",
+            "fallback()",
+            "isInvestor(address)",
+            "buyTokens(uint256,uint256)",
+            "withdraw()",
+            "getNumInvestors()"
+        ],
+        "initial_state": {
+            "safeAdd(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "investors": "address[]"
+                }
+            },
+            "assert(bool)": {
+                "argument": {},
+                "contract": {
+                    "investors": "address[]"
+                }
+            },
+            "Investment()": {
+                "argument": {},
+                "contract": {
+                    "investors": "address[]"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "investors": "address[]"
+                }
+            },
+            "isInvestor(address)": {
+                "argument": {},
+                "contract": {
+                    "investors": "address[]"
+                }
+            },
+            "buyTokens(uint256,uint256)": {
+                "argument": {
+                    "from": "uint256",
+                    "to": "uint256"
+                },
+                "contract": {
+                    "investors": "address[]"
+                }
+            },
+            "withdraw()": {
+                "argument": {},
+                "contract": {
+                    "investors": "address[]"
+                }
+            },
+            "getNumInvestors()": {
+                "argument": {},
+                "contract": {
+                    "investors": "address[]"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "getNumInvestors()": [
+                697,
+                163
+            ],
+            "buyTokens(uint256,uint256)": [
+                740,
+                185
+            ],
+            "isInvestor(address)": [
+                795,
+                207
+            ],
+            "withdraw()": [
+                391,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "block1091": [
+                "msg.sender.send(amount)"
+            ],
+            "jump1091": [
+                "msg.sender.send(amount)",
+                "msg.sender.send(amount)"
+            ],
+            "block2153": [
+                "ico.invest.value(amount)(investors[i])"
+            ],
+            "jump2153": [
+                "ico.invest.value(amount)(investors[i])",
+                "ico.invest.value(amount)(investors[i])"
+            ]
+        }
+    }
+}

@@ -1,0 +1,113 @@
+{
+    "ERC20Lib": {
+        "function_list": [
+            "init(ERC20Lib.TokenStorage,uint256)",
+            "transfer(ERC20Lib.TokenStorage,address,uint256)",
+            "transferFrom(ERC20Lib.TokenStorage,address,address,uint256)",
+            "balanceOf(ERC20Lib.TokenStorage,address)",
+            "approve(ERC20Lib.TokenStorage,address,uint256)",
+            "allowance(ERC20Lib.TokenStorage,address,address)"
+        ],
+        "initial_state": {
+            "init(ERC20Lib.TokenStorage,uint256)": {
+                "argument": {
+                    "_initial_supply": "uint256"
+                },
+                "contract": {}
+            },
+            "transfer(ERC20Lib.TokenStorage,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "transferFrom(ERC20Lib.TokenStorage,address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "balanceOf(ERC20Lib.TokenStorage,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "approve(ERC20Lib.TokenStorage,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(ERC20Lib.TokenStorage,address,address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {
+            "block4912": [
+                "_spender.call(bytes4(bytes32(sha3(\"receiveApproval(address,uint256,address,bytes)\"))), msg.sender, _value, this, _extraData)"
+            ],
+            "jump4912": [
+                "_spender.call(bytes4(bytes32(sha3(\"receiveApproval(address,uint256,address,bytes)\"))), msg.sender, _value, this, _extraData)",
+                "_spender.call(bytes4(bytes32(sha3(\"receiveApproval(address,uint256,address,bytes)\"))), msg.sender, _value, this, _extraData)"
+            ]
+        }
+    },
+    "BasicMathLib": {
+        "function_list": [
+            "times(uint256,uint256)",
+            "dividedBy(uint256,uint256)",
+            "plus(uint256,uint256)",
+            "minus(uint256,uint256)"
+        ],
+        "initial_state": {
+            "times(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "dividedBy(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "plus(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "minus(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "plus(uint256,uint256)": [
+                199,
+                105
+            ],
+            "minus(uint256,uint256)": [
+                345,
+                149
+            ],
+            "times(uint256,uint256)": [
+                126,
+                83
+            ],
+            "dividedBy(uint256,uint256)": [
+                272,
+                127
+            ]
+        },
+        "block_CALL_mapping": {}
+    }
+}

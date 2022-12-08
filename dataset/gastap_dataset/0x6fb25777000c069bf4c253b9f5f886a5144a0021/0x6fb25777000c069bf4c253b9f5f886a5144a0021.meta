@@ -1,0 +1,70 @@
+{
+    "ThreesigWallet": {
+        "function_list": [
+            "ThreesigWallet()",
+            "fallback()",
+            "proposeTx(address)",
+            "approveTx(uint8)",
+            "cancelTx(uint8)"
+        ],
+        "initial_state": {
+            "ThreesigWallet()": {
+                "argument": {},
+                "contract": {
+                    "txs": "ThreesigWallet.Tx[]"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "txs": "ThreesigWallet.Tx[]"
+                }
+            },
+            "proposeTx(address)": {
+                "argument": {},
+                "contract": {
+                    "txs": "ThreesigWallet.Tx[]"
+                }
+            },
+            "approveTx(uint8)": {
+                "argument": {
+                    "txIdx": "uint8"
+                },
+                "contract": {
+                    "txs": "ThreesigWallet.Tx[]"
+                }
+            },
+            "cancelTx(uint8)": {
+                "argument": {
+                    "txIdx": "uint8"
+                },
+                "contract": {
+                    "txs": "ThreesigWallet.Tx[]"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "proposeTx(address)": [
+                159,
+                97
+            ],
+            "cancelTx(uint8)": [
+                317,
+                141
+            ],
+            "approveTx(uint8)": [
+                111,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "block881": [
+                "txs[txIdx].destAddr.transfer(this.balance)"
+            ],
+            "jump881": [
+                "txs[txIdx].destAddr.transfer(this.balance)",
+                "txs[txIdx].destAddr.transfer(this.balance)"
+            ]
+        }
+    }
+}

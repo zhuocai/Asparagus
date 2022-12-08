@@ -1,0 +1,234 @@
+{
+    "Owned": {
+        "function_list": [
+            "Owned()",
+            "delegate(address)"
+        ],
+        "initial_state": {
+            "Owned()": {
+                "argument": {},
+                "contract": {}
+            },
+            "delegate(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "delegate(address)": [
+                81,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Mortal": {
+        "function_list": [
+            "Owned()",
+            "delegate(address)",
+            "kill()"
+        ],
+        "initial_state": {
+            "Owned()": {
+                "argument": {},
+                "contract": {}
+            },
+            "delegate(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "kill()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "delegate(address)": [
+                115,
+                97
+            ],
+            "kill()": [
+                92,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Comission": {
+        "function_list": [
+            "kill()",
+            "Owned()",
+            "delegate(address)",
+            "Comission(address,bytes32,uint256)",
+            "process(bytes32)"
+        ],
+        "initial_state": {
+            "kill()": {
+                "argument": {},
+                "contract": {
+                    "taxman": "bytes32",
+                    "taxPerc": "uint256"
+                }
+            },
+            "Owned()": {
+                "argument": {},
+                "contract": {
+                    "taxman": "bytes32",
+                    "taxPerc": "uint256"
+                }
+            },
+            "delegate(address)": {
+                "argument": {},
+                "contract": {
+                    "taxman": "bytes32",
+                    "taxPerc": "uint256"
+                }
+            },
+            "Comission(address,bytes32,uint256)": {
+                "argument": {
+                    "_taxman": "bytes32",
+                    "_taxPerc": "uint256"
+                },
+                "contract": {
+                    "taxman": "bytes32",
+                    "taxPerc": "uint256"
+                }
+            },
+            "process(bytes32)": {
+                "argument": {
+                    "_destination": "bytes32"
+                },
+                "contract": {
+                    "taxman": "bytes32",
+                    "taxPerc": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "process(bytes32)": [
+                136,
+                75
+            ],
+            "delegate(address)": [
+                357,
+                163
+            ],
+            "kill()": [
+                196,
+                97
+            ]
+        },
+        "block_CALL_mapping": {
+            "block832": [
+                "ledger.call.value(msg.value - tax)(refill, _destination)"
+            ],
+            "block589": [
+                "ledger.call.value(tax)(refill, taxman)"
+            ],
+            "jump589": [
+                "ledger.call.value(tax)(refill, taxman)",
+                "ledger.call.value(tax)(refill, taxman)"
+            ]
+        }
+    },
+    "Builder": {
+        "function_list": [
+            "kill()",
+            "Owned()",
+            "delegate(address)",
+            "getLastContract()",
+            "setBeneficiary(address)",
+            "setCost(uint256)",
+            "setSecurityCheck(string)"
+        ],
+        "initial_state": {
+            "kill()": {
+                "argument": {},
+                "contract": {
+                    "getContractsOf": "mapping(address => address[])",
+                    "buildingCostWei": "uint256",
+                    "securityCheckURI": "string"
+                }
+            },
+            "Owned()": {
+                "argument": {},
+                "contract": {
+                    "getContractsOf": "mapping(address => address[])",
+                    "buildingCostWei": "uint256",
+                    "securityCheckURI": "string"
+                }
+            },
+            "delegate(address)": {
+                "argument": {},
+                "contract": {
+                    "getContractsOf": "mapping(address => address[])",
+                    "buildingCostWei": "uint256",
+                    "securityCheckURI": "string"
+                }
+            },
+            "getLastContract()": {
+                "argument": {},
+                "contract": {
+                    "getContractsOf": "mapping(address => address[])",
+                    "buildingCostWei": "uint256",
+                    "securityCheckURI": "string"
+                }
+            },
+            "setBeneficiary(address)": {
+                "argument": {},
+                "contract": {
+                    "getContractsOf": "mapping(address => address[])",
+                    "buildingCostWei": "uint256",
+                    "securityCheckURI": "string"
+                }
+            },
+            "setCost(uint256)": {
+                "argument": {
+                    "_buildingCostWei": "uint256"
+                },
+                "contract": {
+                    "getContractsOf": "mapping(address => address[])",
+                    "buildingCostWei": "uint256",
+                    "securityCheckURI": "string"
+                }
+            },
+            "setSecurityCheck(string)": {
+                "argument": {
+                    "_uri": "string"
+                },
+                "contract": {
+                    "getContractsOf": "mapping(address => address[])",
+                    "buildingCostWei": "uint256",
+                    "securityCheckURI": "string"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "setCost(uint256)": [
+                462,
+                163
+            ],
+            "delegate(address)": [
+                507,
+                185
+            ],
+            "kill()": [
+                439,
+                141
+            ],
+            "setSecurityCheck(string)": [
+                180,
+                75
+            ],
+            "setBeneficiary(address)": [
+                285,
+                97
+            ],
+            "getLastContract()": [
+                704,
+                251
+            ]
+        },
+        "block_CALL_mapping": {}
+    }
+}

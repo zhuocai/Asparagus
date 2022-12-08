@@ -1,0 +1,137 @@
+{
+    "EtherRock": {
+        "function_list": [
+            "EtherRock()",
+            "getRockInfo(uint256)",
+            "rockOwningHistory(address)",
+            "buyRock(uint256)",
+            "sellRock(uint256,uint256)",
+            "dontSellRock(uint256)",
+            "giftRock(uint256,address)",
+            "fallback()",
+            "withdraw()"
+        ],
+        "initial_state": {
+            "EtherRock()": {
+                "argument": {},
+                "contract": {
+                    "rockOwners": "mapping(address => uint256[])",
+                    "latestNewRockForSale": "uint256"
+                }
+            },
+            "getRockInfo(uint256)": {
+                "argument": {
+                    "rockNumber": "uint256"
+                },
+                "contract": {
+                    "rockOwners": "mapping(address => uint256[])",
+                    "latestNewRockForSale": "uint256"
+                }
+            },
+            "rockOwningHistory(address)": {
+                "argument": {},
+                "contract": {
+                    "rockOwners": "mapping(address => uint256[])",
+                    "latestNewRockForSale": "uint256"
+                }
+            },
+            "buyRock(uint256)": {
+                "argument": {
+                    "rockNumber": "uint256"
+                },
+                "contract": {
+                    "rockOwners": "mapping(address => uint256[])",
+                    "latestNewRockForSale": "uint256"
+                }
+            },
+            "sellRock(uint256,uint256)": {
+                "argument": {
+                    "rockNumber": "uint256",
+                    "price": "uint256"
+                },
+                "contract": {
+                    "rockOwners": "mapping(address => uint256[])",
+                    "latestNewRockForSale": "uint256"
+                }
+            },
+            "dontSellRock(uint256)": {
+                "argument": {
+                    "rockNumber": "uint256"
+                },
+                "contract": {
+                    "rockOwners": "mapping(address => uint256[])",
+                    "latestNewRockForSale": "uint256"
+                }
+            },
+            "giftRock(uint256,address)": {
+                "argument": {
+                    "rockNumber": "uint256"
+                },
+                "contract": {
+                    "rockOwners": "mapping(address => uint256[])",
+                    "latestNewRockForSale": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "rockOwners": "mapping(address => uint256[])",
+                    "latestNewRockForSale": "uint256"
+                }
+            },
+            "withdraw()": {
+                "argument": {},
+                "contract": {
+                    "rockOwners": "mapping(address => uint256[])",
+                    "latestNewRockForSale": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "dontSellRock(uint256)": [
+                340,
+                119
+            ],
+            "giftRock(uint256,address)": [
+                166,
+                75
+            ],
+            "buyRock(uint256)": [
+                408,
+                163
+            ],
+            "rockOwningHistory(address)": [
+                708,
+                229
+            ],
+            "sellRock(uint256,uint256)": [
+                903,
+                273
+            ],
+            "withdraw()": [
+                385,
+                141
+            ],
+            "getRockInfo(uint256)": [
+                574,
+                207
+            ]
+        },
+        "block_CALL_mapping": {
+            "block1562": [
+                "owner.transfer(this.balance)"
+            ],
+            "block1875": [
+                "rocks[rockNumber].owner.transfer(rocks[rockNumber].price)"
+            ],
+            "jump1562": [
+                "owner.transfer(this.balance)",
+                "owner.transfer(this.balance)"
+            ],
+            "jump1875": [
+                "rocks[rockNumber].owner.transfer(rocks[rockNumber].price)",
+                "rocks[rockNumber].owner.transfer(rocks[rockNumber].price)"
+            ]
+        }
+    }
+}

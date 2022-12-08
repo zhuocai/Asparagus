@@ -1,0 +1,139 @@
+{
+    "Math": {
+        "function_list": [
+            "max64(uint64,uint64)",
+            "min64(uint64,uint64)",
+            "max256(uint256,uint256)",
+            "min256(uint256,uint256)"
+        ],
+        "initial_state": {
+            "max64(uint64,uint64)": {
+                "argument": {
+                    "a": "uint64",
+                    "b": "uint64"
+                },
+                "contract": {}
+            },
+            "min64(uint64,uint64)": {
+                "argument": {
+                    "a": "uint64",
+                    "b": "uint64"
+                },
+                "contract": {}
+            },
+            "max256(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "min256(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "BatchTransferContract": {
+        "function_list": [
+            "BatchTransferContract(address)",
+            "fallback()",
+            "batchRefund(address[],uint256[])",
+            "drain(uint256)"
+        ],
+        "initial_state": {
+            "BatchTransferContract(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {}
+            },
+            "batchRefund(address[],uint256[])": {
+                "argument": {
+                    "investors": "address[]",
+                    "ethAmounts": "uint256[]"
+                },
+                "contract": {}
+            },
+            "drain(uint256)": {
+                "argument": {
+                    "ethAmount": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "drain(uint256)": [
+                332,
+                119
+            ],
+            "batchRefund(address[],uint256[])": [
+                89,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "block696": [
+                "investors[i].transfer(ethAmounts[i])"
+            ],
+            "block954": [
+                "owner.transfer(amount)"
+            ],
+            "jump696": [
+                "investors[i].transfer(ethAmounts[i])",
+                "investors[i].transfer(ethAmounts[i])"
+            ],
+            "jump954": [
+                "owner.transfer(amount)",
+                "owner.transfer(amount)"
+            ]
+        }
+    }
+}

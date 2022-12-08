@@ -1,0 +1,63 @@
+{
+    "SendToMany": {
+        "function_list": [
+            "SendToMany()",
+            "setRecipients(address[])",
+            "addRecipient(address)",
+            "sendToAll(uint256)"
+        ],
+        "initial_state": {
+            "SendToMany()": {
+                "argument": {},
+                "contract": {
+                    "recipients": "address[]"
+                }
+            },
+            "setRecipients(address[])": {
+                "argument": {
+                    "newRecipientsList": "address[]"
+                },
+                "contract": {
+                    "recipients": "address[]"
+                }
+            },
+            "addRecipient(address)": {
+                "argument": {},
+                "contract": {
+                    "recipients": "address[]"
+                }
+            },
+            "sendToAll(uint256)": {
+                "argument": {
+                    "amountPerRecipient": "uint256"
+                },
+                "contract": {
+                    "recipients": "address[]"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "setRecipients(address[])": [
+                202,
+                119
+            ],
+            "sendToAll(uint256)": [
+                170,
+                97
+            ],
+            "addRecipient(address)": [
+                103,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "block552": [
+                "recipients[i].transfer(amountPerRecipient)"
+            ],
+            "jump552": [
+                "recipients[i].transfer(amountPerRecipient)",
+                "recipients[i].transfer(amountPerRecipient)"
+            ]
+        }
+    }
+}

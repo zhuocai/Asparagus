@@ -1,0 +1,658 @@
+{
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "IToken": {
+        "function_list": [
+            "totalSupply()",
+            "mintTokens(address,uint256)"
+        ],
+        "initial_state": {
+            "totalSupply()": {
+                "argument": {},
+                "contract": {}
+            },
+            "mintTokens(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "totalSupply()": [
+                147,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Owned": {
+        "function_list": [
+            "Owned()",
+            "transferOwnership(address)",
+            "acceptOwnership()"
+        ],
+        "initial_state": {
+            "Owned()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "acceptOwnership()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "acceptOwnership()": [
+                103,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "ReentrnacyHandlingContract": {
+        "function_list": [],
+        "initial_state": {},
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "Lockable": {
+        "function_list": [
+            "Owned()",
+            "transferOwnership(address)",
+            "acceptOwnership()",
+            "lockFromSelf(uint256,string)",
+            "lockUntil(uint256,string)"
+        ],
+        "initial_state": {
+            "Owned()": {
+                "argument": {},
+                "contract": {
+                    "lockedUntilBlock": "uint256"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "lockedUntilBlock": "uint256"
+                }
+            },
+            "acceptOwnership()": {
+                "argument": {},
+                "contract": {
+                    "lockedUntilBlock": "uint256"
+                }
+            },
+            "lockFromSelf(uint256,string)": {
+                "argument": {
+                    "_untilBlock": "uint256",
+                    "_reason": "string"
+                },
+                "contract": {
+                    "lockedUntilBlock": "uint256"
+                }
+            },
+            "lockUntil(uint256,string)": {
+                "argument": {
+                    "_untilBlock": "uint256",
+                    "_reason": "string"
+                },
+                "contract": {
+                    "lockedUntilBlock": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "Crowdsale": {
+        "function_list": [
+            "Owned()",
+            "transferOwnership(address)",
+            "acceptOwnership()",
+            "fallback()",
+            "checkCrowdsaleState()",
+            "refundTransaction(bool)",
+            "calculateMaxContribution(address)",
+            "processTransaction(address,uint256)",
+            "editContributors(address[],uint256[])",
+            "salvageTokensFromContract(address,address,uint256)",
+            "withdrawEth()",
+            "sanityCheck()",
+            "claimEthIfFailed()",
+            "batchReturnEthIfFailed(uint256)",
+            "withdrawRemainingBalanceForManualRecovery()",
+            "setMultisigAddress(address)",
+            "setToken(address)",
+            "claimCoreTeamsTokens(address)",
+            "claimCofounditTokens(address)",
+            "getTokenAddress()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "Owned()": {
+                "argument": {},
+                "contract": {
+                    "nextContributorIndex": "uint256",
+                    "presaleStartBlock": "uint256",
+                    "presaleUnlimitedStartBlock": "uint256",
+                    "crowdsaleStartBlock": "uint256",
+                    "crowdsaleEndedBlock": "uint256",
+                    "ethToTokenConversion": "uint256",
+                    "minCap": "uint256",
+                    "maxP1Cap": "uint256",
+                    "maxCap": "uint256",
+                    "ethRaised": "uint256",
+                    "nextContributorToClaim": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "cofounditReward": "uint256",
+                    "pendingEthWithdrawal": "uint256"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "nextContributorIndex": "uint256",
+                    "presaleStartBlock": "uint256",
+                    "presaleUnlimitedStartBlock": "uint256",
+                    "crowdsaleStartBlock": "uint256",
+                    "crowdsaleEndedBlock": "uint256",
+                    "ethToTokenConversion": "uint256",
+                    "minCap": "uint256",
+                    "maxP1Cap": "uint256",
+                    "maxCap": "uint256",
+                    "ethRaised": "uint256",
+                    "nextContributorToClaim": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "cofounditReward": "uint256",
+                    "pendingEthWithdrawal": "uint256"
+                }
+            },
+            "acceptOwnership()": {
+                "argument": {},
+                "contract": {
+                    "nextContributorIndex": "uint256",
+                    "presaleStartBlock": "uint256",
+                    "presaleUnlimitedStartBlock": "uint256",
+                    "crowdsaleStartBlock": "uint256",
+                    "crowdsaleEndedBlock": "uint256",
+                    "ethToTokenConversion": "uint256",
+                    "minCap": "uint256",
+                    "maxP1Cap": "uint256",
+                    "maxCap": "uint256",
+                    "ethRaised": "uint256",
+                    "nextContributorToClaim": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "cofounditReward": "uint256",
+                    "pendingEthWithdrawal": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "nextContributorIndex": "uint256",
+                    "presaleStartBlock": "uint256",
+                    "presaleUnlimitedStartBlock": "uint256",
+                    "crowdsaleStartBlock": "uint256",
+                    "crowdsaleEndedBlock": "uint256",
+                    "ethToTokenConversion": "uint256",
+                    "minCap": "uint256",
+                    "maxP1Cap": "uint256",
+                    "maxCap": "uint256",
+                    "ethRaised": "uint256",
+                    "nextContributorToClaim": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "cofounditReward": "uint256",
+                    "pendingEthWithdrawal": "uint256"
+                }
+            },
+            "checkCrowdsaleState()": {
+                "argument": {},
+                "contract": {
+                    "nextContributorIndex": "uint256",
+                    "presaleStartBlock": "uint256",
+                    "presaleUnlimitedStartBlock": "uint256",
+                    "crowdsaleStartBlock": "uint256",
+                    "crowdsaleEndedBlock": "uint256",
+                    "ethToTokenConversion": "uint256",
+                    "minCap": "uint256",
+                    "maxP1Cap": "uint256",
+                    "maxCap": "uint256",
+                    "ethRaised": "uint256",
+                    "nextContributorToClaim": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "cofounditReward": "uint256",
+                    "pendingEthWithdrawal": "uint256"
+                }
+            },
+            "refundTransaction(bool)": {
+                "argument": {},
+                "contract": {
+                    "nextContributorIndex": "uint256",
+                    "presaleStartBlock": "uint256",
+                    "presaleUnlimitedStartBlock": "uint256",
+                    "crowdsaleStartBlock": "uint256",
+                    "crowdsaleEndedBlock": "uint256",
+                    "ethToTokenConversion": "uint256",
+                    "minCap": "uint256",
+                    "maxP1Cap": "uint256",
+                    "maxCap": "uint256",
+                    "ethRaised": "uint256",
+                    "nextContributorToClaim": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "cofounditReward": "uint256",
+                    "pendingEthWithdrawal": "uint256"
+                }
+            },
+            "calculateMaxContribution(address)": {
+                "argument": {},
+                "contract": {
+                    "nextContributorIndex": "uint256",
+                    "presaleStartBlock": "uint256",
+                    "presaleUnlimitedStartBlock": "uint256",
+                    "crowdsaleStartBlock": "uint256",
+                    "crowdsaleEndedBlock": "uint256",
+                    "ethToTokenConversion": "uint256",
+                    "minCap": "uint256",
+                    "maxP1Cap": "uint256",
+                    "maxCap": "uint256",
+                    "ethRaised": "uint256",
+                    "nextContributorToClaim": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "cofounditReward": "uint256",
+                    "pendingEthWithdrawal": "uint256"
+                }
+            },
+            "processTransaction(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "nextContributorIndex": "uint256",
+                    "presaleStartBlock": "uint256",
+                    "presaleUnlimitedStartBlock": "uint256",
+                    "crowdsaleStartBlock": "uint256",
+                    "crowdsaleEndedBlock": "uint256",
+                    "ethToTokenConversion": "uint256",
+                    "minCap": "uint256",
+                    "maxP1Cap": "uint256",
+                    "maxCap": "uint256",
+                    "ethRaised": "uint256",
+                    "nextContributorToClaim": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "cofounditReward": "uint256",
+                    "pendingEthWithdrawal": "uint256"
+                }
+            },
+            "editContributors(address[],uint256[])": {
+                "argument": {
+                    "_contributorAddresses": "address[]",
+                    "_contributorPPAllowances": "uint256[]"
+                },
+                "contract": {
+                    "nextContributorIndex": "uint256",
+                    "presaleStartBlock": "uint256",
+                    "presaleUnlimitedStartBlock": "uint256",
+                    "crowdsaleStartBlock": "uint256",
+                    "crowdsaleEndedBlock": "uint256",
+                    "ethToTokenConversion": "uint256",
+                    "minCap": "uint256",
+                    "maxP1Cap": "uint256",
+                    "maxCap": "uint256",
+                    "ethRaised": "uint256",
+                    "nextContributorToClaim": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "cofounditReward": "uint256",
+                    "pendingEthWithdrawal": "uint256"
+                }
+            },
+            "salvageTokensFromContract(address,address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "nextContributorIndex": "uint256",
+                    "presaleStartBlock": "uint256",
+                    "presaleUnlimitedStartBlock": "uint256",
+                    "crowdsaleStartBlock": "uint256",
+                    "crowdsaleEndedBlock": "uint256",
+                    "ethToTokenConversion": "uint256",
+                    "minCap": "uint256",
+                    "maxP1Cap": "uint256",
+                    "maxCap": "uint256",
+                    "ethRaised": "uint256",
+                    "nextContributorToClaim": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "cofounditReward": "uint256",
+                    "pendingEthWithdrawal": "uint256"
+                }
+            },
+            "withdrawEth()": {
+                "argument": {},
+                "contract": {
+                    "nextContributorIndex": "uint256",
+                    "presaleStartBlock": "uint256",
+                    "presaleUnlimitedStartBlock": "uint256",
+                    "crowdsaleStartBlock": "uint256",
+                    "crowdsaleEndedBlock": "uint256",
+                    "ethToTokenConversion": "uint256",
+                    "minCap": "uint256",
+                    "maxP1Cap": "uint256",
+                    "maxCap": "uint256",
+                    "ethRaised": "uint256",
+                    "nextContributorToClaim": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "cofounditReward": "uint256",
+                    "pendingEthWithdrawal": "uint256"
+                }
+            },
+            "sanityCheck()": {
+                "argument": {},
+                "contract": {
+                    "nextContributorIndex": "uint256",
+                    "presaleStartBlock": "uint256",
+                    "presaleUnlimitedStartBlock": "uint256",
+                    "crowdsaleStartBlock": "uint256",
+                    "crowdsaleEndedBlock": "uint256",
+                    "ethToTokenConversion": "uint256",
+                    "minCap": "uint256",
+                    "maxP1Cap": "uint256",
+                    "maxCap": "uint256",
+                    "ethRaised": "uint256",
+                    "nextContributorToClaim": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "cofounditReward": "uint256",
+                    "pendingEthWithdrawal": "uint256"
+                }
+            },
+            "claimEthIfFailed()": {
+                "argument": {},
+                "contract": {
+                    "nextContributorIndex": "uint256",
+                    "presaleStartBlock": "uint256",
+                    "presaleUnlimitedStartBlock": "uint256",
+                    "crowdsaleStartBlock": "uint256",
+                    "crowdsaleEndedBlock": "uint256",
+                    "ethToTokenConversion": "uint256",
+                    "minCap": "uint256",
+                    "maxP1Cap": "uint256",
+                    "maxCap": "uint256",
+                    "ethRaised": "uint256",
+                    "nextContributorToClaim": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "cofounditReward": "uint256",
+                    "pendingEthWithdrawal": "uint256"
+                }
+            },
+            "batchReturnEthIfFailed(uint256)": {
+                "argument": {
+                    "_numberOfReturns": "uint256"
+                },
+                "contract": {
+                    "nextContributorIndex": "uint256",
+                    "presaleStartBlock": "uint256",
+                    "presaleUnlimitedStartBlock": "uint256",
+                    "crowdsaleStartBlock": "uint256",
+                    "crowdsaleEndedBlock": "uint256",
+                    "ethToTokenConversion": "uint256",
+                    "minCap": "uint256",
+                    "maxP1Cap": "uint256",
+                    "maxCap": "uint256",
+                    "ethRaised": "uint256",
+                    "nextContributorToClaim": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "cofounditReward": "uint256",
+                    "pendingEthWithdrawal": "uint256"
+                }
+            },
+            "withdrawRemainingBalanceForManualRecovery()": {
+                "argument": {},
+                "contract": {
+                    "nextContributorIndex": "uint256",
+                    "presaleStartBlock": "uint256",
+                    "presaleUnlimitedStartBlock": "uint256",
+                    "crowdsaleStartBlock": "uint256",
+                    "crowdsaleEndedBlock": "uint256",
+                    "ethToTokenConversion": "uint256",
+                    "minCap": "uint256",
+                    "maxP1Cap": "uint256",
+                    "maxCap": "uint256",
+                    "ethRaised": "uint256",
+                    "nextContributorToClaim": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "cofounditReward": "uint256",
+                    "pendingEthWithdrawal": "uint256"
+                }
+            },
+            "setMultisigAddress(address)": {
+                "argument": {},
+                "contract": {
+                    "nextContributorIndex": "uint256",
+                    "presaleStartBlock": "uint256",
+                    "presaleUnlimitedStartBlock": "uint256",
+                    "crowdsaleStartBlock": "uint256",
+                    "crowdsaleEndedBlock": "uint256",
+                    "ethToTokenConversion": "uint256",
+                    "minCap": "uint256",
+                    "maxP1Cap": "uint256",
+                    "maxCap": "uint256",
+                    "ethRaised": "uint256",
+                    "nextContributorToClaim": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "cofounditReward": "uint256",
+                    "pendingEthWithdrawal": "uint256"
+                }
+            },
+            "setToken(address)": {
+                "argument": {},
+                "contract": {
+                    "nextContributorIndex": "uint256",
+                    "presaleStartBlock": "uint256",
+                    "presaleUnlimitedStartBlock": "uint256",
+                    "crowdsaleStartBlock": "uint256",
+                    "crowdsaleEndedBlock": "uint256",
+                    "ethToTokenConversion": "uint256",
+                    "minCap": "uint256",
+                    "maxP1Cap": "uint256",
+                    "maxCap": "uint256",
+                    "ethRaised": "uint256",
+                    "nextContributorToClaim": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "cofounditReward": "uint256",
+                    "pendingEthWithdrawal": "uint256"
+                }
+            },
+            "claimCoreTeamsTokens(address)": {
+                "argument": {},
+                "contract": {
+                    "nextContributorIndex": "uint256",
+                    "presaleStartBlock": "uint256",
+                    "presaleUnlimitedStartBlock": "uint256",
+                    "crowdsaleStartBlock": "uint256",
+                    "crowdsaleEndedBlock": "uint256",
+                    "ethToTokenConversion": "uint256",
+                    "minCap": "uint256",
+                    "maxP1Cap": "uint256",
+                    "maxCap": "uint256",
+                    "ethRaised": "uint256",
+                    "nextContributorToClaim": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "cofounditReward": "uint256",
+                    "pendingEthWithdrawal": "uint256"
+                }
+            },
+            "claimCofounditTokens(address)": {
+                "argument": {},
+                "contract": {
+                    "nextContributorIndex": "uint256",
+                    "presaleStartBlock": "uint256",
+                    "presaleUnlimitedStartBlock": "uint256",
+                    "crowdsaleStartBlock": "uint256",
+                    "crowdsaleEndedBlock": "uint256",
+                    "ethToTokenConversion": "uint256",
+                    "minCap": "uint256",
+                    "maxP1Cap": "uint256",
+                    "maxCap": "uint256",
+                    "ethRaised": "uint256",
+                    "nextContributorToClaim": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "cofounditReward": "uint256",
+                    "pendingEthWithdrawal": "uint256"
+                }
+            },
+            "getTokenAddress()": {
+                "argument": {},
+                "contract": {
+                    "nextContributorIndex": "uint256",
+                    "presaleStartBlock": "uint256",
+                    "presaleUnlimitedStartBlock": "uint256",
+                    "crowdsaleStartBlock": "uint256",
+                    "crowdsaleEndedBlock": "uint256",
+                    "ethToTokenConversion": "uint256",
+                    "minCap": "uint256",
+                    "maxP1Cap": "uint256",
+                    "maxCap": "uint256",
+                    "ethRaised": "uint256",
+                    "nextContributorToClaim": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "cofounditReward": "uint256",
+                    "pendingEthWithdrawal": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                2019,
+                757
+            ]
+        },
+        "block_CALL_mapping": {
+            "block7256": [
+                "token.balanceOf(this)"
+            ],
+            "block2960": [
+                "token.transfer(_backer, tokensToSend)"
+            ],
+            "jump2960": [
+                "token.transfer(_backer, tokensToSend)",
+                "token.transfer(_backer, tokensToSend)"
+            ],
+            "jump7256": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "jump3225_0": [
+                "multisig.transfer(this.balance)",
+                "multisig.transfer(this.balance)"
+            ],
+            "block2960_0": [
+                "token.transfer(_backer, tokensToSend)"
+            ],
+            "jump3225": [
+                "multisig.transfer(this.balance)",
+                "multisig.transfer(this.balance)"
+            ],
+            "block4359": [
+                "token.balanceOf(this)"
+            ],
+            "jump5285": [
+                "token.burn(msg.sender, backer.tokensSent)",
+                "token.burn(msg.sender, backer.tokensSent)"
+            ],
+            "block3225": [
+                "multisig.transfer(this.balance)"
+            ],
+            "block5285": [
+                "token.burn(msg.sender, backer.tokensSent)"
+            ],
+            "jump5427": [
+                "msg.sender.transfer(backer.weiReceived)",
+                "msg.sender.transfer(backer.weiReceived)"
+            ],
+            "block6558": [
+                "multisig.transfer(this.balance)"
+            ],
+            "jump7448": [
+                "token.transfer(team, token.balanceOf(this))",
+                "token.transfer(team, token.balanceOf(this))"
+            ],
+            "jump4755": [
+                "token.unlock()",
+                "token.unlock()"
+            ],
+            "block3225_0": [
+                "multisig.transfer(this.balance)"
+            ],
+            "jump2960_0": [
+                "token.transfer(_backer, tokensToSend)",
+                "token.transfer(_backer, tokensToSend)"
+            ],
+            "block7448": [
+                "token.transfer(team, token.balanceOf(this))"
+            ],
+            "block4551": [
+                "token.transfer(team, token.balanceOf(this))"
+            ],
+            "block4755": [
+                "token.unlock()"
+            ],
+            "jump6558": [
+                "multisig.transfer(this.balance)",
+                "multisig.transfer(this.balance)"
+            ],
+            "jump4359": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "jump4551": [
+                "token.transfer(team, token.balanceOf(this))",
+                "token.transfer(team, token.balanceOf(this))"
+            ],
+            "block5427": [
+                "msg.sender.transfer(backer.weiReceived)"
+            ]
+        }
+    }
+}

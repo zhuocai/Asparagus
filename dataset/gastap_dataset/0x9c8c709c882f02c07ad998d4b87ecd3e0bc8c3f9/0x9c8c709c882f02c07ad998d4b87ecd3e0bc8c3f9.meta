@@ -1,0 +1,271 @@
+{
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "ERC20Basic": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                124,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "JoysoCrowdsale": {
+        "function_list": [
+            "fallback()",
+            "buyTokens(address)",
+            "forwardFunds()",
+            "calculateObtainedJOY(uint256)",
+            "validPurchase()",
+            "hasEnded()",
+            "releaseJoyToken()",
+            "start()",
+            "changeJoysoWallet(address)",
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "rate": "uint256",
+                    "weiRaised": "uint256"
+                }
+            },
+            "buyTokens(address)": {
+                "argument": {},
+                "contract": {
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "rate": "uint256",
+                    "weiRaised": "uint256"
+                }
+            },
+            "forwardFunds()": {
+                "argument": {},
+                "contract": {
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "rate": "uint256",
+                    "weiRaised": "uint256"
+                }
+            },
+            "calculateObtainedJOY(uint256)": {
+                "argument": {
+                    "amountEtherInWei": "uint256"
+                },
+                "contract": {
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "rate": "uint256",
+                    "weiRaised": "uint256"
+                }
+            },
+            "validPurchase()": {
+                "argument": {},
+                "contract": {
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "rate": "uint256",
+                    "weiRaised": "uint256"
+                }
+            },
+            "hasEnded()": {
+                "argument": {},
+                "contract": {
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "rate": "uint256",
+                    "weiRaised": "uint256"
+                }
+            },
+            "releaseJoyToken()": {
+                "argument": {},
+                "contract": {
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "rate": "uint256",
+                    "weiRaised": "uint256"
+                }
+            },
+            "start()": {
+                "argument": {},
+                "contract": {
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "rate": "uint256",
+                    "weiRaised": "uint256"
+                }
+            },
+            "changeJoysoWallet(address)": {
+                "argument": {},
+                "contract": {
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "rate": "uint256",
+                    "weiRaised": "uint256"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "rate": "uint256",
+                    "weiRaised": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "buyTokens(address)": [
+                793,
+                295
+            ],
+            "releaseJoyToken()": [
+                284,
+                97
+            ],
+            "hasEnded()": [
+                847,
+                317
+            ],
+            "calculateObtainedJOY(uint256)": [
+                728,
+                273
+            ],
+            "start()": [
+                681,
+                251
+            ],
+            "changeJoysoWallet(address)": [
+                590,
+                229
+            ]
+        },
+        "block_CALL_mapping": {
+            "block1195_1": [
+                "ERC20Basic(JOY).transfer(beneficiary, joyAmounts)"
+            ],
+            "block2022": [
+                "ERC20Basic(JOY).transfer(joysoWallet, remainedJoy)"
+            ],
+            "block1195": [
+                "ERC20Basic(JOY).transfer(beneficiary, joyAmounts)"
+            ],
+            "jump1195_0": [
+                "ERC20Basic(JOY).transfer(beneficiary, joyAmounts)",
+                "ERC20Basic(JOY).transfer(beneficiary, joyAmounts)"
+            ],
+            "jump1195_1": [
+                "ERC20Basic(JOY).transfer(beneficiary, joyAmounts)",
+                "ERC20Basic(JOY).transfer(beneficiary, joyAmounts)"
+            ],
+            "block2718_1": [
+                "joysoWallet.transfer(msg.value)"
+            ],
+            "block1195_0": [
+                "ERC20Basic(JOY).transfer(beneficiary, joyAmounts)"
+            ],
+            "block2718_0": [
+                "joysoWallet.transfer(msg.value)"
+            ],
+            "jump1195": [
+                "ERC20Basic(JOY).transfer(beneficiary, joyAmounts)",
+                "ERC20Basic(JOY).transfer(beneficiary, joyAmounts)"
+            ],
+            "jump2718": [
+                "joysoWallet.transfer(msg.value)",
+                "joysoWallet.transfer(msg.value)"
+            ],
+            "jump2022": [
+                "ERC20Basic(JOY).transfer(joysoWallet, remainedJoy)",
+                "ERC20Basic(JOY).transfer(joysoWallet, remainedJoy)"
+            ],
+            "jump1744": [
+                "ERC20Basic(JOY).balanceOf(this)",
+                "ERC20Basic(JOY).balanceOf(this)"
+            ],
+            "jump2212": [
+                "JoyTokenAbstract(JOY).unlock()",
+                "JoyTokenAbstract(JOY).unlock()"
+            ],
+            "block1744": [
+                "ERC20Basic(JOY).balanceOf(this)"
+            ],
+            "block2718": [
+                "joysoWallet.transfer(msg.value)"
+            ],
+            "jump2718_1": [
+                "joysoWallet.transfer(msg.value)",
+                "joysoWallet.transfer(msg.value)"
+            ],
+            "jump2718_0": [
+                "joysoWallet.transfer(msg.value)",
+                "joysoWallet.transfer(msg.value)"
+            ],
+            "block2212": [
+                "JoyTokenAbstract(JOY).unlock()"
+            ]
+        }
+    }
+}

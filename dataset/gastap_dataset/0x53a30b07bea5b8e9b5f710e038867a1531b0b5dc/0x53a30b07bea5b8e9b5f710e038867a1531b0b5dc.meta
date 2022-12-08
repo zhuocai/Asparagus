@@ -1,0 +1,77 @@
+{
+    "ERC20": {
+        "function_list": [
+            "transferFrom(address,address,uint256)"
+        ],
+        "initial_state": {
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferFrom(address,address,uint256)": [
+                324,
+                119
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Multiplexer": {
+        "function_list": [
+            "sendEth(address[],uint256[])",
+            "sendErc20(address,address[],uint256[])"
+        ],
+        "initial_state": {
+            "sendEth(address[],uint256[])": {
+                "argument": {
+                    "_to": "address[]",
+                    "_value": "uint256[]"
+                },
+                "contract": {}
+            },
+            "sendErc20(address,address[],uint256[])": {
+                "argument": {
+                    "_to": "address[]",
+                    "_value": "uint256[]"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "sendErc20(address,address[],uint256[])": [
+                261,
+                97
+            ],
+            "sendEth(address[],uint256[])": [
+                81,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump717": [
+                "msg.sender.send(remainingValue)",
+                "msg.sender.send(remainingValue)"
+            ],
+            "jump1115": [
+                "token.transferFrom(msg.sender, _to[i], _value[i])",
+                "token.transferFrom(msg.sender, _to[i], _value[i])"
+            ],
+            "jump645": [
+                "_to[i].send(_value[i])",
+                "_to[i].send(_value[i])"
+            ],
+            "block717": [
+                "msg.sender.send(remainingValue)"
+            ],
+            "block1115": [
+                "token.transferFrom(msg.sender, _to[i], _value[i])"
+            ],
+            "block645": [
+                "_to[i].send(_value[i])"
+            ]
+        }
+    }
+}

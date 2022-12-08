@@ -1,0 +1,54 @@
+{
+    "Dragon": {
+        "function_list": [
+            "burnDragons(uint256)"
+        ],
+        "initial_state": {
+            "burnDragons(uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "Burner": {
+        "function_list": [
+            "Burner()",
+            "dragonHandler(uint256)"
+        ],
+        "initial_state": {
+            "Burner()": {
+                "argument": {},
+                "contract": {
+                    "DragonsBurned": "uint256"
+                }
+            },
+            "dragonHandler(uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "DragonsBurned": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "dragonHandler(uint256)": [
+                70,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump355": [
+                "drag.burnDragons ( _amount )",
+                "drag.burnDragons ( _amount )"
+            ],
+            "block355": [
+                "drag.burnDragons ( _amount )"
+            ]
+        }
+    }
+}

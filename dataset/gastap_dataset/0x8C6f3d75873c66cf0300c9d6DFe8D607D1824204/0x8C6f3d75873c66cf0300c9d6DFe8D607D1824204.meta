@@ -1,0 +1,126 @@
+{
+    "ERC20": {
+        "function_list": [
+            "transfer(address,uint256)",
+            "balanceOf(address)"
+        ],
+        "initial_state": {
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transfer(address,uint256)": [
+                873,
+                273
+            ],
+            "balanceOf(address)": [
+                601,
+                185
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "ICOSyndicate": {
+        "function_list": [
+            "set_addresses(address,address)",
+            "activate_kill_switch()",
+            "withdraw(address)",
+            "buy()",
+            "fallback()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "set_addresses(address,address)": {
+                "argument": {},
+                "contract": {
+                    "contract_eth_value": "uint256",
+                    "eth_cap": "uint256"
+                }
+            },
+            "activate_kill_switch()": {
+                "argument": {},
+                "contract": {
+                    "contract_eth_value": "uint256",
+                    "eth_cap": "uint256"
+                }
+            },
+            "withdraw(address)": {
+                "argument": {},
+                "contract": {
+                    "contract_eth_value": "uint256",
+                    "eth_cap": "uint256"
+                }
+            },
+            "buy()": {
+                "argument": {},
+                "contract": {
+                    "contract_eth_value": "uint256",
+                    "eth_cap": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "contract_eth_value": "uint256",
+                    "eth_cap": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "withdraw(address)": [
+                545,
+                119
+            ],
+            "set_addresses(address,address)": [
+                446,
+                97
+            ],
+            "buy()": [
+                816,
+                229
+            ],
+            "activate_kill_switch()": [
+                746,
+                185
+            ]
+        },
+        "block_CALL_mapping": {
+            "block1551": [
+                "user.transfer(eth_to_withdraw)"
+            ],
+            "block2847": [
+                "sale.call.value(contract_eth_value)()"
+            ],
+            "block1948": [
+                "token.balanceOf(address(this))"
+            ],
+            "jump1551": [
+                "user.transfer(eth_to_withdraw)",
+                "user.transfer(eth_to_withdraw)"
+            ],
+            "block2448": [
+                "token.transfer(user, tokens_to_withdraw)"
+            ],
+            "jump2847": [
+                "sale.call.value(contract_eth_value)()",
+                "sale.call.value(contract_eth_value)()"
+            ],
+            "jump1948": [
+                "token.balanceOf(address(this))",
+                "token.balanceOf(address(this))"
+            ],
+            "jump2448": [
+                "token.transfer(user, tokens_to_withdraw)",
+                "token.transfer(user, tokens_to_withdraw)"
+            ]
+        }
+    }
+}

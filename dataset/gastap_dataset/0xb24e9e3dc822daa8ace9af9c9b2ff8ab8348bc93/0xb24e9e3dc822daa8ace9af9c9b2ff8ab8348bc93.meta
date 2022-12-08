@@ -1,0 +1,485 @@
+{
+    "multiowned": {
+        "function_list": [
+            "multiowned(address[],uint256)",
+            "revoke(bytes32)",
+            "changeOwner(address,address)",
+            "addOwner(address)",
+            "removeOwner(address)",
+            "changeRequirement(uint256)",
+            "getOwner(uint256)",
+            "isOwner(address)",
+            "hasConfirmed(bytes32,address)",
+            "confirmAndCheck(bytes32)",
+            "reorganizeOwners()",
+            "clearPending()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "multiowned(address[],uint256)": {
+                "argument": {
+                    "_owners": "address[]",
+                    "_required": "uint256"
+                },
+                "contract": {
+                    "m_required": "uint256",
+                    "m_numOwners": "uint256",
+                    "m_owners": "uint256[256]",
+                    "c_maxOwners": "uint256",
+                    "m_pendingIndex": "bytes32[]"
+                }
+            },
+            "revoke(bytes32)": {
+                "argument": {
+                    "_operation": "bytes32"
+                },
+                "contract": {
+                    "m_required": "uint256",
+                    "m_numOwners": "uint256",
+                    "m_owners": "uint256[256]",
+                    "c_maxOwners": "uint256",
+                    "m_pendingIndex": "bytes32[]"
+                }
+            },
+            "changeOwner(address,address)": {
+                "argument": {},
+                "contract": {
+                    "m_required": "uint256",
+                    "m_numOwners": "uint256",
+                    "m_owners": "uint256[256]",
+                    "c_maxOwners": "uint256",
+                    "m_pendingIndex": "bytes32[]"
+                }
+            },
+            "addOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "m_required": "uint256",
+                    "m_numOwners": "uint256",
+                    "m_owners": "uint256[256]",
+                    "c_maxOwners": "uint256",
+                    "m_pendingIndex": "bytes32[]"
+                }
+            },
+            "removeOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "m_required": "uint256",
+                    "m_numOwners": "uint256",
+                    "m_owners": "uint256[256]",
+                    "c_maxOwners": "uint256",
+                    "m_pendingIndex": "bytes32[]"
+                }
+            },
+            "changeRequirement(uint256)": {
+                "argument": {
+                    "_newRequired": "uint256"
+                },
+                "contract": {
+                    "m_required": "uint256",
+                    "m_numOwners": "uint256",
+                    "m_owners": "uint256[256]",
+                    "c_maxOwners": "uint256",
+                    "m_pendingIndex": "bytes32[]"
+                }
+            },
+            "getOwner(uint256)": {
+                "argument": {
+                    "ownerIndex": "uint256"
+                },
+                "contract": {
+                    "m_required": "uint256",
+                    "m_numOwners": "uint256",
+                    "m_owners": "uint256[256]",
+                    "c_maxOwners": "uint256",
+                    "m_pendingIndex": "bytes32[]"
+                }
+            },
+            "isOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "m_required": "uint256",
+                    "m_numOwners": "uint256",
+                    "m_owners": "uint256[256]",
+                    "c_maxOwners": "uint256",
+                    "m_pendingIndex": "bytes32[]"
+                }
+            },
+            "hasConfirmed(bytes32,address)": {
+                "argument": {
+                    "_operation": "bytes32"
+                },
+                "contract": {
+                    "m_required": "uint256",
+                    "m_numOwners": "uint256",
+                    "m_owners": "uint256[256]",
+                    "c_maxOwners": "uint256",
+                    "m_pendingIndex": "bytes32[]"
+                }
+            },
+            "confirmAndCheck(bytes32)": {
+                "argument": {
+                    "_operation": "bytes32"
+                },
+                "contract": {
+                    "m_required": "uint256",
+                    "m_numOwners": "uint256",
+                    "m_owners": "uint256[256]",
+                    "c_maxOwners": "uint256",
+                    "m_pendingIndex": "bytes32[]"
+                }
+            },
+            "reorganizeOwners()": {
+                "argument": {},
+                "contract": {
+                    "m_required": "uint256",
+                    "m_numOwners": "uint256",
+                    "m_owners": "uint256[256]",
+                    "c_maxOwners": "uint256",
+                    "m_pendingIndex": "bytes32[]"
+                }
+            },
+            "clearPending()": {
+                "argument": {},
+                "contract": {
+                    "m_required": "uint256",
+                    "m_numOwners": "uint256",
+                    "m_owners": "uint256[256]",
+                    "c_maxOwners": "uint256",
+                    "m_pendingIndex": "bytes32[]"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "m_required": "uint256",
+                    "m_numOwners": "uint256",
+                    "m_owners": "uint256[256]",
+                    "c_maxOwners": "uint256",
+                    "m_pendingIndex": "bytes32[]"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "revoke(bytes32)": [
+                480,
+                185
+            ],
+            "isOwner(address)": [
+                236,
+                97
+            ],
+            "hasConfirmed(bytes32,address)": [
+                574,
+                229
+            ],
+            "getOwner(uint256)": [
+                679,
+                251
+            ],
+            "removeOwner(address)": [
+                169,
+                75
+            ],
+            "changeRequirement(uint256)": [
+                529,
+                207
+            ],
+            "changeOwner(address,address)": [
+                788,
+                273
+            ],
+            "addOwner(address)": [
+                370,
+                141
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "multisig": {
+        "function_list": [
+            "changeOwner(address,address)",
+            "execute(address,uint256,bytes)",
+            "confirm(bytes32)"
+        ],
+        "initial_state": {
+            "changeOwner(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "execute(address,uint256,bytes)": {
+                "argument": {
+                    "_value": "uint256",
+                    "_data": "bytes"
+                },
+                "contract": {}
+            },
+            "confirm(bytes32)": {
+                "argument": {
+                    "_h": "bytes32"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "creator": {
+        "function_list": [
+            "doCreate(uint256,bytes)"
+        ],
+        "initial_state": {
+            "doCreate(uint256,bytes)": {
+                "argument": {
+                    "_value": "uint256",
+                    "_code": "bytes"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "Wallet": {
+        "function_list": [
+            "doCreate(uint256,bytes)",
+            "daylimit(uint256)",
+            "setDailyLimit(uint256)",
+            "resetSpentToday()",
+            "underLimit(uint256)",
+            "today()",
+            "multiowned(address[],uint256)",
+            "revoke(bytes32)",
+            "changeOwner(address,address)",
+            "addOwner(address)",
+            "removeOwner(address)",
+            "changeRequirement(uint256)",
+            "getOwner(uint256)",
+            "isOwner(address)",
+            "hasConfirmed(bytes32,address)",
+            "confirmAndCheck(bytes32)",
+            "reorganizeOwners()",
+            "clearPending()",
+            "changeOwner(address,address)",
+            "execute(address,uint256,bytes)",
+            "confirm(bytes32)",
+            "Wallet(address[],uint256,uint256)",
+            "kill(address)",
+            "fallback()",
+            "execute(address,uint256,bytes)",
+            "create(uint256,bytes)",
+            "confirm(bytes32)",
+            "clearPending()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "doCreate(uint256,bytes)": {
+                "argument": {
+                    "_value": "uint256",
+                    "_code": "bytes"
+                },
+                "contract": {}
+            },
+            "daylimit(uint256)": {
+                "argument": {
+                    "_limit": "uint256"
+                },
+                "contract": {}
+            },
+            "setDailyLimit(uint256)": {
+                "argument": {
+                    "_newLimit": "uint256"
+                },
+                "contract": {}
+            },
+            "resetSpentToday()": {
+                "argument": {},
+                "contract": {}
+            },
+            "underLimit(uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "today()": {
+                "argument": {},
+                "contract": {}
+            },
+            "multiowned(address[],uint256)": {
+                "argument": {
+                    "_owners": "address[]",
+                    "_required": "uint256"
+                },
+                "contract": {}
+            },
+            "revoke(bytes32)": {
+                "argument": {
+                    "_operation": "bytes32"
+                },
+                "contract": {}
+            },
+            "changeOwner(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "addOwner(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "removeOwner(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "changeRequirement(uint256)": {
+                "argument": {
+                    "_newRequired": "uint256"
+                },
+                "contract": {}
+            },
+            "getOwner(uint256)": {
+                "argument": {
+                    "ownerIndex": "uint256"
+                },
+                "contract": {}
+            },
+            "isOwner(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "hasConfirmed(bytes32,address)": {
+                "argument": {
+                    "_operation": "bytes32"
+                },
+                "contract": {}
+            },
+            "confirmAndCheck(bytes32)": {
+                "argument": {
+                    "_operation": "bytes32"
+                },
+                "contract": {}
+            },
+            "reorganizeOwners()": {
+                "argument": {},
+                "contract": {}
+            },
+            "clearPending()": {
+                "argument": {},
+                "contract": {}
+            },
+            "execute(address,uint256,bytes)": {
+                "argument": {
+                    "_value": "uint256",
+                    "_data": "bytes"
+                },
+                "contract": {}
+            },
+            "confirm(bytes32)": {
+                "argument": {
+                    "_h": "bytes32"
+                },
+                "contract": {}
+            },
+            "Wallet(address[],uint256,uint256)": {
+                "argument": {
+                    "_owners": "address[]",
+                    "_required": "uint256",
+                    "_daylimit": "uint256"
+                },
+                "contract": {}
+            },
+            "kill(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {}
+            },
+            "create(uint256,bytes)": {
+                "argument": {
+                    "_value": "uint256",
+                    "_code": "bytes"
+                },
+                "contract": {}
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "kill(address)": [
+                1346,
+                405
+            ],
+            "revoke(bytes32)": [
+                1038,
+                317
+            ],
+            "isOwner(address)": [
+                438,
+                97
+            ],
+            "hasConfirmed(bytes32,address)": [
+                1132,
+                361
+            ],
+            "getOwner(uint256)": [
+                1237,
+                383
+            ],
+            "removeOwner(address)": [
+                371,
+                75
+            ],
+            "confirm(bytes32)": [
+                791,
+                251
+            ],
+            "changeRequirement(uint256)": [
+                1087,
+                339
+            ],
+            "changeOwner(address,address)": [
+                1413,
+                427
+            ],
+            "execute(address,uint256,bytes)": [
+                909,
+                295
+            ],
+            "setDailyLimit(uint256)": [
+                864,
+                273
+            ],
+            "addOwner(address)": [
+                681,
+                207
+            ],
+            "resetSpentToday()": [
+                615,
+                163
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump2697": [
+                "m_txs[_h].to.call.value(m_txs[_h].value)(m_txs[_h].data)",
+                "m_txs[_h].to.call.value(m_txs[_h].value)(m_txs[_h].data)"
+            ],
+            "block3356": [
+                "_to.call.value(_value)(_data)"
+            ],
+            "block2697": [
+                "m_txs[_h].to.call.value(m_txs[_h].value)(m_txs[_h].data)"
+            ],
+            "jump2697_0": [
+                "m_txs[_h].to.call.value(m_txs[_h].value)(m_txs[_h].data)",
+                "m_txs[_h].to.call.value(m_txs[_h].value)(m_txs[_h].data)"
+            ],
+            "block2697_0": [
+                "m_txs[_h].to.call.value(m_txs[_h].value)(m_txs[_h].data)"
+            ]
+        }
+    }
+}

@@ -1,0 +1,1097 @@
+{
+    "ERC20Basic": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                124,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "BasicToken": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transfer(address,uint256)",
+            "balanceOf(address)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transfer(address,uint256)": [
+                222,
+                119
+            ],
+            "balanceOf(address)": [
+                135,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "ERC223Token": {
+        "function_list": [
+            "name()",
+            "symbol()",
+            "decimals()",
+            "totalSupply()",
+            "transfer(address,uint256,bytes)",
+            "transfer(address,uint256)",
+            "balanceOf(address)",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "name()",
+            "symbol()",
+            "decimals()",
+            "totalSupply()",
+            "transfer(address,uint256,bytes)",
+            "transfer(address,uint256)",
+            "isContract(address)"
+        ],
+        "initial_state": {
+            "name()": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8"
+                }
+            },
+            "symbol()": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8"
+                }
+            },
+            "decimals()": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8"
+                }
+            },
+            "totalSupply()": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8"
+                }
+            },
+            "transfer(address,uint256,bytes)": {
+                "argument": {
+                    "value": "uint256",
+                    "data": "bytes"
+                },
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8"
+                }
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8"
+                }
+            },
+            "isContract(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "symbol()": [
+                459,
+                163
+            ],
+            "balanceOf(address)": [
+                372,
+                141
+            ],
+            "totalSupply()": [
+                280,
+                97
+            ],
+            "name()": [
+                136,
+                75
+            ],
+            "transfer(address,uint256,bytes)": [
+                704,
+                207
+            ],
+            "transfer(address,uint256)": [
+                603,
+                185
+            ],
+            "decimals()": [
+                323,
+                119
+            ]
+        },
+        "block_CALL_mapping": {
+            "block2029_0": [
+                "receiver.tokenFallback(msg.sender, value, data)"
+            ],
+            "jump2029_0": [
+                "receiver.tokenFallback(msg.sender, value, data)",
+                "receiver.tokenFallback(msg.sender, value, data)"
+            ],
+            "block2029": [
+                "receiver.tokenFallback(msg.sender, value, data)"
+            ],
+            "jump2029": [
+                "receiver.tokenFallback(msg.sender, value, data)",
+                "receiver.tokenFallback(msg.sender, value, data)"
+            ]
+        }
+    },
+    "PullPayment": {
+        "function_list": [
+            "asyncSend(address,uint256)",
+            "withdrawPayments()"
+        ],
+        "initial_state": {
+            "asyncSend(address,uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {
+                    "totalPayments": "uint256"
+                }
+            },
+            "withdrawPayments()": {
+                "argument": {},
+                "contract": {
+                    "totalPayments": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "withdrawPayments()": [
+                134,
+                22
+            ]
+        },
+        "block_CALL_mapping": {
+            "block396": [
+                "payee.send(payment)"
+            ],
+            "jump396": [
+                "payee.send(payment)",
+                "payee.send(payment)"
+            ]
+        }
+    },
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "TrivialToken": {
+        "function_list": [
+            "asyncSend(address,uint256)",
+            "withdrawPayments()",
+            "name()",
+            "symbol()",
+            "decimals()",
+            "totalSupply()",
+            "transfer(address,uint256,bytes)",
+            "transfer(address,uint256)",
+            "isContract(address)",
+            "name()",
+            "symbol()",
+            "decimals()",
+            "totalSupply()",
+            "transfer(address,uint256,bytes)",
+            "transfer(address,uint256)",
+            "balanceOf(address)",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "TrivialToken(string,string,uint256,uint256,address,address,uint256,uint256,uint256)",
+            "startIco()",
+            "contributeInIco()",
+            "distributeTokens(uint256)",
+            "finishIco()",
+            "checkContribution(address)",
+            "startAuction()",
+            "bidInAuction()",
+            "calculateUserBid()",
+            "finishAuction()",
+            "withdrawShares(address)",
+            "isKeyHolder(address)",
+            "setAuctionWinnerMessageHash(bytes32)",
+            "killContract()",
+            "getContractState()",
+            "transfer(address,uint256,bytes)",
+            "transfer(address,uint256)",
+            "fallback()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "asyncSend(address,uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "contributors": "address[]"
+                }
+            },
+            "withdrawPayments()": {
+                "argument": {},
+                "contract": {
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "contributors": "address[]"
+                }
+            },
+            "name()": {
+                "argument": {},
+                "contract": {
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "contributors": "address[]"
+                }
+            },
+            "symbol()": {
+                "argument": {},
+                "contract": {
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "contributors": "address[]"
+                }
+            },
+            "decimals()": {
+                "argument": {},
+                "contract": {
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "contributors": "address[]"
+                }
+            },
+            "totalSupply()": {
+                "argument": {},
+                "contract": {
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "contributors": "address[]"
+                }
+            },
+            "transfer(address,uint256,bytes)": {
+                "argument": {
+                    "_value": "uint256",
+                    "_data": "bytes"
+                },
+                "contract": {
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "contributors": "address[]"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "contributors": "address[]"
+                }
+            },
+            "isContract(address)": {
+                "argument": {},
+                "contract": {
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "contributors": "address[]"
+                }
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "contributors": "address[]"
+                }
+            },
+            "TrivialToken(string,string,uint256,uint256,address,address,uint256,uint256,uint256)": {
+                "argument": {
+                    "_name": "string",
+                    "_symbol": "string",
+                    "_icoEndTime": "uint256",
+                    "_auctionDuration": "uint256",
+                    "_tokensForArtist": "uint256",
+                    "_tokensForTrivial": "uint256",
+                    "_tokensForIco": "uint256"
+                },
+                "contract": {
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "contributors": "address[]"
+                }
+            },
+            "startIco()": {
+                "argument": {},
+                "contract": {
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "contributors": "address[]"
+                }
+            },
+            "contributeInIco()": {
+                "argument": {},
+                "contract": {
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "contributors": "address[]"
+                }
+            },
+            "distributeTokens(uint256)": {
+                "argument": {
+                    "contributorsNumber": "uint256"
+                },
+                "contract": {
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "contributors": "address[]"
+                }
+            },
+            "finishIco()": {
+                "argument": {},
+                "contract": {
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "contributors": "address[]"
+                }
+            },
+            "checkContribution(address)": {
+                "argument": {},
+                "contract": {
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "contributors": "address[]"
+                }
+            },
+            "startAuction()": {
+                "argument": {},
+                "contract": {
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "contributors": "address[]"
+                }
+            },
+            "bidInAuction()": {
+                "argument": {},
+                "contract": {
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "contributors": "address[]"
+                }
+            },
+            "calculateUserBid()": {
+                "argument": {},
+                "contract": {
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "contributors": "address[]"
+                }
+            },
+            "finishAuction()": {
+                "argument": {},
+                "contract": {
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "contributors": "address[]"
+                }
+            },
+            "withdrawShares(address)": {
+                "argument": {},
+                "contract": {
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "contributors": "address[]"
+                }
+            },
+            "isKeyHolder(address)": {
+                "argument": {},
+                "contract": {
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "contributors": "address[]"
+                }
+            },
+            "setAuctionWinnerMessageHash(bytes32)": {
+                "argument": {
+                    "_auctionWinnerMessageHash": "bytes32"
+                },
+                "contract": {
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "contributors": "address[]"
+                }
+            },
+            "killContract()": {
+                "argument": {},
+                "contract": {
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "contributors": "address[]"
+                }
+            },
+            "getContractState()": {
+                "argument": {},
+                "contract": {
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "contributors": "address[]"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "contributors": "address[]"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "contributors": "address[]"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "startAuction()": [
+                1514,
+                418
+            ],
+            "balanceOf(address)": [
+                1537,
+                440
+            ],
+            "totalSupply()": [
+                931,
+                154
+            ],
+            "finishAuction()": [
+                1242,
+                264
+            ],
+            "withdrawShares(address)": [
+                2970,
+                858
+            ],
+            "startIco()": [
+                2019,
+                594
+            ],
+            "withdrawPayments()": [
+                1491,
+                396
+            ],
+            "killContract()": [
+                974,
+                176
+            ],
+            "setAuctionWinnerMessageHash(bytes32)": [
+                795,
+                110
+            ],
+            "contributeInIco()": [
+                1481,
+                374
+            ],
+            "distributeTokens(uint256)": [
+                1667,
+                484
+            ],
+            "symbol()": [
+                2172,
+                660
+            ],
+            "getContractState()": [
+                1798,
+                550
+            ],
+            "checkContribution(address)": [
+                2468,
+                726
+            ],
+            "name()": [
+                541,
+                22
+            ],
+            "transfer(address,uint256,bytes)": [
+                2555,
+                748
+            ],
+            "isKeyHolder(address)": [
+                2769,
+                792
+            ],
+            "bidInAuction()": [
+                685,
+                44
+            ],
+            "finishIco()": [
+                2947,
+                836
+            ],
+            "transfer(address,uint256)": [
+                2316,
+                682
+            ],
+            "decimals()": [
+                997,
+                198
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump8962": [
+                "holder.transfer(\n                SafeMath.div(SafeMath.mul(highestBid, availableTokens), TOTAL_SUPPLY)\n            )",
+                "holder.transfer(\n                SafeMath.div(SafeMath.mul(highestBid, availableTokens), TOTAL_SUPPLY)\n            )"
+            ],
+            "jump8236": [
+                "artist.send(this.balance)",
+                "artist.send(this.balance)"
+            ],
+            "block5465": [
+                "payee.send(payment)"
+            ],
+            "block8236": [
+                "artist.send(this.balance)"
+            ],
+            "block9994_0": [
+                "receiver.tokenFallback(msg.sender, value, data)"
+            ],
+            "jump9994_0": [
+                "receiver.tokenFallback(msg.sender, value, data)",
+                "receiver.tokenFallback(msg.sender, value, data)"
+            ],
+            "block8962": [
+                "holder.transfer(\n                SafeMath.div(SafeMath.mul(highestBid, availableTokens), TOTAL_SUPPLY)\n            )"
+            ],
+            "jump5465": [
+                "payee.send(payment)",
+                "payee.send(payment)"
+            ],
+            "jump9994": [
+                "receiver.tokenFallback(msg.sender, value, data)",
+                "receiver.tokenFallback(msg.sender, value, data)"
+            ],
+            "block3425": [
+                "highestBidder.send(amountToReturn)"
+            ],
+            "block9994": [
+                "receiver.tokenFallback(msg.sender, value, data)"
+            ],
+            "jump3425": [
+                "highestBidder.send(amountToReturn)",
+                "highestBidder.send(amountToReturn)"
+            ]
+        }
+    }
+}

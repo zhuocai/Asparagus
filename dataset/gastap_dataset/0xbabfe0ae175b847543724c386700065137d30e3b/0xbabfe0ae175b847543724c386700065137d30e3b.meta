@@ -1,0 +1,117 @@
+{
+    "PrivateBank": {
+        "function_list": [
+            "GetBal()",
+            "PrivateBank(address)",
+            "Deposit()",
+            "CashOut(uint256)",
+            "fallback()",
+            "bal()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "GetBal()": {
+                "argument": {},
+                "contract": {
+                    "MinDeposit": "uint256"
+                }
+            },
+            "PrivateBank(address)": {
+                "argument": {},
+                "contract": {
+                    "MinDeposit": "uint256"
+                }
+            },
+            "Deposit()": {
+                "argument": {},
+                "contract": {
+                    "MinDeposit": "uint256"
+                }
+            },
+            "CashOut(uint256)": {
+                "argument": {
+                    "_am": "uint256"
+                },
+                "contract": {
+                    "MinDeposit": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "MinDeposit": "uint256"
+                }
+            },
+            "bal()": {
+                "argument": {},
+                "contract": {
+                    "MinDeposit": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "CashOut(uint256)": [
+                197,
+                119
+            ],
+            "Deposit()": [
+                285,
+                163
+            ],
+            "GetBal()": [
+                242,
+                141
+            ],
+            "bal()": [
+                154,
+                97
+            ]
+        },
+        "block_CALL_mapping": {
+            "block404": [
+                "msg.sender.call.value(_am)()"
+            ],
+            "block782": [
+                "TransferLog.AddMessage(msg.sender,_am,\"CashOut\")"
+            ],
+            "jump404": [
+                "msg.sender.call.value(_am)()",
+                "msg.sender.call.value(_am)()"
+            ],
+            "block1222": [
+                "TransferLog.AddMessage(msg.sender,msg.value,\"Deposit\")"
+            ],
+            "jump1222": [
+                "TransferLog.AddMessage(msg.sender,msg.value,\"Deposit\")",
+                "TransferLog.AddMessage(msg.sender,msg.value,\"Deposit\")"
+            ],
+            "jump782": [
+                "TransferLog.AddMessage(msg.sender,_am,\"CashOut\")",
+                "TransferLog.AddMessage(msg.sender,_am,\"CashOut\")"
+            ]
+        }
+    },
+    "Log": {
+        "function_list": [
+            "AddMessage(address,uint256,string)"
+        ],
+        "initial_state": {
+            "AddMessage(address,uint256,string)": {
+                "argument": {
+                    "_val": "uint256",
+                    "_data": "string"
+                },
+                "contract": {
+                    "History": "Log.Message[]"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "AddMessage(address,uint256,string)": [
+                301,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    }
+}

@@ -1,0 +1,202 @@
+{
+    "Lottery": {
+        "function_list": [
+            "cancel_lottery()",
+            "host_lottery(bytes32)",
+            "steal_reveal(address,uint256)",
+            "host_reveal(uint256)",
+            "host_claim_earnings(address)",
+            "claim_winnings(address)",
+            "withdraw(address)",
+            "fallback()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "cancel_lottery()": {
+                "argument": {},
+                "contract": {
+                    "num_hosts": "uint256",
+                    "num_hosts_revealed": "uint256",
+                    "rng": "uint256",
+                    "total_user_eth": "uint256",
+                    "total_user_eth_cap": "uint256",
+                    "host_percentage": "uint256",
+                    "buy_end_time": "uint256",
+                    "commit_end_time": "uint256",
+                    "reveal_end_time": "uint256"
+                }
+            },
+            "host_lottery(bytes32)": {
+                "argument": {
+                    "commit": "bytes32"
+                },
+                "contract": {
+                    "num_hosts": "uint256",
+                    "num_hosts_revealed": "uint256",
+                    "rng": "uint256",
+                    "total_user_eth": "uint256",
+                    "total_user_eth_cap": "uint256",
+                    "host_percentage": "uint256",
+                    "buy_end_time": "uint256",
+                    "commit_end_time": "uint256",
+                    "reveal_end_time": "uint256"
+                }
+            },
+            "steal_reveal(address,uint256)": {
+                "argument": {
+                    "secret_random_number": "uint256"
+                },
+                "contract": {
+                    "num_hosts": "uint256",
+                    "num_hosts_revealed": "uint256",
+                    "rng": "uint256",
+                    "total_user_eth": "uint256",
+                    "total_user_eth_cap": "uint256",
+                    "host_percentage": "uint256",
+                    "buy_end_time": "uint256",
+                    "commit_end_time": "uint256",
+                    "reveal_end_time": "uint256"
+                }
+            },
+            "host_reveal(uint256)": {
+                "argument": {
+                    "secret_random_number": "uint256"
+                },
+                "contract": {
+                    "num_hosts": "uint256",
+                    "num_hosts_revealed": "uint256",
+                    "rng": "uint256",
+                    "total_user_eth": "uint256",
+                    "total_user_eth_cap": "uint256",
+                    "host_percentage": "uint256",
+                    "buy_end_time": "uint256",
+                    "commit_end_time": "uint256",
+                    "reveal_end_time": "uint256"
+                }
+            },
+            "host_claim_earnings(address)": {
+                "argument": {},
+                "contract": {
+                    "num_hosts": "uint256",
+                    "num_hosts_revealed": "uint256",
+                    "rng": "uint256",
+                    "total_user_eth": "uint256",
+                    "total_user_eth_cap": "uint256",
+                    "host_percentage": "uint256",
+                    "buy_end_time": "uint256",
+                    "commit_end_time": "uint256",
+                    "reveal_end_time": "uint256"
+                }
+            },
+            "claim_winnings(address)": {
+                "argument": {},
+                "contract": {
+                    "num_hosts": "uint256",
+                    "num_hosts_revealed": "uint256",
+                    "rng": "uint256",
+                    "total_user_eth": "uint256",
+                    "total_user_eth_cap": "uint256",
+                    "host_percentage": "uint256",
+                    "buy_end_time": "uint256",
+                    "commit_end_time": "uint256",
+                    "reveal_end_time": "uint256"
+                }
+            },
+            "withdraw(address)": {
+                "argument": {},
+                "contract": {
+                    "num_hosts": "uint256",
+                    "num_hosts_revealed": "uint256",
+                    "rng": "uint256",
+                    "total_user_eth": "uint256",
+                    "total_user_eth_cap": "uint256",
+                    "host_percentage": "uint256",
+                    "buy_end_time": "uint256",
+                    "commit_end_time": "uint256",
+                    "reveal_end_time": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "num_hosts": "uint256",
+                    "num_hosts_revealed": "uint256",
+                    "rng": "uint256",
+                    "total_user_eth": "uint256",
+                    "total_user_eth_cap": "uint256",
+                    "host_percentage": "uint256",
+                    "buy_end_time": "uint256",
+                    "commit_end_time": "uint256",
+                    "reveal_end_time": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "steal_reveal(address,uint256)": [
+                771,
+                119
+            ],
+            "host_claim_earnings(address)": [
+                960,
+                185
+            ],
+            "claim_winnings(address)": [
+                1390,
+                317
+            ],
+            "cancel_lottery()": [
+                1229,
+                251
+            ],
+            "host_lottery(bytes32)": [
+                1027,
+                207
+            ],
+            "withdraw(address)": [
+                893,
+                163
+            ],
+            "host_reveal(uint256)": [
+                848,
+                141
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump3982": [
+                "winner.transfer(total_user_eth * (100 - host_percentage) / 100)",
+                "winner.transfer(total_user_eth * (100 - host_percentage) / 100)"
+            ],
+            "block2988": [
+                "host.transfer(total_user_eth * host_percentage / (num_hosts * 100))"
+            ],
+            "jump2226": [
+                "msg.sender.transfer(total_user_eth)",
+                "msg.sender.transfer(total_user_eth)"
+            ],
+            "jump2988": [
+                "host.transfer(total_user_eth * host_percentage / (num_hosts * 100))",
+                "host.transfer(total_user_eth * host_percentage / (num_hosts * 100))"
+            ],
+            "block3982": [
+                "winner.transfer(total_user_eth * (100 - host_percentage) / 100)"
+            ],
+            "block2226": [
+                "msg.sender.transfer(total_user_eth)"
+            ],
+            "block1910": [
+                "msg.sender.transfer(total_user_eth)"
+            ],
+            "block2567": [
+                "user.transfer(eth_to_withdraw)"
+            ],
+            "jump1910": [
+                "msg.sender.transfer(total_user_eth)",
+                "msg.sender.transfer(total_user_eth)"
+            ],
+            "jump2567": [
+                "user.transfer(eth_to_withdraw)",
+                "user.transfer(eth_to_withdraw)"
+            ]
+        }
+    }
+}

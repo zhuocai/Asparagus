@@ -1,0 +1,842 @@
+{
+    "SafeMath": {
+        "function_list": [
+            "SafeMath()",
+            "safeAdd(uint256,uint256)",
+            "safeSub(uint256,uint256)",
+            "safeMul(uint256,uint256)"
+        ],
+        "initial_state": {
+            "SafeMath()": {
+                "argument": {},
+                "contract": {}
+            },
+            "safeAdd(uint256,uint256)": {
+                "argument": {
+                    "_x": "uint256",
+                    "_y": "uint256"
+                },
+                "contract": {}
+            },
+            "safeSub(uint256,uint256)": {
+                "argument": {
+                    "_x": "uint256",
+                    "_y": "uint256"
+                },
+                "contract": {}
+            },
+            "safeMul(uint256,uint256)": {
+                "argument": {
+                    "_x": "uint256",
+                    "_y": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "TokenAuction": {
+        "function_list": [
+            "SafeMath()",
+            "safeAdd(uint256,uint256)",
+            "safeSub(uint256,uint256)",
+            "safeMul(uint256,uint256)",
+            "TokenAuction()",
+            "lock()",
+            "setToken(iBurnableToken,uint256,address)",
+            "setAuctionParms(uint256,uint256,uint256)",
+            "reserveDeveloperTokens(address,uint256)",
+            "tune(uint256,uint256)",
+            "houseKeep()",
+            "setStrikePrice(uint256,uint256)",
+            "fallback()",
+            "depositSecretBid(bytes32,bytes)",
+            "disqualifyBid(address,bool)",
+            "executeBid(uint256,uint256,uint256)",
+            "executeBidFor(address,uint256,uint256,uint256)",
+            "expireBid(address)",
+            "withdrawRefund()",
+            "doDeveloperGrant()",
+            "payUnderwriter()",
+            "haraKiri()",
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "SafeMath()": {
+                "argument": {},
+                "contract": {
+                    "AUCTION_START_EVENT": "uint256",
+                    "AUCTION_END_EVENT": "uint256",
+                    "SALE_START_EVENT": "uint256",
+                    "SALE_END_EVENT": "uint256",
+                    "stateMask": "uint256",
+                    "proceeds": "uint256",
+                    "strikePrice": "uint256",
+                    "strikePricePctX10": "uint256",
+                    "decimalMultiplier": "uint256",
+                    "developerReserve": "uint256",
+                    "developerPctX10K": "uint256",
+                    "purchasedCount": "uint256",
+                    "secretBidCount": "uint256",
+                    "executedCount": "uint256",
+                    "expiredCount": "uint256",
+                    "saleDuration": "uint256",
+                    "auctionStart": "uint256",
+                    "auctionEnd": "uint256",
+                    "saleEnd": "uint256",
+                    "batchSize": "uint256",
+                    "contractSendGas": "uint256"
+                }
+            },
+            "safeAdd(uint256,uint256)": {
+                "argument": {
+                    "_x": "uint256",
+                    "_y": "uint256"
+                },
+                "contract": {
+                    "AUCTION_START_EVENT": "uint256",
+                    "AUCTION_END_EVENT": "uint256",
+                    "SALE_START_EVENT": "uint256",
+                    "SALE_END_EVENT": "uint256",
+                    "stateMask": "uint256",
+                    "proceeds": "uint256",
+                    "strikePrice": "uint256",
+                    "strikePricePctX10": "uint256",
+                    "decimalMultiplier": "uint256",
+                    "developerReserve": "uint256",
+                    "developerPctX10K": "uint256",
+                    "purchasedCount": "uint256",
+                    "secretBidCount": "uint256",
+                    "executedCount": "uint256",
+                    "expiredCount": "uint256",
+                    "saleDuration": "uint256",
+                    "auctionStart": "uint256",
+                    "auctionEnd": "uint256",
+                    "saleEnd": "uint256",
+                    "batchSize": "uint256",
+                    "contractSendGas": "uint256"
+                }
+            },
+            "safeSub(uint256,uint256)": {
+                "argument": {
+                    "_x": "uint256",
+                    "_y": "uint256"
+                },
+                "contract": {
+                    "AUCTION_START_EVENT": "uint256",
+                    "AUCTION_END_EVENT": "uint256",
+                    "SALE_START_EVENT": "uint256",
+                    "SALE_END_EVENT": "uint256",
+                    "stateMask": "uint256",
+                    "proceeds": "uint256",
+                    "strikePrice": "uint256",
+                    "strikePricePctX10": "uint256",
+                    "decimalMultiplier": "uint256",
+                    "developerReserve": "uint256",
+                    "developerPctX10K": "uint256",
+                    "purchasedCount": "uint256",
+                    "secretBidCount": "uint256",
+                    "executedCount": "uint256",
+                    "expiredCount": "uint256",
+                    "saleDuration": "uint256",
+                    "auctionStart": "uint256",
+                    "auctionEnd": "uint256",
+                    "saleEnd": "uint256",
+                    "batchSize": "uint256",
+                    "contractSendGas": "uint256"
+                }
+            },
+            "safeMul(uint256,uint256)": {
+                "argument": {
+                    "_x": "uint256",
+                    "_y": "uint256"
+                },
+                "contract": {
+                    "AUCTION_START_EVENT": "uint256",
+                    "AUCTION_END_EVENT": "uint256",
+                    "SALE_START_EVENT": "uint256",
+                    "SALE_END_EVENT": "uint256",
+                    "stateMask": "uint256",
+                    "proceeds": "uint256",
+                    "strikePrice": "uint256",
+                    "strikePricePctX10": "uint256",
+                    "decimalMultiplier": "uint256",
+                    "developerReserve": "uint256",
+                    "developerPctX10K": "uint256",
+                    "purchasedCount": "uint256",
+                    "secretBidCount": "uint256",
+                    "executedCount": "uint256",
+                    "expiredCount": "uint256",
+                    "saleDuration": "uint256",
+                    "auctionStart": "uint256",
+                    "auctionEnd": "uint256",
+                    "saleEnd": "uint256",
+                    "batchSize": "uint256",
+                    "contractSendGas": "uint256"
+                }
+            },
+            "TokenAuction()": {
+                "argument": {},
+                "contract": {
+                    "AUCTION_START_EVENT": "uint256",
+                    "AUCTION_END_EVENT": "uint256",
+                    "SALE_START_EVENT": "uint256",
+                    "SALE_END_EVENT": "uint256",
+                    "stateMask": "uint256",
+                    "proceeds": "uint256",
+                    "strikePrice": "uint256",
+                    "strikePricePctX10": "uint256",
+                    "decimalMultiplier": "uint256",
+                    "developerReserve": "uint256",
+                    "developerPctX10K": "uint256",
+                    "purchasedCount": "uint256",
+                    "secretBidCount": "uint256",
+                    "executedCount": "uint256",
+                    "expiredCount": "uint256",
+                    "saleDuration": "uint256",
+                    "auctionStart": "uint256",
+                    "auctionEnd": "uint256",
+                    "saleEnd": "uint256",
+                    "batchSize": "uint256",
+                    "contractSendGas": "uint256"
+                }
+            },
+            "lock()": {
+                "argument": {},
+                "contract": {
+                    "AUCTION_START_EVENT": "uint256",
+                    "AUCTION_END_EVENT": "uint256",
+                    "SALE_START_EVENT": "uint256",
+                    "SALE_END_EVENT": "uint256",
+                    "stateMask": "uint256",
+                    "proceeds": "uint256",
+                    "strikePrice": "uint256",
+                    "strikePricePctX10": "uint256",
+                    "decimalMultiplier": "uint256",
+                    "developerReserve": "uint256",
+                    "developerPctX10K": "uint256",
+                    "purchasedCount": "uint256",
+                    "secretBidCount": "uint256",
+                    "executedCount": "uint256",
+                    "expiredCount": "uint256",
+                    "saleDuration": "uint256",
+                    "auctionStart": "uint256",
+                    "auctionEnd": "uint256",
+                    "saleEnd": "uint256",
+                    "batchSize": "uint256",
+                    "contractSendGas": "uint256"
+                }
+            },
+            "setToken(iBurnableToken,uint256,address)": {
+                "argument": {
+                    "_decimalMultiplier": "uint256"
+                },
+                "contract": {
+                    "AUCTION_START_EVENT": "uint256",
+                    "AUCTION_END_EVENT": "uint256",
+                    "SALE_START_EVENT": "uint256",
+                    "SALE_END_EVENT": "uint256",
+                    "stateMask": "uint256",
+                    "proceeds": "uint256",
+                    "strikePrice": "uint256",
+                    "strikePricePctX10": "uint256",
+                    "decimalMultiplier": "uint256",
+                    "developerReserve": "uint256",
+                    "developerPctX10K": "uint256",
+                    "purchasedCount": "uint256",
+                    "secretBidCount": "uint256",
+                    "executedCount": "uint256",
+                    "expiredCount": "uint256",
+                    "saleDuration": "uint256",
+                    "auctionStart": "uint256",
+                    "auctionEnd": "uint256",
+                    "saleEnd": "uint256",
+                    "batchSize": "uint256",
+                    "contractSendGas": "uint256"
+                }
+            },
+            "setAuctionParms(uint256,uint256,uint256)": {
+                "argument": {
+                    "_auctionStart": "uint256",
+                    "_auctionDuration": "uint256",
+                    "_saleDuration": "uint256"
+                },
+                "contract": {
+                    "AUCTION_START_EVENT": "uint256",
+                    "AUCTION_END_EVENT": "uint256",
+                    "SALE_START_EVENT": "uint256",
+                    "SALE_END_EVENT": "uint256",
+                    "stateMask": "uint256",
+                    "proceeds": "uint256",
+                    "strikePrice": "uint256",
+                    "strikePricePctX10": "uint256",
+                    "decimalMultiplier": "uint256",
+                    "developerReserve": "uint256",
+                    "developerPctX10K": "uint256",
+                    "purchasedCount": "uint256",
+                    "secretBidCount": "uint256",
+                    "executedCount": "uint256",
+                    "expiredCount": "uint256",
+                    "saleDuration": "uint256",
+                    "auctionStart": "uint256",
+                    "auctionEnd": "uint256",
+                    "saleEnd": "uint256",
+                    "batchSize": "uint256",
+                    "contractSendGas": "uint256"
+                }
+            },
+            "reserveDeveloperTokens(address,uint256)": {
+                "argument": {
+                    "_developerPctX10K": "uint256"
+                },
+                "contract": {
+                    "AUCTION_START_EVENT": "uint256",
+                    "AUCTION_END_EVENT": "uint256",
+                    "SALE_START_EVENT": "uint256",
+                    "SALE_END_EVENT": "uint256",
+                    "stateMask": "uint256",
+                    "proceeds": "uint256",
+                    "strikePrice": "uint256",
+                    "strikePricePctX10": "uint256",
+                    "decimalMultiplier": "uint256",
+                    "developerReserve": "uint256",
+                    "developerPctX10K": "uint256",
+                    "purchasedCount": "uint256",
+                    "secretBidCount": "uint256",
+                    "executedCount": "uint256",
+                    "expiredCount": "uint256",
+                    "saleDuration": "uint256",
+                    "auctionStart": "uint256",
+                    "auctionEnd": "uint256",
+                    "saleEnd": "uint256",
+                    "batchSize": "uint256",
+                    "contractSendGas": "uint256"
+                }
+            },
+            "tune(uint256,uint256)": {
+                "argument": {
+                    "_batchSize": "uint256",
+                    "_contractSendGas": "uint256"
+                },
+                "contract": {
+                    "AUCTION_START_EVENT": "uint256",
+                    "AUCTION_END_EVENT": "uint256",
+                    "SALE_START_EVENT": "uint256",
+                    "SALE_END_EVENT": "uint256",
+                    "stateMask": "uint256",
+                    "proceeds": "uint256",
+                    "strikePrice": "uint256",
+                    "strikePricePctX10": "uint256",
+                    "decimalMultiplier": "uint256",
+                    "developerReserve": "uint256",
+                    "developerPctX10K": "uint256",
+                    "purchasedCount": "uint256",
+                    "secretBidCount": "uint256",
+                    "executedCount": "uint256",
+                    "expiredCount": "uint256",
+                    "saleDuration": "uint256",
+                    "auctionStart": "uint256",
+                    "auctionEnd": "uint256",
+                    "saleEnd": "uint256",
+                    "batchSize": "uint256",
+                    "contractSendGas": "uint256"
+                }
+            },
+            "houseKeep()": {
+                "argument": {},
+                "contract": {
+                    "AUCTION_START_EVENT": "uint256",
+                    "AUCTION_END_EVENT": "uint256",
+                    "SALE_START_EVENT": "uint256",
+                    "SALE_END_EVENT": "uint256",
+                    "stateMask": "uint256",
+                    "proceeds": "uint256",
+                    "strikePrice": "uint256",
+                    "strikePricePctX10": "uint256",
+                    "decimalMultiplier": "uint256",
+                    "developerReserve": "uint256",
+                    "developerPctX10K": "uint256",
+                    "purchasedCount": "uint256",
+                    "secretBidCount": "uint256",
+                    "executedCount": "uint256",
+                    "expiredCount": "uint256",
+                    "saleDuration": "uint256",
+                    "auctionStart": "uint256",
+                    "auctionEnd": "uint256",
+                    "saleEnd": "uint256",
+                    "batchSize": "uint256",
+                    "contractSendGas": "uint256"
+                }
+            },
+            "setStrikePrice(uint256,uint256)": {
+                "argument": {
+                    "_strikePrice": "uint256",
+                    "_strikePricePctX10": "uint256"
+                },
+                "contract": {
+                    "AUCTION_START_EVENT": "uint256",
+                    "AUCTION_END_EVENT": "uint256",
+                    "SALE_START_EVENT": "uint256",
+                    "SALE_END_EVENT": "uint256",
+                    "stateMask": "uint256",
+                    "proceeds": "uint256",
+                    "strikePrice": "uint256",
+                    "strikePricePctX10": "uint256",
+                    "decimalMultiplier": "uint256",
+                    "developerReserve": "uint256",
+                    "developerPctX10K": "uint256",
+                    "purchasedCount": "uint256",
+                    "secretBidCount": "uint256",
+                    "executedCount": "uint256",
+                    "expiredCount": "uint256",
+                    "saleDuration": "uint256",
+                    "auctionStart": "uint256",
+                    "auctionEnd": "uint256",
+                    "saleEnd": "uint256",
+                    "batchSize": "uint256",
+                    "contractSendGas": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "AUCTION_START_EVENT": "uint256",
+                    "AUCTION_END_EVENT": "uint256",
+                    "SALE_START_EVENT": "uint256",
+                    "SALE_END_EVENT": "uint256",
+                    "stateMask": "uint256",
+                    "proceeds": "uint256",
+                    "strikePrice": "uint256",
+                    "strikePricePctX10": "uint256",
+                    "decimalMultiplier": "uint256",
+                    "developerReserve": "uint256",
+                    "developerPctX10K": "uint256",
+                    "purchasedCount": "uint256",
+                    "secretBidCount": "uint256",
+                    "executedCount": "uint256",
+                    "expiredCount": "uint256",
+                    "saleDuration": "uint256",
+                    "auctionStart": "uint256",
+                    "auctionEnd": "uint256",
+                    "saleEnd": "uint256",
+                    "batchSize": "uint256",
+                    "contractSendGas": "uint256"
+                }
+            },
+            "depositSecretBid(bytes32,bytes)": {
+                "argument": {
+                    "_hash": "bytes32",
+                    "_message": "bytes"
+                },
+                "contract": {
+                    "AUCTION_START_EVENT": "uint256",
+                    "AUCTION_END_EVENT": "uint256",
+                    "SALE_START_EVENT": "uint256",
+                    "SALE_END_EVENT": "uint256",
+                    "stateMask": "uint256",
+                    "proceeds": "uint256",
+                    "strikePrice": "uint256",
+                    "strikePricePctX10": "uint256",
+                    "decimalMultiplier": "uint256",
+                    "developerReserve": "uint256",
+                    "developerPctX10K": "uint256",
+                    "purchasedCount": "uint256",
+                    "secretBidCount": "uint256",
+                    "executedCount": "uint256",
+                    "expiredCount": "uint256",
+                    "saleDuration": "uint256",
+                    "auctionStart": "uint256",
+                    "auctionEnd": "uint256",
+                    "saleEnd": "uint256",
+                    "batchSize": "uint256",
+                    "contractSendGas": "uint256"
+                }
+            },
+            "disqualifyBid(address,bool)": {
+                "argument": {},
+                "contract": {
+                    "AUCTION_START_EVENT": "uint256",
+                    "AUCTION_END_EVENT": "uint256",
+                    "SALE_START_EVENT": "uint256",
+                    "SALE_END_EVENT": "uint256",
+                    "stateMask": "uint256",
+                    "proceeds": "uint256",
+                    "strikePrice": "uint256",
+                    "strikePricePctX10": "uint256",
+                    "decimalMultiplier": "uint256",
+                    "developerReserve": "uint256",
+                    "developerPctX10K": "uint256",
+                    "purchasedCount": "uint256",
+                    "secretBidCount": "uint256",
+                    "executedCount": "uint256",
+                    "expiredCount": "uint256",
+                    "saleDuration": "uint256",
+                    "auctionStart": "uint256",
+                    "auctionEnd": "uint256",
+                    "saleEnd": "uint256",
+                    "batchSize": "uint256",
+                    "contractSendGas": "uint256"
+                }
+            },
+            "executeBid(uint256,uint256,uint256)": {
+                "argument": {
+                    "_secret": "uint256",
+                    "_price": "uint256",
+                    "_quantity": "uint256"
+                },
+                "contract": {
+                    "AUCTION_START_EVENT": "uint256",
+                    "AUCTION_END_EVENT": "uint256",
+                    "SALE_START_EVENT": "uint256",
+                    "SALE_END_EVENT": "uint256",
+                    "stateMask": "uint256",
+                    "proceeds": "uint256",
+                    "strikePrice": "uint256",
+                    "strikePricePctX10": "uint256",
+                    "decimalMultiplier": "uint256",
+                    "developerReserve": "uint256",
+                    "developerPctX10K": "uint256",
+                    "purchasedCount": "uint256",
+                    "secretBidCount": "uint256",
+                    "executedCount": "uint256",
+                    "expiredCount": "uint256",
+                    "saleDuration": "uint256",
+                    "auctionStart": "uint256",
+                    "auctionEnd": "uint256",
+                    "saleEnd": "uint256",
+                    "batchSize": "uint256",
+                    "contractSendGas": "uint256"
+                }
+            },
+            "executeBidFor(address,uint256,uint256,uint256)": {
+                "argument": {
+                    "_secret": "uint256",
+                    "_price": "uint256",
+                    "_quantity": "uint256"
+                },
+                "contract": {
+                    "AUCTION_START_EVENT": "uint256",
+                    "AUCTION_END_EVENT": "uint256",
+                    "SALE_START_EVENT": "uint256",
+                    "SALE_END_EVENT": "uint256",
+                    "stateMask": "uint256",
+                    "proceeds": "uint256",
+                    "strikePrice": "uint256",
+                    "strikePricePctX10": "uint256",
+                    "decimalMultiplier": "uint256",
+                    "developerReserve": "uint256",
+                    "developerPctX10K": "uint256",
+                    "purchasedCount": "uint256",
+                    "secretBidCount": "uint256",
+                    "executedCount": "uint256",
+                    "expiredCount": "uint256",
+                    "saleDuration": "uint256",
+                    "auctionStart": "uint256",
+                    "auctionEnd": "uint256",
+                    "saleEnd": "uint256",
+                    "batchSize": "uint256",
+                    "contractSendGas": "uint256"
+                }
+            },
+            "expireBid(address)": {
+                "argument": {},
+                "contract": {
+                    "AUCTION_START_EVENT": "uint256",
+                    "AUCTION_END_EVENT": "uint256",
+                    "SALE_START_EVENT": "uint256",
+                    "SALE_END_EVENT": "uint256",
+                    "stateMask": "uint256",
+                    "proceeds": "uint256",
+                    "strikePrice": "uint256",
+                    "strikePricePctX10": "uint256",
+                    "decimalMultiplier": "uint256",
+                    "developerReserve": "uint256",
+                    "developerPctX10K": "uint256",
+                    "purchasedCount": "uint256",
+                    "secretBidCount": "uint256",
+                    "executedCount": "uint256",
+                    "expiredCount": "uint256",
+                    "saleDuration": "uint256",
+                    "auctionStart": "uint256",
+                    "auctionEnd": "uint256",
+                    "saleEnd": "uint256",
+                    "batchSize": "uint256",
+                    "contractSendGas": "uint256"
+                }
+            },
+            "withdrawRefund()": {
+                "argument": {},
+                "contract": {
+                    "AUCTION_START_EVENT": "uint256",
+                    "AUCTION_END_EVENT": "uint256",
+                    "SALE_START_EVENT": "uint256",
+                    "SALE_END_EVENT": "uint256",
+                    "stateMask": "uint256",
+                    "proceeds": "uint256",
+                    "strikePrice": "uint256",
+                    "strikePricePctX10": "uint256",
+                    "decimalMultiplier": "uint256",
+                    "developerReserve": "uint256",
+                    "developerPctX10K": "uint256",
+                    "purchasedCount": "uint256",
+                    "secretBidCount": "uint256",
+                    "executedCount": "uint256",
+                    "expiredCount": "uint256",
+                    "saleDuration": "uint256",
+                    "auctionStart": "uint256",
+                    "auctionEnd": "uint256",
+                    "saleEnd": "uint256",
+                    "batchSize": "uint256",
+                    "contractSendGas": "uint256"
+                }
+            },
+            "doDeveloperGrant()": {
+                "argument": {},
+                "contract": {
+                    "AUCTION_START_EVENT": "uint256",
+                    "AUCTION_END_EVENT": "uint256",
+                    "SALE_START_EVENT": "uint256",
+                    "SALE_END_EVENT": "uint256",
+                    "stateMask": "uint256",
+                    "proceeds": "uint256",
+                    "strikePrice": "uint256",
+                    "strikePricePctX10": "uint256",
+                    "decimalMultiplier": "uint256",
+                    "developerReserve": "uint256",
+                    "developerPctX10K": "uint256",
+                    "purchasedCount": "uint256",
+                    "secretBidCount": "uint256",
+                    "executedCount": "uint256",
+                    "expiredCount": "uint256",
+                    "saleDuration": "uint256",
+                    "auctionStart": "uint256",
+                    "auctionEnd": "uint256",
+                    "saleEnd": "uint256",
+                    "batchSize": "uint256",
+                    "contractSendGas": "uint256"
+                }
+            },
+            "payUnderwriter()": {
+                "argument": {},
+                "contract": {
+                    "AUCTION_START_EVENT": "uint256",
+                    "AUCTION_END_EVENT": "uint256",
+                    "SALE_START_EVENT": "uint256",
+                    "SALE_END_EVENT": "uint256",
+                    "stateMask": "uint256",
+                    "proceeds": "uint256",
+                    "strikePrice": "uint256",
+                    "strikePricePctX10": "uint256",
+                    "decimalMultiplier": "uint256",
+                    "developerReserve": "uint256",
+                    "developerPctX10K": "uint256",
+                    "purchasedCount": "uint256",
+                    "secretBidCount": "uint256",
+                    "executedCount": "uint256",
+                    "expiredCount": "uint256",
+                    "saleDuration": "uint256",
+                    "auctionStart": "uint256",
+                    "auctionEnd": "uint256",
+                    "saleEnd": "uint256",
+                    "batchSize": "uint256",
+                    "contractSendGas": "uint256"
+                }
+            },
+            "haraKiri()": {
+                "argument": {},
+                "contract": {
+                    "AUCTION_START_EVENT": "uint256",
+                    "AUCTION_END_EVENT": "uint256",
+                    "SALE_START_EVENT": "uint256",
+                    "SALE_END_EVENT": "uint256",
+                    "stateMask": "uint256",
+                    "proceeds": "uint256",
+                    "strikePrice": "uint256",
+                    "strikePricePctX10": "uint256",
+                    "decimalMultiplier": "uint256",
+                    "developerReserve": "uint256",
+                    "developerPctX10K": "uint256",
+                    "purchasedCount": "uint256",
+                    "secretBidCount": "uint256",
+                    "executedCount": "uint256",
+                    "expiredCount": "uint256",
+                    "saleDuration": "uint256",
+                    "auctionStart": "uint256",
+                    "auctionEnd": "uint256",
+                    "saleEnd": "uint256",
+                    "batchSize": "uint256",
+                    "contractSendGas": "uint256"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "AUCTION_START_EVENT": "uint256",
+                    "AUCTION_END_EVENT": "uint256",
+                    "SALE_START_EVENT": "uint256",
+                    "SALE_END_EVENT": "uint256",
+                    "stateMask": "uint256",
+                    "proceeds": "uint256",
+                    "strikePrice": "uint256",
+                    "strikePricePctX10": "uint256",
+                    "decimalMultiplier": "uint256",
+                    "developerReserve": "uint256",
+                    "developerPctX10K": "uint256",
+                    "purchasedCount": "uint256",
+                    "secretBidCount": "uint256",
+                    "executedCount": "uint256",
+                    "expiredCount": "uint256",
+                    "saleDuration": "uint256",
+                    "auctionStart": "uint256",
+                    "auctionEnd": "uint256",
+                    "saleEnd": "uint256",
+                    "batchSize": "uint256",
+                    "contractSendGas": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "lock()": [
+                2585,
+                770
+            ],
+            "disqualifyBid(address,bool)": [
+                1080,
+                176
+            ],
+            "expireBid(address)": [
+                2043,
+                594
+            ],
+            "executeBidFor(address,uint256,uint256,uint256)": [
+                1794,
+                484
+            ],
+            "reserveDeveloperTokens(address,uint256)": [
+                789,
+                88
+            ],
+            "houseKeep()": [
+                2237,
+                638
+            ],
+            "tune(uint256,uint256)": [
+                1464,
+                352
+            ],
+            "setAuctionParms(uint256,uint256,uint256)": [
+                866,
+                110
+            ],
+            "doDeveloperGrant()": [
+                1355,
+                286
+            ],
+            "withdrawRefund()": [
+                766,
+                66
+            ],
+            "executeBid(uint256,uint256,uint256)": [
+                658,
+                22
+            ],
+            "setStrikePrice(uint256,uint256)": [
+                1605,
+                418
+            ],
+            "payUnderwriter()": [
+                1332,
+                264
+            ],
+            "depositSecretBid(bytes32,bytes)": [
+                931,
+                132
+            ],
+            "haraKiri()": [
+                1977,
+                550
+            ]
+        },
+        "block_CALL_mapping": {
+            "block3395": [
+                "token.balanceOf(this)"
+            ],
+            "jump3395": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "jump6025": [
+                "token.transfer(developers, _quantity)",
+                "token.transfer(developers, _quantity)"
+            ],
+            "jump7824": [
+                "token.transfer(_addr, _purchaseCount)",
+                "token.transfer(_addr, _purchaseCount)"
+            ],
+            "block2777": [
+                "msg.sender.transfer(_amount)"
+            ],
+            "jump6241": [
+                "token.unPaidBurnTokens(_tokensLeft)",
+                "token.unPaidBurnTokens(_tokensLeft)"
+            ],
+            "block6241": [
+                "token.unPaidBurnTokens(_tokensLeft)"
+            ],
+            "block5707": [
+                "token.balanceOf(this)"
+            ],
+            "block7265": [
+                "token.balanceOf(this)"
+            ],
+            "block5046": [
+                "_from.transfer(_amount)"
+            ],
+            "jump7265": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "block7824": [
+                "token.transfer(_addr, _purchaseCount)"
+            ],
+            "jump5355": [
+                "underwriter.call.gas(contractSendGas).value(_amount)()",
+                "underwriter.call.gas(contractSendGas).value(_amount)()"
+            ],
+            "jump2777": [
+                "msg.sender.transfer(_amount)",
+                "msg.sender.transfer(_amount)"
+            ],
+            "jump5046": [
+                "_from.transfer(_amount)",
+                "_from.transfer(_amount)"
+            ],
+            "jump5707": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "block5355": [
+                "underwriter.call.gas(contractSendGas).value(_amount)()"
+            ],
+            "block6025": [
+                "token.transfer(developers, _quantity)"
+            ],
+            "block7824_0": [
+                "token.transfer(_addr, _purchaseCount)"
+            ],
+            "block7265_0": [
+                "token.balanceOf(this)"
+            ],
+            "jump7824_0": [
+                "token.transfer(_addr, _purchaseCount)",
+                "token.transfer(_addr, _purchaseCount)"
+            ],
+            "jump7265_0": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ]
+        }
+    }
+}

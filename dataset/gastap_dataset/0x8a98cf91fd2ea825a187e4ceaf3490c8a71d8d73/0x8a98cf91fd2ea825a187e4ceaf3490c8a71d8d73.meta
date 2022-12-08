@@ -1,0 +1,444 @@
+{
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "Ownable": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Destructible": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "Destructible()",
+            "destroy()",
+            "destroyAndSend(address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "Destructible()": {
+                "argument": {},
+                "contract": {}
+            },
+            "destroy()": {
+                "argument": {},
+                "contract": {}
+            },
+            "destroyAndSend(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "destroyAndSend(address)": [
+                280,
+                141
+            ],
+            "destroy()": [
+                103,
+                75
+            ],
+            "transferOwnership(address)": [
+                213,
+                119
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "PullPayment": {
+        "function_list": [
+            "asyncSend(address,uint256)",
+            "withdrawPayments()"
+        ],
+        "initial_state": {
+            "asyncSend(address,uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {
+                    "totalPayments": "uint256"
+                }
+            },
+            "withdrawPayments()": {
+                "argument": {},
+                "contract": {
+                    "totalPayments": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "withdrawPayments()": [
+                134,
+                22
+            ]
+        },
+        "block_CALL_mapping": {
+            "block396": [
+                "payee.send(payment)"
+            ],
+            "jump396": [
+                "payee.send(payment)",
+                "payee.send(payment)"
+            ]
+        }
+    },
+    "Bounty": {
+        "function_list": [
+            "Destructible()",
+            "destroy()",
+            "destroyAndSend(address)",
+            "Ownable()",
+            "transferOwnership(address)",
+            "asyncSend(address,uint256)",
+            "withdrawPayments()",
+            "fallback()",
+            "createTarget()",
+            "deployContract()",
+            "claim(Target)"
+        ],
+        "initial_state": {
+            "Destructible()": {
+                "argument": {},
+                "contract": {}
+            },
+            "destroy()": {
+                "argument": {},
+                "contract": {}
+            },
+            "destroyAndSend(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "asyncSend(address,uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {}
+            },
+            "withdrawPayments()": {
+                "argument": {},
+                "contract": {}
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {}
+            },
+            "createTarget()": {
+                "argument": {},
+                "contract": {}
+            },
+            "deployContract()": {
+                "argument": {},
+                "contract": {}
+            },
+            "claim(Target)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {
+            "jump1977": [
+                "proposed_beneficiary.transfer(this.balance)",
+                "proposed_beneficiary.transfer(this.balance)"
+            ],
+            "jump1492": [
+                "msg.sender.transfer(eth_to_withdraw)",
+                "msg.sender.transfer(eth_to_withdraw)"
+            ],
+            "block1492": [
+                "msg.sender.transfer(eth_to_withdraw)"
+            ],
+            "block1977": [
+                "proposed_beneficiary.transfer(this.balance)"
+            ]
+        }
+    },
+    "PricingStrategy": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "countTokens(uint256)",
+            "soldInTranche(uint256)",
+            "getFreeTokensInTranche(uint256)",
+            "isNoEmptyTranches()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {
+                    "totalSoldTokens": "uint256",
+                    "weiRaised": "uint256"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSoldTokens": "uint256",
+                    "weiRaised": "uint256"
+                }
+            },
+            "countTokens(uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSoldTokens": "uint256",
+                    "weiRaised": "uint256"
+                }
+            },
+            "soldInTranche(uint256)": {
+                "argument": {
+                    "_tokensAndBonus": "uint256"
+                },
+                "contract": {
+                    "totalSoldTokens": "uint256",
+                    "weiRaised": "uint256"
+                }
+            },
+            "getFreeTokensInTranche(uint256)": {
+                "argument": {
+                    "_requiredTokens": "uint256"
+                },
+                "contract": {
+                    "totalSoldTokens": "uint256",
+                    "weiRaised": "uint256"
+                }
+            },
+            "isNoEmptyTranches()": {
+                "argument": {},
+                "contract": {
+                    "totalSoldTokens": "uint256",
+                    "weiRaised": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "TranchePricingStrategy": {
+        "function_list": [
+            "checkInvariant()",
+            "countTokens(uint256)",
+            "soldInTranche(uint256)",
+            "getFreeTokensInTranche(uint256)",
+            "isNoEmptyTranches()",
+            "Ownable()",
+            "transferOwnership(address)",
+            "TranchePricingStrategy(uint256[],uint256[],uint256[],uint256,uint256)",
+            "countTokens(uint256)",
+            "getFreeTokensInTranche(uint256)",
+            "soldInTranche(uint256)",
+            "isNoEmptyTranches()",
+            "defineTranchePeriod()",
+            "checkInvariant()",
+            "payContract()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "checkInvariant()": {
+                "argument": {},
+                "contract": {
+                    "tokensCap": "uint256",
+                    "capInWei": "uint256",
+                    "tranchesCount": "uint256",
+                    "MAX_TRANCHES": "uint256",
+                    "tranches": "TranchePricingStrategy.BonusSchedule[]"
+                }
+            },
+            "countTokens(uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "tokensCap": "uint256",
+                    "capInWei": "uint256",
+                    "tranchesCount": "uint256",
+                    "MAX_TRANCHES": "uint256",
+                    "tranches": "TranchePricingStrategy.BonusSchedule[]"
+                }
+            },
+            "soldInTranche(uint256)": {
+                "argument": {
+                    "_tokensAndBonus": "uint256"
+                },
+                "contract": {
+                    "tokensCap": "uint256",
+                    "capInWei": "uint256",
+                    "tranchesCount": "uint256",
+                    "MAX_TRANCHES": "uint256",
+                    "tranches": "TranchePricingStrategy.BonusSchedule[]"
+                }
+            },
+            "getFreeTokensInTranche(uint256)": {
+                "argument": {
+                    "_requiredTokens": "uint256"
+                },
+                "contract": {
+                    "tokensCap": "uint256",
+                    "capInWei": "uint256",
+                    "tranchesCount": "uint256",
+                    "MAX_TRANCHES": "uint256",
+                    "tranches": "TranchePricingStrategy.BonusSchedule[]"
+                }
+            },
+            "isNoEmptyTranches()": {
+                "argument": {},
+                "contract": {
+                    "tokensCap": "uint256",
+                    "capInWei": "uint256",
+                    "tranchesCount": "uint256",
+                    "MAX_TRANCHES": "uint256",
+                    "tranches": "TranchePricingStrategy.BonusSchedule[]"
+                }
+            },
+            "Ownable()": {
+                "argument": {},
+                "contract": {
+                    "tokensCap": "uint256",
+                    "capInWei": "uint256",
+                    "tranchesCount": "uint256",
+                    "MAX_TRANCHES": "uint256",
+                    "tranches": "TranchePricingStrategy.BonusSchedule[]"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "tokensCap": "uint256",
+                    "capInWei": "uint256",
+                    "tranchesCount": "uint256",
+                    "MAX_TRANCHES": "uint256",
+                    "tranches": "TranchePricingStrategy.BonusSchedule[]"
+                }
+            },
+            "TranchePricingStrategy(uint256[],uint256[],uint256[],uint256,uint256)": {
+                "argument": {
+                    "_bonuses": "uint256[]",
+                    "_valueForTranches": "uint256[]",
+                    "_rates": "uint256[]",
+                    "_capInWei": "uint256",
+                    "_tokensCap": "uint256"
+                },
+                "contract": {
+                    "tokensCap": "uint256",
+                    "capInWei": "uint256",
+                    "tranchesCount": "uint256",
+                    "MAX_TRANCHES": "uint256",
+                    "tranches": "TranchePricingStrategy.BonusSchedule[]"
+                }
+            },
+            "defineTranchePeriod()": {
+                "argument": {},
+                "contract": {
+                    "tokensCap": "uint256",
+                    "capInWei": "uint256",
+                    "tranchesCount": "uint256",
+                    "MAX_TRANCHES": "uint256",
+                    "tranches": "TranchePricingStrategy.BonusSchedule[]"
+                }
+            },
+            "payContract()": {
+                "argument": {},
+                "contract": {
+                    "tokensCap": "uint256",
+                    "capInWei": "uint256",
+                    "tranchesCount": "uint256",
+                    "MAX_TRANCHES": "uint256",
+                    "tranches": "TranchePricingStrategy.BonusSchedule[]"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "payContract()": [
+                601,
+                251
+            ],
+            "checkInvariant()": [
+                554,
+                229
+            ],
+            "isNoEmptyTranches()": [
+                421,
+                163
+            ],
+            "transferOwnership(address)": [
+                611,
+                273
+            ]
+        },
+        "block_CALL_mapping": {}
+    }
+}

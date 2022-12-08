@@ -1,0 +1,634 @@
+{
+    "CryptoBetOn": {
+        "function_list": [
+            "CryptoBetOn()",
+            "fallback()",
+            "setHouseEdge(uint8)",
+            "getHouseEdge()",
+            "getOwner()",
+            "getBalance()",
+            "getJackpotAmount()",
+            "getMatchCount()",
+            "addNewMatch(uint256)",
+            "getMatch(uint256)",
+            "betsOff(uint256)",
+            "cashBack(CryptoBetOn.Gamer[])",
+            "abortMatch(uint256)",
+            "eraseMatch(uint256)",
+            "payoutJackpot(uint256,CryptoBetOn.Gamer[])",
+            "checkMatchToBeAborted(uint256,uint8)",
+            "payoutMatch(uint256,uint8,bool)",
+            "clearMatch(uint256)",
+            "acceptBet(uint256,uint8)",
+            "saveCash(address,uint256)",
+            "killContract()",
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "CryptoBetOn()": {
+                "argument": {},
+                "contract": {
+                    "MATCH_COUNT_LIMIT": "uint16",
+                    "HOUSE_EDGE_TOP_BAR": "uint8",
+                    "HOUSE_EDGE_BOTTOM_BAR": "uint8",
+                    "TX_N01": "uint8",
+                    "TX_N02": "uint8",
+                    "TX_N03": "uint8",
+                    "TX_N04": "uint8",
+                    "TX_N16": "uint8",
+                    "TX_N17": "uint8",
+                    "TX_N18": "uint8",
+                    "TX_N19": "uint8",
+                    "houseEdge": "uint8",
+                    "JACKPOT_FEE": "uint256",
+                    "jackpotAmount": "uint256",
+                    "matchCount": "uint16"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "MATCH_COUNT_LIMIT": "uint16",
+                    "HOUSE_EDGE_TOP_BAR": "uint8",
+                    "HOUSE_EDGE_BOTTOM_BAR": "uint8",
+                    "TX_N01": "uint8",
+                    "TX_N02": "uint8",
+                    "TX_N03": "uint8",
+                    "TX_N04": "uint8",
+                    "TX_N16": "uint8",
+                    "TX_N17": "uint8",
+                    "TX_N18": "uint8",
+                    "TX_N19": "uint8",
+                    "houseEdge": "uint8",
+                    "JACKPOT_FEE": "uint256",
+                    "jackpotAmount": "uint256",
+                    "matchCount": "uint16"
+                }
+            },
+            "setHouseEdge(uint8)": {
+                "argument": {
+                    "_houseEdge": "uint8"
+                },
+                "contract": {
+                    "MATCH_COUNT_LIMIT": "uint16",
+                    "HOUSE_EDGE_TOP_BAR": "uint8",
+                    "HOUSE_EDGE_BOTTOM_BAR": "uint8",
+                    "TX_N01": "uint8",
+                    "TX_N02": "uint8",
+                    "TX_N03": "uint8",
+                    "TX_N04": "uint8",
+                    "TX_N16": "uint8",
+                    "TX_N17": "uint8",
+                    "TX_N18": "uint8",
+                    "TX_N19": "uint8",
+                    "houseEdge": "uint8",
+                    "JACKPOT_FEE": "uint256",
+                    "jackpotAmount": "uint256",
+                    "matchCount": "uint16"
+                }
+            },
+            "getHouseEdge()": {
+                "argument": {},
+                "contract": {
+                    "MATCH_COUNT_LIMIT": "uint16",
+                    "HOUSE_EDGE_TOP_BAR": "uint8",
+                    "HOUSE_EDGE_BOTTOM_BAR": "uint8",
+                    "TX_N01": "uint8",
+                    "TX_N02": "uint8",
+                    "TX_N03": "uint8",
+                    "TX_N04": "uint8",
+                    "TX_N16": "uint8",
+                    "TX_N17": "uint8",
+                    "TX_N18": "uint8",
+                    "TX_N19": "uint8",
+                    "houseEdge": "uint8",
+                    "JACKPOT_FEE": "uint256",
+                    "jackpotAmount": "uint256",
+                    "matchCount": "uint16"
+                }
+            },
+            "getOwner()": {
+                "argument": {},
+                "contract": {
+                    "MATCH_COUNT_LIMIT": "uint16",
+                    "HOUSE_EDGE_TOP_BAR": "uint8",
+                    "HOUSE_EDGE_BOTTOM_BAR": "uint8",
+                    "TX_N01": "uint8",
+                    "TX_N02": "uint8",
+                    "TX_N03": "uint8",
+                    "TX_N04": "uint8",
+                    "TX_N16": "uint8",
+                    "TX_N17": "uint8",
+                    "TX_N18": "uint8",
+                    "TX_N19": "uint8",
+                    "houseEdge": "uint8",
+                    "JACKPOT_FEE": "uint256",
+                    "jackpotAmount": "uint256",
+                    "matchCount": "uint16"
+                }
+            },
+            "getBalance()": {
+                "argument": {},
+                "contract": {
+                    "MATCH_COUNT_LIMIT": "uint16",
+                    "HOUSE_EDGE_TOP_BAR": "uint8",
+                    "HOUSE_EDGE_BOTTOM_BAR": "uint8",
+                    "TX_N01": "uint8",
+                    "TX_N02": "uint8",
+                    "TX_N03": "uint8",
+                    "TX_N04": "uint8",
+                    "TX_N16": "uint8",
+                    "TX_N17": "uint8",
+                    "TX_N18": "uint8",
+                    "TX_N19": "uint8",
+                    "houseEdge": "uint8",
+                    "JACKPOT_FEE": "uint256",
+                    "jackpotAmount": "uint256",
+                    "matchCount": "uint16"
+                }
+            },
+            "getJackpotAmount()": {
+                "argument": {},
+                "contract": {
+                    "MATCH_COUNT_LIMIT": "uint16",
+                    "HOUSE_EDGE_TOP_BAR": "uint8",
+                    "HOUSE_EDGE_BOTTOM_BAR": "uint8",
+                    "TX_N01": "uint8",
+                    "TX_N02": "uint8",
+                    "TX_N03": "uint8",
+                    "TX_N04": "uint8",
+                    "TX_N16": "uint8",
+                    "TX_N17": "uint8",
+                    "TX_N18": "uint8",
+                    "TX_N19": "uint8",
+                    "houseEdge": "uint8",
+                    "JACKPOT_FEE": "uint256",
+                    "jackpotAmount": "uint256",
+                    "matchCount": "uint16"
+                }
+            },
+            "getMatchCount()": {
+                "argument": {},
+                "contract": {
+                    "MATCH_COUNT_LIMIT": "uint16",
+                    "HOUSE_EDGE_TOP_BAR": "uint8",
+                    "HOUSE_EDGE_BOTTOM_BAR": "uint8",
+                    "TX_N01": "uint8",
+                    "TX_N02": "uint8",
+                    "TX_N03": "uint8",
+                    "TX_N04": "uint8",
+                    "TX_N16": "uint8",
+                    "TX_N17": "uint8",
+                    "TX_N18": "uint8",
+                    "TX_N19": "uint8",
+                    "houseEdge": "uint8",
+                    "JACKPOT_FEE": "uint256",
+                    "jackpotAmount": "uint256",
+                    "matchCount": "uint16"
+                }
+            },
+            "addNewMatch(uint256)": {
+                "argument": {
+                    "_matchId": "uint256"
+                },
+                "contract": {
+                    "MATCH_COUNT_LIMIT": "uint16",
+                    "HOUSE_EDGE_TOP_BAR": "uint8",
+                    "HOUSE_EDGE_BOTTOM_BAR": "uint8",
+                    "TX_N01": "uint8",
+                    "TX_N02": "uint8",
+                    "TX_N03": "uint8",
+                    "TX_N04": "uint8",
+                    "TX_N16": "uint8",
+                    "TX_N17": "uint8",
+                    "TX_N18": "uint8",
+                    "TX_N19": "uint8",
+                    "houseEdge": "uint8",
+                    "JACKPOT_FEE": "uint256",
+                    "jackpotAmount": "uint256",
+                    "matchCount": "uint16"
+                }
+            },
+            "getMatch(uint256)": {
+                "argument": {
+                    "_matchId": "uint256"
+                },
+                "contract": {
+                    "MATCH_COUNT_LIMIT": "uint16",
+                    "HOUSE_EDGE_TOP_BAR": "uint8",
+                    "HOUSE_EDGE_BOTTOM_BAR": "uint8",
+                    "TX_N01": "uint8",
+                    "TX_N02": "uint8",
+                    "TX_N03": "uint8",
+                    "TX_N04": "uint8",
+                    "TX_N16": "uint8",
+                    "TX_N17": "uint8",
+                    "TX_N18": "uint8",
+                    "TX_N19": "uint8",
+                    "houseEdge": "uint8",
+                    "JACKPOT_FEE": "uint256",
+                    "jackpotAmount": "uint256",
+                    "matchCount": "uint16"
+                }
+            },
+            "betsOff(uint256)": {
+                "argument": {
+                    "_matchId": "uint256"
+                },
+                "contract": {
+                    "MATCH_COUNT_LIMIT": "uint16",
+                    "HOUSE_EDGE_TOP_BAR": "uint8",
+                    "HOUSE_EDGE_BOTTOM_BAR": "uint8",
+                    "TX_N01": "uint8",
+                    "TX_N02": "uint8",
+                    "TX_N03": "uint8",
+                    "TX_N04": "uint8",
+                    "TX_N16": "uint8",
+                    "TX_N17": "uint8",
+                    "TX_N18": "uint8",
+                    "TX_N19": "uint8",
+                    "houseEdge": "uint8",
+                    "JACKPOT_FEE": "uint256",
+                    "jackpotAmount": "uint256",
+                    "matchCount": "uint16"
+                }
+            },
+            "cashBack(CryptoBetOn.Gamer[])": {
+                "argument": {
+                    "gamers": "CryptoBetOn.Gamer[]"
+                },
+                "contract": {
+                    "MATCH_COUNT_LIMIT": "uint16",
+                    "HOUSE_EDGE_TOP_BAR": "uint8",
+                    "HOUSE_EDGE_BOTTOM_BAR": "uint8",
+                    "TX_N01": "uint8",
+                    "TX_N02": "uint8",
+                    "TX_N03": "uint8",
+                    "TX_N04": "uint8",
+                    "TX_N16": "uint8",
+                    "TX_N17": "uint8",
+                    "TX_N18": "uint8",
+                    "TX_N19": "uint8",
+                    "houseEdge": "uint8",
+                    "JACKPOT_FEE": "uint256",
+                    "jackpotAmount": "uint256",
+                    "matchCount": "uint16"
+                }
+            },
+            "abortMatch(uint256)": {
+                "argument": {
+                    "_matchId": "uint256"
+                },
+                "contract": {
+                    "MATCH_COUNT_LIMIT": "uint16",
+                    "HOUSE_EDGE_TOP_BAR": "uint8",
+                    "HOUSE_EDGE_BOTTOM_BAR": "uint8",
+                    "TX_N01": "uint8",
+                    "TX_N02": "uint8",
+                    "TX_N03": "uint8",
+                    "TX_N04": "uint8",
+                    "TX_N16": "uint8",
+                    "TX_N17": "uint8",
+                    "TX_N18": "uint8",
+                    "TX_N19": "uint8",
+                    "houseEdge": "uint8",
+                    "JACKPOT_FEE": "uint256",
+                    "jackpotAmount": "uint256",
+                    "matchCount": "uint16"
+                }
+            },
+            "eraseMatch(uint256)": {
+                "argument": {
+                    "_matchId": "uint256"
+                },
+                "contract": {
+                    "MATCH_COUNT_LIMIT": "uint16",
+                    "HOUSE_EDGE_TOP_BAR": "uint8",
+                    "HOUSE_EDGE_BOTTOM_BAR": "uint8",
+                    "TX_N01": "uint8",
+                    "TX_N02": "uint8",
+                    "TX_N03": "uint8",
+                    "TX_N04": "uint8",
+                    "TX_N16": "uint8",
+                    "TX_N17": "uint8",
+                    "TX_N18": "uint8",
+                    "TX_N19": "uint8",
+                    "houseEdge": "uint8",
+                    "JACKPOT_FEE": "uint256",
+                    "jackpotAmount": "uint256",
+                    "matchCount": "uint16"
+                }
+            },
+            "payoutJackpot(uint256,CryptoBetOn.Gamer[])": {
+                "argument": {
+                    "_matchId": "uint256",
+                    "gamers": "CryptoBetOn.Gamer[]"
+                },
+                "contract": {
+                    "MATCH_COUNT_LIMIT": "uint16",
+                    "HOUSE_EDGE_TOP_BAR": "uint8",
+                    "HOUSE_EDGE_BOTTOM_BAR": "uint8",
+                    "TX_N01": "uint8",
+                    "TX_N02": "uint8",
+                    "TX_N03": "uint8",
+                    "TX_N04": "uint8",
+                    "TX_N16": "uint8",
+                    "TX_N17": "uint8",
+                    "TX_N18": "uint8",
+                    "TX_N19": "uint8",
+                    "houseEdge": "uint8",
+                    "JACKPOT_FEE": "uint256",
+                    "jackpotAmount": "uint256",
+                    "matchCount": "uint16"
+                }
+            },
+            "checkMatchToBeAborted(uint256,uint8)": {
+                "argument": {
+                    "_matchId": "uint256",
+                    "_winner": "uint8"
+                },
+                "contract": {
+                    "MATCH_COUNT_LIMIT": "uint16",
+                    "HOUSE_EDGE_TOP_BAR": "uint8",
+                    "HOUSE_EDGE_BOTTOM_BAR": "uint8",
+                    "TX_N01": "uint8",
+                    "TX_N02": "uint8",
+                    "TX_N03": "uint8",
+                    "TX_N04": "uint8",
+                    "TX_N16": "uint8",
+                    "TX_N17": "uint8",
+                    "TX_N18": "uint8",
+                    "TX_N19": "uint8",
+                    "houseEdge": "uint8",
+                    "JACKPOT_FEE": "uint256",
+                    "jackpotAmount": "uint256",
+                    "matchCount": "uint16"
+                }
+            },
+            "payoutMatch(uint256,uint8,bool)": {
+                "argument": {
+                    "_matchId": "uint256",
+                    "_winner": "uint8"
+                },
+                "contract": {
+                    "MATCH_COUNT_LIMIT": "uint16",
+                    "HOUSE_EDGE_TOP_BAR": "uint8",
+                    "HOUSE_EDGE_BOTTOM_BAR": "uint8",
+                    "TX_N01": "uint8",
+                    "TX_N02": "uint8",
+                    "TX_N03": "uint8",
+                    "TX_N04": "uint8",
+                    "TX_N16": "uint8",
+                    "TX_N17": "uint8",
+                    "TX_N18": "uint8",
+                    "TX_N19": "uint8",
+                    "houseEdge": "uint8",
+                    "JACKPOT_FEE": "uint256",
+                    "jackpotAmount": "uint256",
+                    "matchCount": "uint16"
+                }
+            },
+            "clearMatch(uint256)": {
+                "argument": {
+                    "_matchId": "uint256"
+                },
+                "contract": {
+                    "MATCH_COUNT_LIMIT": "uint16",
+                    "HOUSE_EDGE_TOP_BAR": "uint8",
+                    "HOUSE_EDGE_BOTTOM_BAR": "uint8",
+                    "TX_N01": "uint8",
+                    "TX_N02": "uint8",
+                    "TX_N03": "uint8",
+                    "TX_N04": "uint8",
+                    "TX_N16": "uint8",
+                    "TX_N17": "uint8",
+                    "TX_N18": "uint8",
+                    "TX_N19": "uint8",
+                    "houseEdge": "uint8",
+                    "JACKPOT_FEE": "uint256",
+                    "jackpotAmount": "uint256",
+                    "matchCount": "uint16"
+                }
+            },
+            "acceptBet(uint256,uint8)": {
+                "argument": {
+                    "_matchId": "uint256",
+                    "_betState": "uint8"
+                },
+                "contract": {
+                    "MATCH_COUNT_LIMIT": "uint16",
+                    "HOUSE_EDGE_TOP_BAR": "uint8",
+                    "HOUSE_EDGE_BOTTOM_BAR": "uint8",
+                    "TX_N01": "uint8",
+                    "TX_N02": "uint8",
+                    "TX_N03": "uint8",
+                    "TX_N04": "uint8",
+                    "TX_N16": "uint8",
+                    "TX_N17": "uint8",
+                    "TX_N18": "uint8",
+                    "TX_N19": "uint8",
+                    "houseEdge": "uint8",
+                    "JACKPOT_FEE": "uint256",
+                    "jackpotAmount": "uint256",
+                    "matchCount": "uint16"
+                }
+            },
+            "saveCash(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "MATCH_COUNT_LIMIT": "uint16",
+                    "HOUSE_EDGE_TOP_BAR": "uint8",
+                    "HOUSE_EDGE_BOTTOM_BAR": "uint8",
+                    "TX_N01": "uint8",
+                    "TX_N02": "uint8",
+                    "TX_N03": "uint8",
+                    "TX_N04": "uint8",
+                    "TX_N16": "uint8",
+                    "TX_N17": "uint8",
+                    "TX_N18": "uint8",
+                    "TX_N19": "uint8",
+                    "houseEdge": "uint8",
+                    "JACKPOT_FEE": "uint256",
+                    "jackpotAmount": "uint256",
+                    "matchCount": "uint16"
+                }
+            },
+            "killContract()": {
+                "argument": {},
+                "contract": {
+                    "MATCH_COUNT_LIMIT": "uint16",
+                    "HOUSE_EDGE_TOP_BAR": "uint8",
+                    "HOUSE_EDGE_BOTTOM_BAR": "uint8",
+                    "TX_N01": "uint8",
+                    "TX_N02": "uint8",
+                    "TX_N03": "uint8",
+                    "TX_N04": "uint8",
+                    "TX_N16": "uint8",
+                    "TX_N17": "uint8",
+                    "TX_N18": "uint8",
+                    "TX_N19": "uint8",
+                    "houseEdge": "uint8",
+                    "JACKPOT_FEE": "uint256",
+                    "jackpotAmount": "uint256",
+                    "matchCount": "uint16"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "MATCH_COUNT_LIMIT": "uint16",
+                    "HOUSE_EDGE_TOP_BAR": "uint8",
+                    "HOUSE_EDGE_BOTTOM_BAR": "uint8",
+                    "TX_N01": "uint8",
+                    "TX_N02": "uint8",
+                    "TX_N03": "uint8",
+                    "TX_N04": "uint8",
+                    "TX_N16": "uint8",
+                    "TX_N17": "uint8",
+                    "TX_N18": "uint8",
+                    "TX_N19": "uint8",
+                    "houseEdge": "uint8",
+                    "JACKPOT_FEE": "uint256",
+                    "jackpotAmount": "uint256",
+                    "matchCount": "uint16"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "getMatch(uint256)": [
+                413,
+                141
+            ],
+            "getMatchCount()": [
+                709,
+                251
+            ],
+            "saveCash(address,uint256)": [
+                805,
+                295
+            ],
+            "abortMatch(uint256)": [
+                458,
+                163
+            ],
+            "getOwner()": [
+                622,
+                229
+            ],
+            "getJackpotAmount()": [
+                996,
+                361
+            ],
+            "getHouseEdge()": [
+                503,
+                185
+            ],
+            "payoutMatch(uint256,uint8,bool)": [
+                552,
+                207
+            ],
+            "setHouseEdge(uint8)": [
+                299,
+                75
+            ],
+            "betsOff(uint256)": [
+                927,
+                339
+            ],
+            "killContract()": [
+                390,
+                119
+            ],
+            "eraseMatch(uint256)": [
+                882,
+                317
+            ],
+            "getBalance()": [
+                347,
+                97
+            ],
+            "acceptBet(uint256,uint8)": [
+                760,
+                273
+            ]
+        },
+        "block_CALL_mapping": {
+            "block6884": [
+                "jackpotWinner.send(tmpJackpotAmount)"
+            ],
+            "jump5046": [
+                "_receiver.send(_amount)",
+                "_receiver.send(_amount)"
+            ],
+            "block5822_2": [
+                "gamers[index].wallet.send(gamers[index].amount)"
+            ],
+            "jump5822_3": [
+                "gamers[index].wallet.send(gamers[index].amount)",
+                "gamers[index].wallet.send(gamers[index].amount)"
+            ],
+            "jump3138": [
+                "gamers[index].wallet.send(winAmount)",
+                "gamers[index].wallet.send(winAmount)"
+            ],
+            "block5822_4": [
+                "gamers[index].wallet.send(gamers[index].amount)"
+            ],
+            "jump3488": [
+                "owner.send(collectedFees)",
+                "owner.send(collectedFees)"
+            ],
+            "jump3670": [
+                "owner.send(fallbackAmount)",
+                "owner.send(fallbackAmount)"
+            ],
+            "jump5822": [
+                "gamers[index].wallet.send(gamers[index].amount)",
+                "gamers[index].wallet.send(gamers[index].amount)"
+            ],
+            "block3670": [
+                "owner.send(fallbackAmount)"
+            ],
+            "jump5822_4": [
+                "gamers[index].wallet.send(gamers[index].amount)",
+                "gamers[index].wallet.send(gamers[index].amount)"
+            ],
+            "block5822": [
+                "gamers[index].wallet.send(gamers[index].amount)"
+            ],
+            "block3138": [
+                "gamers[index].wallet.send(winAmount)"
+            ],
+            "jump5822_0": [
+                "gamers[index].wallet.send(gamers[index].amount)",
+                "gamers[index].wallet.send(gamers[index].amount)"
+            ],
+            "jump5822_1": [
+                "gamers[index].wallet.send(gamers[index].amount)",
+                "gamers[index].wallet.send(gamers[index].amount)"
+            ],
+            "jump5822_2": [
+                "gamers[index].wallet.send(gamers[index].amount)",
+                "gamers[index].wallet.send(gamers[index].amount)"
+            ],
+            "block3488": [
+                "owner.send(collectedFees)"
+            ],
+            "block5822_1": [
+                "gamers[index].wallet.send(gamers[index].amount)"
+            ],
+            "block5822_3": [
+                "gamers[index].wallet.send(gamers[index].amount)"
+            ],
+            "block5822_0": [
+                "gamers[index].wallet.send(gamers[index].amount)"
+            ],
+            "block5046": [
+                "_receiver.send(_amount)"
+            ]
+        }
+    }
+}

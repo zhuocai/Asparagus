@@ -1,0 +1,136 @@
+{
+    "Owned": {
+        "function_list": [
+            "Owned()",
+            "changeOwner(address)",
+            "acceptOwnership()"
+        ],
+        "initial_state": {
+            "Owned()": {
+                "argument": {},
+                "contract": {}
+            },
+            "changeOwner(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "acceptOwnership()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "changeOwner(address)": [
+                213,
+                119
+            ],
+            "acceptOwnership()": [
+                103,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Withdrawable": {
+        "function_list": [
+            "withdrawTo(address)"
+        ],
+        "initial_state": {
+            "withdrawTo(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {
+            "jump656": [
+                "wallet.transfer(weiAmount)",
+                "wallet.transfer(weiAmount)"
+            ],
+            "block656": [
+                "wallet.transfer(weiAmount)"
+            ]
+        }
+    },
+    "Distributor": {
+        "function_list": [
+            "Owned()",
+            "changeOwner(address)",
+            "acceptOwnership()",
+            "setWithdrawable(address)",
+            "distribute(address[])",
+            "complete()"
+        ],
+        "initial_state": {
+            "Owned()": {
+                "argument": {},
+                "contract": {
+                    "nonce": "uint256"
+                }
+            },
+            "changeOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "nonce": "uint256"
+                }
+            },
+            "acceptOwnership()": {
+                "argument": {},
+                "contract": {
+                    "nonce": "uint256"
+                }
+            },
+            "setWithdrawable(address)": {
+                "argument": {},
+                "contract": {
+                    "nonce": "uint256"
+                }
+            },
+            "distribute(address[])": {
+                "argument": {
+                    "addrs": "address[]"
+                },
+                "contract": {
+                    "nonce": "uint256"
+                }
+            },
+            "complete()": {
+                "argument": {},
+                "contract": {
+                    "nonce": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "setWithdrawable(address)": [
+                590,
+                229
+            ],
+            "complete()": [
+                245,
+                97
+            ],
+            "distribute(address[])": [
+                268,
+                119
+            ],
+            "changeOwner(address)": [
+                480,
+                185
+            ],
+            "acceptOwnership()": [
+                370,
+                141
+            ]
+        },
+        "block_CALL_mapping": {
+            "block1246": [
+                "w.withdrawTo(addrs[i])"
+            ],
+            "jump1246": [
+                "w.withdrawTo(addrs[i])",
+                "w.withdrawTo(addrs[i])"
+            ]
+        }
+    }
+}

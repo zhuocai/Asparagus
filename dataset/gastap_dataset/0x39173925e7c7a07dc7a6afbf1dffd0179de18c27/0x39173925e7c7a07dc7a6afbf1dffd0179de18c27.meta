@@ -1,0 +1,409 @@
+{
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "Ownable": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "HasNoContracts": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "reclaimContract(address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "reclaimContract(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "reclaimContract(address)": [
+                92,
+                75
+            ],
+            "transferOwnership(address)": [
+                246,
+                119
+            ]
+        },
+        "block_CALL_mapping": {
+            "block597": [
+                "contractInst.transferOwnership(owner)"
+            ],
+            "jump597": [
+                "contractInst.transferOwnership(owner)",
+                "contractInst.transferOwnership(owner)"
+            ]
+        }
+    },
+    "ERC20Basic": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                124,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "reclaimTokens": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "reclaimToken(address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "reclaimToken(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "reclaimToken(address)": [
+                92,
+                75
+            ],
+            "transferOwnership(address)": [
+                246,
+                119
+            ]
+        },
+        "block_CALL_mapping": {
+            "block822": [
+                "tokenInst.transfer(owner, balance)"
+            ],
+            "block565": [
+                "tokenInst.balanceOf(this)"
+            ],
+            "jump565": [
+                "tokenInst.balanceOf(this)",
+                "tokenInst.balanceOf(this)"
+            ],
+            "jump822": [
+                "tokenInst.transfer(owner, balance)",
+                "tokenInst.transfer(owner, balance)"
+            ]
+        }
+    },
+    "ExperimentalPreICO": {
+        "function_list": [
+            "reclaimContract(address)",
+            "Ownable()",
+            "transferOwnership(address)",
+            "reclaimToken(address)",
+            "ExperimentalPreICO(address,uint256,uint256,uint256,uint256,uint256,address)",
+            "fallback()",
+            "validPurchase()",
+            "checkGoal()",
+            "endCrowdsale()",
+            "safeWithdrawal()",
+            "whitelistAddress(address[])",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "reclaimContract(address)": {
+                "argument": {},
+                "contract": {
+                    "fundingGoal": "uint256",
+                    "fundingCap": "uint256",
+                    "paymentMin": "uint256",
+                    "paymentMax": "uint256",
+                    "amountRaised": "uint256",
+                    "rate": "uint256"
+                }
+            },
+            "Ownable()": {
+                "argument": {},
+                "contract": {
+                    "fundingGoal": "uint256",
+                    "fundingCap": "uint256",
+                    "paymentMin": "uint256",
+                    "paymentMax": "uint256",
+                    "amountRaised": "uint256",
+                    "rate": "uint256"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "fundingGoal": "uint256",
+                    "fundingCap": "uint256",
+                    "paymentMin": "uint256",
+                    "paymentMax": "uint256",
+                    "amountRaised": "uint256",
+                    "rate": "uint256"
+                }
+            },
+            "reclaimToken(address)": {
+                "argument": {},
+                "contract": {
+                    "fundingGoal": "uint256",
+                    "fundingCap": "uint256",
+                    "paymentMin": "uint256",
+                    "paymentMax": "uint256",
+                    "amountRaised": "uint256",
+                    "rate": "uint256"
+                }
+            },
+            "ExperimentalPreICO(address,uint256,uint256,uint256,uint256,uint256,address)": {
+                "argument": {
+                    "_goalInEthers": "uint256",
+                    "_capInEthers": "uint256",
+                    "_minPaymentInEthers": "uint256",
+                    "_maxPaymentInEthers": "uint256",
+                    "_rate": "uint256"
+                },
+                "contract": {
+                    "fundingGoal": "uint256",
+                    "fundingCap": "uint256",
+                    "paymentMin": "uint256",
+                    "paymentMax": "uint256",
+                    "amountRaised": "uint256",
+                    "rate": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "fundingGoal": "uint256",
+                    "fundingCap": "uint256",
+                    "paymentMin": "uint256",
+                    "paymentMax": "uint256",
+                    "amountRaised": "uint256",
+                    "rate": "uint256"
+                }
+            },
+            "validPurchase()": {
+                "argument": {},
+                "contract": {
+                    "fundingGoal": "uint256",
+                    "fundingCap": "uint256",
+                    "paymentMin": "uint256",
+                    "paymentMax": "uint256",
+                    "amountRaised": "uint256",
+                    "rate": "uint256"
+                }
+            },
+            "checkGoal()": {
+                "argument": {},
+                "contract": {
+                    "fundingGoal": "uint256",
+                    "fundingCap": "uint256",
+                    "paymentMin": "uint256",
+                    "paymentMax": "uint256",
+                    "amountRaised": "uint256",
+                    "rate": "uint256"
+                }
+            },
+            "endCrowdsale()": {
+                "argument": {},
+                "contract": {
+                    "fundingGoal": "uint256",
+                    "fundingCap": "uint256",
+                    "paymentMin": "uint256",
+                    "paymentMax": "uint256",
+                    "amountRaised": "uint256",
+                    "rate": "uint256"
+                }
+            },
+            "safeWithdrawal()": {
+                "argument": {},
+                "contract": {
+                    "fundingGoal": "uint256",
+                    "fundingCap": "uint256",
+                    "paymentMin": "uint256",
+                    "paymentMax": "uint256",
+                    "amountRaised": "uint256",
+                    "rate": "uint256"
+                }
+            },
+            "whitelistAddress(address[])": {
+                "argument": {
+                    "addresses": "address[]"
+                },
+                "contract": {
+                    "fundingGoal": "uint256",
+                    "fundingCap": "uint256",
+                    "paymentMin": "uint256",
+                    "paymentMax": "uint256",
+                    "amountRaised": "uint256",
+                    "rate": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "whitelistAddress(address[])": [
+                1654,
+                361
+            ],
+            "safeWithdrawal()": [
+                2004,
+                493
+            ],
+            "endCrowdsale()": [
+                1065,
+                119
+            ],
+            "checkGoal()": [
+                1285,
+                207
+            ],
+            "reclaimToken(address)": [
+                998,
+                97
+            ],
+            "reclaimContract(address)": [
+                1088,
+                141
+            ],
+            "transferOwnership(address)": [
+                1850,
+                449
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump2818": [
+                "tokenInst.transfer(owner, balance)",
+                "tokenInst.transfer(owner, balance)"
+            ],
+            "jump724_0": [
+                "rewardToken.transfer(msg.sender, amount.mul(rate))",
+                "rewardToken.transfer(msg.sender, amount.mul(rate))"
+            ],
+            "jump4871": [
+                "beneficiary.send(amountRaised)",
+                "beneficiary.send(amountRaised)"
+            ],
+            "jump724": [
+                "rewardToken.transfer(msg.sender, amount.mul(rate))",
+                "rewardToken.transfer(msg.sender, amount.mul(rate))"
+            ],
+            "block4508": [
+                "msg.sender.send(amount)"
+            ],
+            "block724_0": [
+                "rewardToken.transfer(msg.sender, amount.mul(rate))"
+            ],
+            "block4871": [
+                "beneficiary.send(amountRaised)"
+            ],
+            "jump3286": [
+                "contractInst.transferOwnership(owner)",
+                "contractInst.transferOwnership(owner)"
+            ],
+            "block3286": [
+                "contractInst.transferOwnership(owner)"
+            ],
+            "jump4508": [
+                "msg.sender.send(amount)",
+                "msg.sender.send(amount)"
+            ],
+            "block2818": [
+                "tokenInst.transfer(owner, balance)"
+            ],
+            "jump2561": [
+                "tokenInst.balanceOf(this)",
+                "tokenInst.balanceOf(this)"
+            ],
+            "block724": [
+                "rewardToken.transfer(msg.sender, amount.mul(rate))"
+            ],
+            "block2561": [
+                "tokenInst.balanceOf(this)"
+            ]
+        }
+    }
+}

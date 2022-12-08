@@ -1,0 +1,121 @@
+{
+    "KittenCoin": {
+        "function_list": [
+            "transferFrom(address,address,uint256)",
+            "allowance(address,address)"
+        ],
+        "initial_state": {
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferFrom(address,address,uint256)": [
+                81,
+                75
+            ],
+            "allowance(address,address)": [
+                214,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "KittenSale": {
+        "function_list": [
+            "KittenSale()",
+            "fallback()",
+            "updateKittensRemainingForSale()"
+        ],
+        "initial_state": {
+            "KittenSale()": {
+                "argument": {},
+                "contract": {
+                    "totalContributions": "uint256",
+                    "kittensSold": "uint256",
+                    "kittensRemainingForSale": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "totalContributions": "uint256",
+                    "kittensSold": "uint256",
+                    "kittensRemainingForSale": "uint256"
+                }
+            },
+            "updateKittensRemainingForSale()": {
+                "argument": {},
+                "contract": {
+                    "totalContributions": "uint256",
+                    "kittensSold": "uint256",
+                    "kittensRemainingForSale": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "updateKittensRemainingForSale()": [
+                1000,
+                163
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump1340": [
+                "_kittenContract.allowance(_kittenOwner, this)",
+                "_kittenContract.allowance(_kittenOwner, this)"
+            ],
+            "block606_0": [
+                "_kittenOwner.transfer(msg.value)"
+            ],
+            "block564_0": [
+                "_kittenContract.transferFrom(_kittenOwner, msg.sender, contribution)"
+            ],
+            "jump564_0": [
+                "_kittenContract.transferFrom(_kittenOwner, msg.sender, contribution)",
+                "_kittenContract.transferFrom(_kittenOwner, msg.sender, contribution)"
+            ],
+            "jump1340_1": [
+                "_kittenContract.allowance(_kittenOwner, this)",
+                "_kittenContract.allowance(_kittenOwner, this)"
+            ],
+            "jump1340_0": [
+                "_kittenContract.allowance(_kittenOwner, this)",
+                "_kittenContract.allowance(_kittenOwner, this)"
+            ],
+            "block606": [
+                "_kittenOwner.transfer(msg.value)"
+            ],
+            "block564": [
+                "_kittenContract.transferFrom(_kittenOwner, msg.sender, contribution)"
+            ],
+            "jump564": [
+                "_kittenContract.transferFrom(_kittenOwner, msg.sender, contribution)",
+                "_kittenContract.transferFrom(_kittenOwner, msg.sender, contribution)"
+            ],
+            "block1340_0": [
+                "_kittenContract.allowance(_kittenOwner, this)"
+            ],
+            "jump606_0": [
+                "_kittenOwner.transfer(msg.value)",
+                "_kittenOwner.transfer(msg.value)"
+            ],
+            "block1340_1": [
+                "_kittenContract.allowance(_kittenOwner, this)"
+            ],
+            "jump606": [
+                "_kittenOwner.transfer(msg.value)",
+                "_kittenOwner.transfer(msg.value)"
+            ],
+            "block1340": [
+                "_kittenContract.allowance(_kittenOwner, this)"
+            ]
+        }
+    }
+}

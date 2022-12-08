@@ -1,0 +1,747 @@
+{
+    "BlockchainDeposit": {
+        "function_list": [
+            "BlockchainDeposit()",
+            "deposit()",
+            "getPayout(uint256)",
+            "getLastPayouts()",
+            "getMaster()",
+            "getnumDeposits()",
+            "getContractMetrics()",
+            "inviteReferee(address,address)",
+            "createReferee(address,address)",
+            "checkIfReferee(address)",
+            "getAddressGains(address)",
+            "getCurrentPayoutIndex()",
+            "getEarliestPosition(address)",
+            "resetBonuses(address)",
+            "resetReferee(address)",
+            "resetReferedCount(address)",
+            "getAccountReferalsStats(address)",
+            "computeGainsRate(address)",
+            "computeGains(BlockchainDeposit.Deposit)",
+            "isReferee(address)",
+            "getReferedCount(address)",
+            "getPendingReferals(address)",
+            "addNewPayout(BlockchainDeposit.PayoutItem)",
+            "payout(BlockchainDeposit.Deposit)",
+            "dispatchGains()",
+            "fallback()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "BlockchainDeposit()": {
+                "argument": {},
+                "contract": {
+                    "Currencies": "string[]",
+                    "Term": "uint256[]",
+                    "feesRate": "uint256",
+                    "feesRateTeam": "uint256",
+                    "feesRateCongres": "uint256",
+                    "feesProfitDeposit": "uint256",
+                    "garanteSystemDepositInOneFund": "uint256",
+                    "garanteSystemDepositInAllFunds": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "refferalsRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "BlockchainDeposit.PayoutItem[]"
+                }
+            },
+            "deposit()": {
+                "argument": {},
+                "contract": {
+                    "Currencies": "string[]",
+                    "Term": "uint256[]",
+                    "feesRate": "uint256",
+                    "feesRateTeam": "uint256",
+                    "feesRateCongres": "uint256",
+                    "feesProfitDeposit": "uint256",
+                    "garanteSystemDepositInOneFund": "uint256",
+                    "garanteSystemDepositInAllFunds": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "refferalsRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "BlockchainDeposit.PayoutItem[]"
+                }
+            },
+            "getPayout(uint256)": {
+                "argument": {
+                    "index": "uint256"
+                },
+                "contract": {
+                    "Currencies": "string[]",
+                    "Term": "uint256[]",
+                    "feesRate": "uint256",
+                    "feesRateTeam": "uint256",
+                    "feesRateCongres": "uint256",
+                    "feesProfitDeposit": "uint256",
+                    "garanteSystemDepositInOneFund": "uint256",
+                    "garanteSystemDepositInAllFunds": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "refferalsRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "BlockchainDeposit.PayoutItem[]"
+                }
+            },
+            "getLastPayouts()": {
+                "argument": {},
+                "contract": {
+                    "Currencies": "string[]",
+                    "Term": "uint256[]",
+                    "feesRate": "uint256",
+                    "feesRateTeam": "uint256",
+                    "feesRateCongres": "uint256",
+                    "feesProfitDeposit": "uint256",
+                    "garanteSystemDepositInOneFund": "uint256",
+                    "garanteSystemDepositInAllFunds": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "refferalsRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "BlockchainDeposit.PayoutItem[]"
+                }
+            },
+            "getMaster()": {
+                "argument": {},
+                "contract": {
+                    "Currencies": "string[]",
+                    "Term": "uint256[]",
+                    "feesRate": "uint256",
+                    "feesRateTeam": "uint256",
+                    "feesRateCongres": "uint256",
+                    "feesProfitDeposit": "uint256",
+                    "garanteSystemDepositInOneFund": "uint256",
+                    "garanteSystemDepositInAllFunds": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "refferalsRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "BlockchainDeposit.PayoutItem[]"
+                }
+            },
+            "getnumDeposits()": {
+                "argument": {},
+                "contract": {
+                    "Currencies": "string[]",
+                    "Term": "uint256[]",
+                    "feesRate": "uint256",
+                    "feesRateTeam": "uint256",
+                    "feesRateCongres": "uint256",
+                    "feesProfitDeposit": "uint256",
+                    "garanteSystemDepositInOneFund": "uint256",
+                    "garanteSystemDepositInAllFunds": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "refferalsRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "BlockchainDeposit.PayoutItem[]"
+                }
+            },
+            "getContractMetrics()": {
+                "argument": {},
+                "contract": {
+                    "Currencies": "string[]",
+                    "Term": "uint256[]",
+                    "feesRate": "uint256",
+                    "feesRateTeam": "uint256",
+                    "feesRateCongres": "uint256",
+                    "feesProfitDeposit": "uint256",
+                    "garanteSystemDepositInOneFund": "uint256",
+                    "garanteSystemDepositInAllFunds": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "refferalsRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "BlockchainDeposit.PayoutItem[]"
+                }
+            },
+            "inviteReferee(address,address)": {
+                "argument": {},
+                "contract": {
+                    "Currencies": "string[]",
+                    "Term": "uint256[]",
+                    "feesRate": "uint256",
+                    "feesRateTeam": "uint256",
+                    "feesRateCongres": "uint256",
+                    "feesProfitDeposit": "uint256",
+                    "garanteSystemDepositInOneFund": "uint256",
+                    "garanteSystemDepositInAllFunds": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "refferalsRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "BlockchainDeposit.PayoutItem[]"
+                }
+            },
+            "createReferee(address,address)": {
+                "argument": {},
+                "contract": {
+                    "Currencies": "string[]",
+                    "Term": "uint256[]",
+                    "feesRate": "uint256",
+                    "feesRateTeam": "uint256",
+                    "feesRateCongres": "uint256",
+                    "feesProfitDeposit": "uint256",
+                    "garanteSystemDepositInOneFund": "uint256",
+                    "garanteSystemDepositInAllFunds": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "refferalsRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "BlockchainDeposit.PayoutItem[]"
+                }
+            },
+            "checkIfReferee(address)": {
+                "argument": {},
+                "contract": {
+                    "Currencies": "string[]",
+                    "Term": "uint256[]",
+                    "feesRate": "uint256",
+                    "feesRateTeam": "uint256",
+                    "feesRateCongres": "uint256",
+                    "feesProfitDeposit": "uint256",
+                    "garanteSystemDepositInOneFund": "uint256",
+                    "garanteSystemDepositInAllFunds": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "refferalsRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "BlockchainDeposit.PayoutItem[]"
+                }
+            },
+            "getAddressGains(address)": {
+                "argument": {},
+                "contract": {
+                    "Currencies": "string[]",
+                    "Term": "uint256[]",
+                    "feesRate": "uint256",
+                    "feesRateTeam": "uint256",
+                    "feesRateCongres": "uint256",
+                    "feesProfitDeposit": "uint256",
+                    "garanteSystemDepositInOneFund": "uint256",
+                    "garanteSystemDepositInAllFunds": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "refferalsRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "BlockchainDeposit.PayoutItem[]"
+                }
+            },
+            "getCurrentPayoutIndex()": {
+                "argument": {},
+                "contract": {
+                    "Currencies": "string[]",
+                    "Term": "uint256[]",
+                    "feesRate": "uint256",
+                    "feesRateTeam": "uint256",
+                    "feesRateCongres": "uint256",
+                    "feesProfitDeposit": "uint256",
+                    "garanteSystemDepositInOneFund": "uint256",
+                    "garanteSystemDepositInAllFunds": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "refferalsRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "BlockchainDeposit.PayoutItem[]"
+                }
+            },
+            "getEarliestPosition(address)": {
+                "argument": {},
+                "contract": {
+                    "Currencies": "string[]",
+                    "Term": "uint256[]",
+                    "feesRate": "uint256",
+                    "feesRateTeam": "uint256",
+                    "feesRateCongres": "uint256",
+                    "feesProfitDeposit": "uint256",
+                    "garanteSystemDepositInOneFund": "uint256",
+                    "garanteSystemDepositInAllFunds": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "refferalsRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "BlockchainDeposit.PayoutItem[]"
+                }
+            },
+            "resetBonuses(address)": {
+                "argument": {},
+                "contract": {
+                    "Currencies": "string[]",
+                    "Term": "uint256[]",
+                    "feesRate": "uint256",
+                    "feesRateTeam": "uint256",
+                    "feesRateCongres": "uint256",
+                    "feesProfitDeposit": "uint256",
+                    "garanteSystemDepositInOneFund": "uint256",
+                    "garanteSystemDepositInAllFunds": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "refferalsRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "BlockchainDeposit.PayoutItem[]"
+                }
+            },
+            "resetReferee(address)": {
+                "argument": {},
+                "contract": {
+                    "Currencies": "string[]",
+                    "Term": "uint256[]",
+                    "feesRate": "uint256",
+                    "feesRateTeam": "uint256",
+                    "feesRateCongres": "uint256",
+                    "feesProfitDeposit": "uint256",
+                    "garanteSystemDepositInOneFund": "uint256",
+                    "garanteSystemDepositInAllFunds": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "refferalsRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "BlockchainDeposit.PayoutItem[]"
+                }
+            },
+            "resetReferedCount(address)": {
+                "argument": {},
+                "contract": {
+                    "Currencies": "string[]",
+                    "Term": "uint256[]",
+                    "feesRate": "uint256",
+                    "feesRateTeam": "uint256",
+                    "feesRateCongres": "uint256",
+                    "feesProfitDeposit": "uint256",
+                    "garanteSystemDepositInOneFund": "uint256",
+                    "garanteSystemDepositInAllFunds": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "refferalsRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "BlockchainDeposit.PayoutItem[]"
+                }
+            },
+            "getAccountReferalsStats(address)": {
+                "argument": {},
+                "contract": {
+                    "Currencies": "string[]",
+                    "Term": "uint256[]",
+                    "feesRate": "uint256",
+                    "feesRateTeam": "uint256",
+                    "feesRateCongres": "uint256",
+                    "feesProfitDeposit": "uint256",
+                    "garanteSystemDepositInOneFund": "uint256",
+                    "garanteSystemDepositInAllFunds": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "refferalsRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "BlockchainDeposit.PayoutItem[]"
+                }
+            },
+            "computeGainsRate(address)": {
+                "argument": {},
+                "contract": {
+                    "Currencies": "string[]",
+                    "Term": "uint256[]",
+                    "feesRate": "uint256",
+                    "feesRateTeam": "uint256",
+                    "feesRateCongres": "uint256",
+                    "feesProfitDeposit": "uint256",
+                    "garanteSystemDepositInOneFund": "uint256",
+                    "garanteSystemDepositInAllFunds": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "refferalsRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "BlockchainDeposit.PayoutItem[]"
+                }
+            },
+            "computeGains(BlockchainDeposit.Deposit)": {
+                "argument": {},
+                "contract": {
+                    "Currencies": "string[]",
+                    "Term": "uint256[]",
+                    "feesRate": "uint256",
+                    "feesRateTeam": "uint256",
+                    "feesRateCongres": "uint256",
+                    "feesProfitDeposit": "uint256",
+                    "garanteSystemDepositInOneFund": "uint256",
+                    "garanteSystemDepositInAllFunds": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "refferalsRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "BlockchainDeposit.PayoutItem[]"
+                }
+            },
+            "isReferee(address)": {
+                "argument": {},
+                "contract": {
+                    "Currencies": "string[]",
+                    "Term": "uint256[]",
+                    "feesRate": "uint256",
+                    "feesRateTeam": "uint256",
+                    "feesRateCongres": "uint256",
+                    "feesProfitDeposit": "uint256",
+                    "garanteSystemDepositInOneFund": "uint256",
+                    "garanteSystemDepositInAllFunds": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "refferalsRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "BlockchainDeposit.PayoutItem[]"
+                }
+            },
+            "getReferedCount(address)": {
+                "argument": {},
+                "contract": {
+                    "Currencies": "string[]",
+                    "Term": "uint256[]",
+                    "feesRate": "uint256",
+                    "feesRateTeam": "uint256",
+                    "feesRateCongres": "uint256",
+                    "feesProfitDeposit": "uint256",
+                    "garanteSystemDepositInOneFund": "uint256",
+                    "garanteSystemDepositInAllFunds": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "refferalsRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "BlockchainDeposit.PayoutItem[]"
+                }
+            },
+            "getPendingReferals(address)": {
+                "argument": {},
+                "contract": {
+                    "Currencies": "string[]",
+                    "Term": "uint256[]",
+                    "feesRate": "uint256",
+                    "feesRateTeam": "uint256",
+                    "feesRateCongres": "uint256",
+                    "feesProfitDeposit": "uint256",
+                    "garanteSystemDepositInOneFund": "uint256",
+                    "garanteSystemDepositInAllFunds": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "refferalsRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "BlockchainDeposit.PayoutItem[]"
+                }
+            },
+            "addNewPayout(BlockchainDeposit.PayoutItem)": {
+                "argument": {},
+                "contract": {
+                    "Currencies": "string[]",
+                    "Term": "uint256[]",
+                    "feesRate": "uint256",
+                    "feesRateTeam": "uint256",
+                    "feesRateCongres": "uint256",
+                    "feesProfitDeposit": "uint256",
+                    "garanteSystemDepositInOneFund": "uint256",
+                    "garanteSystemDepositInAllFunds": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "refferalsRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "BlockchainDeposit.PayoutItem[]"
+                }
+            },
+            "payout(BlockchainDeposit.Deposit)": {
+                "argument": {},
+                "contract": {
+                    "Currencies": "string[]",
+                    "Term": "uint256[]",
+                    "feesRate": "uint256",
+                    "feesRateTeam": "uint256",
+                    "feesRateCongres": "uint256",
+                    "feesProfitDeposit": "uint256",
+                    "garanteSystemDepositInOneFund": "uint256",
+                    "garanteSystemDepositInAllFunds": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "refferalsRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "BlockchainDeposit.PayoutItem[]"
+                }
+            },
+            "dispatchGains()": {
+                "argument": {},
+                "contract": {
+                    "Currencies": "string[]",
+                    "Term": "uint256[]",
+                    "feesRate": "uint256",
+                    "feesRateTeam": "uint256",
+                    "feesRateCongres": "uint256",
+                    "feesProfitDeposit": "uint256",
+                    "garanteSystemDepositInOneFund": "uint256",
+                    "garanteSystemDepositInAllFunds": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "refferalsRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "BlockchainDeposit.PayoutItem[]"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "Currencies": "string[]",
+                    "Term": "uint256[]",
+                    "feesRate": "uint256",
+                    "feesRateTeam": "uint256",
+                    "feesRateCongres": "uint256",
+                    "feesProfitDeposit": "uint256",
+                    "garanteSystemDepositInOneFund": "uint256",
+                    "garanteSystemDepositInAllFunds": "uint256",
+                    "numDeposits": "uint256",
+                    "totalDeposited": "uint256",
+                    "totalGains": "uint256",
+                    "lastDeposit": "uint256",
+                    "profitsRatePercent": "uint256",
+                    "refferalsRateBonus": "uint256",
+                    "refereesRateBonus": "uint256",
+                    "currentPayoutIndex": "uint256",
+                    "addressPositions": "mapping(address => uint256[])",
+                    "lastPayouts": "BlockchainDeposit.PayoutItem[]"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "getnumDeposits()": [
+                1806,
+                449
+            ],
+            "getContractMetrics()": [
+                1391,
+                361
+            ],
+            "getPayout(uint256)": [
+                1102,
+                273
+            ],
+            "getEarliestPosition(address)": [
+                907,
+                229
+            ],
+            "getCurrentPayoutIndex()": [
+                864,
+                207
+            ],
+            "computeGainsRate(address)": [
+                507,
+                97
+            ],
+            "inviteReferee(address,address)": [
+                1553,
+                405
+            ],
+            "getAddressGains(address)": [
+                1218,
+                295
+            ],
+            "getLastPayouts()": [
+                1676,
+                427
+            ],
+            "getAccountReferalsStats(address)": [
+                2542,
+                713
+            ],
+            "getMaster()": [
+                1466,
+                383
+            ],
+            "dispatchGains()": [
+                2723,
+                757
+            ],
+            "deposit()": [
+                2416,
+                669
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump6057": [
+                "currentDepositor.send( payableAmount )",
+                "currentDepositor.send( payableAmount )"
+            ],
+            "block6275_2": [
+                "master.send(fees)"
+            ],
+            "jump6275": [
+                "master.send(fees)",
+                "master.send(fees)"
+            ],
+            "block6057_2": [
+                "currentDepositor.send( payableAmount )"
+            ],
+            "block6057_1": [
+                "currentDepositor.send( payableAmount )"
+            ],
+            "block6057_0": [
+                "currentDepositor.send( payableAmount )"
+            ],
+            "block6275_1": [
+                "master.send(fees)"
+            ],
+            "block6275_0": [
+                "master.send(fees)"
+            ],
+            "jump6275_1": [
+                "master.send(fees)",
+                "master.send(fees)"
+            ],
+            "jump6275_0": [
+                "master.send(fees)",
+                "master.send(fees)"
+            ],
+            "block6057": [
+                "currentDepositor.send( payableAmount )"
+            ],
+            "jump6275_2": [
+                "master.send(fees)",
+                "master.send(fees)"
+            ],
+            "jump6057_1": [
+                "currentDepositor.send( payableAmount )",
+                "currentDepositor.send( payableAmount )"
+            ],
+            "jump6057_0": [
+                "currentDepositor.send( payableAmount )",
+                "currentDepositor.send( payableAmount )"
+            ],
+            "block6275": [
+                "master.send(fees)"
+            ],
+            "jump6057_2": [
+                "currentDepositor.send( payableAmount )",
+                "currentDepositor.send( payableAmount )"
+            ]
+        }
+    }
+}

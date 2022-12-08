@@ -1,0 +1,596 @@
+{
+    "Escrow": {
+        "function_list": [
+            "deposit(address)"
+        ],
+        "initial_state": {
+            "deposit(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {
+            "block1910": [
+                "beneficiary.send(this.balance)"
+            ],
+            "block1215": [
+                "tokenInst.transfer(owner, balance)"
+            ],
+            "block958": [
+                "tokenInst.balanceOf(this)"
+            ],
+            "jump1537": [
+                "tokenSale.saleFinalized()",
+                "tokenSale.saleFinalized()"
+            ],
+            "jump958": [
+                "tokenInst.balanceOf(this)",
+                "tokenInst.balanceOf(this)"
+            ],
+            "block1910_0": [
+                "beneficiary.send(this.balance)"
+            ],
+            "jump1215": [
+                "tokenInst.transfer(owner, balance)",
+                "tokenInst.transfer(owner, balance)"
+            ],
+            "jump1910": [
+                "beneficiary.send(this.balance)",
+                "beneficiary.send(this.balance)"
+            ],
+            "block1537": [
+                "tokenSale.saleFinalized()"
+            ],
+            "jump1910_0": [
+                "beneficiary.send(this.balance)",
+                "beneficiary.send(this.balance)"
+            ]
+        }
+    },
+    "AffiliateNetwork": {
+        "function_list": [
+            "affiliateAddresses(uint256)"
+        ],
+        "initial_state": {
+            "affiliateAddresses(uint256)": {
+                "argument": {
+                    "code": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "affiliateAddresses(uint256)": [
+                299,
+                119
+            ]
+        },
+        "block_CALL_mapping": {
+            "block108": [
+                "msg.sender.transfer(msg.value)"
+            ],
+            "jump108_0": [
+                "msg.sender.transfer(msg.value)",
+                "msg.sender.transfer(msg.value)"
+            ],
+            "jump108": [
+                "msg.sender.transfer(msg.value)",
+                "msg.sender.transfer(msg.value)"
+            ],
+            "block108_0": [
+                "msg.sender.transfer(msg.value)"
+            ]
+        }
+    },
+    "EthereumLottery": {
+        "function_list": [
+            "EthereumLottery(address,address,address)",
+            "needsInitialization()",
+            "initLottery(uint256,uint256,uint256)",
+            "buyTickets(uint256[],uint256,uint256)",
+            "needsBlockFinalization()",
+            "finalizeBlock()",
+            "needsLotteryFinalization()",
+            "finalizeLottery(uint256)",
+            "walkTowardsBlock(uint256)",
+            "getBlockHeader(int256)",
+            "getMessageLength(string)",
+            "setMessage(int256,string)",
+            "getLotteryDetailsA(int256)",
+            "getLotteryDetailsB(int256)",
+            "getTicketDetails(int256,uint256,uint256,address)",
+            "getFullTicketDetails(int256,uint256,uint256)",
+            "getTicketOwner(int256,uint256)",
+            "getRecentActivity()",
+            "setAdmin(address)",
+            "proposeOwner(address)",
+            "acceptOwnership()",
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "EthereumLottery(address,address,address)": {
+                "argument": {},
+                "contract": {
+                    "GAS_LIMIT_DEPOSIT": "uint256",
+                    "GAS_LIMIT_AFFILIATE": "uint256",
+                    "lastInitTimestamp": "uint256",
+                    "lastSaleTimestamp": "uint256",
+                    "recentActivityIdx": "uint256",
+                    "recentActivity": "uint256[1000]"
+                }
+            },
+            "needsInitialization()": {
+                "argument": {},
+                "contract": {
+                    "GAS_LIMIT_DEPOSIT": "uint256",
+                    "GAS_LIMIT_AFFILIATE": "uint256",
+                    "lastInitTimestamp": "uint256",
+                    "lastSaleTimestamp": "uint256",
+                    "recentActivityIdx": "uint256",
+                    "recentActivity": "uint256[1000]"
+                }
+            },
+            "initLottery(uint256,uint256,uint256)": {
+                "argument": {
+                    "_jackpot": "uint256",
+                    "_numTickets": "uint256",
+                    "_ticketPrice": "uint256"
+                },
+                "contract": {
+                    "GAS_LIMIT_DEPOSIT": "uint256",
+                    "GAS_LIMIT_AFFILIATE": "uint256",
+                    "lastInitTimestamp": "uint256",
+                    "lastSaleTimestamp": "uint256",
+                    "recentActivityIdx": "uint256",
+                    "recentActivity": "uint256[1000]"
+                }
+            },
+            "buyTickets(uint256[],uint256,uint256)": {
+                "argument": {
+                    "_tickets": "uint256[]",
+                    "_mark": "uint256",
+                    "_affiliate": "uint256"
+                },
+                "contract": {
+                    "GAS_LIMIT_DEPOSIT": "uint256",
+                    "GAS_LIMIT_AFFILIATE": "uint256",
+                    "lastInitTimestamp": "uint256",
+                    "lastSaleTimestamp": "uint256",
+                    "recentActivityIdx": "uint256",
+                    "recentActivity": "uint256[1000]"
+                }
+            },
+            "needsBlockFinalization()": {
+                "argument": {},
+                "contract": {
+                    "GAS_LIMIT_DEPOSIT": "uint256",
+                    "GAS_LIMIT_AFFILIATE": "uint256",
+                    "lastInitTimestamp": "uint256",
+                    "lastSaleTimestamp": "uint256",
+                    "recentActivityIdx": "uint256",
+                    "recentActivity": "uint256[1000]"
+                }
+            },
+            "finalizeBlock()": {
+                "argument": {},
+                "contract": {
+                    "GAS_LIMIT_DEPOSIT": "uint256",
+                    "GAS_LIMIT_AFFILIATE": "uint256",
+                    "lastInitTimestamp": "uint256",
+                    "lastSaleTimestamp": "uint256",
+                    "recentActivityIdx": "uint256",
+                    "recentActivity": "uint256[1000]"
+                }
+            },
+            "needsLotteryFinalization()": {
+                "argument": {},
+                "contract": {
+                    "GAS_LIMIT_DEPOSIT": "uint256",
+                    "GAS_LIMIT_AFFILIATE": "uint256",
+                    "lastInitTimestamp": "uint256",
+                    "lastSaleTimestamp": "uint256",
+                    "recentActivityIdx": "uint256",
+                    "recentActivity": "uint256[1000]"
+                }
+            },
+            "finalizeLottery(uint256)": {
+                "argument": {
+                    "_steps": "uint256"
+                },
+                "contract": {
+                    "GAS_LIMIT_DEPOSIT": "uint256",
+                    "GAS_LIMIT_AFFILIATE": "uint256",
+                    "lastInitTimestamp": "uint256",
+                    "lastSaleTimestamp": "uint256",
+                    "recentActivityIdx": "uint256",
+                    "recentActivity": "uint256[1000]"
+                }
+            },
+            "walkTowardsBlock(uint256)": {
+                "argument": {
+                    "_steps": "uint256"
+                },
+                "contract": {
+                    "GAS_LIMIT_DEPOSIT": "uint256",
+                    "GAS_LIMIT_AFFILIATE": "uint256",
+                    "lastInitTimestamp": "uint256",
+                    "lastSaleTimestamp": "uint256",
+                    "recentActivityIdx": "uint256",
+                    "recentActivity": "uint256[1000]"
+                }
+            },
+            "getBlockHeader(int256)": {
+                "argument": {},
+                "contract": {
+                    "GAS_LIMIT_DEPOSIT": "uint256",
+                    "GAS_LIMIT_AFFILIATE": "uint256",
+                    "lastInitTimestamp": "uint256",
+                    "lastSaleTimestamp": "uint256",
+                    "recentActivityIdx": "uint256",
+                    "recentActivity": "uint256[1000]"
+                }
+            },
+            "getMessageLength(string)": {
+                "argument": {
+                    "_message": "string"
+                },
+                "contract": {
+                    "GAS_LIMIT_DEPOSIT": "uint256",
+                    "GAS_LIMIT_AFFILIATE": "uint256",
+                    "lastInitTimestamp": "uint256",
+                    "lastSaleTimestamp": "uint256",
+                    "recentActivityIdx": "uint256",
+                    "recentActivity": "uint256[1000]"
+                }
+            },
+            "setMessage(int256,string)": {
+                "argument": {
+                    "_message": "string"
+                },
+                "contract": {
+                    "GAS_LIMIT_DEPOSIT": "uint256",
+                    "GAS_LIMIT_AFFILIATE": "uint256",
+                    "lastInitTimestamp": "uint256",
+                    "lastSaleTimestamp": "uint256",
+                    "recentActivityIdx": "uint256",
+                    "recentActivity": "uint256[1000]"
+                }
+            },
+            "getLotteryDetailsA(int256)": {
+                "argument": {},
+                "contract": {
+                    "GAS_LIMIT_DEPOSIT": "uint256",
+                    "GAS_LIMIT_AFFILIATE": "uint256",
+                    "lastInitTimestamp": "uint256",
+                    "lastSaleTimestamp": "uint256",
+                    "recentActivityIdx": "uint256",
+                    "recentActivity": "uint256[1000]"
+                }
+            },
+            "getLotteryDetailsB(int256)": {
+                "argument": {},
+                "contract": {
+                    "GAS_LIMIT_DEPOSIT": "uint256",
+                    "GAS_LIMIT_AFFILIATE": "uint256",
+                    "lastInitTimestamp": "uint256",
+                    "lastSaleTimestamp": "uint256",
+                    "recentActivityIdx": "uint256",
+                    "recentActivity": "uint256[1000]"
+                }
+            },
+            "getTicketDetails(int256,uint256,uint256,address)": {
+                "argument": {
+                    "_offset": "uint256",
+                    "_n": "uint256"
+                },
+                "contract": {
+                    "GAS_LIMIT_DEPOSIT": "uint256",
+                    "GAS_LIMIT_AFFILIATE": "uint256",
+                    "lastInitTimestamp": "uint256",
+                    "lastSaleTimestamp": "uint256",
+                    "recentActivityIdx": "uint256",
+                    "recentActivity": "uint256[1000]"
+                }
+            },
+            "getFullTicketDetails(int256,uint256,uint256)": {
+                "argument": {
+                    "_offset": "uint256",
+                    "_n": "uint256"
+                },
+                "contract": {
+                    "GAS_LIMIT_DEPOSIT": "uint256",
+                    "GAS_LIMIT_AFFILIATE": "uint256",
+                    "lastInitTimestamp": "uint256",
+                    "lastSaleTimestamp": "uint256",
+                    "recentActivityIdx": "uint256",
+                    "recentActivity": "uint256[1000]"
+                }
+            },
+            "getTicketOwner(int256,uint256)": {
+                "argument": {
+                    "_ticket": "uint256"
+                },
+                "contract": {
+                    "GAS_LIMIT_DEPOSIT": "uint256",
+                    "GAS_LIMIT_AFFILIATE": "uint256",
+                    "lastInitTimestamp": "uint256",
+                    "lastSaleTimestamp": "uint256",
+                    "recentActivityIdx": "uint256",
+                    "recentActivity": "uint256[1000]"
+                }
+            },
+            "getRecentActivity()": {
+                "argument": {},
+                "contract": {
+                    "GAS_LIMIT_DEPOSIT": "uint256",
+                    "GAS_LIMIT_AFFILIATE": "uint256",
+                    "lastInitTimestamp": "uint256",
+                    "lastSaleTimestamp": "uint256",
+                    "recentActivityIdx": "uint256",
+                    "recentActivity": "uint256[1000]"
+                }
+            },
+            "setAdmin(address)": {
+                "argument": {},
+                "contract": {
+                    "GAS_LIMIT_DEPOSIT": "uint256",
+                    "GAS_LIMIT_AFFILIATE": "uint256",
+                    "lastInitTimestamp": "uint256",
+                    "lastSaleTimestamp": "uint256",
+                    "recentActivityIdx": "uint256",
+                    "recentActivity": "uint256[1000]"
+                }
+            },
+            "proposeOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "GAS_LIMIT_DEPOSIT": "uint256",
+                    "GAS_LIMIT_AFFILIATE": "uint256",
+                    "lastInitTimestamp": "uint256",
+                    "lastSaleTimestamp": "uint256",
+                    "recentActivityIdx": "uint256",
+                    "recentActivity": "uint256[1000]"
+                }
+            },
+            "acceptOwnership()": {
+                "argument": {},
+                "contract": {
+                    "GAS_LIMIT_DEPOSIT": "uint256",
+                    "GAS_LIMIT_AFFILIATE": "uint256",
+                    "lastInitTimestamp": "uint256",
+                    "lastSaleTimestamp": "uint256",
+                    "recentActivityIdx": "uint256",
+                    "recentActivity": "uint256[1000]"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "GAS_LIMIT_DEPOSIT": "uint256",
+                    "GAS_LIMIT_AFFILIATE": "uint256",
+                    "lastInitTimestamp": "uint256",
+                    "lastSaleTimestamp": "uint256",
+                    "recentActivityIdx": "uint256",
+                    "recentActivity": "uint256[1000]"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "buyTickets(uint256[],uint256,uint256)": [
+                2829,
+                625
+            ],
+            "setMessage(int256,string)": [
+                2017,
+                427
+            ],
+            "initLottery(uint256,uint256,uint256)": [
+                2396,
+                515
+            ],
+            "proposeOwner(address)": [
+                2282,
+                471
+            ],
+            "needsLotteryFinalization()": [
+                882,
+                163
+            ],
+            "finalizeBlock()": [
+                1390,
+                273
+            ],
+            "getFullTicketDetails(int256,uint256,uint256)": [
+                2132,
+                449
+            ],
+            "needsInitialization()": [
+                2349,
+                493
+            ],
+            "getTicketOwner(int256,uint256)": [
+                2938,
+                647
+            ],
+            "getRecentActivity()": [
+                1746,
+                339
+            ],
+            "getLotteryDetailsB(int256)": [
+                1436,
+                317
+            ],
+            "getTicketDetails(int256,uint256,uint256,address)": [
+                929,
+                185
+            ],
+            "needsBlockFinalization()": [
+                835,
+                141
+            ],
+            "getMessageLength(string)": [
+                1198,
+                229
+            ],
+            "getLotteryDetailsA(int256)": [
+                2635,
+                581
+            ],
+            "setAdmin(address)": [
+                1323,
+                251
+            ],
+            "finalizeLottery(uint256)": [
+                3057,
+                669
+            ],
+            "acceptOwnership()": [
+                1413,
+                295
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump10374": [
+                "Escrow(escrow).deposit.value(value)(winner)",
+                "Escrow(escrow).deposit.value(value)(winner)"
+            ],
+            "block4135_0": [
+                "BTCRelay(btcRelay).getLastBlockHeight()"
+            ],
+            "jump11752": [
+                "BTCRelay(btcRelay).getBlockchainHead()",
+                "BTCRelay(btcRelay).getBlockchainHead()"
+            ],
+            "jump11556": [
+                "BTCRelay(btcRelay).getLastBlockHeight()",
+                "BTCRelay(btcRelay).getLastBlockHeight()"
+            ],
+            "jump10726": [
+                "BTCRelay(btcRelay).getFeeAmount(blockHash)",
+                "BTCRelay(btcRelay).getFeeAmount(blockHash)"
+            ],
+            "block9210": [
+                "AffiliateNetwork(affiliateNetwork).affiliateAddresses(_affiliate)"
+            ],
+            "jump3743": [
+                "BTCRelay(btcRelay).getBlockchainHead()",
+                "BTCRelay(btcRelay).getBlockchainHead()"
+            ],
+            "block10948_0": [
+                "BTCRelay(btcRelay).getBlockHeader(blockHash)"
+            ],
+            "block10948_1": [
+                "BTCRelay(btcRelay).getBlockHeader(blockHash)"
+            ],
+            "block10726_0": [
+                "BTCRelay(btcRelay).getFeeAmount(blockHash)"
+            ],
+            "block10726_1": [
+                "BTCRelay(btcRelay).getFeeAmount(blockHash)"
+            ],
+            "jump4135": [
+                "BTCRelay(btcRelay).getLastBlockHeight()",
+                "BTCRelay(btcRelay).getLastBlockHeight()"
+            ],
+            "block4135": [
+                "BTCRelay(btcRelay).getLastBlockHeight()"
+            ],
+            "jump9210": [
+                "AffiliateNetwork(affiliateNetwork).affiliateAddresses(_affiliate)",
+                "AffiliateNetwork(affiliateNetwork).affiliateAddresses(_affiliate)"
+            ],
+            "block9304": [
+                "affiliateAddress.call.gas(GAS_LIMIT_AFFILIATE).value(cut)()"
+            ],
+            "block10401": [
+                "admin.call.gas(GAS_LIMIT_DEPOSIT).value(this.balance)()"
+            ],
+            "block11752": [
+                "BTCRelay(btcRelay).getBlockchainHead()"
+            ],
+            "jump10948_1": [
+                "BTCRelay(btcRelay).getBlockHeader(blockHash)",
+                "BTCRelay(btcRelay).getBlockHeader(blockHash)"
+            ],
+            "jump10099": [
+                "winner.call.gas(GAS_LIMIT_DEPOSIT).value(value)()",
+                "winner.call.gas(GAS_LIMIT_DEPOSIT).value(value)()"
+            ],
+            "block8687": [
+                "msg.sender.transfer(msg.value)"
+            ],
+            "jump10726_0": [
+                "BTCRelay(btcRelay).getFeeAmount(blockHash)",
+                "BTCRelay(btcRelay).getFeeAmount(blockHash)"
+            ],
+            "jump10726_1": [
+                "BTCRelay(btcRelay).getFeeAmount(blockHash)",
+                "BTCRelay(btcRelay).getFeeAmount(blockHash)"
+            ],
+            "block3743": [
+                "BTCRelay(btcRelay).getBlockchainHead()"
+            ],
+            "block8251": [
+                "msg.sender.transfer(msg.value)"
+            ],
+            "jump8251": [
+                "msg.sender.transfer(msg.value)",
+                "msg.sender.transfer(msg.value)"
+            ],
+            "block6199": [
+                "BTCRelay(btcRelay).getLastBlockHeight()"
+            ],
+            "block3743_0": [
+                "BTCRelay(btcRelay).getBlockchainHead()"
+            ],
+            "jump10948_0": [
+                "BTCRelay(btcRelay).getBlockHeader(blockHash)",
+                "BTCRelay(btcRelay).getBlockHeader(blockHash)"
+            ],
+            "block10948": [
+                "BTCRelay(btcRelay).getBlockHeader(blockHash)"
+            ],
+            "jump3743_0": [
+                "BTCRelay(btcRelay).getBlockchainHead()",
+                "BTCRelay(btcRelay).getBlockchainHead()"
+            ],
+            "block10374": [
+                "Escrow(escrow).deposit.value(value)(winner)"
+            ],
+            "jump5175": [
+                "BTCRelay(btcRelay).getLastBlockHeight()",
+                "BTCRelay(btcRelay).getLastBlockHeight()"
+            ],
+            "block10726": [
+                "BTCRelay(btcRelay).getFeeAmount(blockHash)"
+            ],
+            "jump6199": [
+                "BTCRelay(btcRelay).getLastBlockHeight()",
+                "BTCRelay(btcRelay).getLastBlockHeight()"
+            ],
+            "jump10948": [
+                "BTCRelay(btcRelay).getBlockHeader(blockHash)",
+                "BTCRelay(btcRelay).getBlockHeader(blockHash)"
+            ],
+            "jump4135_0": [
+                "BTCRelay(btcRelay).getLastBlockHeight()",
+                "BTCRelay(btcRelay).getLastBlockHeight()"
+            ],
+            "block11556": [
+                "BTCRelay(btcRelay).getLastBlockHeight()"
+            ],
+            "block10099": [
+                "winner.call.gas(GAS_LIMIT_DEPOSIT).value(value)()"
+            ],
+            "block5175": [
+                "BTCRelay(btcRelay).getLastBlockHeight()"
+            ],
+            "jump8687": [
+                "msg.sender.transfer(msg.value)",
+                "msg.sender.transfer(msg.value)"
+            ]
+        }
+    }
+}

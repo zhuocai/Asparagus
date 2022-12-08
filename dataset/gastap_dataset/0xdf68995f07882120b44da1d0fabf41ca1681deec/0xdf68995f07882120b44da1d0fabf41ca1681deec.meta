@@ -1,0 +1,1520 @@
+{
+    "ProvideWorkOrder": {
+        "function_list": [
+            "ProvideWorkOrder(address,address,address,address,address,uint128)",
+            "start(address)",
+            "complete(uint256,string)",
+            "completeTransaction()"
+        ],
+        "initial_state": {
+            "ProvideWorkOrder(address,address,address,address,address,uint128)": {
+                "argument": {
+                    "_identifier": "uint128"
+                },
+                "contract": {
+                    "identifier": "uint128",
+                    "amount": "uint256",
+                    "details": "string"
+                }
+            },
+            "start(address)": {
+                "argument": {},
+                "contract": {
+                    "identifier": "uint128",
+                    "amount": "uint256",
+                    "details": "string"
+                }
+            },
+            "complete(uint256,string)": {
+                "argument": {
+                    "_amount": "uint256",
+                    "_details": "string"
+                },
+                "contract": {
+                    "identifier": "uint128",
+                    "amount": "uint256",
+                    "details": "string"
+                }
+            },
+            "completeTransaction()": {
+                "argument": {},
+                "contract": {
+                    "identifier": "uint128",
+                    "amount": "uint256",
+                    "details": "string"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "start(address)": [
+                1098,
+                317
+            ],
+            "complete(uint256,string)": [
+                433,
+                141
+            ],
+            "completeTransaction()": [
+                1075,
+                295
+            ]
+        },
+        "block_CALL_mapping": {
+            "block2890": [
+                "token.transferFrom(this, paymentEscrow, amount)"
+            ],
+            "block2530": [
+                "token.allowance(msg.sender, this)"
+            ],
+            "jump2530": [
+                "token.allowance(msg.sender, this)",
+                "token.allowance(msg.sender, this)"
+            ],
+            "jump2890": [
+                "token.transferFrom(this, paymentEscrow, amount)",
+                "token.transferFrom(this, paymentEscrow, amount)"
+            ],
+            "block3228": [
+                "token.transferFrom(this, prvdWallet, feeAmount)"
+            ],
+            "jump3228": [
+                "token.transferFrom(this, prvdWallet, feeAmount)",
+                "token.transferFrom(this, prvdWallet, feeAmount)"
+            ]
+        }
+    },
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)",
+            "max64(uint64,uint64)",
+            "min64(uint64,uint64)",
+            "max256(uint256,uint256)",
+            "min256(uint256,uint256)",
+            "assertTrue(bool)",
+            "assertFalse(bool)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "max64(uint64,uint64)": {
+                "argument": {
+                    "a": "uint64",
+                    "b": "uint64"
+                },
+                "contract": {}
+            },
+            "min64(uint64,uint64)": {
+                "argument": {
+                    "a": "uint64",
+                    "b": "uint64"
+                },
+                "contract": {}
+            },
+            "max256(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "min256(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "assertTrue(bool)": {
+                "argument": {},
+                "contract": {}
+            },
+            "assertFalse(bool)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "ERC20Basic": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                124,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "ERC20": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                125,
+                75
+            ],
+            "balanceOf(address)": [
+                402,
+                141
+            ],
+            "allowance(address,address)": [
+                590,
+                185
+            ],
+            "transferFrom(address,address,uint256)": [
+                269,
+                119
+            ],
+            "transfer(address,uint256)": [
+                489,
+                163
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "BasicToken": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transfer(address,uint256)",
+            "balanceOf(address)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transfer(address,uint256)": [
+                222,
+                119
+            ],
+            "balanceOf(address)": [
+                135,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "StandardToken": {
+        "function_list": [
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transfer(address,uint256)",
+            "balanceOf(address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)"
+        ],
+        "initial_state": {
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                125,
+                75
+            ],
+            "balanceOf(address)": [
+                354,
+                141
+            ],
+            "allowance(address,address)": [
+                518,
+                185
+            ],
+            "transferFrom(address,address,uint256)": [
+                245,
+                119
+            ],
+            "transfer(address,uint256)": [
+                441,
+                163
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Controller": {
+        "function_list": [
+            "proxyPayment(address)",
+            "onTransfer(address,address,uint256)",
+            "onApprove(address,address,uint256)"
+        ],
+        "initial_state": {
+            "proxyPayment(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "onTransfer(address,address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {}
+            },
+            "onApprove(address,address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {
+            "block9833": [
+                "token.controllerTransfer(0x0, _to, _amount)"
+            ],
+            "jump9833_1": [
+                "token.controllerTransfer(0x0, _to, _amount)",
+                "token.controllerTransfer(0x0, _to, _amount)"
+            ],
+            "block2803": [
+                "ledger.transfer(_from, _to, _value)"
+            ],
+            "block3865": [
+                "ledger.transferFrom(_spender, _from, _to, _value)"
+            ],
+            "jump3119": [
+                "token.controllerTransfer(msg.sender, _to, _value)",
+                "token.controllerTransfer(msg.sender, _to, _value)"
+            ],
+            "block9538_0": [
+                "ledger.mint(_to, _amount)"
+            ],
+            "block9538_1": [
+                "ledger.mint(_to, _amount)"
+            ],
+            "jump2803": [
+                "ledger.transfer(_from, _to, _value)",
+                "ledger.transfer(_from, _to, _value)"
+            ],
+            "jump8740": [
+                "ledger.approve(_owner, _spender, _value)",
+                "ledger.approve(_owner, _spender, _value)"
+            ],
+            "block9833_0": [
+                "token.controllerTransfer(0x0, _to, _amount)"
+            ],
+            "block9833_1": [
+                "token.controllerTransfer(0x0, _to, _amount)"
+            ],
+            "block5064": [
+                "ledger.transfer(LIFE_CHANGE_VESTING_WALLET, _withdrawTo, amountWithdrawn)"
+            ],
+            "jump9538_0": [
+                "ledger.mint(_to, _amount)",
+                "ledger.mint(_to, _amount)"
+            ],
+            "block3119": [
+                "token.controllerTransfer(msg.sender, _to, _value)"
+            ],
+            "block6889": [
+                "ledger.burn(_owner, _amount)"
+            ],
+            "jump7951": [
+                "ledger.allowance(_owner, _spender)",
+                "ledger.allowance(_owner, _spender)"
+            ],
+            "jump9538_1": [
+                "ledger.mint(_to, _amount)",
+                "ledger.mint(_to, _amount)"
+            ],
+            "jump7406": [
+                "ledger.transfer(_from, _to, _value)",
+                "ledger.transfer(_from, _to, _value)"
+            ],
+            "jump9833": [
+                "token.controllerTransfer(0x0, _to, _amount)",
+                "token.controllerTransfer(0x0, _to, _amount)"
+            ],
+            "jump5064": [
+                "ledger.transfer(LIFE_CHANGE_VESTING_WALLET, _withdrawTo, amountWithdrawn)",
+                "ledger.transfer(LIFE_CHANGE_VESTING_WALLET, _withdrawTo, amountWithdrawn)"
+            ],
+            "jump6231": [
+                "ledger.balanceOf(_owner)",
+                "ledger.balanceOf(_owner)"
+            ],
+            "jump4162": [
+                "ledger.totalSupply()",
+                "ledger.totalSupply()"
+            ],
+            "jump9833_0": [
+                "token.controllerTransfer(0x0, _to, _amount)",
+                "token.controllerTransfer(0x0, _to, _amount)"
+            ],
+            "block4162": [
+                "ledger.totalSupply()"
+            ],
+            "block7951": [
+                "ledger.allowance(_owner, _spender)"
+            ],
+            "jump3865": [
+                "ledger.transferFrom(_spender, _from, _to, _value)",
+                "ledger.transferFrom(_spender, _from, _to, _value)"
+            ],
+            "jump9538": [
+                "ledger.mint(_to, _amount)",
+                "ledger.mint(_to, _amount)"
+            ],
+            "block8740": [
+                "ledger.approve(_owner, _spender, _value)"
+            ],
+            "block6231": [
+                "ledger.balanceOf(_owner)"
+            ],
+            "block9538": [
+                "ledger.mint(_to, _amount)"
+            ],
+            "jump6889": [
+                "ledger.burn(_owner, _amount)",
+                "ledger.burn(_owner, _amount)"
+            ],
+            "block5393": [
+                "token.controllerTransfer(LIFE_CHANGE_VESTING_WALLET, _withdrawTo, amountWithdrawn)"
+            ],
+            "jump5393": [
+                "token.controllerTransfer(LIFE_CHANGE_VESTING_WALLET, _withdrawTo, amountWithdrawn)",
+                "token.controllerTransfer(LIFE_CHANGE_VESTING_WALLET, _withdrawTo, amountWithdrawn)"
+            ],
+            "block7406": [
+                "ledger.transfer(_from, _to, _value)"
+            ]
+        }
+    },
+    "Controlled": {
+        "function_list": [
+            "Controlled()",
+            "changeController(address)"
+        ],
+        "initial_state": {
+            "Controlled()": {
+                "argument": {},
+                "contract": {}
+            },
+            "changeController(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "changeController(address)": [
+                81,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "BurnableToken": {
+        "function_list": [
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transfer(address,uint256)",
+            "balanceOf(address)",
+            "burn(uint256)",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "burn(uint256)": {
+                "argument": {
+                    "burnAmount": "uint256"
+                },
+                "contract": {}
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                147,
+                75
+            ],
+            "balanceOf(address)": [
+                421,
+                163
+            ],
+            "burn(uint256)": [
+                376,
+                141
+            ],
+            "allowance(address,address)": [
+                585,
+                207
+            ],
+            "transferFrom(address,address,uint256)": [
+                267,
+                119
+            ],
+            "transfer(address,uint256)": [
+                508,
+                185
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "MintableToken": {
+        "function_list": [
+            "Controlled()",
+            "changeController(address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transfer(address,uint256)",
+            "balanceOf(address)",
+            "mint(address,uint256)",
+            "finishMinting()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "Controlled()": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "changeController(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "mint(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "finishMinting()": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                227,
+                97
+            ],
+            "changeController(address)": [
+                456,
+                163
+            ],
+            "mint(address,uint256)": [
+                523,
+                185
+            ],
+            "balanceOf(address)": [
+                624,
+                207
+            ],
+            "finishMinting()": [
+                711,
+                229
+            ],
+            "allowance(address,address)": [
+                835,
+                273
+            ],
+            "transferFrom(address,address,uint256)": [
+                347,
+                141
+            ],
+            "transfer(address,uint256)": [
+                758,
+                251
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "UpgradeableToken": {
+        "function_list": [
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transfer(address,uint256)",
+            "balanceOf(address)",
+            "UpgradeableToken(address)",
+            "upgrade(uint256)",
+            "setUpgradeAgent(address)",
+            "getUpgradeState()",
+            "setUpgradeController(address)",
+            "canUpgrade()"
+        ],
+        "initial_state": {
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalUpgraded": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalUpgraded": "uint256"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "totalUpgraded": "uint256"
+                }
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalUpgraded": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalUpgraded": "uint256"
+                }
+            },
+            "UpgradeableToken(address)": {
+                "argument": {},
+                "contract": {
+                    "totalUpgraded": "uint256"
+                }
+            },
+            "upgrade(uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalUpgraded": "uint256"
+                }
+            },
+            "setUpgradeAgent(address)": {
+                "argument": {},
+                "contract": {
+                    "totalUpgraded": "uint256"
+                }
+            },
+            "getUpgradeState()": {
+                "argument": {},
+                "contract": {
+                    "totalUpgraded": "uint256"
+                }
+            },
+            "setUpgradeController(address)": {
+                "argument": {},
+                "contract": {
+                    "totalUpgraded": "uint256"
+                }
+            },
+            "canUpgrade()": {
+                "argument": {},
+                "contract": {
+                    "totalUpgraded": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                213,
+                75
+            ],
+            "setUpgradeAgent(address)": [
+                1039,
+                339
+            ],
+            "setUpgradeController(address)": [
+                290,
+                97
+            ],
+            "balanceOf(address)": [
+                641,
+                207
+            ],
+            "canUpgrade()": [
+                872,
+                273
+            ],
+            "allowance(address,address)": [
+                1106,
+                361
+            ],
+            "transferFrom(address,address,uint256)": [
+                400,
+                141
+            ],
+            "transfer(address,uint256)": [
+                919,
+                295
+            ],
+            "upgrade(uint256)": [
+                509,
+                163
+            ],
+            "getUpgradeState()": [
+                728,
+                229
+            ]
+        },
+        "block_CALL_mapping": {
+            "block3012": [
+                "upgradeAgent.upgradeFrom(msg.sender, value)"
+            ],
+            "block4487": [
+                "upgradeAgent.originalSupply()"
+            ],
+            "jump3012": [
+                "upgradeAgent.upgradeFrom(msg.sender, value)",
+                "upgradeAgent.upgradeFrom(msg.sender, value)"
+            ],
+            "jump4280": [
+                "upgradeAgent.isUpgradeAgent()",
+                "upgradeAgent.isUpgradeAgent()"
+            ],
+            "jump4487": [
+                "upgradeAgent.originalSupply()",
+                "upgradeAgent.originalSupply()"
+            ],
+            "block4280": [
+                "upgradeAgent.isUpgradeAgent()"
+            ]
+        }
+    },
+    "VestedToken": {
+        "function_list": [
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "transferableTokens(address,uint64)",
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "transfer(address,uint256)",
+            "balanceOf(address)",
+            "grantVestedTokens(address,uint256,uint64,uint64,uint64,bool,bool)",
+            "revokeTokenGrant(address,uint256)",
+            "transferableTokens(address,uint64)",
+            "tokenGrantsCount(address)",
+            "calculateVestedTokens(uint256,uint256,uint256,uint256,uint256)",
+            "tokenGrant(address,uint256)",
+            "vestedTokens(VestedToken.TokenGrant,uint64)",
+            "nonVestedTokens(VestedToken.TokenGrant,uint64)",
+            "lastTokenIsTransferableDate(address)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "MAX_GRANTS_PER_ADDRESS": "uint256",
+                    "grants": "mapping(address => VestedToken.TokenGrant[])"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "MAX_GRANTS_PER_ADDRESS": "uint256",
+                    "grants": "mapping(address => VestedToken.TokenGrant[])"
+                }
+            },
+            "transferableTokens(address,uint64)": {
+                "argument": {
+                    "time": "uint64"
+                },
+                "contract": {
+                    "MAX_GRANTS_PER_ADDRESS": "uint256",
+                    "grants": "mapping(address => VestedToken.TokenGrant[])"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "MAX_GRANTS_PER_ADDRESS": "uint256",
+                    "grants": "mapping(address => VestedToken.TokenGrant[])"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "MAX_GRANTS_PER_ADDRESS": "uint256",
+                    "grants": "mapping(address => VestedToken.TokenGrant[])"
+                }
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "MAX_GRANTS_PER_ADDRESS": "uint256",
+                    "grants": "mapping(address => VestedToken.TokenGrant[])"
+                }
+            },
+            "grantVestedTokens(address,uint256,uint64,uint64,uint64,bool,bool)": {
+                "argument": {
+                    "_value": "uint256",
+                    "_start": "uint64",
+                    "_cliff": "uint64",
+                    "_vesting": "uint64"
+                },
+                "contract": {
+                    "MAX_GRANTS_PER_ADDRESS": "uint256",
+                    "grants": "mapping(address => VestedToken.TokenGrant[])"
+                }
+            },
+            "revokeTokenGrant(address,uint256)": {
+                "argument": {
+                    "_grantId": "uint256"
+                },
+                "contract": {
+                    "MAX_GRANTS_PER_ADDRESS": "uint256",
+                    "grants": "mapping(address => VestedToken.TokenGrant[])"
+                }
+            },
+            "tokenGrantsCount(address)": {
+                "argument": {},
+                "contract": {
+                    "MAX_GRANTS_PER_ADDRESS": "uint256",
+                    "grants": "mapping(address => VestedToken.TokenGrant[])"
+                }
+            },
+            "calculateVestedTokens(uint256,uint256,uint256,uint256,uint256)": {
+                "argument": {
+                    "tokens": "uint256",
+                    "time": "uint256",
+                    "start": "uint256",
+                    "cliff": "uint256",
+                    "vesting": "uint256"
+                },
+                "contract": {
+                    "MAX_GRANTS_PER_ADDRESS": "uint256",
+                    "grants": "mapping(address => VestedToken.TokenGrant[])"
+                }
+            },
+            "tokenGrant(address,uint256)": {
+                "argument": {
+                    "_grantId": "uint256"
+                },
+                "contract": {
+                    "MAX_GRANTS_PER_ADDRESS": "uint256",
+                    "grants": "mapping(address => VestedToken.TokenGrant[])"
+                }
+            },
+            "vestedTokens(VestedToken.TokenGrant,uint64)": {
+                "argument": {
+                    "time": "uint64"
+                },
+                "contract": {
+                    "MAX_GRANTS_PER_ADDRESS": "uint256",
+                    "grants": "mapping(address => VestedToken.TokenGrant[])"
+                }
+            },
+            "nonVestedTokens(VestedToken.TokenGrant,uint64)": {
+                "argument": {
+                    "time": "uint64"
+                },
+                "contract": {
+                    "MAX_GRANTS_PER_ADDRESS": "uint256",
+                    "grants": "mapping(address => VestedToken.TokenGrant[])"
+                }
+            },
+            "lastTokenIsTransferableDate(address)": {
+                "argument": {},
+                "contract": {
+                    "MAX_GRANTS_PER_ADDRESS": "uint256",
+                    "grants": "mapping(address => VestedToken.TokenGrant[])"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                300,
+                97
+            ],
+            "tokenGrant(address,uint256)": [
+                780,
+                185
+            ],
+            "grantVestedTokens(address,uint256,uint64,uint64,uint64,bool,bool)": [
+                1232,
+                251
+            ],
+            "tokenGrantsCount(address)": [
+                213,
+                75
+            ],
+            "revokeTokenGrant(address,uint256)": [
+                1801,
+                361
+            ],
+            "balanceOf(address)": [
+                1145,
+                229
+            ],
+            "allowance(address,address)": [
+                1577,
+                317
+            ],
+            "transferableTokens(address,uint64)": [
+                1470,
+                295
+            ],
+            "lastTokenIsTransferableDate(address)": [
+                1038,
+                207
+            ],
+            "transferFrom(address,address,uint256)": [
+                420,
+                141
+            ],
+            "calculateVestedTokens(uint256,uint256,uint256,uint256,uint256)": [
+                1696,
+                339
+            ],
+            "transfer(address,uint256)": [
+                1393,
+                273
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "ProvideToken": {
+        "function_list": [
+            "UpgradeableToken(address)",
+            "upgrade(uint256)",
+            "setUpgradeAgent(address)",
+            "getUpgradeState()",
+            "setUpgradeController(address)",
+            "canUpgrade()",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transfer(address,uint256)",
+            "balanceOf(address)",
+            "grantVestedTokens(address,uint256,uint64,uint64,uint64,bool,bool)",
+            "revokeTokenGrant(address,uint256)",
+            "transferableTokens(address,uint64)",
+            "tokenGrantsCount(address)",
+            "calculateVestedTokens(uint256,uint256,uint256,uint256,uint256)",
+            "tokenGrant(address,uint256)",
+            "vestedTokens(VestedToken.TokenGrant,uint64)",
+            "nonVestedTokens(VestedToken.TokenGrant,uint64)",
+            "lastTokenIsTransferableDate(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "transferableTokens(address,uint64)",
+            "mint(address,uint256)",
+            "finishMinting()",
+            "Controlled()",
+            "changeController(address)",
+            "burn(uint256)",
+            "ProvideToken()",
+            "fallback()",
+            "isContract(address)",
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "UpgradeableToken(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "upgrade(uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "setUpgradeAgent(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "getUpgradeState()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "setUpgradeController(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "canUpgrade()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "grantVestedTokens(address,uint256,uint64,uint64,uint64,bool,bool)": {
+                "argument": {
+                    "_value": "uint256",
+                    "_start": "uint64",
+                    "_cliff": "uint64",
+                    "_vesting": "uint64"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "revokeTokenGrant(address,uint256)": {
+                "argument": {
+                    "_grantId": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "transferableTokens(address,uint64)": {
+                "argument": {
+                    "": "uint64"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "tokenGrantsCount(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "calculateVestedTokens(uint256,uint256,uint256,uint256,uint256)": {
+                "argument": {
+                    "tokens": "uint256",
+                    "time": "uint256",
+                    "start": "uint256",
+                    "cliff": "uint256",
+                    "vesting": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "tokenGrant(address,uint256)": {
+                "argument": {
+                    "_grantId": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "vestedTokens(VestedToken.TokenGrant,uint64)": {
+                "argument": {
+                    "time": "uint64"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "nonVestedTokens(VestedToken.TokenGrant,uint64)": {
+                "argument": {
+                    "time": "uint64"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "lastTokenIsTransferableDate(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "mint(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "finishMinting()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "Controlled()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "changeController(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "burn(uint256)": {
+                "argument": {
+                    "burnAmount": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "ProvideToken()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "isContract(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "upgrade(uint256)": [
+                1807,
+                339
+            ],
+            "grantVestedTokens(address,uint256,uint64,uint64,uint64,bool,bool)": [
+                2773,
+                559
+            ],
+            "tokenGrantsCount(address)": [
+                726,
+                75
+            ],
+            "allowance(address,address)": [
+                3228,
+                669
+            ],
+            "transferFrom(address,address,uint256)": [
+                1191,
+                207
+            ],
+            "transferableTokens(address,uint64)": [
+                3054,
+                625
+            ],
+            "approve(address,uint256)": [
+                1004,
+                141
+            ],
+            "calculateVestedTokens(uint256,uint256,uint256,uint256,uint256)": [
+                3347,
+                691
+            ],
+            "changeController(address)": [
+                1594,
+                273
+            ],
+            "tokenGrant(address,uint256)": [
+                1939,
+                383
+            ],
+            "setUpgradeController(address)": [
+                1081,
+                163
+            ],
+            "revokeTokenGrant(address,uint256)": [
+                3452,
+                713
+            ],
+            "finishMinting()": [
+                2391,
+                449
+            ],
+            "canUpgrade()": [
+                2726,
+                537
+            ],
+            "balanceOf(address)": [
+                2304,
+                427
+            ],
+            "setUpgradeAgent(address)": [
+                3161,
+                647
+            ],
+            "mint(address,uint256)": [
+                1661,
+                295
+            ],
+            "burn(uint256)": [
+                1762,
+                317
+            ],
+            "lastTokenIsTransferableDate(address)": [
+                2197,
+                405
+            ],
+            "transfer(address,uint256)": [
+                2934,
+                581
+            ],
+            "getUpgradeState()": [
+                2438,
+                471
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump6217": [
+                "upgradeAgent.upgradeFrom(msg.sender, value)",
+                "upgradeAgent.upgradeFrom(msg.sender, value)"
+            ],
+            "jump9684": [
+                "upgradeAgent.originalSupply()",
+                "upgradeAgent.originalSupply()"
+            ],
+            "block9477": [
+                "upgradeAgent.isUpgradeAgent()"
+            ],
+            "jump643": [
+                "Controller(controller).proxyPayment.value(msg.value)(msg.sender)",
+                "Controller(controller).proxyPayment.value(msg.value)(msg.sender)"
+            ],
+            "block9684": [
+                "upgradeAgent.originalSupply()"
+            ],
+            "jump9477": [
+                "upgradeAgent.isUpgradeAgent()",
+                "upgradeAgent.isUpgradeAgent()"
+            ],
+            "jump643_0": [
+                "Controller(controller).proxyPayment.value(msg.value)(msg.sender)",
+                "Controller(controller).proxyPayment.value(msg.value)(msg.sender)"
+            ],
+            "block6217": [
+                "upgradeAgent.upgradeFrom(msg.sender, value)"
+            ],
+            "block643_0": [
+                "Controller(controller).proxyPayment.value(msg.value)(msg.sender)"
+            ],
+            "block643": [
+                "Controller(controller).proxyPayment.value(msg.value)(msg.sender)"
+            ]
+        }
+    }
+}

@@ -1,0 +1,99 @@
+{
+    "Owned": {
+        "function_list": [
+            "Owned()"
+        ],
+        "initial_state": {
+            "Owned()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "PasswordRecoverableWallet": {
+        "function_list": [
+            "Owned()",
+            "fallback()",
+            "setRecoveryInfo(bytes32,uint256)",
+            "recover(bytes32)",
+            "withdraw(uint256)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "Owned()": {
+                "argument": {},
+                "contract": {
+                    "recoveryHash": "bytes32",
+                    "recoveryValue": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "recoveryHash": "bytes32",
+                    "recoveryValue": "uint256"
+                }
+            },
+            "setRecoveryInfo(bytes32,uint256)": {
+                "argument": {
+                    "hash": "bytes32",
+                    "value": "uint256"
+                },
+                "contract": {
+                    "recoveryHash": "bytes32",
+                    "recoveryValue": "uint256"
+                }
+            },
+            "recover(bytes32)": {
+                "argument": {
+                    "password": "bytes32"
+                },
+                "contract": {
+                    "recoveryHash": "bytes32",
+                    "recoveryValue": "uint256"
+                }
+            },
+            "withdraw(uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {
+                    "recoveryHash": "bytes32",
+                    "recoveryValue": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "setRecoveryInfo(bytes32,uint256)": [
+                339,
+                119
+            ],
+            "recover(bytes32)": [
+                398,
+                141
+            ],
+            "withdraw(uint256)": [
+                207,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump525": [
+                "msg.sender.transfer(amount)",
+                "msg.sender.transfer(amount)"
+            ],
+            "jump857": [
+                "sha256(password)",
+                "sha256(password)"
+            ],
+            "block857": [
+                "sha256(password)"
+            ],
+            "block525": [
+                "msg.sender.transfer(amount)"
+            ]
+        }
+    }
+}

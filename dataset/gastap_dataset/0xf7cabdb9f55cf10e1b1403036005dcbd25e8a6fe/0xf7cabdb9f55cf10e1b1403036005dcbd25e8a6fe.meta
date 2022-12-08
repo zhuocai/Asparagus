@@ -1,0 +1,141 @@
+{
+    "Token": {
+        "function_list": [
+            "name()",
+            "symbol()",
+            "decimals()",
+            "totalSupply()",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)"
+        ],
+        "initial_state": {
+            "name()": {
+                "argument": {},
+                "contract": {}
+            },
+            "symbol()": {
+                "argument": {},
+                "contract": {}
+            },
+            "decimals()": {
+                "argument": {},
+                "contract": {}
+            },
+            "totalSupply()": {
+                "argument": {},
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                125,
+                75
+            ],
+            "balanceOf(address)": [
+                402,
+                141
+            ],
+            "totalSupply()": [
+                226,
+                97
+            ],
+            "allowance(address,address)": [
+                590,
+                185
+            ],
+            "transferFrom(address,address,uint256)": [
+                269,
+                119
+            ],
+            "transfer(address,uint256)": [
+                489,
+                163
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "TokenTimeLock": {
+        "function_list": [
+            "TokenTimeLock(address)",
+            "lock(Token,address,uint256,uint256)",
+            "unlock(uint256)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "TokenTimeLock(address)": {
+                "argument": {},
+                "contract": {
+                    "nextLockID": "uint256"
+                }
+            },
+            "lock(Token,address,uint256,uint256)": {
+                "argument": {
+                    "_amount": "uint256",
+                    "_unlockTime": "uint256"
+                },
+                "contract": {
+                    "nextLockID": "uint256"
+                }
+            },
+            "unlock(uint256)": {
+                "argument": {
+                    "_id": "uint256"
+                },
+                "contract": {
+                    "nextLockID": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "unlock(uint256)": [
+                242,
+                97
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump1774": [
+                "lockInfo.token.transfer (\n                lockInfo.beneficiary, lockInfo.amount)",
+                "lockInfo.token.transfer (\n                lockInfo.beneficiary, lockInfo.amount)"
+            ],
+            "jump1084": [
+                "_token.transferFrom (msg.sender, this, _amount)",
+                "_token.transferFrom (msg.sender, this, _amount)"
+            ],
+            "block1084": [
+                "_token.transferFrom (msg.sender, this, _amount)"
+            ],
+            "block1774": [
+                "lockInfo.token.transfer (\n                lockInfo.beneficiary, lockInfo.amount)"
+            ]
+        }
+    }
+}

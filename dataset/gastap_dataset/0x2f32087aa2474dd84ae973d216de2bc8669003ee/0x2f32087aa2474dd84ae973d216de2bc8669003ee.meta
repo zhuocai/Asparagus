@@ -1,0 +1,729 @@
+{
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "ManagedToken": {
+        "function_list": [
+            "setLock(bool)",
+            "mint(address,uint256)",
+            "demint(address,uint256)",
+            "decimals()",
+            "totalSupply()",
+            "balanceOf(address)"
+        ],
+        "initial_state": {
+            "setLock(bool)": {
+                "argument": {},
+                "contract": {}
+            },
+            "mint(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {}
+            },
+            "demint(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {}
+            },
+            "decimals()": {
+                "argument": {},
+                "contract": {}
+            },
+            "totalSupply()": {
+                "argument": {},
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "totalSupply()": [
+                736,
+                141
+            ],
+            "demint(address,uint256)": [
+                1003,
+                207
+            ],
+            "setLock(bool)": [
+                1432,
+                317
+            ],
+            "balanceOf(address)": [
+                1604,
+                361
+            ],
+            "mint(address,uint256)": [
+                1240,
+                273
+            ],
+            "decimals()": [
+                1104,
+                229
+            ]
+        },
+        "block_CALL_mapping": {
+            "block8589": [
+                "upgrader.upgradeFrom(msg.sender, _for, _value)"
+            ],
+            "jump8589": [
+                "upgrader.upgradeFrom(msg.sender, _for, _value)",
+                "upgrader.upgradeFrom(msg.sender, _for, _value)"
+            ],
+            "jump3725": [
+                "upgrader.upgradeFor(msg.sender, value)",
+                "upgrader.upgradeFor(msg.sender, value)"
+            ],
+            "block3725_0": [
+                "upgrader.upgradeFor(msg.sender, value)"
+            ],
+            "block3725_1": [
+                "upgrader.upgradeFor(msg.sender, value)"
+            ],
+            "jump3725_0": [
+                "upgrader.upgradeFor(msg.sender, value)",
+                "upgrader.upgradeFor(msg.sender, value)"
+            ],
+            "jump3725_1": [
+                "upgrader.upgradeFor(msg.sender, value)",
+                "upgrader.upgradeFor(msg.sender, value)"
+            ],
+            "block3725": [
+                "upgrader.upgradeFor(msg.sender, value)"
+            ]
+        }
+    },
+    "HardcodedCrowdsale": {
+        "function_list": [
+            "advanceState()",
+            "transitionState()",
+            "transferOwnership(address)",
+            "balanceOf(address)",
+            "totalSupply()",
+            "HardcodedCrowdsale(uint256,uint256,uint256,uint256,address)",
+            "setNameAndTicker(string,string)",
+            "setLedger(address)",
+            "fallback()",
+            "finalize()",
+            "setHalt(bool)",
+            "calculateAmountBoughtPreICO(uint256,uint256)",
+            "getBonusMultipierInPercents(uint256)",
+            "preICOBuy()",
+            "recoverLeftoversPreICO()",
+            "refundPreICO()",
+            "cleanup()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "advanceState()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "minTokensToBuy": "uint256",
+                    "preICOcontributors": "uint256",
+                    "preICOstart": "uint256",
+                    "preICOend": "uint256",
+                    "preICOgoal": "uint256",
+                    "preICOcollected": "uint256",
+                    "preICOcap": "uint256",
+                    "preICOtokensSold": "uint256",
+                    "decimals": "uint8",
+                    "DECIMAL_MULTIPLIER": "uint256",
+                    "saleIndex": "uint8",
+                    "preICOprice": "uint256",
+                    "preICObonusMultipiersInPercent": "uint256[3]",
+                    "preICOcoinsLeft": "uint256[3]",
+                    "totalPreICOavailibleWithBonus": "uint256",
+                    "maxIssuedWithAmountBasedBonus": "uint256",
+                    "preICOamountBonusLimits": "uint256[4]",
+                    "preICOamountBonusMultipierInPercent": "uint256[4]"
+                }
+            },
+            "transitionState()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "minTokensToBuy": "uint256",
+                    "preICOcontributors": "uint256",
+                    "preICOstart": "uint256",
+                    "preICOend": "uint256",
+                    "preICOgoal": "uint256",
+                    "preICOcollected": "uint256",
+                    "preICOcap": "uint256",
+                    "preICOtokensSold": "uint256",
+                    "decimals": "uint8",
+                    "DECIMAL_MULTIPLIER": "uint256",
+                    "saleIndex": "uint8",
+                    "preICOprice": "uint256",
+                    "preICObonusMultipiersInPercent": "uint256[3]",
+                    "preICOcoinsLeft": "uint256[3]",
+                    "totalPreICOavailibleWithBonus": "uint256",
+                    "maxIssuedWithAmountBasedBonus": "uint256",
+                    "preICOamountBonusLimits": "uint256[4]",
+                    "preICOamountBonusMultipierInPercent": "uint256[4]"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "minTokensToBuy": "uint256",
+                    "preICOcontributors": "uint256",
+                    "preICOstart": "uint256",
+                    "preICOend": "uint256",
+                    "preICOgoal": "uint256",
+                    "preICOcollected": "uint256",
+                    "preICOcap": "uint256",
+                    "preICOtokensSold": "uint256",
+                    "decimals": "uint8",
+                    "DECIMAL_MULTIPLIER": "uint256",
+                    "saleIndex": "uint8",
+                    "preICOprice": "uint256",
+                    "preICObonusMultipiersInPercent": "uint256[3]",
+                    "preICOcoinsLeft": "uint256[3]",
+                    "totalPreICOavailibleWithBonus": "uint256",
+                    "maxIssuedWithAmountBasedBonus": "uint256",
+                    "preICOamountBonusLimits": "uint256[4]",
+                    "preICOamountBonusMultipierInPercent": "uint256[4]"
+                }
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "minTokensToBuy": "uint256",
+                    "preICOcontributors": "uint256",
+                    "preICOstart": "uint256",
+                    "preICOend": "uint256",
+                    "preICOgoal": "uint256",
+                    "preICOcollected": "uint256",
+                    "preICOcap": "uint256",
+                    "preICOtokensSold": "uint256",
+                    "decimals": "uint8",
+                    "DECIMAL_MULTIPLIER": "uint256",
+                    "saleIndex": "uint8",
+                    "preICOprice": "uint256",
+                    "preICObonusMultipiersInPercent": "uint256[3]",
+                    "preICOcoinsLeft": "uint256[3]",
+                    "totalPreICOavailibleWithBonus": "uint256",
+                    "maxIssuedWithAmountBasedBonus": "uint256",
+                    "preICOamountBonusLimits": "uint256[4]",
+                    "preICOamountBonusMultipierInPercent": "uint256[4]"
+                }
+            },
+            "totalSupply()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "minTokensToBuy": "uint256",
+                    "preICOcontributors": "uint256",
+                    "preICOstart": "uint256",
+                    "preICOend": "uint256",
+                    "preICOgoal": "uint256",
+                    "preICOcollected": "uint256",
+                    "preICOcap": "uint256",
+                    "preICOtokensSold": "uint256",
+                    "decimals": "uint8",
+                    "DECIMAL_MULTIPLIER": "uint256",
+                    "saleIndex": "uint8",
+                    "preICOprice": "uint256",
+                    "preICObonusMultipiersInPercent": "uint256[3]",
+                    "preICOcoinsLeft": "uint256[3]",
+                    "totalPreICOavailibleWithBonus": "uint256",
+                    "maxIssuedWithAmountBasedBonus": "uint256",
+                    "preICOamountBonusLimits": "uint256[4]",
+                    "preICOamountBonusMultipierInPercent": "uint256[4]"
+                }
+            },
+            "HardcodedCrowdsale(uint256,uint256,uint256,uint256,address)": {
+                "argument": {
+                    "_preICOstart": "uint256",
+                    "_preICOend": "uint256",
+                    "_preICOgoal": "uint256",
+                    "_preICOcap": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "minTokensToBuy": "uint256",
+                    "preICOcontributors": "uint256",
+                    "preICOstart": "uint256",
+                    "preICOend": "uint256",
+                    "preICOgoal": "uint256",
+                    "preICOcollected": "uint256",
+                    "preICOcap": "uint256",
+                    "preICOtokensSold": "uint256",
+                    "decimals": "uint8",
+                    "DECIMAL_MULTIPLIER": "uint256",
+                    "saleIndex": "uint8",
+                    "preICOprice": "uint256",
+                    "preICObonusMultipiersInPercent": "uint256[3]",
+                    "preICOcoinsLeft": "uint256[3]",
+                    "totalPreICOavailibleWithBonus": "uint256",
+                    "maxIssuedWithAmountBasedBonus": "uint256",
+                    "preICOamountBonusLimits": "uint256[4]",
+                    "preICOamountBonusMultipierInPercent": "uint256[4]"
+                }
+            },
+            "setNameAndTicker(string,string)": {
+                "argument": {
+                    "_name": "string",
+                    "_symbol": "string"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "minTokensToBuy": "uint256",
+                    "preICOcontributors": "uint256",
+                    "preICOstart": "uint256",
+                    "preICOend": "uint256",
+                    "preICOgoal": "uint256",
+                    "preICOcollected": "uint256",
+                    "preICOcap": "uint256",
+                    "preICOtokensSold": "uint256",
+                    "decimals": "uint8",
+                    "DECIMAL_MULTIPLIER": "uint256",
+                    "saleIndex": "uint8",
+                    "preICOprice": "uint256",
+                    "preICObonusMultipiersInPercent": "uint256[3]",
+                    "preICOcoinsLeft": "uint256[3]",
+                    "totalPreICOavailibleWithBonus": "uint256",
+                    "maxIssuedWithAmountBasedBonus": "uint256",
+                    "preICOamountBonusLimits": "uint256[4]",
+                    "preICOamountBonusMultipierInPercent": "uint256[4]"
+                }
+            },
+            "setLedger(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "minTokensToBuy": "uint256",
+                    "preICOcontributors": "uint256",
+                    "preICOstart": "uint256",
+                    "preICOend": "uint256",
+                    "preICOgoal": "uint256",
+                    "preICOcollected": "uint256",
+                    "preICOcap": "uint256",
+                    "preICOtokensSold": "uint256",
+                    "decimals": "uint8",
+                    "DECIMAL_MULTIPLIER": "uint256",
+                    "saleIndex": "uint8",
+                    "preICOprice": "uint256",
+                    "preICObonusMultipiersInPercent": "uint256[3]",
+                    "preICOcoinsLeft": "uint256[3]",
+                    "totalPreICOavailibleWithBonus": "uint256",
+                    "maxIssuedWithAmountBasedBonus": "uint256",
+                    "preICOamountBonusLimits": "uint256[4]",
+                    "preICOamountBonusMultipierInPercent": "uint256[4]"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "minTokensToBuy": "uint256",
+                    "preICOcontributors": "uint256",
+                    "preICOstart": "uint256",
+                    "preICOend": "uint256",
+                    "preICOgoal": "uint256",
+                    "preICOcollected": "uint256",
+                    "preICOcap": "uint256",
+                    "preICOtokensSold": "uint256",
+                    "decimals": "uint8",
+                    "DECIMAL_MULTIPLIER": "uint256",
+                    "saleIndex": "uint8",
+                    "preICOprice": "uint256",
+                    "preICObonusMultipiersInPercent": "uint256[3]",
+                    "preICOcoinsLeft": "uint256[3]",
+                    "totalPreICOavailibleWithBonus": "uint256",
+                    "maxIssuedWithAmountBasedBonus": "uint256",
+                    "preICOamountBonusLimits": "uint256[4]",
+                    "preICOamountBonusMultipierInPercent": "uint256[4]"
+                }
+            },
+            "finalize()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "minTokensToBuy": "uint256",
+                    "preICOcontributors": "uint256",
+                    "preICOstart": "uint256",
+                    "preICOend": "uint256",
+                    "preICOgoal": "uint256",
+                    "preICOcollected": "uint256",
+                    "preICOcap": "uint256",
+                    "preICOtokensSold": "uint256",
+                    "decimals": "uint8",
+                    "DECIMAL_MULTIPLIER": "uint256",
+                    "saleIndex": "uint8",
+                    "preICOprice": "uint256",
+                    "preICObonusMultipiersInPercent": "uint256[3]",
+                    "preICOcoinsLeft": "uint256[3]",
+                    "totalPreICOavailibleWithBonus": "uint256",
+                    "maxIssuedWithAmountBasedBonus": "uint256",
+                    "preICOamountBonusLimits": "uint256[4]",
+                    "preICOamountBonusMultipierInPercent": "uint256[4]"
+                }
+            },
+            "setHalt(bool)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "minTokensToBuy": "uint256",
+                    "preICOcontributors": "uint256",
+                    "preICOstart": "uint256",
+                    "preICOend": "uint256",
+                    "preICOgoal": "uint256",
+                    "preICOcollected": "uint256",
+                    "preICOcap": "uint256",
+                    "preICOtokensSold": "uint256",
+                    "decimals": "uint8",
+                    "DECIMAL_MULTIPLIER": "uint256",
+                    "saleIndex": "uint8",
+                    "preICOprice": "uint256",
+                    "preICObonusMultipiersInPercent": "uint256[3]",
+                    "preICOcoinsLeft": "uint256[3]",
+                    "totalPreICOavailibleWithBonus": "uint256",
+                    "maxIssuedWithAmountBasedBonus": "uint256",
+                    "preICOamountBonusLimits": "uint256[4]",
+                    "preICOamountBonusMultipierInPercent": "uint256[4]"
+                }
+            },
+            "calculateAmountBoughtPreICO(uint256,uint256)": {
+                "argument": {
+                    "_weisSentScaled": "uint256",
+                    "_amountBonusMultiplier": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "minTokensToBuy": "uint256",
+                    "preICOcontributors": "uint256",
+                    "preICOstart": "uint256",
+                    "preICOend": "uint256",
+                    "preICOgoal": "uint256",
+                    "preICOcollected": "uint256",
+                    "preICOcap": "uint256",
+                    "preICOtokensSold": "uint256",
+                    "decimals": "uint8",
+                    "DECIMAL_MULTIPLIER": "uint256",
+                    "saleIndex": "uint8",
+                    "preICOprice": "uint256",
+                    "preICObonusMultipiersInPercent": "uint256[3]",
+                    "preICOcoinsLeft": "uint256[3]",
+                    "totalPreICOavailibleWithBonus": "uint256",
+                    "maxIssuedWithAmountBasedBonus": "uint256",
+                    "preICOamountBonusLimits": "uint256[4]",
+                    "preICOamountBonusMultipierInPercent": "uint256[4]"
+                }
+            },
+            "getBonusMultipierInPercents(uint256)": {
+                "argument": {
+                    "_sentAmount": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "minTokensToBuy": "uint256",
+                    "preICOcontributors": "uint256",
+                    "preICOstart": "uint256",
+                    "preICOend": "uint256",
+                    "preICOgoal": "uint256",
+                    "preICOcollected": "uint256",
+                    "preICOcap": "uint256",
+                    "preICOtokensSold": "uint256",
+                    "decimals": "uint8",
+                    "DECIMAL_MULTIPLIER": "uint256",
+                    "saleIndex": "uint8",
+                    "preICOprice": "uint256",
+                    "preICObonusMultipiersInPercent": "uint256[3]",
+                    "preICOcoinsLeft": "uint256[3]",
+                    "totalPreICOavailibleWithBonus": "uint256",
+                    "maxIssuedWithAmountBasedBonus": "uint256",
+                    "preICOamountBonusLimits": "uint256[4]",
+                    "preICOamountBonusMultipierInPercent": "uint256[4]"
+                }
+            },
+            "preICOBuy()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "minTokensToBuy": "uint256",
+                    "preICOcontributors": "uint256",
+                    "preICOstart": "uint256",
+                    "preICOend": "uint256",
+                    "preICOgoal": "uint256",
+                    "preICOcollected": "uint256",
+                    "preICOcap": "uint256",
+                    "preICOtokensSold": "uint256",
+                    "decimals": "uint8",
+                    "DECIMAL_MULTIPLIER": "uint256",
+                    "saleIndex": "uint8",
+                    "preICOprice": "uint256",
+                    "preICObonusMultipiersInPercent": "uint256[3]",
+                    "preICOcoinsLeft": "uint256[3]",
+                    "totalPreICOavailibleWithBonus": "uint256",
+                    "maxIssuedWithAmountBasedBonus": "uint256",
+                    "preICOamountBonusLimits": "uint256[4]",
+                    "preICOamountBonusMultipierInPercent": "uint256[4]"
+                }
+            },
+            "recoverLeftoversPreICO()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "minTokensToBuy": "uint256",
+                    "preICOcontributors": "uint256",
+                    "preICOstart": "uint256",
+                    "preICOend": "uint256",
+                    "preICOgoal": "uint256",
+                    "preICOcollected": "uint256",
+                    "preICOcap": "uint256",
+                    "preICOtokensSold": "uint256",
+                    "decimals": "uint8",
+                    "DECIMAL_MULTIPLIER": "uint256",
+                    "saleIndex": "uint8",
+                    "preICOprice": "uint256",
+                    "preICObonusMultipiersInPercent": "uint256[3]",
+                    "preICOcoinsLeft": "uint256[3]",
+                    "totalPreICOavailibleWithBonus": "uint256",
+                    "maxIssuedWithAmountBasedBonus": "uint256",
+                    "preICOamountBonusLimits": "uint256[4]",
+                    "preICOamountBonusMultipierInPercent": "uint256[4]"
+                }
+            },
+            "refundPreICO()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "minTokensToBuy": "uint256",
+                    "preICOcontributors": "uint256",
+                    "preICOstart": "uint256",
+                    "preICOend": "uint256",
+                    "preICOgoal": "uint256",
+                    "preICOcollected": "uint256",
+                    "preICOcap": "uint256",
+                    "preICOtokensSold": "uint256",
+                    "decimals": "uint8",
+                    "DECIMAL_MULTIPLIER": "uint256",
+                    "saleIndex": "uint8",
+                    "preICOprice": "uint256",
+                    "preICObonusMultipiersInPercent": "uint256[3]",
+                    "preICOcoinsLeft": "uint256[3]",
+                    "totalPreICOavailibleWithBonus": "uint256",
+                    "maxIssuedWithAmountBasedBonus": "uint256",
+                    "preICOamountBonusLimits": "uint256[4]",
+                    "preICOamountBonusMultipierInPercent": "uint256[4]"
+                }
+            },
+            "cleanup()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "minTokensToBuy": "uint256",
+                    "preICOcontributors": "uint256",
+                    "preICOstart": "uint256",
+                    "preICOend": "uint256",
+                    "preICOgoal": "uint256",
+                    "preICOcollected": "uint256",
+                    "preICOcap": "uint256",
+                    "preICOtokensSold": "uint256",
+                    "decimals": "uint8",
+                    "DECIMAL_MULTIPLIER": "uint256",
+                    "saleIndex": "uint8",
+                    "preICOprice": "uint256",
+                    "preICObonusMultipiersInPercent": "uint256[3]",
+                    "preICOcoinsLeft": "uint256[3]",
+                    "totalPreICOavailibleWithBonus": "uint256",
+                    "maxIssuedWithAmountBasedBonus": "uint256",
+                    "preICOamountBonusLimits": "uint256[4]",
+                    "preICOamountBonusMultipierInPercent": "uint256[4]"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "getBonusMultipierInPercents(uint256)": [
+                1610,
+                449
+            ],
+            "balanceOf(address)": [
+                6599,
+                929
+            ],
+            "totalSupply()": [
+                4939,
+                889
+            ],
+            "setHalt(bool)": [
+                2946,
+                867
+            ],
+            "transferOwnership(address)": [
+                2879,
+                845
+            ],
+            "cleanup()": [
+                1320,
+                317
+            ],
+            "setLedger(address)": [
+                1086,
+                229
+            ],
+            "finalize()": [
+                1473,
+                383
+            ],
+            "advanceState()": [
+                2005,
+                603
+            ],
+            "recoverLeftoversPreICO()": [
+                1520,
+                405
+            ],
+            "setNameAndTicker(string,string)": [
+                2438,
+                735
+            ],
+            "refundPreICO()": [
+                2702,
+                779
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump4939": [
+                "managedTokenLedger.totalSupply()",
+                "managedTokenLedger.totalSupply()"
+            ],
+            "block4939": [
+                "managedTokenLedger.totalSupply()"
+            ],
+            "jump6060": [
+                "msg.sender.transfer(value)",
+                "msg.sender.transfer(value)"
+            ],
+            "block3968": [
+                "managedTokenLedger.mint(_for, tokensBought)"
+            ],
+            "jump5431": [
+                "managedTokenLedger.decimals()",
+                "managedTokenLedger.decimals()"
+            ],
+            "jump7735": [
+                "managedTokenLedger.demint(msg.sender, tokenValue)",
+                "managedTokenLedger.demint(msg.sender, tokenValue)"
+            ],
+            "block6599_0": [
+                "managedTokenLedger.balanceOf(_owner)"
+            ],
+            "block6599_1": [
+                "managedTokenLedger.balanceOf(_owner)"
+            ],
+            "block5431": [
+                "managedTokenLedger.decimals()"
+            ],
+            "block6599": [
+                "managedTokenLedger.balanceOf(_owner)"
+            ],
+            "jump3968_0": [
+                "managedTokenLedger.mint(_for, tokensBought)",
+                "managedTokenLedger.mint(_for, tokensBought)"
+            ],
+            "block5847": [
+                "owner.transfer(preICOcollected)"
+            ],
+            "block3968_0": [
+                "managedTokenLedger.mint(_for, tokensBought)"
+            ],
+            "jump6599": [
+                "managedTokenLedger.balanceOf(_owner)",
+                "managedTokenLedger.balanceOf(_owner)"
+            ],
+            "jump7777": [
+                "msg.sender.transfer(value)",
+                "msg.sender.transfer(value)"
+            ],
+            "jump5847": [
+                "owner.transfer(preICOcollected)",
+                "owner.transfer(preICOcollected)"
+            ],
+            "jump3968": [
+                "managedTokenLedger.mint(_for, tokensBought)",
+                "managedTokenLedger.mint(_for, tokensBought)"
+            ],
+            "block7735": [
+                "managedTokenLedger.demint(msg.sender, tokenValue)"
+            ],
+            "block6060": [
+                "msg.sender.transfer(value)"
+            ],
+            "block7777": [
+                "msg.sender.transfer(value)"
+            ],
+            "jump6599_0": [
+                "managedTokenLedger.balanceOf(_owner)",
+                "managedTokenLedger.balanceOf(_owner)"
+            ],
+            "jump6599_1": [
+                "managedTokenLedger.balanceOf(_owner)",
+                "managedTokenLedger.balanceOf(_owner)"
+            ]
+        }
+    }
+}

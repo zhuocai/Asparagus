@@ -1,0 +1,143 @@
+{
+    "ERC20": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                390,
+                97
+            ],
+            "transfer(address,uint256)": [
+                1351,
+                339
+            ],
+            "allowance(address,address)": [
+                1670,
+                405
+            ],
+            "balanceOf(address)": [
+                1033,
+                273
+            ],
+            "transferFrom(address,address,uint256)": [
+                577,
+                163
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump3500": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)",
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ],
+            "block3500": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ]
+        }
+    },
+    "SafeERC20": {
+        "function_list": [
+            "safeTransfer(ERC20Basic,address,uint256)",
+            "safeTransferFrom(ERC20,address,address,uint256)",
+            "safeApprove(ERC20,address,uint256)"
+        ],
+        "initial_state": {
+            "safeTransfer(ERC20Basic,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "safeTransferFrom(ERC20,address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "safeApprove(ERC20,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "TokenTimelock": {
+        "function_list": [
+            "TokenTimelock(ERC20Basic,address,uint64)",
+            "release()"
+        ],
+        "initial_state": {
+            "TokenTimelock(ERC20Basic,address,uint64)": {
+                "argument": {
+                    "_releaseTime": "uint64"
+                },
+                "contract": {
+                    "releaseTime": "uint64"
+                }
+            },
+            "release()": {
+                "argument": {},
+                "contract": {
+                    "releaseTime": "uint64"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "release()": [
+                190,
+                97
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump638": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "block638": [
+                "token.balanceOf(this)"
+            ],
+            "jump1053": [
+                "token.transfer(to, value)",
+                "token.transfer(to, value)"
+            ],
+            "block1053": [
+                "token.transfer(to, value)"
+            ]
+        }
+    }
+}

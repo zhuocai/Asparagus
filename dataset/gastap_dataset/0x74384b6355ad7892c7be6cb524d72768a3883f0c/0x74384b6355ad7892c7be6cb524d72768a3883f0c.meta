@@ -1,0 +1,961 @@
+{
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "Ownable": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "ERC20Basic": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                124,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "ERC20": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                202,
+                75
+            ],
+            "transfer(address,uint256)": [
+                873,
+                273
+            ],
+            "balanceOf(address)": [
+                601,
+                185
+            ],
+            "transferFrom(address,address,uint256)": [
+                346,
+                119
+            ],
+            "allowance(address,address)": [
+                1061,
+                317
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "REDToken": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "balanceOf(address)",
+            "REDToken()",
+            "startCrowdfund()",
+            "isEarlyBirdsStage()",
+            "setCrowdfundAddress(address)",
+            "transferFromCrowdfund(address,uint256)",
+            "releaseRedTeamTokens()",
+            "releaseMarketingTokens()",
+            "finalizeEarlyBirds()",
+            "finalizeCrowdfund()",
+            "changeRedTeamAddress(address)",
+            "changeMarketingAddress(address)",
+            "partialUnlockAngelsAccounts(address[])",
+            "fullUnlockAngelsAccounts(address[])",
+            "deliverAngelsREDAccounts(address[],uint256[])",
+            "deliverAngelsREDBalance(address,uint256)",
+            "addToBalance(address,uint256)",
+            "decrementBalance(address,uint256)",
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "angelSupply": "uint256",
+                    "earlyBirdsSupply": "uint256",
+                    "publicSupply": "uint256",
+                    "foundationSupply": "uint256",
+                    "redTeamSupply": "uint256",
+                    "marketingSupply": "uint256",
+                    "angelAmountRemaining": "uint256",
+                    "icoStartsAt": "uint256",
+                    "icoEndsAt": "uint256",
+                    "redTeamLockingPeriod": "uint256",
+                    "angelLockingPeriod": "uint256"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "angelSupply": "uint256",
+                    "earlyBirdsSupply": "uint256",
+                    "publicSupply": "uint256",
+                    "foundationSupply": "uint256",
+                    "redTeamSupply": "uint256",
+                    "marketingSupply": "uint256",
+                    "angelAmountRemaining": "uint256",
+                    "icoStartsAt": "uint256",
+                    "icoEndsAt": "uint256",
+                    "redTeamLockingPeriod": "uint256",
+                    "angelLockingPeriod": "uint256"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "angelSupply": "uint256",
+                    "earlyBirdsSupply": "uint256",
+                    "publicSupply": "uint256",
+                    "foundationSupply": "uint256",
+                    "redTeamSupply": "uint256",
+                    "marketingSupply": "uint256",
+                    "angelAmountRemaining": "uint256",
+                    "icoStartsAt": "uint256",
+                    "icoEndsAt": "uint256",
+                    "redTeamLockingPeriod": "uint256",
+                    "angelLockingPeriod": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "angelSupply": "uint256",
+                    "earlyBirdsSupply": "uint256",
+                    "publicSupply": "uint256",
+                    "foundationSupply": "uint256",
+                    "redTeamSupply": "uint256",
+                    "marketingSupply": "uint256",
+                    "angelAmountRemaining": "uint256",
+                    "icoStartsAt": "uint256",
+                    "icoEndsAt": "uint256",
+                    "redTeamLockingPeriod": "uint256",
+                    "angelLockingPeriod": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "angelSupply": "uint256",
+                    "earlyBirdsSupply": "uint256",
+                    "publicSupply": "uint256",
+                    "foundationSupply": "uint256",
+                    "redTeamSupply": "uint256",
+                    "marketingSupply": "uint256",
+                    "angelAmountRemaining": "uint256",
+                    "icoStartsAt": "uint256",
+                    "icoEndsAt": "uint256",
+                    "redTeamLockingPeriod": "uint256",
+                    "angelLockingPeriod": "uint256"
+                }
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "angelSupply": "uint256",
+                    "earlyBirdsSupply": "uint256",
+                    "publicSupply": "uint256",
+                    "foundationSupply": "uint256",
+                    "redTeamSupply": "uint256",
+                    "marketingSupply": "uint256",
+                    "angelAmountRemaining": "uint256",
+                    "icoStartsAt": "uint256",
+                    "icoEndsAt": "uint256",
+                    "redTeamLockingPeriod": "uint256",
+                    "angelLockingPeriod": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "angelSupply": "uint256",
+                    "earlyBirdsSupply": "uint256",
+                    "publicSupply": "uint256",
+                    "foundationSupply": "uint256",
+                    "redTeamSupply": "uint256",
+                    "marketingSupply": "uint256",
+                    "angelAmountRemaining": "uint256",
+                    "icoStartsAt": "uint256",
+                    "icoEndsAt": "uint256",
+                    "redTeamLockingPeriod": "uint256",
+                    "angelLockingPeriod": "uint256"
+                }
+            },
+            "REDToken()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "angelSupply": "uint256",
+                    "earlyBirdsSupply": "uint256",
+                    "publicSupply": "uint256",
+                    "foundationSupply": "uint256",
+                    "redTeamSupply": "uint256",
+                    "marketingSupply": "uint256",
+                    "angelAmountRemaining": "uint256",
+                    "icoStartsAt": "uint256",
+                    "icoEndsAt": "uint256",
+                    "redTeamLockingPeriod": "uint256",
+                    "angelLockingPeriod": "uint256"
+                }
+            },
+            "startCrowdfund()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "angelSupply": "uint256",
+                    "earlyBirdsSupply": "uint256",
+                    "publicSupply": "uint256",
+                    "foundationSupply": "uint256",
+                    "redTeamSupply": "uint256",
+                    "marketingSupply": "uint256",
+                    "angelAmountRemaining": "uint256",
+                    "icoStartsAt": "uint256",
+                    "icoEndsAt": "uint256",
+                    "redTeamLockingPeriod": "uint256",
+                    "angelLockingPeriod": "uint256"
+                }
+            },
+            "isEarlyBirdsStage()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "angelSupply": "uint256",
+                    "earlyBirdsSupply": "uint256",
+                    "publicSupply": "uint256",
+                    "foundationSupply": "uint256",
+                    "redTeamSupply": "uint256",
+                    "marketingSupply": "uint256",
+                    "angelAmountRemaining": "uint256",
+                    "icoStartsAt": "uint256",
+                    "icoEndsAt": "uint256",
+                    "redTeamLockingPeriod": "uint256",
+                    "angelLockingPeriod": "uint256"
+                }
+            },
+            "setCrowdfundAddress(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "angelSupply": "uint256",
+                    "earlyBirdsSupply": "uint256",
+                    "publicSupply": "uint256",
+                    "foundationSupply": "uint256",
+                    "redTeamSupply": "uint256",
+                    "marketingSupply": "uint256",
+                    "angelAmountRemaining": "uint256",
+                    "icoStartsAt": "uint256",
+                    "icoEndsAt": "uint256",
+                    "redTeamLockingPeriod": "uint256",
+                    "angelLockingPeriod": "uint256"
+                }
+            },
+            "transferFromCrowdfund(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "angelSupply": "uint256",
+                    "earlyBirdsSupply": "uint256",
+                    "publicSupply": "uint256",
+                    "foundationSupply": "uint256",
+                    "redTeamSupply": "uint256",
+                    "marketingSupply": "uint256",
+                    "angelAmountRemaining": "uint256",
+                    "icoStartsAt": "uint256",
+                    "icoEndsAt": "uint256",
+                    "redTeamLockingPeriod": "uint256",
+                    "angelLockingPeriod": "uint256"
+                }
+            },
+            "releaseRedTeamTokens()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "angelSupply": "uint256",
+                    "earlyBirdsSupply": "uint256",
+                    "publicSupply": "uint256",
+                    "foundationSupply": "uint256",
+                    "redTeamSupply": "uint256",
+                    "marketingSupply": "uint256",
+                    "angelAmountRemaining": "uint256",
+                    "icoStartsAt": "uint256",
+                    "icoEndsAt": "uint256",
+                    "redTeamLockingPeriod": "uint256",
+                    "angelLockingPeriod": "uint256"
+                }
+            },
+            "releaseMarketingTokens()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "angelSupply": "uint256",
+                    "earlyBirdsSupply": "uint256",
+                    "publicSupply": "uint256",
+                    "foundationSupply": "uint256",
+                    "redTeamSupply": "uint256",
+                    "marketingSupply": "uint256",
+                    "angelAmountRemaining": "uint256",
+                    "icoStartsAt": "uint256",
+                    "icoEndsAt": "uint256",
+                    "redTeamLockingPeriod": "uint256",
+                    "angelLockingPeriod": "uint256"
+                }
+            },
+            "finalizeEarlyBirds()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "angelSupply": "uint256",
+                    "earlyBirdsSupply": "uint256",
+                    "publicSupply": "uint256",
+                    "foundationSupply": "uint256",
+                    "redTeamSupply": "uint256",
+                    "marketingSupply": "uint256",
+                    "angelAmountRemaining": "uint256",
+                    "icoStartsAt": "uint256",
+                    "icoEndsAt": "uint256",
+                    "redTeamLockingPeriod": "uint256",
+                    "angelLockingPeriod": "uint256"
+                }
+            },
+            "finalizeCrowdfund()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "angelSupply": "uint256",
+                    "earlyBirdsSupply": "uint256",
+                    "publicSupply": "uint256",
+                    "foundationSupply": "uint256",
+                    "redTeamSupply": "uint256",
+                    "marketingSupply": "uint256",
+                    "angelAmountRemaining": "uint256",
+                    "icoStartsAt": "uint256",
+                    "icoEndsAt": "uint256",
+                    "redTeamLockingPeriod": "uint256",
+                    "angelLockingPeriod": "uint256"
+                }
+            },
+            "changeRedTeamAddress(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "angelSupply": "uint256",
+                    "earlyBirdsSupply": "uint256",
+                    "publicSupply": "uint256",
+                    "foundationSupply": "uint256",
+                    "redTeamSupply": "uint256",
+                    "marketingSupply": "uint256",
+                    "angelAmountRemaining": "uint256",
+                    "icoStartsAt": "uint256",
+                    "icoEndsAt": "uint256",
+                    "redTeamLockingPeriod": "uint256",
+                    "angelLockingPeriod": "uint256"
+                }
+            },
+            "changeMarketingAddress(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "angelSupply": "uint256",
+                    "earlyBirdsSupply": "uint256",
+                    "publicSupply": "uint256",
+                    "foundationSupply": "uint256",
+                    "redTeamSupply": "uint256",
+                    "marketingSupply": "uint256",
+                    "angelAmountRemaining": "uint256",
+                    "icoStartsAt": "uint256",
+                    "icoEndsAt": "uint256",
+                    "redTeamLockingPeriod": "uint256",
+                    "angelLockingPeriod": "uint256"
+                }
+            },
+            "partialUnlockAngelsAccounts(address[])": {
+                "argument": {
+                    "_batchOfAddresses": "address[]"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "angelSupply": "uint256",
+                    "earlyBirdsSupply": "uint256",
+                    "publicSupply": "uint256",
+                    "foundationSupply": "uint256",
+                    "redTeamSupply": "uint256",
+                    "marketingSupply": "uint256",
+                    "angelAmountRemaining": "uint256",
+                    "icoStartsAt": "uint256",
+                    "icoEndsAt": "uint256",
+                    "redTeamLockingPeriod": "uint256",
+                    "angelLockingPeriod": "uint256"
+                }
+            },
+            "fullUnlockAngelsAccounts(address[])": {
+                "argument": {
+                    "_batchOfAddresses": "address[]"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "angelSupply": "uint256",
+                    "earlyBirdsSupply": "uint256",
+                    "publicSupply": "uint256",
+                    "foundationSupply": "uint256",
+                    "redTeamSupply": "uint256",
+                    "marketingSupply": "uint256",
+                    "angelAmountRemaining": "uint256",
+                    "icoStartsAt": "uint256",
+                    "icoEndsAt": "uint256",
+                    "redTeamLockingPeriod": "uint256",
+                    "angelLockingPeriod": "uint256"
+                }
+            },
+            "deliverAngelsREDAccounts(address[],uint256[])": {
+                "argument": {
+                    "_batchOfAddresses": "address[]",
+                    "_amountOfRED": "uint256[]"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "angelSupply": "uint256",
+                    "earlyBirdsSupply": "uint256",
+                    "publicSupply": "uint256",
+                    "foundationSupply": "uint256",
+                    "redTeamSupply": "uint256",
+                    "marketingSupply": "uint256",
+                    "angelAmountRemaining": "uint256",
+                    "icoStartsAt": "uint256",
+                    "icoEndsAt": "uint256",
+                    "redTeamLockingPeriod": "uint256",
+                    "angelLockingPeriod": "uint256"
+                }
+            },
+            "deliverAngelsREDBalance(address,uint256)": {
+                "argument": {
+                    "_amountOfBoughtRED": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "angelSupply": "uint256",
+                    "earlyBirdsSupply": "uint256",
+                    "publicSupply": "uint256",
+                    "foundationSupply": "uint256",
+                    "redTeamSupply": "uint256",
+                    "marketingSupply": "uint256",
+                    "angelAmountRemaining": "uint256",
+                    "icoStartsAt": "uint256",
+                    "icoEndsAt": "uint256",
+                    "redTeamLockingPeriod": "uint256",
+                    "angelLockingPeriod": "uint256"
+                }
+            },
+            "addToBalance(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "angelSupply": "uint256",
+                    "earlyBirdsSupply": "uint256",
+                    "publicSupply": "uint256",
+                    "foundationSupply": "uint256",
+                    "redTeamSupply": "uint256",
+                    "marketingSupply": "uint256",
+                    "angelAmountRemaining": "uint256",
+                    "icoStartsAt": "uint256",
+                    "icoEndsAt": "uint256",
+                    "redTeamLockingPeriod": "uint256",
+                    "angelLockingPeriod": "uint256"
+                }
+            },
+            "decrementBalance(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "angelSupply": "uint256",
+                    "earlyBirdsSupply": "uint256",
+                    "publicSupply": "uint256",
+                    "foundationSupply": "uint256",
+                    "redTeamSupply": "uint256",
+                    "marketingSupply": "uint256",
+                    "angelAmountRemaining": "uint256",
+                    "icoStartsAt": "uint256",
+                    "icoEndsAt": "uint256",
+                    "redTeamLockingPeriod": "uint256",
+                    "angelLockingPeriod": "uint256"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "angelSupply": "uint256",
+                    "earlyBirdsSupply": "uint256",
+                    "publicSupply": "uint256",
+                    "foundationSupply": "uint256",
+                    "redTeamSupply": "uint256",
+                    "marketingSupply": "uint256",
+                    "angelAmountRemaining": "uint256",
+                    "icoStartsAt": "uint256",
+                    "icoEndsAt": "uint256",
+                    "redTeamLockingPeriod": "uint256",
+                    "angelLockingPeriod": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                1484,
+                383
+            ],
+            "allowance(address,address)": [
+                2935,
+                867
+            ],
+            "transferFrom(address,address,uint256)": [
+                897,
+                185
+            ],
+            "setCrowdfundAddress(address)": [
+                2430,
+                669
+            ],
+            "approve(address,uint256)": [
+                710,
+                119
+            ],
+            "startCrowdfund()": [
+                2383,
+                647
+            ],
+            "finalizeCrowdfund()": [
+                2728,
+                757
+            ],
+            "partialUnlockAngelsAccounts(address[])": [
+                1229,
+                273
+            ],
+            "fullUnlockAngelsAccounts(address[])": [
+                1745,
+                449
+            ],
+            "releaseMarketingTokens()": [
+                2888,
+                845
+            ],
+            "releaseRedTeamTokens()": [
+                2015,
+                537
+            ],
+            "changeRedTeamAddress(address)": [
+                3121,
+                911
+            ],
+            "deliverAngelsREDAccounts(address[],uint256[])": [
+                1073,
+                229
+            ],
+            "transferFromCrowdfund(address,uint256)": [
+                1871,
+                493
+            ],
+            "transferOwnership(address)": [
+                3054,
+                889
+            ],
+            "isEarlyBirdsStage()": [
+                2841,
+                823
+            ],
+            "finalizeEarlyBirds()": [
+                2751,
+                779
+            ],
+            "changeMarketingAddress(address)": [
+                499,
+                75
+            ],
+            "transfer(address,uint256)": [
+                2584,
+                713
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "REDCrowdfund": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "REDCrowdfund(address)",
+            "changeWalletAddress(address)",
+            "openCrowdfund()",
+            "buyTokens(address)",
+            "closeCrowdfund()",
+            "whitelistAccounts(address[])",
+            "fallback()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {
+                    "weiRaised": "uint256",
+                    "startsAt": "uint256",
+                    "endsAt": "uint256"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "weiRaised": "uint256",
+                    "startsAt": "uint256",
+                    "endsAt": "uint256"
+                }
+            },
+            "REDCrowdfund(address)": {
+                "argument": {},
+                "contract": {
+                    "weiRaised": "uint256",
+                    "startsAt": "uint256",
+                    "endsAt": "uint256"
+                }
+            },
+            "changeWalletAddress(address)": {
+                "argument": {},
+                "contract": {
+                    "weiRaised": "uint256",
+                    "startsAt": "uint256",
+                    "endsAt": "uint256"
+                }
+            },
+            "openCrowdfund()": {
+                "argument": {},
+                "contract": {
+                    "weiRaised": "uint256",
+                    "startsAt": "uint256",
+                    "endsAt": "uint256"
+                }
+            },
+            "buyTokens(address)": {
+                "argument": {},
+                "contract": {
+                    "weiRaised": "uint256",
+                    "startsAt": "uint256",
+                    "endsAt": "uint256"
+                }
+            },
+            "closeCrowdfund()": {
+                "argument": {},
+                "contract": {
+                    "weiRaised": "uint256",
+                    "startsAt": "uint256",
+                    "endsAt": "uint256"
+                }
+            },
+            "whitelistAccounts(address[])": {
+                "argument": {
+                    "_batchOfAddresses": "address[]"
+                },
+                "contract": {
+                    "weiRaised": "uint256",
+                    "startsAt": "uint256",
+                    "endsAt": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "weiRaised": "uint256",
+                    "startsAt": "uint256",
+                    "endsAt": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "changeWalletAddress(address)": [
+                974,
+                339
+            ],
+            "whitelistAccounts(address[])": [
+                573,
+                207
+            ],
+            "openCrowdfund()": [
+                392,
+                141
+            ],
+            "closeCrowdfund()": [
+                656,
+                229
+            ],
+            "buyTokens(address)": [
+                920,
+                317
+            ],
+            "transferOwnership(address)": [
+                1041,
+                361
+            ]
+        },
+        "block_CALL_mapping": {
+            "block1452": [
+                "RED.isEarlyBirdsStage()"
+            ],
+            "jump1856": [
+                "RED.transferFromCrowdfund(_to, tokens)",
+                "RED.transferFromCrowdfund(_to, tokens)"
+            ],
+            "jump3131": [
+                "RED.finalizeCrowdfund()",
+                "RED.finalizeCrowdfund()"
+            ],
+            "jump2330": [
+                "RED.startCrowdfund()",
+                "RED.startCrowdfund()"
+            ],
+            "jump1548_1": [
+                "wallet.transfer(weiAmount)",
+                "wallet.transfer(weiAmount)"
+            ],
+            "jump1548_0": [
+                "wallet.transfer(weiAmount)",
+                "wallet.transfer(weiAmount)"
+            ],
+            "jump1452": [
+                "RED.isEarlyBirdsStage()",
+                "RED.isEarlyBirdsStage()"
+            ],
+            "jump1856_1": [
+                "RED.transferFromCrowdfund(_to, tokens)",
+                "RED.transferFromCrowdfund(_to, tokens)"
+            ],
+            "jump1856_0": [
+                "RED.transferFromCrowdfund(_to, tokens)",
+                "RED.transferFromCrowdfund(_to, tokens)"
+            ],
+            "block1548_1": [
+                "wallet.transfer(weiAmount)"
+            ],
+            "block1548_0": [
+                "wallet.transfer(weiAmount)"
+            ],
+            "block1856": [
+                "RED.transferFromCrowdfund(_to, tokens)"
+            ],
+            "jump1452_1": [
+                "RED.isEarlyBirdsStage()",
+                "RED.isEarlyBirdsStage()"
+            ],
+            "jump1452_0": [
+                "RED.isEarlyBirdsStage()",
+                "RED.isEarlyBirdsStage()"
+            ],
+            "block1548": [
+                "wallet.transfer(weiAmount)"
+            ],
+            "block1452_1": [
+                "RED.isEarlyBirdsStage()"
+            ],
+            "block1452_0": [
+                "RED.isEarlyBirdsStage()"
+            ],
+            "block3131": [
+                "RED.finalizeCrowdfund()"
+            ],
+            "block1856_1": [
+                "RED.transferFromCrowdfund(_to, tokens)"
+            ],
+            "block1856_0": [
+                "RED.transferFromCrowdfund(_to, tokens)"
+            ],
+            "block2330": [
+                "RED.startCrowdfund()"
+            ],
+            "jump1548": [
+                "wallet.transfer(weiAmount)",
+                "wallet.transfer(weiAmount)"
+            ]
+        }
+    }
+}

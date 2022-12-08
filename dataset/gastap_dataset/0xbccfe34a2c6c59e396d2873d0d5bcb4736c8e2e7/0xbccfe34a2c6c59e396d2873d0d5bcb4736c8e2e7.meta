@@ -1,0 +1,307 @@
+{
+    "DSAuthEvents": {
+        "function_list": [],
+        "initial_state": {},
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "DSAuth": {
+        "function_list": [
+            "DSAuth()",
+            "setOwner(address)",
+            "setAuthority(DSAuthority)",
+            "isAuthorized(address,bytes4)"
+        ],
+        "initial_state": {
+            "DSAuth()": {
+                "argument": {},
+                "contract": {}
+            },
+            "setOwner(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "setAuthority(DSAuthority)": {
+                "argument": {},
+                "contract": {}
+            },
+            "isAuthorized(address,bytes4)": {
+                "argument": {
+                    "sig": "bytes4"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "setOwner(address)": [
+                103,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump1499": [
+                "authority.canCall(src, this, sig)",
+                "authority.canCall(src, this, sig)"
+            ],
+            "block1499_0": [
+                "authority.canCall(src, this, sig)"
+            ],
+            "jump1499_0": [
+                "authority.canCall(src, this, sig)",
+                "authority.canCall(src, this, sig)"
+            ],
+            "block1499": [
+                "authority.canCall(src, this, sig)"
+            ]
+        }
+    },
+    "ERC20": {
+        "function_list": [
+            "totalSupply()",
+            "balanceOf(address)",
+            "allowance(address,address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)"
+        ],
+        "initial_state": {
+            "totalSupply()": {
+                "argument": {},
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                346,
+                97
+            ],
+            "totalSupply()": [
+                447,
+                119
+            ],
+            "balanceOf(address)": [
+                773,
+                207
+            ],
+            "transferFrom(address,address,uint256)": [
+                490,
+                141
+            ],
+            "allowance(address,address)": [
+                1394,
+                339
+            ],
+            "transfer(address,uint256)": [
+                1091,
+                273
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Controlled": {
+        "function_list": [
+            "Controlled()",
+            "changeController(address)"
+        ],
+        "initial_state": {
+            "Controlled()": {
+                "argument": {},
+                "contract": {}
+            },
+            "changeController(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "changeController(address)": [
+                81,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "SwapController": {
+        "function_list": [
+            "proxyPayment(address)",
+            "onTransfer(address,address,uint256)",
+            "onApprove(address,address,uint256)",
+            "DSAuth()",
+            "setOwner(address)",
+            "setAuthority(DSAuthority)",
+            "isAuthorized(address,bytes4)",
+            "SwapController(address[])",
+            "changeController(address,address)",
+            "proxyPayment(address)",
+            "onTransfer(address,address,uint256)",
+            "onApprove(address,address,uint256)",
+            "addGuard(address)"
+        ],
+        "initial_state": {
+            "proxyPayment(address)": {
+                "argument": {},
+                "contract": {
+                    "guards": "TokenTransferGuard[]"
+                }
+            },
+            "onTransfer(address,address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "guards": "TokenTransferGuard[]"
+                }
+            },
+            "onApprove(address,address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "guards": "TokenTransferGuard[]"
+                }
+            },
+            "DSAuth()": {
+                "argument": {},
+                "contract": {
+                    "guards": "TokenTransferGuard[]"
+                }
+            },
+            "setOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "guards": "TokenTransferGuard[]"
+                }
+            },
+            "setAuthority(DSAuthority)": {
+                "argument": {},
+                "contract": {
+                    "guards": "TokenTransferGuard[]"
+                }
+            },
+            "isAuthorized(address,bytes4)": {
+                "argument": {
+                    "sig": "bytes4"
+                },
+                "contract": {
+                    "guards": "TokenTransferGuard[]"
+                }
+            },
+            "SwapController(address[])": {
+                "argument": {
+                    "_guards": "address[]"
+                },
+                "contract": {
+                    "guards": "TokenTransferGuard[]"
+                }
+            },
+            "changeController(address,address)": {
+                "argument": {},
+                "contract": {
+                    "guards": "TokenTransferGuard[]"
+                }
+            },
+            "addGuard(address)": {
+                "argument": {},
+                "contract": {
+                    "guards": "TokenTransferGuard[]"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "setOwner(address)": [
+                169,
+                75
+            ],
+            "onApprove(address,address,uint256)": [
+                885,
+                251
+            ],
+            "proxyPayment(address)": [
+                1018,
+                273
+            ],
+            "onTransfer(address,address,uint256)": [
+                335,
+                119
+            ],
+            "addGuard(address)": [
+                468,
+                141
+            ],
+            "changeController(address,address)": [
+                236,
+                97
+            ]
+        },
+        "block_CALL_mapping": {
+            "block3064": [
+                "authority.canCall(src, this, sig)"
+            ],
+            "jump1855": [
+                "guards[i].onTokenTransfer(_from, _to, _amount)",
+                "guards[i].onTokenTransfer(_from, _to, _amount)"
+            ],
+            "block1855": [
+                "guards[i].onTokenTransfer(_from, _to, _amount)"
+            ],
+            "block3064_2": [
+                "authority.canCall(src, this, sig)"
+            ],
+            "block3064_0": [
+                "authority.canCall(src, this, sig)"
+            ],
+            "block3064_1": [
+                "authority.canCall(src, this, sig)"
+            ],
+            "jump1534": [
+                "Controlled(_token).changeController(_newController)",
+                "Controlled(_token).changeController(_newController)"
+            ],
+            "jump3064_0": [
+                "authority.canCall(src, this, sig)",
+                "authority.canCall(src, this, sig)"
+            ],
+            "jump3064_1": [
+                "authority.canCall(src, this, sig)",
+                "authority.canCall(src, this, sig)"
+            ],
+            "jump3064_2": [
+                "authority.canCall(src, this, sig)",
+                "authority.canCall(src, this, sig)"
+            ],
+            "block1534": [
+                "Controlled(_token).changeController(_newController)"
+            ],
+            "jump3064": [
+                "authority.canCall(src, this, sig)",
+                "authority.canCall(src, this, sig)"
+            ]
+        }
+    }
+}

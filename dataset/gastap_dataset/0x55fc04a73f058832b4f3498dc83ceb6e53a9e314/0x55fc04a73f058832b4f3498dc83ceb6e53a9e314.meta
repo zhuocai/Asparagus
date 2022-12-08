@@ -1,0 +1,1298 @@
+{
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "ERC20Basic": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                124,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "ERC20": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                147,
+                75
+            ],
+            "transfer(address,uint256)": [
+                717,
+                207
+            ],
+            "balanceOf(address)": [
+                630,
+                185
+            ],
+            "allowance(address,address)": [
+                818,
+                229
+            ],
+            "transferFrom(address,address,uint256)": [
+                291,
+                119
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "BasicToken": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transfer(address,uint256)",
+            "balanceOf(address)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transfer(address,uint256)": [
+                222,
+                119
+            ],
+            "balanceOf(address)": [
+                135,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "StandardToken": {
+        "function_list": [
+            "transfer(address,uint256)",
+            "balanceOf(address)",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)"
+        ],
+        "initial_state": {
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                125,
+                75
+            ],
+            "balanceOf(address)": [
+                402,
+                141
+            ],
+            "allowance(address,address)": [
+                590,
+                185
+            ],
+            "transferFrom(address,address,uint256)": [
+                269,
+                119
+            ],
+            "transfer(address,uint256)": [
+                489,
+                163
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "PullPayment": {
+        "function_list": [
+            "asyncSend(address,uint256)",
+            "withdrawPayments()"
+        ],
+        "initial_state": {
+            "asyncSend(address,uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {
+                    "totalPayments": "uint256"
+                }
+            },
+            "withdrawPayments()": {
+                "argument": {},
+                "contract": {
+                    "totalPayments": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "withdrawPayments()": [
+                134,
+                22
+            ]
+        },
+        "block_CALL_mapping": {
+            "block396": [
+                "payee.send(payment)"
+            ],
+            "jump396": [
+                "payee.send(payment)",
+                "payee.send(payment)"
+            ]
+        }
+    },
+    "TrivialToken": {
+        "function_list": [
+            "asyncSend(address,uint256)",
+            "withdrawPayments()",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "transfer(address,uint256)",
+            "balanceOf(address)",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "TrivialToken(string,string,uint256,uint256,address,address,uint256,uint256,uint256,bytes32)",
+            "startIco()",
+            "contributeInIco()",
+            "distributeTokens(uint256)",
+            "finishIco()",
+            "checkContribution(address)",
+            "canStartAuction()",
+            "startAuction()",
+            "bidInAuction()",
+            "calculateUserBid()",
+            "finishAuction()",
+            "withdrawShares(address)",
+            "isKeyHolder(address)",
+            "contributorsCount()",
+            "setDescriptionHash(bytes32)",
+            "setAuctionWinnerMessageHash(bytes32)",
+            "killContract()",
+            "getContractState()",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "fallback()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "asyncSend(address,uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256",
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "FREE_PERIOD_DURATION": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "icoDuration": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "freePeriodEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "descriptionHashHistory": "TrivialToken.DescriptionHash[]",
+                    "contributors": "address[]"
+                }
+            },
+            "withdrawPayments()": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "FREE_PERIOD_DURATION": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "icoDuration": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "freePeriodEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "descriptionHashHistory": "TrivialToken.DescriptionHash[]",
+                    "contributors": "address[]"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256",
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "FREE_PERIOD_DURATION": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "icoDuration": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "freePeriodEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "descriptionHashHistory": "TrivialToken.DescriptionHash[]",
+                    "contributors": "address[]"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256",
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "FREE_PERIOD_DURATION": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "icoDuration": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "freePeriodEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "descriptionHashHistory": "TrivialToken.DescriptionHash[]",
+                    "contributors": "address[]"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "FREE_PERIOD_DURATION": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "icoDuration": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "freePeriodEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "descriptionHashHistory": "TrivialToken.DescriptionHash[]",
+                    "contributors": "address[]"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256",
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "FREE_PERIOD_DURATION": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "icoDuration": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "freePeriodEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "descriptionHashHistory": "TrivialToken.DescriptionHash[]",
+                    "contributors": "address[]"
+                }
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "FREE_PERIOD_DURATION": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "icoDuration": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "freePeriodEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "descriptionHashHistory": "TrivialToken.DescriptionHash[]",
+                    "contributors": "address[]"
+                }
+            },
+            "TrivialToken(string,string,uint256,uint256,address,address,uint256,uint256,uint256,bytes32)": {
+                "argument": {
+                    "_name": "string",
+                    "_symbol": "string",
+                    "_icoDuration": "uint256",
+                    "_auctionDuration": "uint256",
+                    "_tokensForArtist": "uint256",
+                    "_tokensForTrivial": "uint256",
+                    "_tokensForIco": "uint256",
+                    "_descriptionHash": "bytes32"
+                },
+                "contract": {
+                    "totalSupply": "uint256",
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "FREE_PERIOD_DURATION": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "icoDuration": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "freePeriodEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "descriptionHashHistory": "TrivialToken.DescriptionHash[]",
+                    "contributors": "address[]"
+                }
+            },
+            "startIco()": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "FREE_PERIOD_DURATION": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "icoDuration": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "freePeriodEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "descriptionHashHistory": "TrivialToken.DescriptionHash[]",
+                    "contributors": "address[]"
+                }
+            },
+            "contributeInIco()": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "FREE_PERIOD_DURATION": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "icoDuration": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "freePeriodEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "descriptionHashHistory": "TrivialToken.DescriptionHash[]",
+                    "contributors": "address[]"
+                }
+            },
+            "distributeTokens(uint256)": {
+                "argument": {
+                    "contributorsNumber": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256",
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "FREE_PERIOD_DURATION": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "icoDuration": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "freePeriodEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "descriptionHashHistory": "TrivialToken.DescriptionHash[]",
+                    "contributors": "address[]"
+                }
+            },
+            "finishIco()": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "FREE_PERIOD_DURATION": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "icoDuration": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "freePeriodEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "descriptionHashHistory": "TrivialToken.DescriptionHash[]",
+                    "contributors": "address[]"
+                }
+            },
+            "checkContribution(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "FREE_PERIOD_DURATION": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "icoDuration": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "freePeriodEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "descriptionHashHistory": "TrivialToken.DescriptionHash[]",
+                    "contributors": "address[]"
+                }
+            },
+            "canStartAuction()": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "FREE_PERIOD_DURATION": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "icoDuration": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "freePeriodEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "descriptionHashHistory": "TrivialToken.DescriptionHash[]",
+                    "contributors": "address[]"
+                }
+            },
+            "startAuction()": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "FREE_PERIOD_DURATION": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "icoDuration": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "freePeriodEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "descriptionHashHistory": "TrivialToken.DescriptionHash[]",
+                    "contributors": "address[]"
+                }
+            },
+            "bidInAuction()": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "FREE_PERIOD_DURATION": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "icoDuration": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "freePeriodEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "descriptionHashHistory": "TrivialToken.DescriptionHash[]",
+                    "contributors": "address[]"
+                }
+            },
+            "calculateUserBid()": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "FREE_PERIOD_DURATION": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "icoDuration": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "freePeriodEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "descriptionHashHistory": "TrivialToken.DescriptionHash[]",
+                    "contributors": "address[]"
+                }
+            },
+            "finishAuction()": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "FREE_PERIOD_DURATION": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "icoDuration": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "freePeriodEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "descriptionHashHistory": "TrivialToken.DescriptionHash[]",
+                    "contributors": "address[]"
+                }
+            },
+            "withdrawShares(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "FREE_PERIOD_DURATION": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "icoDuration": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "freePeriodEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "descriptionHashHistory": "TrivialToken.DescriptionHash[]",
+                    "contributors": "address[]"
+                }
+            },
+            "isKeyHolder(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "FREE_PERIOD_DURATION": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "icoDuration": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "freePeriodEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "descriptionHashHistory": "TrivialToken.DescriptionHash[]",
+                    "contributors": "address[]"
+                }
+            },
+            "contributorsCount()": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "FREE_PERIOD_DURATION": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "icoDuration": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "freePeriodEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "descriptionHashHistory": "TrivialToken.DescriptionHash[]",
+                    "contributors": "address[]"
+                }
+            },
+            "setDescriptionHash(bytes32)": {
+                "argument": {
+                    "_descriptionHash": "bytes32"
+                },
+                "contract": {
+                    "totalSupply": "uint256",
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "FREE_PERIOD_DURATION": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "icoDuration": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "freePeriodEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "descriptionHashHistory": "TrivialToken.DescriptionHash[]",
+                    "contributors": "address[]"
+                }
+            },
+            "setAuctionWinnerMessageHash(bytes32)": {
+                "argument": {
+                    "_auctionWinnerMessageHash": "bytes32"
+                },
+                "contract": {
+                    "totalSupply": "uint256",
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "FREE_PERIOD_DURATION": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "icoDuration": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "freePeriodEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "descriptionHashHistory": "TrivialToken.DescriptionHash[]",
+                    "contributors": "address[]"
+                }
+            },
+            "killContract()": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "FREE_PERIOD_DURATION": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "icoDuration": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "freePeriodEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "descriptionHashHistory": "TrivialToken.DescriptionHash[]",
+                    "contributors": "address[]"
+                }
+            },
+            "getContractState()": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "FREE_PERIOD_DURATION": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "icoDuration": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "freePeriodEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "descriptionHashHistory": "TrivialToken.DescriptionHash[]",
+                    "contributors": "address[]"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "FREE_PERIOD_DURATION": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "icoDuration": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "freePeriodEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "descriptionHashHistory": "TrivialToken.DescriptionHash[]",
+                    "contributors": "address[]"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "DECIMALS": "uint8",
+                    "MIN_ETH_AMOUNT": "uint256",
+                    "MIN_BID_PERCENTAGE": "uint256",
+                    "TOTAL_SUPPLY": "uint256",
+                    "TOKENS_PERCENTAGE_FOR_KEY_HOLDER": "uint256",
+                    "CLEANUP_DELAY": "uint256",
+                    "FREE_PERIOD_DURATION": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "icoDuration": "uint256",
+                    "icoEndTime": "uint256",
+                    "auctionDuration": "uint256",
+                    "auctionEndTime": "uint256",
+                    "freePeriodEndTime": "uint256",
+                    "tokensForArtist": "uint256",
+                    "tokensForTrivial": "uint256",
+                    "tokensForIco": "uint256",
+                    "amountRaised": "uint256",
+                    "highestBid": "uint256",
+                    "auctionWinnerMessageHash": "bytes32",
+                    "nextContributorIndexToBeGivenTokens": "uint256",
+                    "tokensDistributedToContributors": "uint256",
+                    "descriptionHashHistory": "TrivialToken.DescriptionHash[]",
+                    "contributors": "address[]"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "startAuction()": [
+                2103,
+                528
+            ],
+            "finishAuction()": [
+                1831,
+                374
+            ],
+            "allowance(address,address)": [
+                3513,
+                990
+            ],
+            "transferFrom(address,address,uint256)": [
+                1410,
+                264
+            ],
+            "withdrawShares(address)": [
+                3742,
+                1056
+            ],
+            "setDescriptionHash(bytes32)": [
+                1338,
+                220
+            ],
+            "approve(address,uint256)": [
+                905,
+                44
+            ],
+            "startIco()": [
+                2716,
+                748
+            ],
+            "canStartAuction()": [
+                3332,
+                924
+            ],
+            "withdrawPayments()": [
+                2080,
+                506
+            ],
+            "killContract()": [
+                1387,
+                242
+            ],
+            "setAuctionWinnerMessageHash(bytes32)": [
+                1159,
+                154
+            ],
+            "contributeInIco()": [
+                2070,
+                484
+            ],
+            "distributeTokens(uint256)": [
+                2256,
+                594
+            ],
+            "getContractState()": [
+                2430,
+                682
+            ],
+            "checkContribution(address)": [
+                3165,
+                880
+            ],
+            "balanceOf(address)": [
+                2126,
+                550
+            ],
+            "isKeyHolder(address)": [
+                3422,
+                968
+            ],
+            "bidInAuction()": [
+                1049,
+                88
+            ],
+            "contributorsCount()": [
+                2301,
+                616
+            ],
+            "finishIco()": [
+                3719,
+                1034
+            ],
+            "transfer(address,uint256)": [
+                3013,
+                836
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump4574_1": [
+                "highestBidder.send(amountToReturn)",
+                "highestBidder.send(amountToReturn)"
+            ],
+            "jump6931": [
+                "payee.send(payment)",
+                "payee.send(payment)"
+            ],
+            "jump10795": [
+                "holder.transfer(\n                SafeMath.div(SafeMath.mul(highestBid, availableTokens), TOTAL_SUPPLY)\n            )",
+                "holder.transfer(\n                SafeMath.div(SafeMath.mul(highestBid, availableTokens), TOTAL_SUPPLY)\n            )"
+            ],
+            "jump10069": [
+                "artist.send(this.balance)",
+                "artist.send(this.balance)"
+            ],
+            "jump4574": [
+                "highestBidder.send(amountToReturn)",
+                "highestBidder.send(amountToReturn)"
+            ],
+            "block4574_0": [
+                "highestBidder.send(amountToReturn)"
+            ],
+            "block10069": [
+                "artist.send(this.balance)"
+            ],
+            "jump4574_0": [
+                "highestBidder.send(amountToReturn)",
+                "highestBidder.send(amountToReturn)"
+            ],
+            "block4574": [
+                "highestBidder.send(amountToReturn)"
+            ],
+            "block10795": [
+                "holder.transfer(\n                SafeMath.div(SafeMath.mul(highestBid, availableTokens), TOTAL_SUPPLY)\n            )"
+            ],
+            "block4574_1": [
+                "highestBidder.send(amountToReturn)"
+            ],
+            "block6931": [
+                "payee.send(payment)"
+            ]
+        }
+    }
+}

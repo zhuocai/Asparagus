@@ -1,0 +1,180 @@
+{
+    "ERC20": {
+        "function_list": [
+            "transfer(address,uint256)",
+            "balanceOf(address)"
+        ],
+        "initial_state": {
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                615,
+                185
+            ],
+            "transfer(address,uint256)": [
+                812,
+                251
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Ownable": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Airdropper": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "Airdropper(address,uint256)",
+            "multisend(address[])",
+            "getLendTokenBalance()",
+            "withdrawRemainingTokens()",
+            "withdrawERC20ToOwner(address)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {
+                    "numOfTokens": "uint256"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "numOfTokens": "uint256"
+                }
+            },
+            "Airdropper(address,uint256)": {
+                "argument": {
+                    "_numOfTokens": "uint256"
+                },
+                "contract": {
+                    "numOfTokens": "uint256"
+                }
+            },
+            "multisend(address[])": {
+                "argument": {
+                    "dests": "address[]"
+                },
+                "contract": {
+                    "numOfTokens": "uint256"
+                }
+            },
+            "getLendTokenBalance()": {
+                "argument": {},
+                "contract": {
+                    "numOfTokens": "uint256"
+                }
+            },
+            "withdrawRemainingTokens()": {
+                "argument": {},
+                "contract": {
+                    "numOfTokens": "uint256"
+                }
+            },
+            "withdrawERC20ToOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "numOfTokens": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "multisend(address[])": [
+                225,
+                97
+            ],
+            "withdrawRemainingTokens()": [
+                434,
+                141
+            ],
+            "getLendTokenBalance()": [
+                587,
+                207
+            ],
+            "withdrawERC20ToOwner(address)": [
+                158,
+                75
+            ],
+            "transferOwnership(address)": [
+                630,
+                229
+            ]
+        },
+        "block_CALL_mapping": {
+            "block2419": [
+                "token.transfer(owner, contractTokenBalance)"
+            ],
+            "jump2113": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "block1703": [
+                "token.transfer(dests[i], numOfTokens)"
+            ],
+            "block1308": [
+                "erc20Token.transfer(owner, contractTokenBalance)"
+            ],
+            "jump2716": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "jump2419": [
+                "token.transfer(owner, contractTokenBalance)",
+                "token.transfer(owner, contractTokenBalance)"
+            ],
+            "block2113": [
+                "token.balanceOf(this)"
+            ],
+            "jump1308": [
+                "erc20Token.transfer(owner, contractTokenBalance)",
+                "erc20Token.transfer(owner, contractTokenBalance)"
+            ],
+            "block1036": [
+                "erc20Token.balanceOf(this)"
+            ],
+            "jump1703": [
+                "token.transfer(dests[i], numOfTokens)",
+                "token.transfer(dests[i], numOfTokens)"
+            ],
+            "jump1036": [
+                "erc20Token.balanceOf(this)",
+                "erc20Token.balanceOf(this)"
+            ],
+            "block2716": [
+                "token.balanceOf(this)"
+            ]
+        }
+    }
+}

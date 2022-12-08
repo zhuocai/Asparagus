@@ -1,0 +1,2069 @@
+{
+    "CompetitionScoreTypes": {
+        "function_list": [
+            "SerializeCompetitionScore(CompetitionScoreTypes.CompetitionScore)",
+            "DeserializeCompetitionScore(bytes32)"
+        ],
+        "initial_state": {
+            "SerializeCompetitionScore(CompetitionScoreTypes.CompetitionScore)": {
+                "argument": {},
+                "contract": {}
+            },
+            "DeserializeCompetitionScore(bytes32)": {
+                "argument": {
+                    "raw": "bytes32"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "Game": {
+        "function_list": [
+            "Game()",
+            "ChangeOwner(address)",
+            "ChangeDatabase(address)",
+            "ChangeGameHidden(address)",
+            "Unpause()",
+            "Pause()",
+            "IsPaused()",
+            "WithdrawProfitFunds(uint256,address)",
+            "WithdrawWinnings(uint256)",
+            "GetRocket(uint32)",
+            "GetWithdrawalFunds(address)",
+            "GetProfitFunds()",
+            "GetCompetitionFunds(uint32)",
+            "GetRocketOwner(uint32)",
+            "GetAuction(uint32)",
+            "GetInventoryCount(address)",
+            "GetInventory(address,uint256)",
+            "AddRocket(uint32,uint64,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint64,uint32)",
+            "GetRocketStock(uint16)",
+            "BuyStockRocket(uint16,address)",
+            "GiveReferralRocket(uint16,address)",
+            "GiveRocketInternal(uint16,address,bool,address)",
+            "PlaceRocketForSale(uint32,uint80)",
+            "RemoveRocketForSale(uint32)",
+            "BuyRocketForSale(uint32)",
+            "LaunchRocket(uint32,uint32,uint32,uint32,uint32,uint32)",
+            "LaunchRocketInternal(GameCommon.LaunchRocketStackFrame)",
+            "AddScore(GameCommon.LaunchRocketStackFrame)",
+            "GetCompetitionInfo(uint32)",
+            "SetDebugExtra(uint32,uint8)",
+            "StartCompetition(uint8,uint8,uint8,uint8,uint80,uint32)",
+            "GetCompetitionResults(uint32,bool)",
+            "SortCompetitionScores(uint32)",
+            "MakeAndSortCompetitionScores(uint32)",
+            "FinishCompetition(uint32)",
+            "Lerp(uint256,uint256,bytes1)",
+            "LerpExtra(uint256,uint256,uint256,bytes1)",
+            "LerpLess(uint256,uint256,uint256,bytes1)",
+            "BubbleSort(CompetitionScoreTypes.CompetitionScore[],uint32)",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "Game()": {
+                "argument": {},
+                "contract": {
+                    "GlobalCategory": "uint256",
+                    "RocketCategory": "uint256",
+                    "OwnershipCategory": "uint256",
+                    "InventoryCategory": "uint256",
+                    "MarketCategory": "uint256",
+                    "ProfitFundsCategory": "uint256",
+                    "CompetitionFundsCategory": "uint256",
+                    "MissionParametersCategory": "uint256",
+                    "CompetitionScoresCategory": "uint256",
+                    "WithdrawalFundsCategory": "uint256",
+                    "ReferralCategory": "uint256",
+                    "RocketStockCategory": "uint256",
+                    "RocketStockInitializedCategory": "uint256",
+                    "MaxCompetitionScores": "uint256"
+                }
+            },
+            "ChangeOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "GlobalCategory": "uint256",
+                    "RocketCategory": "uint256",
+                    "OwnershipCategory": "uint256",
+                    "InventoryCategory": "uint256",
+                    "MarketCategory": "uint256",
+                    "ProfitFundsCategory": "uint256",
+                    "CompetitionFundsCategory": "uint256",
+                    "MissionParametersCategory": "uint256",
+                    "CompetitionScoresCategory": "uint256",
+                    "WithdrawalFundsCategory": "uint256",
+                    "ReferralCategory": "uint256",
+                    "RocketStockCategory": "uint256",
+                    "RocketStockInitializedCategory": "uint256",
+                    "MaxCompetitionScores": "uint256"
+                }
+            },
+            "ChangeDatabase(address)": {
+                "argument": {},
+                "contract": {
+                    "GlobalCategory": "uint256",
+                    "RocketCategory": "uint256",
+                    "OwnershipCategory": "uint256",
+                    "InventoryCategory": "uint256",
+                    "MarketCategory": "uint256",
+                    "ProfitFundsCategory": "uint256",
+                    "CompetitionFundsCategory": "uint256",
+                    "MissionParametersCategory": "uint256",
+                    "CompetitionScoresCategory": "uint256",
+                    "WithdrawalFundsCategory": "uint256",
+                    "ReferralCategory": "uint256",
+                    "RocketStockCategory": "uint256",
+                    "RocketStockInitializedCategory": "uint256",
+                    "MaxCompetitionScores": "uint256"
+                }
+            },
+            "ChangeGameHidden(address)": {
+                "argument": {},
+                "contract": {
+                    "GlobalCategory": "uint256",
+                    "RocketCategory": "uint256",
+                    "OwnershipCategory": "uint256",
+                    "InventoryCategory": "uint256",
+                    "MarketCategory": "uint256",
+                    "ProfitFundsCategory": "uint256",
+                    "CompetitionFundsCategory": "uint256",
+                    "MissionParametersCategory": "uint256",
+                    "CompetitionScoresCategory": "uint256",
+                    "WithdrawalFundsCategory": "uint256",
+                    "ReferralCategory": "uint256",
+                    "RocketStockCategory": "uint256",
+                    "RocketStockInitializedCategory": "uint256",
+                    "MaxCompetitionScores": "uint256"
+                }
+            },
+            "Unpause()": {
+                "argument": {},
+                "contract": {
+                    "GlobalCategory": "uint256",
+                    "RocketCategory": "uint256",
+                    "OwnershipCategory": "uint256",
+                    "InventoryCategory": "uint256",
+                    "MarketCategory": "uint256",
+                    "ProfitFundsCategory": "uint256",
+                    "CompetitionFundsCategory": "uint256",
+                    "MissionParametersCategory": "uint256",
+                    "CompetitionScoresCategory": "uint256",
+                    "WithdrawalFundsCategory": "uint256",
+                    "ReferralCategory": "uint256",
+                    "RocketStockCategory": "uint256",
+                    "RocketStockInitializedCategory": "uint256",
+                    "MaxCompetitionScores": "uint256"
+                }
+            },
+            "Pause()": {
+                "argument": {},
+                "contract": {
+                    "GlobalCategory": "uint256",
+                    "RocketCategory": "uint256",
+                    "OwnershipCategory": "uint256",
+                    "InventoryCategory": "uint256",
+                    "MarketCategory": "uint256",
+                    "ProfitFundsCategory": "uint256",
+                    "CompetitionFundsCategory": "uint256",
+                    "MissionParametersCategory": "uint256",
+                    "CompetitionScoresCategory": "uint256",
+                    "WithdrawalFundsCategory": "uint256",
+                    "ReferralCategory": "uint256",
+                    "RocketStockCategory": "uint256",
+                    "RocketStockInitializedCategory": "uint256",
+                    "MaxCompetitionScores": "uint256"
+                }
+            },
+            "IsPaused()": {
+                "argument": {},
+                "contract": {
+                    "GlobalCategory": "uint256",
+                    "RocketCategory": "uint256",
+                    "OwnershipCategory": "uint256",
+                    "InventoryCategory": "uint256",
+                    "MarketCategory": "uint256",
+                    "ProfitFundsCategory": "uint256",
+                    "CompetitionFundsCategory": "uint256",
+                    "MissionParametersCategory": "uint256",
+                    "CompetitionScoresCategory": "uint256",
+                    "WithdrawalFundsCategory": "uint256",
+                    "ReferralCategory": "uint256",
+                    "RocketStockCategory": "uint256",
+                    "RocketStockInitializedCategory": "uint256",
+                    "MaxCompetitionScores": "uint256"
+                }
+            },
+            "WithdrawProfitFunds(uint256,address)": {
+                "argument": {
+                    "withdraw_amount": "uint256"
+                },
+                "contract": {
+                    "GlobalCategory": "uint256",
+                    "RocketCategory": "uint256",
+                    "OwnershipCategory": "uint256",
+                    "InventoryCategory": "uint256",
+                    "MarketCategory": "uint256",
+                    "ProfitFundsCategory": "uint256",
+                    "CompetitionFundsCategory": "uint256",
+                    "MissionParametersCategory": "uint256",
+                    "CompetitionScoresCategory": "uint256",
+                    "WithdrawalFundsCategory": "uint256",
+                    "ReferralCategory": "uint256",
+                    "RocketStockCategory": "uint256",
+                    "RocketStockInitializedCategory": "uint256",
+                    "MaxCompetitionScores": "uint256"
+                }
+            },
+            "WithdrawWinnings(uint256)": {
+                "argument": {
+                    "withdraw_amount": "uint256"
+                },
+                "contract": {
+                    "GlobalCategory": "uint256",
+                    "RocketCategory": "uint256",
+                    "OwnershipCategory": "uint256",
+                    "InventoryCategory": "uint256",
+                    "MarketCategory": "uint256",
+                    "ProfitFundsCategory": "uint256",
+                    "CompetitionFundsCategory": "uint256",
+                    "MissionParametersCategory": "uint256",
+                    "CompetitionScoresCategory": "uint256",
+                    "WithdrawalFundsCategory": "uint256",
+                    "ReferralCategory": "uint256",
+                    "RocketStockCategory": "uint256",
+                    "RocketStockInitializedCategory": "uint256",
+                    "MaxCompetitionScores": "uint256"
+                }
+            },
+            "GetRocket(uint32)": {
+                "argument": {
+                    "rocket_id": "uint32"
+                },
+                "contract": {
+                    "GlobalCategory": "uint256",
+                    "RocketCategory": "uint256",
+                    "OwnershipCategory": "uint256",
+                    "InventoryCategory": "uint256",
+                    "MarketCategory": "uint256",
+                    "ProfitFundsCategory": "uint256",
+                    "CompetitionFundsCategory": "uint256",
+                    "MissionParametersCategory": "uint256",
+                    "CompetitionScoresCategory": "uint256",
+                    "WithdrawalFundsCategory": "uint256",
+                    "ReferralCategory": "uint256",
+                    "RocketStockCategory": "uint256",
+                    "RocketStockInitializedCategory": "uint256",
+                    "MaxCompetitionScores": "uint256"
+                }
+            },
+            "GetWithdrawalFunds(address)": {
+                "argument": {},
+                "contract": {
+                    "GlobalCategory": "uint256",
+                    "RocketCategory": "uint256",
+                    "OwnershipCategory": "uint256",
+                    "InventoryCategory": "uint256",
+                    "MarketCategory": "uint256",
+                    "ProfitFundsCategory": "uint256",
+                    "CompetitionFundsCategory": "uint256",
+                    "MissionParametersCategory": "uint256",
+                    "CompetitionScoresCategory": "uint256",
+                    "WithdrawalFundsCategory": "uint256",
+                    "ReferralCategory": "uint256",
+                    "RocketStockCategory": "uint256",
+                    "RocketStockInitializedCategory": "uint256",
+                    "MaxCompetitionScores": "uint256"
+                }
+            },
+            "GetProfitFunds()": {
+                "argument": {},
+                "contract": {
+                    "GlobalCategory": "uint256",
+                    "RocketCategory": "uint256",
+                    "OwnershipCategory": "uint256",
+                    "InventoryCategory": "uint256",
+                    "MarketCategory": "uint256",
+                    "ProfitFundsCategory": "uint256",
+                    "CompetitionFundsCategory": "uint256",
+                    "MissionParametersCategory": "uint256",
+                    "CompetitionScoresCategory": "uint256",
+                    "WithdrawalFundsCategory": "uint256",
+                    "ReferralCategory": "uint256",
+                    "RocketStockCategory": "uint256",
+                    "RocketStockInitializedCategory": "uint256",
+                    "MaxCompetitionScores": "uint256"
+                }
+            },
+            "GetCompetitionFunds(uint32)": {
+                "argument": {
+                    "competition_id": "uint32"
+                },
+                "contract": {
+                    "GlobalCategory": "uint256",
+                    "RocketCategory": "uint256",
+                    "OwnershipCategory": "uint256",
+                    "InventoryCategory": "uint256",
+                    "MarketCategory": "uint256",
+                    "ProfitFundsCategory": "uint256",
+                    "CompetitionFundsCategory": "uint256",
+                    "MissionParametersCategory": "uint256",
+                    "CompetitionScoresCategory": "uint256",
+                    "WithdrawalFundsCategory": "uint256",
+                    "ReferralCategory": "uint256",
+                    "RocketStockCategory": "uint256",
+                    "RocketStockInitializedCategory": "uint256",
+                    "MaxCompetitionScores": "uint256"
+                }
+            },
+            "GetRocketOwner(uint32)": {
+                "argument": {
+                    "rocket_id": "uint32"
+                },
+                "contract": {
+                    "GlobalCategory": "uint256",
+                    "RocketCategory": "uint256",
+                    "OwnershipCategory": "uint256",
+                    "InventoryCategory": "uint256",
+                    "MarketCategory": "uint256",
+                    "ProfitFundsCategory": "uint256",
+                    "CompetitionFundsCategory": "uint256",
+                    "MissionParametersCategory": "uint256",
+                    "CompetitionScoresCategory": "uint256",
+                    "WithdrawalFundsCategory": "uint256",
+                    "ReferralCategory": "uint256",
+                    "RocketStockCategory": "uint256",
+                    "RocketStockInitializedCategory": "uint256",
+                    "MaxCompetitionScores": "uint256"
+                }
+            },
+            "GetAuction(uint32)": {
+                "argument": {
+                    "rocket_id": "uint32"
+                },
+                "contract": {
+                    "GlobalCategory": "uint256",
+                    "RocketCategory": "uint256",
+                    "OwnershipCategory": "uint256",
+                    "InventoryCategory": "uint256",
+                    "MarketCategory": "uint256",
+                    "ProfitFundsCategory": "uint256",
+                    "CompetitionFundsCategory": "uint256",
+                    "MissionParametersCategory": "uint256",
+                    "CompetitionScoresCategory": "uint256",
+                    "WithdrawalFundsCategory": "uint256",
+                    "ReferralCategory": "uint256",
+                    "RocketStockCategory": "uint256",
+                    "RocketStockInitializedCategory": "uint256",
+                    "MaxCompetitionScores": "uint256"
+                }
+            },
+            "GetInventoryCount(address)": {
+                "argument": {},
+                "contract": {
+                    "GlobalCategory": "uint256",
+                    "RocketCategory": "uint256",
+                    "OwnershipCategory": "uint256",
+                    "InventoryCategory": "uint256",
+                    "MarketCategory": "uint256",
+                    "ProfitFundsCategory": "uint256",
+                    "CompetitionFundsCategory": "uint256",
+                    "MissionParametersCategory": "uint256",
+                    "CompetitionScoresCategory": "uint256",
+                    "WithdrawalFundsCategory": "uint256",
+                    "ReferralCategory": "uint256",
+                    "RocketStockCategory": "uint256",
+                    "RocketStockInitializedCategory": "uint256",
+                    "MaxCompetitionScores": "uint256"
+                }
+            },
+            "GetInventory(address,uint256)": {
+                "argument": {
+                    "start_index": "uint256"
+                },
+                "contract": {
+                    "GlobalCategory": "uint256",
+                    "RocketCategory": "uint256",
+                    "OwnershipCategory": "uint256",
+                    "InventoryCategory": "uint256",
+                    "MarketCategory": "uint256",
+                    "ProfitFundsCategory": "uint256",
+                    "CompetitionFundsCategory": "uint256",
+                    "MissionParametersCategory": "uint256",
+                    "CompetitionScoresCategory": "uint256",
+                    "WithdrawalFundsCategory": "uint256",
+                    "ReferralCategory": "uint256",
+                    "RocketStockCategory": "uint256",
+                    "RocketStockInitializedCategory": "uint256",
+                    "MaxCompetitionScores": "uint256"
+                }
+            },
+            "AddRocket(uint32,uint64,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint64,uint32)": {
+                "argument": {
+                    "stock_id": "uint32",
+                    "cost": "uint64",
+                    "min_top_speed": "uint32",
+                    "max_top_speed": "uint32",
+                    "min_thrust": "uint32",
+                    "max_thrust": "uint32",
+                    "min_weight": "uint32",
+                    "max_weight": "uint32",
+                    "min_fuel_capacity": "uint32",
+                    "max_fuel_capacity": "uint32",
+                    "distance": "uint64",
+                    "max_stock": "uint32"
+                },
+                "contract": {
+                    "GlobalCategory": "uint256",
+                    "RocketCategory": "uint256",
+                    "OwnershipCategory": "uint256",
+                    "InventoryCategory": "uint256",
+                    "MarketCategory": "uint256",
+                    "ProfitFundsCategory": "uint256",
+                    "CompetitionFundsCategory": "uint256",
+                    "MissionParametersCategory": "uint256",
+                    "CompetitionScoresCategory": "uint256",
+                    "WithdrawalFundsCategory": "uint256",
+                    "ReferralCategory": "uint256",
+                    "RocketStockCategory": "uint256",
+                    "RocketStockInitializedCategory": "uint256",
+                    "MaxCompetitionScores": "uint256"
+                }
+            },
+            "GetRocketStock(uint16)": {
+                "argument": {
+                    "stock_id": "uint16"
+                },
+                "contract": {
+                    "GlobalCategory": "uint256",
+                    "RocketCategory": "uint256",
+                    "OwnershipCategory": "uint256",
+                    "InventoryCategory": "uint256",
+                    "MarketCategory": "uint256",
+                    "ProfitFundsCategory": "uint256",
+                    "CompetitionFundsCategory": "uint256",
+                    "MissionParametersCategory": "uint256",
+                    "CompetitionScoresCategory": "uint256",
+                    "WithdrawalFundsCategory": "uint256",
+                    "ReferralCategory": "uint256",
+                    "RocketStockCategory": "uint256",
+                    "RocketStockInitializedCategory": "uint256",
+                    "MaxCompetitionScores": "uint256"
+                }
+            },
+            "BuyStockRocket(uint16,address)": {
+                "argument": {
+                    "stock_id": "uint16"
+                },
+                "contract": {
+                    "GlobalCategory": "uint256",
+                    "RocketCategory": "uint256",
+                    "OwnershipCategory": "uint256",
+                    "InventoryCategory": "uint256",
+                    "MarketCategory": "uint256",
+                    "ProfitFundsCategory": "uint256",
+                    "CompetitionFundsCategory": "uint256",
+                    "MissionParametersCategory": "uint256",
+                    "CompetitionScoresCategory": "uint256",
+                    "WithdrawalFundsCategory": "uint256",
+                    "ReferralCategory": "uint256",
+                    "RocketStockCategory": "uint256",
+                    "RocketStockInitializedCategory": "uint256",
+                    "MaxCompetitionScores": "uint256"
+                }
+            },
+            "GiveReferralRocket(uint16,address)": {
+                "argument": {
+                    "stock_id": "uint16"
+                },
+                "contract": {
+                    "GlobalCategory": "uint256",
+                    "RocketCategory": "uint256",
+                    "OwnershipCategory": "uint256",
+                    "InventoryCategory": "uint256",
+                    "MarketCategory": "uint256",
+                    "ProfitFundsCategory": "uint256",
+                    "CompetitionFundsCategory": "uint256",
+                    "MissionParametersCategory": "uint256",
+                    "CompetitionScoresCategory": "uint256",
+                    "WithdrawalFundsCategory": "uint256",
+                    "ReferralCategory": "uint256",
+                    "RocketStockCategory": "uint256",
+                    "RocketStockInitializedCategory": "uint256",
+                    "MaxCompetitionScores": "uint256"
+                }
+            },
+            "GiveRocketInternal(uint16,address,bool,address)": {
+                "argument": {
+                    "stock_id": "uint16"
+                },
+                "contract": {
+                    "GlobalCategory": "uint256",
+                    "RocketCategory": "uint256",
+                    "OwnershipCategory": "uint256",
+                    "InventoryCategory": "uint256",
+                    "MarketCategory": "uint256",
+                    "ProfitFundsCategory": "uint256",
+                    "CompetitionFundsCategory": "uint256",
+                    "MissionParametersCategory": "uint256",
+                    "CompetitionScoresCategory": "uint256",
+                    "WithdrawalFundsCategory": "uint256",
+                    "ReferralCategory": "uint256",
+                    "RocketStockCategory": "uint256",
+                    "RocketStockInitializedCategory": "uint256",
+                    "MaxCompetitionScores": "uint256"
+                }
+            },
+            "PlaceRocketForSale(uint32,uint80)": {
+                "argument": {
+                    "rocket_id": "uint32",
+                    "price": "uint80"
+                },
+                "contract": {
+                    "GlobalCategory": "uint256",
+                    "RocketCategory": "uint256",
+                    "OwnershipCategory": "uint256",
+                    "InventoryCategory": "uint256",
+                    "MarketCategory": "uint256",
+                    "ProfitFundsCategory": "uint256",
+                    "CompetitionFundsCategory": "uint256",
+                    "MissionParametersCategory": "uint256",
+                    "CompetitionScoresCategory": "uint256",
+                    "WithdrawalFundsCategory": "uint256",
+                    "ReferralCategory": "uint256",
+                    "RocketStockCategory": "uint256",
+                    "RocketStockInitializedCategory": "uint256",
+                    "MaxCompetitionScores": "uint256"
+                }
+            },
+            "RemoveRocketForSale(uint32)": {
+                "argument": {
+                    "rocket_id": "uint32"
+                },
+                "contract": {
+                    "GlobalCategory": "uint256",
+                    "RocketCategory": "uint256",
+                    "OwnershipCategory": "uint256",
+                    "InventoryCategory": "uint256",
+                    "MarketCategory": "uint256",
+                    "ProfitFundsCategory": "uint256",
+                    "CompetitionFundsCategory": "uint256",
+                    "MissionParametersCategory": "uint256",
+                    "CompetitionScoresCategory": "uint256",
+                    "WithdrawalFundsCategory": "uint256",
+                    "ReferralCategory": "uint256",
+                    "RocketStockCategory": "uint256",
+                    "RocketStockInitializedCategory": "uint256",
+                    "MaxCompetitionScores": "uint256"
+                }
+            },
+            "BuyRocketForSale(uint32)": {
+                "argument": {
+                    "rocket_id": "uint32"
+                },
+                "contract": {
+                    "GlobalCategory": "uint256",
+                    "RocketCategory": "uint256",
+                    "OwnershipCategory": "uint256",
+                    "InventoryCategory": "uint256",
+                    "MarketCategory": "uint256",
+                    "ProfitFundsCategory": "uint256",
+                    "CompetitionFundsCategory": "uint256",
+                    "MissionParametersCategory": "uint256",
+                    "CompetitionScoresCategory": "uint256",
+                    "WithdrawalFundsCategory": "uint256",
+                    "ReferralCategory": "uint256",
+                    "RocketStockCategory": "uint256",
+                    "RocketStockInitializedCategory": "uint256",
+                    "MaxCompetitionScores": "uint256"
+                }
+            },
+            "LaunchRocket(uint32,uint32,uint32,uint32,uint32,uint32)": {
+                "argument": {
+                    "competition_id": "uint32",
+                    "rocket_id": "uint32"
+                },
+                "contract": {
+                    "GlobalCategory": "uint256",
+                    "RocketCategory": "uint256",
+                    "OwnershipCategory": "uint256",
+                    "InventoryCategory": "uint256",
+                    "MarketCategory": "uint256",
+                    "ProfitFundsCategory": "uint256",
+                    "CompetitionFundsCategory": "uint256",
+                    "MissionParametersCategory": "uint256",
+                    "CompetitionScoresCategory": "uint256",
+                    "WithdrawalFundsCategory": "uint256",
+                    "ReferralCategory": "uint256",
+                    "RocketStockCategory": "uint256",
+                    "RocketStockInitializedCategory": "uint256",
+                    "MaxCompetitionScores": "uint256"
+                }
+            },
+            "LaunchRocketInternal(GameCommon.LaunchRocketStackFrame)": {
+                "argument": {},
+                "contract": {
+                    "GlobalCategory": "uint256",
+                    "RocketCategory": "uint256",
+                    "OwnershipCategory": "uint256",
+                    "InventoryCategory": "uint256",
+                    "MarketCategory": "uint256",
+                    "ProfitFundsCategory": "uint256",
+                    "CompetitionFundsCategory": "uint256",
+                    "MissionParametersCategory": "uint256",
+                    "CompetitionScoresCategory": "uint256",
+                    "WithdrawalFundsCategory": "uint256",
+                    "ReferralCategory": "uint256",
+                    "RocketStockCategory": "uint256",
+                    "RocketStockInitializedCategory": "uint256",
+                    "MaxCompetitionScores": "uint256"
+                }
+            },
+            "AddScore(GameCommon.LaunchRocketStackFrame)": {
+                "argument": {},
+                "contract": {
+                    "GlobalCategory": "uint256",
+                    "RocketCategory": "uint256",
+                    "OwnershipCategory": "uint256",
+                    "InventoryCategory": "uint256",
+                    "MarketCategory": "uint256",
+                    "ProfitFundsCategory": "uint256",
+                    "CompetitionFundsCategory": "uint256",
+                    "MissionParametersCategory": "uint256",
+                    "CompetitionScoresCategory": "uint256",
+                    "WithdrawalFundsCategory": "uint256",
+                    "ReferralCategory": "uint256",
+                    "RocketStockCategory": "uint256",
+                    "RocketStockInitializedCategory": "uint256",
+                    "MaxCompetitionScores": "uint256"
+                }
+            },
+            "GetCompetitionInfo(uint32)": {
+                "argument": {
+                    "competition_id": "uint32"
+                },
+                "contract": {
+                    "GlobalCategory": "uint256",
+                    "RocketCategory": "uint256",
+                    "OwnershipCategory": "uint256",
+                    "InventoryCategory": "uint256",
+                    "MarketCategory": "uint256",
+                    "ProfitFundsCategory": "uint256",
+                    "CompetitionFundsCategory": "uint256",
+                    "MissionParametersCategory": "uint256",
+                    "CompetitionScoresCategory": "uint256",
+                    "WithdrawalFundsCategory": "uint256",
+                    "ReferralCategory": "uint256",
+                    "RocketStockCategory": "uint256",
+                    "RocketStockInitializedCategory": "uint256",
+                    "MaxCompetitionScores": "uint256"
+                }
+            },
+            "SetDebugExtra(uint32,uint8)": {
+                "argument": {
+                    "competition_id": "uint32",
+                    "extra": "uint8"
+                },
+                "contract": {
+                    "GlobalCategory": "uint256",
+                    "RocketCategory": "uint256",
+                    "OwnershipCategory": "uint256",
+                    "InventoryCategory": "uint256",
+                    "MarketCategory": "uint256",
+                    "ProfitFundsCategory": "uint256",
+                    "CompetitionFundsCategory": "uint256",
+                    "MissionParametersCategory": "uint256",
+                    "CompetitionScoresCategory": "uint256",
+                    "WithdrawalFundsCategory": "uint256",
+                    "ReferralCategory": "uint256",
+                    "RocketStockCategory": "uint256",
+                    "RocketStockInitializedCategory": "uint256",
+                    "MaxCompetitionScores": "uint256"
+                }
+            },
+            "StartCompetition(uint8,uint8,uint8,uint8,uint80,uint32)": {
+                "argument": {
+                    "wind_speed": "uint8",
+                    "launch_location": "uint8",
+                    "weather_type": "uint8",
+                    "weather_coverage": "uint8",
+                    "launch_cost": "uint80",
+                    "target_distance": "uint32"
+                },
+                "contract": {
+                    "GlobalCategory": "uint256",
+                    "RocketCategory": "uint256",
+                    "OwnershipCategory": "uint256",
+                    "InventoryCategory": "uint256",
+                    "MarketCategory": "uint256",
+                    "ProfitFundsCategory": "uint256",
+                    "CompetitionFundsCategory": "uint256",
+                    "MissionParametersCategory": "uint256",
+                    "CompetitionScoresCategory": "uint256",
+                    "WithdrawalFundsCategory": "uint256",
+                    "ReferralCategory": "uint256",
+                    "RocketStockCategory": "uint256",
+                    "RocketStockInitializedCategory": "uint256",
+                    "MaxCompetitionScores": "uint256"
+                }
+            },
+            "GetCompetitionResults(uint32,bool)": {
+                "argument": {
+                    "competition_id": "uint32"
+                },
+                "contract": {
+                    "GlobalCategory": "uint256",
+                    "RocketCategory": "uint256",
+                    "OwnershipCategory": "uint256",
+                    "InventoryCategory": "uint256",
+                    "MarketCategory": "uint256",
+                    "ProfitFundsCategory": "uint256",
+                    "CompetitionFundsCategory": "uint256",
+                    "MissionParametersCategory": "uint256",
+                    "CompetitionScoresCategory": "uint256",
+                    "WithdrawalFundsCategory": "uint256",
+                    "ReferralCategory": "uint256",
+                    "RocketStockCategory": "uint256",
+                    "RocketStockInitializedCategory": "uint256",
+                    "MaxCompetitionScores": "uint256"
+                }
+            },
+            "SortCompetitionScores(uint32)": {
+                "argument": {
+                    "competition_id": "uint32"
+                },
+                "contract": {
+                    "GlobalCategory": "uint256",
+                    "RocketCategory": "uint256",
+                    "OwnershipCategory": "uint256",
+                    "InventoryCategory": "uint256",
+                    "MarketCategory": "uint256",
+                    "ProfitFundsCategory": "uint256",
+                    "CompetitionFundsCategory": "uint256",
+                    "MissionParametersCategory": "uint256",
+                    "CompetitionScoresCategory": "uint256",
+                    "WithdrawalFundsCategory": "uint256",
+                    "ReferralCategory": "uint256",
+                    "RocketStockCategory": "uint256",
+                    "RocketStockInitializedCategory": "uint256",
+                    "MaxCompetitionScores": "uint256"
+                }
+            },
+            "MakeAndSortCompetitionScores(uint32)": {
+                "argument": {
+                    "competition_id": "uint32"
+                },
+                "contract": {
+                    "GlobalCategory": "uint256",
+                    "RocketCategory": "uint256",
+                    "OwnershipCategory": "uint256",
+                    "InventoryCategory": "uint256",
+                    "MarketCategory": "uint256",
+                    "ProfitFundsCategory": "uint256",
+                    "CompetitionFundsCategory": "uint256",
+                    "MissionParametersCategory": "uint256",
+                    "CompetitionScoresCategory": "uint256",
+                    "WithdrawalFundsCategory": "uint256",
+                    "ReferralCategory": "uint256",
+                    "RocketStockCategory": "uint256",
+                    "RocketStockInitializedCategory": "uint256",
+                    "MaxCompetitionScores": "uint256"
+                }
+            },
+            "FinishCompetition(uint32)": {
+                "argument": {
+                    "competition_id": "uint32"
+                },
+                "contract": {
+                    "GlobalCategory": "uint256",
+                    "RocketCategory": "uint256",
+                    "OwnershipCategory": "uint256",
+                    "InventoryCategory": "uint256",
+                    "MarketCategory": "uint256",
+                    "ProfitFundsCategory": "uint256",
+                    "CompetitionFundsCategory": "uint256",
+                    "MissionParametersCategory": "uint256",
+                    "CompetitionScoresCategory": "uint256",
+                    "WithdrawalFundsCategory": "uint256",
+                    "ReferralCategory": "uint256",
+                    "RocketStockCategory": "uint256",
+                    "RocketStockInitializedCategory": "uint256",
+                    "MaxCompetitionScores": "uint256"
+                }
+            },
+            "Lerp(uint256,uint256,bytes1)": {
+                "argument": {
+                    "min": "uint256",
+                    "max": "uint256",
+                    "percent": "bytes1"
+                },
+                "contract": {
+                    "GlobalCategory": "uint256",
+                    "RocketCategory": "uint256",
+                    "OwnershipCategory": "uint256",
+                    "InventoryCategory": "uint256",
+                    "MarketCategory": "uint256",
+                    "ProfitFundsCategory": "uint256",
+                    "CompetitionFundsCategory": "uint256",
+                    "MissionParametersCategory": "uint256",
+                    "CompetitionScoresCategory": "uint256",
+                    "WithdrawalFundsCategory": "uint256",
+                    "ReferralCategory": "uint256",
+                    "RocketStockCategory": "uint256",
+                    "RocketStockInitializedCategory": "uint256",
+                    "MaxCompetitionScores": "uint256"
+                }
+            },
+            "LerpExtra(uint256,uint256,uint256,bytes1)": {
+                "argument": {
+                    "min": "uint256",
+                    "max": "uint256",
+                    "current": "uint256",
+                    "total_extra_percent": "bytes1"
+                },
+                "contract": {
+                    "GlobalCategory": "uint256",
+                    "RocketCategory": "uint256",
+                    "OwnershipCategory": "uint256",
+                    "InventoryCategory": "uint256",
+                    "MarketCategory": "uint256",
+                    "ProfitFundsCategory": "uint256",
+                    "CompetitionFundsCategory": "uint256",
+                    "MissionParametersCategory": "uint256",
+                    "CompetitionScoresCategory": "uint256",
+                    "WithdrawalFundsCategory": "uint256",
+                    "ReferralCategory": "uint256",
+                    "RocketStockCategory": "uint256",
+                    "RocketStockInitializedCategory": "uint256",
+                    "MaxCompetitionScores": "uint256"
+                }
+            },
+            "LerpLess(uint256,uint256,uint256,bytes1)": {
+                "argument": {
+                    "min": "uint256",
+                    "max": "uint256",
+                    "current": "uint256",
+                    "total_less_percent": "bytes1"
+                },
+                "contract": {
+                    "GlobalCategory": "uint256",
+                    "RocketCategory": "uint256",
+                    "OwnershipCategory": "uint256",
+                    "InventoryCategory": "uint256",
+                    "MarketCategory": "uint256",
+                    "ProfitFundsCategory": "uint256",
+                    "CompetitionFundsCategory": "uint256",
+                    "MissionParametersCategory": "uint256",
+                    "CompetitionScoresCategory": "uint256",
+                    "WithdrawalFundsCategory": "uint256",
+                    "ReferralCategory": "uint256",
+                    "RocketStockCategory": "uint256",
+                    "RocketStockInitializedCategory": "uint256",
+                    "MaxCompetitionScores": "uint256"
+                }
+            },
+            "BubbleSort(CompetitionScoreTypes.CompetitionScore[],uint32)": {
+                "argument": {
+                    "scores": "CompetitionScoreTypes.CompetitionScore[]",
+                    "length": "uint32"
+                },
+                "contract": {
+                    "GlobalCategory": "uint256",
+                    "RocketCategory": "uint256",
+                    "OwnershipCategory": "uint256",
+                    "InventoryCategory": "uint256",
+                    "MarketCategory": "uint256",
+                    "ProfitFundsCategory": "uint256",
+                    "CompetitionFundsCategory": "uint256",
+                    "MissionParametersCategory": "uint256",
+                    "CompetitionScoresCategory": "uint256",
+                    "WithdrawalFundsCategory": "uint256",
+                    "ReferralCategory": "uint256",
+                    "RocketStockCategory": "uint256",
+                    "RocketStockInitializedCategory": "uint256",
+                    "MaxCompetitionScores": "uint256"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "GlobalCategory": "uint256",
+                    "RocketCategory": "uint256",
+                    "OwnershipCategory": "uint256",
+                    "InventoryCategory": "uint256",
+                    "MarketCategory": "uint256",
+                    "ProfitFundsCategory": "uint256",
+                    "CompetitionFundsCategory": "uint256",
+                    "MissionParametersCategory": "uint256",
+                    "CompetitionScoresCategory": "uint256",
+                    "WithdrawalFundsCategory": "uint256",
+                    "ReferralCategory": "uint256",
+                    "RocketStockCategory": "uint256",
+                    "RocketStockInitializedCategory": "uint256",
+                    "MaxCompetitionScores": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "Pause()": [
+                899,
+                207
+            ],
+            "Unpause()": [
+                1018,
+                273
+            ],
+            "GiveReferralRocket(uint16,address)": [
+                664,
+                141
+            ],
+            "GetAuction(uint32)": [
+                2045,
+                515
+            ],
+            "GetInventory(address,uint256)": [
+                2202,
+                537
+            ],
+            "StartCompetition(uint8,uint8,uint8,uint8,uint80,uint32)": [
+                1105,
+                317
+            ],
+            "GetCompetitionResults(uint32,bool)": [
+                2917,
+                669
+            ],
+            "SortCompetitionScores(uint32)": [
+                3365,
+                779
+            ],
+            "GetRocket(uint32)": [
+                2575,
+                625
+            ],
+            "ChangeGameHidden(address)": [
+                745,
+                163
+            ],
+            "WithdrawProfitFunds(uint256,address)": [
+                422,
+                75
+            ],
+            "ChangeDatabase(address)": [
+                3188,
+                713
+            ],
+            "BuyRocketForSale(uint32)": [
+                1567,
+                405
+            ],
+            "GetCompetitionInfo(uint32)": [
+                1390,
+                383
+            ],
+            "GetWithdrawalFunds(address)": [
+                812,
+                185
+            ],
+            "GetCompetitionFunds(uint32)": [
+                1887,
+                471
+            ],
+            "GetInventoryCount(address)": [
+                2830,
+                647
+            ],
+            "LaunchRocket(uint32,uint32,uint32,uint32,uint32,uint32)": [
+                546,
+                119
+            ],
+            "AddRocket(uint32,uint64,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint64,uint32)": [
+                1652,
+                449
+            ],
+            "ChangeOwner(address)": [
+                3298,
+                757
+            ],
+            "SetDebugExtra(uint32,uint8)": [
+                1041,
+                295
+            ],
+            "PlaceRocketForSale(uint32,uint80)": [
+                1317,
+                361
+            ],
+            "RemoveRocketForSale(uint32)": [
+                3137,
+                691
+            ],
+            "WithdrawWinnings(uint256)": [
+                973,
+                251
+            ],
+            "IsPaused()": [
+                499,
+                97
+            ],
+            "GetRocketStock(uint16)": [
+                2407,
+                581
+            ],
+            "FinishCompetition(uint32)": [
+                922,
+                229
+            ],
+            "BuyStockRocket(uint16,address)": [
+                2339,
+                559
+            ],
+            "GetProfitFunds()": [
+                3255,
+                735
+            ]
+        },
+        "block_CALL_mapping": {
+            "block31226": [
+                "m_Database.Load(NullAddress, CompetitionFundsCategory, stack.m_CompetitionId)"
+            ],
+            "jump38305": [
+                "m_Database.Load(NullAddress, OwnershipCategory, rocket_id)",
+                "m_Database.Load(NullAddress, OwnershipCategory, rocket_id)"
+            ],
+            "block20255": [
+                "m_Database.Store(NullAddress, OwnershipCategory, rocket_id, OwnershipTypes.SerializeOwnership(ownership))"
+            ],
+            "jump12714": [
+                "m_Database.Store(NullAddress, MissionParametersCategory, competition_id, parameters.SerializeMissionParameters())",
+                "m_Database.Store(NullAddress, MissionParametersCategory, competition_id, parameters.SerializeMissionParameters())"
+            ],
+            "jump17356": [
+                "m_Database.Load(msg.sender, InventoryCategory, 0)",
+                "m_Database.Load(msg.sender, InventoryCategory, 0)"
+            ],
+            "jump28052": [
+                "m_Database.Store(NullAddress, RocketCategory, rocket_id, RocketTypes.SerializeRocket(rocket))",
+                "m_Database.Store(NullAddress, RocketCategory, rocket_id, RocketTypes.SerializeRocket(rocket))"
+            ],
+            "block35301": [
+                "m_Database.Store(NullAddress, GlobalCategory, 0, GlobalTypes.SerializeGlobal(global))"
+            ],
+            "jump23934": [
+                "m_Database.Load(NullAddress, RocketCategory, rocket_id)",
+                "m_Database.Load(NullAddress, RocketCategory, rocket_id)"
+            ],
+            "jump32697": [
+                "m_Database.Load(NullAddress, GlobalCategory, 0)",
+                "m_Database.Load(NullAddress, GlobalCategory, 0)"
+            ],
+            "block14557": [
+                "m_Database.Load(NullAddress, OwnershipCategory, rocket_id)"
+            ],
+            "jump32697_0": [
+                "m_Database.Load(NullAddress, GlobalCategory, 0)",
+                "m_Database.Load(NullAddress, GlobalCategory, 0)"
+            ],
+            "jump26391_2": [
+                "m_Database.Load(target, InventoryCategory, 0)",
+                "m_Database.Load(target, InventoryCategory, 0)"
+            ],
+            "jump26391_1": [
+                "m_Database.Load(target, InventoryCategory, 0)",
+                "m_Database.Load(target, InventoryCategory, 0)"
+            ],
+            "jump26391_0": [
+                "m_Database.Load(target, InventoryCategory, 0)",
+                "m_Database.Load(target, InventoryCategory, 0)"
+            ],
+            "block21028": [
+                "m_Database.Store(NullAddress, ProfitFundsCategory, 0, bytes32(profit_funds_or_last_rocket_id))"
+            ],
+            "jump16106": [
+                "m_Database.Load(NullAddress, RocketCategory, rocket_id)",
+                "m_Database.Load(NullAddress, RocketCategory, rocket_id)"
+            ],
+            "jump35301_0": [
+                "m_Database.Store(NullAddress, GlobalCategory, 0, GlobalTypes.SerializeGlobal(global))",
+                "m_Database.Store(NullAddress, GlobalCategory, 0, GlobalTypes.SerializeGlobal(global))"
+            ],
+            "jump22753": [
+                "m_Database.Load(NullAddress, RocketStockInitializedCategory, stock_id)",
+                "m_Database.Load(NullAddress, RocketStockInitializedCategory, stock_id)"
+            ],
+            "block16106": [
+                "m_Database.Load(NullAddress, RocketCategory, rocket_id)"
+            ],
+            "block35578": [
+                "m_Database.transfer(msg.value)"
+            ],
+            "jump12392": [
+                "m_Database.Load(NullAddress, MissionParametersCategory, competition_id)",
+                "m_Database.Load(NullAddress, MissionParametersCategory, competition_id)"
+            ],
+            "jump24229": [
+                "m_Database.Load(NullAddress, OwnershipCategory, rocket_id)",
+                "m_Database.Load(NullAddress, OwnershipCategory, rocket_id)"
+            ],
+            "block34524": [
+                "m_Database.Store(target, InventoryCategory, 0, bytes32(inventory_count))"
+            ],
+            "jump32971_0": [
+                "m_Database.Load(NullAddress, ProfitFundsCategory, 0)",
+                "m_Database.Load(NullAddress, ProfitFundsCategory, 0)"
+            ],
+            "block11037": [
+                "m_Database.Store(NullAddress, MissionParametersCategory, competition_id, parameters.SerializeMissionParameters())"
+            ],
+            "block31537": [
+                "m_Database.Store(NullAddress, ProfitFundsCategory, 0, bytes32(stack.m_ProfitFunds))"
+            ],
+            "jump35578_0": [
+                "m_Database.transfer(msg.value)",
+                "m_Database.transfer(msg.value)"
+            ],
+            "block6630": [
+                "m_Database.Load(target, ReferralCategory, 0)"
+            ],
+            "jump35301": [
+                "m_Database.Store(NullAddress, GlobalCategory, 0, GlobalTypes.SerializeGlobal(global))",
+                "m_Database.Store(NullAddress, GlobalCategory, 0, GlobalTypes.SerializeGlobal(global))"
+            ],
+            "jump23581": [
+                "m_Database.Load(NullAddress, CompetitionFundsCategory, competition_id)",
+                "m_Database.Load(NullAddress, CompetitionFundsCategory, competition_id)"
+            ],
+            "block40565": [
+                "m_Database.Load(stack.m_CompetitionId, CompetitionScoresCategory, highest_index)"
+            ],
+            "block21259": [
+                "m_Database.Load(beneficiary, WithdrawalFundsCategory, 0)"
+            ],
+            "block13839": [
+                "m_Database.Store(NullAddress, GlobalCategory, 0, GlobalTypes.SerializeGlobal(global))"
+            ],
+            "jump14253": [
+                "m_Database.Load(NullAddress, RocketCategory, rocket_id)",
+                "m_Database.Load(NullAddress, RocketCategory, rocket_id)"
+            ],
+            "jump23071": [
+                "m_Database.Store(NullAddress, RocketStockCategory, stock_id, bytes32(max_stock))",
+                "m_Database.Store(NullAddress, RocketStockCategory, stock_id, bytes32(max_stock))"
+            ],
+            "jump10451": [
+                "m_Database.Load(scores[MaxCompetitionScores].m_Owner, WithdrawalFundsCategory, 0)",
+                "m_Database.Load(scores[MaxCompetitionScores].m_Owner, WithdrawalFundsCategory, 0)"
+            ],
+            "jump18348": [
+                "m_Database.Store(beneficiary, InventoryCategory, ownership.m_OwnerInventoryIndex + 1, bytes32(profit_funds_or_last_rocket_id))",
+                "m_Database.Store(beneficiary, InventoryCategory, ownership.m_OwnerInventoryIndex + 1, bytes32(profit_funds_or_last_rocket_id))"
+            ],
+            "jump14557": [
+                "m_Database.Load(NullAddress, OwnershipCategory, rocket_id)",
+                "m_Database.Load(NullAddress, OwnershipCategory, rocket_id)"
+            ],
+            "jump11929": [
+                "m_Database.TransferFunds(msg.sender, withdraw_amount)",
+                "m_Database.TransferFunds(msg.sender, withdraw_amount)"
+            ],
+            "jump36437_0": [
+                "m_Database.Load(competition_id, CompetitionScoresCategory, i)",
+                "m_Database.Load(competition_id, CompetitionScoresCategory, i)"
+            ],
+            "jump17773": [
+                "m_Database.Load(beneficiary, InventoryCategory, seller_inventory_count)",
+                "m_Database.Load(beneficiary, InventoryCategory, seller_inventory_count)"
+            ],
+            "block19744": [
+                "m_Database.Store(msg.sender, InventoryCategory, 0, bytes32(buyer_inventory_count))"
+            ],
+            "block33080": [
+                "sha256(block.timestamp, block.coinbase, global.m_LastRocketId)"
+            ],
+            "jump39219": [
+                "m_Database.Load(stack.m_CompetitionId, CompetitionScoresCategory, i)",
+                "m_Database.Load(stack.m_CompetitionId, CompetitionScoresCategory, i)"
+            ],
+            "jump21259": [
+                "m_Database.Load(beneficiary, WithdrawalFundsCategory, 0)",
+                "m_Database.Load(beneficiary, WithdrawalFundsCategory, 0)"
+            ],
+            "jump34524": [
+                "m_Database.Store(target, InventoryCategory, 0, bytes32(inventory_count))",
+                "m_Database.Store(target, InventoryCategory, 0, bytes32(inventory_count))"
+            ],
+            "block35558_0": [
+                "m_Database.Store(NullAddress, ProfitFundsCategory, 0, bytes32(profit_funds))"
+            ],
+            "block32074": [
+                "m_Database.Store(NullAddress, MissionParametersCategory, stack.m_CompetitionId, stack.m_Mission.SerializeMissionParameters())"
+            ],
+            "block26391_1": [
+                "m_Database.Load(target, InventoryCategory, 0)"
+            ],
+            "block26391_0": [
+                "m_Database.Load(target, InventoryCategory, 0)"
+            ],
+            "block26391_2": [
+                "m_Database.Load(target, InventoryCategory, 0)"
+            ],
+            "block28632": [
+                "m_Database.Load(NullAddress, ProfitFundsCategory, 0)"
+            ],
+            "jump18064": [
+                "m_Database.Store(beneficiary, InventoryCategory, seller_inventory_count, bytes32(0))",
+                "m_Database.Store(beneficiary, InventoryCategory, seller_inventory_count, bytes32(0))"
+            ],
+            "block10451": [
+                "m_Database.Load(scores[MaxCompetitionScores].m_Owner, WithdrawalFundsCategory, 0)"
+            ],
+            "block24923": [
+                "m_Database.Load(target, InventoryCategory, i + 1)"
+            ],
+            "jump20777": [
+                "m_Database.Store(NullAddress, MarketCategory, rocket_id, MarketTypes.SerializeMarketListing(listing))",
+                "m_Database.Store(NullAddress, MarketCategory, rocket_id, MarketTypes.SerializeMarketListing(listing))"
+            ],
+            "block6940": [
+                "m_Database.Store(target, ReferralCategory, 0, bytes32(already_received))"
+            ],
+            "block19439": [
+                "m_Database.Load(NullAddress, ProfitFundsCategory, 0)"
+            ],
+            "jump6940": [
+                "m_Database.Store(target, ReferralCategory, 0, bytes32(already_received))",
+                "m_Database.Store(target, ReferralCategory, 0, bytes32(already_received))"
+            ],
+            "jump9266": [
+                "m_Database.Store(NullAddress, RocketCategory, scores[i].m_RocketId, RocketTypes.SerializeRocket(rocket))",
+                "m_Database.Store(NullAddress, RocketCategory, scores[i].m_RocketId, RocketTypes.SerializeRocket(rocket))"
+            ],
+            "jump31226": [
+                "m_Database.Load(NullAddress, CompetitionFundsCategory, stack.m_CompetitionId)",
+                "m_Database.Load(NullAddress, CompetitionFundsCategory, stack.m_CompetitionId)"
+            ],
+            "jump33080": [
+                "sha256(block.timestamp, block.coinbase, global.m_LastRocketId)",
+                "sha256(block.timestamp, block.coinbase, global.m_LastRocketId)"
+            ],
+            "block40220": [
+                "m_Database.Load(stack.m_CompetitionId, CompetitionScoresCategory, i)"
+            ],
+            "block12714": [
+                "m_Database.Store(NullAddress, MissionParametersCategory, competition_id, parameters.SerializeMissionParameters())"
+            ],
+            "jump13839": [
+                "m_Database.Store(NullAddress, GlobalCategory, 0, GlobalTypes.SerializeGlobal(global))",
+                "m_Database.Store(NullAddress, GlobalCategory, 0, GlobalTypes.SerializeGlobal(global))"
+            ],
+            "jump31537": [
+                "m_Database.Store(NullAddress, ProfitFundsCategory, 0, bytes32(stack.m_ProfitFunds))",
+                "m_Database.Store(NullAddress, ProfitFundsCategory, 0, bytes32(stack.m_ProfitFunds))"
+            ],
+            "jump35046_0": [
+                "m_Database.Store(NullAddress, OwnershipCategory, next_rocket_id, OwnershipTypes.SerializeOwnership(ownership))",
+                "m_Database.Store(NullAddress, OwnershipCategory, next_rocket_id, OwnershipTypes.SerializeOwnership(ownership))"
+            ],
+            "jump11037": [
+                "m_Database.Store(NullAddress, MissionParametersCategory, competition_id, parameters.SerializeMissionParameters())",
+                "m_Database.Store(NullAddress, MissionParametersCategory, competition_id, parameters.SerializeMissionParameters())"
+            ],
+            "block27342": [
+                "m_Database.Load(NullAddress, RocketCategory, rocket_id)"
+            ],
+            "jump35558_0": [
+                "m_Database.Store(NullAddress, ProfitFundsCategory, 0, bytes32(profit_funds))",
+                "m_Database.Store(NullAddress, ProfitFundsCategory, 0, bytes32(profit_funds))"
+            ],
+            "jump19187": [
+                "m_Database.Store(msg.sender, InventoryCategory, buyer_inventory_count, bytes32(rocket_id))",
+                "m_Database.Store(msg.sender, InventoryCategory, buyer_inventory_count, bytes32(rocket_id))"
+            ],
+            "block18348": [
+                "m_Database.Store(beneficiary, InventoryCategory, ownership.m_OwnerInventoryIndex + 1, bytes32(profit_funds_or_last_rocket_id))"
+            ],
+            "block19187": [
+                "m_Database.Store(msg.sender, InventoryCategory, buyer_inventory_count, bytes32(rocket_id))"
+            ],
+            "jump21552": [
+                "m_Database.Store(beneficiary, WithdrawalFundsCategory, 0, bytes32(buyer_price_or_wei_for_seller))",
+                "m_Database.Store(beneficiary, WithdrawalFundsCategory, 0, bytes32(buyer_price_or_wei_for_seller))"
+            ],
+            "jump19744": [
+                "m_Database.Store(msg.sender, InventoryCategory, 0, bytes32(buyer_inventory_count))",
+                "m_Database.Store(msg.sender, InventoryCategory, 0, bytes32(buyer_inventory_count))"
+            ],
+            "block5109": [
+                "m_Database.Load(NullAddress, MissionParametersCategory, competition_id)"
+            ],
+            "jump35578": [
+                "m_Database.transfer(msg.value)",
+                "m_Database.transfer(msg.value)"
+            ],
+            "block32697": [
+                "m_Database.Load(NullAddress, GlobalCategory, 0)"
+            ],
+            "jump32971": [
+                "m_Database.Load(NullAddress, ProfitFundsCategory, 0)",
+                "m_Database.Load(NullAddress, ProfitFundsCategory, 0)"
+            ],
+            "jump36437": [
+                "m_Database.Load(competition_id, CompetitionScoresCategory, i)",
+                "m_Database.Load(competition_id, CompetitionScoresCategory, i)"
+            ],
+            "block7383": [
+                "m_Database.Load(target, WithdrawalFundsCategory, 0)"
+            ],
+            "block34785": [
+                "m_Database.Store(NullAddress, RocketCategory, next_rocket_id, RocketTypes.SerializeRocket(rocket))"
+            ],
+            "jump8364": [
+                "m_Database.Load(NullAddress, RocketCategory, scores[i].m_RocketId)",
+                "m_Database.Load(NullAddress, RocketCategory, scores[i].m_RocketId)"
+            ],
+            "jump27342": [
+                "m_Database.Load(NullAddress, RocketCategory, rocket_id)",
+                "m_Database.Load(NullAddress, RocketCategory, rocket_id)"
+            ],
+            "block32094": [
+                "m_Database.transfer(msg.value)"
+            ],
+            "block25614_0": [
+                "m_Database.Load(NullAddress, RocketStockCategory, stock_id)"
+            ],
+            "block10775": [
+                "m_Database.Store(scores[MaxCompetitionScores].m_Owner, WithdrawalFundsCategory, 0, bytes32(existing_funds))"
+            ],
+            "block4820": [
+                "m_Database.Load(NullAddress, RocketCategory, rocket_id)"
+            ],
+            "jump20255": [
+                "m_Database.Store(NullAddress, OwnershipCategory, rocket_id, OwnershipTypes.SerializeOwnership(ownership))",
+                "m_Database.Store(NullAddress, OwnershipCategory, rocket_id, OwnershipTypes.SerializeOwnership(ownership))"
+            ],
+            "block18064": [
+                "m_Database.Store(beneficiary, InventoryCategory, seller_inventory_count, bytes32(0))"
+            ],
+            "jump30530": [
+                "m_GameHidden.CalculateFinalDistance(\n            stack.m_Raw0,\n            stack.m_Raw1,\n            stack.m_Raw2,\n            stack.m_Raw3\n        )",
+                "m_GameHidden.CalculateFinalDistance(\n            stack.m_Raw0,\n            stack.m_Raw1,\n            stack.m_Raw2,\n            stack.m_Raw3\n        )"
+            ],
+            "jump3750": [
+                "m_Database.Load(NullAddress, ProfitFundsCategory, 0)",
+                "m_Database.Load(NullAddress, ProfitFundsCategory, 0)"
+            ],
+            "block13584": [
+                "m_Database.Store(NullAddress, MissionParametersCategory, competition_id, parameters.SerializeMissionParameters())"
+            ],
+            "jump25372": [
+                "m_Database.Store(NullAddress, RocketStockCategory, stock_id, bytes32(stock))",
+                "m_Database.Store(NullAddress, RocketStockCategory, stock_id, bytes32(stock))"
+            ],
+            "jump39909": [
+                "m_Database.Store(stack.m_CompetitionId, CompetitionScoresCategory, stack.m_Mission.m_ValidCompetitionScores, CompetitionScoreTypes.SerializeCompetitionScore(new_score))",
+                "m_Database.Store(stack.m_CompetitionId, CompetitionScoresCategory, stack.m_Mission.m_ValidCompetitionScores, CompetitionScoreTypes.SerializeCompetitionScore(new_score))"
+            ],
+            "jump4820": [
+                "m_Database.Load(NullAddress, RocketCategory, rocket_id)",
+                "m_Database.Load(NullAddress, RocketCategory, rocket_id)"
+            ],
+            "jump16777": [
+                "m_Database.Load(NullAddress, MarketCategory, rocket_id)",
+                "m_Database.Load(NullAddress, MarketCategory, rocket_id)"
+            ],
+            "block23327": [
+                "m_Database.Store(NullAddress, RocketStockInitializedCategory, stock_id, bytes32(1))"
+            ],
+            "jump17084": [
+                "m_Database.Load(ownership.m_Owner, InventoryCategory, 0)",
+                "m_Database.Load(ownership.m_Owner, InventoryCategory, 0)"
+            ],
+            "block35046_0": [
+                "m_Database.Store(NullAddress, OwnershipCategory, next_rocket_id, OwnershipTypes.SerializeOwnership(ownership))"
+            ],
+            "jump15260": [
+                "m_Database.Store(NullAddress, MarketCategory, rocket_id, MarketTypes.SerializeMarketListing(listing))",
+                "m_Database.Store(NullAddress, MarketCategory, rocket_id, MarketTypes.SerializeMarketListing(listing))"
+            ],
+            "jump4510": [
+                "m_Database.TransferFunds(beneficiary, withdraw_amount)",
+                "m_Database.TransferFunds(beneficiary, withdraw_amount)"
+            ],
+            "jump19439": [
+                "m_Database.Load(NullAddress, ProfitFundsCategory, 0)",
+                "m_Database.Load(NullAddress, ProfitFundsCategory, 0)"
+            ],
+            "block23934": [
+                "m_Database.Load(NullAddress, RocketCategory, rocket_id)"
+            ],
+            "block4289": [
+                "m_Database.Store(NullAddress, ProfitFundsCategory, 0, bytes32(profit_funds))"
+            ],
+            "block36437_0": [
+                "m_Database.Load(competition_id, CompetitionScoresCategory, i)"
+            ],
+            "jump28632": [
+                "m_Database.Load(NullAddress, ProfitFundsCategory, 0)",
+                "m_Database.Load(NullAddress, ProfitFundsCategory, 0)"
+            ],
+            "jump39608": [
+                "m_Database.Store(stack.m_CompetitionId, CompetitionScoresCategory, i, CompetitionScoreTypes.SerializeCompetitionScore(new_score))",
+                "m_Database.Store(stack.m_CompetitionId, CompetitionScoresCategory, i, CompetitionScoreTypes.SerializeCompetitionScore(new_score))"
+            ],
+            "block4510": [
+                "m_Database.TransferFunds(beneficiary, withdraw_amount)"
+            ],
+            "block34785_0": [
+                "m_Database.Store(NullAddress, RocketCategory, next_rocket_id, RocketTypes.SerializeRocket(rocket))"
+            ],
+            "jump40565": [
+                "m_Database.Load(stack.m_CompetitionId, CompetitionScoresCategory, highest_index)",
+                "m_Database.Load(stack.m_CompetitionId, CompetitionScoresCategory, highest_index)"
+            ],
+            "block9266": [
+                "m_Database.Store(NullAddress, RocketCategory, scores[i].m_RocketId, RocketTypes.SerializeRocket(rocket))"
+            ],
+            "jump21572": [
+                "m_Database.transfer(msg.value)",
+                "m_Database.transfer(msg.value)"
+            ],
+            "jump24923": [
+                "m_Database.Load(target, InventoryCategory, i + 1)",
+                "m_Database.Load(target, InventoryCategory, i + 1)"
+            ],
+            "block28052": [
+                "m_Database.Store(NullAddress, RocketCategory, rocket_id, RocketTypes.SerializeRocket(rocket))"
+            ],
+            "jump8030": [
+                "m_Database.Load(NullAddress, CompetitionFundsCategory, competition_id)",
+                "m_Database.Load(NullAddress, CompetitionFundsCategory, competition_id)"
+            ],
+            "block34274": [
+                "m_Database.Store(target, InventoryCategory, inventory_count, bytes32(next_rocket_id))"
+            ],
+            "block36090": [
+                "m_Database.Load(NullAddress, MissionParametersCategory, competition_id)"
+            ],
+            "jump5398": [
+                "m_Database.Load(NullAddress, OwnershipCategory, rocket_id)",
+                "m_Database.Load(NullAddress, OwnershipCategory, rocket_id)"
+            ],
+            "block18582": [
+                "m_Database.Load(NullAddress, OwnershipCategory, profit_funds_or_last_rocket_id)"
+            ],
+            "jump10124": [
+                "m_Database.Load(competition_id, CompetitionScoresCategory, 0)",
+                "m_Database.Load(competition_id, CompetitionScoresCategory, 0)"
+            ],
+            "block13095": [
+                "m_Database.Load(NullAddress, GlobalCategory, 0)"
+            ],
+            "block12392": [
+                "m_Database.Load(NullAddress, MissionParametersCategory, competition_id)"
+            ],
+            "jump34785_0": [
+                "m_Database.Store(NullAddress, RocketCategory, next_rocket_id, RocketTypes.SerializeRocket(rocket))",
+                "m_Database.Store(NullAddress, RocketCategory, next_rocket_id, RocketTypes.SerializeRocket(rocket))"
+            ],
+            "jump11397": [
+                "m_Database.Load(msg.sender, WithdrawalFundsCategory, 0)",
+                "m_Database.Load(msg.sender, WithdrawalFundsCategory, 0)"
+            ],
+            "block24229": [
+                "m_Database.Load(NullAddress, OwnershipCategory, rocket_id)"
+            ],
+            "jump24518": [
+                "m_Database.Load(NullAddress, MarketCategory, rocket_id)",
+                "m_Database.Load(NullAddress, MarketCategory, rocket_id)"
+            ],
+            "jump32094": [
+                "m_Database.transfer(msg.value)",
+                "m_Database.transfer(msg.value)"
+            ],
+            "block3750": [
+                "m_Database.Load(NullAddress, ProfitFundsCategory, 0)"
+            ],
+            "jump19994": [
+                "m_Database.Store(beneficiary, InventoryCategory, 0, bytes32(seller_inventory_count))",
+                "m_Database.Store(beneficiary, InventoryCategory, 0, bytes32(seller_inventory_count))"
+            ],
+            "jump33080_0": [
+                "sha256(block.timestamp, block.coinbase, global.m_LastRocketId)",
+                "sha256(block.timestamp, block.coinbase, global.m_LastRocketId)"
+            ],
+            "jump34785": [
+                "m_Database.Store(NullAddress, RocketCategory, next_rocket_id, RocketTypes.SerializeRocket(rocket))",
+                "m_Database.Store(NullAddress, RocketCategory, next_rocket_id, RocketTypes.SerializeRocket(rocket))"
+            ],
+            "jump13584": [
+                "m_Database.Store(NullAddress, MissionParametersCategory, competition_id, parameters.SerializeMissionParameters())",
+                "m_Database.Store(NullAddress, MissionParametersCategory, competition_id, parameters.SerializeMissionParameters())"
+            ],
+            "block8364": [
+                "m_Database.Load(NullAddress, RocketCategory, scores[i].m_RocketId)"
+            ],
+            "block21572": [
+                "m_Database.transfer(msg.value)"
+            ],
+            "block30929": [
+                "m_Database.Load(NullAddress, ProfitFundsCategory, 0)"
+            ],
+            "block25614": [
+                "m_Database.Load(NullAddress, RocketStockCategory, stock_id)"
+            ],
+            "jump26833": [
+                "m_Database.Load(competition_id, CompetitionScoresCategory, offset + i)",
+                "m_Database.Load(competition_id, CompetitionScoresCategory, offset + i)"
+            ],
+            "jump25614_0": [
+                "m_Database.Load(NullAddress, RocketStockCategory, stock_id)",
+                "m_Database.Load(NullAddress, RocketStockCategory, stock_id)"
+            ],
+            "jump31803": [
+                "m_Database.Store(NullAddress, CompetitionFundsCategory, stack.m_CompetitionId, bytes32(stack.m_CompetitionFunds))",
+                "m_Database.Store(NullAddress, CompetitionFundsCategory, stack.m_CompetitionId, bytes32(stack.m_CompetitionFunds))"
+            ],
+            "jump9524": [
+                "m_Database.Load(scores[i].m_Owner, WithdrawalFundsCategory, 0)",
+                "m_Database.Load(scores[i].m_Owner, WithdrawalFundsCategory, 0)"
+            ],
+            "jump34524_0": [
+                "m_Database.Store(target, InventoryCategory, 0, bytes32(inventory_count))",
+                "m_Database.Store(target, InventoryCategory, 0, bytes32(inventory_count))"
+            ],
+            "jump9884": [
+                "m_Database.Store(scores[i].m_Owner, WithdrawalFundsCategory, 0, bytes32(existing_funds))",
+                "m_Database.Store(scores[i].m_Owner, WithdrawalFundsCategory, 0, bytes32(existing_funds))"
+            ],
+            "block34274_0": [
+                "m_Database.Store(target, InventoryCategory, inventory_count, bytes32(next_rocket_id))"
+            ],
+            "block30530": [
+                "m_GameHidden.CalculateFinalDistance(\n            stack.m_Raw0,\n            stack.m_Raw1,\n            stack.m_Raw2,\n            stack.m_Raw3\n        )"
+            ],
+            "jump36090": [
+                "m_Database.Load(NullAddress, MissionParametersCategory, competition_id)",
+                "m_Database.Load(NullAddress, MissionParametersCategory, competition_id)"
+            ],
+            "jump18582": [
+                "m_Database.Load(NullAddress, OwnershipCategory, profit_funds_or_last_rocket_id)",
+                "m_Database.Load(NullAddress, OwnershipCategory, profit_funds_or_last_rocket_id)"
+            ],
+            "block20516": [
+                "m_Database.Store(NullAddress, RocketCategory, rocket_id, RocketTypes.SerializeRocket(rocket))"
+            ],
+            "block38305": [
+                "m_Database.Load(NullAddress, OwnershipCategory, rocket_id)"
+            ],
+            "block32697_0": [
+                "m_Database.Load(NullAddress, GlobalCategory, 0)"
+            ],
+            "block26391": [
+                "m_Database.Load(target, InventoryCategory, 0)"
+            ],
+            "block14253": [
+                "m_Database.Load(NullAddress, RocketCategory, rocket_id)"
+            ],
+            "block33080_0": [
+                "sha256(block.timestamp, block.coinbase, global.m_LastRocketId)"
+            ],
+            "block26833": [
+                "m_Database.Load(competition_id, CompetitionScoresCategory, offset + i)"
+            ],
+            "jump27668": [
+                "m_Database.Load(NullAddress, OwnershipCategory, rocket_id)",
+                "m_Database.Load(NullAddress, OwnershipCategory, rocket_id)"
+            ],
+            "jump7383": [
+                "m_Database.Load(target, WithdrawalFundsCategory, 0)",
+                "m_Database.Load(target, WithdrawalFundsCategory, 0)"
+            ],
+            "jump15682": [
+                "m_Database.Load(NullAddress, MissionParametersCategory, competition_id)",
+                "m_Database.Load(NullAddress, MissionParametersCategory, competition_id)"
+            ],
+            "block20777": [
+                "m_Database.Store(NullAddress, MarketCategory, rocket_id, MarketTypes.SerializeMarketListing(listing))"
+            ],
+            "block35301_0": [
+                "m_Database.Store(NullAddress, GlobalCategory, 0, GlobalTypes.SerializeGlobal(global))"
+            ],
+            "block24518": [
+                "m_Database.Load(NullAddress, MarketCategory, rocket_id)"
+            ],
+            "block17356": [
+                "m_Database.Load(msg.sender, InventoryCategory, 0)"
+            ],
+            "block40893": [
+                "m_Database.Store(stack.m_CompetitionId, CompetitionScoresCategory, highest_index, CompetitionScoreTypes.SerializeCompetitionScore(new_score))"
+            ],
+            "jump26391": [
+                "m_Database.Load(target, InventoryCategory, 0)",
+                "m_Database.Load(target, InventoryCategory, 0)"
+            ],
+            "block25372": [
+                "m_Database.Store(NullAddress, RocketStockCategory, stock_id, bytes32(stock))"
+            ],
+            "block36437": [
+                "m_Database.Load(competition_id, CompetitionScoresCategory, i)"
+            ],
+            "jump4289": [
+                "m_Database.Store(NullAddress, ProfitFundsCategory, 0, bytes32(profit_funds))",
+                "m_Database.Store(NullAddress, ProfitFundsCategory, 0, bytes32(profit_funds))"
+            ],
+            "block16777": [
+                "m_Database.Load(NullAddress, MarketCategory, rocket_id)"
+            ],
+            "block11708": [
+                "m_Database.Store(msg.sender, WithdrawalFundsCategory, 0, bytes32(withdrawal_funds))"
+            ],
+            "jump40893": [
+                "m_Database.Store(stack.m_CompetitionId, CompetitionScoresCategory, highest_index, CompetitionScoreTypes.SerializeCompetitionScore(new_score))",
+                "m_Database.Store(stack.m_CompetitionId, CompetitionScoresCategory, highest_index, CompetitionScoreTypes.SerializeCompetitionScore(new_score))"
+            ],
+            "block15260": [
+                "m_Database.Store(NullAddress, MarketCategory, rocket_id, MarketTypes.SerializeMarketListing(listing))"
+            ],
+            "jump18907": [
+                "m_Database.Store(NullAddress, OwnershipCategory, profit_funds_or_last_rocket_id, OwnershipTypes.SerializeOwnership(last_rocket_ownership))",
+                "m_Database.Store(NullAddress, OwnershipCategory, profit_funds_or_last_rocket_id, OwnershipTypes.SerializeOwnership(last_rocket_ownership))"
+            ],
+            "block17084": [
+                "m_Database.Load(ownership.m_Owner, InventoryCategory, 0)"
+            ],
+            "jump25614": [
+                "m_Database.Load(NullAddress, RocketStockCategory, stock_id)",
+                "m_Database.Load(NullAddress, RocketStockCategory, stock_id)"
+            ],
+            "block29275": [
+                "m_Database.Store(competition_id, CompetitionScoresCategory, i, CompetitionScoreTypes.SerializeCompetitionScore(scores[i]))"
+            ],
+            "block14999": [
+                "m_Database.Store(NullAddress, RocketCategory, rocket_id, RocketTypes.SerializeRocket(rocket))"
+            ],
+            "block32971": [
+                "m_Database.Load(NullAddress, ProfitFundsCategory, 0)"
+            ],
+            "block36090_0": [
+                "m_Database.Load(NullAddress, MissionParametersCategory, competition_id)"
+            ],
+            "jump25959": [
+                "m_Database.Load(NullAddress, RocketCategory, rocket_id)",
+                "m_Database.Load(NullAddress, RocketCategory, rocket_id)"
+            ],
+            "block5398": [
+                "m_Database.Load(NullAddress, OwnershipCategory, rocket_id)"
+            ],
+            "block23581": [
+                "m_Database.Load(NullAddress, CompetitionFundsCategory, competition_id)"
+            ],
+            "jump35046": [
+                "m_Database.Store(NullAddress, OwnershipCategory, next_rocket_id, OwnershipTypes.SerializeOwnership(ownership))",
+                "m_Database.Store(NullAddress, OwnershipCategory, next_rocket_id, OwnershipTypes.SerializeOwnership(ownership))"
+            ],
+            "block25959": [
+                "m_Database.Load(NullAddress, RocketCategory, rocket_id)"
+            ],
+            "jump34274_0": [
+                "m_Database.Store(target, InventoryCategory, inventory_count, bytes32(next_rocket_id))",
+                "m_Database.Store(target, InventoryCategory, inventory_count, bytes32(next_rocket_id))"
+            ],
+            "jump16432": [
+                "m_Database.Load(NullAddress, OwnershipCategory, rocket_id)",
+                "m_Database.Load(NullAddress, OwnershipCategory, rocket_id)"
+            ],
+            "block22753": [
+                "m_Database.Load(NullAddress, RocketStockInitializedCategory, stock_id)"
+            ],
+            "block35046": [
+                "m_Database.Store(NullAddress, OwnershipCategory, next_rocket_id, OwnershipTypes.SerializeOwnership(ownership))"
+            ],
+            "block19994": [
+                "m_Database.Store(beneficiary, InventoryCategory, 0, bytes32(seller_inventory_count))"
+            ],
+            "block11929": [
+                "m_Database.TransferFunds(msg.sender, withdraw_amount)"
+            ],
+            "jump6630": [
+                "m_Database.Load(target, ReferralCategory, 0)",
+                "m_Database.Load(target, ReferralCategory, 0)"
+            ],
+            "jump5109": [
+                "m_Database.Load(NullAddress, MissionParametersCategory, competition_id)",
+                "m_Database.Load(NullAddress, MissionParametersCategory, competition_id)"
+            ],
+            "block21552": [
+                "m_Database.Store(beneficiary, WithdrawalFundsCategory, 0, bytes32(buyer_price_or_wei_for_seller))"
+            ],
+            "block35558": [
+                "m_Database.Store(NullAddress, ProfitFundsCategory, 0, bytes32(profit_funds))"
+            ],
+            "block9524": [
+                "m_Database.Load(scores[i].m_Owner, WithdrawalFundsCategory, 0)"
+            ],
+            "block16432": [
+                "m_Database.Load(NullAddress, OwnershipCategory, rocket_id)"
+            ],
+            "jump32074": [
+                "m_Database.Store(NullAddress, MissionParametersCategory, stack.m_CompetitionId, stack.m_Mission.SerializeMissionParameters())",
+                "m_Database.Store(NullAddress, MissionParametersCategory, stack.m_CompetitionId, stack.m_Mission.SerializeMissionParameters())"
+            ],
+            "block8030": [
+                "m_Database.Load(NullAddress, CompetitionFundsCategory, competition_id)"
+            ],
+            "block15682": [
+                "m_Database.Load(NullAddress, MissionParametersCategory, competition_id)"
+            ],
+            "block18907": [
+                "m_Database.Store(NullAddress, OwnershipCategory, profit_funds_or_last_rocket_id, OwnershipTypes.SerializeOwnership(last_rocket_ownership))"
+            ],
+            "block9884": [
+                "m_Database.Store(scores[i].m_Owner, WithdrawalFundsCategory, 0, bytes32(existing_funds))"
+            ],
+            "block11397": [
+                "m_Database.Load(msg.sender, WithdrawalFundsCategory, 0)"
+            ],
+            "block17773": [
+                "m_Database.Load(beneficiary, InventoryCategory, seller_inventory_count)"
+            ],
+            "jump11708": [
+                "m_Database.Store(msg.sender, WithdrawalFundsCategory, 0, bytes32(withdrawal_funds))",
+                "m_Database.Store(msg.sender, WithdrawalFundsCategory, 0, bytes32(withdrawal_funds))"
+            ],
+            "jump20516": [
+                "m_Database.Store(NullAddress, RocketCategory, rocket_id, RocketTypes.SerializeRocket(rocket))",
+                "m_Database.Store(NullAddress, RocketCategory, rocket_id, RocketTypes.SerializeRocket(rocket))"
+            ],
+            "block39608": [
+                "m_Database.Store(stack.m_CompetitionId, CompetitionScoresCategory, i, CompetitionScoreTypes.SerializeCompetitionScore(new_score))"
+            ],
+            "jump21028": [
+                "m_Database.Store(NullAddress, ProfitFundsCategory, 0, bytes32(profit_funds_or_last_rocket_id))",
+                "m_Database.Store(NullAddress, ProfitFundsCategory, 0, bytes32(profit_funds_or_last_rocket_id))"
+            ],
+            "block39909": [
+                "m_Database.Store(stack.m_CompetitionId, CompetitionScoresCategory, stack.m_Mission.m_ValidCompetitionScores, CompetitionScoreTypes.SerializeCompetitionScore(new_score))"
+            ],
+            "block35578_0": [
+                "m_Database.transfer(msg.value)"
+            ],
+            "block31803": [
+                "m_Database.Store(NullAddress, CompetitionFundsCategory, stack.m_CompetitionId, bytes32(stack.m_CompetitionFunds))"
+            ],
+            "block10124": [
+                "m_Database.Load(competition_id, CompetitionScoresCategory, 0)"
+            ],
+            "jump30929": [
+                "m_Database.Load(NullAddress, ProfitFundsCategory, 0)",
+                "m_Database.Load(NullAddress, ProfitFundsCategory, 0)"
+            ],
+            "jump14999": [
+                "m_Database.Store(NullAddress, RocketCategory, rocket_id, RocketTypes.SerializeRocket(rocket))",
+                "m_Database.Store(NullAddress, RocketCategory, rocket_id, RocketTypes.SerializeRocket(rocket))"
+            ],
+            "jump10775": [
+                "m_Database.Store(scores[MaxCompetitionScores].m_Owner, WithdrawalFundsCategory, 0, bytes32(existing_funds))",
+                "m_Database.Store(scores[MaxCompetitionScores].m_Owner, WithdrawalFundsCategory, 0, bytes32(existing_funds))"
+            ],
+            "block32971_0": [
+                "m_Database.Load(NullAddress, ProfitFundsCategory, 0)"
+            ],
+            "block39219": [
+                "m_Database.Load(stack.m_CompetitionId, CompetitionScoresCategory, i)"
+            ],
+            "block27668": [
+                "m_Database.Load(NullAddress, OwnershipCategory, rocket_id)"
+            ],
+            "jump34274": [
+                "m_Database.Store(target, InventoryCategory, inventory_count, bytes32(next_rocket_id))",
+                "m_Database.Store(target, InventoryCategory, inventory_count, bytes32(next_rocket_id))"
+            ],
+            "jump13095": [
+                "m_Database.Load(NullAddress, GlobalCategory, 0)",
+                "m_Database.Load(NullAddress, GlobalCategory, 0)"
+            ],
+            "block34524_0": [
+                "m_Database.Store(target, InventoryCategory, 0, bytes32(inventory_count))"
+            ],
+            "jump23327": [
+                "m_Database.Store(NullAddress, RocketStockInitializedCategory, stock_id, bytes32(1))",
+                "m_Database.Store(NullAddress, RocketStockInitializedCategory, stock_id, bytes32(1))"
+            ],
+            "jump35558": [
+                "m_Database.Store(NullAddress, ProfitFundsCategory, 0, bytes32(profit_funds))",
+                "m_Database.Store(NullAddress, ProfitFundsCategory, 0, bytes32(profit_funds))"
+            ],
+            "jump36090_0": [
+                "m_Database.Load(NullAddress, MissionParametersCategory, competition_id)",
+                "m_Database.Load(NullAddress, MissionParametersCategory, competition_id)"
+            ],
+            "block23071": [
+                "m_Database.Store(NullAddress, RocketStockCategory, stock_id, bytes32(max_stock))"
+            ],
+            "jump40220": [
+                "m_Database.Load(stack.m_CompetitionId, CompetitionScoresCategory, i)",
+                "m_Database.Load(stack.m_CompetitionId, CompetitionScoresCategory, i)"
+            ],
+            "jump29275": [
+                "m_Database.Store(competition_id, CompetitionScoresCategory, i, CompetitionScoreTypes.SerializeCompetitionScore(scores[i]))",
+                "m_Database.Store(competition_id, CompetitionScoresCategory, i, CompetitionScoreTypes.SerializeCompetitionScore(scores[i]))"
+            ]
+        }
+    },
+    "GameCommon": {
+        "function_list": [
+            "SerializeLaunchRocketStackFrame(GameCommon.LaunchRocketStackFrame)",
+            "DeserializeLaunchRocketStackFrame(GameCommon.LaunchRocketStackFrame)",
+            "SerializeRaw0(GameCommon.LaunchRocketStackFrame)",
+            "DeserializeRaw0(GameCommon.LaunchRocketStackFrame)",
+            "SerializeRaw1(GameCommon.LaunchRocketStackFrame)",
+            "DeserializeRaw1(GameCommon.LaunchRocketStackFrame)",
+            "SerializeRaw2(GameCommon.LaunchRocketStackFrame)",
+            "DeserializeRaw2(GameCommon.LaunchRocketStackFrame)",
+            "SerializeRaw3(GameCommon.LaunchRocketStackFrame)",
+            "DeserializeRaw3(GameCommon.LaunchRocketStackFrame)"
+        ],
+        "initial_state": {
+            "SerializeLaunchRocketStackFrame(GameCommon.LaunchRocketStackFrame)": {
+                "argument": {},
+                "contract": {}
+            },
+            "DeserializeLaunchRocketStackFrame(GameCommon.LaunchRocketStackFrame)": {
+                "argument": {},
+                "contract": {}
+            },
+            "SerializeRaw0(GameCommon.LaunchRocketStackFrame)": {
+                "argument": {},
+                "contract": {}
+            },
+            "DeserializeRaw0(GameCommon.LaunchRocketStackFrame)": {
+                "argument": {},
+                "contract": {}
+            },
+            "SerializeRaw1(GameCommon.LaunchRocketStackFrame)": {
+                "argument": {},
+                "contract": {}
+            },
+            "DeserializeRaw1(GameCommon.LaunchRocketStackFrame)": {
+                "argument": {},
+                "contract": {}
+            },
+            "SerializeRaw2(GameCommon.LaunchRocketStackFrame)": {
+                "argument": {},
+                "contract": {}
+            },
+            "DeserializeRaw2(GameCommon.LaunchRocketStackFrame)": {
+                "argument": {},
+                "contract": {}
+            },
+            "SerializeRaw3(GameCommon.LaunchRocketStackFrame)": {
+                "argument": {},
+                "contract": {}
+            },
+            "DeserializeRaw3(GameCommon.LaunchRocketStackFrame)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "GlobalTypes": {
+        "function_list": [
+            "SerializeGlobal(GlobalTypes.Global)",
+            "DeserializeGlobal(bytes32)"
+        ],
+        "initial_state": {
+            "SerializeGlobal(GlobalTypes.Global)": {
+                "argument": {},
+                "contract": {}
+            },
+            "DeserializeGlobal(bytes32)": {
+                "argument": {
+                    "raw": "bytes32"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "MarketTypes": {
+        "function_list": [
+            "SerializeMarketListing(MarketTypes.MarketListing)",
+            "DeserializeMarketListing(bytes32)"
+        ],
+        "initial_state": {
+            "SerializeMarketListing(MarketTypes.MarketListing)": {
+                "argument": {},
+                "contract": {}
+            },
+            "DeserializeMarketListing(bytes32)": {
+                "argument": {
+                    "raw": "bytes32"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "MissionParametersTypes": {
+        "function_list": [
+            "SerializeMissionParameters(MissionParametersTypes.MissionParameters)",
+            "DeserializeMissionParameters(bytes32)"
+        ],
+        "initial_state": {
+            "SerializeMissionParameters(MissionParametersTypes.MissionParameters)": {
+                "argument": {},
+                "contract": {}
+            },
+            "DeserializeMissionParameters(bytes32)": {
+                "argument": {
+                    "raw": "bytes32"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "OwnershipTypes": {
+        "function_list": [
+            "SerializeOwnership(OwnershipTypes.Ownership)",
+            "DeserializeOwnership(bytes32)"
+        ],
+        "initial_state": {
+            "SerializeOwnership(OwnershipTypes.Ownership)": {
+                "argument": {},
+                "contract": {}
+            },
+            "DeserializeOwnership(bytes32)": {
+                "argument": {
+                    "raw": "bytes32"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "RocketTypes": {
+        "function_list": [
+            "SerializeRocket(RocketTypes.Rocket)",
+            "DeserializeRocket(bytes32)"
+        ],
+        "initial_state": {
+            "SerializeRocket(RocketTypes.Rocket)": {
+                "argument": {},
+                "contract": {}
+            },
+            "DeserializeRocket(bytes32)": {
+                "argument": {
+                    "raw": "bytes32"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "Serializer": {
+        "function_list": [
+            "ReadUint8(Serializer.DataComponent,uint32)",
+            "WriteUint8(Serializer.DataComponent,uint32,uint8)",
+            "ReadUint16(Serializer.DataComponent,uint32)",
+            "WriteUint16(Serializer.DataComponent,uint32,uint16)",
+            "ReadUint32(Serializer.DataComponent,uint32)",
+            "WriteUint32(Serializer.DataComponent,uint32,uint32)",
+            "ReadUint64(Serializer.DataComponent,uint32)",
+            "WriteUint64(Serializer.DataComponent,uint32,uint64)",
+            "ReadUint80(Serializer.DataComponent,uint32)",
+            "WriteUint80(Serializer.DataComponent,uint32,uint80)",
+            "ReadAddress(Serializer.DataComponent,uint32)",
+            "WriteAddress(Serializer.DataComponent,uint32,address)"
+        ],
+        "initial_state": {
+            "ReadUint8(Serializer.DataComponent,uint32)": {
+                "argument": {
+                    "offset": "uint32"
+                },
+                "contract": {}
+            },
+            "WriteUint8(Serializer.DataComponent,uint32,uint8)": {
+                "argument": {
+                    "offset": "uint32",
+                    "value": "uint8"
+                },
+                "contract": {}
+            },
+            "ReadUint16(Serializer.DataComponent,uint32)": {
+                "argument": {
+                    "offset": "uint32"
+                },
+                "contract": {}
+            },
+            "WriteUint16(Serializer.DataComponent,uint32,uint16)": {
+                "argument": {
+                    "offset": "uint32",
+                    "value": "uint16"
+                },
+                "contract": {}
+            },
+            "ReadUint32(Serializer.DataComponent,uint32)": {
+                "argument": {
+                    "offset": "uint32"
+                },
+                "contract": {}
+            },
+            "WriteUint32(Serializer.DataComponent,uint32,uint32)": {
+                "argument": {
+                    "offset": "uint32",
+                    "value": "uint32"
+                },
+                "contract": {}
+            },
+            "ReadUint64(Serializer.DataComponent,uint32)": {
+                "argument": {
+                    "offset": "uint32"
+                },
+                "contract": {}
+            },
+            "WriteUint64(Serializer.DataComponent,uint32,uint64)": {
+                "argument": {
+                    "offset": "uint32",
+                    "value": "uint64"
+                },
+                "contract": {}
+            },
+            "ReadUint80(Serializer.DataComponent,uint32)": {
+                "argument": {
+                    "offset": "uint32"
+                },
+                "contract": {}
+            },
+            "WriteUint80(Serializer.DataComponent,uint32,uint80)": {
+                "argument": {
+                    "offset": "uint32",
+                    "value": "uint80"
+                },
+                "contract": {}
+            },
+            "ReadAddress(Serializer.DataComponent,uint32)": {
+                "argument": {
+                    "offset": "uint32"
+                },
+                "contract": {}
+            },
+            "WriteAddress(Serializer.DataComponent,uint32,address)": {
+                "argument": {
+                    "offset": "uint32"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    }
+}

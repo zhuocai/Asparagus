@@ -1,0 +1,930 @@
+{
+    "ERC20Interface": {
+        "function_list": [
+            "totalSupply()",
+            "balanceOf(address)",
+            "allowance(address,address)",
+            "transfer(address,uint256)",
+            "approve(address,uint256)",
+            "transferFrom(address,address,uint256)"
+        ],
+        "initial_state": {
+            "totalSupply()": {
+                "argument": {},
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "tokens": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "tokens": "uint256"
+                },
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "tokens": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                125,
+                75
+            ],
+            "balanceOf(address)": [
+                402,
+                141
+            ],
+            "totalSupply()": [
+                226,
+                97
+            ],
+            "allowance(address,address)": [
+                590,
+                185
+            ],
+            "transferFrom(address,address,uint256)": [
+                269,
+                119
+            ],
+            "transfer(address,uint256)": [
+                489,
+                163
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "BonusListInterface": {
+        "function_list": [],
+        "initial_state": {},
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "SafeMath": {
+        "function_list": [
+            "safeAdd(uint256,uint256)",
+            "safeSub(uint256,uint256)",
+            "safeMul(uint256,uint256)",
+            "safeDiv(uint256,uint256)"
+        ],
+        "initial_state": {
+            "safeAdd(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "safeSub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "safeMul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "safeDiv(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "safeSub(uint256,uint256)": [
+                103,
+                75
+            ],
+            "safeAdd(uint256,uint256)": [
+                328,
+                141
+            ],
+            "safeMul(uint256,uint256)": [
+                253,
+                119
+            ],
+            "safeDiv(uint256,uint256)": [
+                178,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Owned": {
+        "function_list": [
+            "Owned()",
+            "transferOwnership(address)",
+            "acceptOwnership()"
+        ],
+        "initial_state": {
+            "Owned()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "acceptOwnership()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                300,
+                141
+            ],
+            "acceptOwnership()": [
+                103,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "GazeCoinCrowdsale": {
+        "function_list": [
+            "Owned()",
+            "transferOwnership(address)",
+            "acceptOwnership()",
+            "safeAdd(uint256,uint256)",
+            "safeSub(uint256,uint256)",
+            "safeMul(uint256,uint256)",
+            "safeDiv(uint256,uint256)",
+            "GazeCoinCrowdsale()",
+            "setBTTSToken(address)",
+            "setWallet(address)",
+            "setTeamWallet(address)",
+            "setBonusList(address)",
+            "setEndDate(uint256)",
+            "setUsdPerKEther(uint256)",
+            "setLockedAccountThresholdUsd(uint256)",
+            "capEth()",
+            "gzeFromEth(uint256,uint256)",
+            "gzePerEth()",
+            "lockedAccountThresholdEth()",
+            "getBonusPercent(address)",
+            "fallback()",
+            "addPrecommitment(address,uint256,uint256)",
+            "addPrecommitmentAdjustment(address,uint256)",
+            "roundUp(uint256)",
+            "finalise()",
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "Owned()": {
+                "argument": {},
+                "contract": {
+                    "TOKEN_DECIMALS": "uint8",
+                    "TEAM_PERCENT_GZE": "uint256",
+                    "TIER1_BONUS": "uint256",
+                    "TIER2_BONUS": "uint256",
+                    "TIER3_BONUS": "uint256",
+                    "START_DATE": "uint256",
+                    "endDate": "uint256",
+                    "usdPerKEther": "uint256",
+                    "USD_CENT_PER_GZE": "uint256",
+                    "CAP_USD": "uint256",
+                    "MIN_CONTRIBUTION_ETH": "uint256",
+                    "contributedEth": "uint256",
+                    "contributedUsd": "uint256",
+                    "generatedGze": "uint256",
+                    "lockedAccountThresholdUsd": "uint256"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "TOKEN_DECIMALS": "uint8",
+                    "TEAM_PERCENT_GZE": "uint256",
+                    "TIER1_BONUS": "uint256",
+                    "TIER2_BONUS": "uint256",
+                    "TIER3_BONUS": "uint256",
+                    "START_DATE": "uint256",
+                    "endDate": "uint256",
+                    "usdPerKEther": "uint256",
+                    "USD_CENT_PER_GZE": "uint256",
+                    "CAP_USD": "uint256",
+                    "MIN_CONTRIBUTION_ETH": "uint256",
+                    "contributedEth": "uint256",
+                    "contributedUsd": "uint256",
+                    "generatedGze": "uint256",
+                    "lockedAccountThresholdUsd": "uint256"
+                }
+            },
+            "acceptOwnership()": {
+                "argument": {},
+                "contract": {
+                    "TOKEN_DECIMALS": "uint8",
+                    "TEAM_PERCENT_GZE": "uint256",
+                    "TIER1_BONUS": "uint256",
+                    "TIER2_BONUS": "uint256",
+                    "TIER3_BONUS": "uint256",
+                    "START_DATE": "uint256",
+                    "endDate": "uint256",
+                    "usdPerKEther": "uint256",
+                    "USD_CENT_PER_GZE": "uint256",
+                    "CAP_USD": "uint256",
+                    "MIN_CONTRIBUTION_ETH": "uint256",
+                    "contributedEth": "uint256",
+                    "contributedUsd": "uint256",
+                    "generatedGze": "uint256",
+                    "lockedAccountThresholdUsd": "uint256"
+                }
+            },
+            "safeAdd(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "TOKEN_DECIMALS": "uint8",
+                    "TEAM_PERCENT_GZE": "uint256",
+                    "TIER1_BONUS": "uint256",
+                    "TIER2_BONUS": "uint256",
+                    "TIER3_BONUS": "uint256",
+                    "START_DATE": "uint256",
+                    "endDate": "uint256",
+                    "usdPerKEther": "uint256",
+                    "USD_CENT_PER_GZE": "uint256",
+                    "CAP_USD": "uint256",
+                    "MIN_CONTRIBUTION_ETH": "uint256",
+                    "contributedEth": "uint256",
+                    "contributedUsd": "uint256",
+                    "generatedGze": "uint256",
+                    "lockedAccountThresholdUsd": "uint256"
+                }
+            },
+            "safeSub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "TOKEN_DECIMALS": "uint8",
+                    "TEAM_PERCENT_GZE": "uint256",
+                    "TIER1_BONUS": "uint256",
+                    "TIER2_BONUS": "uint256",
+                    "TIER3_BONUS": "uint256",
+                    "START_DATE": "uint256",
+                    "endDate": "uint256",
+                    "usdPerKEther": "uint256",
+                    "USD_CENT_PER_GZE": "uint256",
+                    "CAP_USD": "uint256",
+                    "MIN_CONTRIBUTION_ETH": "uint256",
+                    "contributedEth": "uint256",
+                    "contributedUsd": "uint256",
+                    "generatedGze": "uint256",
+                    "lockedAccountThresholdUsd": "uint256"
+                }
+            },
+            "safeMul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "TOKEN_DECIMALS": "uint8",
+                    "TEAM_PERCENT_GZE": "uint256",
+                    "TIER1_BONUS": "uint256",
+                    "TIER2_BONUS": "uint256",
+                    "TIER3_BONUS": "uint256",
+                    "START_DATE": "uint256",
+                    "endDate": "uint256",
+                    "usdPerKEther": "uint256",
+                    "USD_CENT_PER_GZE": "uint256",
+                    "CAP_USD": "uint256",
+                    "MIN_CONTRIBUTION_ETH": "uint256",
+                    "contributedEth": "uint256",
+                    "contributedUsd": "uint256",
+                    "generatedGze": "uint256",
+                    "lockedAccountThresholdUsd": "uint256"
+                }
+            },
+            "safeDiv(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "TOKEN_DECIMALS": "uint8",
+                    "TEAM_PERCENT_GZE": "uint256",
+                    "TIER1_BONUS": "uint256",
+                    "TIER2_BONUS": "uint256",
+                    "TIER3_BONUS": "uint256",
+                    "START_DATE": "uint256",
+                    "endDate": "uint256",
+                    "usdPerKEther": "uint256",
+                    "USD_CENT_PER_GZE": "uint256",
+                    "CAP_USD": "uint256",
+                    "MIN_CONTRIBUTION_ETH": "uint256",
+                    "contributedEth": "uint256",
+                    "contributedUsd": "uint256",
+                    "generatedGze": "uint256",
+                    "lockedAccountThresholdUsd": "uint256"
+                }
+            },
+            "GazeCoinCrowdsale()": {
+                "argument": {},
+                "contract": {
+                    "TOKEN_DECIMALS": "uint8",
+                    "TEAM_PERCENT_GZE": "uint256",
+                    "TIER1_BONUS": "uint256",
+                    "TIER2_BONUS": "uint256",
+                    "TIER3_BONUS": "uint256",
+                    "START_DATE": "uint256",
+                    "endDate": "uint256",
+                    "usdPerKEther": "uint256",
+                    "USD_CENT_PER_GZE": "uint256",
+                    "CAP_USD": "uint256",
+                    "MIN_CONTRIBUTION_ETH": "uint256",
+                    "contributedEth": "uint256",
+                    "contributedUsd": "uint256",
+                    "generatedGze": "uint256",
+                    "lockedAccountThresholdUsd": "uint256"
+                }
+            },
+            "setBTTSToken(address)": {
+                "argument": {},
+                "contract": {
+                    "TOKEN_DECIMALS": "uint8",
+                    "TEAM_PERCENT_GZE": "uint256",
+                    "TIER1_BONUS": "uint256",
+                    "TIER2_BONUS": "uint256",
+                    "TIER3_BONUS": "uint256",
+                    "START_DATE": "uint256",
+                    "endDate": "uint256",
+                    "usdPerKEther": "uint256",
+                    "USD_CENT_PER_GZE": "uint256",
+                    "CAP_USD": "uint256",
+                    "MIN_CONTRIBUTION_ETH": "uint256",
+                    "contributedEth": "uint256",
+                    "contributedUsd": "uint256",
+                    "generatedGze": "uint256",
+                    "lockedAccountThresholdUsd": "uint256"
+                }
+            },
+            "setWallet(address)": {
+                "argument": {},
+                "contract": {
+                    "TOKEN_DECIMALS": "uint8",
+                    "TEAM_PERCENT_GZE": "uint256",
+                    "TIER1_BONUS": "uint256",
+                    "TIER2_BONUS": "uint256",
+                    "TIER3_BONUS": "uint256",
+                    "START_DATE": "uint256",
+                    "endDate": "uint256",
+                    "usdPerKEther": "uint256",
+                    "USD_CENT_PER_GZE": "uint256",
+                    "CAP_USD": "uint256",
+                    "MIN_CONTRIBUTION_ETH": "uint256",
+                    "contributedEth": "uint256",
+                    "contributedUsd": "uint256",
+                    "generatedGze": "uint256",
+                    "lockedAccountThresholdUsd": "uint256"
+                }
+            },
+            "setTeamWallet(address)": {
+                "argument": {},
+                "contract": {
+                    "TOKEN_DECIMALS": "uint8",
+                    "TEAM_PERCENT_GZE": "uint256",
+                    "TIER1_BONUS": "uint256",
+                    "TIER2_BONUS": "uint256",
+                    "TIER3_BONUS": "uint256",
+                    "START_DATE": "uint256",
+                    "endDate": "uint256",
+                    "usdPerKEther": "uint256",
+                    "USD_CENT_PER_GZE": "uint256",
+                    "CAP_USD": "uint256",
+                    "MIN_CONTRIBUTION_ETH": "uint256",
+                    "contributedEth": "uint256",
+                    "contributedUsd": "uint256",
+                    "generatedGze": "uint256",
+                    "lockedAccountThresholdUsd": "uint256"
+                }
+            },
+            "setBonusList(address)": {
+                "argument": {},
+                "contract": {
+                    "TOKEN_DECIMALS": "uint8",
+                    "TEAM_PERCENT_GZE": "uint256",
+                    "TIER1_BONUS": "uint256",
+                    "TIER2_BONUS": "uint256",
+                    "TIER3_BONUS": "uint256",
+                    "START_DATE": "uint256",
+                    "endDate": "uint256",
+                    "usdPerKEther": "uint256",
+                    "USD_CENT_PER_GZE": "uint256",
+                    "CAP_USD": "uint256",
+                    "MIN_CONTRIBUTION_ETH": "uint256",
+                    "contributedEth": "uint256",
+                    "contributedUsd": "uint256",
+                    "generatedGze": "uint256",
+                    "lockedAccountThresholdUsd": "uint256"
+                }
+            },
+            "setEndDate(uint256)": {
+                "argument": {
+                    "_endDate": "uint256"
+                },
+                "contract": {
+                    "TOKEN_DECIMALS": "uint8",
+                    "TEAM_PERCENT_GZE": "uint256",
+                    "TIER1_BONUS": "uint256",
+                    "TIER2_BONUS": "uint256",
+                    "TIER3_BONUS": "uint256",
+                    "START_DATE": "uint256",
+                    "endDate": "uint256",
+                    "usdPerKEther": "uint256",
+                    "USD_CENT_PER_GZE": "uint256",
+                    "CAP_USD": "uint256",
+                    "MIN_CONTRIBUTION_ETH": "uint256",
+                    "contributedEth": "uint256",
+                    "contributedUsd": "uint256",
+                    "generatedGze": "uint256",
+                    "lockedAccountThresholdUsd": "uint256"
+                }
+            },
+            "setUsdPerKEther(uint256)": {
+                "argument": {
+                    "_usdPerKEther": "uint256"
+                },
+                "contract": {
+                    "TOKEN_DECIMALS": "uint8",
+                    "TEAM_PERCENT_GZE": "uint256",
+                    "TIER1_BONUS": "uint256",
+                    "TIER2_BONUS": "uint256",
+                    "TIER3_BONUS": "uint256",
+                    "START_DATE": "uint256",
+                    "endDate": "uint256",
+                    "usdPerKEther": "uint256",
+                    "USD_CENT_PER_GZE": "uint256",
+                    "CAP_USD": "uint256",
+                    "MIN_CONTRIBUTION_ETH": "uint256",
+                    "contributedEth": "uint256",
+                    "contributedUsd": "uint256",
+                    "generatedGze": "uint256",
+                    "lockedAccountThresholdUsd": "uint256"
+                }
+            },
+            "setLockedAccountThresholdUsd(uint256)": {
+                "argument": {
+                    "_lockedAccountThresholdUsd": "uint256"
+                },
+                "contract": {
+                    "TOKEN_DECIMALS": "uint8",
+                    "TEAM_PERCENT_GZE": "uint256",
+                    "TIER1_BONUS": "uint256",
+                    "TIER2_BONUS": "uint256",
+                    "TIER3_BONUS": "uint256",
+                    "START_DATE": "uint256",
+                    "endDate": "uint256",
+                    "usdPerKEther": "uint256",
+                    "USD_CENT_PER_GZE": "uint256",
+                    "CAP_USD": "uint256",
+                    "MIN_CONTRIBUTION_ETH": "uint256",
+                    "contributedEth": "uint256",
+                    "contributedUsd": "uint256",
+                    "generatedGze": "uint256",
+                    "lockedAccountThresholdUsd": "uint256"
+                }
+            },
+            "capEth()": {
+                "argument": {},
+                "contract": {
+                    "TOKEN_DECIMALS": "uint8",
+                    "TEAM_PERCENT_GZE": "uint256",
+                    "TIER1_BONUS": "uint256",
+                    "TIER2_BONUS": "uint256",
+                    "TIER3_BONUS": "uint256",
+                    "START_DATE": "uint256",
+                    "endDate": "uint256",
+                    "usdPerKEther": "uint256",
+                    "USD_CENT_PER_GZE": "uint256",
+                    "CAP_USD": "uint256",
+                    "MIN_CONTRIBUTION_ETH": "uint256",
+                    "contributedEth": "uint256",
+                    "contributedUsd": "uint256",
+                    "generatedGze": "uint256",
+                    "lockedAccountThresholdUsd": "uint256"
+                }
+            },
+            "gzeFromEth(uint256,uint256)": {
+                "argument": {
+                    "ethAmount": "uint256",
+                    "bonusPercent": "uint256"
+                },
+                "contract": {
+                    "TOKEN_DECIMALS": "uint8",
+                    "TEAM_PERCENT_GZE": "uint256",
+                    "TIER1_BONUS": "uint256",
+                    "TIER2_BONUS": "uint256",
+                    "TIER3_BONUS": "uint256",
+                    "START_DATE": "uint256",
+                    "endDate": "uint256",
+                    "usdPerKEther": "uint256",
+                    "USD_CENT_PER_GZE": "uint256",
+                    "CAP_USD": "uint256",
+                    "MIN_CONTRIBUTION_ETH": "uint256",
+                    "contributedEth": "uint256",
+                    "contributedUsd": "uint256",
+                    "generatedGze": "uint256",
+                    "lockedAccountThresholdUsd": "uint256"
+                }
+            },
+            "gzePerEth()": {
+                "argument": {},
+                "contract": {
+                    "TOKEN_DECIMALS": "uint8",
+                    "TEAM_PERCENT_GZE": "uint256",
+                    "TIER1_BONUS": "uint256",
+                    "TIER2_BONUS": "uint256",
+                    "TIER3_BONUS": "uint256",
+                    "START_DATE": "uint256",
+                    "endDate": "uint256",
+                    "usdPerKEther": "uint256",
+                    "USD_CENT_PER_GZE": "uint256",
+                    "CAP_USD": "uint256",
+                    "MIN_CONTRIBUTION_ETH": "uint256",
+                    "contributedEth": "uint256",
+                    "contributedUsd": "uint256",
+                    "generatedGze": "uint256",
+                    "lockedAccountThresholdUsd": "uint256"
+                }
+            },
+            "lockedAccountThresholdEth()": {
+                "argument": {},
+                "contract": {
+                    "TOKEN_DECIMALS": "uint8",
+                    "TEAM_PERCENT_GZE": "uint256",
+                    "TIER1_BONUS": "uint256",
+                    "TIER2_BONUS": "uint256",
+                    "TIER3_BONUS": "uint256",
+                    "START_DATE": "uint256",
+                    "endDate": "uint256",
+                    "usdPerKEther": "uint256",
+                    "USD_CENT_PER_GZE": "uint256",
+                    "CAP_USD": "uint256",
+                    "MIN_CONTRIBUTION_ETH": "uint256",
+                    "contributedEth": "uint256",
+                    "contributedUsd": "uint256",
+                    "generatedGze": "uint256",
+                    "lockedAccountThresholdUsd": "uint256"
+                }
+            },
+            "getBonusPercent(address)": {
+                "argument": {},
+                "contract": {
+                    "TOKEN_DECIMALS": "uint8",
+                    "TEAM_PERCENT_GZE": "uint256",
+                    "TIER1_BONUS": "uint256",
+                    "TIER2_BONUS": "uint256",
+                    "TIER3_BONUS": "uint256",
+                    "START_DATE": "uint256",
+                    "endDate": "uint256",
+                    "usdPerKEther": "uint256",
+                    "USD_CENT_PER_GZE": "uint256",
+                    "CAP_USD": "uint256",
+                    "MIN_CONTRIBUTION_ETH": "uint256",
+                    "contributedEth": "uint256",
+                    "contributedUsd": "uint256",
+                    "generatedGze": "uint256",
+                    "lockedAccountThresholdUsd": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "TOKEN_DECIMALS": "uint8",
+                    "TEAM_PERCENT_GZE": "uint256",
+                    "TIER1_BONUS": "uint256",
+                    "TIER2_BONUS": "uint256",
+                    "TIER3_BONUS": "uint256",
+                    "START_DATE": "uint256",
+                    "endDate": "uint256",
+                    "usdPerKEther": "uint256",
+                    "USD_CENT_PER_GZE": "uint256",
+                    "CAP_USD": "uint256",
+                    "MIN_CONTRIBUTION_ETH": "uint256",
+                    "contributedEth": "uint256",
+                    "contributedUsd": "uint256",
+                    "generatedGze": "uint256",
+                    "lockedAccountThresholdUsd": "uint256"
+                }
+            },
+            "addPrecommitment(address,uint256,uint256)": {
+                "argument": {
+                    "ethAmount": "uint256",
+                    "bonusPercent": "uint256"
+                },
+                "contract": {
+                    "TOKEN_DECIMALS": "uint8",
+                    "TEAM_PERCENT_GZE": "uint256",
+                    "TIER1_BONUS": "uint256",
+                    "TIER2_BONUS": "uint256",
+                    "TIER3_BONUS": "uint256",
+                    "START_DATE": "uint256",
+                    "endDate": "uint256",
+                    "usdPerKEther": "uint256",
+                    "USD_CENT_PER_GZE": "uint256",
+                    "CAP_USD": "uint256",
+                    "MIN_CONTRIBUTION_ETH": "uint256",
+                    "contributedEth": "uint256",
+                    "contributedUsd": "uint256",
+                    "generatedGze": "uint256",
+                    "lockedAccountThresholdUsd": "uint256"
+                }
+            },
+            "addPrecommitmentAdjustment(address,uint256)": {
+                "argument": {
+                    "gzeAmount": "uint256"
+                },
+                "contract": {
+                    "TOKEN_DECIMALS": "uint8",
+                    "TEAM_PERCENT_GZE": "uint256",
+                    "TIER1_BONUS": "uint256",
+                    "TIER2_BONUS": "uint256",
+                    "TIER3_BONUS": "uint256",
+                    "START_DATE": "uint256",
+                    "endDate": "uint256",
+                    "usdPerKEther": "uint256",
+                    "USD_CENT_PER_GZE": "uint256",
+                    "CAP_USD": "uint256",
+                    "MIN_CONTRIBUTION_ETH": "uint256",
+                    "contributedEth": "uint256",
+                    "contributedUsd": "uint256",
+                    "generatedGze": "uint256",
+                    "lockedAccountThresholdUsd": "uint256"
+                }
+            },
+            "roundUp(uint256)": {
+                "argument": {
+                    "a": "uint256"
+                },
+                "contract": {
+                    "TOKEN_DECIMALS": "uint8",
+                    "TEAM_PERCENT_GZE": "uint256",
+                    "TIER1_BONUS": "uint256",
+                    "TIER2_BONUS": "uint256",
+                    "TIER3_BONUS": "uint256",
+                    "START_DATE": "uint256",
+                    "endDate": "uint256",
+                    "usdPerKEther": "uint256",
+                    "USD_CENT_PER_GZE": "uint256",
+                    "CAP_USD": "uint256",
+                    "MIN_CONTRIBUTION_ETH": "uint256",
+                    "contributedEth": "uint256",
+                    "contributedUsd": "uint256",
+                    "generatedGze": "uint256",
+                    "lockedAccountThresholdUsd": "uint256"
+                }
+            },
+            "finalise()": {
+                "argument": {},
+                "contract": {
+                    "TOKEN_DECIMALS": "uint8",
+                    "TEAM_PERCENT_GZE": "uint256",
+                    "TIER1_BONUS": "uint256",
+                    "TIER2_BONUS": "uint256",
+                    "TIER3_BONUS": "uint256",
+                    "START_DATE": "uint256",
+                    "endDate": "uint256",
+                    "usdPerKEther": "uint256",
+                    "USD_CENT_PER_GZE": "uint256",
+                    "CAP_USD": "uint256",
+                    "MIN_CONTRIBUTION_ETH": "uint256",
+                    "contributedEth": "uint256",
+                    "contributedUsd": "uint256",
+                    "generatedGze": "uint256",
+                    "lockedAccountThresholdUsd": "uint256"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "TOKEN_DECIMALS": "uint8",
+                    "TEAM_PERCENT_GZE": "uint256",
+                    "TIER1_BONUS": "uint256",
+                    "TIER2_BONUS": "uint256",
+                    "TIER3_BONUS": "uint256",
+                    "START_DATE": "uint256",
+                    "endDate": "uint256",
+                    "usdPerKEther": "uint256",
+                    "USD_CENT_PER_GZE": "uint256",
+                    "CAP_USD": "uint256",
+                    "MIN_CONTRIBUTION_ETH": "uint256",
+                    "contributedEth": "uint256",
+                    "contributedUsd": "uint256",
+                    "generatedGze": "uint256",
+                    "lockedAccountThresholdUsd": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "capEth()": [
+                2405,
+                317
+            ],
+            "addPrecommitment(address,uint256,uint256)": [
+                3018,
+                559
+            ],
+            "finalise()": [
+                3223,
+                625
+            ],
+            "safeDiv(uint256,uint256)": [
+                3289,
+                669
+            ],
+            "setBonusList(address)": [
+                3668,
+                823
+            ],
+            "roundUp(uint256)": [
+                2823,
+                493
+            ],
+            "addPrecommitmentAdjustment(address,uint256)": [
+                4151,
+                977
+            ],
+            "getBonusPercent(address)": [
+                3536,
+                779
+            ],
+            "setTeamWallet(address)": [
+                1987,
+                141
+            ],
+            "lockedAccountThresholdEth()": [
+                2888,
+                515
+            ],
+            "transferOwnership(address)": [
+                4315,
+                1021
+            ],
+            "setWallet(address)": [
+                4009,
+                933
+            ],
+            "setUsdPerKEther(uint256)": [
+                3897,
+                889
+            ],
+            "safeMul(uint256,uint256)": [
+                3735,
+                845
+            ],
+            "setBTTSToken(address)": [
+                3942,
+                911
+            ],
+            "gzePerEth()": [
+                3407,
+                713
+            ],
+            "safeSub(uint256,uint256)": [
+                3148,
+                603
+            ],
+            "setLockedAccountThresholdUsd(uint256)": [
+                3623,
+                801
+            ],
+            "safeAdd(uint256,uint256)": [
+                4076,
+                955
+            ],
+            "gzeFromEth(uint256,uint256)": [
+                1826,
+                75
+            ],
+            "setEndDate(uint256)": [
+                2274,
+                251
+            ],
+            "acceptOwnership()": [
+                2800,
+                471
+            ]
+        },
+        "block_CALL_mapping": {
+            "block1747_0": [
+                "msg.sender.transfer(ethRefund)"
+            ],
+            "block9851": [
+                "bttsToken.mint(tokenOwner, gzeAmount, lockAccount)"
+            ],
+            "jump9851": [
+                "bttsToken.mint(tokenOwner, gzeAmount, lockAccount)",
+                "bttsToken.mint(tokenOwner, gzeAmount, lockAccount)"
+            ],
+            "jump1417_0": [
+                "wallet.transfer(ethAmount)",
+                "wallet.transfer(ethAmount)"
+            ],
+            "block1747": [
+                "msg.sender.transfer(ethRefund)"
+            ],
+            "block1347_0": [
+                "bttsToken.mint(msg.sender, gzeAmount, lockAccount)"
+            ],
+            "jump7781": [
+                "bttsToken.mint(teamWallet, amountTeam, false)",
+                "bttsToken.mint(teamWallet, amountTeam, false)"
+            ],
+            "block6915": [
+                "bttsToken.mint(tokenOwner, gzeAmount, lockAccount)"
+            ],
+            "jump1417": [
+                "wallet.transfer(ethAmount)",
+                "wallet.transfer(ethAmount)"
+            ],
+            "jump6915": [
+                "bttsToken.mint(tokenOwner, gzeAmount, lockAccount)",
+                "bttsToken.mint(tokenOwner, gzeAmount, lockAccount)"
+            ],
+            "jump4739_0": [
+                "bonusList.bonusList(addr)",
+                "bonusList.bonusList(addr)"
+            ],
+            "block1347": [
+                "bttsToken.mint(msg.sender, gzeAmount, lockAccount)"
+            ],
+            "block7781": [
+                "bttsToken.mint(teamWallet, amountTeam, false)"
+            ],
+            "jump7975": [
+                "bttsToken.disableMinting()",
+                "bttsToken.disableMinting()"
+            ],
+            "jump4739": [
+                "bonusList.bonusList(addr)",
+                "bonusList.bonusList(addr)"
+            ],
+            "jump1347_0": [
+                "bttsToken.mint(msg.sender, gzeAmount, lockAccount)",
+                "bttsToken.mint(msg.sender, gzeAmount, lockAccount)"
+            ],
+            "block4739_0": [
+                "bonusList.bonusList(addr)"
+            ],
+            "block4739_1": [
+                "bonusList.bonusList(addr)"
+            ],
+            "block1417_0": [
+                "wallet.transfer(ethAmount)"
+            ],
+            "jump4739_1": [
+                "bonusList.bonusList(addr)",
+                "bonusList.bonusList(addr)"
+            ],
+            "block7975": [
+                "bttsToken.disableMinting()"
+            ],
+            "block4739": [
+                "bonusList.bonusList(addr)"
+            ],
+            "jump1347": [
+                "bttsToken.mint(msg.sender, gzeAmount, lockAccount)",
+                "bttsToken.mint(msg.sender, gzeAmount, lockAccount)"
+            ],
+            "jump1747_0": [
+                "msg.sender.transfer(ethRefund)",
+                "msg.sender.transfer(ethRefund)"
+            ],
+            "jump1747": [
+                "msg.sender.transfer(ethRefund)",
+                "msg.sender.transfer(ethRefund)"
+            ],
+            "block1417": [
+                "wallet.transfer(ethAmount)"
+            ]
+        }
+    }
+}

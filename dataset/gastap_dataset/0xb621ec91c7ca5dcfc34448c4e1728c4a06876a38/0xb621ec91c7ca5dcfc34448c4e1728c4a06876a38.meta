@@ -1,0 +1,890 @@
+{
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "Ownable": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "ArnaCrowdsale": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "burnUnsold()",
+            "price()",
+            "priceWithBonus()",
+            "sendTokens(address,uint256)",
+            "tokensToSale()",
+            "withdraw()"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {
+                    "totalRise": "uint256"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "totalRise": "uint256"
+                }
+            },
+            "burnUnsold()": {
+                "argument": {},
+                "contract": {
+                    "totalRise": "uint256"
+                }
+            },
+            "price()": {
+                "argument": {},
+                "contract": {
+                    "totalRise": "uint256"
+                }
+            },
+            "priceWithBonus()": {
+                "argument": {},
+                "contract": {
+                    "totalRise": "uint256"
+                }
+            },
+            "sendTokens(address,uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {
+                    "totalRise": "uint256"
+                }
+            },
+            "tokensToSale()": {
+                "argument": {},
+                "contract": {
+                    "totalRise": "uint256"
+                }
+            },
+            "withdraw()": {
+                "argument": {},
+                "contract": {
+                    "totalRise": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "price()": [
+                1062,
+                185
+            ],
+            "priceWithBonus()": [
+                1302,
+                273
+            ],
+            "sendTokens(address,uint256)": [
+                808,
+                97
+            ],
+            "burnUnsold()": [
+                1105,
+                207
+            ],
+            "withdraw()": [
+                928,
+                141
+            ],
+            "tokensToSale()": [
+                885,
+                119
+            ],
+            "transferOwnership(address)": [
+                1148,
+                229
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump410_0": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "jump675": [
+                "token.transfer(msg.sender, amount)",
+                "token.transfer(msg.sender, amount)"
+            ],
+            "jump410": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "block2965": [
+                "arnaControl.getPrice()"
+            ],
+            "jump2965": [
+                "arnaControl.getPrice()",
+                "arnaControl.getPrice()"
+            ],
+            "block675": [
+                "token.transfer(msg.sender, amount)"
+            ],
+            "block2677": [
+                "arnaControl.send(this.balance)"
+            ],
+            "block1481_2": [
+                "arnaControl.getPriceWithBonus()"
+            ],
+            "block1481_1": [
+                "arnaControl.getPriceWithBonus()"
+            ],
+            "block1481_0": [
+                "arnaControl.getPriceWithBonus()"
+            ],
+            "jump675_0": [
+                "token.transfer(msg.sender, amount)",
+                "token.transfer(msg.sender, amount)"
+            ],
+            "block3518": [
+                "token.burn(unsold)"
+            ],
+            "block2213": [
+                "token.transfer(beneficiary, amount)"
+            ],
+            "block410": [
+                "token.balanceOf(this)"
+            ],
+            "block675_0": [
+                "token.transfer(msg.sender, amount)"
+            ],
+            "block1481": [
+                "arnaControl.getPriceWithBonus()"
+            ],
+            "jump2213": [
+                "token.transfer(beneficiary, amount)",
+                "token.transfer(beneficiary, amount)"
+            ],
+            "jump3518": [
+                "token.burn(unsold)",
+                "token.burn(unsold)"
+            ],
+            "jump1948": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "jump1481_1": [
+                "arnaControl.getPriceWithBonus()",
+                "arnaControl.getPriceWithBonus()"
+            ],
+            "jump1481_0": [
+                "arnaControl.getPriceWithBonus()",
+                "arnaControl.getPriceWithBonus()"
+            ],
+            "jump1481_2": [
+                "arnaControl.getPriceWithBonus()",
+                "arnaControl.getPriceWithBonus()"
+            ],
+            "block2520": [
+                "token.balanceOf(this)"
+            ],
+            "block1948": [
+                "token.balanceOf(this)"
+            ],
+            "block3312": [
+                "token.balanceOf(this)"
+            ],
+            "jump2520": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "block410_0": [
+                "token.balanceOf(this)"
+            ],
+            "jump1481": [
+                "arnaControl.getPriceWithBonus()",
+                "arnaControl.getPriceWithBonus()"
+            ],
+            "jump3312": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ]
+        }
+    },
+    "ERC20Basic": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                124,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "ERC20": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                202,
+                75
+            ],
+            "transfer(address,uint256)": [
+                873,
+                273
+            ],
+            "balanceOf(address)": [
+                601,
+                185
+            ],
+            "transferFrom(address,address,uint256)": [
+                346,
+                119
+            ],
+            "allowance(address,address)": [
+                1061,
+                317
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "BasicToken": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transfer(address,uint256)",
+            "balanceOf(address)",
+            "setCrowdsale(ArnaCrowdsale)",
+            "setTransferable(bool)",
+            "isTransferable(address)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "setCrowdsale(ArnaCrowdsale)": {
+                "argument": {},
+                "contract": {}
+            },
+            "setTransferable(bool)": {
+                "argument": {},
+                "contract": {}
+            },
+            "isTransferable(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "setTransferable(bool)": [
+                576,
+                207
+            ],
+            "balanceOf(address)": [
+                268,
+                119
+            ],
+            "transfer(address,uint256)": [
+                623,
+                229
+            ],
+            "transferOwnership(address)": [
+                724,
+                251
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "StandardToken": {
+        "function_list": [
+            "transfer(address,uint256)",
+            "balanceOf(address)",
+            "setCrowdsale(ArnaCrowdsale)",
+            "setTransferable(bool)",
+            "isTransferable(address)",
+            "Ownable()",
+            "transferOwnership(address)",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "increaseApproval(address,uint256)",
+            "decreaseApproval(address,uint256)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "setCrowdsale(ArnaCrowdsale)": {
+                "argument": {},
+                "contract": {}
+            },
+            "setTransferable(bool)": {
+                "argument": {},
+                "contract": {}
+            },
+            "isTransferable(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "increaseApproval(address,uint256)": {
+                "argument": {
+                    "_addedValue": "uint256"
+                },
+                "contract": {}
+            },
+            "decreaseApproval(address,uint256)": {
+                "argument": {
+                    "_subtractedValue": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                213,
+                75
+            ],
+            "setTransferable(bool)": [
+                966,
+                273
+            ],
+            "balanceOf(address)": [
+                658,
+                185
+            ],
+            "allowance(address,address)": [
+                1215,
+                339
+            ],
+            "decreaseApproval(address,uint256)": [
+                557,
+                163
+            ],
+            "increaseApproval(address,uint256)": [
+                1114,
+                317
+            ],
+            "transferFrom(address,address,uint256)": [
+                357,
+                119
+            ],
+            "transfer(address,uint256)": [
+                1013,
+                295
+            ],
+            "transferOwnership(address)": [
+                1334,
+                361
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "BurnableToken": {
+        "function_list": [
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "increaseApproval(address,uint256)",
+            "decreaseApproval(address,uint256)",
+            "transfer(address,uint256)",
+            "balanceOf(address)",
+            "setCrowdsale(ArnaCrowdsale)",
+            "setTransferable(bool)",
+            "isTransferable(address)",
+            "Ownable()",
+            "transferOwnership(address)",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "burn(uint256)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "increaseApproval(address,uint256)": {
+                "argument": {
+                    "_addedValue": "uint256"
+                },
+                "contract": {}
+            },
+            "decreaseApproval(address,uint256)": {
+                "argument": {
+                    "_subtractedValue": "uint256"
+                },
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "setCrowdsale(ArnaCrowdsale)": {
+                "argument": {},
+                "contract": {}
+            },
+            "setTransferable(bool)": {
+                "argument": {},
+                "contract": {}
+            },
+            "isTransferable(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "burn(uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                224,
+                75
+            ],
+            "setTransferable(bool)": [
+                1022,
+                295
+            ],
+            "balanceOf(address)": [
+                714,
+                207
+            ],
+            "burn(uint256)": [
+                501,
+                141
+            ],
+            "allowance(address,address)": [
+                1271,
+                361
+            ],
+            "decreaseApproval(address,uint256)": [
+                613,
+                185
+            ],
+            "increaseApproval(address,uint256)": [
+                1170,
+                339
+            ],
+            "transferFrom(address,address,uint256)": [
+                368,
+                119
+            ],
+            "transfer(address,uint256)": [
+                1069,
+                317
+            ],
+            "transferOwnership(address)": [
+                1390,
+                383
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "ArnaToken": {
+        "function_list": [
+            "burn(uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "increaseApproval(address,uint256)",
+            "decreaseApproval(address,uint256)",
+            "transfer(address,uint256)",
+            "balanceOf(address)",
+            "setCrowdsale(ArnaCrowdsale)",
+            "setTransferable(bool)",
+            "isTransferable(address)",
+            "Ownable()",
+            "transferOwnership(address)",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "init()",
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "burn(uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "INITIAL_SUPPLY": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "INITIAL_SUPPLY": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "INITIAL_SUPPLY": "uint256"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "INITIAL_SUPPLY": "uint256"
+                }
+            },
+            "increaseApproval(address,uint256)": {
+                "argument": {
+                    "_addedValue": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "INITIAL_SUPPLY": "uint256"
+                }
+            },
+            "decreaseApproval(address,uint256)": {
+                "argument": {
+                    "_subtractedValue": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "INITIAL_SUPPLY": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "INITIAL_SUPPLY": "uint256"
+                }
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "INITIAL_SUPPLY": "uint256"
+                }
+            },
+            "setCrowdsale(ArnaCrowdsale)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "INITIAL_SUPPLY": "uint256"
+                }
+            },
+            "setTransferable(bool)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "INITIAL_SUPPLY": "uint256"
+                }
+            },
+            "isTransferable(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "INITIAL_SUPPLY": "uint256"
+                }
+            },
+            "Ownable()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "INITIAL_SUPPLY": "uint256"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "INITIAL_SUPPLY": "uint256"
+                }
+            },
+            "init()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "INITIAL_SUPPLY": "uint256"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "INITIAL_SUPPLY": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                423,
+                97
+            ],
+            "setTransferable(bool)": [
+                1457,
+                383
+            ],
+            "init()": [
+                1825,
+                471
+            ],
+            "burn(uint256)": [
+                792,
+                207
+            ],
+            "balanceOf(address)": [
+                1005,
+                273
+            ],
+            "decreaseApproval(address,uint256)": [
+                904,
+                251
+            ],
+            "increaseApproval(address,uint256)": [
+                1605,
+                427
+            ],
+            "transferFrom(address,address,uint256)": [
+                567,
+                141
+            ],
+            "allowance(address,address)": [
+                1706,
+                449
+            ],
+            "transfer(address,uint256)": [
+                1504,
+                405
+            ],
+            "transferOwnership(address)": [
+                1848,
+                493
+            ]
+        },
+        "block_CALL_mapping": {}
+    }
+}

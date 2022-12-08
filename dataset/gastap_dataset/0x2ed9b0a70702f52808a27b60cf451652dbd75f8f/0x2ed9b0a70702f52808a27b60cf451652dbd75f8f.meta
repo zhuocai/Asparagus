@@ -1,0 +1,219 @@
+{
+    "Ownable": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "ERC20": {
+        "function_list": [
+            "balanceOf(address)",
+            "allowance(address,address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "decimals()"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "decimals()": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                202,
+                75
+            ],
+            "transfer(address,uint256)": [
+                873,
+                273
+            ],
+            "balanceOf(address)": [
+                601,
+                185
+            ],
+            "transferFrom(address,address,uint256)": [
+                346,
+                119
+            ],
+            "allowance(address,address)": [
+                1061,
+                317
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "SilentNotary": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "fallback()",
+            "setRegistrationPrice(uint256)",
+            "setTokenAddress(address)",
+            "makeRegistration(bytes32)",
+            "makePayableRegistration(bytes32)",
+            "makeRegistrationInternal(bytes32)",
+            "exist(bytes32)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {
+                    "price": "uint256"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "price": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "price": "uint256"
+                }
+            },
+            "setRegistrationPrice(uint256)": {
+                "argument": {
+                    "_price": "uint256"
+                },
+                "contract": {
+                    "price": "uint256"
+                }
+            },
+            "setTokenAddress(address)": {
+                "argument": {},
+                "contract": {
+                    "price": "uint256"
+                }
+            },
+            "makeRegistration(bytes32)": {
+                "argument": {
+                    "hash": "bytes32"
+                },
+                "contract": {
+                    "price": "uint256"
+                }
+            },
+            "makePayableRegistration(bytes32)": {
+                "argument": {
+                    "hash": "bytes32"
+                },
+                "contract": {
+                    "price": "uint256"
+                }
+            },
+            "makeRegistrationInternal(bytes32)": {
+                "argument": {
+                    "hash": "bytes32"
+                },
+                "contract": {
+                    "price": "uint256"
+                }
+            },
+            "exist(bytes32)": {
+                "argument": {
+                    "hash": "bytes32"
+                },
+                "contract": {
+                    "price": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "setRegistrationPrice(uint256)": [
+                542,
+                207
+            ],
+            "makePayableRegistration(bytes32)": [
+                363,
+                141
+            ],
+            "makeRegistration(bytes32)": [
+                238,
+                97
+            ],
+            "setTokenAddress(address)": [
+                171,
+                75
+            ],
+            "transferOwnership(address)": [
+                587,
+                229
+            ]
+        },
+        "block_CALL_mapping": {
+            "block1319": [
+                "token.allowance(sender, owner)"
+            ],
+            "jump1678": [
+                "token.transferFrom(sender, owner, price)",
+                "token.transferFrom(sender, owner, price)"
+            ],
+            "block1678": [
+                "token.transferFrom(sender, owner, price)"
+            ],
+            "jump1319": [
+                "token.allowance(sender, owner)",
+                "token.allowance(sender, owner)"
+            ]
+        }
+    }
+}

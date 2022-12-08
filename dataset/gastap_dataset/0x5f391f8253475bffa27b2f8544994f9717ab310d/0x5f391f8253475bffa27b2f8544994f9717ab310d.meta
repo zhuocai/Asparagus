@@ -1,0 +1,981 @@
+{
+    "ERC20Basic": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                124,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "ERC20": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                125,
+                75
+            ],
+            "balanceOf(address)": [
+                402,
+                141
+            ],
+            "allowance(address,address)": [
+                590,
+                185
+            ],
+            "transferFrom(address,address,uint256)": [
+                269,
+                119
+            ],
+            "transfer(address,uint256)": [
+                489,
+                163
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "Ownable": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "ClaimableTokens": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "ClaimableTokens(address)",
+            "claimTokens(address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "ClaimableTokens(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "claimTokens(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                344,
+                141
+            ],
+            "claimTokens(address)": [
+                277,
+                119
+            ]
+        },
+        "block_CALL_mapping": {
+            "block776": [
+                "claimedToken.balanceOf(this)"
+            ],
+            "jump776": [
+                "claimedToken.balanceOf(this)",
+                "claimedToken.balanceOf(this)"
+            ],
+            "block1034": [
+                "claimedToken.transfer(claimedTokensWallet, balance)"
+            ],
+            "jump1034": [
+                "claimedToken.transfer(claimedTokensWallet, balance)",
+                "claimedToken.transfer(claimedTokensWallet, balance)"
+            ]
+        }
+    },
+    "CromToken": {
+        "function_list": [
+            "ClaimableTokens(address)",
+            "claimTokens(address)",
+            "Ownable()",
+            "transferOwnership(address)",
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "CromToken()",
+            "transfer(address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "balanceOf(address)",
+            "transferFrom(address,address,uint256)",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "ClaimableTokens(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "INITIAL_SUPPLY": "uint256"
+                }
+            },
+            "claimTokens(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "INITIAL_SUPPLY": "uint256"
+                }
+            },
+            "Ownable()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "INITIAL_SUPPLY": "uint256"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "INITIAL_SUPPLY": "uint256"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "INITIAL_SUPPLY": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "INITIAL_SUPPLY": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "INITIAL_SUPPLY": "uint256"
+                }
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "INITIAL_SUPPLY": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "INITIAL_SUPPLY": "uint256"
+                }
+            },
+            "CromToken()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "INITIAL_SUPPLY": "uint256"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "INITIAL_SUPPLY": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                357,
+                97
+            ],
+            "balanceOf(address)": [
+                3897,
+                847
+            ],
+            "claimTokens(address)": [
+                1351,
+                339
+            ],
+            "transferFrom(address,address,uint256)": [
+                588,
+                163
+            ],
+            "allowance(address,address)": [
+                1232,
+                317
+            ],
+            "transfer(address,uint256)": [
+                4155,
+                996
+            ],
+            "transferOwnership(address)": [
+                1418,
+                361
+            ]
+        },
+        "block_CALL_mapping": {
+            "block4155": [
+                "claimedToken.transfer(claimedTokensWallet, balance)"
+            ],
+            "jump4155": [
+                "claimedToken.transfer(claimedTokensWallet, balance)",
+                "claimedToken.transfer(claimedTokensWallet, balance)"
+            ],
+            "jump3897": [
+                "claimedToken.balanceOf(this)",
+                "claimedToken.balanceOf(this)"
+            ],
+            "block3897": [
+                "claimedToken.balanceOf(this)"
+            ]
+        }
+    },
+    "CromIco": {
+        "function_list": [
+            "ClaimableTokens(address)",
+            "claimTokens(address)",
+            "Ownable()",
+            "transferOwnership(address)",
+            "CromIco(address,address)",
+            "fallback()",
+            "buyTokens()",
+            "verifyTargetWallet()",
+            "addPreIcoMembers(address[])",
+            "removePreIcoMembers(address[])",
+            "isPreIcoActive()",
+            "isPublicIcoActive()",
+            "hasEnded()",
+            "softCapReached()",
+            "withdrawFunds()",
+            "finalizeIco()",
+            "withdrawUnsoldTokens()",
+            "pause()",
+            "resume()",
+            "changeTargetWallet(address)",
+            "calculateTokensAmount(uint256)",
+            "getCurrentStage()",
+            "getPayableStage()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "ClaimableTokens(address)": {
+                "argument": {},
+                "contract": {
+                    "preStartTime": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "SOFT_CAP": "uint256",
+                    "HARD_CAP": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "BONUS_BATCH": "uint256",
+                    "BONUS_PERCENTAGE": "uint256",
+                    "MINIMAL_PRE_ICO_INVESTMENT": "uint256",
+                    "PRE_DURATION": "uint256",
+                    "DURATION": "uint256",
+                    "amountRaised": "uint256",
+                    "tokensSold": "uint256"
+                }
+            },
+            "claimTokens(address)": {
+                "argument": {},
+                "contract": {
+                    "preStartTime": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "SOFT_CAP": "uint256",
+                    "HARD_CAP": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "BONUS_BATCH": "uint256",
+                    "BONUS_PERCENTAGE": "uint256",
+                    "MINIMAL_PRE_ICO_INVESTMENT": "uint256",
+                    "PRE_DURATION": "uint256",
+                    "DURATION": "uint256",
+                    "amountRaised": "uint256",
+                    "tokensSold": "uint256"
+                }
+            },
+            "Ownable()": {
+                "argument": {},
+                "contract": {
+                    "preStartTime": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "SOFT_CAP": "uint256",
+                    "HARD_CAP": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "BONUS_BATCH": "uint256",
+                    "BONUS_PERCENTAGE": "uint256",
+                    "MINIMAL_PRE_ICO_INVESTMENT": "uint256",
+                    "PRE_DURATION": "uint256",
+                    "DURATION": "uint256",
+                    "amountRaised": "uint256",
+                    "tokensSold": "uint256"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "preStartTime": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "SOFT_CAP": "uint256",
+                    "HARD_CAP": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "BONUS_BATCH": "uint256",
+                    "BONUS_PERCENTAGE": "uint256",
+                    "MINIMAL_PRE_ICO_INVESTMENT": "uint256",
+                    "PRE_DURATION": "uint256",
+                    "DURATION": "uint256",
+                    "amountRaised": "uint256",
+                    "tokensSold": "uint256"
+                }
+            },
+            "CromIco(address,address)": {
+                "argument": {},
+                "contract": {
+                    "preStartTime": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "SOFT_CAP": "uint256",
+                    "HARD_CAP": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "BONUS_BATCH": "uint256",
+                    "BONUS_PERCENTAGE": "uint256",
+                    "MINIMAL_PRE_ICO_INVESTMENT": "uint256",
+                    "PRE_DURATION": "uint256",
+                    "DURATION": "uint256",
+                    "amountRaised": "uint256",
+                    "tokensSold": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "preStartTime": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "SOFT_CAP": "uint256",
+                    "HARD_CAP": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "BONUS_BATCH": "uint256",
+                    "BONUS_PERCENTAGE": "uint256",
+                    "MINIMAL_PRE_ICO_INVESTMENT": "uint256",
+                    "PRE_DURATION": "uint256",
+                    "DURATION": "uint256",
+                    "amountRaised": "uint256",
+                    "tokensSold": "uint256"
+                }
+            },
+            "buyTokens()": {
+                "argument": {},
+                "contract": {
+                    "preStartTime": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "SOFT_CAP": "uint256",
+                    "HARD_CAP": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "BONUS_BATCH": "uint256",
+                    "BONUS_PERCENTAGE": "uint256",
+                    "MINIMAL_PRE_ICO_INVESTMENT": "uint256",
+                    "PRE_DURATION": "uint256",
+                    "DURATION": "uint256",
+                    "amountRaised": "uint256",
+                    "tokensSold": "uint256"
+                }
+            },
+            "verifyTargetWallet()": {
+                "argument": {},
+                "contract": {
+                    "preStartTime": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "SOFT_CAP": "uint256",
+                    "HARD_CAP": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "BONUS_BATCH": "uint256",
+                    "BONUS_PERCENTAGE": "uint256",
+                    "MINIMAL_PRE_ICO_INVESTMENT": "uint256",
+                    "PRE_DURATION": "uint256",
+                    "DURATION": "uint256",
+                    "amountRaised": "uint256",
+                    "tokensSold": "uint256"
+                }
+            },
+            "addPreIcoMembers(address[])": {
+                "argument": {
+                    "members": "address[]"
+                },
+                "contract": {
+                    "preStartTime": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "SOFT_CAP": "uint256",
+                    "HARD_CAP": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "BONUS_BATCH": "uint256",
+                    "BONUS_PERCENTAGE": "uint256",
+                    "MINIMAL_PRE_ICO_INVESTMENT": "uint256",
+                    "PRE_DURATION": "uint256",
+                    "DURATION": "uint256",
+                    "amountRaised": "uint256",
+                    "tokensSold": "uint256"
+                }
+            },
+            "removePreIcoMembers(address[])": {
+                "argument": {
+                    "members": "address[]"
+                },
+                "contract": {
+                    "preStartTime": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "SOFT_CAP": "uint256",
+                    "HARD_CAP": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "BONUS_BATCH": "uint256",
+                    "BONUS_PERCENTAGE": "uint256",
+                    "MINIMAL_PRE_ICO_INVESTMENT": "uint256",
+                    "PRE_DURATION": "uint256",
+                    "DURATION": "uint256",
+                    "amountRaised": "uint256",
+                    "tokensSold": "uint256"
+                }
+            },
+            "isPreIcoActive()": {
+                "argument": {},
+                "contract": {
+                    "preStartTime": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "SOFT_CAP": "uint256",
+                    "HARD_CAP": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "BONUS_BATCH": "uint256",
+                    "BONUS_PERCENTAGE": "uint256",
+                    "MINIMAL_PRE_ICO_INVESTMENT": "uint256",
+                    "PRE_DURATION": "uint256",
+                    "DURATION": "uint256",
+                    "amountRaised": "uint256",
+                    "tokensSold": "uint256"
+                }
+            },
+            "isPublicIcoActive()": {
+                "argument": {},
+                "contract": {
+                    "preStartTime": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "SOFT_CAP": "uint256",
+                    "HARD_CAP": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "BONUS_BATCH": "uint256",
+                    "BONUS_PERCENTAGE": "uint256",
+                    "MINIMAL_PRE_ICO_INVESTMENT": "uint256",
+                    "PRE_DURATION": "uint256",
+                    "DURATION": "uint256",
+                    "amountRaised": "uint256",
+                    "tokensSold": "uint256"
+                }
+            },
+            "hasEnded()": {
+                "argument": {},
+                "contract": {
+                    "preStartTime": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "SOFT_CAP": "uint256",
+                    "HARD_CAP": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "BONUS_BATCH": "uint256",
+                    "BONUS_PERCENTAGE": "uint256",
+                    "MINIMAL_PRE_ICO_INVESTMENT": "uint256",
+                    "PRE_DURATION": "uint256",
+                    "DURATION": "uint256",
+                    "amountRaised": "uint256",
+                    "tokensSold": "uint256"
+                }
+            },
+            "softCapReached()": {
+                "argument": {},
+                "contract": {
+                    "preStartTime": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "SOFT_CAP": "uint256",
+                    "HARD_CAP": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "BONUS_BATCH": "uint256",
+                    "BONUS_PERCENTAGE": "uint256",
+                    "MINIMAL_PRE_ICO_INVESTMENT": "uint256",
+                    "PRE_DURATION": "uint256",
+                    "DURATION": "uint256",
+                    "amountRaised": "uint256",
+                    "tokensSold": "uint256"
+                }
+            },
+            "withdrawFunds()": {
+                "argument": {},
+                "contract": {
+                    "preStartTime": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "SOFT_CAP": "uint256",
+                    "HARD_CAP": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "BONUS_BATCH": "uint256",
+                    "BONUS_PERCENTAGE": "uint256",
+                    "MINIMAL_PRE_ICO_INVESTMENT": "uint256",
+                    "PRE_DURATION": "uint256",
+                    "DURATION": "uint256",
+                    "amountRaised": "uint256",
+                    "tokensSold": "uint256"
+                }
+            },
+            "finalizeIco()": {
+                "argument": {},
+                "contract": {
+                    "preStartTime": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "SOFT_CAP": "uint256",
+                    "HARD_CAP": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "BONUS_BATCH": "uint256",
+                    "BONUS_PERCENTAGE": "uint256",
+                    "MINIMAL_PRE_ICO_INVESTMENT": "uint256",
+                    "PRE_DURATION": "uint256",
+                    "DURATION": "uint256",
+                    "amountRaised": "uint256",
+                    "tokensSold": "uint256"
+                }
+            },
+            "withdrawUnsoldTokens()": {
+                "argument": {},
+                "contract": {
+                    "preStartTime": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "SOFT_CAP": "uint256",
+                    "HARD_CAP": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "BONUS_BATCH": "uint256",
+                    "BONUS_PERCENTAGE": "uint256",
+                    "MINIMAL_PRE_ICO_INVESTMENT": "uint256",
+                    "PRE_DURATION": "uint256",
+                    "DURATION": "uint256",
+                    "amountRaised": "uint256",
+                    "tokensSold": "uint256"
+                }
+            },
+            "pause()": {
+                "argument": {},
+                "contract": {
+                    "preStartTime": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "SOFT_CAP": "uint256",
+                    "HARD_CAP": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "BONUS_BATCH": "uint256",
+                    "BONUS_PERCENTAGE": "uint256",
+                    "MINIMAL_PRE_ICO_INVESTMENT": "uint256",
+                    "PRE_DURATION": "uint256",
+                    "DURATION": "uint256",
+                    "amountRaised": "uint256",
+                    "tokensSold": "uint256"
+                }
+            },
+            "resume()": {
+                "argument": {},
+                "contract": {
+                    "preStartTime": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "SOFT_CAP": "uint256",
+                    "HARD_CAP": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "BONUS_BATCH": "uint256",
+                    "BONUS_PERCENTAGE": "uint256",
+                    "MINIMAL_PRE_ICO_INVESTMENT": "uint256",
+                    "PRE_DURATION": "uint256",
+                    "DURATION": "uint256",
+                    "amountRaised": "uint256",
+                    "tokensSold": "uint256"
+                }
+            },
+            "changeTargetWallet(address)": {
+                "argument": {},
+                "contract": {
+                    "preStartTime": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "SOFT_CAP": "uint256",
+                    "HARD_CAP": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "BONUS_BATCH": "uint256",
+                    "BONUS_PERCENTAGE": "uint256",
+                    "MINIMAL_PRE_ICO_INVESTMENT": "uint256",
+                    "PRE_DURATION": "uint256",
+                    "DURATION": "uint256",
+                    "amountRaised": "uint256",
+                    "tokensSold": "uint256"
+                }
+            },
+            "calculateTokensAmount(uint256)": {
+                "argument": {
+                    "funds": "uint256"
+                },
+                "contract": {
+                    "preStartTime": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "SOFT_CAP": "uint256",
+                    "HARD_CAP": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "BONUS_BATCH": "uint256",
+                    "BONUS_PERCENTAGE": "uint256",
+                    "MINIMAL_PRE_ICO_INVESTMENT": "uint256",
+                    "PRE_DURATION": "uint256",
+                    "DURATION": "uint256",
+                    "amountRaised": "uint256",
+                    "tokensSold": "uint256"
+                }
+            },
+            "getCurrentStage()": {
+                "argument": {},
+                "contract": {
+                    "preStartTime": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "SOFT_CAP": "uint256",
+                    "HARD_CAP": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "BONUS_BATCH": "uint256",
+                    "BONUS_PERCENTAGE": "uint256",
+                    "MINIMAL_PRE_ICO_INVESTMENT": "uint256",
+                    "PRE_DURATION": "uint256",
+                    "DURATION": "uint256",
+                    "amountRaised": "uint256",
+                    "tokensSold": "uint256"
+                }
+            },
+            "getPayableStage()": {
+                "argument": {},
+                "contract": {
+                    "preStartTime": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "SOFT_CAP": "uint256",
+                    "HARD_CAP": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "BONUS_BATCH": "uint256",
+                    "BONUS_PERCENTAGE": "uint256",
+                    "MINIMAL_PRE_ICO_INVESTMENT": "uint256",
+                    "PRE_DURATION": "uint256",
+                    "DURATION": "uint256",
+                    "amountRaised": "uint256",
+                    "tokensSold": "uint256"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "preStartTime": "uint256",
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "SOFT_CAP": "uint256",
+                    "HARD_CAP": "uint256",
+                    "TOKEN_PRICE": "uint256",
+                    "BONUS_BATCH": "uint256",
+                    "BONUS_PERCENTAGE": "uint256",
+                    "MINIMAL_PRE_ICO_INVESTMENT": "uint256",
+                    "PRE_DURATION": "uint256",
+                    "DURATION": "uint256",
+                    "amountRaised": "uint256",
+                    "tokensSold": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "addPreIcoMembers(address[])": [
+                2004,
+                713
+            ],
+            "claimTokens(address)": [
+                2172,
+                779
+            ],
+            "withdrawFunds()": [
+                898,
+                229
+            ],
+            "finalizeIco()": [
+                1804,
+                625
+            ],
+            "isPublicIcoActive()": [
+                1518,
+                493
+            ],
+            "pause()": [
+                1694,
+                581
+            ],
+            "removePreIcoMembers(address[])": [
+                552,
+                119
+            ],
+            "hasEnded()": [
+                2239,
+                801
+            ],
+            "withdrawUnsoldTokens()": [
+                2106,
+                735
+            ],
+            "verifyTargetWallet()": [
+                529,
+                97
+            ],
+            "isPreIcoActive()": [
+                808,
+                185
+            ],
+            "transferOwnership(address)": [
+                2286,
+                823
+            ],
+            "resume()": [
+                506,
+                75
+            ],
+            "changeTargetWallet(address)": [
+                741,
+                163
+            ],
+            "softCapReached()": [
+                945,
+                251
+            ]
+        },
+        "block_CALL_mapping": {
+            "block3586_0": [
+                "token.transfer(msg.sender, tokens)"
+            ],
+            "jump6624": [
+                "token.transfer(targetWallet, token.balanceOf(this))",
+                "token.transfer(targetWallet, token.balanceOf(this))"
+            ],
+            "block7246": [
+                "claimedToken.transfer(claimedTokensWallet, balance)"
+            ],
+            "block6988": [
+                "claimedToken.balanceOf(this)"
+            ],
+            "block2845_0": [
+                "token.balanceOf(this)"
+            ],
+            "jump2845_0": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "block2845": [
+                "token.balanceOf(this)"
+            ],
+            "block4754": [
+                "msg.sender.transfer(balance)"
+            ],
+            "block6432": [
+                "token.balanceOf(this)"
+            ],
+            "jump5573": [
+                "targetWallet.transfer(this.balance)",
+                "targetWallet.transfer(this.balance)"
+            ],
+            "jump3586": [
+                "token.transfer(msg.sender, tokens)",
+                "token.transfer(msg.sender, tokens)"
+            ],
+            "jump3586_0": [
+                "token.transfer(msg.sender, tokens)",
+                "token.transfer(msg.sender, tokens)"
+            ],
+            "block6624": [
+                "token.transfer(targetWallet, token.balanceOf(this))"
+            ],
+            "jump4754": [
+                "msg.sender.transfer(balance)",
+                "msg.sender.transfer(balance)"
+            ],
+            "block5573": [
+                "targetWallet.transfer(this.balance)"
+            ],
+            "jump6988": [
+                "claimedToken.balanceOf(this)",
+                "claimedToken.balanceOf(this)"
+            ],
+            "jump7246": [
+                "claimedToken.transfer(claimedTokensWallet, balance)",
+                "claimedToken.transfer(claimedTokensWallet, balance)"
+            ],
+            "jump2845": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "block3586": [
+                "token.transfer(msg.sender, tokens)"
+            ],
+            "jump6432": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ]
+        }
+    }
+}

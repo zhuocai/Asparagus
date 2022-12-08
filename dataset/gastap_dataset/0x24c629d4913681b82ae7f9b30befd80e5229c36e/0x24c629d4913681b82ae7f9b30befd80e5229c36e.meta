@@ -1,0 +1,1430 @@
+{
+    "Ownership": {
+        "function_list": [
+            "isOwner(address)",
+            "getOwner()",
+            "Ownership()",
+            "isOwner(address)",
+            "getOwner()"
+        ],
+        "initial_state": {
+            "isOwner(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "getOwner()": {
+                "argument": {},
+                "contract": {}
+            },
+            "Ownership()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "isOwner(address)": [
+                81,
+                75
+            ],
+            "getOwner()": [
+                172,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "IToken": {
+        "function_list": [
+            "totalSupply()",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)"
+        ],
+        "initial_state": {
+            "totalSupply()": {
+                "argument": {},
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                319,
+                119
+            ],
+            "totalSupply()": [
+                147,
+                75
+            ],
+            "allowance(address,address)": [
+                901,
+                207
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "TokenRetriever": {
+        "function_list": [
+            "retrieveTokens(address)",
+            "retrieveTokens(address)"
+        ],
+        "initial_state": {
+            "retrieveTokens(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "retrieveTokens(address)": [
+                70,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "block298": [
+                "tokenInstance.balanceOf(this)"
+            ],
+            "block531": [
+                "tokenInstance.transfer(msg.sender, tokenBalance)"
+            ],
+            "jump531": [
+                "tokenInstance.transfer(msg.sender, tokenBalance)",
+                "tokenInstance.transfer(msg.sender, tokenBalance)"
+            ],
+            "jump298": [
+                "tokenInstance.balanceOf(this)",
+                "tokenInstance.balanceOf(this)"
+            ]
+        }
+    },
+    "PersonalCrowdsaleProxy": {
+        "function_list": [
+            "fallback()",
+            "PersonalCrowdsaleProxy(address,address)",
+            "fallback()"
+        ],
+        "initial_state": {
+            "fallback()": {
+                "argument": {},
+                "contract": {}
+            },
+            "PersonalCrowdsaleProxy(address,address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {
+            "block298": [
+                "target.contributeFor.value(msg.value)(owner)"
+            ],
+            "jump298_0": [
+                "target.contributeFor.value(msg.value)(owner)",
+                "target.contributeFor.value(msg.value)(owner)"
+            ],
+            "jump298": [
+                "target.contributeFor.value(msg.value)(owner)",
+                "target.contributeFor.value(msg.value)(owner)"
+            ],
+            "block298_0": [
+                "target.contributeFor.value(msg.value)(owner)"
+            ]
+        }
+    },
+    "CrowdsaleProxy": {
+        "function_list": [
+            "fallback()",
+            "contribute()",
+            "contributeFor(address)",
+            "CrowdsaleProxy(address,address)",
+            "fallback()",
+            "contribute()",
+            "contributeFor(address)"
+        ],
+        "initial_state": {
+            "fallback()": {
+                "argument": {},
+                "contract": {}
+            },
+            "contribute()": {
+                "argument": {},
+                "contract": {}
+            },
+            "contributeFor(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "CrowdsaleProxy(address,address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "contribute()": [
+                598,
+                141
+            ],
+            "contributeFor(address)": [
+                287,
+                1068
+            ]
+        },
+        "block_CALL_mapping": {
+            "block287_0": [
+                "target.contributeFor.value(msg.value)(msg.sender)"
+            ],
+            "jump287": [
+                "target.contributeFor.value(msg.value)(msg.sender)",
+                "target.contributeFor.value(msg.value)(msg.sender)"
+            ],
+            "jump819": [
+                "target.contributeFor.value(msg.value)(_beneficiary)",
+                "target.contributeFor.value(msg.value)(_beneficiary)"
+            ],
+            "block1151": [
+                "target.contributeFor.value(msg.value)(msg.sender)"
+            ],
+            "block287": [
+                "target.contributeFor.value(msg.value)(msg.sender)"
+            ],
+            "jump287_0": [
+                "target.contributeFor.value(msg.value)(msg.sender)",
+                "target.contributeFor.value(msg.value)(msg.sender)"
+            ],
+            "block819": [
+                "target.contributeFor.value(msg.value)(_beneficiary)"
+            ],
+            "jump1151": [
+                "target.contributeFor.value(msg.value)(msg.sender)",
+                "target.contributeFor.value(msg.value)(msg.sender)"
+            ]
+        }
+    },
+    "Crowdsale": {
+        "function_list": [
+            "Ownership()",
+            "isOwner(address)",
+            "getOwner()",
+            "isOwner(address)",
+            "getOwner()",
+            "isInPresalePhase()",
+            "isEnded()",
+            "hasBalance(address,uint256)",
+            "balanceOf(address)",
+            "ethBalanceOf(address)",
+            "refundableEthBalanceOf(address)",
+            "getRate(uint256,uint256)",
+            "toTokens(uint256,uint256)",
+            "fallback()",
+            "contribute()",
+            "contributeFor(address)",
+            "withdrawTokens()",
+            "withdrawEther()",
+            "refund()",
+            "isAcceptedContributor(address)",
+            "Crowdsale()",
+            "setup(uint256,address,uint256,uint256,uint256,uint256,uint256,uint256,uint256,uint256)",
+            "setupPhases(uint256,uint256[],uint256[],uint256[],bool[])",
+            "setupStakeholders(address[],uint256[],uint256[],bool[],uint256[],uint256[],uint256[])",
+            "setupVolumeMultipliers(uint256[],uint256[],uint256[])",
+            "deploy()",
+            "createDepositAddress()",
+            "createDepositAddressFor(address)",
+            "createPersonalDepositAddress()",
+            "createPersonalDepositAddressFor(address)",
+            "confirmBeneficiary()",
+            "isInPresalePhase()",
+            "isEnded()",
+            "hasBalance(address,uint256)",
+            "balanceOf(address)",
+            "ethBalanceOf(address)",
+            "refundableEthBalanceOf(address)",
+            "getCurrentPhase()",
+            "getRate(uint256,uint256)",
+            "getDistributionData(uint256,uint256)",
+            "toTokens(uint256,uint256)",
+            "fallback()",
+            "contribute()",
+            "contributeFor(address)",
+            "endCrowdsale()",
+            "withdrawTokens()",
+            "withdrawEther()",
+            "refund()",
+            "destroy()",
+            "_handleTransaction(address,uint256)",
+            "_handlePresaleTransaction(address,uint256)",
+            "_handlePublicsaleTransaction(address,uint256)",
+            "_distributeTokens(address,uint256,uint256)",
+            "_allocateEth(address,uint256,uint256)",
+            "_allocateTokens(address,uint256,uint256)",
+            "_allocateStakeholdersEth(uint256,uint256)",
+            "_allocateStakeholdersTokens(uint256,uint256)"
+        ],
+        "initial_state": {
+            "Ownership()": {
+                "argument": {},
+                "contract": {
+                    "baseRate": "uint256",
+                    "minAmount": "uint256",
+                    "maxAmount": "uint256",
+                    "minAcceptedAmount": "uint256",
+                    "minAmountPresale": "uint256",
+                    "maxAmountPresale": "uint256",
+                    "minAcceptedAmountPresale": "uint256",
+                    "percentageDenominator": "uint256",
+                    "tokenDenominator": "uint256",
+                    "start": "uint256",
+                    "presaleEnd": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "raised": "uint256",
+                    "allocatedEth": "uint256",
+                    "allocatedTokens": "uint256",
+                    "allocatedIndex": "mapping(address => uint256[])",
+                    "stakeholderPercentagesIndex": "address[]",
+                    "stakeholdersPayouts": "Crowdsale.Payout[]",
+                    "phases": "Crowdsale.Phase[]",
+                    "volumeMultiplierThresholds": "uint256[]"
+                }
+            },
+            "isOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "baseRate": "uint256",
+                    "minAmount": "uint256",
+                    "maxAmount": "uint256",
+                    "minAcceptedAmount": "uint256",
+                    "minAmountPresale": "uint256",
+                    "maxAmountPresale": "uint256",
+                    "minAcceptedAmountPresale": "uint256",
+                    "percentageDenominator": "uint256",
+                    "tokenDenominator": "uint256",
+                    "start": "uint256",
+                    "presaleEnd": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "raised": "uint256",
+                    "allocatedEth": "uint256",
+                    "allocatedTokens": "uint256",
+                    "allocatedIndex": "mapping(address => uint256[])",
+                    "stakeholderPercentagesIndex": "address[]",
+                    "stakeholdersPayouts": "Crowdsale.Payout[]",
+                    "phases": "Crowdsale.Phase[]",
+                    "volumeMultiplierThresholds": "uint256[]"
+                }
+            },
+            "getOwner()": {
+                "argument": {},
+                "contract": {
+                    "baseRate": "uint256",
+                    "minAmount": "uint256",
+                    "maxAmount": "uint256",
+                    "minAcceptedAmount": "uint256",
+                    "minAmountPresale": "uint256",
+                    "maxAmountPresale": "uint256",
+                    "minAcceptedAmountPresale": "uint256",
+                    "percentageDenominator": "uint256",
+                    "tokenDenominator": "uint256",
+                    "start": "uint256",
+                    "presaleEnd": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "raised": "uint256",
+                    "allocatedEth": "uint256",
+                    "allocatedTokens": "uint256",
+                    "allocatedIndex": "mapping(address => uint256[])",
+                    "stakeholderPercentagesIndex": "address[]",
+                    "stakeholdersPayouts": "Crowdsale.Payout[]",
+                    "phases": "Crowdsale.Phase[]",
+                    "volumeMultiplierThresholds": "uint256[]"
+                }
+            },
+            "isInPresalePhase()": {
+                "argument": {},
+                "contract": {
+                    "baseRate": "uint256",
+                    "minAmount": "uint256",
+                    "maxAmount": "uint256",
+                    "minAcceptedAmount": "uint256",
+                    "minAmountPresale": "uint256",
+                    "maxAmountPresale": "uint256",
+                    "minAcceptedAmountPresale": "uint256",
+                    "percentageDenominator": "uint256",
+                    "tokenDenominator": "uint256",
+                    "start": "uint256",
+                    "presaleEnd": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "raised": "uint256",
+                    "allocatedEth": "uint256",
+                    "allocatedTokens": "uint256",
+                    "allocatedIndex": "mapping(address => uint256[])",
+                    "stakeholderPercentagesIndex": "address[]",
+                    "stakeholdersPayouts": "Crowdsale.Payout[]",
+                    "phases": "Crowdsale.Phase[]",
+                    "volumeMultiplierThresholds": "uint256[]"
+                }
+            },
+            "isEnded()": {
+                "argument": {},
+                "contract": {
+                    "baseRate": "uint256",
+                    "minAmount": "uint256",
+                    "maxAmount": "uint256",
+                    "minAcceptedAmount": "uint256",
+                    "minAmountPresale": "uint256",
+                    "maxAmountPresale": "uint256",
+                    "minAcceptedAmountPresale": "uint256",
+                    "percentageDenominator": "uint256",
+                    "tokenDenominator": "uint256",
+                    "start": "uint256",
+                    "presaleEnd": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "raised": "uint256",
+                    "allocatedEth": "uint256",
+                    "allocatedTokens": "uint256",
+                    "allocatedIndex": "mapping(address => uint256[])",
+                    "stakeholderPercentagesIndex": "address[]",
+                    "stakeholdersPayouts": "Crowdsale.Payout[]",
+                    "phases": "Crowdsale.Phase[]",
+                    "volumeMultiplierThresholds": "uint256[]"
+                }
+            },
+            "hasBalance(address,uint256)": {
+                "argument": {
+                    "_releaseDate": "uint256"
+                },
+                "contract": {
+                    "baseRate": "uint256",
+                    "minAmount": "uint256",
+                    "maxAmount": "uint256",
+                    "minAcceptedAmount": "uint256",
+                    "minAmountPresale": "uint256",
+                    "maxAmountPresale": "uint256",
+                    "minAcceptedAmountPresale": "uint256",
+                    "percentageDenominator": "uint256",
+                    "tokenDenominator": "uint256",
+                    "start": "uint256",
+                    "presaleEnd": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "raised": "uint256",
+                    "allocatedEth": "uint256",
+                    "allocatedTokens": "uint256",
+                    "allocatedIndex": "mapping(address => uint256[])",
+                    "stakeholderPercentagesIndex": "address[]",
+                    "stakeholdersPayouts": "Crowdsale.Payout[]",
+                    "phases": "Crowdsale.Phase[]",
+                    "volumeMultiplierThresholds": "uint256[]"
+                }
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "baseRate": "uint256",
+                    "minAmount": "uint256",
+                    "maxAmount": "uint256",
+                    "minAcceptedAmount": "uint256",
+                    "minAmountPresale": "uint256",
+                    "maxAmountPresale": "uint256",
+                    "minAcceptedAmountPresale": "uint256",
+                    "percentageDenominator": "uint256",
+                    "tokenDenominator": "uint256",
+                    "start": "uint256",
+                    "presaleEnd": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "raised": "uint256",
+                    "allocatedEth": "uint256",
+                    "allocatedTokens": "uint256",
+                    "allocatedIndex": "mapping(address => uint256[])",
+                    "stakeholderPercentagesIndex": "address[]",
+                    "stakeholdersPayouts": "Crowdsale.Payout[]",
+                    "phases": "Crowdsale.Phase[]",
+                    "volumeMultiplierThresholds": "uint256[]"
+                }
+            },
+            "ethBalanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "baseRate": "uint256",
+                    "minAmount": "uint256",
+                    "maxAmount": "uint256",
+                    "minAcceptedAmount": "uint256",
+                    "minAmountPresale": "uint256",
+                    "maxAmountPresale": "uint256",
+                    "minAcceptedAmountPresale": "uint256",
+                    "percentageDenominator": "uint256",
+                    "tokenDenominator": "uint256",
+                    "start": "uint256",
+                    "presaleEnd": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "raised": "uint256",
+                    "allocatedEth": "uint256",
+                    "allocatedTokens": "uint256",
+                    "allocatedIndex": "mapping(address => uint256[])",
+                    "stakeholderPercentagesIndex": "address[]",
+                    "stakeholdersPayouts": "Crowdsale.Payout[]",
+                    "phases": "Crowdsale.Phase[]",
+                    "volumeMultiplierThresholds": "uint256[]"
+                }
+            },
+            "refundableEthBalanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "baseRate": "uint256",
+                    "minAmount": "uint256",
+                    "maxAmount": "uint256",
+                    "minAcceptedAmount": "uint256",
+                    "minAmountPresale": "uint256",
+                    "maxAmountPresale": "uint256",
+                    "minAcceptedAmountPresale": "uint256",
+                    "percentageDenominator": "uint256",
+                    "tokenDenominator": "uint256",
+                    "start": "uint256",
+                    "presaleEnd": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "raised": "uint256",
+                    "allocatedEth": "uint256",
+                    "allocatedTokens": "uint256",
+                    "allocatedIndex": "mapping(address => uint256[])",
+                    "stakeholderPercentagesIndex": "address[]",
+                    "stakeholdersPayouts": "Crowdsale.Payout[]",
+                    "phases": "Crowdsale.Phase[]",
+                    "volumeMultiplierThresholds": "uint256[]"
+                }
+            },
+            "getRate(uint256,uint256)": {
+                "argument": {
+                    "_phase": "uint256",
+                    "_volume": "uint256"
+                },
+                "contract": {
+                    "baseRate": "uint256",
+                    "minAmount": "uint256",
+                    "maxAmount": "uint256",
+                    "minAcceptedAmount": "uint256",
+                    "minAmountPresale": "uint256",
+                    "maxAmountPresale": "uint256",
+                    "minAcceptedAmountPresale": "uint256",
+                    "percentageDenominator": "uint256",
+                    "tokenDenominator": "uint256",
+                    "start": "uint256",
+                    "presaleEnd": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "raised": "uint256",
+                    "allocatedEth": "uint256",
+                    "allocatedTokens": "uint256",
+                    "allocatedIndex": "mapping(address => uint256[])",
+                    "stakeholderPercentagesIndex": "address[]",
+                    "stakeholdersPayouts": "Crowdsale.Payout[]",
+                    "phases": "Crowdsale.Phase[]",
+                    "volumeMultiplierThresholds": "uint256[]"
+                }
+            },
+            "toTokens(uint256,uint256)": {
+                "argument": {
+                    "_wei": "uint256",
+                    "_rate": "uint256"
+                },
+                "contract": {
+                    "baseRate": "uint256",
+                    "minAmount": "uint256",
+                    "maxAmount": "uint256",
+                    "minAcceptedAmount": "uint256",
+                    "minAmountPresale": "uint256",
+                    "maxAmountPresale": "uint256",
+                    "minAcceptedAmountPresale": "uint256",
+                    "percentageDenominator": "uint256",
+                    "tokenDenominator": "uint256",
+                    "start": "uint256",
+                    "presaleEnd": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "raised": "uint256",
+                    "allocatedEth": "uint256",
+                    "allocatedTokens": "uint256",
+                    "allocatedIndex": "mapping(address => uint256[])",
+                    "stakeholderPercentagesIndex": "address[]",
+                    "stakeholdersPayouts": "Crowdsale.Payout[]",
+                    "phases": "Crowdsale.Phase[]",
+                    "volumeMultiplierThresholds": "uint256[]"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "baseRate": "uint256",
+                    "minAmount": "uint256",
+                    "maxAmount": "uint256",
+                    "minAcceptedAmount": "uint256",
+                    "minAmountPresale": "uint256",
+                    "maxAmountPresale": "uint256",
+                    "minAcceptedAmountPresale": "uint256",
+                    "percentageDenominator": "uint256",
+                    "tokenDenominator": "uint256",
+                    "start": "uint256",
+                    "presaleEnd": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "raised": "uint256",
+                    "allocatedEth": "uint256",
+                    "allocatedTokens": "uint256",
+                    "allocatedIndex": "mapping(address => uint256[])",
+                    "stakeholderPercentagesIndex": "address[]",
+                    "stakeholdersPayouts": "Crowdsale.Payout[]",
+                    "phases": "Crowdsale.Phase[]",
+                    "volumeMultiplierThresholds": "uint256[]"
+                }
+            },
+            "contribute()": {
+                "argument": {},
+                "contract": {
+                    "baseRate": "uint256",
+                    "minAmount": "uint256",
+                    "maxAmount": "uint256",
+                    "minAcceptedAmount": "uint256",
+                    "minAmountPresale": "uint256",
+                    "maxAmountPresale": "uint256",
+                    "minAcceptedAmountPresale": "uint256",
+                    "percentageDenominator": "uint256",
+                    "tokenDenominator": "uint256",
+                    "start": "uint256",
+                    "presaleEnd": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "raised": "uint256",
+                    "allocatedEth": "uint256",
+                    "allocatedTokens": "uint256",
+                    "allocatedIndex": "mapping(address => uint256[])",
+                    "stakeholderPercentagesIndex": "address[]",
+                    "stakeholdersPayouts": "Crowdsale.Payout[]",
+                    "phases": "Crowdsale.Phase[]",
+                    "volumeMultiplierThresholds": "uint256[]"
+                }
+            },
+            "contributeFor(address)": {
+                "argument": {},
+                "contract": {
+                    "baseRate": "uint256",
+                    "minAmount": "uint256",
+                    "maxAmount": "uint256",
+                    "minAcceptedAmount": "uint256",
+                    "minAmountPresale": "uint256",
+                    "maxAmountPresale": "uint256",
+                    "minAcceptedAmountPresale": "uint256",
+                    "percentageDenominator": "uint256",
+                    "tokenDenominator": "uint256",
+                    "start": "uint256",
+                    "presaleEnd": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "raised": "uint256",
+                    "allocatedEth": "uint256",
+                    "allocatedTokens": "uint256",
+                    "allocatedIndex": "mapping(address => uint256[])",
+                    "stakeholderPercentagesIndex": "address[]",
+                    "stakeholdersPayouts": "Crowdsale.Payout[]",
+                    "phases": "Crowdsale.Phase[]",
+                    "volumeMultiplierThresholds": "uint256[]"
+                }
+            },
+            "withdrawTokens()": {
+                "argument": {},
+                "contract": {
+                    "baseRate": "uint256",
+                    "minAmount": "uint256",
+                    "maxAmount": "uint256",
+                    "minAcceptedAmount": "uint256",
+                    "minAmountPresale": "uint256",
+                    "maxAmountPresale": "uint256",
+                    "minAcceptedAmountPresale": "uint256",
+                    "percentageDenominator": "uint256",
+                    "tokenDenominator": "uint256",
+                    "start": "uint256",
+                    "presaleEnd": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "raised": "uint256",
+                    "allocatedEth": "uint256",
+                    "allocatedTokens": "uint256",
+                    "allocatedIndex": "mapping(address => uint256[])",
+                    "stakeholderPercentagesIndex": "address[]",
+                    "stakeholdersPayouts": "Crowdsale.Payout[]",
+                    "phases": "Crowdsale.Phase[]",
+                    "volumeMultiplierThresholds": "uint256[]"
+                }
+            },
+            "withdrawEther()": {
+                "argument": {},
+                "contract": {
+                    "baseRate": "uint256",
+                    "minAmount": "uint256",
+                    "maxAmount": "uint256",
+                    "minAcceptedAmount": "uint256",
+                    "minAmountPresale": "uint256",
+                    "maxAmountPresale": "uint256",
+                    "minAcceptedAmountPresale": "uint256",
+                    "percentageDenominator": "uint256",
+                    "tokenDenominator": "uint256",
+                    "start": "uint256",
+                    "presaleEnd": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "raised": "uint256",
+                    "allocatedEth": "uint256",
+                    "allocatedTokens": "uint256",
+                    "allocatedIndex": "mapping(address => uint256[])",
+                    "stakeholderPercentagesIndex": "address[]",
+                    "stakeholdersPayouts": "Crowdsale.Payout[]",
+                    "phases": "Crowdsale.Phase[]",
+                    "volumeMultiplierThresholds": "uint256[]"
+                }
+            },
+            "refund()": {
+                "argument": {},
+                "contract": {
+                    "baseRate": "uint256",
+                    "minAmount": "uint256",
+                    "maxAmount": "uint256",
+                    "minAcceptedAmount": "uint256",
+                    "minAmountPresale": "uint256",
+                    "maxAmountPresale": "uint256",
+                    "minAcceptedAmountPresale": "uint256",
+                    "percentageDenominator": "uint256",
+                    "tokenDenominator": "uint256",
+                    "start": "uint256",
+                    "presaleEnd": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "raised": "uint256",
+                    "allocatedEth": "uint256",
+                    "allocatedTokens": "uint256",
+                    "allocatedIndex": "mapping(address => uint256[])",
+                    "stakeholderPercentagesIndex": "address[]",
+                    "stakeholdersPayouts": "Crowdsale.Payout[]",
+                    "phases": "Crowdsale.Phase[]",
+                    "volumeMultiplierThresholds": "uint256[]"
+                }
+            },
+            "isAcceptedContributor(address)": {
+                "argument": {},
+                "contract": {
+                    "baseRate": "uint256",
+                    "minAmount": "uint256",
+                    "maxAmount": "uint256",
+                    "minAcceptedAmount": "uint256",
+                    "minAmountPresale": "uint256",
+                    "maxAmountPresale": "uint256",
+                    "minAcceptedAmountPresale": "uint256",
+                    "percentageDenominator": "uint256",
+                    "tokenDenominator": "uint256",
+                    "start": "uint256",
+                    "presaleEnd": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "raised": "uint256",
+                    "allocatedEth": "uint256",
+                    "allocatedTokens": "uint256",
+                    "allocatedIndex": "mapping(address => uint256[])",
+                    "stakeholderPercentagesIndex": "address[]",
+                    "stakeholdersPayouts": "Crowdsale.Payout[]",
+                    "phases": "Crowdsale.Phase[]",
+                    "volumeMultiplierThresholds": "uint256[]"
+                }
+            },
+            "Crowdsale()": {
+                "argument": {},
+                "contract": {
+                    "baseRate": "uint256",
+                    "minAmount": "uint256",
+                    "maxAmount": "uint256",
+                    "minAcceptedAmount": "uint256",
+                    "minAmountPresale": "uint256",
+                    "maxAmountPresale": "uint256",
+                    "minAcceptedAmountPresale": "uint256",
+                    "percentageDenominator": "uint256",
+                    "tokenDenominator": "uint256",
+                    "start": "uint256",
+                    "presaleEnd": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "raised": "uint256",
+                    "allocatedEth": "uint256",
+                    "allocatedTokens": "uint256",
+                    "allocatedIndex": "mapping(address => uint256[])",
+                    "stakeholderPercentagesIndex": "address[]",
+                    "stakeholdersPayouts": "Crowdsale.Payout[]",
+                    "phases": "Crowdsale.Phase[]",
+                    "volumeMultiplierThresholds": "uint256[]"
+                }
+            },
+            "setup(uint256,address,uint256,uint256,uint256,uint256,uint256,uint256,uint256,uint256)": {
+                "argument": {
+                    "_start": "uint256",
+                    "_tokenDenominator": "uint256",
+                    "_percentageDenominator": "uint256",
+                    "_minAmountPresale": "uint256",
+                    "_maxAmountPresale": "uint256",
+                    "_minAcceptedAmountPresale": "uint256",
+                    "_minAmount": "uint256",
+                    "_maxAmount": "uint256",
+                    "_minAcceptedAmount": "uint256"
+                },
+                "contract": {
+                    "baseRate": "uint256",
+                    "minAmount": "uint256",
+                    "maxAmount": "uint256",
+                    "minAcceptedAmount": "uint256",
+                    "minAmountPresale": "uint256",
+                    "maxAmountPresale": "uint256",
+                    "minAcceptedAmountPresale": "uint256",
+                    "percentageDenominator": "uint256",
+                    "tokenDenominator": "uint256",
+                    "start": "uint256",
+                    "presaleEnd": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "raised": "uint256",
+                    "allocatedEth": "uint256",
+                    "allocatedTokens": "uint256",
+                    "allocatedIndex": "mapping(address => uint256[])",
+                    "stakeholderPercentagesIndex": "address[]",
+                    "stakeholdersPayouts": "Crowdsale.Payout[]",
+                    "phases": "Crowdsale.Phase[]",
+                    "volumeMultiplierThresholds": "uint256[]"
+                }
+            },
+            "setupPhases(uint256,uint256[],uint256[],uint256[],bool[])": {
+                "argument": {
+                    "_baseRate": "uint256",
+                    "_phaseRates": "uint256[]",
+                    "_phasePeriods": "uint256[]",
+                    "_phaseBonusLockupPeriods": "uint256[]",
+                    "_phaseUsesVolumeMultiplier": "bool[]"
+                },
+                "contract": {
+                    "baseRate": "uint256",
+                    "minAmount": "uint256",
+                    "maxAmount": "uint256",
+                    "minAcceptedAmount": "uint256",
+                    "minAmountPresale": "uint256",
+                    "maxAmountPresale": "uint256",
+                    "minAcceptedAmountPresale": "uint256",
+                    "percentageDenominator": "uint256",
+                    "tokenDenominator": "uint256",
+                    "start": "uint256",
+                    "presaleEnd": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "raised": "uint256",
+                    "allocatedEth": "uint256",
+                    "allocatedTokens": "uint256",
+                    "allocatedIndex": "mapping(address => uint256[])",
+                    "stakeholderPercentagesIndex": "address[]",
+                    "stakeholdersPayouts": "Crowdsale.Payout[]",
+                    "phases": "Crowdsale.Phase[]",
+                    "volumeMultiplierThresholds": "uint256[]"
+                }
+            },
+            "setupStakeholders(address[],uint256[],uint256[],bool[],uint256[],uint256[],uint256[])": {
+                "argument": {
+                    "_stakeholders": "address[]",
+                    "_stakeholderEthPercentages": "uint256[]",
+                    "_stakeholderTokenPercentages": "uint256[]",
+                    "_stakeholderTokenPayoutOverwriteReleaseDates": "bool[]",
+                    "_stakeholderTokenPayoutFixedReleaseDates": "uint256[]",
+                    "_stakeholderTokenPayoutPercentages": "uint256[]",
+                    "_stakeholderTokenPayoutVestingPeriods": "uint256[]"
+                },
+                "contract": {
+                    "baseRate": "uint256",
+                    "minAmount": "uint256",
+                    "maxAmount": "uint256",
+                    "minAcceptedAmount": "uint256",
+                    "minAmountPresale": "uint256",
+                    "maxAmountPresale": "uint256",
+                    "minAcceptedAmountPresale": "uint256",
+                    "percentageDenominator": "uint256",
+                    "tokenDenominator": "uint256",
+                    "start": "uint256",
+                    "presaleEnd": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "raised": "uint256",
+                    "allocatedEth": "uint256",
+                    "allocatedTokens": "uint256",
+                    "allocatedIndex": "mapping(address => uint256[])",
+                    "stakeholderPercentagesIndex": "address[]",
+                    "stakeholdersPayouts": "Crowdsale.Payout[]",
+                    "phases": "Crowdsale.Phase[]",
+                    "volumeMultiplierThresholds": "uint256[]"
+                }
+            },
+            "setupVolumeMultipliers(uint256[],uint256[],uint256[])": {
+                "argument": {
+                    "_volumeMultiplierRates": "uint256[]",
+                    "_volumeMultiplierLockupPeriods": "uint256[]",
+                    "_volumeMultiplierThresholds": "uint256[]"
+                },
+                "contract": {
+                    "baseRate": "uint256",
+                    "minAmount": "uint256",
+                    "maxAmount": "uint256",
+                    "minAcceptedAmount": "uint256",
+                    "minAmountPresale": "uint256",
+                    "maxAmountPresale": "uint256",
+                    "minAcceptedAmountPresale": "uint256",
+                    "percentageDenominator": "uint256",
+                    "tokenDenominator": "uint256",
+                    "start": "uint256",
+                    "presaleEnd": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "raised": "uint256",
+                    "allocatedEth": "uint256",
+                    "allocatedTokens": "uint256",
+                    "allocatedIndex": "mapping(address => uint256[])",
+                    "stakeholderPercentagesIndex": "address[]",
+                    "stakeholdersPayouts": "Crowdsale.Payout[]",
+                    "phases": "Crowdsale.Phase[]",
+                    "volumeMultiplierThresholds": "uint256[]"
+                }
+            },
+            "deploy()": {
+                "argument": {},
+                "contract": {
+                    "baseRate": "uint256",
+                    "minAmount": "uint256",
+                    "maxAmount": "uint256",
+                    "minAcceptedAmount": "uint256",
+                    "minAmountPresale": "uint256",
+                    "maxAmountPresale": "uint256",
+                    "minAcceptedAmountPresale": "uint256",
+                    "percentageDenominator": "uint256",
+                    "tokenDenominator": "uint256",
+                    "start": "uint256",
+                    "presaleEnd": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "raised": "uint256",
+                    "allocatedEth": "uint256",
+                    "allocatedTokens": "uint256",
+                    "allocatedIndex": "mapping(address => uint256[])",
+                    "stakeholderPercentagesIndex": "address[]",
+                    "stakeholdersPayouts": "Crowdsale.Payout[]",
+                    "phases": "Crowdsale.Phase[]",
+                    "volumeMultiplierThresholds": "uint256[]"
+                }
+            },
+            "createDepositAddress()": {
+                "argument": {},
+                "contract": {
+                    "baseRate": "uint256",
+                    "minAmount": "uint256",
+                    "maxAmount": "uint256",
+                    "minAcceptedAmount": "uint256",
+                    "minAmountPresale": "uint256",
+                    "maxAmountPresale": "uint256",
+                    "minAcceptedAmountPresale": "uint256",
+                    "percentageDenominator": "uint256",
+                    "tokenDenominator": "uint256",
+                    "start": "uint256",
+                    "presaleEnd": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "raised": "uint256",
+                    "allocatedEth": "uint256",
+                    "allocatedTokens": "uint256",
+                    "allocatedIndex": "mapping(address => uint256[])",
+                    "stakeholderPercentagesIndex": "address[]",
+                    "stakeholdersPayouts": "Crowdsale.Payout[]",
+                    "phases": "Crowdsale.Phase[]",
+                    "volumeMultiplierThresholds": "uint256[]"
+                }
+            },
+            "createDepositAddressFor(address)": {
+                "argument": {},
+                "contract": {
+                    "baseRate": "uint256",
+                    "minAmount": "uint256",
+                    "maxAmount": "uint256",
+                    "minAcceptedAmount": "uint256",
+                    "minAmountPresale": "uint256",
+                    "maxAmountPresale": "uint256",
+                    "minAcceptedAmountPresale": "uint256",
+                    "percentageDenominator": "uint256",
+                    "tokenDenominator": "uint256",
+                    "start": "uint256",
+                    "presaleEnd": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "raised": "uint256",
+                    "allocatedEth": "uint256",
+                    "allocatedTokens": "uint256",
+                    "allocatedIndex": "mapping(address => uint256[])",
+                    "stakeholderPercentagesIndex": "address[]",
+                    "stakeholdersPayouts": "Crowdsale.Payout[]",
+                    "phases": "Crowdsale.Phase[]",
+                    "volumeMultiplierThresholds": "uint256[]"
+                }
+            },
+            "createPersonalDepositAddress()": {
+                "argument": {},
+                "contract": {
+                    "baseRate": "uint256",
+                    "minAmount": "uint256",
+                    "maxAmount": "uint256",
+                    "minAcceptedAmount": "uint256",
+                    "minAmountPresale": "uint256",
+                    "maxAmountPresale": "uint256",
+                    "minAcceptedAmountPresale": "uint256",
+                    "percentageDenominator": "uint256",
+                    "tokenDenominator": "uint256",
+                    "start": "uint256",
+                    "presaleEnd": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "raised": "uint256",
+                    "allocatedEth": "uint256",
+                    "allocatedTokens": "uint256",
+                    "allocatedIndex": "mapping(address => uint256[])",
+                    "stakeholderPercentagesIndex": "address[]",
+                    "stakeholdersPayouts": "Crowdsale.Payout[]",
+                    "phases": "Crowdsale.Phase[]",
+                    "volumeMultiplierThresholds": "uint256[]"
+                }
+            },
+            "createPersonalDepositAddressFor(address)": {
+                "argument": {},
+                "contract": {
+                    "baseRate": "uint256",
+                    "minAmount": "uint256",
+                    "maxAmount": "uint256",
+                    "minAcceptedAmount": "uint256",
+                    "minAmountPresale": "uint256",
+                    "maxAmountPresale": "uint256",
+                    "minAcceptedAmountPresale": "uint256",
+                    "percentageDenominator": "uint256",
+                    "tokenDenominator": "uint256",
+                    "start": "uint256",
+                    "presaleEnd": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "raised": "uint256",
+                    "allocatedEth": "uint256",
+                    "allocatedTokens": "uint256",
+                    "allocatedIndex": "mapping(address => uint256[])",
+                    "stakeholderPercentagesIndex": "address[]",
+                    "stakeholdersPayouts": "Crowdsale.Payout[]",
+                    "phases": "Crowdsale.Phase[]",
+                    "volumeMultiplierThresholds": "uint256[]"
+                }
+            },
+            "confirmBeneficiary()": {
+                "argument": {},
+                "contract": {
+                    "baseRate": "uint256",
+                    "minAmount": "uint256",
+                    "maxAmount": "uint256",
+                    "minAcceptedAmount": "uint256",
+                    "minAmountPresale": "uint256",
+                    "maxAmountPresale": "uint256",
+                    "minAcceptedAmountPresale": "uint256",
+                    "percentageDenominator": "uint256",
+                    "tokenDenominator": "uint256",
+                    "start": "uint256",
+                    "presaleEnd": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "raised": "uint256",
+                    "allocatedEth": "uint256",
+                    "allocatedTokens": "uint256",
+                    "allocatedIndex": "mapping(address => uint256[])",
+                    "stakeholderPercentagesIndex": "address[]",
+                    "stakeholdersPayouts": "Crowdsale.Payout[]",
+                    "phases": "Crowdsale.Phase[]",
+                    "volumeMultiplierThresholds": "uint256[]"
+                }
+            },
+            "getCurrentPhase()": {
+                "argument": {},
+                "contract": {
+                    "baseRate": "uint256",
+                    "minAmount": "uint256",
+                    "maxAmount": "uint256",
+                    "minAcceptedAmount": "uint256",
+                    "minAmountPresale": "uint256",
+                    "maxAmountPresale": "uint256",
+                    "minAcceptedAmountPresale": "uint256",
+                    "percentageDenominator": "uint256",
+                    "tokenDenominator": "uint256",
+                    "start": "uint256",
+                    "presaleEnd": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "raised": "uint256",
+                    "allocatedEth": "uint256",
+                    "allocatedTokens": "uint256",
+                    "allocatedIndex": "mapping(address => uint256[])",
+                    "stakeholderPercentagesIndex": "address[]",
+                    "stakeholdersPayouts": "Crowdsale.Payout[]",
+                    "phases": "Crowdsale.Phase[]",
+                    "volumeMultiplierThresholds": "uint256[]"
+                }
+            },
+            "getDistributionData(uint256,uint256)": {
+                "argument": {
+                    "_phase": "uint256",
+                    "_volume": "uint256"
+                },
+                "contract": {
+                    "baseRate": "uint256",
+                    "minAmount": "uint256",
+                    "maxAmount": "uint256",
+                    "minAcceptedAmount": "uint256",
+                    "minAmountPresale": "uint256",
+                    "maxAmountPresale": "uint256",
+                    "minAcceptedAmountPresale": "uint256",
+                    "percentageDenominator": "uint256",
+                    "tokenDenominator": "uint256",
+                    "start": "uint256",
+                    "presaleEnd": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "raised": "uint256",
+                    "allocatedEth": "uint256",
+                    "allocatedTokens": "uint256",
+                    "allocatedIndex": "mapping(address => uint256[])",
+                    "stakeholderPercentagesIndex": "address[]",
+                    "stakeholdersPayouts": "Crowdsale.Payout[]",
+                    "phases": "Crowdsale.Phase[]",
+                    "volumeMultiplierThresholds": "uint256[]"
+                }
+            },
+            "endCrowdsale()": {
+                "argument": {},
+                "contract": {
+                    "baseRate": "uint256",
+                    "minAmount": "uint256",
+                    "maxAmount": "uint256",
+                    "minAcceptedAmount": "uint256",
+                    "minAmountPresale": "uint256",
+                    "maxAmountPresale": "uint256",
+                    "minAcceptedAmountPresale": "uint256",
+                    "percentageDenominator": "uint256",
+                    "tokenDenominator": "uint256",
+                    "start": "uint256",
+                    "presaleEnd": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "raised": "uint256",
+                    "allocatedEth": "uint256",
+                    "allocatedTokens": "uint256",
+                    "allocatedIndex": "mapping(address => uint256[])",
+                    "stakeholderPercentagesIndex": "address[]",
+                    "stakeholdersPayouts": "Crowdsale.Payout[]",
+                    "phases": "Crowdsale.Phase[]",
+                    "volumeMultiplierThresholds": "uint256[]"
+                }
+            },
+            "destroy()": {
+                "argument": {},
+                "contract": {
+                    "baseRate": "uint256",
+                    "minAmount": "uint256",
+                    "maxAmount": "uint256",
+                    "minAcceptedAmount": "uint256",
+                    "minAmountPresale": "uint256",
+                    "maxAmountPresale": "uint256",
+                    "minAcceptedAmountPresale": "uint256",
+                    "percentageDenominator": "uint256",
+                    "tokenDenominator": "uint256",
+                    "start": "uint256",
+                    "presaleEnd": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "raised": "uint256",
+                    "allocatedEth": "uint256",
+                    "allocatedTokens": "uint256",
+                    "allocatedIndex": "mapping(address => uint256[])",
+                    "stakeholderPercentagesIndex": "address[]",
+                    "stakeholdersPayouts": "Crowdsale.Payout[]",
+                    "phases": "Crowdsale.Phase[]",
+                    "volumeMultiplierThresholds": "uint256[]"
+                }
+            },
+            "_handleTransaction(address,uint256)": {
+                "argument": {
+                    "_received": "uint256"
+                },
+                "contract": {
+                    "baseRate": "uint256",
+                    "minAmount": "uint256",
+                    "maxAmount": "uint256",
+                    "minAcceptedAmount": "uint256",
+                    "minAmountPresale": "uint256",
+                    "maxAmountPresale": "uint256",
+                    "minAcceptedAmountPresale": "uint256",
+                    "percentageDenominator": "uint256",
+                    "tokenDenominator": "uint256",
+                    "start": "uint256",
+                    "presaleEnd": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "raised": "uint256",
+                    "allocatedEth": "uint256",
+                    "allocatedTokens": "uint256",
+                    "allocatedIndex": "mapping(address => uint256[])",
+                    "stakeholderPercentagesIndex": "address[]",
+                    "stakeholdersPayouts": "Crowdsale.Payout[]",
+                    "phases": "Crowdsale.Phase[]",
+                    "volumeMultiplierThresholds": "uint256[]"
+                }
+            },
+            "_handlePresaleTransaction(address,uint256)": {
+                "argument": {
+                    "_received": "uint256"
+                },
+                "contract": {
+                    "baseRate": "uint256",
+                    "minAmount": "uint256",
+                    "maxAmount": "uint256",
+                    "minAcceptedAmount": "uint256",
+                    "minAmountPresale": "uint256",
+                    "maxAmountPresale": "uint256",
+                    "minAcceptedAmountPresale": "uint256",
+                    "percentageDenominator": "uint256",
+                    "tokenDenominator": "uint256",
+                    "start": "uint256",
+                    "presaleEnd": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "raised": "uint256",
+                    "allocatedEth": "uint256",
+                    "allocatedTokens": "uint256",
+                    "allocatedIndex": "mapping(address => uint256[])",
+                    "stakeholderPercentagesIndex": "address[]",
+                    "stakeholdersPayouts": "Crowdsale.Payout[]",
+                    "phases": "Crowdsale.Phase[]",
+                    "volumeMultiplierThresholds": "uint256[]"
+                }
+            },
+            "_handlePublicsaleTransaction(address,uint256)": {
+                "argument": {
+                    "_received": "uint256"
+                },
+                "contract": {
+                    "baseRate": "uint256",
+                    "minAmount": "uint256",
+                    "maxAmount": "uint256",
+                    "minAcceptedAmount": "uint256",
+                    "minAmountPresale": "uint256",
+                    "maxAmountPresale": "uint256",
+                    "minAcceptedAmountPresale": "uint256",
+                    "percentageDenominator": "uint256",
+                    "tokenDenominator": "uint256",
+                    "start": "uint256",
+                    "presaleEnd": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "raised": "uint256",
+                    "allocatedEth": "uint256",
+                    "allocatedTokens": "uint256",
+                    "allocatedIndex": "mapping(address => uint256[])",
+                    "stakeholderPercentagesIndex": "address[]",
+                    "stakeholdersPayouts": "Crowdsale.Payout[]",
+                    "phases": "Crowdsale.Phase[]",
+                    "volumeMultiplierThresholds": "uint256[]"
+                }
+            },
+            "_distributeTokens(address,uint256,uint256)": {
+                "argument": {
+                    "_received": "uint256",
+                    "_acceptedAmount": "uint256"
+                },
+                "contract": {
+                    "baseRate": "uint256",
+                    "minAmount": "uint256",
+                    "maxAmount": "uint256",
+                    "minAcceptedAmount": "uint256",
+                    "minAmountPresale": "uint256",
+                    "maxAmountPresale": "uint256",
+                    "minAcceptedAmountPresale": "uint256",
+                    "percentageDenominator": "uint256",
+                    "tokenDenominator": "uint256",
+                    "start": "uint256",
+                    "presaleEnd": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "raised": "uint256",
+                    "allocatedEth": "uint256",
+                    "allocatedTokens": "uint256",
+                    "allocatedIndex": "mapping(address => uint256[])",
+                    "stakeholderPercentagesIndex": "address[]",
+                    "stakeholdersPayouts": "Crowdsale.Payout[]",
+                    "phases": "Crowdsale.Phase[]",
+                    "volumeMultiplierThresholds": "uint256[]"
+                }
+            },
+            "_allocateEth(address,uint256,uint256)": {
+                "argument": {
+                    "_amount": "uint256",
+                    "_releaseDate": "uint256"
+                },
+                "contract": {
+                    "baseRate": "uint256",
+                    "minAmount": "uint256",
+                    "maxAmount": "uint256",
+                    "minAcceptedAmount": "uint256",
+                    "minAmountPresale": "uint256",
+                    "maxAmountPresale": "uint256",
+                    "minAcceptedAmountPresale": "uint256",
+                    "percentageDenominator": "uint256",
+                    "tokenDenominator": "uint256",
+                    "start": "uint256",
+                    "presaleEnd": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "raised": "uint256",
+                    "allocatedEth": "uint256",
+                    "allocatedTokens": "uint256",
+                    "allocatedIndex": "mapping(address => uint256[])",
+                    "stakeholderPercentagesIndex": "address[]",
+                    "stakeholdersPayouts": "Crowdsale.Payout[]",
+                    "phases": "Crowdsale.Phase[]",
+                    "volumeMultiplierThresholds": "uint256[]"
+                }
+            },
+            "_allocateTokens(address,uint256,uint256)": {
+                "argument": {
+                    "_amount": "uint256",
+                    "_releaseDate": "uint256"
+                },
+                "contract": {
+                    "baseRate": "uint256",
+                    "minAmount": "uint256",
+                    "maxAmount": "uint256",
+                    "minAcceptedAmount": "uint256",
+                    "minAmountPresale": "uint256",
+                    "maxAmountPresale": "uint256",
+                    "minAcceptedAmountPresale": "uint256",
+                    "percentageDenominator": "uint256",
+                    "tokenDenominator": "uint256",
+                    "start": "uint256",
+                    "presaleEnd": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "raised": "uint256",
+                    "allocatedEth": "uint256",
+                    "allocatedTokens": "uint256",
+                    "allocatedIndex": "mapping(address => uint256[])",
+                    "stakeholderPercentagesIndex": "address[]",
+                    "stakeholdersPayouts": "Crowdsale.Payout[]",
+                    "phases": "Crowdsale.Phase[]",
+                    "volumeMultiplierThresholds": "uint256[]"
+                }
+            },
+            "_allocateStakeholdersEth(uint256,uint256)": {
+                "argument": {
+                    "_amount": "uint256",
+                    "_releaseDate": "uint256"
+                },
+                "contract": {
+                    "baseRate": "uint256",
+                    "minAmount": "uint256",
+                    "maxAmount": "uint256",
+                    "minAcceptedAmount": "uint256",
+                    "minAmountPresale": "uint256",
+                    "maxAmountPresale": "uint256",
+                    "minAcceptedAmountPresale": "uint256",
+                    "percentageDenominator": "uint256",
+                    "tokenDenominator": "uint256",
+                    "start": "uint256",
+                    "presaleEnd": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "raised": "uint256",
+                    "allocatedEth": "uint256",
+                    "allocatedTokens": "uint256",
+                    "allocatedIndex": "mapping(address => uint256[])",
+                    "stakeholderPercentagesIndex": "address[]",
+                    "stakeholdersPayouts": "Crowdsale.Payout[]",
+                    "phases": "Crowdsale.Phase[]",
+                    "volumeMultiplierThresholds": "uint256[]"
+                }
+            },
+            "_allocateStakeholdersTokens(uint256,uint256)": {
+                "argument": {
+                    "_amount": "uint256",
+                    "_releaseDate": "uint256"
+                },
+                "contract": {
+                    "baseRate": "uint256",
+                    "minAmount": "uint256",
+                    "maxAmount": "uint256",
+                    "minAcceptedAmount": "uint256",
+                    "minAmountPresale": "uint256",
+                    "maxAmountPresale": "uint256",
+                    "minAcceptedAmountPresale": "uint256",
+                    "percentageDenominator": "uint256",
+                    "tokenDenominator": "uint256",
+                    "start": "uint256",
+                    "presaleEnd": "uint256",
+                    "crowdsaleEnd": "uint256",
+                    "raised": "uint256",
+                    "allocatedEth": "uint256",
+                    "allocatedTokens": "uint256",
+                    "allocatedIndex": "mapping(address => uint256[])",
+                    "stakeholderPercentagesIndex": "address[]",
+                    "stakeholdersPayouts": "Crowdsale.Payout[]",
+                    "phases": "Crowdsale.Phase[]",
+                    "volumeMultiplierThresholds": "uint256[]"
+                }
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {
+            "block961_0": [
+                "tokenReward.transfer(beneficiary, tokens)"
+            ],
+            "jump1642_0": [
+                "wallet.send(msg.value)",
+                "wallet.send(msg.value)"
+            ],
+            "jump1642_1": [
+                "wallet.send(msg.value)",
+                "wallet.send(msg.value)"
+            ],
+            "jump961_0": [
+                "tokenReward.transfer(beneficiary, tokens)",
+                "tokenReward.transfer(beneficiary, tokens)"
+            ],
+            "jump961_1": [
+                "tokenReward.transfer(beneficiary, tokens)",
+                "tokenReward.transfer(beneficiary, tokens)"
+            ],
+            "jump1642": [
+                "wallet.send(msg.value)",
+                "wallet.send(msg.value)"
+            ],
+            "jump1429": [
+                "tokenReward.transfer(wallet,_amount)",
+                "tokenReward.transfer(wallet,_amount)"
+            ],
+            "block961_1": [
+                "tokenReward.transfer(beneficiary, tokens)"
+            ],
+            "block961": [
+                "tokenReward.transfer(beneficiary, tokens)"
+            ],
+            "block1642_0": [
+                "wallet.send(msg.value)"
+            ],
+            "block1642_1": [
+                "wallet.send(msg.value)"
+            ],
+            "block1642": [
+                "wallet.send(msg.value)"
+            ],
+            "block1429": [
+                "tokenReward.transfer(wallet,_amount)"
+            ],
+            "jump961": [
+                "tokenReward.transfer(beneficiary, tokens)",
+                "tokenReward.transfer(beneficiary, tokens)"
+            ]
+        }
+    }
+}

@@ -1,0 +1,1118 @@
+{
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "ERC20": {
+        "function_list": [
+            "balanceOf(address)",
+            "allowance(address,address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                401,
+                97
+            ],
+            "transfer(address,uint256)": [
+                1385,
+                361
+            ],
+            "allowance(address,address)": [
+                1704,
+                427
+            ],
+            "balanceOf(address)": [
+                1044,
+                273
+            ],
+            "transferFrom(address,address,uint256)": [
+                588,
+                163
+            ]
+        },
+        "block_CALL_mapping": {
+            "block3721": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ],
+            "jump3721": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)",
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ]
+        }
+    },
+    "Ownable": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Pausable": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "pause()",
+            "unpause()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "pause()": {
+                "argument": {},
+                "contract": {}
+            },
+            "unpause()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "pause()": [
+                184,
+                119
+            ],
+            "unpause()": [
+                114,
+                75
+            ],
+            "transferOwnership(address)": [
+                294,
+                163
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Crowdsale": {
+        "function_list": [
+            "pause()",
+            "unpause()",
+            "Ownable()",
+            "transferOwnership(address)",
+            "Crowdsale()",
+            "returnWebsiteData()",
+            "fundContract()",
+            "addToWhiteList(address)",
+            "addToWhiteListMultiple(address[])",
+            "transferPreICOFunds()",
+            "updateTokenAddress(Token)",
+            "fallback()",
+            "start(uint256)",
+            "adjustDuration(uint256)",
+            "finalize()",
+            "transferRemainingTokens(address)",
+            "drain()",
+            "refund()",
+            "numberOfBackers()",
+            "contribute(address)",
+            "calculateNoOfTokensToSend()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "pause()": {
+                "argument": {},
+                "contract": {
+                    "ethReceived": "uint256",
+                    "totalTokensSent": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "maxCap": "uint256",
+                    "minCap": "uint256",
+                    "refundCount": "uint256",
+                    "totalRefunded": "uint256",
+                    "tokenPriceWei": "uint256",
+                    "minInvestETH": "uint256",
+                    "presaleTokens": "uint256",
+                    "totalWhiteListed": "uint256",
+                    "claimCount": "uint256",
+                    "totalClaimed": "uint256",
+                    "numOfBlocksInMinute": "uint256",
+                    "backersIndex": "address[]"
+                }
+            },
+            "unpause()": {
+                "argument": {},
+                "contract": {
+                    "ethReceived": "uint256",
+                    "totalTokensSent": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "maxCap": "uint256",
+                    "minCap": "uint256",
+                    "refundCount": "uint256",
+                    "totalRefunded": "uint256",
+                    "tokenPriceWei": "uint256",
+                    "minInvestETH": "uint256",
+                    "presaleTokens": "uint256",
+                    "totalWhiteListed": "uint256",
+                    "claimCount": "uint256",
+                    "totalClaimed": "uint256",
+                    "numOfBlocksInMinute": "uint256",
+                    "backersIndex": "address[]"
+                }
+            },
+            "Ownable()": {
+                "argument": {},
+                "contract": {
+                    "ethReceived": "uint256",
+                    "totalTokensSent": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "maxCap": "uint256",
+                    "minCap": "uint256",
+                    "refundCount": "uint256",
+                    "totalRefunded": "uint256",
+                    "tokenPriceWei": "uint256",
+                    "minInvestETH": "uint256",
+                    "presaleTokens": "uint256",
+                    "totalWhiteListed": "uint256",
+                    "claimCount": "uint256",
+                    "totalClaimed": "uint256",
+                    "numOfBlocksInMinute": "uint256",
+                    "backersIndex": "address[]"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "ethReceived": "uint256",
+                    "totalTokensSent": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "maxCap": "uint256",
+                    "minCap": "uint256",
+                    "refundCount": "uint256",
+                    "totalRefunded": "uint256",
+                    "tokenPriceWei": "uint256",
+                    "minInvestETH": "uint256",
+                    "presaleTokens": "uint256",
+                    "totalWhiteListed": "uint256",
+                    "claimCount": "uint256",
+                    "totalClaimed": "uint256",
+                    "numOfBlocksInMinute": "uint256",
+                    "backersIndex": "address[]"
+                }
+            },
+            "Crowdsale()": {
+                "argument": {},
+                "contract": {
+                    "ethReceived": "uint256",
+                    "totalTokensSent": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "maxCap": "uint256",
+                    "minCap": "uint256",
+                    "refundCount": "uint256",
+                    "totalRefunded": "uint256",
+                    "tokenPriceWei": "uint256",
+                    "minInvestETH": "uint256",
+                    "presaleTokens": "uint256",
+                    "totalWhiteListed": "uint256",
+                    "claimCount": "uint256",
+                    "totalClaimed": "uint256",
+                    "numOfBlocksInMinute": "uint256",
+                    "backersIndex": "address[]"
+                }
+            },
+            "returnWebsiteData()": {
+                "argument": {},
+                "contract": {
+                    "ethReceived": "uint256",
+                    "totalTokensSent": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "maxCap": "uint256",
+                    "minCap": "uint256",
+                    "refundCount": "uint256",
+                    "totalRefunded": "uint256",
+                    "tokenPriceWei": "uint256",
+                    "minInvestETH": "uint256",
+                    "presaleTokens": "uint256",
+                    "totalWhiteListed": "uint256",
+                    "claimCount": "uint256",
+                    "totalClaimed": "uint256",
+                    "numOfBlocksInMinute": "uint256",
+                    "backersIndex": "address[]"
+                }
+            },
+            "fundContract()": {
+                "argument": {},
+                "contract": {
+                    "ethReceived": "uint256",
+                    "totalTokensSent": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "maxCap": "uint256",
+                    "minCap": "uint256",
+                    "refundCount": "uint256",
+                    "totalRefunded": "uint256",
+                    "tokenPriceWei": "uint256",
+                    "minInvestETH": "uint256",
+                    "presaleTokens": "uint256",
+                    "totalWhiteListed": "uint256",
+                    "claimCount": "uint256",
+                    "totalClaimed": "uint256",
+                    "numOfBlocksInMinute": "uint256",
+                    "backersIndex": "address[]"
+                }
+            },
+            "addToWhiteList(address)": {
+                "argument": {},
+                "contract": {
+                    "ethReceived": "uint256",
+                    "totalTokensSent": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "maxCap": "uint256",
+                    "minCap": "uint256",
+                    "refundCount": "uint256",
+                    "totalRefunded": "uint256",
+                    "tokenPriceWei": "uint256",
+                    "minInvestETH": "uint256",
+                    "presaleTokens": "uint256",
+                    "totalWhiteListed": "uint256",
+                    "claimCount": "uint256",
+                    "totalClaimed": "uint256",
+                    "numOfBlocksInMinute": "uint256",
+                    "backersIndex": "address[]"
+                }
+            },
+            "addToWhiteListMultiple(address[])": {
+                "argument": {
+                    "_users": "address[]"
+                },
+                "contract": {
+                    "ethReceived": "uint256",
+                    "totalTokensSent": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "maxCap": "uint256",
+                    "minCap": "uint256",
+                    "refundCount": "uint256",
+                    "totalRefunded": "uint256",
+                    "tokenPriceWei": "uint256",
+                    "minInvestETH": "uint256",
+                    "presaleTokens": "uint256",
+                    "totalWhiteListed": "uint256",
+                    "claimCount": "uint256",
+                    "totalClaimed": "uint256",
+                    "numOfBlocksInMinute": "uint256",
+                    "backersIndex": "address[]"
+                }
+            },
+            "transferPreICOFunds()": {
+                "argument": {},
+                "contract": {
+                    "ethReceived": "uint256",
+                    "totalTokensSent": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "maxCap": "uint256",
+                    "minCap": "uint256",
+                    "refundCount": "uint256",
+                    "totalRefunded": "uint256",
+                    "tokenPriceWei": "uint256",
+                    "minInvestETH": "uint256",
+                    "presaleTokens": "uint256",
+                    "totalWhiteListed": "uint256",
+                    "claimCount": "uint256",
+                    "totalClaimed": "uint256",
+                    "numOfBlocksInMinute": "uint256",
+                    "backersIndex": "address[]"
+                }
+            },
+            "updateTokenAddress(Token)": {
+                "argument": {},
+                "contract": {
+                    "ethReceived": "uint256",
+                    "totalTokensSent": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "maxCap": "uint256",
+                    "minCap": "uint256",
+                    "refundCount": "uint256",
+                    "totalRefunded": "uint256",
+                    "tokenPriceWei": "uint256",
+                    "minInvestETH": "uint256",
+                    "presaleTokens": "uint256",
+                    "totalWhiteListed": "uint256",
+                    "claimCount": "uint256",
+                    "totalClaimed": "uint256",
+                    "numOfBlocksInMinute": "uint256",
+                    "backersIndex": "address[]"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "ethReceived": "uint256",
+                    "totalTokensSent": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "maxCap": "uint256",
+                    "minCap": "uint256",
+                    "refundCount": "uint256",
+                    "totalRefunded": "uint256",
+                    "tokenPriceWei": "uint256",
+                    "minInvestETH": "uint256",
+                    "presaleTokens": "uint256",
+                    "totalWhiteListed": "uint256",
+                    "claimCount": "uint256",
+                    "totalClaimed": "uint256",
+                    "numOfBlocksInMinute": "uint256",
+                    "backersIndex": "address[]"
+                }
+            },
+            "start(uint256)": {
+                "argument": {
+                    "_block": "uint256"
+                },
+                "contract": {
+                    "ethReceived": "uint256",
+                    "totalTokensSent": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "maxCap": "uint256",
+                    "minCap": "uint256",
+                    "refundCount": "uint256",
+                    "totalRefunded": "uint256",
+                    "tokenPriceWei": "uint256",
+                    "minInvestETH": "uint256",
+                    "presaleTokens": "uint256",
+                    "totalWhiteListed": "uint256",
+                    "claimCount": "uint256",
+                    "totalClaimed": "uint256",
+                    "numOfBlocksInMinute": "uint256",
+                    "backersIndex": "address[]"
+                }
+            },
+            "adjustDuration(uint256)": {
+                "argument": {
+                    "_block": "uint256"
+                },
+                "contract": {
+                    "ethReceived": "uint256",
+                    "totalTokensSent": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "maxCap": "uint256",
+                    "minCap": "uint256",
+                    "refundCount": "uint256",
+                    "totalRefunded": "uint256",
+                    "tokenPriceWei": "uint256",
+                    "minInvestETH": "uint256",
+                    "presaleTokens": "uint256",
+                    "totalWhiteListed": "uint256",
+                    "claimCount": "uint256",
+                    "totalClaimed": "uint256",
+                    "numOfBlocksInMinute": "uint256",
+                    "backersIndex": "address[]"
+                }
+            },
+            "finalize()": {
+                "argument": {},
+                "contract": {
+                    "ethReceived": "uint256",
+                    "totalTokensSent": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "maxCap": "uint256",
+                    "minCap": "uint256",
+                    "refundCount": "uint256",
+                    "totalRefunded": "uint256",
+                    "tokenPriceWei": "uint256",
+                    "minInvestETH": "uint256",
+                    "presaleTokens": "uint256",
+                    "totalWhiteListed": "uint256",
+                    "claimCount": "uint256",
+                    "totalClaimed": "uint256",
+                    "numOfBlocksInMinute": "uint256",
+                    "backersIndex": "address[]"
+                }
+            },
+            "transferRemainingTokens(address)": {
+                "argument": {},
+                "contract": {
+                    "ethReceived": "uint256",
+                    "totalTokensSent": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "maxCap": "uint256",
+                    "minCap": "uint256",
+                    "refundCount": "uint256",
+                    "totalRefunded": "uint256",
+                    "tokenPriceWei": "uint256",
+                    "minInvestETH": "uint256",
+                    "presaleTokens": "uint256",
+                    "totalWhiteListed": "uint256",
+                    "claimCount": "uint256",
+                    "totalClaimed": "uint256",
+                    "numOfBlocksInMinute": "uint256",
+                    "backersIndex": "address[]"
+                }
+            },
+            "drain()": {
+                "argument": {},
+                "contract": {
+                    "ethReceived": "uint256",
+                    "totalTokensSent": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "maxCap": "uint256",
+                    "minCap": "uint256",
+                    "refundCount": "uint256",
+                    "totalRefunded": "uint256",
+                    "tokenPriceWei": "uint256",
+                    "minInvestETH": "uint256",
+                    "presaleTokens": "uint256",
+                    "totalWhiteListed": "uint256",
+                    "claimCount": "uint256",
+                    "totalClaimed": "uint256",
+                    "numOfBlocksInMinute": "uint256",
+                    "backersIndex": "address[]"
+                }
+            },
+            "refund()": {
+                "argument": {},
+                "contract": {
+                    "ethReceived": "uint256",
+                    "totalTokensSent": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "maxCap": "uint256",
+                    "minCap": "uint256",
+                    "refundCount": "uint256",
+                    "totalRefunded": "uint256",
+                    "tokenPriceWei": "uint256",
+                    "minInvestETH": "uint256",
+                    "presaleTokens": "uint256",
+                    "totalWhiteListed": "uint256",
+                    "claimCount": "uint256",
+                    "totalClaimed": "uint256",
+                    "numOfBlocksInMinute": "uint256",
+                    "backersIndex": "address[]"
+                }
+            },
+            "numberOfBackers()": {
+                "argument": {},
+                "contract": {
+                    "ethReceived": "uint256",
+                    "totalTokensSent": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "maxCap": "uint256",
+                    "minCap": "uint256",
+                    "refundCount": "uint256",
+                    "totalRefunded": "uint256",
+                    "tokenPriceWei": "uint256",
+                    "minInvestETH": "uint256",
+                    "presaleTokens": "uint256",
+                    "totalWhiteListed": "uint256",
+                    "claimCount": "uint256",
+                    "totalClaimed": "uint256",
+                    "numOfBlocksInMinute": "uint256",
+                    "backersIndex": "address[]"
+                }
+            },
+            "contribute(address)": {
+                "argument": {},
+                "contract": {
+                    "ethReceived": "uint256",
+                    "totalTokensSent": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "maxCap": "uint256",
+                    "minCap": "uint256",
+                    "refundCount": "uint256",
+                    "totalRefunded": "uint256",
+                    "tokenPriceWei": "uint256",
+                    "minInvestETH": "uint256",
+                    "presaleTokens": "uint256",
+                    "totalWhiteListed": "uint256",
+                    "claimCount": "uint256",
+                    "totalClaimed": "uint256",
+                    "numOfBlocksInMinute": "uint256",
+                    "backersIndex": "address[]"
+                }
+            },
+            "calculateNoOfTokensToSend()": {
+                "argument": {},
+                "contract": {
+                    "ethReceived": "uint256",
+                    "totalTokensSent": "uint256",
+                    "startBlock": "uint256",
+                    "endBlock": "uint256",
+                    "maxCap": "uint256",
+                    "minCap": "uint256",
+                    "refundCount": "uint256",
+                    "totalRefunded": "uint256",
+                    "tokenPriceWei": "uint256",
+                    "minInvestETH": "uint256",
+                    "presaleTokens": "uint256",
+                    "totalWhiteListed": "uint256",
+                    "claimCount": "uint256",
+                    "totalClaimed": "uint256",
+                    "numOfBlocksInMinute": "uint256",
+                    "backersIndex": "address[]"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "addToWhiteList(address)": [
+                1267,
+                361
+            ],
+            "transferRemainingTokens(address)": [
+                517,
+                75
+            ],
+            "refund()": [
+                1424,
+                427
+            ],
+            "pause()": [
+                1609,
+                493
+            ],
+            "adjustDuration(uint256)": [
+                1849,
+                581
+            ],
+            "unpause()": [
+                1114,
+                295
+            ],
+            "start(uint256)": [
+                1894,
+                603
+            ],
+            "fundContract()": [
+                2313,
+                779
+            ],
+            "addToWhiteListMultiple(address[])": [
+                1962,
+                647
+            ],
+            "numberOfBackers()": [
+                780,
+                185
+            ],
+            "transferOwnership(address)": [
+                2567,
+                889
+            ],
+            "drain()": [
+                1939,
+                625
+            ],
+            "returnWebsiteData()": [
+                823,
+                207
+            ],
+            "finalize()": [
+                1401,
+                405
+            ],
+            "transferPreICOFunds()": [
+                2088,
+                691
+            ]
+        },
+        "block_CALL_mapping": {
+            "block6184": [
+                "token.transfer(zen, 3000000e8)"
+            ],
+            "block6894": [
+                "token.burn(msg.sender, backer.tokensSent)"
+            ],
+            "jump6388": [
+                "token.unlock()",
+                "token.unlock()"
+            ],
+            "block3652": [
+                "multisig.transfer(msg.value)"
+            ],
+            "jump3652": [
+                "multisig.transfer(msg.value)",
+                "multisig.transfer(msg.value)"
+            ],
+            "jump6894": [
+                "token.burn(msg.sender, backer.tokensSent)",
+                "token.burn(msg.sender, backer.tokensSent)"
+            ],
+            "jump6184": [
+                "token.transfer(zen, 3000000e8)",
+                "token.transfer(zen, 3000000e8)"
+            ],
+            "jump5876": [
+                "token.transfer(team, 45000000e8 + presaleTokens)",
+                "token.transfer(team, 45000000e8 + presaleTokens)"
+            ],
+            "jump4326": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "jump3582": [
+                "token.transfer(_backer, tokensToSend)",
+                "token.transfer(_backer, tokensToSend)"
+            ],
+            "block6388": [
+                "token.unlock()"
+            ],
+            "jump8065": [
+                "multisig.transfer(this.balance)",
+                "multisig.transfer(this.balance)"
+            ],
+            "jump3652_0": [
+                "multisig.transfer(msg.value)",
+                "multisig.transfer(msg.value)"
+            ],
+            "jump3582_0": [
+                "token.transfer(_backer, tokensToSend)",
+                "token.transfer(_backer, tokensToSend)"
+            ],
+            "jump4518": [
+                "token.transfer(_newAddress, token.balanceOf(this))",
+                "token.transfer(_newAddress, token.balanceOf(this))"
+            ],
+            "block3582": [
+                "token.transfer(_backer, tokensToSend)"
+            ],
+            "block8065": [
+                "multisig.transfer(this.balance)"
+            ],
+            "block3652_0": [
+                "multisig.transfer(msg.value)"
+            ],
+            "block6964": [
+                "msg.sender.transfer(backer.weiReceived)"
+            ],
+            "block4518": [
+                "token.transfer(_newAddress, token.balanceOf(this))"
+            ],
+            "block4326": [
+                "token.balanceOf(this)"
+            ],
+            "jump6964": [
+                "msg.sender.transfer(backer.weiReceived)",
+                "msg.sender.transfer(backer.weiReceived)"
+            ],
+            "block5876": [
+                "token.transfer(team, 45000000e8 + presaleTokens)"
+            ],
+            "block3582_0": [
+                "token.transfer(_backer, tokensToSend)"
+            ]
+        }
+    },
+    "Token": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "balanceOf(address)",
+            "allowance(address,address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "Token(address,address)",
+            "unlock()",
+            "lock()",
+            "migrate(uint256)",
+            "setMigrationAgent(address)",
+            "resetCrowdSaleAddress(address)",
+            "setMigrationMaster(address)",
+            "burn(address,uint256)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "balanceOf(address)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "increaseApproval(address,uint256)",
+            "decreaseApproval(address,uint256)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "version": "string",
+                    "initialSupply": "uint256",
+                    "totalMigrated": "uint256"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "version": "string",
+                    "initialSupply": "uint256",
+                    "totalMigrated": "uint256"
+                }
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "version": "string",
+                    "initialSupply": "uint256",
+                    "totalMigrated": "uint256"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "version": "string",
+                    "initialSupply": "uint256",
+                    "totalMigrated": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "version": "string",
+                    "initialSupply": "uint256",
+                    "totalMigrated": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "version": "string",
+                    "initialSupply": "uint256",
+                    "totalMigrated": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "version": "string",
+                    "initialSupply": "uint256",
+                    "totalMigrated": "uint256"
+                }
+            },
+            "Token(address,address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "version": "string",
+                    "initialSupply": "uint256",
+                    "totalMigrated": "uint256"
+                }
+            },
+            "unlock()": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "version": "string",
+                    "initialSupply": "uint256",
+                    "totalMigrated": "uint256"
+                }
+            },
+            "lock()": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "version": "string",
+                    "initialSupply": "uint256",
+                    "totalMigrated": "uint256"
+                }
+            },
+            "migrate(uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "version": "string",
+                    "initialSupply": "uint256",
+                    "totalMigrated": "uint256"
+                }
+            },
+            "setMigrationAgent(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "version": "string",
+                    "initialSupply": "uint256",
+                    "totalMigrated": "uint256"
+                }
+            },
+            "resetCrowdSaleAddress(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "version": "string",
+                    "initialSupply": "uint256",
+                    "totalMigrated": "uint256"
+                }
+            },
+            "setMigrationMaster(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "version": "string",
+                    "initialSupply": "uint256",
+                    "totalMigrated": "uint256"
+                }
+            },
+            "burn(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "version": "string",
+                    "initialSupply": "uint256",
+                    "totalMigrated": "uint256"
+                }
+            },
+            "increaseApproval(address,uint256)": {
+                "argument": {
+                    "_addedValue": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "version": "string",
+                    "initialSupply": "uint256",
+                    "totalMigrated": "uint256"
+                }
+            },
+            "decreaseApproval(address,uint256)": {
+                "argument": {
+                    "_subtractedValue": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "version": "string",
+                    "initialSupply": "uint256",
+                    "totalMigrated": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "lock()": [
+                2541,
+                647
+            ],
+            "allowance(address,address)": [
+                2355,
+                603
+            ],
+            "decreaseApproval(address,uint256)": [
+                1279,
+                317
+            ],
+            "transferFrom(address,address,uint256)": [
+                731,
+                163
+            ],
+            "unlock()": [
+                2083,
+                515
+            ],
+            "approve(address,uint256)": [
+                587,
+                119
+            ],
+            "resetCrowdSaleAddress(address)": [
+                1212,
+                295
+            ],
+            "setMigrationMaster(address)": [
+                864,
+                185
+            ],
+            "migrate(uint256)": [
+                1023,
+                251
+            ],
+            "increaseApproval(address,uint256)": [
+                2254,
+                581
+            ],
+            "setMigrationAgent(address)": [
+                1554,
+                383
+            ],
+            "balanceOf(address)": [
+                1467,
+                361
+            ],
+            "transferOwnership(address)": [
+                2474,
+                625
+            ],
+            "burn(address,uint256)": [
+                1982,
+                493
+            ],
+            "transfer(address,uint256)": [
+                2106,
+                537
+            ]
+        },
+        "block_CALL_mapping": {
+            "block4829": [
+                "MigrationAgent(migrationAgent).migrateFrom(msg.sender, _value)"
+            ],
+            "jump4829": [
+                "MigrationAgent(migrationAgent).migrateFrom(msg.sender, _value)",
+                "MigrationAgent(migrationAgent).migrateFrom(msg.sender, _value)"
+            ]
+        }
+    }
+}

@@ -1,0 +1,117 @@
+{
+    "Token": {
+        "function_list": [
+            "transferFrom(address,address,uint256)",
+            "transfer(address,uint256)"
+        ],
+        "initial_state": {
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "TokenPeg": {
+        "function_list": [
+            "TokenPeg()",
+            "setupPeg(address,address)",
+            "tokenFallback(address,uint256,bytes)",
+            "convertMinimalToSignal(uint256)",
+            "convertSignalToMinimal(uint256)",
+            "giveMinimalTokens(address,uint256)"
+        ],
+        "initial_state": {
+            "TokenPeg()": {
+                "argument": {},
+                "contract": {}
+            },
+            "setupPeg(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "tokenFallback(address,uint256,bytes)": {
+                "argument": {
+                    "_value": "uint256",
+                    "bytes": "bytes"
+                },
+                "contract": {}
+            },
+            "convertMinimalToSignal(uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {}
+            },
+            "convertSignalToMinimal(uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {}
+            },
+            "giveMinimalTokens(address,uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "tokenFallback(address,uint256,bytes)": [
+                327,
+                141
+            ],
+            "setupPeg(address,address)": [
+                228,
+                119
+            ],
+            "convertSignalToMinimal(uint256)": [
+                474,
+                163
+            ],
+            "convertMinimalToSignal(uint256)": [
+                183,
+                97
+            ]
+        },
+        "block_CALL_mapping": {
+            "block1227": [
+                "Token(signalToken).transfer(msg.sender, amount)"
+            ],
+            "block960": [
+                "Token(minimalToken).transferFrom(msg.sender, this, amount)"
+            ],
+            "jump1227": [
+                "Token(signalToken).transfer(msg.sender, amount)",
+                "Token(signalToken).transfer(msg.sender, amount)"
+            ],
+            "jump2128": [
+                "Token(signalToken).transferFrom(msg.sender, this, amount)",
+                "Token(signalToken).transferFrom(msg.sender, this, amount)"
+            ],
+            "block2472": [
+                "Token(minimalToken).transfer(from, amount)"
+            ],
+            "jump960": [
+                "Token(minimalToken).transferFrom(msg.sender, this, amount)",
+                "Token(minimalToken).transferFrom(msg.sender, this, amount)"
+            ],
+            "jump2472": [
+                "Token(minimalToken).transfer(from, amount)",
+                "Token(minimalToken).transfer(from, amount)"
+            ],
+            "block2128": [
+                "Token(signalToken).transferFrom(msg.sender, this, amount)"
+            ]
+        }
+    }
+}

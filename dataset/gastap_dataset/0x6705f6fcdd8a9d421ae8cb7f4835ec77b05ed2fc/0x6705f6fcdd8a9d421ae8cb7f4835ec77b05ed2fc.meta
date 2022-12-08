@@ -1,0 +1,112 @@
+{
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "EnjinGiveaway": {
+        "function_list": [
+            "EnjinGiveaway()",
+            "addPayee(address,uint256)",
+            "fallback()",
+            "creditTokens()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "EnjinGiveaway()": {
+                "argument": {},
+                "contract": {
+                    "totalShares": "uint256",
+                    "totalReleased": "uint256",
+                    "payees": "address[]"
+                }
+            },
+            "addPayee(address,uint256)": {
+                "argument": {
+                    "_shares": "uint256"
+                },
+                "contract": {
+                    "totalShares": "uint256",
+                    "totalReleased": "uint256",
+                    "payees": "address[]"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "totalShares": "uint256",
+                    "totalReleased": "uint256",
+                    "payees": "address[]"
+                }
+            },
+            "creditTokens()": {
+                "argument": {},
+                "contract": {
+                    "totalShares": "uint256",
+                    "totalReleased": "uint256",
+                    "payees": "address[]"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "creditTokens()": [
+                345,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "block236": [
+                "owner.transfer(msg.value)"
+            ],
+            "jump236_0": [
+                "owner.transfer(msg.value)",
+                "owner.transfer(msg.value)"
+            ],
+            "jump236": [
+                "owner.transfer(msg.value)",
+                "owner.transfer(msg.value)"
+            ],
+            "block1609": [
+                "tokenContract.call(bytes4(sha3(\"transferFrom(address,address,uint256)\")), this, payees[i], shares[payees[i]])"
+            ],
+            "block236_0": [
+                "owner.transfer(msg.value)"
+            ]
+        }
+    }
+}

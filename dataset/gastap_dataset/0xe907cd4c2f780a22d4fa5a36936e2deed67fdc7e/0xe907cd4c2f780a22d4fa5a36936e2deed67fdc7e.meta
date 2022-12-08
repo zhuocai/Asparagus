@@ -1,0 +1,1163 @@
+{
+    "BTC": {
+        "function_list": [
+            "parseVarInt(bytes,uint256)",
+            "getBytesLE(bytes,uint256,uint256)",
+            "getFirstTwoOutputs(bytes)",
+            "checkValueSent(bytes,bytes20,uint256)",
+            "scanInputs(bytes,uint256,uint256)",
+            "scanOutputs(bytes,uint256,uint256)",
+            "sliceBytes20(bytes,uint256)",
+            "isP2PKH(bytes,uint256,uint256)",
+            "isP2SH(bytes,uint256,uint256)",
+            "parseOutputScript(bytes,uint256,uint256)"
+        ],
+        "initial_state": {
+            "parseVarInt(bytes,uint256)": {
+                "argument": {
+                    "txBytes": "bytes",
+                    "pos": "uint256"
+                },
+                "contract": {}
+            },
+            "getBytesLE(bytes,uint256,uint256)": {
+                "argument": {
+                    "data": "bytes",
+                    "pos": "uint256",
+                    "bits": "uint256"
+                },
+                "contract": {}
+            },
+            "getFirstTwoOutputs(bytes)": {
+                "argument": {
+                    "txBytes": "bytes"
+                },
+                "contract": {}
+            },
+            "checkValueSent(bytes,bytes20,uint256)": {
+                "argument": {
+                    "txBytes": "bytes",
+                    "btcAddress": "bytes20",
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "scanInputs(bytes,uint256,uint256)": {
+                "argument": {
+                    "txBytes": "bytes",
+                    "pos": "uint256",
+                    "stop": "uint256"
+                },
+                "contract": {}
+            },
+            "scanOutputs(bytes,uint256,uint256)": {
+                "argument": {
+                    "txBytes": "bytes",
+                    "pos": "uint256",
+                    "stop": "uint256"
+                },
+                "contract": {}
+            },
+            "sliceBytes20(bytes,uint256)": {
+                "argument": {
+                    "data": "bytes",
+                    "start": "uint256"
+                },
+                "contract": {}
+            },
+            "isP2PKH(bytes,uint256,uint256)": {
+                "argument": {
+                    "txBytes": "bytes",
+                    "pos": "uint256",
+                    "script_len": "uint256"
+                },
+                "contract": {}
+            },
+            "isP2SH(bytes,uint256,uint256)": {
+                "argument": {
+                    "txBytes": "bytes",
+                    "pos": "uint256",
+                    "script_len": "uint256"
+                },
+                "contract": {}
+            },
+            "parseOutputScript(bytes,uint256,uint256)": {
+                "argument": {
+                    "txBytes": "bytes",
+                    "pos": "uint256",
+                    "script_len": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "sliceBytes20(bytes,uint256)": [
+                1019,
+                171
+            ],
+            "parseOutputScript(bytes,uint256,uint256)": [
+                192,
+                83
+            ],
+            "isP2PKH(bytes,uint256,uint256)": [
+                509,
+                127
+            ],
+            "parseVarInt(bytes,uint256)": [
+                367,
+                105
+            ],
+            "scanOutputs(bytes,uint256,uint256)": [
+                658,
+                149
+            ],
+            "isP2SH(bytes,uint256,uint256)": [
+                1184,
+                193
+            ],
+            "getBytesLE(bytes,uint256,uint256)": [
+                1333,
+                215
+            ],
+            "checkValueSent(bytes,bytes20,uint256)": [
+                1901,
+                281
+            ],
+            "scanInputs(bytes,uint256,uint256)": [
+                1684,
+                259
+            ],
+            "getFirstTwoOutputs(bytes)": [
+                1478,
+                237
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Ownable": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Pausable": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "emergencyStop()",
+            "release()"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "emergencyStop()": {
+                "argument": {},
+                "contract": {}
+            },
+            "release()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "emergencyStop()": [
+                114,
+                75
+            ],
+            "transferOwnership(address)": [
+                294,
+                163
+            ],
+            "release()": [
+                184,
+                119
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "SafeMath": {
+        "function_list": [
+            "safeMul(uint256,uint256)",
+            "safeDiv(uint256,uint256)",
+            "safeSub(uint256,uint256)",
+            "safeAdd(uint256,uint256)",
+            "max64(uint64,uint64)",
+            "min64(uint64,uint64)",
+            "max256(uint256,uint256)",
+            "min256(uint256,uint256)"
+        ],
+        "initial_state": {
+            "safeMul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "safeDiv(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "safeSub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "safeAdd(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "max64(uint64,uint64)": {
+                "argument": {
+                    "a": "uint64",
+                    "b": "uint64"
+                },
+                "contract": {}
+            },
+            "min64(uint64,uint64)": {
+                "argument": {
+                    "a": "uint64",
+                    "b": "uint64"
+                },
+                "contract": {}
+            },
+            "max256(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "min256(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "Token": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                125,
+                75
+            ],
+            "balanceOf(address)": [
+                402,
+                141
+            ],
+            "allowance(address,address)": [
+                590,
+                185
+            ],
+            "transferFrom(address,address,uint256)": [
+                269,
+                119
+            ],
+            "transfer(address,uint256)": [
+                489,
+                163
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "StandardToken": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "balanceOf(address)",
+            "approve(address,uint256)",
+            "allowance(address,address)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                125,
+                75
+            ],
+            "balanceOf(address)": [
+                402,
+                141
+            ],
+            "allowance(address,address)": [
+                590,
+                185
+            ],
+            "transferFrom(address,address,uint256)": [
+                269,
+                119
+            ],
+            "transfer(address,uint256)": [
+                489,
+                163
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Utils": {
+        "function_list": [],
+        "initial_state": {},
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "Crowdsale": {
+        "function_list": [
+            "safeMul(uint256,uint256)",
+            "safeDiv(uint256,uint256)",
+            "safeSub(uint256,uint256)",
+            "safeAdd(uint256,uint256)",
+            "max64(uint64,uint64)",
+            "min64(uint64,uint64)",
+            "max256(uint256,uint256)",
+            "min256(uint256,uint256)",
+            "emergencyStop()",
+            "release()",
+            "Ownable()",
+            "transferOwnership(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "balanceOf(address)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "startTrading()",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "investorsCount()",
+            "Crowdsale(uint256,address,address)",
+            "getState()",
+            "getTokens(address)",
+            "getStateFunding()",
+            "calNewTokens(uint256)",
+            "fallback()",
+            "tokenAssignExchange(address,uint256)",
+            "processTransaction(bytes,uint256,address,bytes20)",
+            "changeExchangeRate(uint256,uint256)",
+            "blacklist(address)",
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "safeMul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "investmentETH": "uint256",
+                    "investmentBTC": "uint256",
+                    "initialSupply": "uint256",
+                    "_totalSupply": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "minBtcValue": "uint256",
+                    "tokensPerEther": "uint256",
+                    "tokensPerBTC": "uint256",
+                    "tokenCreationMax": "uint256",
+                    "investors": "address[]"
+                }
+            },
+            "safeDiv(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "investmentETH": "uint256",
+                    "investmentBTC": "uint256",
+                    "initialSupply": "uint256",
+                    "_totalSupply": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "minBtcValue": "uint256",
+                    "tokensPerEther": "uint256",
+                    "tokensPerBTC": "uint256",
+                    "tokenCreationMax": "uint256",
+                    "investors": "address[]"
+                }
+            },
+            "safeSub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "investmentETH": "uint256",
+                    "investmentBTC": "uint256",
+                    "initialSupply": "uint256",
+                    "_totalSupply": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "minBtcValue": "uint256",
+                    "tokensPerEther": "uint256",
+                    "tokensPerBTC": "uint256",
+                    "tokenCreationMax": "uint256",
+                    "investors": "address[]"
+                }
+            },
+            "safeAdd(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "investmentETH": "uint256",
+                    "investmentBTC": "uint256",
+                    "initialSupply": "uint256",
+                    "_totalSupply": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "minBtcValue": "uint256",
+                    "tokensPerEther": "uint256",
+                    "tokensPerBTC": "uint256",
+                    "tokenCreationMax": "uint256",
+                    "investors": "address[]"
+                }
+            },
+            "max64(uint64,uint64)": {
+                "argument": {
+                    "a": "uint64",
+                    "b": "uint64"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "investmentETH": "uint256",
+                    "investmentBTC": "uint256",
+                    "initialSupply": "uint256",
+                    "_totalSupply": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "minBtcValue": "uint256",
+                    "tokensPerEther": "uint256",
+                    "tokensPerBTC": "uint256",
+                    "tokenCreationMax": "uint256",
+                    "investors": "address[]"
+                }
+            },
+            "min64(uint64,uint64)": {
+                "argument": {
+                    "a": "uint64",
+                    "b": "uint64"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "investmentETH": "uint256",
+                    "investmentBTC": "uint256",
+                    "initialSupply": "uint256",
+                    "_totalSupply": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "minBtcValue": "uint256",
+                    "tokensPerEther": "uint256",
+                    "tokensPerBTC": "uint256",
+                    "tokenCreationMax": "uint256",
+                    "investors": "address[]"
+                }
+            },
+            "max256(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "investmentETH": "uint256",
+                    "investmentBTC": "uint256",
+                    "initialSupply": "uint256",
+                    "_totalSupply": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "minBtcValue": "uint256",
+                    "tokensPerEther": "uint256",
+                    "tokensPerBTC": "uint256",
+                    "tokenCreationMax": "uint256",
+                    "investors": "address[]"
+                }
+            },
+            "min256(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "investmentETH": "uint256",
+                    "investmentBTC": "uint256",
+                    "initialSupply": "uint256",
+                    "_totalSupply": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "minBtcValue": "uint256",
+                    "tokensPerEther": "uint256",
+                    "tokensPerBTC": "uint256",
+                    "tokenCreationMax": "uint256",
+                    "investors": "address[]"
+                }
+            },
+            "emergencyStop()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "investmentETH": "uint256",
+                    "investmentBTC": "uint256",
+                    "initialSupply": "uint256",
+                    "_totalSupply": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "minBtcValue": "uint256",
+                    "tokensPerEther": "uint256",
+                    "tokensPerBTC": "uint256",
+                    "tokenCreationMax": "uint256",
+                    "investors": "address[]"
+                }
+            },
+            "release()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "investmentETH": "uint256",
+                    "investmentBTC": "uint256",
+                    "initialSupply": "uint256",
+                    "_totalSupply": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "minBtcValue": "uint256",
+                    "tokensPerEther": "uint256",
+                    "tokensPerBTC": "uint256",
+                    "tokenCreationMax": "uint256",
+                    "investors": "address[]"
+                }
+            },
+            "Ownable()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "investmentETH": "uint256",
+                    "investmentBTC": "uint256",
+                    "initialSupply": "uint256",
+                    "_totalSupply": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "minBtcValue": "uint256",
+                    "tokensPerEther": "uint256",
+                    "tokensPerBTC": "uint256",
+                    "tokenCreationMax": "uint256",
+                    "investors": "address[]"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "investmentETH": "uint256",
+                    "investmentBTC": "uint256",
+                    "initialSupply": "uint256",
+                    "_totalSupply": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "minBtcValue": "uint256",
+                    "tokensPerEther": "uint256",
+                    "tokensPerBTC": "uint256",
+                    "tokenCreationMax": "uint256",
+                    "investors": "address[]"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "investmentETH": "uint256",
+                    "investmentBTC": "uint256",
+                    "initialSupply": "uint256",
+                    "_totalSupply": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "minBtcValue": "uint256",
+                    "tokensPerEther": "uint256",
+                    "tokensPerBTC": "uint256",
+                    "tokenCreationMax": "uint256",
+                    "investors": "address[]"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "investmentETH": "uint256",
+                    "investmentBTC": "uint256",
+                    "initialSupply": "uint256",
+                    "_totalSupply": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "minBtcValue": "uint256",
+                    "tokensPerEther": "uint256",
+                    "tokensPerBTC": "uint256",
+                    "tokenCreationMax": "uint256",
+                    "investors": "address[]"
+                }
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "investmentETH": "uint256",
+                    "investmentBTC": "uint256",
+                    "initialSupply": "uint256",
+                    "_totalSupply": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "minBtcValue": "uint256",
+                    "tokensPerEther": "uint256",
+                    "tokensPerBTC": "uint256",
+                    "tokenCreationMax": "uint256",
+                    "investors": "address[]"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "investmentETH": "uint256",
+                    "investmentBTC": "uint256",
+                    "initialSupply": "uint256",
+                    "_totalSupply": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "minBtcValue": "uint256",
+                    "tokensPerEther": "uint256",
+                    "tokensPerBTC": "uint256",
+                    "tokenCreationMax": "uint256",
+                    "investors": "address[]"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "investmentETH": "uint256",
+                    "investmentBTC": "uint256",
+                    "initialSupply": "uint256",
+                    "_totalSupply": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "minBtcValue": "uint256",
+                    "tokensPerEther": "uint256",
+                    "tokensPerBTC": "uint256",
+                    "tokenCreationMax": "uint256",
+                    "investors": "address[]"
+                }
+            },
+            "startTrading()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "investmentETH": "uint256",
+                    "investmentBTC": "uint256",
+                    "initialSupply": "uint256",
+                    "_totalSupply": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "minBtcValue": "uint256",
+                    "tokensPerEther": "uint256",
+                    "tokensPerBTC": "uint256",
+                    "tokenCreationMax": "uint256",
+                    "investors": "address[]"
+                }
+            },
+            "investorsCount()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "investmentETH": "uint256",
+                    "investmentBTC": "uint256",
+                    "initialSupply": "uint256",
+                    "_totalSupply": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "minBtcValue": "uint256",
+                    "tokensPerEther": "uint256",
+                    "tokensPerBTC": "uint256",
+                    "tokenCreationMax": "uint256",
+                    "investors": "address[]"
+                }
+            },
+            "Crowdsale(uint256,address,address)": {
+                "argument": {
+                    "_fundingStartBlock": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "investmentETH": "uint256",
+                    "investmentBTC": "uint256",
+                    "initialSupply": "uint256",
+                    "_totalSupply": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "minBtcValue": "uint256",
+                    "tokensPerEther": "uint256",
+                    "tokensPerBTC": "uint256",
+                    "tokenCreationMax": "uint256",
+                    "investors": "address[]"
+                }
+            },
+            "getState()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "investmentETH": "uint256",
+                    "investmentBTC": "uint256",
+                    "initialSupply": "uint256",
+                    "_totalSupply": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "minBtcValue": "uint256",
+                    "tokensPerEther": "uint256",
+                    "tokensPerBTC": "uint256",
+                    "tokenCreationMax": "uint256",
+                    "investors": "address[]"
+                }
+            },
+            "getTokens(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "investmentETH": "uint256",
+                    "investmentBTC": "uint256",
+                    "initialSupply": "uint256",
+                    "_totalSupply": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "minBtcValue": "uint256",
+                    "tokensPerEther": "uint256",
+                    "tokensPerBTC": "uint256",
+                    "tokenCreationMax": "uint256",
+                    "investors": "address[]"
+                }
+            },
+            "getStateFunding()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "investmentETH": "uint256",
+                    "investmentBTC": "uint256",
+                    "initialSupply": "uint256",
+                    "_totalSupply": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "minBtcValue": "uint256",
+                    "tokensPerEther": "uint256",
+                    "tokensPerBTC": "uint256",
+                    "tokenCreationMax": "uint256",
+                    "investors": "address[]"
+                }
+            },
+            "calNewTokens(uint256)": {
+                "argument": {
+                    "tokens": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "investmentETH": "uint256",
+                    "investmentBTC": "uint256",
+                    "initialSupply": "uint256",
+                    "_totalSupply": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "minBtcValue": "uint256",
+                    "tokensPerEther": "uint256",
+                    "tokensPerBTC": "uint256",
+                    "tokenCreationMax": "uint256",
+                    "investors": "address[]"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "investmentETH": "uint256",
+                    "investmentBTC": "uint256",
+                    "initialSupply": "uint256",
+                    "_totalSupply": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "minBtcValue": "uint256",
+                    "tokensPerEther": "uint256",
+                    "tokensPerBTC": "uint256",
+                    "tokenCreationMax": "uint256",
+                    "investors": "address[]"
+                }
+            },
+            "tokenAssignExchange(address,uint256)": {
+                "argument": {
+                    "val": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "investmentETH": "uint256",
+                    "investmentBTC": "uint256",
+                    "initialSupply": "uint256",
+                    "_totalSupply": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "minBtcValue": "uint256",
+                    "tokensPerEther": "uint256",
+                    "tokensPerBTC": "uint256",
+                    "tokenCreationMax": "uint256",
+                    "investors": "address[]"
+                }
+            },
+            "processTransaction(bytes,uint256,address,bytes20)": {
+                "argument": {
+                    "txn": "bytes",
+                    "txHash": "uint256",
+                    "btcaddr": "bytes20"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "investmentETH": "uint256",
+                    "investmentBTC": "uint256",
+                    "initialSupply": "uint256",
+                    "_totalSupply": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "minBtcValue": "uint256",
+                    "tokensPerEther": "uint256",
+                    "tokensPerBTC": "uint256",
+                    "tokenCreationMax": "uint256",
+                    "investors": "address[]"
+                }
+            },
+            "changeExchangeRate(uint256,uint256)": {
+                "argument": {
+                    "eth": "uint256",
+                    "btc": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "investmentETH": "uint256",
+                    "investmentBTC": "uint256",
+                    "initialSupply": "uint256",
+                    "_totalSupply": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "minBtcValue": "uint256",
+                    "tokensPerEther": "uint256",
+                    "tokensPerBTC": "uint256",
+                    "tokenCreationMax": "uint256",
+                    "investors": "address[]"
+                }
+            },
+            "blacklist(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "investmentETH": "uint256",
+                    "investmentBTC": "uint256",
+                    "initialSupply": "uint256",
+                    "_totalSupply": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "minBtcValue": "uint256",
+                    "tokensPerEther": "uint256",
+                    "tokensPerBTC": "uint256",
+                    "tokenCreationMax": "uint256",
+                    "investors": "address[]"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "version": "string",
+                    "investmentETH": "uint256",
+                    "investmentBTC": "uint256",
+                    "initialSupply": "uint256",
+                    "_totalSupply": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "minBtcValue": "uint256",
+                    "tokensPerEther": "uint256",
+                    "tokensPerBTC": "uint256",
+                    "tokenCreationMax": "uint256",
+                    "investors": "address[]"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                1779,
+                515
+            ],
+            "allowance(address,address)": [
+                2982,
+                999
+            ],
+            "transferFrom(address,address,uint256)": [
+                1149,
+                273
+            ],
+            "approve(address,uint256)": [
+                758,
+                119
+            ],
+            "transferOwnership(address)": [
+                3187,
+                1065
+            ],
+            "emergencyStop()": [
+                1756,
+                493
+            ],
+            "release()": [
+                2001,
+                603
+            ],
+            "transfer(address,uint256)": [
+                2519,
+                801
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump5996": [
+                "objMetada.getAddress(ecosystemContractID)",
+                "objMetada.getAddress(ecosystemContractID)"
+            ],
+            "block8987": [
+                "GetIACFundAccount().transfer(this.balance)"
+            ],
+            "jump3853": [
+                "coinbase.transfer(msg.value)",
+                "coinbase.transfer(msg.value)"
+            ],
+            "block3970": [
+                "GetIACFundAccount().transfer(msg.value)"
+            ],
+            "block3970_0": [
+                "GetIACFundAccount().transfer(msg.value)"
+            ],
+            "jump8987": [
+                "GetIACFundAccount().transfer(this.balance)",
+                "GetIACFundAccount().transfer(this.balance)"
+            ],
+            "jump10551": [
+                "objMetada.getAddress(inventoryContractID)",
+                "objMetada.getAddress(inventoryContractID)"
+            ],
+            "block5996": [
+                "objMetada.getAddress(ecosystemContractID)"
+            ],
+            "jump3970_0": [
+                "GetIACFundAccount().transfer(msg.value)",
+                "GetIACFundAccount().transfer(msg.value)"
+            ],
+            "block10983": [
+                "objCompanyInventory.initiateLocking(totalSupplyFromInventory)"
+            ],
+            "jump3853_0": [
+                "coinbase.transfer(msg.value)",
+                "coinbase.transfer(msg.value)"
+            ],
+            "block3853_0": [
+                "coinbase.transfer(msg.value)"
+            ],
+            "block10551": [
+                "objMetada.getAddress(inventoryContractID)"
+            ],
+            "block3853": [
+                "coinbase.transfer(msg.value)"
+            ],
+            "jump3970": [
+                "GetIACFundAccount().transfer(msg.value)",
+                "GetIACFundAccount().transfer(msg.value)"
+            ],
+            "jump10983": [
+                "objCompanyInventory.initiateLocking(totalSupplyFromInventory)",
+                "objCompanyInventory.initiateLocking(totalSupplyFromInventory)"
+            ]
+        }
+    }
+}

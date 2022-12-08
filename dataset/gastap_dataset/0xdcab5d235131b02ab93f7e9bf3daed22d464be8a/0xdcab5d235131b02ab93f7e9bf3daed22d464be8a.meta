@@ -1,0 +1,3163 @@
+{
+    "ERC20": {
+        "function_list": [
+            "totalSupply()",
+            "balanceOf(address)",
+            "allowance(address,address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)"
+        ],
+        "initial_state": {
+            "totalSupply()": {
+                "argument": {},
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                313,
+                97
+            ],
+            "balanceOf(address)": [
+                639,
+                185
+            ],
+            "totalSupply()": [
+                414,
+                119
+            ],
+            "allowance(address,address)": [
+                1118,
+                273
+            ],
+            "transferFrom(address,address,uint256)": [
+                457,
+                141
+            ],
+            "transfer(address,uint256)": [
+                870,
+                229
+            ]
+        },
+        "block_CALL_mapping": {
+            "block2404": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ],
+            "jump2404": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)",
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ]
+        }
+    },
+    "SafeMath": {
+        "function_list": [
+            "safeMul(uint256,uint256)",
+            "safeDiv(uint256,uint256)",
+            "safeSub(uint256,uint256)",
+            "safeAdd(uint256,uint256)",
+            "max64(uint64,uint64)",
+            "min64(uint64,uint64)",
+            "max256(uint256,uint256)",
+            "min256(uint256,uint256)",
+            "assert(bool)"
+        ],
+        "initial_state": {
+            "safeMul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "safeDiv(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "safeSub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "safeAdd(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "max64(uint64,uint64)": {
+                "argument": {
+                    "a": "uint64",
+                    "b": "uint64"
+                },
+                "contract": {}
+            },
+            "min64(uint64,uint64)": {
+                "argument": {
+                    "a": "uint64",
+                    "b": "uint64"
+                },
+                "contract": {}
+            },
+            "max256(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "min256(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "assert(bool)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "Controlled": {
+        "function_list": [
+            "Controlled()",
+            "changeController(address)"
+        ],
+        "initial_state": {
+            "Controlled()": {
+                "argument": {},
+                "contract": {}
+            },
+            "changeController(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "changeController(address)": [
+                81,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "SaleWallet": {
+        "function_list": [
+            "SaleWallet(address,uint256,address)",
+            "fallback()",
+            "withdraw()",
+            "doWithdraw()"
+        ],
+        "initial_state": {
+            "SaleWallet(address,uint256,address)": {
+                "argument": {
+                    "_finalBlock": "uint256"
+                },
+                "contract": {
+                    "finalBlock": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "finalBlock": "uint256"
+                }
+            },
+            "withdraw()": {
+                "argument": {},
+                "contract": {
+                    "finalBlock": "uint256"
+                }
+            },
+            "doWithdraw()": {
+                "argument": {},
+                "contract": {
+                    "finalBlock": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "withdraw()": [
+                143,
+                97
+            ]
+        },
+        "block_CALL_mapping": {
+            "block749_0": [
+                "multisig.send(this.balance)"
+            ],
+            "jump749": [
+                "multisig.send(this.balance)",
+                "multisig.send(this.balance)"
+            ],
+            "block594": [
+                "tokenSale.saleFinalized()"
+            ],
+            "block749": [
+                "multisig.send(this.balance)"
+            ],
+            "jump594": [
+                "tokenSale.saleFinalized()",
+                "tokenSale.saleFinalized()"
+            ],
+            "jump749_0": [
+                "multisig.send(this.balance)",
+                "multisig.send(this.balance)"
+            ]
+        }
+    },
+    "Controller": {
+        "function_list": [
+            "proxyPayment(address)",
+            "onTransfer(address,address,uint256)",
+            "onApprove(address,address,uint256)"
+        ],
+        "initial_state": {
+            "proxyPayment(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "onTransfer(address,address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {}
+            },
+            "onApprove(address,address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {
+            "block5956": [
+                "ledger.decreaseApproval(_owner, _spender, _subtractedValue)"
+            ],
+            "block5135": [
+                "ledger.allowance(_owner, _spender)"
+            ],
+            "jump4413": [
+                "ledger.increaseApproval(_owner, _spender, _addedValue)",
+                "ledger.increaseApproval(_owner, _spender, _addedValue)"
+            ],
+            "block6365": [
+                "token.controllerTransfer(from, to, val)"
+            ],
+            "jump3864": [
+                "ledger.burn(_owner, _amount)",
+                "ledger.burn(_owner, _amount)"
+            ],
+            "block2509": [
+                "ledger.transferFrom(_spender, _from, _to, _value)"
+            ],
+            "jump4824": [
+                "ledger.transfer(_from, _to, _value)",
+                "ledger.transfer(_from, _to, _value)"
+            ],
+            "jump5545": [
+                "ledger.approve(_owner, _spender, _value)",
+                "ledger.approve(_owner, _spender, _value)"
+            ],
+            "jump2714": [
+                "ledger.totalSupply()",
+                "ledger.totalSupply()"
+            ],
+            "block3285": [
+                "ledger.balanceOf(_a)"
+            ],
+            "jump3285": [
+                "ledger.balanceOf(_a)",
+                "ledger.balanceOf(_a)"
+            ],
+            "block5545": [
+                "ledger.approve(_owner, _spender, _value)"
+            ],
+            "jump5956": [
+                "ledger.decreaseApproval(_owner, _spender, _subtractedValue)",
+                "ledger.decreaseApproval(_owner, _spender, _subtractedValue)"
+            ],
+            "jump6365": [
+                "token.controllerTransfer(from, to, val)",
+                "token.controllerTransfer(from, to, val)"
+            ],
+            "jump2509": [
+                "ledger.transferFrom(_spender, _from, _to, _value)",
+                "ledger.transferFrom(_spender, _from, _to, _value)"
+            ],
+            "block4824": [
+                "ledger.transfer(_from, _to, _value)"
+            ],
+            "block3864": [
+                "ledger.burn(_owner, _amount)"
+            ],
+            "block4413": [
+                "ledger.increaseApproval(_owner, _spender, _addedValue)"
+            ],
+            "block2714": [
+                "ledger.totalSupply()"
+            ],
+            "jump5135": [
+                "ledger.allowance(_owner, _spender)",
+                "ledger.allowance(_owner, _spender)"
+            ]
+        }
+    },
+    "ANPlaceholder": {
+        "function_list": [
+            "proxyPayment(address)",
+            "onTransfer(address,address,uint256)",
+            "onApprove(address,address,uint256)",
+            "ANPlaceholder(address,address)",
+            "changeController(address)",
+            "proxyPayment(address)",
+            "onTransfer(address,address,uint256)",
+            "onApprove(address,address,uint256)"
+        ],
+        "initial_state": {
+            "proxyPayment(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "onTransfer(address,address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {}
+            },
+            "onApprove(address,address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {}
+            },
+            "ANPlaceholder(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "changeController(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "onApprove(address,address,uint256)": [
+                412,
+                141
+            ],
+            "proxyPayment(address)": [
+                545,
+                163
+            ],
+            "changeController(address)": [
+                990,
+                926
+            ],
+            "onTransfer(address,address,uint256)": [
+                192,
+                97
+            ]
+        },
+        "block_CALL_mapping": {
+            "block990": [
+                "token.changeController(network)"
+            ],
+            "jump990": [
+                "token.changeController(network)",
+                "token.changeController(network)"
+            ]
+        }
+    },
+    "MiniMeToken": {
+        "function_list": [
+            "Controlled()",
+            "changeController(address)",
+            "totalSupply()",
+            "balanceOf(address)",
+            "allowance(address,address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "MiniMeToken(address,address,uint256,string,uint8,string,bool)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "doTransfer(address,address,uint256)",
+            "balanceOf(address)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "approveAndCall(address,uint256,bytes)",
+            "totalSupply()",
+            "balanceOfAt(address,uint256)",
+            "totalSupplyAt(uint256)",
+            "min(uint256,uint256)",
+            "createCloneToken(string,uint8,string,uint256,bool)",
+            "generateTokens(address,uint256)",
+            "destroyTokens(address,uint256)",
+            "enableTransfers(bool)",
+            "getValueAt(MiniMeToken.Checkpoint[],uint256)",
+            "updateValueAtNow(MiniMeToken.Checkpoint[],uint256)",
+            "isContract(address)",
+            "fallback()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "Controlled()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "decimals": "uint8",
+                    "symbol": "string",
+                    "version": "string",
+                    "parentSnapShotBlock": "uint256",
+                    "creationBlock": "uint256",
+                    "balances": "mapping(address => MiniMeToken.Checkpoint[])",
+                    "totalSupplyHistory": "MiniMeToken.Checkpoint[]"
+                }
+            },
+            "changeController(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "decimals": "uint8",
+                    "symbol": "string",
+                    "version": "string",
+                    "parentSnapShotBlock": "uint256",
+                    "creationBlock": "uint256",
+                    "balances": "mapping(address => MiniMeToken.Checkpoint[])",
+                    "totalSupplyHistory": "MiniMeToken.Checkpoint[]"
+                }
+            },
+            "totalSupply()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "decimals": "uint8",
+                    "symbol": "string",
+                    "version": "string",
+                    "parentSnapShotBlock": "uint256",
+                    "creationBlock": "uint256",
+                    "balances": "mapping(address => MiniMeToken.Checkpoint[])",
+                    "totalSupplyHistory": "MiniMeToken.Checkpoint[]"
+                }
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "decimals": "uint8",
+                    "symbol": "string",
+                    "version": "string",
+                    "parentSnapShotBlock": "uint256",
+                    "creationBlock": "uint256",
+                    "balances": "mapping(address => MiniMeToken.Checkpoint[])",
+                    "totalSupplyHistory": "MiniMeToken.Checkpoint[]"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "decimals": "uint8",
+                    "symbol": "string",
+                    "version": "string",
+                    "parentSnapShotBlock": "uint256",
+                    "creationBlock": "uint256",
+                    "balances": "mapping(address => MiniMeToken.Checkpoint[])",
+                    "totalSupplyHistory": "MiniMeToken.Checkpoint[]"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "decimals": "uint8",
+                    "symbol": "string",
+                    "version": "string",
+                    "parentSnapShotBlock": "uint256",
+                    "creationBlock": "uint256",
+                    "balances": "mapping(address => MiniMeToken.Checkpoint[])",
+                    "totalSupplyHistory": "MiniMeToken.Checkpoint[]"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "decimals": "uint8",
+                    "symbol": "string",
+                    "version": "string",
+                    "parentSnapShotBlock": "uint256",
+                    "creationBlock": "uint256",
+                    "balances": "mapping(address => MiniMeToken.Checkpoint[])",
+                    "totalSupplyHistory": "MiniMeToken.Checkpoint[]"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "decimals": "uint8",
+                    "symbol": "string",
+                    "version": "string",
+                    "parentSnapShotBlock": "uint256",
+                    "creationBlock": "uint256",
+                    "balances": "mapping(address => MiniMeToken.Checkpoint[])",
+                    "totalSupplyHistory": "MiniMeToken.Checkpoint[]"
+                }
+            },
+            "MiniMeToken(address,address,uint256,string,uint8,string,bool)": {
+                "argument": {
+                    "_parentSnapShotBlock": "uint256",
+                    "_tokenName": "string",
+                    "_decimalUnits": "uint8",
+                    "_tokenSymbol": "string"
+                },
+                "contract": {
+                    "name": "string",
+                    "decimals": "uint8",
+                    "symbol": "string",
+                    "version": "string",
+                    "parentSnapShotBlock": "uint256",
+                    "creationBlock": "uint256",
+                    "balances": "mapping(address => MiniMeToken.Checkpoint[])",
+                    "totalSupplyHistory": "MiniMeToken.Checkpoint[]"
+                }
+            },
+            "doTransfer(address,address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "decimals": "uint8",
+                    "symbol": "string",
+                    "version": "string",
+                    "parentSnapShotBlock": "uint256",
+                    "creationBlock": "uint256",
+                    "balances": "mapping(address => MiniMeToken.Checkpoint[])",
+                    "totalSupplyHistory": "MiniMeToken.Checkpoint[]"
+                }
+            },
+            "approveAndCall(address,uint256,bytes)": {
+                "argument": {
+                    "_amount": "uint256",
+                    "_extraData": "bytes"
+                },
+                "contract": {
+                    "name": "string",
+                    "decimals": "uint8",
+                    "symbol": "string",
+                    "version": "string",
+                    "parentSnapShotBlock": "uint256",
+                    "creationBlock": "uint256",
+                    "balances": "mapping(address => MiniMeToken.Checkpoint[])",
+                    "totalSupplyHistory": "MiniMeToken.Checkpoint[]"
+                }
+            },
+            "balanceOfAt(address,uint256)": {
+                "argument": {
+                    "_blockNumber": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "decimals": "uint8",
+                    "symbol": "string",
+                    "version": "string",
+                    "parentSnapShotBlock": "uint256",
+                    "creationBlock": "uint256",
+                    "balances": "mapping(address => MiniMeToken.Checkpoint[])",
+                    "totalSupplyHistory": "MiniMeToken.Checkpoint[]"
+                }
+            },
+            "totalSupplyAt(uint256)": {
+                "argument": {
+                    "_blockNumber": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "decimals": "uint8",
+                    "symbol": "string",
+                    "version": "string",
+                    "parentSnapShotBlock": "uint256",
+                    "creationBlock": "uint256",
+                    "balances": "mapping(address => MiniMeToken.Checkpoint[])",
+                    "totalSupplyHistory": "MiniMeToken.Checkpoint[]"
+                }
+            },
+            "min(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "decimals": "uint8",
+                    "symbol": "string",
+                    "version": "string",
+                    "parentSnapShotBlock": "uint256",
+                    "creationBlock": "uint256",
+                    "balances": "mapping(address => MiniMeToken.Checkpoint[])",
+                    "totalSupplyHistory": "MiniMeToken.Checkpoint[]"
+                }
+            },
+            "createCloneToken(string,uint8,string,uint256,bool)": {
+                "argument": {
+                    "_cloneTokenName": "string",
+                    "_cloneDecimalUnits": "uint8",
+                    "_cloneTokenSymbol": "string",
+                    "_snapshotBlock": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "decimals": "uint8",
+                    "symbol": "string",
+                    "version": "string",
+                    "parentSnapShotBlock": "uint256",
+                    "creationBlock": "uint256",
+                    "balances": "mapping(address => MiniMeToken.Checkpoint[])",
+                    "totalSupplyHistory": "MiniMeToken.Checkpoint[]"
+                }
+            },
+            "generateTokens(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "decimals": "uint8",
+                    "symbol": "string",
+                    "version": "string",
+                    "parentSnapShotBlock": "uint256",
+                    "creationBlock": "uint256",
+                    "balances": "mapping(address => MiniMeToken.Checkpoint[])",
+                    "totalSupplyHistory": "MiniMeToken.Checkpoint[]"
+                }
+            },
+            "destroyTokens(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "decimals": "uint8",
+                    "symbol": "string",
+                    "version": "string",
+                    "parentSnapShotBlock": "uint256",
+                    "creationBlock": "uint256",
+                    "balances": "mapping(address => MiniMeToken.Checkpoint[])",
+                    "totalSupplyHistory": "MiniMeToken.Checkpoint[]"
+                }
+            },
+            "enableTransfers(bool)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "decimals": "uint8",
+                    "symbol": "string",
+                    "version": "string",
+                    "parentSnapShotBlock": "uint256",
+                    "creationBlock": "uint256",
+                    "balances": "mapping(address => MiniMeToken.Checkpoint[])",
+                    "totalSupplyHistory": "MiniMeToken.Checkpoint[]"
+                }
+            },
+            "getValueAt(MiniMeToken.Checkpoint[],uint256)": {
+                "argument": {
+                    "checkpoints": "MiniMeToken.Checkpoint[]",
+                    "_block": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "decimals": "uint8",
+                    "symbol": "string",
+                    "version": "string",
+                    "parentSnapShotBlock": "uint256",
+                    "creationBlock": "uint256",
+                    "balances": "mapping(address => MiniMeToken.Checkpoint[])",
+                    "totalSupplyHistory": "MiniMeToken.Checkpoint[]"
+                }
+            },
+            "updateValueAtNow(MiniMeToken.Checkpoint[],uint256)": {
+                "argument": {
+                    "checkpoints": "MiniMeToken.Checkpoint[]",
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "decimals": "uint8",
+                    "symbol": "string",
+                    "version": "string",
+                    "parentSnapShotBlock": "uint256",
+                    "creationBlock": "uint256",
+                    "balances": "mapping(address => MiniMeToken.Checkpoint[])",
+                    "totalSupplyHistory": "MiniMeToken.Checkpoint[]"
+                }
+            },
+            "isContract(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "decimals": "uint8",
+                    "symbol": "string",
+                    "version": "string",
+                    "parentSnapShotBlock": "uint256",
+                    "creationBlock": "uint256",
+                    "balances": "mapping(address => MiniMeToken.Checkpoint[])",
+                    "totalSupplyHistory": "MiniMeToken.Checkpoint[]"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "decimals": "uint8",
+                    "symbol": "string",
+                    "version": "string",
+                    "parentSnapShotBlock": "uint256",
+                    "creationBlock": "uint256",
+                    "balances": "mapping(address => MiniMeToken.Checkpoint[])",
+                    "totalSupplyHistory": "MiniMeToken.Checkpoint[]"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "balanceOfAt(address,uint256)": [
+                9098,
+                26
+            ],
+            "totalSupply()": [
+                924,
+                141
+            ],
+            "allowance(address,address)": [
+                2678,
+                515
+            ],
+            "transferFrom(address,address,uint256)": [
+                967,
+                163
+            ],
+            "approve(address,uint256)": [
+                780,
+                97
+            ],
+            "totalSupplyAt(uint256)": [
+                9098,
+                26
+            ],
+            "enableTransfers(bool)": [
+                2884,
+                559
+            ],
+            "createCloneToken(string,uint8,string,uint256,bool)": [
+                1457,
+                273
+            ],
+            "changeController(address)": [
+                6115,
+                889
+            ],
+            "balanceOf(address)": [
+                1731,
+                295
+            ],
+            "generateTokens(address,uint256)": [
+                1905,
+                339
+            ],
+            "approveAndCall(address,uint256,bytes)": [
+                2406,
+                471
+            ],
+            "destroyTokens(address,uint256)": [
+                2577,
+                493
+            ],
+            "transfer(address,uint256)": [
+                2215,
+                405
+            ]
+        },
+        "block_CALL_mapping": {
+            "block5129_4": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block5129_5": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block5129_6": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block5129_0": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block5129_1": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block5129_2": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block5129_3": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "jump5129": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block3712": [
+                "Controller(controller).onApprove(msg.sender, _spender, _amount)"
+            ],
+            "block5899": [
+                "tokenFactory.createCloneToken(\n            this,\n            _snapshotBlock,\n            _cloneTokenName,\n            _cloneDecimalUnits,\n            _cloneTokenSymbol,\n            _transfersEnabled\n            )"
+            ],
+            "jump7096": [
+                "parentToken.totalSupplyAt(min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.totalSupplyAt(min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block7096_0": [
+                "parentToken.totalSupplyAt(min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "jump7600": [
+                "ApproveAndCallReceiver(_spender).receiveApproval(\n           msg.sender,\n           _amount,\n           this,\n           _extraData\n        )",
+                "ApproveAndCallReceiver(_spender).receiveApproval(\n           msg.sender,\n           _amount,\n           this,\n           _extraData\n        )"
+            ],
+            "block6115": [
+                "cloneToken.changeController(msg.sender)"
+            ],
+            "block7600": [
+                "ApproveAndCallReceiver(_spender).receiveApproval(\n           msg.sender,\n           _amount,\n           this,\n           _extraData\n        )"
+            ],
+            "jump8722_0": [
+                "Controller(controller).onTransfer(_from, _to, _amount)",
+                "Controller(controller).onTransfer(_from, _to, _amount)"
+            ],
+            "jump8722": [
+                "Controller(controller).onTransfer(_from, _to, _amount)",
+                "Controller(controller).onTransfer(_from, _to, _amount)"
+            ],
+            "block5129": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "jump5899": [
+                "tokenFactory.createCloneToken(\n            this,\n            _snapshotBlock,\n            _cloneTokenName,\n            _cloneDecimalUnits,\n            _cloneTokenSymbol,\n            _transfersEnabled\n            )",
+                "tokenFactory.createCloneToken(\n            this,\n            _snapshotBlock,\n            _cloneTokenName,\n            _cloneDecimalUnits,\n            _cloneTokenSymbol,\n            _transfersEnabled\n            )"
+            ],
+            "jump3712": [
+                "Controller(controller).onApprove(msg.sender, _spender, _amount)",
+                "Controller(controller).onApprove(msg.sender, _spender, _amount)"
+            ],
+            "jump6115": [
+                "cloneToken.changeController(msg.sender)",
+                "cloneToken.changeController(msg.sender)"
+            ],
+            "jump5129_0": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block553": [
+                "Controller(controller).proxyPayment.value(msg.value)(msg.sender)"
+            ],
+            "block3712_0": [
+                "Controller(controller).onApprove(msg.sender, _spender, _amount)"
+            ],
+            "block8722": [
+                "Controller(controller).onTransfer(_from, _to, _amount)"
+            ],
+            "jump7096_0": [
+                "parentToken.totalSupplyAt(min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.totalSupplyAt(min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "jump5129_2": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "jump5129_3": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block7096": [
+                "parentToken.totalSupplyAt(min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "jump5129_1": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "jump5129_6": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "jump553_0": [
+                "Controller(controller).proxyPayment.value(msg.value)(msg.sender)",
+                "Controller(controller).proxyPayment.value(msg.value)(msg.sender)"
+            ],
+            "jump5129_4": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "jump5129_5": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "jump3712_0": [
+                "Controller(controller).onApprove(msg.sender, _spender, _amount)",
+                "Controller(controller).onApprove(msg.sender, _spender, _amount)"
+            ],
+            "block8722_0": [
+                "Controller(controller).onTransfer(_from, _to, _amount)"
+            ],
+            "jump553": [
+                "Controller(controller).proxyPayment.value(msg.value)(msg.sender)",
+                "Controller(controller).proxyPayment.value(msg.value)(msg.sender)"
+            ],
+            "block553_0": [
+                "Controller(controller).proxyPayment.value(msg.value)(msg.sender)"
+            ]
+        }
+    },
+    "MiniMeIrrevocableVestedToken": {
+        "function_list": [
+            "safeMul(uint256,uint256)",
+            "safeDiv(uint256,uint256)",
+            "safeSub(uint256,uint256)",
+            "safeAdd(uint256,uint256)",
+            "max64(uint64,uint64)",
+            "min64(uint64,uint64)",
+            "max256(uint256,uint256)",
+            "min256(uint256,uint256)",
+            "assert(bool)",
+            "MiniMeToken(address,address,uint256,string,uint8,string,bool)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "doTransfer(address,address,uint256)",
+            "balanceOf(address)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "approveAndCall(address,uint256,bytes)",
+            "totalSupply()",
+            "balanceOfAt(address,uint256)",
+            "totalSupplyAt(uint256)",
+            "min(uint256,uint256)",
+            "createCloneToken(string,uint8,string,uint256,bool)",
+            "generateTokens(address,uint256)",
+            "destroyTokens(address,uint256)",
+            "enableTransfers(bool)",
+            "getValueAt(MiniMeToken.Checkpoint[],uint256)",
+            "updateValueAtNow(MiniMeToken.Checkpoint[],uint256)",
+            "isContract(address)",
+            "fallback()",
+            "Controlled()",
+            "changeController(address)",
+            "totalSupply()",
+            "balanceOf(address)",
+            "allowance(address,address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "MiniMeIrrevocableVestedToken(address,address,uint256,string,uint8,string,bool)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "spendableBalanceOf(address)",
+            "grantVestedTokens(address,uint256,uint64,uint64,uint64)",
+            "setCanCreateGrants(address,bool)",
+            "doSetCanCreateGrants(address,bool)",
+            "changeVestingWhitelister(address)",
+            "revokeTokenGrant(address,uint256)",
+            "tokenGrantsCount(address)",
+            "tokenGrant(address,uint256)",
+            "vestedTokens(MiniMeIrrevocableVestedToken.TokenGrant,uint64)",
+            "calculateVestedTokens(uint256,uint256,uint256,uint256,uint256)",
+            "nonVestedTokens(MiniMeIrrevocableVestedToken.TokenGrant,uint64)",
+            "lastTokenIsTransferableDate(address)",
+            "transferableTokens(address,uint64)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "safeMul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "grants": "mapping(address => MiniMeIrrevocableVestedToken.TokenGrant[])"
+                }
+            },
+            "safeDiv(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "grants": "mapping(address => MiniMeIrrevocableVestedToken.TokenGrant[])"
+                }
+            },
+            "safeSub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "grants": "mapping(address => MiniMeIrrevocableVestedToken.TokenGrant[])"
+                }
+            },
+            "safeAdd(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "grants": "mapping(address => MiniMeIrrevocableVestedToken.TokenGrant[])"
+                }
+            },
+            "max64(uint64,uint64)": {
+                "argument": {
+                    "a": "uint64",
+                    "b": "uint64"
+                },
+                "contract": {
+                    "grants": "mapping(address => MiniMeIrrevocableVestedToken.TokenGrant[])"
+                }
+            },
+            "min64(uint64,uint64)": {
+                "argument": {
+                    "a": "uint64",
+                    "b": "uint64"
+                },
+                "contract": {
+                    "grants": "mapping(address => MiniMeIrrevocableVestedToken.TokenGrant[])"
+                }
+            },
+            "max256(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "grants": "mapping(address => MiniMeIrrevocableVestedToken.TokenGrant[])"
+                }
+            },
+            "min256(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "grants": "mapping(address => MiniMeIrrevocableVestedToken.TokenGrant[])"
+                }
+            },
+            "assert(bool)": {
+                "argument": {},
+                "contract": {
+                    "grants": "mapping(address => MiniMeIrrevocableVestedToken.TokenGrant[])"
+                }
+            },
+            "MiniMeToken(address,address,uint256,string,uint8,string,bool)": {
+                "argument": {
+                    "_parentSnapShotBlock": "uint256",
+                    "_tokenName": "string",
+                    "_decimalUnits": "uint8",
+                    "_tokenSymbol": "string"
+                },
+                "contract": {
+                    "grants": "mapping(address => MiniMeIrrevocableVestedToken.TokenGrant[])"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "grants": "mapping(address => MiniMeIrrevocableVestedToken.TokenGrant[])"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "grants": "mapping(address => MiniMeIrrevocableVestedToken.TokenGrant[])"
+                }
+            },
+            "doTransfer(address,address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "grants": "mapping(address => MiniMeIrrevocableVestedToken.TokenGrant[])"
+                }
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "grants": "mapping(address => MiniMeIrrevocableVestedToken.TokenGrant[])"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "grants": "mapping(address => MiniMeIrrevocableVestedToken.TokenGrant[])"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "grants": "mapping(address => MiniMeIrrevocableVestedToken.TokenGrant[])"
+                }
+            },
+            "approveAndCall(address,uint256,bytes)": {
+                "argument": {
+                    "_amount": "uint256",
+                    "_extraData": "bytes"
+                },
+                "contract": {
+                    "grants": "mapping(address => MiniMeIrrevocableVestedToken.TokenGrant[])"
+                }
+            },
+            "totalSupply()": {
+                "argument": {},
+                "contract": {
+                    "grants": "mapping(address => MiniMeIrrevocableVestedToken.TokenGrant[])"
+                }
+            },
+            "balanceOfAt(address,uint256)": {
+                "argument": {
+                    "_blockNumber": "uint256"
+                },
+                "contract": {
+                    "grants": "mapping(address => MiniMeIrrevocableVestedToken.TokenGrant[])"
+                }
+            },
+            "totalSupplyAt(uint256)": {
+                "argument": {
+                    "_blockNumber": "uint256"
+                },
+                "contract": {
+                    "grants": "mapping(address => MiniMeIrrevocableVestedToken.TokenGrant[])"
+                }
+            },
+            "min(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "grants": "mapping(address => MiniMeIrrevocableVestedToken.TokenGrant[])"
+                }
+            },
+            "createCloneToken(string,uint8,string,uint256,bool)": {
+                "argument": {
+                    "_cloneTokenName": "string",
+                    "_cloneDecimalUnits": "uint8",
+                    "_cloneTokenSymbol": "string",
+                    "_snapshotBlock": "uint256"
+                },
+                "contract": {
+                    "grants": "mapping(address => MiniMeIrrevocableVestedToken.TokenGrant[])"
+                }
+            },
+            "generateTokens(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "grants": "mapping(address => MiniMeIrrevocableVestedToken.TokenGrant[])"
+                }
+            },
+            "destroyTokens(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "grants": "mapping(address => MiniMeIrrevocableVestedToken.TokenGrant[])"
+                }
+            },
+            "enableTransfers(bool)": {
+                "argument": {},
+                "contract": {
+                    "grants": "mapping(address => MiniMeIrrevocableVestedToken.TokenGrant[])"
+                }
+            },
+            "getValueAt(MiniMeToken.Checkpoint[],uint256)": {
+                "argument": {
+                    "checkpoints": "MiniMeToken.Checkpoint[]",
+                    "_block": "uint256"
+                },
+                "contract": {
+                    "grants": "mapping(address => MiniMeIrrevocableVestedToken.TokenGrant[])"
+                }
+            },
+            "updateValueAtNow(MiniMeToken.Checkpoint[],uint256)": {
+                "argument": {
+                    "checkpoints": "MiniMeToken.Checkpoint[]",
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "grants": "mapping(address => MiniMeIrrevocableVestedToken.TokenGrant[])"
+                }
+            },
+            "isContract(address)": {
+                "argument": {},
+                "contract": {
+                    "grants": "mapping(address => MiniMeIrrevocableVestedToken.TokenGrant[])"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "grants": "mapping(address => MiniMeIrrevocableVestedToken.TokenGrant[])"
+                }
+            },
+            "Controlled()": {
+                "argument": {},
+                "contract": {
+                    "grants": "mapping(address => MiniMeIrrevocableVestedToken.TokenGrant[])"
+                }
+            },
+            "changeController(address)": {
+                "argument": {},
+                "contract": {
+                    "grants": "mapping(address => MiniMeIrrevocableVestedToken.TokenGrant[])"
+                }
+            },
+            "MiniMeIrrevocableVestedToken(address,address,uint256,string,uint8,string,bool)": {
+                "argument": {
+                    "_parentSnapShotBlock": "uint256",
+                    "_tokenName": "string",
+                    "_decimalUnits": "uint8",
+                    "_tokenSymbol": "string"
+                },
+                "contract": {
+                    "grants": "mapping(address => MiniMeIrrevocableVestedToken.TokenGrant[])"
+                }
+            },
+            "spendableBalanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "grants": "mapping(address => MiniMeIrrevocableVestedToken.TokenGrant[])"
+                }
+            },
+            "grantVestedTokens(address,uint256,uint64,uint64,uint64)": {
+                "argument": {
+                    "_value": "uint256",
+                    "_start": "uint64",
+                    "_cliff": "uint64",
+                    "_vesting": "uint64"
+                },
+                "contract": {
+                    "grants": "mapping(address => MiniMeIrrevocableVestedToken.TokenGrant[])"
+                }
+            },
+            "setCanCreateGrants(address,bool)": {
+                "argument": {},
+                "contract": {
+                    "grants": "mapping(address => MiniMeIrrevocableVestedToken.TokenGrant[])"
+                }
+            },
+            "doSetCanCreateGrants(address,bool)": {
+                "argument": {},
+                "contract": {
+                    "grants": "mapping(address => MiniMeIrrevocableVestedToken.TokenGrant[])"
+                }
+            },
+            "changeVestingWhitelister(address)": {
+                "argument": {},
+                "contract": {
+                    "grants": "mapping(address => MiniMeIrrevocableVestedToken.TokenGrant[])"
+                }
+            },
+            "revokeTokenGrant(address,uint256)": {
+                "argument": {
+                    "_grantId": "uint256"
+                },
+                "contract": {
+                    "grants": "mapping(address => MiniMeIrrevocableVestedToken.TokenGrant[])"
+                }
+            },
+            "tokenGrantsCount(address)": {
+                "argument": {},
+                "contract": {
+                    "grants": "mapping(address => MiniMeIrrevocableVestedToken.TokenGrant[])"
+                }
+            },
+            "tokenGrant(address,uint256)": {
+                "argument": {
+                    "_grantId": "uint256"
+                },
+                "contract": {
+                    "grants": "mapping(address => MiniMeIrrevocableVestedToken.TokenGrant[])"
+                }
+            },
+            "vestedTokens(MiniMeIrrevocableVestedToken.TokenGrant,uint64)": {
+                "argument": {
+                    "time": "uint64"
+                },
+                "contract": {
+                    "grants": "mapping(address => MiniMeIrrevocableVestedToken.TokenGrant[])"
+                }
+            },
+            "calculateVestedTokens(uint256,uint256,uint256,uint256,uint256)": {
+                "argument": {
+                    "tokens": "uint256",
+                    "time": "uint256",
+                    "start": "uint256",
+                    "cliff": "uint256",
+                    "vesting": "uint256"
+                },
+                "contract": {
+                    "grants": "mapping(address => MiniMeIrrevocableVestedToken.TokenGrant[])"
+                }
+            },
+            "nonVestedTokens(MiniMeIrrevocableVestedToken.TokenGrant,uint64)": {
+                "argument": {
+                    "time": "uint64"
+                },
+                "contract": {
+                    "grants": "mapping(address => MiniMeIrrevocableVestedToken.TokenGrant[])"
+                }
+            },
+            "lastTokenIsTransferableDate(address)": {
+                "argument": {},
+                "contract": {
+                    "grants": "mapping(address => MiniMeIrrevocableVestedToken.TokenGrant[])"
+                }
+            },
+            "transferableTokens(address,uint64)": {
+                "argument": {
+                    "time": "uint64"
+                },
+                "contract": {
+                    "grants": "mapping(address => MiniMeIrrevocableVestedToken.TokenGrant[])"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "balanceOfAt(address,uint256)": [
+                12410,
+                26
+            ],
+            "tokenGrantsCount(address)": [
+                882,
+                22
+            ],
+            "totalSupply()": [
+                1344,
+                132
+            ],
+            "allowance(address,address)": [
+                3856,
+                616
+            ],
+            "transferFrom(address,address,uint256)": [
+                1466,
+                176
+            ],
+            "transferableTokens(address,uint64)": [
+                3648,
+                572
+            ],
+            "approve(address,uint256)": [
+                1113,
+                66
+            ],
+            "totalSupplyAt(uint256)": [
+                12410,
+                26
+            ],
+            "enableTransfers(bool)": [
+                4139,
+                682
+            ],
+            "setCanCreateGrants(address,bool)": [
+                1387,
+                154
+            ],
+            "createCloneToken(string,uint8,string,uint256,bool)": [
+                2421,
+                330
+            ],
+            "tokenGrant(address,uint256)": [
+                2185,
+                308
+            ],
+            "changeController(address)": [
+                8816,
+                889
+            ],
+            "revokeTokenGrant(address,uint256)": [
+                4062,
+                660
+            ],
+            "balanceOf(address)": [
+                2802,
+                374
+            ],
+            "spendableBalanceOf(address)": [
+                1214,
+                88
+            ],
+            "generateTokens(address,uint256)": [
+                2976,
+                418
+            ],
+            "approveAndCall(address,uint256,bytes)": [
+                3477,
+                550
+            ],
+            "destroyTokens(address,uint256)": [
+                3755,
+                594
+            ],
+            "lastTokenIsTransferableDate(address)": [
+                2695,
+                352
+            ],
+            "changeVestingWhitelister(address)": [
+                4273,
+                726
+            ],
+            "transfer(address,uint256)": [
+                3286,
+                484
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump9977": [
+                "parentToken.totalSupplyAt(min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.totalSupplyAt(min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block7319_18": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block9977": [
+                "parentToken.totalSupplyAt(min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block7319_6": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block7319": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block9977_0": [
+                "parentToken.totalSupplyAt(min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block7319_11": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block7319_10": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block7319_13": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block7319_12": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block7319_15": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block7319_14": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block7319_17": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "jump5967": [
+                "Controller(controller).onApprove(msg.sender, _spender, _amount)",
+                "Controller(controller).onApprove(msg.sender, _spender, _amount)"
+            ],
+            "block662_0": [
+                "Controller(controller).proxyPayment.value(msg.value)(msg.sender)"
+            ],
+            "jump7319_18": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "jump7319_13": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "jump7319_12": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "jump7319_11": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "jump7319_10": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block14024": [
+                "Controller(controller).onTransfer(_from, _to, _amount)"
+            ],
+            "jump7319_16": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "jump7319_15": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "jump7319_14": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "jump7319": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block7319_8": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block7319_5": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "jump7319_17": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block14024_1": [
+                "Controller(controller).onTransfer(_from, _to, _amount)"
+            ],
+            "block14024_0": [
+                "Controller(controller).onTransfer(_from, _to, _amount)"
+            ],
+            "block7319_1": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block7319_0": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block7319_3": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block7319_2": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block8816": [
+                "cloneToken.changeController(msg.sender)"
+            ],
+            "jump7319_6": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "jump9977_0": [
+                "parentToken.totalSupplyAt(min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.totalSupplyAt(min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block5967": [
+                "Controller(controller).onApprove(msg.sender, _spender, _amount)"
+            ],
+            "jump14024": [
+                "Controller(controller).onTransfer(_from, _to, _amount)",
+                "Controller(controller).onTransfer(_from, _to, _amount)"
+            ],
+            "block5967_0": [
+                "Controller(controller).onApprove(msg.sender, _spender, _amount)"
+            ],
+            "jump662": [
+                "Controller(controller).proxyPayment.value(msg.value)(msg.sender)",
+                "Controller(controller).proxyPayment.value(msg.value)(msg.sender)"
+            ],
+            "block662": [
+                "Controller(controller).proxyPayment.value(msg.value)(msg.sender)"
+            ],
+            "jump7319_7": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "jump5967_0": [
+                "Controller(controller).onApprove(msg.sender, _spender, _amount)",
+                "Controller(controller).onApprove(msg.sender, _spender, _amount)"
+            ],
+            "block7319_16": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block8600": [
+                "tokenFactory.createCloneToken(\n            this,\n            _snapshotBlock,\n            _cloneTokenName,\n            _cloneDecimalUnits,\n            _cloneTokenSymbol,\n            _transfersEnabled\n            )"
+            ],
+            "jump10478": [
+                "ApproveAndCallReceiver(_spender).receiveApproval(\n           msg.sender,\n           _amount,\n           this,\n           _extraData\n        )",
+                "ApproveAndCallReceiver(_spender).receiveApproval(\n           msg.sender,\n           _amount,\n           this,\n           _extraData\n        )"
+            ],
+            "jump7319_9": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "jump8600": [
+                "tokenFactory.createCloneToken(\n            this,\n            _snapshotBlock,\n            _cloneTokenName,\n            _cloneDecimalUnits,\n            _cloneTokenSymbol,\n            _transfersEnabled\n            )",
+                "tokenFactory.createCloneToken(\n            this,\n            _snapshotBlock,\n            _cloneTokenName,\n            _cloneDecimalUnits,\n            _cloneTokenSymbol,\n            _transfersEnabled\n            )"
+            ],
+            "block10478": [
+                "ApproveAndCallReceiver(_spender).receiveApproval(\n           msg.sender,\n           _amount,\n           this,\n           _extraData\n        )"
+            ],
+            "jump7319_3": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "jump7319_2": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "jump7319_1": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "jump7319_0": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "jump14024_1": [
+                "Controller(controller).onTransfer(_from, _to, _amount)",
+                "Controller(controller).onTransfer(_from, _to, _amount)"
+            ],
+            "jump14024_0": [
+                "Controller(controller).onTransfer(_from, _to, _amount)",
+                "Controller(controller).onTransfer(_from, _to, _amount)"
+            ],
+            "jump7319_5": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "jump7319_4": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block7319_4": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "jump8816": [
+                "cloneToken.changeController(msg.sender)",
+                "cloneToken.changeController(msg.sender)"
+            ],
+            "jump662_0": [
+                "Controller(controller).proxyPayment.value(msg.value)(msg.sender)",
+                "Controller(controller).proxyPayment.value(msg.value)(msg.sender)"
+            ],
+            "block7319_9": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block7319_7": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "jump7319_8": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ]
+        }
+    },
+    "ANT": {
+        "function_list": [
+            "MiniMeIrrevocableVestedToken(address,address,uint256,string,uint8,string,bool)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "spendableBalanceOf(address)",
+            "grantVestedTokens(address,uint256,uint64,uint64,uint64)",
+            "setCanCreateGrants(address,bool)",
+            "doSetCanCreateGrants(address,bool)",
+            "changeVestingWhitelister(address)",
+            "revokeTokenGrant(address,uint256)",
+            "tokenGrantsCount(address)",
+            "tokenGrant(address,uint256)",
+            "vestedTokens(MiniMeIrrevocableVestedToken.TokenGrant,uint64)",
+            "calculateVestedTokens(uint256,uint256,uint256,uint256,uint256)",
+            "nonVestedTokens(MiniMeIrrevocableVestedToken.TokenGrant,uint64)",
+            "lastTokenIsTransferableDate(address)",
+            "transferableTokens(address,uint64)",
+            "safeMul(uint256,uint256)",
+            "safeDiv(uint256,uint256)",
+            "safeSub(uint256,uint256)",
+            "safeAdd(uint256,uint256)",
+            "max64(uint64,uint64)",
+            "min64(uint64,uint64)",
+            "max256(uint256,uint256)",
+            "min256(uint256,uint256)",
+            "assert(bool)",
+            "MiniMeToken(address,address,uint256,string,uint8,string,bool)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "doTransfer(address,address,uint256)",
+            "balanceOf(address)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "approveAndCall(address,uint256,bytes)",
+            "totalSupply()",
+            "balanceOfAt(address,uint256)",
+            "totalSupplyAt(uint256)",
+            "min(uint256,uint256)",
+            "createCloneToken(string,uint8,string,uint256,bool)",
+            "generateTokens(address,uint256)",
+            "destroyTokens(address,uint256)",
+            "enableTransfers(bool)",
+            "getValueAt(MiniMeToken.Checkpoint[],uint256)",
+            "updateValueAtNow(MiniMeToken.Checkpoint[],uint256)",
+            "isContract(address)",
+            "fallback()",
+            "Controlled()",
+            "changeController(address)",
+            "totalSupply()",
+            "balanceOf(address)",
+            "allowance(address,address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "ANT(address)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "MiniMeIrrevocableVestedToken(address,address,uint256,string,uint8,string,bool)": {
+                "argument": {
+                    "_parentSnapShotBlock": "uint256",
+                    "_tokenName": "string",
+                    "_decimalUnits": "uint8",
+                    "_tokenSymbol": "string"
+                },
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "spendableBalanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "grantVestedTokens(address,uint256,uint64,uint64,uint64)": {
+                "argument": {
+                    "_value": "uint256",
+                    "_start": "uint64",
+                    "_cliff": "uint64",
+                    "_vesting": "uint64"
+                },
+                "contract": {}
+            },
+            "setCanCreateGrants(address,bool)": {
+                "argument": {},
+                "contract": {}
+            },
+            "doSetCanCreateGrants(address,bool)": {
+                "argument": {},
+                "contract": {}
+            },
+            "changeVestingWhitelister(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "revokeTokenGrant(address,uint256)": {
+                "argument": {
+                    "_grantId": "uint256"
+                },
+                "contract": {}
+            },
+            "tokenGrantsCount(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "tokenGrant(address,uint256)": {
+                "argument": {
+                    "_grantId": "uint256"
+                },
+                "contract": {}
+            },
+            "vestedTokens(MiniMeIrrevocableVestedToken.TokenGrant,uint64)": {
+                "argument": {
+                    "time": "uint64"
+                },
+                "contract": {}
+            },
+            "calculateVestedTokens(uint256,uint256,uint256,uint256,uint256)": {
+                "argument": {
+                    "tokens": "uint256",
+                    "time": "uint256",
+                    "start": "uint256",
+                    "cliff": "uint256",
+                    "vesting": "uint256"
+                },
+                "contract": {}
+            },
+            "nonVestedTokens(MiniMeIrrevocableVestedToken.TokenGrant,uint64)": {
+                "argument": {
+                    "time": "uint64"
+                },
+                "contract": {}
+            },
+            "lastTokenIsTransferableDate(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferableTokens(address,uint64)": {
+                "argument": {
+                    "time": "uint64"
+                },
+                "contract": {}
+            },
+            "safeMul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "safeDiv(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "safeSub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "safeAdd(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "max64(uint64,uint64)": {
+                "argument": {
+                    "a": "uint64",
+                    "b": "uint64"
+                },
+                "contract": {}
+            },
+            "min64(uint64,uint64)": {
+                "argument": {
+                    "a": "uint64",
+                    "b": "uint64"
+                },
+                "contract": {}
+            },
+            "max256(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "min256(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "assert(bool)": {
+                "argument": {},
+                "contract": {}
+            },
+            "MiniMeToken(address,address,uint256,string,uint8,string,bool)": {
+                "argument": {
+                    "_parentSnapShotBlock": "uint256",
+                    "_tokenName": "string",
+                    "_decimalUnits": "uint8",
+                    "_tokenSymbol": "string"
+                },
+                "contract": {}
+            },
+            "doTransfer(address,address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "approveAndCall(address,uint256,bytes)": {
+                "argument": {
+                    "_amount": "uint256",
+                    "_extraData": "bytes"
+                },
+                "contract": {}
+            },
+            "totalSupply()": {
+                "argument": {},
+                "contract": {}
+            },
+            "balanceOfAt(address,uint256)": {
+                "argument": {
+                    "_blockNumber": "uint256"
+                },
+                "contract": {}
+            },
+            "totalSupplyAt(uint256)": {
+                "argument": {
+                    "_blockNumber": "uint256"
+                },
+                "contract": {}
+            },
+            "min(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "createCloneToken(string,uint8,string,uint256,bool)": {
+                "argument": {
+                    "_cloneTokenName": "string",
+                    "_cloneDecimalUnits": "uint8",
+                    "_cloneTokenSymbol": "string",
+                    "_snapshotBlock": "uint256"
+                },
+                "contract": {}
+            },
+            "generateTokens(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {}
+            },
+            "destroyTokens(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {}
+            },
+            "enableTransfers(bool)": {
+                "argument": {},
+                "contract": {}
+            },
+            "getValueAt(MiniMeToken.Checkpoint[],uint256)": {
+                "argument": {
+                    "checkpoints": "MiniMeToken.Checkpoint[]",
+                    "_block": "uint256"
+                },
+                "contract": {}
+            },
+            "updateValueAtNow(MiniMeToken.Checkpoint[],uint256)": {
+                "argument": {
+                    "checkpoints": "MiniMeToken.Checkpoint[]",
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "isContract(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {}
+            },
+            "Controlled()": {
+                "argument": {},
+                "contract": {}
+            },
+            "changeController(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "ANT(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "balanceOfAt(address,uint256)": [
+                12410,
+                26
+            ],
+            "tokenGrantsCount(address)": [
+                882,
+                22
+            ],
+            "totalSupply()": [
+                1344,
+                132
+            ],
+            "allowance(address,address)": [
+                3856,
+                616
+            ],
+            "transferFrom(address,address,uint256)": [
+                1466,
+                176
+            ],
+            "transferableTokens(address,uint64)": [
+                3648,
+                572
+            ],
+            "approve(address,uint256)": [
+                1113,
+                66
+            ],
+            "totalSupplyAt(uint256)": [
+                12410,
+                26
+            ],
+            "enableTransfers(bool)": [
+                4139,
+                682
+            ],
+            "setCanCreateGrants(address,bool)": [
+                1387,
+                154
+            ],
+            "createCloneToken(string,uint8,string,uint256,bool)": [
+                2421,
+                330
+            ],
+            "tokenGrant(address,uint256)": [
+                2185,
+                308
+            ],
+            "changeController(address)": [
+                8816,
+                889
+            ],
+            "revokeTokenGrant(address,uint256)": [
+                4062,
+                660
+            ],
+            "balanceOf(address)": [
+                2802,
+                374
+            ],
+            "spendableBalanceOf(address)": [
+                1214,
+                88
+            ],
+            "generateTokens(address,uint256)": [
+                2976,
+                418
+            ],
+            "approveAndCall(address,uint256,bytes)": [
+                3477,
+                550
+            ],
+            "destroyTokens(address,uint256)": [
+                3755,
+                594
+            ],
+            "lastTokenIsTransferableDate(address)": [
+                2695,
+                352
+            ],
+            "changeVestingWhitelister(address)": [
+                4273,
+                726
+            ],
+            "transfer(address,uint256)": [
+                3286,
+                484
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump9977": [
+                "parentToken.totalSupplyAt(min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.totalSupplyAt(min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block7319_18": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block9977": [
+                "parentToken.totalSupplyAt(min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block7319_6": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block7319": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block9977_0": [
+                "parentToken.totalSupplyAt(min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block7319_11": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block7319_10": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block7319_13": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block7319_12": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block7319_15": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block7319_14": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block7319_17": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "jump5967": [
+                "Controller(controller).onApprove(msg.sender, _spender, _amount)",
+                "Controller(controller).onApprove(msg.sender, _spender, _amount)"
+            ],
+            "block662_0": [
+                "Controller(controller).proxyPayment.value(msg.value)(msg.sender)"
+            ],
+            "jump7319_18": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "jump7319_13": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "jump7319_12": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "jump7319_11": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "jump7319_10": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block14024": [
+                "Controller(controller).onTransfer(_from, _to, _amount)"
+            ],
+            "jump7319_16": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "jump7319_15": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "jump7319_14": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "jump7319": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block7319_8": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block7319_5": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "jump7319_17": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block14024_1": [
+                "Controller(controller).onTransfer(_from, _to, _amount)"
+            ],
+            "block14024_0": [
+                "Controller(controller).onTransfer(_from, _to, _amount)"
+            ],
+            "block7319_1": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block7319_0": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block7319_3": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block7319_2": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block8816": [
+                "cloneToken.changeController(msg.sender)"
+            ],
+            "jump7319_6": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "jump9977_0": [
+                "parentToken.totalSupplyAt(min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.totalSupplyAt(min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block5967": [
+                "Controller(controller).onApprove(msg.sender, _spender, _amount)"
+            ],
+            "jump14024": [
+                "Controller(controller).onTransfer(_from, _to, _amount)",
+                "Controller(controller).onTransfer(_from, _to, _amount)"
+            ],
+            "block5967_0": [
+                "Controller(controller).onApprove(msg.sender, _spender, _amount)"
+            ],
+            "jump662": [
+                "Controller(controller).proxyPayment.value(msg.value)(msg.sender)",
+                "Controller(controller).proxyPayment.value(msg.value)(msg.sender)"
+            ],
+            "block662": [
+                "Controller(controller).proxyPayment.value(msg.value)(msg.sender)"
+            ],
+            "jump7319_7": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "jump5967_0": [
+                "Controller(controller).onApprove(msg.sender, _spender, _amount)",
+                "Controller(controller).onApprove(msg.sender, _spender, _amount)"
+            ],
+            "block7319_16": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block8600": [
+                "tokenFactory.createCloneToken(\n            this,\n            _snapshotBlock,\n            _cloneTokenName,\n            _cloneDecimalUnits,\n            _cloneTokenSymbol,\n            _transfersEnabled\n            )"
+            ],
+            "jump10478": [
+                "ApproveAndCallReceiver(_spender).receiveApproval(\n           msg.sender,\n           _amount,\n           this,\n           _extraData\n        )",
+                "ApproveAndCallReceiver(_spender).receiveApproval(\n           msg.sender,\n           _amount,\n           this,\n           _extraData\n        )"
+            ],
+            "jump7319_9": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "jump8600": [
+                "tokenFactory.createCloneToken(\n            this,\n            _snapshotBlock,\n            _cloneTokenName,\n            _cloneDecimalUnits,\n            _cloneTokenSymbol,\n            _transfersEnabled\n            )",
+                "tokenFactory.createCloneToken(\n            this,\n            _snapshotBlock,\n            _cloneTokenName,\n            _cloneDecimalUnits,\n            _cloneTokenSymbol,\n            _transfersEnabled\n            )"
+            ],
+            "block10478": [
+                "ApproveAndCallReceiver(_spender).receiveApproval(\n           msg.sender,\n           _amount,\n           this,\n           _extraData\n        )"
+            ],
+            "jump7319_3": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "jump7319_2": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "jump7319_1": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "jump7319_0": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "jump14024_1": [
+                "Controller(controller).onTransfer(_from, _to, _amount)",
+                "Controller(controller).onTransfer(_from, _to, _amount)"
+            ],
+            "jump14024_0": [
+                "Controller(controller).onTransfer(_from, _to, _amount)",
+                "Controller(controller).onTransfer(_from, _to, _amount)"
+            ],
+            "jump7319_5": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "jump7319_4": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block7319_4": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "jump8816": [
+                "cloneToken.changeController(msg.sender)",
+                "cloneToken.changeController(msg.sender)"
+            ],
+            "jump662_0": [
+                "Controller(controller).proxyPayment.value(msg.value)(msg.sender)",
+                "Controller(controller).proxyPayment.value(msg.value)(msg.sender)"
+            ],
+            "block7319_9": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "block7319_7": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ],
+            "jump7319_8": [
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))",
+                "parentToken.balanceOfAt(_owner, min(_blockNumber, parentSnapShotBlock))"
+            ]
+        }
+    },
+    "AragonTokenSale": {
+        "function_list": [
+            "safeMul(uint256,uint256)",
+            "safeDiv(uint256,uint256)",
+            "safeSub(uint256,uint256)",
+            "safeAdd(uint256,uint256)",
+            "max64(uint64,uint64)",
+            "min64(uint64,uint64)",
+            "max256(uint256,uint256)",
+            "min256(uint256,uint256)",
+            "assert(bool)",
+            "proxyPayment(address)",
+            "onTransfer(address,address,uint256)",
+            "onApprove(address,address,uint256)",
+            "AragonTokenSale(uint256,uint256,address,address,uint256,uint256,uint8,bytes32)",
+            "setANT(address,address,address)",
+            "activateSale()",
+            "doActivateSale(address)",
+            "isActivated()",
+            "getPrice(uint256)",
+            "stageForBlock(uint256)",
+            "priceForStage(uint8)",
+            "allocatePresaleTokens(address,uint256,uint64,uint64)",
+            "fallback()",
+            "proxyPayment(address)",
+            "onTransfer(address,address,uint256)",
+            "onApprove(address,address,uint256)",
+            "doPayment(address)",
+            "emergencyStopSale()",
+            "restartSale()",
+            "revealCap(uint256,uint256)",
+            "finalizeSale(uint256,uint256)",
+            "doFinalizeSale(uint256,uint256)",
+            "deployNetwork(address)",
+            "setAragonDevMultisig(address)",
+            "setCommunityMultisig(address)",
+            "getBlockNumber()",
+            "computeCap(uint256,uint256)",
+            "isValidCap(uint256,uint256)",
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "safeMul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "initialBlock": "uint256",
+                    "finalBlock": "uint256",
+                    "initialPrice": "uint256",
+                    "finalPrice": "uint256",
+                    "priceStages": "uint8",
+                    "capCommitment": "bytes32",
+                    "totalCollected": "uint256",
+                    "dust": "uint256",
+                    "hardCap": "uint256"
+                }
+            },
+            "safeDiv(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "initialBlock": "uint256",
+                    "finalBlock": "uint256",
+                    "initialPrice": "uint256",
+                    "finalPrice": "uint256",
+                    "priceStages": "uint8",
+                    "capCommitment": "bytes32",
+                    "totalCollected": "uint256",
+                    "dust": "uint256",
+                    "hardCap": "uint256"
+                }
+            },
+            "safeSub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "initialBlock": "uint256",
+                    "finalBlock": "uint256",
+                    "initialPrice": "uint256",
+                    "finalPrice": "uint256",
+                    "priceStages": "uint8",
+                    "capCommitment": "bytes32",
+                    "totalCollected": "uint256",
+                    "dust": "uint256",
+                    "hardCap": "uint256"
+                }
+            },
+            "safeAdd(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "initialBlock": "uint256",
+                    "finalBlock": "uint256",
+                    "initialPrice": "uint256",
+                    "finalPrice": "uint256",
+                    "priceStages": "uint8",
+                    "capCommitment": "bytes32",
+                    "totalCollected": "uint256",
+                    "dust": "uint256",
+                    "hardCap": "uint256"
+                }
+            },
+            "max64(uint64,uint64)": {
+                "argument": {
+                    "a": "uint64",
+                    "b": "uint64"
+                },
+                "contract": {
+                    "initialBlock": "uint256",
+                    "finalBlock": "uint256",
+                    "initialPrice": "uint256",
+                    "finalPrice": "uint256",
+                    "priceStages": "uint8",
+                    "capCommitment": "bytes32",
+                    "totalCollected": "uint256",
+                    "dust": "uint256",
+                    "hardCap": "uint256"
+                }
+            },
+            "min64(uint64,uint64)": {
+                "argument": {
+                    "a": "uint64",
+                    "b": "uint64"
+                },
+                "contract": {
+                    "initialBlock": "uint256",
+                    "finalBlock": "uint256",
+                    "initialPrice": "uint256",
+                    "finalPrice": "uint256",
+                    "priceStages": "uint8",
+                    "capCommitment": "bytes32",
+                    "totalCollected": "uint256",
+                    "dust": "uint256",
+                    "hardCap": "uint256"
+                }
+            },
+            "max256(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "initialBlock": "uint256",
+                    "finalBlock": "uint256",
+                    "initialPrice": "uint256",
+                    "finalPrice": "uint256",
+                    "priceStages": "uint8",
+                    "capCommitment": "bytes32",
+                    "totalCollected": "uint256",
+                    "dust": "uint256",
+                    "hardCap": "uint256"
+                }
+            },
+            "min256(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "initialBlock": "uint256",
+                    "finalBlock": "uint256",
+                    "initialPrice": "uint256",
+                    "finalPrice": "uint256",
+                    "priceStages": "uint8",
+                    "capCommitment": "bytes32",
+                    "totalCollected": "uint256",
+                    "dust": "uint256",
+                    "hardCap": "uint256"
+                }
+            },
+            "assert(bool)": {
+                "argument": {},
+                "contract": {
+                    "initialBlock": "uint256",
+                    "finalBlock": "uint256",
+                    "initialPrice": "uint256",
+                    "finalPrice": "uint256",
+                    "priceStages": "uint8",
+                    "capCommitment": "bytes32",
+                    "totalCollected": "uint256",
+                    "dust": "uint256",
+                    "hardCap": "uint256"
+                }
+            },
+            "proxyPayment(address)": {
+                "argument": {},
+                "contract": {
+                    "initialBlock": "uint256",
+                    "finalBlock": "uint256",
+                    "initialPrice": "uint256",
+                    "finalPrice": "uint256",
+                    "priceStages": "uint8",
+                    "capCommitment": "bytes32",
+                    "totalCollected": "uint256",
+                    "dust": "uint256",
+                    "hardCap": "uint256"
+                }
+            },
+            "onTransfer(address,address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "initialBlock": "uint256",
+                    "finalBlock": "uint256",
+                    "initialPrice": "uint256",
+                    "finalPrice": "uint256",
+                    "priceStages": "uint8",
+                    "capCommitment": "bytes32",
+                    "totalCollected": "uint256",
+                    "dust": "uint256",
+                    "hardCap": "uint256"
+                }
+            },
+            "onApprove(address,address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "initialBlock": "uint256",
+                    "finalBlock": "uint256",
+                    "initialPrice": "uint256",
+                    "finalPrice": "uint256",
+                    "priceStages": "uint8",
+                    "capCommitment": "bytes32",
+                    "totalCollected": "uint256",
+                    "dust": "uint256",
+                    "hardCap": "uint256"
+                }
+            },
+            "AragonTokenSale(uint256,uint256,address,address,uint256,uint256,uint8,bytes32)": {
+                "argument": {
+                    "_initialBlock": "uint256",
+                    "_finalBlock": "uint256",
+                    "_initialPrice": "uint256",
+                    "_finalPrice": "uint256",
+                    "_priceStages": "uint8",
+                    "_capCommitment": "bytes32"
+                },
+                "contract": {
+                    "initialBlock": "uint256",
+                    "finalBlock": "uint256",
+                    "initialPrice": "uint256",
+                    "finalPrice": "uint256",
+                    "priceStages": "uint8",
+                    "capCommitment": "bytes32",
+                    "totalCollected": "uint256",
+                    "dust": "uint256",
+                    "hardCap": "uint256"
+                }
+            },
+            "setANT(address,address,address)": {
+                "argument": {},
+                "contract": {
+                    "initialBlock": "uint256",
+                    "finalBlock": "uint256",
+                    "initialPrice": "uint256",
+                    "finalPrice": "uint256",
+                    "priceStages": "uint8",
+                    "capCommitment": "bytes32",
+                    "totalCollected": "uint256",
+                    "dust": "uint256",
+                    "hardCap": "uint256"
+                }
+            },
+            "activateSale()": {
+                "argument": {},
+                "contract": {
+                    "initialBlock": "uint256",
+                    "finalBlock": "uint256",
+                    "initialPrice": "uint256",
+                    "finalPrice": "uint256",
+                    "priceStages": "uint8",
+                    "capCommitment": "bytes32",
+                    "totalCollected": "uint256",
+                    "dust": "uint256",
+                    "hardCap": "uint256"
+                }
+            },
+            "doActivateSale(address)": {
+                "argument": {},
+                "contract": {
+                    "initialBlock": "uint256",
+                    "finalBlock": "uint256",
+                    "initialPrice": "uint256",
+                    "finalPrice": "uint256",
+                    "priceStages": "uint8",
+                    "capCommitment": "bytes32",
+                    "totalCollected": "uint256",
+                    "dust": "uint256",
+                    "hardCap": "uint256"
+                }
+            },
+            "isActivated()": {
+                "argument": {},
+                "contract": {
+                    "initialBlock": "uint256",
+                    "finalBlock": "uint256",
+                    "initialPrice": "uint256",
+                    "finalPrice": "uint256",
+                    "priceStages": "uint8",
+                    "capCommitment": "bytes32",
+                    "totalCollected": "uint256",
+                    "dust": "uint256",
+                    "hardCap": "uint256"
+                }
+            },
+            "getPrice(uint256)": {
+                "argument": {
+                    "_blockNumber": "uint256"
+                },
+                "contract": {
+                    "initialBlock": "uint256",
+                    "finalBlock": "uint256",
+                    "initialPrice": "uint256",
+                    "finalPrice": "uint256",
+                    "priceStages": "uint8",
+                    "capCommitment": "bytes32",
+                    "totalCollected": "uint256",
+                    "dust": "uint256",
+                    "hardCap": "uint256"
+                }
+            },
+            "stageForBlock(uint256)": {
+                "argument": {
+                    "_blockNumber": "uint256"
+                },
+                "contract": {
+                    "initialBlock": "uint256",
+                    "finalBlock": "uint256",
+                    "initialPrice": "uint256",
+                    "finalPrice": "uint256",
+                    "priceStages": "uint8",
+                    "capCommitment": "bytes32",
+                    "totalCollected": "uint256",
+                    "dust": "uint256",
+                    "hardCap": "uint256"
+                }
+            },
+            "priceForStage(uint8)": {
+                "argument": {
+                    "_stage": "uint8"
+                },
+                "contract": {
+                    "initialBlock": "uint256",
+                    "finalBlock": "uint256",
+                    "initialPrice": "uint256",
+                    "finalPrice": "uint256",
+                    "priceStages": "uint8",
+                    "capCommitment": "bytes32",
+                    "totalCollected": "uint256",
+                    "dust": "uint256",
+                    "hardCap": "uint256"
+                }
+            },
+            "allocatePresaleTokens(address,uint256,uint64,uint64)": {
+                "argument": {
+                    "_amount": "uint256",
+                    "cliffDate": "uint64",
+                    "vestingDate": "uint64"
+                },
+                "contract": {
+                    "initialBlock": "uint256",
+                    "finalBlock": "uint256",
+                    "initialPrice": "uint256",
+                    "finalPrice": "uint256",
+                    "priceStages": "uint8",
+                    "capCommitment": "bytes32",
+                    "totalCollected": "uint256",
+                    "dust": "uint256",
+                    "hardCap": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "initialBlock": "uint256",
+                    "finalBlock": "uint256",
+                    "initialPrice": "uint256",
+                    "finalPrice": "uint256",
+                    "priceStages": "uint8",
+                    "capCommitment": "bytes32",
+                    "totalCollected": "uint256",
+                    "dust": "uint256",
+                    "hardCap": "uint256"
+                }
+            },
+            "doPayment(address)": {
+                "argument": {},
+                "contract": {
+                    "initialBlock": "uint256",
+                    "finalBlock": "uint256",
+                    "initialPrice": "uint256",
+                    "finalPrice": "uint256",
+                    "priceStages": "uint8",
+                    "capCommitment": "bytes32",
+                    "totalCollected": "uint256",
+                    "dust": "uint256",
+                    "hardCap": "uint256"
+                }
+            },
+            "emergencyStopSale()": {
+                "argument": {},
+                "contract": {
+                    "initialBlock": "uint256",
+                    "finalBlock": "uint256",
+                    "initialPrice": "uint256",
+                    "finalPrice": "uint256",
+                    "priceStages": "uint8",
+                    "capCommitment": "bytes32",
+                    "totalCollected": "uint256",
+                    "dust": "uint256",
+                    "hardCap": "uint256"
+                }
+            },
+            "restartSale()": {
+                "argument": {},
+                "contract": {
+                    "initialBlock": "uint256",
+                    "finalBlock": "uint256",
+                    "initialPrice": "uint256",
+                    "finalPrice": "uint256",
+                    "priceStages": "uint8",
+                    "capCommitment": "bytes32",
+                    "totalCollected": "uint256",
+                    "dust": "uint256",
+                    "hardCap": "uint256"
+                }
+            },
+            "revealCap(uint256,uint256)": {
+                "argument": {
+                    "_cap": "uint256",
+                    "_cap_secure": "uint256"
+                },
+                "contract": {
+                    "initialBlock": "uint256",
+                    "finalBlock": "uint256",
+                    "initialPrice": "uint256",
+                    "finalPrice": "uint256",
+                    "priceStages": "uint8",
+                    "capCommitment": "bytes32",
+                    "totalCollected": "uint256",
+                    "dust": "uint256",
+                    "hardCap": "uint256"
+                }
+            },
+            "finalizeSale(uint256,uint256)": {
+                "argument": {
+                    "_cap": "uint256",
+                    "_cap_secure": "uint256"
+                },
+                "contract": {
+                    "initialBlock": "uint256",
+                    "finalBlock": "uint256",
+                    "initialPrice": "uint256",
+                    "finalPrice": "uint256",
+                    "priceStages": "uint8",
+                    "capCommitment": "bytes32",
+                    "totalCollected": "uint256",
+                    "dust": "uint256",
+                    "hardCap": "uint256"
+                }
+            },
+            "doFinalizeSale(uint256,uint256)": {
+                "argument": {
+                    "_cap": "uint256",
+                    "_cap_secure": "uint256"
+                },
+                "contract": {
+                    "initialBlock": "uint256",
+                    "finalBlock": "uint256",
+                    "initialPrice": "uint256",
+                    "finalPrice": "uint256",
+                    "priceStages": "uint8",
+                    "capCommitment": "bytes32",
+                    "totalCollected": "uint256",
+                    "dust": "uint256",
+                    "hardCap": "uint256"
+                }
+            },
+            "deployNetwork(address)": {
+                "argument": {},
+                "contract": {
+                    "initialBlock": "uint256",
+                    "finalBlock": "uint256",
+                    "initialPrice": "uint256",
+                    "finalPrice": "uint256",
+                    "priceStages": "uint8",
+                    "capCommitment": "bytes32",
+                    "totalCollected": "uint256",
+                    "dust": "uint256",
+                    "hardCap": "uint256"
+                }
+            },
+            "setAragonDevMultisig(address)": {
+                "argument": {},
+                "contract": {
+                    "initialBlock": "uint256",
+                    "finalBlock": "uint256",
+                    "initialPrice": "uint256",
+                    "finalPrice": "uint256",
+                    "priceStages": "uint8",
+                    "capCommitment": "bytes32",
+                    "totalCollected": "uint256",
+                    "dust": "uint256",
+                    "hardCap": "uint256"
+                }
+            },
+            "setCommunityMultisig(address)": {
+                "argument": {},
+                "contract": {
+                    "initialBlock": "uint256",
+                    "finalBlock": "uint256",
+                    "initialPrice": "uint256",
+                    "finalPrice": "uint256",
+                    "priceStages": "uint8",
+                    "capCommitment": "bytes32",
+                    "totalCollected": "uint256",
+                    "dust": "uint256",
+                    "hardCap": "uint256"
+                }
+            },
+            "getBlockNumber()": {
+                "argument": {},
+                "contract": {
+                    "initialBlock": "uint256",
+                    "finalBlock": "uint256",
+                    "initialPrice": "uint256",
+                    "finalPrice": "uint256",
+                    "priceStages": "uint8",
+                    "capCommitment": "bytes32",
+                    "totalCollected": "uint256",
+                    "dust": "uint256",
+                    "hardCap": "uint256"
+                }
+            },
+            "computeCap(uint256,uint256)": {
+                "argument": {
+                    "_cap": "uint256",
+                    "_cap_secure": "uint256"
+                },
+                "contract": {
+                    "initialBlock": "uint256",
+                    "finalBlock": "uint256",
+                    "initialPrice": "uint256",
+                    "finalPrice": "uint256",
+                    "priceStages": "uint8",
+                    "capCommitment": "bytes32",
+                    "totalCollected": "uint256",
+                    "dust": "uint256",
+                    "hardCap": "uint256"
+                }
+            },
+            "isValidCap(uint256,uint256)": {
+                "argument": {
+                    "_cap": "uint256",
+                    "_cap_secure": "uint256"
+                },
+                "contract": {
+                    "initialBlock": "uint256",
+                    "finalBlock": "uint256",
+                    "initialPrice": "uint256",
+                    "finalPrice": "uint256",
+                    "priceStages": "uint8",
+                    "capCommitment": "bytes32",
+                    "totalCollected": "uint256",
+                    "dust": "uint256",
+                    "hardCap": "uint256"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "initialBlock": "uint256",
+                    "finalBlock": "uint256",
+                    "initialPrice": "uint256",
+                    "finalPrice": "uint256",
+                    "priceStages": "uint8",
+                    "capCommitment": "bytes32",
+                    "totalCollected": "uint256",
+                    "dust": "uint256",
+                    "hardCap": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "computeCap(uint256,uint256)": [
+                1757,
+                515
+            ],
+            "proxyPayment(address)": [
+                2455,
+                735
+            ],
+            "isActivated()": [
+                909,
+                251
+            ],
+            "setAragonDevMultisig(address)": [
+                2005,
+                603
+            ],
+            "onApprove(address,address,uint256)": [
+                2072,
+                625
+            ],
+            "getPrice(uint256)": [
+                2390,
+                713
+            ],
+            "finalizeSale(uint256,uint256)": [
+                1950,
+                581
+            ],
+            "onTransfer(address,address,uint256)": [
+                776,
+                229
+            ],
+            "allocatePresaleTokens(address,uint256,uint64,uint64)": [
+                1640,
+                493
+            ],
+            "revealCap(uint256,uint256)": [
+                2335,
+                691
+            ],
+            "setANT(address,address,address)": [
+                1509,
+                471
+            ],
+            "setCommunityMultisig(address)": [
+                1005,
+                295
+            ],
+            "emergencyStopSale()": [
+                576,
+                141
+            ],
+            "activateSale()": [
+                1840,
+                537
+            ],
+            "restartSale()": [
+                1072,
+                317
+            ],
+            "deployNetwork(address)": [
+                1352,
+                405
+            ],
+            "isValidCap(uint256,uint256)": [
+                1273,
+                383
+            ]
+        },
+        "block_CALL_mapping": {
+            "block9654": [
+                "token.generateTokens(aragonDevMultisig, aragonTokens)"
+            ],
+            "jump6120": [
+                "networkPlaceholder.token()",
+                "networkPlaceholder.token()"
+            ],
+            "block5586": [
+                "token.controller()"
+            ],
+            "jump2899_1": [
+                "saleWallet.send(msg.value)",
+                "saleWallet.send(msg.value)"
+            ],
+            "block6818": [
+                "saleWallet.multisig()"
+            ],
+            "jump7920": [
+                "token.grantVestedTokens(_receiver, _amount, uint64(now), cliffDate, vestingDate)",
+                "token.grantVestedTokens(_receiver, _amount, uint64(now), cliffDate, vestingDate)"
+            ],
+            "jump7570": [
+                "token.generateTokens(address(this), _amount)",
+                "token.generateTokens(address(this), _amount)"
+            ],
+            "block7920": [
+                "token.grantVestedTokens(_receiver, _amount, uint64(now), cliffDate, vestingDate)"
+            ],
+            "jump9351_0": [
+                "token.totalSupply()",
+                "token.totalSupply()"
+            ],
+            "block6349": [
+                "token.totalSupply()"
+            ],
+            "block4889": [
+                "networkPlaceholder.changeController(networkAddress)"
+            ],
+            "jump6349": [
+                "token.totalSupply()",
+                "token.totalSupply()"
+            ],
+            "block3196": [
+                "token.generateTokens(_owner, boughtTokens)"
+            ],
+            "jump5836": [
+                "networkPlaceholder.sale()",
+                "networkPlaceholder.sale()"
+            ],
+            "block9351_0": [
+                "token.totalSupply()"
+            ],
+            "block9947_0": [
+                "token.changeController(networkPlaceholder)"
+            ],
+            "jump4889": [
+                "networkPlaceholder.changeController(networkAddress)",
+                "networkPlaceholder.changeController(networkAddress)"
+            ],
+            "jump9351": [
+                "token.totalSupply()",
+                "token.totalSupply()"
+            ],
+            "block9947": [
+                "token.changeController(networkPlaceholder)"
+            ],
+            "jump9947": [
+                "token.changeController(networkPlaceholder)",
+                "token.changeController(networkPlaceholder)"
+            ],
+            "block7570": [
+                "token.generateTokens(address(this), _amount)"
+            ],
+            "block6556": [
+                "saleWallet.finalBlock()"
+            ],
+            "block7068": [
+                "saleWallet.tokenSale()"
+            ],
+            "jump9654_0": [
+                "token.generateTokens(aragonDevMultisig, aragonTokens)",
+                "token.generateTokens(aragonDevMultisig, aragonTokens)"
+            ],
+            "block2899": [
+                "saleWallet.send(msg.value)"
+            ],
+            "block3196_0": [
+                "token.generateTokens(_owner, boughtTokens)"
+            ],
+            "block3196_1": [
+                "token.generateTokens(_owner, boughtTokens)"
+            ],
+            "jump6818": [
+                "saleWallet.multisig()",
+                "saleWallet.multisig()"
+            ],
+            "block2899_1": [
+                "saleWallet.send(msg.value)"
+            ],
+            "jump2899": [
+                "saleWallet.send(msg.value)",
+                "saleWallet.send(msg.value)"
+            ],
+            "jump9947_0": [
+                "token.changeController(networkPlaceholder)",
+                "token.changeController(networkPlaceholder)"
+            ],
+            "jump3196_0": [
+                "token.generateTokens(_owner, boughtTokens)",
+                "token.generateTokens(_owner, boughtTokens)"
+            ],
+            "jump3196_1": [
+                "token.generateTokens(_owner, boughtTokens)",
+                "token.generateTokens(_owner, boughtTokens)"
+            ],
+            "jump6556": [
+                "saleWallet.finalBlock()",
+                "saleWallet.finalBlock()"
+            ],
+            "block6120": [
+                "networkPlaceholder.token()"
+            ],
+            "block9351": [
+                "token.totalSupply()"
+            ],
+            "block2899_0": [
+                "saleWallet.send(msg.value)"
+            ],
+            "jump9654": [
+                "token.generateTokens(aragonDevMultisig, aragonTokens)",
+                "token.generateTokens(aragonDevMultisig, aragonTokens)"
+            ],
+            "jump5586": [
+                "token.controller()",
+                "token.controller()"
+            ],
+            "block5836": [
+                "networkPlaceholder.sale()"
+            ],
+            "jump2899_0": [
+                "saleWallet.send(msg.value)",
+                "saleWallet.send(msg.value)"
+            ],
+            "block9654_0": [
+                "token.generateTokens(aragonDevMultisig, aragonTokens)"
+            ],
+            "jump3196": [
+                "token.generateTokens(_owner, boughtTokens)",
+                "token.generateTokens(_owner, boughtTokens)"
+            ],
+            "jump7068": [
+                "saleWallet.tokenSale()",
+                "saleWallet.tokenSale()"
+            ]
+        }
+    }
+}

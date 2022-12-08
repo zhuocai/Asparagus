@@ -1,0 +1,309 @@
+{
+    "DaoCasinoToken": {
+        "function_list": [
+            "proxyPayment(address)",
+            "transfer(address,uint256)",
+            "balanceOf(address)"
+        ],
+        "initial_state": {
+            "proxyPayment(address)": {
+                "argument": {},
+                "contract": {
+                    "CAP": "uint256",
+                    "totalEthers": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "CAP": "uint256",
+                    "totalEthers": "uint256"
+                }
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "CAP": "uint256",
+                    "totalEthers": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                739,
+                207
+            ],
+            "transfer(address,uint256)": [
+                5370,
+                946
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump5370": [
+                "ERC20Token(tokenAddress).transfer(owner, amount)",
+                "ERC20Token(tokenAddress).transfer(owner, amount)"
+            ],
+            "block5370": [
+                "ERC20Token(tokenAddress).transfer(owner, amount)"
+            ]
+        }
+    },
+    "BETSale": {
+        "function_list": [
+            "withdrawTokens()",
+            "withdrawETH()",
+            "buyTokens()",
+            "updateAvailability(uint256)",
+            "updatePrice(uint256)",
+            "haltPurchases()",
+            "resumePurchases()",
+            "withdraw()",
+            "purchase()",
+            "fallback()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "withdrawTokens()": {
+                "argument": {},
+                "contract": {
+                    "total_bet_available": "uint256",
+                    "total_bet_purchased": "uint256",
+                    "total_bet_withdrawn": "uint256",
+                    "price_per_eth": "uint256"
+                }
+            },
+            "withdrawETH()": {
+                "argument": {},
+                "contract": {
+                    "total_bet_available": "uint256",
+                    "total_bet_purchased": "uint256",
+                    "total_bet_withdrawn": "uint256",
+                    "price_per_eth": "uint256"
+                }
+            },
+            "buyTokens()": {
+                "argument": {},
+                "contract": {
+                    "total_bet_available": "uint256",
+                    "total_bet_purchased": "uint256",
+                    "total_bet_withdrawn": "uint256",
+                    "price_per_eth": "uint256"
+                }
+            },
+            "updateAvailability(uint256)": {
+                "argument": {
+                    "_bet_amount": "uint256"
+                },
+                "contract": {
+                    "total_bet_available": "uint256",
+                    "total_bet_purchased": "uint256",
+                    "total_bet_withdrawn": "uint256",
+                    "price_per_eth": "uint256"
+                }
+            },
+            "updatePrice(uint256)": {
+                "argument": {
+                    "_price": "uint256"
+                },
+                "contract": {
+                    "total_bet_available": "uint256",
+                    "total_bet_purchased": "uint256",
+                    "total_bet_withdrawn": "uint256",
+                    "price_per_eth": "uint256"
+                }
+            },
+            "haltPurchases()": {
+                "argument": {},
+                "contract": {
+                    "total_bet_available": "uint256",
+                    "total_bet_purchased": "uint256",
+                    "total_bet_withdrawn": "uint256",
+                    "price_per_eth": "uint256"
+                }
+            },
+            "resumePurchases()": {
+                "argument": {},
+                "contract": {
+                    "total_bet_available": "uint256",
+                    "total_bet_purchased": "uint256",
+                    "total_bet_withdrawn": "uint256",
+                    "price_per_eth": "uint256"
+                }
+            },
+            "withdraw()": {
+                "argument": {},
+                "contract": {
+                    "total_bet_available": "uint256",
+                    "total_bet_purchased": "uint256",
+                    "total_bet_withdrawn": "uint256",
+                    "price_per_eth": "uint256"
+                }
+            },
+            "purchase()": {
+                "argument": {},
+                "contract": {
+                    "total_bet_available": "uint256",
+                    "total_bet_purchased": "uint256",
+                    "total_bet_withdrawn": "uint256",
+                    "price_per_eth": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "total_bet_available": "uint256",
+                    "total_bet_purchased": "uint256",
+                    "total_bet_withdrawn": "uint256",
+                    "price_per_eth": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "withdrawTokens()": [
+                795,
+                295
+            ],
+            "buyTokens()": [
+                904,
+                361
+            ],
+            "updatePrice(uint256)": [
+                750,
+                273
+            ],
+            "resumePurchases()": [
+                630,
+                207
+            ],
+            "haltPurchases()": [
+                453,
+                97
+            ],
+            "withdraw()": [
+                562,
+                163
+            ],
+            "withdrawETH()": [
+                914,
+                383
+            ],
+            "updateAvailability(uint256)": [
+                585,
+                185
+            ],
+            "purchase()": [
+                653,
+                229
+            ]
+        },
+        "block_CALL_mapping": {
+            "block1263_1": [
+                "token.balanceOf(address(this))"
+            ],
+            "block1263_0": [
+                "token.balanceOf(address(this))"
+            ],
+            "jump1879": [
+                "seller.transfer(msg.value)",
+                "seller.transfer(msg.value)"
+            ],
+            "block3776": [
+                "token.totalEthers()"
+            ],
+            "jump4053": [
+                "token.proxyPayment.value(this.balance)(address(this))",
+                "token.proxyPayment.value(this.balance)(address(this))"
+            ],
+            "block4173": [
+                "msg.sender.transfer(this.balance)"
+            ],
+            "jump4173": [
+                "msg.sender.transfer(this.balance)",
+                "msg.sender.transfer(this.balance)"
+            ],
+            "block4053": [
+                "token.proxyPayment.value(this.balance)(address(this))"
+            ],
+            "jump1879_0": [
+                "seller.transfer(msg.value)",
+                "seller.transfer(msg.value)"
+            ],
+            "jump1879_1": [
+                "seller.transfer(msg.value)",
+                "seller.transfer(msg.value)"
+            ],
+            "block3091": [
+                "token.balanceOf(address(this))"
+            ],
+            "jump3583": [
+                "token.CAP()",
+                "token.CAP()"
+            ],
+            "block1879": [
+                "seller.transfer(msg.value)"
+            ],
+            "block1752_0": [
+                "token.transfer(msg.sender, bet_to_withdraw)"
+            ],
+            "block1752_1": [
+                "token.transfer(msg.sender, bet_to_withdraw)"
+            ],
+            "jump1752": [
+                "token.transfer(msg.sender, bet_to_withdraw)",
+                "token.transfer(msg.sender, bet_to_withdraw)"
+            ],
+            "jump1752_0": [
+                "token.transfer(msg.sender, bet_to_withdraw)",
+                "token.transfer(msg.sender, bet_to_withdraw)"
+            ],
+            "jump1752_1": [
+                "token.transfer(msg.sender, bet_to_withdraw)",
+                "token.transfer(msg.sender, bet_to_withdraw)"
+            ],
+            "block1752": [
+                "token.transfer(msg.sender, bet_to_withdraw)"
+            ],
+            "jump1263_1": [
+                "token.balanceOf(address(this))",
+                "token.balanceOf(address(this))"
+            ],
+            "jump1263_0": [
+                "token.balanceOf(address(this))",
+                "token.balanceOf(address(this))"
+            ],
+            "jump3283": [
+                "token.transfer(seller, token.balanceOf(address(this)))",
+                "token.transfer(seller, token.balanceOf(address(this)))"
+            ],
+            "jump3776": [
+                "token.totalEthers()",
+                "token.totalEthers()"
+            ],
+            "block3283": [
+                "token.transfer(seller, token.balanceOf(address(this)))"
+            ],
+            "block3583": [
+                "token.CAP()"
+            ],
+            "block1263": [
+                "token.balanceOf(address(this))"
+            ],
+            "jump1263": [
+                "token.balanceOf(address(this))",
+                "token.balanceOf(address(this))"
+            ],
+            "block1879_0": [
+                "seller.transfer(msg.value)"
+            ],
+            "block1879_1": [
+                "seller.transfer(msg.value)"
+            ],
+            "jump3091": [
+                "token.balanceOf(address(this))",
+                "token.balanceOf(address(this))"
+            ]
+        }
+    }
+}

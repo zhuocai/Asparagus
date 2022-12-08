@@ -1,0 +1,926 @@
+{
+    "EZTanks": {
+        "function_list": [
+            "EZTanks()",
+            "setNewOwner(address)",
+            "newTankType(uint256,uint256,uint32,uint32,uint32,uint32)",
+            "changeFeeAmt(uint8)",
+            "changeTournamentTaxAmt(uint8)",
+            "changeTeamSize(uint8)",
+            "changeBattleFee(uint256)",
+            "delTankFromUser(address,uint256)",
+            "withdraw(uint256)",
+            "auctionTank(uint256,uint256,uint256,uint256)",
+            "bid(uint256)",
+            "cancelAuction(uint256)",
+            "buyTank(uint32)",
+            "cashOutTank(uint256)",
+            "upgradeTank(uint256,uint8)",
+            "battle(uint256)",
+            "quitBattle(uint256)",
+            "getCurrAuctionPriceTankID(uint256)",
+            "getPlayerBalance(address)",
+            "getContractBalance()",
+            "getTankOwner(uint256)",
+            "getOwnedTanks(address)",
+            "getTankType(uint256)",
+            "getCurrTypePrice(uint256)",
+            "getNumTanksType(uint256)",
+            "getNumTanks()",
+            "checkTankAuction(uint256)",
+            "getCurrAuctionPriceAuctionID(uint256)",
+            "getAuction(uint256)",
+            "getUpgradePrice(uint256)",
+            "getUpgradeAmt(uint256)",
+            "getCurrentStats(uint256)",
+            "inBattle(uint256)",
+            "getCurrTeamSizes()",
+            "getBattleTeamSize()",
+            "donate()",
+            "getTournamentAmt()",
+            "getBattleFee()",
+            "getTournamentRate()",
+            "getCurrFeeRate()",
+            "getBaseTypeStats(uint256)",
+            "getCashOutAmount(uint256)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "EZTanks()": {
+                "argument": {},
+                "contract": {
+                    "feeAmt": "uint8",
+                    "tournamentTaxRate": "uint8",
+                    "tournamentAmt": "uint256",
+                    "teamSize": "uint8",
+                    "battleFee": "uint256",
+                    "battleTeams": "uint256[]",
+                    "newTypeID": "uint256",
+                    "newTankID": "uint256",
+                    "newAuctionID": "uint256",
+                    "userTanks": "mapping(address => uint256[])"
+                }
+            },
+            "setNewOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "feeAmt": "uint8",
+                    "tournamentTaxRate": "uint8",
+                    "tournamentAmt": "uint256",
+                    "teamSize": "uint8",
+                    "battleFee": "uint256",
+                    "battleTeams": "uint256[]",
+                    "newTypeID": "uint256",
+                    "newTankID": "uint256",
+                    "newAuctionID": "uint256",
+                    "userTanks": "mapping(address => uint256[])"
+                }
+            },
+            "newTankType(uint256,uint256,uint32,uint32,uint32,uint32)": {
+                "argument": {
+                    "_startPrice": "uint256",
+                    "_earnings": "uint256",
+                    "_baseHealth": "uint32",
+                    "_baseAttack": "uint32",
+                    "_baseArmor": "uint32",
+                    "_baseSpeed": "uint32"
+                },
+                "contract": {
+                    "feeAmt": "uint8",
+                    "tournamentTaxRate": "uint8",
+                    "tournamentAmt": "uint256",
+                    "teamSize": "uint8",
+                    "battleFee": "uint256",
+                    "battleTeams": "uint256[]",
+                    "newTypeID": "uint256",
+                    "newTankID": "uint256",
+                    "newAuctionID": "uint256",
+                    "userTanks": "mapping(address => uint256[])"
+                }
+            },
+            "changeFeeAmt(uint8)": {
+                "argument": {
+                    "_amt": "uint8"
+                },
+                "contract": {
+                    "feeAmt": "uint8",
+                    "tournamentTaxRate": "uint8",
+                    "tournamentAmt": "uint256",
+                    "teamSize": "uint8",
+                    "battleFee": "uint256",
+                    "battleTeams": "uint256[]",
+                    "newTypeID": "uint256",
+                    "newTankID": "uint256",
+                    "newAuctionID": "uint256",
+                    "userTanks": "mapping(address => uint256[])"
+                }
+            },
+            "changeTournamentTaxAmt(uint8)": {
+                "argument": {
+                    "_rate": "uint8"
+                },
+                "contract": {
+                    "feeAmt": "uint8",
+                    "tournamentTaxRate": "uint8",
+                    "tournamentAmt": "uint256",
+                    "teamSize": "uint8",
+                    "battleFee": "uint256",
+                    "battleTeams": "uint256[]",
+                    "newTypeID": "uint256",
+                    "newTankID": "uint256",
+                    "newAuctionID": "uint256",
+                    "userTanks": "mapping(address => uint256[])"
+                }
+            },
+            "changeTeamSize(uint8)": {
+                "argument": {
+                    "_size": "uint8"
+                },
+                "contract": {
+                    "feeAmt": "uint8",
+                    "tournamentTaxRate": "uint8",
+                    "tournamentAmt": "uint256",
+                    "teamSize": "uint8",
+                    "battleFee": "uint256",
+                    "battleTeams": "uint256[]",
+                    "newTypeID": "uint256",
+                    "newTankID": "uint256",
+                    "newAuctionID": "uint256",
+                    "userTanks": "mapping(address => uint256[])"
+                }
+            },
+            "changeBattleFee(uint256)": {
+                "argument": {
+                    "_fee": "uint256"
+                },
+                "contract": {
+                    "feeAmt": "uint8",
+                    "tournamentTaxRate": "uint8",
+                    "tournamentAmt": "uint256",
+                    "teamSize": "uint8",
+                    "battleFee": "uint256",
+                    "battleTeams": "uint256[]",
+                    "newTypeID": "uint256",
+                    "newTankID": "uint256",
+                    "newAuctionID": "uint256",
+                    "userTanks": "mapping(address => uint256[])"
+                }
+            },
+            "delTankFromUser(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "feeAmt": "uint8",
+                    "tournamentTaxRate": "uint8",
+                    "tournamentAmt": "uint256",
+                    "teamSize": "uint8",
+                    "battleFee": "uint256",
+                    "battleTeams": "uint256[]",
+                    "newTypeID": "uint256",
+                    "newTankID": "uint256",
+                    "newAuctionID": "uint256",
+                    "userTanks": "mapping(address => uint256[])"
+                }
+            },
+            "withdraw(uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "feeAmt": "uint8",
+                    "tournamentTaxRate": "uint8",
+                    "tournamentAmt": "uint256",
+                    "teamSize": "uint8",
+                    "battleFee": "uint256",
+                    "battleTeams": "uint256[]",
+                    "newTypeID": "uint256",
+                    "newTankID": "uint256",
+                    "newAuctionID": "uint256",
+                    "userTanks": "mapping(address => uint256[])"
+                }
+            },
+            "auctionTank(uint256,uint256,uint256,uint256)": {
+                "argument": {
+                    "_tankID": "uint256",
+                    "_startPrice": "uint256",
+                    "_endPrice": "uint256",
+                    "_duration": "uint256"
+                },
+                "contract": {
+                    "feeAmt": "uint8",
+                    "tournamentTaxRate": "uint8",
+                    "tournamentAmt": "uint256",
+                    "teamSize": "uint8",
+                    "battleFee": "uint256",
+                    "battleTeams": "uint256[]",
+                    "newTypeID": "uint256",
+                    "newTankID": "uint256",
+                    "newAuctionID": "uint256",
+                    "userTanks": "mapping(address => uint256[])"
+                }
+            },
+            "bid(uint256)": {
+                "argument": {
+                    "_tankID": "uint256"
+                },
+                "contract": {
+                    "feeAmt": "uint8",
+                    "tournamentTaxRate": "uint8",
+                    "tournamentAmt": "uint256",
+                    "teamSize": "uint8",
+                    "battleFee": "uint256",
+                    "battleTeams": "uint256[]",
+                    "newTypeID": "uint256",
+                    "newTankID": "uint256",
+                    "newAuctionID": "uint256",
+                    "userTanks": "mapping(address => uint256[])"
+                }
+            },
+            "cancelAuction(uint256)": {
+                "argument": {
+                    "_tankID": "uint256"
+                },
+                "contract": {
+                    "feeAmt": "uint8",
+                    "tournamentTaxRate": "uint8",
+                    "tournamentAmt": "uint256",
+                    "teamSize": "uint8",
+                    "battleFee": "uint256",
+                    "battleTeams": "uint256[]",
+                    "newTypeID": "uint256",
+                    "newTankID": "uint256",
+                    "newAuctionID": "uint256",
+                    "userTanks": "mapping(address => uint256[])"
+                }
+            },
+            "buyTank(uint32)": {
+                "argument": {
+                    "_typeID": "uint32"
+                },
+                "contract": {
+                    "feeAmt": "uint8",
+                    "tournamentTaxRate": "uint8",
+                    "tournamentAmt": "uint256",
+                    "teamSize": "uint8",
+                    "battleFee": "uint256",
+                    "battleTeams": "uint256[]",
+                    "newTypeID": "uint256",
+                    "newTankID": "uint256",
+                    "newAuctionID": "uint256",
+                    "userTanks": "mapping(address => uint256[])"
+                }
+            },
+            "cashOutTank(uint256)": {
+                "argument": {
+                    "_tankID": "uint256"
+                },
+                "contract": {
+                    "feeAmt": "uint8",
+                    "tournamentTaxRate": "uint8",
+                    "tournamentAmt": "uint256",
+                    "teamSize": "uint8",
+                    "battleFee": "uint256",
+                    "battleTeams": "uint256[]",
+                    "newTypeID": "uint256",
+                    "newTankID": "uint256",
+                    "newAuctionID": "uint256",
+                    "userTanks": "mapping(address => uint256[])"
+                }
+            },
+            "upgradeTank(uint256,uint8)": {
+                "argument": {
+                    "_tankID": "uint256",
+                    "_upgradeChoice": "uint8"
+                },
+                "contract": {
+                    "feeAmt": "uint8",
+                    "tournamentTaxRate": "uint8",
+                    "tournamentAmt": "uint256",
+                    "teamSize": "uint8",
+                    "battleFee": "uint256",
+                    "battleTeams": "uint256[]",
+                    "newTypeID": "uint256",
+                    "newTankID": "uint256",
+                    "newAuctionID": "uint256",
+                    "userTanks": "mapping(address => uint256[])"
+                }
+            },
+            "battle(uint256)": {
+                "argument": {
+                    "_tankID": "uint256"
+                },
+                "contract": {
+                    "feeAmt": "uint8",
+                    "tournamentTaxRate": "uint8",
+                    "tournamentAmt": "uint256",
+                    "teamSize": "uint8",
+                    "battleFee": "uint256",
+                    "battleTeams": "uint256[]",
+                    "newTypeID": "uint256",
+                    "newTankID": "uint256",
+                    "newAuctionID": "uint256",
+                    "userTanks": "mapping(address => uint256[])"
+                }
+            },
+            "quitBattle(uint256)": {
+                "argument": {
+                    "_tankID": "uint256"
+                },
+                "contract": {
+                    "feeAmt": "uint8",
+                    "tournamentTaxRate": "uint8",
+                    "tournamentAmt": "uint256",
+                    "teamSize": "uint8",
+                    "battleFee": "uint256",
+                    "battleTeams": "uint256[]",
+                    "newTypeID": "uint256",
+                    "newTankID": "uint256",
+                    "newAuctionID": "uint256",
+                    "userTanks": "mapping(address => uint256[])"
+                }
+            },
+            "getCurrAuctionPriceTankID(uint256)": {
+                "argument": {
+                    "_tankID": "uint256"
+                },
+                "contract": {
+                    "feeAmt": "uint8",
+                    "tournamentTaxRate": "uint8",
+                    "tournamentAmt": "uint256",
+                    "teamSize": "uint8",
+                    "battleFee": "uint256",
+                    "battleTeams": "uint256[]",
+                    "newTypeID": "uint256",
+                    "newTankID": "uint256",
+                    "newAuctionID": "uint256",
+                    "userTanks": "mapping(address => uint256[])"
+                }
+            },
+            "getPlayerBalance(address)": {
+                "argument": {},
+                "contract": {
+                    "feeAmt": "uint8",
+                    "tournamentTaxRate": "uint8",
+                    "tournamentAmt": "uint256",
+                    "teamSize": "uint8",
+                    "battleFee": "uint256",
+                    "battleTeams": "uint256[]",
+                    "newTypeID": "uint256",
+                    "newTankID": "uint256",
+                    "newAuctionID": "uint256",
+                    "userTanks": "mapping(address => uint256[])"
+                }
+            },
+            "getContractBalance()": {
+                "argument": {},
+                "contract": {
+                    "feeAmt": "uint8",
+                    "tournamentTaxRate": "uint8",
+                    "tournamentAmt": "uint256",
+                    "teamSize": "uint8",
+                    "battleFee": "uint256",
+                    "battleTeams": "uint256[]",
+                    "newTypeID": "uint256",
+                    "newTankID": "uint256",
+                    "newAuctionID": "uint256",
+                    "userTanks": "mapping(address => uint256[])"
+                }
+            },
+            "getTankOwner(uint256)": {
+                "argument": {
+                    "_tankID": "uint256"
+                },
+                "contract": {
+                    "feeAmt": "uint8",
+                    "tournamentTaxRate": "uint8",
+                    "tournamentAmt": "uint256",
+                    "teamSize": "uint8",
+                    "battleFee": "uint256",
+                    "battleTeams": "uint256[]",
+                    "newTypeID": "uint256",
+                    "newTankID": "uint256",
+                    "newAuctionID": "uint256",
+                    "userTanks": "mapping(address => uint256[])"
+                }
+            },
+            "getOwnedTanks(address)": {
+                "argument": {},
+                "contract": {
+                    "feeAmt": "uint8",
+                    "tournamentTaxRate": "uint8",
+                    "tournamentAmt": "uint256",
+                    "teamSize": "uint8",
+                    "battleFee": "uint256",
+                    "battleTeams": "uint256[]",
+                    "newTypeID": "uint256",
+                    "newTankID": "uint256",
+                    "newAuctionID": "uint256",
+                    "userTanks": "mapping(address => uint256[])"
+                }
+            },
+            "getTankType(uint256)": {
+                "argument": {
+                    "_tankID": "uint256"
+                },
+                "contract": {
+                    "feeAmt": "uint8",
+                    "tournamentTaxRate": "uint8",
+                    "tournamentAmt": "uint256",
+                    "teamSize": "uint8",
+                    "battleFee": "uint256",
+                    "battleTeams": "uint256[]",
+                    "newTypeID": "uint256",
+                    "newTankID": "uint256",
+                    "newAuctionID": "uint256",
+                    "userTanks": "mapping(address => uint256[])"
+                }
+            },
+            "getCurrTypePrice(uint256)": {
+                "argument": {
+                    "_typeID": "uint256"
+                },
+                "contract": {
+                    "feeAmt": "uint8",
+                    "tournamentTaxRate": "uint8",
+                    "tournamentAmt": "uint256",
+                    "teamSize": "uint8",
+                    "battleFee": "uint256",
+                    "battleTeams": "uint256[]",
+                    "newTypeID": "uint256",
+                    "newTankID": "uint256",
+                    "newAuctionID": "uint256",
+                    "userTanks": "mapping(address => uint256[])"
+                }
+            },
+            "getNumTanksType(uint256)": {
+                "argument": {
+                    "_typeID": "uint256"
+                },
+                "contract": {
+                    "feeAmt": "uint8",
+                    "tournamentTaxRate": "uint8",
+                    "tournamentAmt": "uint256",
+                    "teamSize": "uint8",
+                    "battleFee": "uint256",
+                    "battleTeams": "uint256[]",
+                    "newTypeID": "uint256",
+                    "newTankID": "uint256",
+                    "newAuctionID": "uint256",
+                    "userTanks": "mapping(address => uint256[])"
+                }
+            },
+            "getNumTanks()": {
+                "argument": {},
+                "contract": {
+                    "feeAmt": "uint8",
+                    "tournamentTaxRate": "uint8",
+                    "tournamentAmt": "uint256",
+                    "teamSize": "uint8",
+                    "battleFee": "uint256",
+                    "battleTeams": "uint256[]",
+                    "newTypeID": "uint256",
+                    "newTankID": "uint256",
+                    "newAuctionID": "uint256",
+                    "userTanks": "mapping(address => uint256[])"
+                }
+            },
+            "checkTankAuction(uint256)": {
+                "argument": {
+                    "_tankID": "uint256"
+                },
+                "contract": {
+                    "feeAmt": "uint8",
+                    "tournamentTaxRate": "uint8",
+                    "tournamentAmt": "uint256",
+                    "teamSize": "uint8",
+                    "battleFee": "uint256",
+                    "battleTeams": "uint256[]",
+                    "newTypeID": "uint256",
+                    "newTankID": "uint256",
+                    "newAuctionID": "uint256",
+                    "userTanks": "mapping(address => uint256[])"
+                }
+            },
+            "getCurrAuctionPriceAuctionID(uint256)": {
+                "argument": {
+                    "_auctionID": "uint256"
+                },
+                "contract": {
+                    "feeAmt": "uint8",
+                    "tournamentTaxRate": "uint8",
+                    "tournamentAmt": "uint256",
+                    "teamSize": "uint8",
+                    "battleFee": "uint256",
+                    "battleTeams": "uint256[]",
+                    "newTypeID": "uint256",
+                    "newTankID": "uint256",
+                    "newAuctionID": "uint256",
+                    "userTanks": "mapping(address => uint256[])"
+                }
+            },
+            "getAuction(uint256)": {
+                "argument": {
+                    "_auctionID": "uint256"
+                },
+                "contract": {
+                    "feeAmt": "uint8",
+                    "tournamentTaxRate": "uint8",
+                    "tournamentAmt": "uint256",
+                    "teamSize": "uint8",
+                    "battleFee": "uint256",
+                    "battleTeams": "uint256[]",
+                    "newTypeID": "uint256",
+                    "newTankID": "uint256",
+                    "newAuctionID": "uint256",
+                    "userTanks": "mapping(address => uint256[])"
+                }
+            },
+            "getUpgradePrice(uint256)": {
+                "argument": {
+                    "_tankID": "uint256"
+                },
+                "contract": {
+                    "feeAmt": "uint8",
+                    "tournamentTaxRate": "uint8",
+                    "tournamentAmt": "uint256",
+                    "teamSize": "uint8",
+                    "battleFee": "uint256",
+                    "battleTeams": "uint256[]",
+                    "newTypeID": "uint256",
+                    "newTankID": "uint256",
+                    "newAuctionID": "uint256",
+                    "userTanks": "mapping(address => uint256[])"
+                }
+            },
+            "getUpgradeAmt(uint256)": {
+                "argument": {
+                    "_tankID": "uint256"
+                },
+                "contract": {
+                    "feeAmt": "uint8",
+                    "tournamentTaxRate": "uint8",
+                    "tournamentAmt": "uint256",
+                    "teamSize": "uint8",
+                    "battleFee": "uint256",
+                    "battleTeams": "uint256[]",
+                    "newTypeID": "uint256",
+                    "newTankID": "uint256",
+                    "newAuctionID": "uint256",
+                    "userTanks": "mapping(address => uint256[])"
+                }
+            },
+            "getCurrentStats(uint256)": {
+                "argument": {
+                    "_tankID": "uint256"
+                },
+                "contract": {
+                    "feeAmt": "uint8",
+                    "tournamentTaxRate": "uint8",
+                    "tournamentAmt": "uint256",
+                    "teamSize": "uint8",
+                    "battleFee": "uint256",
+                    "battleTeams": "uint256[]",
+                    "newTypeID": "uint256",
+                    "newTankID": "uint256",
+                    "newAuctionID": "uint256",
+                    "userTanks": "mapping(address => uint256[])"
+                }
+            },
+            "inBattle(uint256)": {
+                "argument": {
+                    "_tankID": "uint256"
+                },
+                "contract": {
+                    "feeAmt": "uint8",
+                    "tournamentTaxRate": "uint8",
+                    "tournamentAmt": "uint256",
+                    "teamSize": "uint8",
+                    "battleFee": "uint256",
+                    "battleTeams": "uint256[]",
+                    "newTypeID": "uint256",
+                    "newTankID": "uint256",
+                    "newAuctionID": "uint256",
+                    "userTanks": "mapping(address => uint256[])"
+                }
+            },
+            "getCurrTeamSizes()": {
+                "argument": {},
+                "contract": {
+                    "feeAmt": "uint8",
+                    "tournamentTaxRate": "uint8",
+                    "tournamentAmt": "uint256",
+                    "teamSize": "uint8",
+                    "battleFee": "uint256",
+                    "battleTeams": "uint256[]",
+                    "newTypeID": "uint256",
+                    "newTankID": "uint256",
+                    "newAuctionID": "uint256",
+                    "userTanks": "mapping(address => uint256[])"
+                }
+            },
+            "getBattleTeamSize()": {
+                "argument": {},
+                "contract": {
+                    "feeAmt": "uint8",
+                    "tournamentTaxRate": "uint8",
+                    "tournamentAmt": "uint256",
+                    "teamSize": "uint8",
+                    "battleFee": "uint256",
+                    "battleTeams": "uint256[]",
+                    "newTypeID": "uint256",
+                    "newTankID": "uint256",
+                    "newAuctionID": "uint256",
+                    "userTanks": "mapping(address => uint256[])"
+                }
+            },
+            "donate()": {
+                "argument": {},
+                "contract": {
+                    "feeAmt": "uint8",
+                    "tournamentTaxRate": "uint8",
+                    "tournamentAmt": "uint256",
+                    "teamSize": "uint8",
+                    "battleFee": "uint256",
+                    "battleTeams": "uint256[]",
+                    "newTypeID": "uint256",
+                    "newTankID": "uint256",
+                    "newAuctionID": "uint256",
+                    "userTanks": "mapping(address => uint256[])"
+                }
+            },
+            "getTournamentAmt()": {
+                "argument": {},
+                "contract": {
+                    "feeAmt": "uint8",
+                    "tournamentTaxRate": "uint8",
+                    "tournamentAmt": "uint256",
+                    "teamSize": "uint8",
+                    "battleFee": "uint256",
+                    "battleTeams": "uint256[]",
+                    "newTypeID": "uint256",
+                    "newTankID": "uint256",
+                    "newAuctionID": "uint256",
+                    "userTanks": "mapping(address => uint256[])"
+                }
+            },
+            "getBattleFee()": {
+                "argument": {},
+                "contract": {
+                    "feeAmt": "uint8",
+                    "tournamentTaxRate": "uint8",
+                    "tournamentAmt": "uint256",
+                    "teamSize": "uint8",
+                    "battleFee": "uint256",
+                    "battleTeams": "uint256[]",
+                    "newTypeID": "uint256",
+                    "newTankID": "uint256",
+                    "newAuctionID": "uint256",
+                    "userTanks": "mapping(address => uint256[])"
+                }
+            },
+            "getTournamentRate()": {
+                "argument": {},
+                "contract": {
+                    "feeAmt": "uint8",
+                    "tournamentTaxRate": "uint8",
+                    "tournamentAmt": "uint256",
+                    "teamSize": "uint8",
+                    "battleFee": "uint256",
+                    "battleTeams": "uint256[]",
+                    "newTypeID": "uint256",
+                    "newTankID": "uint256",
+                    "newAuctionID": "uint256",
+                    "userTanks": "mapping(address => uint256[])"
+                }
+            },
+            "getCurrFeeRate()": {
+                "argument": {},
+                "contract": {
+                    "feeAmt": "uint8",
+                    "tournamentTaxRate": "uint8",
+                    "tournamentAmt": "uint256",
+                    "teamSize": "uint8",
+                    "battleFee": "uint256",
+                    "battleTeams": "uint256[]",
+                    "newTypeID": "uint256",
+                    "newTankID": "uint256",
+                    "newAuctionID": "uint256",
+                    "userTanks": "mapping(address => uint256[])"
+                }
+            },
+            "getBaseTypeStats(uint256)": {
+                "argument": {
+                    "_typeID": "uint256"
+                },
+                "contract": {
+                    "feeAmt": "uint8",
+                    "tournamentTaxRate": "uint8",
+                    "tournamentAmt": "uint256",
+                    "teamSize": "uint8",
+                    "battleFee": "uint256",
+                    "battleTeams": "uint256[]",
+                    "newTypeID": "uint256",
+                    "newTankID": "uint256",
+                    "newAuctionID": "uint256",
+                    "userTanks": "mapping(address => uint256[])"
+                }
+            },
+            "getCashOutAmount(uint256)": {
+                "argument": {
+                    "_tankID": "uint256"
+                },
+                "contract": {
+                    "feeAmt": "uint8",
+                    "tournamentTaxRate": "uint8",
+                    "tournamentAmt": "uint256",
+                    "teamSize": "uint8",
+                    "battleFee": "uint256",
+                    "battleTeams": "uint256[]",
+                    "newTypeID": "uint256",
+                    "newTankID": "uint256",
+                    "newAuctionID": "uint256",
+                    "userTanks": "mapping(address => uint256[])"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "getCurrTeamSizes()": [
+                2030,
+                581
+            ],
+            "getBaseTypeStats(uint256)": [
+                1687,
+                471
+            ],
+            "getUpgradeAmt(uint256)": [
+                1097,
+                251
+            ],
+            "getOwnedTanks(address)": [
+                604,
+                97
+            ],
+            "bid(uint256)": [
+                952,
+                185
+            ],
+            "getCurrFeeRate()": [
+                2365,
+                713
+            ],
+            "getCurrTypePrice(uint256)": [
+                2118,
+                625
+            ],
+            "cancelAuction(uint256)": [
+                1985,
+                559
+            ],
+            "changeTournamentTaxAmt(uint8)": [
+                2317,
+                691
+            ],
+            "getBattleFee()": [
+                2905,
+                911
+            ],
+            "auctionTank(uint256,uint256,uint256,uint256)": [
+                1861,
+                515
+            ],
+            "cashOutTank(uint256)": [
+                2414,
+                735
+            ],
+            "getPlayerBalance(address)": [
+                2676,
+                823
+            ],
+            "getCurrAuctionPriceAuctionID(uint256)": [
+                2252,
+                669
+            ],
+            "upgradeTank(uint256,uint8)": [
+                756,
+                119
+            ],
+            "getNumTanksType(uint256)": [
+                2773,
+                867
+            ],
+            "quitBattle(uint256)": [
+                2073,
+                603
+            ],
+            "getNumTanks()": [
+                2633,
+                801
+            ],
+            "getCurrentStats(uint256)": [
+                499,
+                75
+            ],
+            "getUpgradePrice(uint256)": [
+                1622,
+                449
+            ],
+            "getContractBalance()": [
+                1425,
+                383
+            ],
+            "getTankOwner(uint256)": [
+                2459,
+                757
+            ],
+            "inBattle(uint256)": [
+                2183,
+                647
+            ],
+            "withdraw(uint256)": [
+                801,
+                141
+            ],
+            "getTankType(uint256)": [
+                1032,
+                229
+            ],
+            "getBattleTeamSize()": [
+                1468,
+                405
+            ],
+            "getCurrAuctionPriceTankID(uint256)": [
+                1202,
+                273
+            ],
+            "changeBattleFee(uint256)": [
+                1299,
+                317
+            ],
+            "getAuction(uint256)": [
+                1517,
+                427
+            ],
+            "setNewOwner(address)": [
+                2838,
+                889
+            ],
+            "getTournamentAmt()": [
+                1344,
+                339
+            ],
+            "buyTank(uint32)": [
+                1387,
+                361
+            ],
+            "changeFeeAmt(uint8)": [
+                984,
+                207
+            ],
+            "changeTeamSize(uint8)": [
+                2948,
+                933
+            ],
+            "getTournamentRate()": [
+                1936,
+                537
+            ],
+            "getCashOutAmount(uint256)": [
+                2568,
+                779
+            ],
+            "battle(uint256)": [
+                1267,
+                295
+            ],
+            "checkTankAuction(uint256)": [
+                1792,
+                493
+            ],
+            "donate()": [
+                2763,
+                845
+            ],
+            "newTankType(uint256,uint256,uint32,uint32,uint32,uint32)": [
+                833,
+                163
+            ]
+        },
+        "block_CALL_mapping": {
+            "block14600": [
+                "tanks[_tankID].tankOwner.send(amount)"
+            ],
+            "block5015": [
+                "msg.sender.send(_amount)"
+            ],
+            "jump5015": [
+                "msg.sender.send(_amount)",
+                "msg.sender.send(_amount)"
+            ],
+            "jump14600": [
+                "tanks[_tankID].tankOwner.send(amount)",
+                "tanks[_tankID].tankOwner.send(amount)"
+            ]
+        }
+    }
+}

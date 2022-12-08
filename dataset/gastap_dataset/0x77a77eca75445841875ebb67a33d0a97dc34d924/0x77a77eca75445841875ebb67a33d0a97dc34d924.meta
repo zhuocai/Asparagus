@@ -1,0 +1,365 @@
+{
+    "IOwned": {
+        "function_list": [
+            "owner()",
+            "transferOwnership(address)",
+            "acceptOwnership()"
+        ],
+        "initial_state": {
+            "owner()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "acceptOwnership()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "owner()": [
+                68,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Owned": {
+        "function_list": [
+            "owner()",
+            "transferOwnership(address)",
+            "acceptOwnership()",
+            "Owned()",
+            "transferOwnership(address)",
+            "acceptOwnership()"
+        ],
+        "initial_state": {
+            "owner()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "acceptOwnership()": {
+                "argument": {},
+                "contract": {}
+            },
+            "Owned()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "owner()": [
+                126,
+                97
+            ],
+            "transferOwnership(address)": [
+                300,
+                141
+            ],
+            "acceptOwnership()": [
+                103,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "TokenHolder": {
+        "function_list": [
+            "Owned()",
+            "transferOwnership(address)",
+            "acceptOwnership()",
+            "owner()",
+            "transferOwnership(address)",
+            "acceptOwnership()",
+            "withdrawTokens(IERC20Token,address,uint256)",
+            "TokenHolder()",
+            "withdrawTokens(IERC20Token,address,uint256)"
+        ],
+        "initial_state": {
+            "Owned()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "acceptOwnership()": {
+                "argument": {},
+                "contract": {}
+            },
+            "owner()": {
+                "argument": {},
+                "contract": {}
+            },
+            "withdrawTokens(IERC20Token,address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {}
+            },
+            "TokenHolder()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "acceptOwnership()": [
+                223,
+                97
+            ],
+            "transferOwnership(address)": [
+                420,
+                163
+            ],
+            "owner()": [
+                246,
+                119
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump876": [
+                "_token.transfer(_to, _amount)",
+                "_token.transfer(_to, _amount)"
+            ],
+            "block876": [
+                "_token.transfer(_to, _amount)"
+            ]
+        }
+    },
+    "BancorBuyer": {
+        "function_list": [
+            "TokenHolder()",
+            "withdrawTokens(IERC20Token,address,uint256)",
+            "Owned()",
+            "transferOwnership(address)",
+            "acceptOwnership()",
+            "owner()",
+            "transferOwnership(address)",
+            "acceptOwnership()",
+            "withdrawTokens(IERC20Token,address,uint256)",
+            "BancorBuyer(IBancorChanger,IEtherToken)",
+            "buy()",
+            "fallback()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "TokenHolder()": {
+                "argument": {},
+                "contract": {
+                    "version": "string"
+                }
+            },
+            "withdrawTokens(IERC20Token,address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "version": "string"
+                }
+            },
+            "Owned()": {
+                "argument": {},
+                "contract": {
+                    "version": "string"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "version": "string"
+                }
+            },
+            "acceptOwnership()": {
+                "argument": {},
+                "contract": {
+                    "version": "string"
+                }
+            },
+            "owner()": {
+                "argument": {},
+                "contract": {
+                    "version": "string"
+                }
+            },
+            "BancorBuyer(IBancorChanger,IEtherToken)": {
+                "argument": {},
+                "contract": {
+                    "version": "string"
+                }
+            },
+            "buy()": {
+                "argument": {},
+                "contract": {
+                    "version": "string"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "version": "string"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "owner()": [
+                527,
+                163
+            ],
+            "buy()": [
+                614,
+                185
+            ],
+            "transferOwnership(address)": [
+                818,
+                251
+            ],
+            "acceptOwnership()": [
+                504,
+                141
+            ]
+        },
+        "block_CALL_mapping": {
+            "block1024_0": [
+                "etherToken.deposit.value(msg.value)()"
+            ],
+            "block1024_1": [
+                "etherToken.deposit.value(msg.value)()"
+            ],
+            "jump2357": [
+                "smartToken.transfer(msg.sender, returnAmount)",
+                "smartToken.transfer(msg.sender, returnAmount)"
+            ],
+            "block1579": [
+                "etherToken.approve(tokenChanger, msg.value)"
+            ],
+            "jump2133_1": [
+                "tokenChanger.change(etherToken, smartToken, msg.value, 1)",
+                "tokenChanger.change(etherToken, smartToken, msg.value, 1)"
+            ],
+            "jump3017": [
+                "_token.transfer(_to, _amount)",
+                "_token.transfer(_to, _amount)"
+            ],
+            "block2133_0": [
+                "tokenChanger.change(etherToken, smartToken, msg.value, 1)"
+            ],
+            "block2133_1": [
+                "tokenChanger.change(etherToken, smartToken, msg.value, 1)"
+            ],
+            "jump2357_0": [
+                "smartToken.transfer(msg.sender, returnAmount)",
+                "smartToken.transfer(msg.sender, returnAmount)"
+            ],
+            "jump2357_1": [
+                "smartToken.transfer(msg.sender, returnAmount)",
+                "smartToken.transfer(msg.sender, returnAmount)"
+            ],
+            "block1579_1": [
+                "etherToken.approve(tokenChanger, msg.value)"
+            ],
+            "jump1024": [
+                "etherToken.deposit.value(msg.value)()",
+                "etherToken.deposit.value(msg.value)()"
+            ],
+            "jump2133_0": [
+                "tokenChanger.change(etherToken, smartToken, msg.value, 1)",
+                "tokenChanger.change(etherToken, smartToken, msg.value, 1)"
+            ],
+            "block1579_0": [
+                "etherToken.approve(tokenChanger, msg.value)"
+            ],
+            "jump1281_1": [
+                "etherToken.approve(tokenChanger, 0)",
+                "etherToken.approve(tokenChanger, 0)"
+            ],
+            "jump1281_0": [
+                "etherToken.approve(tokenChanger, 0)",
+                "etherToken.approve(tokenChanger, 0)"
+            ],
+            "jump1579_1": [
+                "etherToken.approve(tokenChanger, msg.value)",
+                "etherToken.approve(tokenChanger, msg.value)"
+            ],
+            "jump1579_0": [
+                "etherToken.approve(tokenChanger, msg.value)",
+                "etherToken.approve(tokenChanger, msg.value)"
+            ],
+            "block1281": [
+                "etherToken.approve(tokenChanger, 0)"
+            ],
+            "block1281_1": [
+                "etherToken.approve(tokenChanger, 0)"
+            ],
+            "block1281_0": [
+                "etherToken.approve(tokenChanger, 0)"
+            ],
+            "jump1579": [
+                "etherToken.approve(tokenChanger, msg.value)",
+                "etherToken.approve(tokenChanger, msg.value)"
+            ],
+            "block2357_0": [
+                "smartToken.transfer(msg.sender, returnAmount)"
+            ],
+            "block2357_1": [
+                "smartToken.transfer(msg.sender, returnAmount)"
+            ],
+            "jump1024_0": [
+                "etherToken.deposit.value(msg.value)()",
+                "etherToken.deposit.value(msg.value)()"
+            ],
+            "jump1024_1": [
+                "etherToken.deposit.value(msg.value)()",
+                "etherToken.deposit.value(msg.value)()"
+            ],
+            "block1780_1": [
+                "tokenChanger.token()"
+            ],
+            "block1780_0": [
+                "tokenChanger.token()"
+            ],
+            "block3017": [
+                "_token.transfer(_to, _amount)"
+            ],
+            "jump1780_1": [
+                "tokenChanger.token()",
+                "tokenChanger.token()"
+            ],
+            "jump1780_0": [
+                "tokenChanger.token()",
+                "tokenChanger.token()"
+            ],
+            "block1024": [
+                "etherToken.deposit.value(msg.value)()"
+            ],
+            "jump2133": [
+                "tokenChanger.change(etherToken, smartToken, msg.value, 1)",
+                "tokenChanger.change(etherToken, smartToken, msg.value, 1)"
+            ],
+            "jump1780": [
+                "tokenChanger.token()",
+                "tokenChanger.token()"
+            ],
+            "block2133": [
+                "tokenChanger.change(etherToken, smartToken, msg.value, 1)"
+            ],
+            "jump1281": [
+                "etherToken.approve(tokenChanger, 0)",
+                "etherToken.approve(tokenChanger, 0)"
+            ],
+            "block1780": [
+                "tokenChanger.token()"
+            ],
+            "block2357": [
+                "smartToken.transfer(msg.sender, returnAmount)"
+            ]
+        }
+    }
+}

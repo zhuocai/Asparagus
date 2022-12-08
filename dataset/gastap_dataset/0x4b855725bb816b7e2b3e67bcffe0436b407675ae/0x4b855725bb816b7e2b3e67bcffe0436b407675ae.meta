@@ -1,0 +1,179 @@
+{
+    "owned": {
+        "function_list": [
+            "owned()",
+            "setOwner(address)"
+        ],
+        "initial_state": {
+            "owned()": {
+                "argument": {},
+                "contract": {}
+            },
+            "setOwner(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "setOwner(address)": [
+                70,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "SimpleRegistrar": {
+        "function_list": [
+            "owned()",
+            "setOwner(address)",
+            "SimpleRegistrar(AbstractENS,bytes32,uint256,Resolver)",
+            "withdraw()",
+            "setFee(uint256)",
+            "setResolver(Resolver)",
+            "register(string)",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "owned()": {
+                "argument": {},
+                "contract": {
+                    "RR_NODE": "bytes32",
+                    "rootNode": "bytes32",
+                    "fee": "uint256"
+                }
+            },
+            "setOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "RR_NODE": "bytes32",
+                    "rootNode": "bytes32",
+                    "fee": "uint256"
+                }
+            },
+            "SimpleRegistrar(AbstractENS,bytes32,uint256,Resolver)": {
+                "argument": {
+                    "_rootNode": "bytes32",
+                    "_fee": "uint256"
+                },
+                "contract": {
+                    "RR_NODE": "bytes32",
+                    "rootNode": "bytes32",
+                    "fee": "uint256"
+                }
+            },
+            "withdraw()": {
+                "argument": {},
+                "contract": {
+                    "RR_NODE": "bytes32",
+                    "rootNode": "bytes32",
+                    "fee": "uint256"
+                }
+            },
+            "setFee(uint256)": {
+                "argument": {
+                    "_fee": "uint256"
+                },
+                "contract": {
+                    "RR_NODE": "bytes32",
+                    "rootNode": "bytes32",
+                    "fee": "uint256"
+                }
+            },
+            "setResolver(Resolver)": {
+                "argument": {},
+                "contract": {
+                    "RR_NODE": "bytes32",
+                    "rootNode": "bytes32",
+                    "fee": "uint256"
+                }
+            },
+            "register(string)": {
+                "argument": {
+                    "name": "string"
+                },
+                "contract": {
+                    "RR_NODE": "bytes32",
+                    "rootNode": "bytes32",
+                    "fee": "uint256"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "RR_NODE": "bytes32",
+                    "rootNode": "bytes32",
+                    "fee": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "setOwner(address)": [
+                245,
+                97
+            ],
+            "setFee(uint256)": [
+                489,
+                185
+            ],
+            "register(string)": [
+                577,
+                229
+            ],
+            "withdraw()": [
+                312,
+                119
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump1007": [
+                "msg.sender.send(this.balance)",
+                "msg.sender.send(this.balance)"
+            ],
+            "block3011": [
+                "msg.sender.send(msg.value - fee)"
+            ],
+            "block1704": [
+                "ens.owner(sha3(rootNode, label))"
+            ],
+            "jump3011": [
+                "msg.sender.send(msg.value - fee)",
+                "msg.sender.send(msg.value - fee)"
+            ],
+            "jump2904": [
+                "ens.setOwner(node, msg.sender)",
+                "ens.setOwner(node, msg.sender)"
+            ],
+            "block2133": [
+                "ens.setSubnodeOwner(rootNode, label, this)"
+            ],
+            "block2675": [
+                "resolver.setAddr(node, msg.sender)"
+            ],
+            "block2904": [
+                "ens.setOwner(node, msg.sender)"
+            ],
+            "jump2446": [
+                "ens.setResolver(node, resolver)",
+                "ens.setResolver(node, resolver)"
+            ],
+            "block2446": [
+                "ens.setResolver(node, resolver)"
+            ],
+            "jump2675": [
+                "resolver.setAddr(node, msg.sender)",
+                "resolver.setAddr(node, msg.sender)"
+            ],
+            "jump1704": [
+                "ens.owner(sha3(rootNode, label))",
+                "ens.owner(sha3(rootNode, label))"
+            ],
+            "jump2133": [
+                "ens.setSubnodeOwner(rootNode, label, this)",
+                "ens.setSubnodeOwner(rootNode, label, this)"
+            ],
+            "block1007": [
+                "msg.sender.send(this.balance)"
+            ]
+        }
+    }
+}

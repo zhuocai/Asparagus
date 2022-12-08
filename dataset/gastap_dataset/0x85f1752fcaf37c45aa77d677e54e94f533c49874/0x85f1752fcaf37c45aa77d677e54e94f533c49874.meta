@@ -1,0 +1,703 @@
+{
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "Ownable": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Ambassador": {
+        "function_list": [
+            "euroRaisedRc()",
+            "Ambassador(address,address,uint256[],uint256[],uint256,uint256)",
+            "setTimeRC(uint256,uint256)",
+            "updateTime(uint256,uint256)",
+            "fallback()"
+        ],
+        "initial_state": {
+            "euroRaisedRc()": {
+                "argument": {},
+                "contract": {
+                    "startRC": "uint256",
+                    "endRC": "uint256",
+                    "soldTokensWithoutBonus": "uint256",
+                    "euroThreshold": "uint256[]",
+                    "bonusThreshold": "uint256[]"
+                }
+            },
+            "Ambassador(address,address,uint256[],uint256[],uint256,uint256)": {
+                "argument": {
+                    "_euroThreshold": "uint256[]",
+                    "_bonusThreshold": "uint256[]",
+                    "_startRC": "uint256",
+                    "_endRC": "uint256"
+                },
+                "contract": {
+                    "startRC": "uint256",
+                    "endRC": "uint256",
+                    "soldTokensWithoutBonus": "uint256",
+                    "euroThreshold": "uint256[]",
+                    "bonusThreshold": "uint256[]"
+                }
+            },
+            "setTimeRC(uint256,uint256)": {
+                "argument": {
+                    "_startRC": "uint256",
+                    "_endRC": "uint256"
+                },
+                "contract": {
+                    "startRC": "uint256",
+                    "endRC": "uint256",
+                    "soldTokensWithoutBonus": "uint256",
+                    "euroThreshold": "uint256[]",
+                    "bonusThreshold": "uint256[]"
+                }
+            },
+            "updateTime(uint256,uint256)": {
+                "argument": {
+                    "_newStart": "uint256",
+                    "_newEnd": "uint256"
+                },
+                "contract": {
+                    "startRC": "uint256",
+                    "endRC": "uint256",
+                    "soldTokensWithoutBonus": "uint256",
+                    "euroThreshold": "uint256[]",
+                    "bonusThreshold": "uint256[]"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "startRC": "uint256",
+                    "endRC": "uint256",
+                    "soldTokensWithoutBonus": "uint256",
+                    "euroThreshold": "uint256[]",
+                    "bonusThreshold": "uint256[]"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "updateTime(uint256,uint256)": [
+                1535,
+                75
+            ],
+            "euroRaisedRc()": [
+                1806,
+                185
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump2449": [
+                "icoContract.euroRaised(soldTokensWithoutBonus)",
+                "icoContract.euroRaised(soldTokensWithoutBonus)"
+            ],
+            "jump362": [
+                "icoContract.buy.value(msg.value)(msg.sender)",
+                "icoContract.buy.value(msg.value)(msg.sender)"
+            ],
+            "block1457": [
+                "msg.sender.transfer(msg.value)"
+            ],
+            "block362_0": [
+                "icoContract.buy.value(msg.value)(msg.sender)"
+            ],
+            "jump883": [
+                "icoContract.euroRaised(soldTokensWithoutBonus)",
+                "icoContract.euroRaised(soldTokensWithoutBonus)"
+            ],
+            "block883_0": [
+                "icoContract.euroRaised(soldTokensWithoutBonus)"
+            ],
+            "block362": [
+                "icoContract.buy.value(msg.value)(msg.sender)"
+            ],
+            "block1387_0": [
+                "icoContract.claimPremium(msg.sender, addTokenAmount)"
+            ],
+            "jump883_0": [
+                "icoContract.euroRaised(soldTokensWithoutBonus)",
+                "icoContract.euroRaised(soldTokensWithoutBonus)"
+            ],
+            "jump1387_0": [
+                "icoContract.claimPremium(msg.sender, addTokenAmount)",
+                "icoContract.claimPremium(msg.sender, addTokenAmount)"
+            ],
+            "jump1457_0": [
+                "msg.sender.transfer(msg.value)",
+                "msg.sender.transfer(msg.value)"
+            ],
+            "block883": [
+                "icoContract.euroRaised(soldTokensWithoutBonus)"
+            ],
+            "jump1387": [
+                "icoContract.claimPremium(msg.sender, addTokenAmount)",
+                "icoContract.claimPremium(msg.sender, addTokenAmount)"
+            ],
+            "block1457_0": [
+                "msg.sender.transfer(msg.value)"
+            ],
+            "jump362_0": [
+                "icoContract.buy.value(msg.value)(msg.sender)",
+                "icoContract.buy.value(msg.value)(msg.sender)"
+            ],
+            "block2449": [
+                "icoContract.euroRaised(soldTokensWithoutBonus)"
+            ],
+            "jump1457": [
+                "msg.sender.transfer(msg.value)",
+                "msg.sender.transfer(msg.value)"
+            ],
+            "block1387": [
+                "icoContract.claimPremium(msg.sender, addTokenAmount)"
+            ]
+        }
+    },
+    "CoinCrowdICO": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "euroRaised(uint256)",
+            "euroRaisedICO()",
+            "CoinCrowdICO(address,uint256,uint256)",
+            "updateValue(uint256)",
+            "updateUpdater(address)",
+            "updateTime(uint256,uint256)",
+            "updateTimeRC(address,uint256,uint256)",
+            "startICO(uint256)",
+            "buy(address)",
+            "addMeByRC(address)",
+            "withdraw(address,uint256)",
+            "updateTokenContract(address)",
+            "withdrawTokens(address,uint256)",
+            "claimPremium(address,uint256)",
+            "fallback()",
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {
+                    "decimals": "uint256",
+                    "tokenValue": "uint256",
+                    "centToken": "uint256",
+                    "endTime": "uint256",
+                    "startTime": "uint256",
+                    "weekInSeconds": "uint256",
+                    "totalSoldTokensWithBonus": "uint256",
+                    "totalSoldTokensWithoutBonus": "uint256",
+                    "remainingTokens": "uint256"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "decimals": "uint256",
+                    "tokenValue": "uint256",
+                    "centToken": "uint256",
+                    "endTime": "uint256",
+                    "startTime": "uint256",
+                    "weekInSeconds": "uint256",
+                    "totalSoldTokensWithBonus": "uint256",
+                    "totalSoldTokensWithoutBonus": "uint256",
+                    "remainingTokens": "uint256"
+                }
+            },
+            "euroRaised(uint256)": {
+                "argument": {
+                    "_weiTokens": "uint256"
+                },
+                "contract": {
+                    "decimals": "uint256",
+                    "tokenValue": "uint256",
+                    "centToken": "uint256",
+                    "endTime": "uint256",
+                    "startTime": "uint256",
+                    "weekInSeconds": "uint256",
+                    "totalSoldTokensWithBonus": "uint256",
+                    "totalSoldTokensWithoutBonus": "uint256",
+                    "remainingTokens": "uint256"
+                }
+            },
+            "euroRaisedICO()": {
+                "argument": {},
+                "contract": {
+                    "decimals": "uint256",
+                    "tokenValue": "uint256",
+                    "centToken": "uint256",
+                    "endTime": "uint256",
+                    "startTime": "uint256",
+                    "weekInSeconds": "uint256",
+                    "totalSoldTokensWithBonus": "uint256",
+                    "totalSoldTokensWithoutBonus": "uint256",
+                    "remainingTokens": "uint256"
+                }
+            },
+            "CoinCrowdICO(address,uint256,uint256)": {
+                "argument": {
+                    "_tokenValue": "uint256",
+                    "_startTime": "uint256"
+                },
+                "contract": {
+                    "decimals": "uint256",
+                    "tokenValue": "uint256",
+                    "centToken": "uint256",
+                    "endTime": "uint256",
+                    "startTime": "uint256",
+                    "weekInSeconds": "uint256",
+                    "totalSoldTokensWithBonus": "uint256",
+                    "totalSoldTokensWithoutBonus": "uint256",
+                    "remainingTokens": "uint256"
+                }
+            },
+            "updateValue(uint256)": {
+                "argument": {
+                    "newValue": "uint256"
+                },
+                "contract": {
+                    "decimals": "uint256",
+                    "tokenValue": "uint256",
+                    "centToken": "uint256",
+                    "endTime": "uint256",
+                    "startTime": "uint256",
+                    "weekInSeconds": "uint256",
+                    "totalSoldTokensWithBonus": "uint256",
+                    "totalSoldTokensWithoutBonus": "uint256",
+                    "remainingTokens": "uint256"
+                }
+            },
+            "updateUpdater(address)": {
+                "argument": {},
+                "contract": {
+                    "decimals": "uint256",
+                    "tokenValue": "uint256",
+                    "centToken": "uint256",
+                    "endTime": "uint256",
+                    "startTime": "uint256",
+                    "weekInSeconds": "uint256",
+                    "totalSoldTokensWithBonus": "uint256",
+                    "totalSoldTokensWithoutBonus": "uint256",
+                    "remainingTokens": "uint256"
+                }
+            },
+            "updateTime(uint256,uint256)": {
+                "argument": {
+                    "_newStart": "uint256",
+                    "_newEnd": "uint256"
+                },
+                "contract": {
+                    "decimals": "uint256",
+                    "tokenValue": "uint256",
+                    "centToken": "uint256",
+                    "endTime": "uint256",
+                    "startTime": "uint256",
+                    "weekInSeconds": "uint256",
+                    "totalSoldTokensWithBonus": "uint256",
+                    "totalSoldTokensWithoutBonus": "uint256",
+                    "remainingTokens": "uint256"
+                }
+            },
+            "updateTimeRC(address,uint256,uint256)": {
+                "argument": {
+                    "_newStart": "uint256",
+                    "_newEnd": "uint256"
+                },
+                "contract": {
+                    "decimals": "uint256",
+                    "tokenValue": "uint256",
+                    "centToken": "uint256",
+                    "endTime": "uint256",
+                    "startTime": "uint256",
+                    "weekInSeconds": "uint256",
+                    "totalSoldTokensWithBonus": "uint256",
+                    "totalSoldTokensWithoutBonus": "uint256",
+                    "remainingTokens": "uint256"
+                }
+            },
+            "startICO(uint256)": {
+                "argument": {
+                    "_startTime": "uint256"
+                },
+                "contract": {
+                    "decimals": "uint256",
+                    "tokenValue": "uint256",
+                    "centToken": "uint256",
+                    "endTime": "uint256",
+                    "startTime": "uint256",
+                    "weekInSeconds": "uint256",
+                    "totalSoldTokensWithBonus": "uint256",
+                    "totalSoldTokensWithoutBonus": "uint256",
+                    "remainingTokens": "uint256"
+                }
+            },
+            "buy(address)": {
+                "argument": {},
+                "contract": {
+                    "decimals": "uint256",
+                    "tokenValue": "uint256",
+                    "centToken": "uint256",
+                    "endTime": "uint256",
+                    "startTime": "uint256",
+                    "weekInSeconds": "uint256",
+                    "totalSoldTokensWithBonus": "uint256",
+                    "totalSoldTokensWithoutBonus": "uint256",
+                    "remainingTokens": "uint256"
+                }
+            },
+            "addMeByRC(address)": {
+                "argument": {},
+                "contract": {
+                    "decimals": "uint256",
+                    "tokenValue": "uint256",
+                    "centToken": "uint256",
+                    "endTime": "uint256",
+                    "startTime": "uint256",
+                    "weekInSeconds": "uint256",
+                    "totalSoldTokensWithBonus": "uint256",
+                    "totalSoldTokensWithoutBonus": "uint256",
+                    "remainingTokens": "uint256"
+                }
+            },
+            "withdraw(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "decimals": "uint256",
+                    "tokenValue": "uint256",
+                    "centToken": "uint256",
+                    "endTime": "uint256",
+                    "startTime": "uint256",
+                    "weekInSeconds": "uint256",
+                    "totalSoldTokensWithBonus": "uint256",
+                    "totalSoldTokensWithoutBonus": "uint256",
+                    "remainingTokens": "uint256"
+                }
+            },
+            "updateTokenContract(address)": {
+                "argument": {},
+                "contract": {
+                    "decimals": "uint256",
+                    "tokenValue": "uint256",
+                    "centToken": "uint256",
+                    "endTime": "uint256",
+                    "startTime": "uint256",
+                    "weekInSeconds": "uint256",
+                    "totalSoldTokensWithBonus": "uint256",
+                    "totalSoldTokensWithoutBonus": "uint256",
+                    "remainingTokens": "uint256"
+                }
+            },
+            "withdrawTokens(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "decimals": "uint256",
+                    "tokenValue": "uint256",
+                    "centToken": "uint256",
+                    "endTime": "uint256",
+                    "startTime": "uint256",
+                    "weekInSeconds": "uint256",
+                    "totalSoldTokensWithBonus": "uint256",
+                    "totalSoldTokensWithoutBonus": "uint256",
+                    "remainingTokens": "uint256"
+                }
+            },
+            "claimPremium(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "decimals": "uint256",
+                    "tokenValue": "uint256",
+                    "centToken": "uint256",
+                    "endTime": "uint256",
+                    "startTime": "uint256",
+                    "weekInSeconds": "uint256",
+                    "totalSoldTokensWithBonus": "uint256",
+                    "totalSoldTokensWithoutBonus": "uint256",
+                    "remainingTokens": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "decimals": "uint256",
+                    "tokenValue": "uint256",
+                    "centToken": "uint256",
+                    "endTime": "uint256",
+                    "startTime": "uint256",
+                    "weekInSeconds": "uint256",
+                    "totalSoldTokensWithBonus": "uint256",
+                    "totalSoldTokensWithoutBonus": "uint256",
+                    "remainingTokens": "uint256"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "decimals": "uint256",
+                    "tokenValue": "uint256",
+                    "centToken": "uint256",
+                    "endTime": "uint256",
+                    "startTime": "uint256",
+                    "weekInSeconds": "uint256",
+                    "totalSoldTokensWithBonus": "uint256",
+                    "totalSoldTokensWithoutBonus": "uint256",
+                    "remainingTokens": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "updateValue(uint256)": [
+                724,
+                207
+            ],
+            "addMeByRC(address)": [
+                1764,
+                559
+            ],
+            "euroRaisedICO()": [
+                1504,
+                471
+            ],
+            "startICO(uint256)": [
+                1349,
+                405
+            ],
+            "withdrawTokens(address,uint256)": [
+                352,
+                75
+            ],
+            "withdraw(address,uint256)": [
+                1972,
+                625
+            ],
+            "euroRaised(uint256)": [
+                1197,
+                361
+            ],
+            "buy(address)": [
+                1831,
+                581
+            ],
+            "transferOwnership(address)": [
+                1905,
+                603
+            ],
+            "claimPremium(address,uint256)": [
+                1010,
+                295
+            ],
+            "updateTime(uint256,uint256)": [
+                5853,
+                848
+            ],
+            "updateTimeRC(address,uint256,uint256)": [
+                1590,
+                515
+            ],
+            "updateUpdater(address)": [
+                769,
+                229
+            ],
+            "updateTokenContract(address)": [
+                1394,
+                427
+            ]
+        },
+        "block_CALL_mapping": {
+            "block3535_1": [
+                "tokenContract.transfer(_buyer, tokenAmountWithBonus)"
+            ],
+            "block5853": [
+                "Ambassador(_rcContract).updateTime( _newStart, _newEnd)"
+            ],
+            "block3535": [
+                "tokenContract.transfer(_buyer, tokenAmountWithBonus)"
+            ],
+            "block2950": [
+                "owner.transfer(msg.value-refund)"
+            ],
+            "block6723": [
+                "to.transfer(value)"
+            ],
+            "block3062": [
+                "_buyer.transfer(refund)"
+            ],
+            "block3168": [
+                "owner.transfer(msg.value)"
+            ],
+            "jump2950_1": [
+                "owner.transfer(msg.value-refund)",
+                "owner.transfer(msg.value-refund)"
+            ],
+            "jump2950_0": [
+                "owner.transfer(msg.value-refund)",
+                "owner.transfer(msg.value-refund)"
+            ],
+            "jump5128": [
+                "tokenContract.transfer(_buyer, _amount)",
+                "tokenContract.transfer(_buyer, _amount)"
+            ],
+            "jump3062": [
+                "_buyer.transfer(refund)",
+                "_buyer.transfer(refund)"
+            ],
+            "block3062_0": [
+                "_buyer.transfer(refund)"
+            ],
+            "block3062_1": [
+                "_buyer.transfer(refund)"
+            ],
+            "jump2285_0": [
+                "tokenContract.balanceOf(this)",
+                "tokenContract.balanceOf(this)"
+            ],
+            "jump2285_1": [
+                "tokenContract.balanceOf(this)",
+                "tokenContract.balanceOf(this)"
+            ],
+            "jump5853": [
+                "Ambassador(_rcContract).updateTime( _newStart, _newEnd)",
+                "Ambassador(_rcContract).updateTime( _newStart, _newEnd)"
+            ],
+            "jump3168_1": [
+                "owner.transfer(msg.value)",
+                "owner.transfer(msg.value)"
+            ],
+            "jump3168_0": [
+                "owner.transfer(msg.value)",
+                "owner.transfer(msg.value)"
+            ],
+            "block2950_1": [
+                "owner.transfer(msg.value-refund)"
+            ],
+            "block2950_0": [
+                "owner.transfer(msg.value-refund)"
+            ],
+            "block5128": [
+                "tokenContract.transfer(_buyer, _amount)"
+            ],
+            "jump3535_1": [
+                "tokenContract.transfer(_buyer, tokenAmountWithBonus)",
+                "tokenContract.transfer(_buyer, tokenAmountWithBonus)"
+            ],
+            "jump3535_0": [
+                "tokenContract.transfer(_buyer, tokenAmountWithBonus)",
+                "tokenContract.transfer(_buyer, tokenAmountWithBonus)"
+            ],
+            "block2285_0": [
+                "tokenContract.balanceOf(this)"
+            ],
+            "block2285_1": [
+                "tokenContract.balanceOf(this)"
+            ],
+            "jump3535": [
+                "tokenContract.transfer(_buyer, tokenAmountWithBonus)",
+                "tokenContract.transfer(_buyer, tokenAmountWithBonus)"
+            ],
+            "block3535_0": [
+                "tokenContract.transfer(_buyer, tokenAmountWithBonus)"
+            ],
+            "jump4061": [
+                "tokenContract.transfer(to, value)",
+                "tokenContract.transfer(to, value)"
+            ],
+            "jump3168": [
+                "owner.transfer(msg.value)",
+                "owner.transfer(msg.value)"
+            ],
+            "block4061": [
+                "tokenContract.transfer(to, value)"
+            ],
+            "jump2950": [
+                "owner.transfer(msg.value-refund)",
+                "owner.transfer(msg.value-refund)"
+            ],
+            "jump6723": [
+                "to.transfer(value)",
+                "to.transfer(value)"
+            ],
+            "block2285": [
+                "tokenContract.balanceOf(this)"
+            ],
+            "jump2285": [
+                "tokenContract.balanceOf(this)",
+                "tokenContract.balanceOf(this)"
+            ],
+            "block3168_1": [
+                "owner.transfer(msg.value)"
+            ],
+            "block3168_0": [
+                "owner.transfer(msg.value)"
+            ],
+            "jump3062_0": [
+                "_buyer.transfer(refund)",
+                "_buyer.transfer(refund)"
+            ],
+            "jump3062_1": [
+                "_buyer.transfer(refund)",
+                "_buyer.transfer(refund)"
+            ]
+        }
+    }
+}

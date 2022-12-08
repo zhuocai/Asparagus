@@ -1,0 +1,501 @@
+{
+    "FlightDelayConstants": {
+        "function_list": [
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "MIN_OBSERVATIONS": "uint256",
+                    "MIN_PREMIUM": "uint256",
+                    "MAX_PREMIUM": "uint256",
+                    "MAX_PAYOUT": "uint256",
+                    "MIN_PREMIUM_EUR": "uint256",
+                    "MAX_PREMIUM_EUR": "uint256",
+                    "MAX_PAYOUT_EUR": "uint256",
+                    "MIN_PREMIUM_USD": "uint256",
+                    "MAX_PREMIUM_USD": "uint256",
+                    "MAX_PAYOUT_USD": "uint256",
+                    "MIN_PREMIUM_GBP": "uint256",
+                    "MAX_PREMIUM_GBP": "uint256",
+                    "MAX_PAYOUT_GBP": "uint256",
+                    "MAX_CUMULATED_WEIGHTED_PREMIUM": "uint256",
+                    "REWARD_PERCENT": "uint8",
+                    "RESERVE_PERCENT": "uint8",
+                    "WEIGHT_PATTERN": "uint8[6]",
+                    "MIN_TIME_BEFORE_DEPARTURE": "uint256",
+                    "CHECK_PAYOUT_OFFSET": "uint256",
+                    "MAX_FLIGHT_DURATION": "uint256",
+                    "CONTRACT_DEAD_LINE": "uint256",
+                    "ORACLIZE_GAS": "uint256",
+                    "ORACLIZE_GASPRICE": "uint256",
+                    "ORACLIZE_RATINGS_BASE_URL": "string",
+                    "ORACLIZE_RATINGS_QUERY": "string",
+                    "ORACLIZE_STATUS_BASE_URL": "string",
+                    "ORACLIZE_STATUS_QUERY": "string"
+                }
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "FlightDelayDatabaseModel": {
+        "function_list": [],
+        "initial_state": {},
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "FlightDelayControlledContract": {
+        "function_list": [
+            "setController(address)",
+            "destruct()",
+            "setContracts()",
+            "getContract(bytes32)"
+        ],
+        "initial_state": {
+            "setController(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "destruct()": {
+                "argument": {},
+                "contract": {}
+            },
+            "setContracts()": {
+                "argument": {},
+                "contract": {}
+            },
+            "getContract(bytes32)": {
+                "argument": {
+                    "_id": "bytes32"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "destruct()": [
+                92,
+                75
+            ],
+            "setContracts()": [
+                115,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "FlightDelayLedger": {
+        "function_list": [
+            "receiveFunds(FlightDelayDatabaseModel.Acc)",
+            "sendFunds(address,FlightDelayDatabaseModel.Acc,uint256)",
+            "bookkeeping(FlightDelayDatabaseModel.Acc,FlightDelayDatabaseModel.Acc,uint256)",
+            "setController(address)",
+            "destruct()",
+            "setContracts()",
+            "getContract(bytes32)",
+            "FlightDelayLedger(address)",
+            "setContracts()",
+            "fallback()",
+            "withdraw(uint256)",
+            "receiveFunds(FlightDelayDatabaseModel.Acc)",
+            "sendFunds(address,FlightDelayDatabaseModel.Acc,uint256)",
+            "bookkeeping(FlightDelayDatabaseModel.Acc,FlightDelayDatabaseModel.Acc,uint256)",
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "receiveFunds(FlightDelayDatabaseModel.Acc)": {
+                "argument": {},
+                "contract": {}
+            },
+            "sendFunds(address,FlightDelayDatabaseModel.Acc,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {}
+            },
+            "bookkeeping(FlightDelayDatabaseModel.Acc,FlightDelayDatabaseModel.Acc,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {}
+            },
+            "setController(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "destruct()": {
+                "argument": {},
+                "contract": {}
+            },
+            "setContracts()": {
+                "argument": {},
+                "contract": {}
+            },
+            "getContract(bytes32)": {
+                "argument": {
+                    "_id": "bytes32"
+                },
+                "contract": {}
+            },
+            "FlightDelayLedger(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {}
+            },
+            "withdraw(uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {}
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "setContracts()": [
+                705,
+                185
+            ],
+            "withdraw(uint256)": [
+                475,
+                119
+            ],
+            "destruct()": [
+                452,
+                97
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump6737_0": [
+                "FD_CI.getContract(_id)",
+                "FD_CI.getContract(_id)"
+            ],
+            "jump6737_1": [
+                "FD_CI.getContract(_id)",
+                "FD_CI.getContract(_id)"
+            ],
+            "jump1271_4": [
+                "FD_DB.setLedger(uint8(_from), -int(_amount))",
+                "FD_DB.setLedger(uint8(_from), -int(_amount))"
+            ],
+            "jump1271_5": [
+                "FD_DB.setLedger(uint8(_from), -int(_amount))",
+                "FD_DB.setLedger(uint8(_from), -int(_amount))"
+            ],
+            "jump1271_2": [
+                "FD_DB.setLedger(uint8(_from), -int(_amount))",
+                "FD_DB.setLedger(uint8(_from), -int(_amount))"
+            ],
+            "jump1271_3": [
+                "FD_DB.setLedger(uint8(_from), -int(_amount))",
+                "FD_DB.setLedger(uint8(_from), -int(_amount))"
+            ],
+            "jump1271_0": [
+                "FD_DB.setLedger(uint8(_from), -int(_amount))",
+                "FD_DB.setLedger(uint8(_from), -int(_amount))"
+            ],
+            "jump1271_1": [
+                "FD_DB.setLedger(uint8(_from), -int(_amount))",
+                "FD_DB.setLedger(uint8(_from), -int(_amount))"
+            ],
+            "jump4176": [
+                "FD_AC.setPermissionById(102, \"FD.NewPolicy\")",
+                "FD_AC.setPermissionById(102, \"FD.NewPolicy\")"
+            ],
+            "block1271": [
+                "FD_DB.setLedger(uint8(_from), -int(_amount))"
+            ],
+            "jump1695": [
+                "FD_AC.checkPermission(101, msg.sender)",
+                "FD_AC.checkPermission(101, msg.sender)"
+            ],
+            "block6306": [
+                "FD_AC.setPermissionById(103, \"FD.Owner\")"
+            ],
+            "jump5880": [
+                "FD_AC.setPermissionById(103, \"FD.NewPolicy\")",
+                "FD_AC.setPermissionById(103, \"FD.NewPolicy\")"
+            ],
+            "block2954": [
+                "_recipient.send(_amount)"
+            ],
+            "jump2954": [
+                "_recipient.send(_amount)",
+                "_recipient.send(_amount)"
+            ],
+            "jump6519": [
+                "FD_AC.setPermissionById(104, \"FD.Funder\")",
+                "FD_AC.setPermissionById(104, \"FD.Funder\")"
+            ],
+            "jump1016": [
+                "FD_AC.checkPermission(103, msg.sender)",
+                "FD_AC.checkPermission(103, msg.sender)"
+            ],
+            "jump5454": [
+                "FD_AC.setPermissionById(103, \"FD.Payout\")",
+                "FD_AC.setPermissionById(103, \"FD.Payout\")"
+            ],
+            "jump1465_5": [
+                "FD_DB.setLedger(uint8(_to), int(_amount))",
+                "FD_DB.setLedger(uint8(_to), int(_amount))"
+            ],
+            "jump1465_4": [
+                "FD_DB.setLedger(uint8(_to), int(_amount))",
+                "FD_DB.setLedger(uint8(_to), int(_amount))"
+            ],
+            "jump1465_3": [
+                "FD_DB.setLedger(uint8(_to), int(_amount))",
+                "FD_DB.setLedger(uint8(_to), int(_amount))"
+            ],
+            "jump1465_2": [
+                "FD_DB.setLedger(uint8(_to), int(_amount))",
+                "FD_DB.setLedger(uint8(_to), int(_amount))"
+            ],
+            "jump1465_1": [
+                "FD_DB.setLedger(uint8(_to), int(_amount))",
+                "FD_DB.setLedger(uint8(_to), int(_amount))"
+            ],
+            "jump1465_0": [
+                "FD_DB.setLedger(uint8(_to), int(_amount))",
+                "FD_DB.setLedger(uint8(_to), int(_amount))"
+            ],
+            "block1465_1": [
+                "FD_DB.setLedger(uint8(_to), int(_amount))"
+            ],
+            "jump2424": [
+                "getContract(\"FD.Funder\").transfer(_amount)",
+                "getContract(\"FD.Funder\").transfer(_amount)"
+            ],
+            "block1465_0": [
+                "FD_DB.setLedger(uint8(_to), int(_amount))"
+            ],
+            "block1271_2": [
+                "FD_DB.setLedger(uint8(_from), -int(_amount))"
+            ],
+            "jump4815": [
+                "FD_AC.setPermissionById(102, \"FD.Owner\")",
+                "FD_AC.setPermissionById(102, \"FD.Owner\")"
+            ],
+            "block1465_2": [
+                "FD_DB.setLedger(uint8(_to), int(_amount))"
+            ],
+            "jump4602": [
+                "FD_AC.setPermissionById(102, \"FD.Underwrite\")",
+                "FD_AC.setPermissionById(102, \"FD.Underwrite\")"
+            ],
+            "block1271_4": [
+                "FD_DB.setLedger(uint8(_from), -int(_amount))"
+            ],
+            "block3963": [
+                "FD_AC.setPermissionById(102, \"FD.Payout\")"
+            ],
+            "block1016": [
+                "FD_AC.checkPermission(103, msg.sender)"
+            ],
+            "jump4389": [
+                "FD_AC.setPermissionById(102, \"FD.Controller\")",
+                "FD_AC.setPermissionById(102, \"FD.Controller\")"
+            ],
+            "block1465_4": [
+                "FD_DB.setLedger(uint8(_to), int(_amount))"
+            ],
+            "jump1271": [
+                "FD_DB.setLedger(uint8(_from), -int(_amount))",
+                "FD_DB.setLedger(uint8(_from), -int(_amount))"
+            ],
+            "block5454": [
+                "FD_AC.setPermissionById(103, \"FD.Payout\")"
+            ],
+            "block6093": [
+                "FD_AC.setPermissionById(103, \"FD.Controller\")"
+            ],
+            "block1271_0": [
+                "FD_DB.setLedger(uint8(_from), -int(_amount))"
+            ],
+            "block1271_1": [
+                "FD_DB.setLedger(uint8(_from), -int(_amount))"
+            ],
+            "block1465_3": [
+                "FD_DB.setLedger(uint8(_to), int(_amount))"
+            ],
+            "block1271_3": [
+                "FD_DB.setLedger(uint8(_from), -int(_amount))"
+            ],
+            "block1465_5": [
+                "FD_DB.setLedger(uint8(_to), int(_amount))"
+            ],
+            "block1271_5": [
+                "FD_DB.setLedger(uint8(_from), -int(_amount))"
+            ],
+            "jump3750": [
+                "FD_AC.setPermissionById(101, \"FD.Controller\")",
+                "FD_AC.setPermissionById(101, \"FD.Controller\")"
+            ],
+            "jump1465": [
+                "FD_DB.setLedger(uint8(_to), int(_amount))",
+                "FD_DB.setLedger(uint8(_to), int(_amount))"
+            ],
+            "jump3963": [
+                "FD_AC.setPermissionById(102, \"FD.Payout\")",
+                "FD_AC.setPermissionById(102, \"FD.Payout\")"
+            ],
+            "jump5028": [
+                "FD_AC.setPermissionById(103, \"FD.Funder\")",
+                "FD_AC.setPermissionById(103, \"FD.Funder\")"
+            ],
+            "block2262": [
+                "FD_AC.checkPermission(104, msg.sender)"
+            ],
+            "block6737_1": [
+                "FD_CI.getContract(_id)"
+            ],
+            "block5667": [
+                "FD_AC.setPermissionById(103, \"FD.Ledger\")"
+            ],
+            "block4815": [
+                "FD_AC.setPermissionById(102, \"FD.Owner\")"
+            ],
+            "block3750": [
+                "FD_AC.setPermissionById(101, \"FD.Controller\")"
+            ],
+            "block1016_3": [
+                "FD_AC.checkPermission(103, msg.sender)"
+            ],
+            "block5241": [
+                "FD_AC.setPermissionById(103, \"FD.Underwrite\")"
+            ],
+            "jump5241": [
+                "FD_AC.setPermissionById(103, \"FD.Underwrite\")",
+                "FD_AC.setPermissionById(103, \"FD.Underwrite\")"
+            ],
+            "jump1016_0": [
+                "FD_AC.checkPermission(103, msg.sender)",
+                "FD_AC.checkPermission(103, msg.sender)"
+            ],
+            "block4176": [
+                "FD_AC.setPermissionById(102, \"FD.NewPolicy\")"
+            ],
+            "block1016_1": [
+                "FD_AC.checkPermission(103, msg.sender)"
+            ],
+            "block1016_0": [
+                "FD_AC.checkPermission(103, msg.sender)"
+            ],
+            "block4602": [
+                "FD_AC.setPermissionById(102, \"FD.Underwrite\")"
+            ],
+            "block332_0": [
+                "FD_AC.checkPermission(104, msg.sender)"
+            ],
+            "block6519": [
+                "FD_AC.setPermissionById(104, \"FD.Funder\")"
+            ],
+            "jump3537": [
+                "FD_AC.setPermissionById(101, \"FD.NewPolicy\")",
+                "FD_AC.setPermissionById(101, \"FD.NewPolicy\")"
+            ],
+            "block4389": [
+                "FD_AC.setPermissionById(102, \"FD.Controller\")"
+            ],
+            "block5880": [
+                "FD_AC.setPermissionById(103, \"FD.NewPolicy\")"
+            ],
+            "block332": [
+                "FD_AC.checkPermission(104, msg.sender)"
+            ],
+            "jump6093": [
+                "FD_AC.setPermissionById(103, \"FD.Controller\")",
+                "FD_AC.setPermissionById(103, \"FD.Controller\")"
+            ],
+            "block3537": [
+                "FD_AC.setPermissionById(101, \"FD.NewPolicy\")"
+            ],
+            "jump332_0": [
+                "FD_AC.checkPermission(104, msg.sender)",
+                "FD_AC.checkPermission(104, msg.sender)"
+            ],
+            "jump2700": [
+                "FD_AC.checkPermission(102, msg.sender)",
+                "FD_AC.checkPermission(102, msg.sender)"
+            ],
+            "block6737_0": [
+                "FD_CI.getContract(_id)"
+            ],
+            "jump6306": [
+                "FD_AC.setPermissionById(103, \"FD.Owner\")",
+                "FD_AC.setPermissionById(103, \"FD.Owner\")"
+            ],
+            "block5028": [
+                "FD_AC.setPermissionById(103, \"FD.Funder\")"
+            ],
+            "jump6737": [
+                "FD_CI.getContract(_id)",
+                "FD_CI.getContract(_id)"
+            ],
+            "block1695": [
+                "FD_AC.checkPermission(101, msg.sender)"
+            ],
+            "jump332": [
+                "FD_AC.checkPermission(104, msg.sender)",
+                "FD_AC.checkPermission(104, msg.sender)"
+            ],
+            "jump2262": [
+                "FD_AC.checkPermission(104, msg.sender)",
+                "FD_AC.checkPermission(104, msg.sender)"
+            ],
+            "block6737": [
+                "FD_CI.getContract(_id)"
+            ],
+            "block1465": [
+                "FD_DB.setLedger(uint8(_to), int(_amount))"
+            ],
+            "jump1016_1": [
+                "FD_AC.checkPermission(103, msg.sender)",
+                "FD_AC.checkPermission(103, msg.sender)"
+            ],
+            "block1016_2": [
+                "FD_AC.checkPermission(103, msg.sender)"
+            ],
+            "jump1016_3": [
+                "FD_AC.checkPermission(103, msg.sender)",
+                "FD_AC.checkPermission(103, msg.sender)"
+            ],
+            "jump1016_2": [
+                "FD_AC.checkPermission(103, msg.sender)",
+                "FD_AC.checkPermission(103, msg.sender)"
+            ],
+            "jump1016_5": [
+                "FD_AC.checkPermission(103, msg.sender)",
+                "FD_AC.checkPermission(103, msg.sender)"
+            ],
+            "jump1016_4": [
+                "FD_AC.checkPermission(103, msg.sender)",
+                "FD_AC.checkPermission(103, msg.sender)"
+            ],
+            "block1016_5": [
+                "FD_AC.checkPermission(103, msg.sender)"
+            ],
+            "block1016_4": [
+                "FD_AC.checkPermission(103, msg.sender)"
+            ],
+            "block2700": [
+                "FD_AC.checkPermission(102, msg.sender)"
+            ],
+            "jump5667": [
+                "FD_AC.setPermissionById(103, \"FD.Ledger\")",
+                "FD_AC.setPermissionById(103, \"FD.Ledger\")"
+            ],
+            "block2424": [
+                "getContract(\"FD.Funder\").transfer(_amount)"
+            ]
+        }
+    }
+}

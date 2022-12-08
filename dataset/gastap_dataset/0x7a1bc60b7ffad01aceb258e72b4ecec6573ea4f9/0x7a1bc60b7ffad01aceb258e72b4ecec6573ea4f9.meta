@@ -1,0 +1,325 @@
+{
+    "CrowdsaleLib": {
+        "function_list": [
+            "init(CrowdsaleLib.CrowdsaleStorage,address,uint256[],uint256,uint8,CrowdsaleToken)",
+            "crowdsaleActive(CrowdsaleLib.CrowdsaleStorage)",
+            "crowdsaleEnded(CrowdsaleLib.CrowdsaleStorage)",
+            "validPurchase(CrowdsaleLib.CrowdsaleStorage)",
+            "withdrawTokens(CrowdsaleLib.CrowdsaleStorage)",
+            "withdrawLeftoverWei(CrowdsaleLib.CrowdsaleStorage)",
+            "withdrawOwnerEth(CrowdsaleLib.CrowdsaleStorage)",
+            "changeTokenPrice(CrowdsaleLib.CrowdsaleStorage,uint256)",
+            "setTokens(CrowdsaleLib.CrowdsaleStorage)",
+            "getSaleData(CrowdsaleLib.CrowdsaleStorage,uint256)",
+            "getTokensSold(CrowdsaleLib.CrowdsaleStorage)"
+        ],
+        "initial_state": {
+            "init(CrowdsaleLib.CrowdsaleStorage,address,uint256[],uint256,uint8,CrowdsaleToken)": {
+                "argument": {
+                    "_saleData": "uint256[]",
+                    "_endTime": "uint256",
+                    "_percentBurn": "uint8"
+                },
+                "contract": {}
+            },
+            "crowdsaleActive(CrowdsaleLib.CrowdsaleStorage)": {
+                "argument": {},
+                "contract": {}
+            },
+            "crowdsaleEnded(CrowdsaleLib.CrowdsaleStorage)": {
+                "argument": {},
+                "contract": {}
+            },
+            "validPurchase(CrowdsaleLib.CrowdsaleStorage)": {
+                "argument": {},
+                "contract": {}
+            },
+            "withdrawTokens(CrowdsaleLib.CrowdsaleStorage)": {
+                "argument": {},
+                "contract": {}
+            },
+            "withdrawLeftoverWei(CrowdsaleLib.CrowdsaleStorage)": {
+                "argument": {},
+                "contract": {}
+            },
+            "withdrawOwnerEth(CrowdsaleLib.CrowdsaleStorage)": {
+                "argument": {},
+                "contract": {}
+            },
+            "changeTokenPrice(CrowdsaleLib.CrowdsaleStorage,uint256)": {
+                "argument": {
+                    "_tokensPerEth": "uint256"
+                },
+                "contract": {}
+            },
+            "setTokens(CrowdsaleLib.CrowdsaleStorage)": {
+                "argument": {},
+                "contract": {}
+            },
+            "getSaleData(CrowdsaleLib.CrowdsaleStorage,uint256)": {
+                "argument": {
+                    "timestamp": "uint256"
+                },
+                "contract": {}
+            },
+            "getTokensSold(CrowdsaleLib.CrowdsaleStorage)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {
+            "jump2934": [
+                "self.token.transfer(msg.sender, total)",
+                "self.token.transfer(msg.sender, total)"
+            ],
+            "jump3335": [
+                "msg.sender.transfer(total)",
+                "msg.sender.transfer(total)"
+            ],
+            "block3847": [
+                "self.token.balanceOf(this)"
+            ],
+            "block2521": [
+                "self.token.burnToken(_burnAmount)"
+            ],
+            "jump4186": [
+                "self.owner.transfer(amount)",
+                "self.owner.transfer(amount)"
+            ],
+            "block3335": [
+                "msg.sender.transfer(total)"
+            ],
+            "block2934": [
+                "self.token.transfer(msg.sender, total)"
+            ],
+            "jump1391": [
+                "self.token.balanceOf(this)",
+                "self.token.balanceOf(this)"
+            ],
+            "block4186": [
+                "self.owner.transfer(amount)"
+            ],
+            "block1391": [
+                "self.token.balanceOf(this)"
+            ],
+            "jump2521": [
+                "self.token.burnToken(_burnAmount)",
+                "self.token.burnToken(_burnAmount)"
+            ],
+            "jump3847": [
+                "self.token.balanceOf(this)",
+                "self.token.balanceOf(this)"
+            ]
+        }
+    },
+    "CrowdsaleToken": {
+        "function_list": [
+            "CrowdsaleToken(address,string,string,uint8,uint256,bool)",
+            "name()",
+            "symbol()",
+            "decimals()",
+            "totalSupply()",
+            "initialSupply()",
+            "balanceOf(address)",
+            "allowance(address,address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "approveChange(address,uint256,bool)",
+            "changeOwner(address)",
+            "burnToken(uint256)"
+        ],
+        "initial_state": {
+            "CrowdsaleToken(address,string,string,uint8,uint256,bool)": {
+                "argument": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "initialSupply": "uint256"
+                },
+                "contract": {}
+            },
+            "name()": {
+                "argument": {},
+                "contract": {}
+            },
+            "symbol()": {
+                "argument": {},
+                "contract": {}
+            },
+            "decimals()": {
+                "argument": {},
+                "contract": {}
+            },
+            "totalSupply()": {
+                "argument": {},
+                "contract": {}
+            },
+            "initialSupply()": {
+                "argument": {},
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "approveChange(address,uint256,bool)": {
+                "argument": {
+                    "valueChange": "uint256"
+                },
+                "contract": {}
+            },
+            "changeOwner(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "burnToken(uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "name()": [
+                559,
+                119
+            ],
+            "totalSupply()": [
+                883,
+                185
+            ],
+            "allowance(address,address)": [
+                2859,
+                735
+            ],
+            "transferFrom(address,address,uint256)": [
+                926,
+                207
+            ],
+            "approve(address,uint256)": [
+                703,
+                141
+            ],
+            "decimals()": [
+                1126,
+                251
+            ],
+            "symbol()": [
+                2232,
+                559
+            ],
+            "balanceOf(address)": [
+                1833,
+                449
+            ],
+            "transfer(address,uint256)": [
+                2561,
+                647
+            ]
+        },
+        "block_CALL_mapping": {
+            "block5761": [
+                "upgradeAgent.upgradeFrom(msg.sender, value)"
+            ],
+            "jump7986": [
+                "upgradeAgent.isUpgradeAgent()",
+                "upgradeAgent.isUpgradeAgent()"
+            ],
+            "block8193": [
+                "upgradeAgent.originalSupply()"
+            ],
+            "jump8193": [
+                "upgradeAgent.originalSupply()",
+                "upgradeAgent.originalSupply()"
+            ],
+            "block7986": [
+                "upgradeAgent.isUpgradeAgent()"
+            ],
+            "jump5761": [
+                "upgradeAgent.upgradeFrom(msg.sender, value)",
+                "upgradeAgent.upgradeFrom(msg.sender, value)"
+            ]
+        }
+    },
+    "BasicMathLib": {
+        "function_list": [
+            "times(uint256,uint256)",
+            "dividedBy(uint256,uint256)",
+            "plus(uint256,uint256)",
+            "minus(uint256,uint256)"
+        ],
+        "initial_state": {
+            "times(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "dividedBy(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "plus(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "minus(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "plus(uint256,uint256)": [
+                199,
+                105
+            ],
+            "minus(uint256,uint256)": [
+                345,
+                149
+            ],
+            "times(uint256,uint256)": [
+                126,
+                83
+            ],
+            "dividedBy(uint256,uint256)": [
+                272,
+                127
+            ]
+        },
+        "block_CALL_mapping": {}
+    }
+}

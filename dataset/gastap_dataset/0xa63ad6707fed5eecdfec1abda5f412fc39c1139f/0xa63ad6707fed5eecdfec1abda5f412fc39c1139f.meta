@@ -1,0 +1,304 @@
+{
+    "ERC20": {
+        "function_list": [
+            "totalSupply()",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)"
+        ],
+        "initial_state": {
+            "totalSupply()": {
+                "argument": {},
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                412,
+                97
+            ],
+            "transfer(address,uint256)": [
+                1396,
+                361
+            ],
+            "totalSupply()": [
+                556,
+                141
+            ],
+            "allowance(address,address)": [
+                1802,
+                449
+            ],
+            "balanceOf(address)": [
+                1055,
+                273
+            ],
+            "transferFrom(address,address,uint256)": [
+                599,
+                163
+            ]
+        },
+        "block_CALL_mapping": {
+            "block4085": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ],
+            "jump4085": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)",
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ]
+        }
+    },
+    "Owned": {
+        "function_list": [
+            "Owned()",
+            "transferOwnership(address)"
+        ],
+        "initial_state": {
+            "Owned()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "SellERC20Token": {
+        "function_list": [
+            "Owned()",
+            "transferOwnership(address)",
+            "SellERC20Token(address,uint256,uint256)",
+            "WithdrawToken(uint256)",
+            "WithdrawEther(uint256)",
+            "SetPrice(uint256)",
+            "ChangeToken(address)",
+            "SetLot(uint256)",
+            "SellToken()",
+            "fallback()"
+        ],
+        "initial_state": {
+            "Owned()": {
+                "argument": {},
+                "contract": {
+                    "sellPrice": "uint256",
+                    "minLot": "uint256"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "sellPrice": "uint256",
+                    "minLot": "uint256"
+                }
+            },
+            "SellERC20Token(address,uint256,uint256)": {
+                "argument": {
+                    "_sellPrice": "uint256",
+                    "_minLot": "uint256"
+                },
+                "contract": {
+                    "sellPrice": "uint256",
+                    "minLot": "uint256"
+                }
+            },
+            "WithdrawToken(uint256)": {
+                "argument": {
+                    "tokens": "uint256"
+                },
+                "contract": {
+                    "sellPrice": "uint256",
+                    "minLot": "uint256"
+                }
+            },
+            "WithdrawEther(uint256)": {
+                "argument": {
+                    "ethers": "uint256"
+                },
+                "contract": {
+                    "sellPrice": "uint256",
+                    "minLot": "uint256"
+                }
+            },
+            "SetPrice(uint256)": {
+                "argument": {
+                    "newprice": "uint256"
+                },
+                "contract": {
+                    "sellPrice": "uint256",
+                    "minLot": "uint256"
+                }
+            },
+            "ChangeToken(address)": {
+                "argument": {},
+                "contract": {
+                    "sellPrice": "uint256",
+                    "minLot": "uint256"
+                }
+            },
+            "SetLot(uint256)": {
+                "argument": {
+                    "newlot": "uint256"
+                },
+                "contract": {
+                    "sellPrice": "uint256",
+                    "minLot": "uint256"
+                }
+            },
+            "SellToken()": {
+                "argument": {},
+                "contract": {
+                    "sellPrice": "uint256",
+                    "minLot": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "sellPrice": "uint256",
+                    "minLot": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "SetLot(uint256)": [
+                352,
+                163
+            ],
+            "WithdrawEther(uint256)": [
+                195,
+                97
+            ],
+            "SetPrice(uint256)": [
+                307,
+                141
+            ],
+            "ChangeToken(address)": [
+                553,
+                229
+            ],
+            "SellToken()": [
+                185,
+                75
+            ],
+            "WithdrawToken(uint256)": [
+                484,
+                207
+            ],
+            "transferOwnership(address)": [
+                663,
+                273
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump1400_0": [
+                "ERC20(token).transfer(msg.sender, tokens)",
+                "ERC20(token).transfer(msg.sender, tokens)"
+            ],
+            "block2909": [
+                "ERC20(token).transfer(owner, tokens)"
+            ],
+            "jump1139": [
+                "msg.sender.send(change)",
+                "msg.sender.send(change)"
+            ],
+            "jump1400": [
+                "ERC20(token).transfer(msg.sender, tokens)",
+                "ERC20(token).transfer(msg.sender, tokens)"
+            ],
+            "block1139_1": [
+                "msg.sender.send(change)"
+            ],
+            "jump1043_1": [
+                "ERC20(token).balanceOf(address(this))",
+                "ERC20(token).balanceOf(address(this))"
+            ],
+            "jump1043_0": [
+                "ERC20(token).balanceOf(address(this))",
+                "ERC20(token).balanceOf(address(this))"
+            ],
+            "jump1043": [
+                "ERC20(token).balanceOf(address(this))",
+                "ERC20(token).balanceOf(address(this))"
+            ],
+            "jump2909": [
+                "ERC20(token).transfer(owner, tokens)",
+                "ERC20(token).transfer(owner, tokens)"
+            ],
+            "block1868": [
+                "owner.send(ethers)"
+            ],
+            "block1043_0": [
+                "ERC20(token).balanceOf(address(this))"
+            ],
+            "block1139": [
+                "msg.sender.send(change)"
+            ],
+            "jump1400_1": [
+                "ERC20(token).transfer(msg.sender, tokens)",
+                "ERC20(token).transfer(msg.sender, tokens)"
+            ],
+            "block1400_0": [
+                "ERC20(token).transfer(msg.sender, tokens)"
+            ],
+            "block1400_1": [
+                "ERC20(token).transfer(msg.sender, tokens)"
+            ],
+            "block1043": [
+                "ERC20(token).balanceOf(address(this))"
+            ],
+            "jump1139_1": [
+                "msg.sender.send(change)",
+                "msg.sender.send(change)"
+            ],
+            "jump1139_0": [
+                "msg.sender.send(change)",
+                "msg.sender.send(change)"
+            ],
+            "block1139_0": [
+                "msg.sender.send(change)"
+            ],
+            "block1043_1": [
+                "ERC20(token).balanceOf(address(this))"
+            ],
+            "block1400": [
+                "ERC20(token).transfer(msg.sender, tokens)"
+            ]
+        }
+    }
+}

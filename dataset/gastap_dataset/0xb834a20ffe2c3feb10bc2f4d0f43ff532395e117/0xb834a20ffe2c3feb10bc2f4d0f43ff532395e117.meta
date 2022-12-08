@@ -1,0 +1,207 @@
+{
+    "IProxy": {
+        "function_list": [
+            "raiseTransferEvent(address,address,uint256)",
+            "raiseApprovalEvent(address,address,uint256)"
+        ],
+        "initial_state": {
+            "raiseTransferEvent(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "raiseApprovalEvent(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "raiseTransferEvent(address,address,uint256)": [
+                214,
+                97
+            ],
+            "raiseApprovalEvent(address,address,uint256)": [
+                81,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "ProxyManagementContract": {
+        "function_list": [
+            "ProxyManagementContract()",
+            "addProxy(address)",
+            "removeProxy(address)",
+            "changeDedicatedProxy(address)",
+            "raiseTransferEvent(address,address,uint256)",
+            "raiseApprovalEvent(address,address,uint256)",
+            "setProxyManagementCurator(address)",
+            "setDedicatedProxy(address)",
+            "setTokenAddress(address)",
+            "killContract()",
+            "dedicatedProxyAddress()",
+            "getApprovedProxies()",
+            "isProxyLegit(address)",
+            "fallback()"
+        ],
+        "initial_state": {
+            "ProxyManagementContract()": {
+                "argument": {},
+                "contract": {
+                    "proxyList": "address[]"
+                }
+            },
+            "addProxy(address)": {
+                "argument": {},
+                "contract": {
+                    "proxyList": "address[]"
+                }
+            },
+            "removeProxy(address)": {
+                "argument": {},
+                "contract": {
+                    "proxyList": "address[]"
+                }
+            },
+            "changeDedicatedProxy(address)": {
+                "argument": {},
+                "contract": {
+                    "proxyList": "address[]"
+                }
+            },
+            "raiseTransferEvent(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "proxyList": "address[]"
+                }
+            },
+            "raiseApprovalEvent(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "proxyList": "address[]"
+                }
+            },
+            "setProxyManagementCurator(address)": {
+                "argument": {},
+                "contract": {
+                    "proxyList": "address[]"
+                }
+            },
+            "setDedicatedProxy(address)": {
+                "argument": {},
+                "contract": {
+                    "proxyList": "address[]"
+                }
+            },
+            "setTokenAddress(address)": {
+                "argument": {},
+                "contract": {
+                    "proxyList": "address[]"
+                }
+            },
+            "killContract()": {
+                "argument": {},
+                "contract": {
+                    "proxyList": "address[]"
+                }
+            },
+            "dedicatedProxyAddress()": {
+                "argument": {},
+                "contract": {
+                    "proxyList": "address[]"
+                }
+            },
+            "getApprovedProxies()": {
+                "argument": {},
+                "contract": {
+                    "proxyList": "address[]"
+                }
+            },
+            "isProxyLegit(address)": {
+                "argument": {},
+                "contract": {
+                    "proxyList": "address[]"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "proxyList": "address[]"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "addProxy(address)": [
+                507,
+                141
+            ],
+            "raiseApprovalEvent(address,address,uint256)": [
+                2073,
+                978
+            ],
+            "dedicatedProxyAddress()": [
+                1466,
+                361
+            ],
+            "isProxyLegit(address)": [
+                594,
+                163
+            ],
+            "removeProxy(address)": [
+                1379,
+                339
+            ],
+            "setProxyManagementCurator(address)": [
+                420,
+                119
+            ],
+            "getApprovedProxies()": [
+                881,
+                229
+            ],
+            "changeDedicatedProxy(address)": [
+                989,
+                251
+            ],
+            "setDedicatedProxy(address)": [
+                1640,
+                405
+            ],
+            "killContract()": [
+                377,
+                97
+            ],
+            "raiseTransferEvent(address,address,uint256)": [
+                3889,
+                978
+            ],
+            "setTokenAddress(address)": [
+                685,
+                185
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump2073": [
+                "dedicatedProxy.raiseApprovalEvent(_owner, _spender, _value)",
+                "dedicatedProxy.raiseApprovalEvent(_owner, _spender, _value)"
+            ],
+            "jump3889": [
+                "dedicatedProxy.raiseTransferEvent(_from, _to, _value)",
+                "dedicatedProxy.raiseTransferEvent(_from, _to, _value)"
+            ],
+            "block3889": [
+                "dedicatedProxy.raiseTransferEvent(_from, _to, _value)"
+            ],
+            "block2073": [
+                "dedicatedProxy.raiseApprovalEvent(_owner, _spender, _value)"
+            ]
+        }
+    }
+}

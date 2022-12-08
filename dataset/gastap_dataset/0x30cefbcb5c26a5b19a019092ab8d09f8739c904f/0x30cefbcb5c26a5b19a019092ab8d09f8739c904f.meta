@@ -1,0 +1,625 @@
+{
+    "VentanaTokenConfig": {
+        "function_list": [
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "TOKENS_PER_USD": "uint256",
+                    "USD_PER_ETH": "uint256",
+                    "MIN_USD_FUND": "uint256",
+                    "MAX_USD_FUND": "uint256",
+                    "KYC_USD_LMT": "uint256",
+                    "MAX_TOKENS": "uint256",
+                    "START_DATE": "uint256",
+                    "FUNDING_PERIOD": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "SafeMath": {
+        "function_list": [
+            "add(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)"
+        ],
+        "initial_state": {
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "ReentryProtected": {
+        "function_list": [],
+        "initial_state": {},
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "ERC20Token": {
+        "function_list": [
+            "balanceOf(address)",
+            "allowance(address,address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "xfer(address,address,uint256)",
+            "approve(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "symbol": "string"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "symbol": "string"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256",
+                    "symbol": "string"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256",
+                    "symbol": "string"
+                }
+            },
+            "xfer(address,address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256",
+                    "symbol": "string"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256",
+                    "symbol": "string"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                136,
+                75
+            ],
+            "balanceOf(address)": [
+                413,
+                141
+            ],
+            "allowance(address,address)": [
+                745,
+                207
+            ],
+            "transferFrom(address,address,uint256)": [
+                280,
+                119
+            ],
+            "transfer(address,uint256)": [
+                644,
+                185
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "VentanaToken": {
+        "function_list": [
+            "fundSucceeded()",
+            "fundFailed()",
+            "usdRaised()",
+            "usdToEth(uint256)",
+            "ethToUsd(uint256)",
+            "ethToTokens(uint256)",
+            "proxyPurchase(address)",
+            "finaliseICO()",
+            "addKycAddress(address,bool)",
+            "refund(address)",
+            "abort()",
+            "changeVeredictum(address)",
+            "transferAnyERC20Token(address,uint256)",
+            "balanceOf(address)",
+            "allowance(address,address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "xfer(address,address,uint256)",
+            "approve(address,uint256)",
+            "VentanaToken()",
+            "fallback()",
+            "fundFailed()",
+            "fundSucceeded()",
+            "ethToUsd(uint256)",
+            "usdToEth(uint256)",
+            "usdRaised()",
+            "ethToTokens(uint256)",
+            "abort()",
+            "proxyPurchase(address)",
+            "addKycAddress(address,bool)",
+            "finaliseICO()",
+            "refund(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "changeOwner(address)",
+            "acceptOwnership()",
+            "changeVeredictum(address)",
+            "destroy()",
+            "transferAnyERC20Token(address,uint256)",
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "fundSucceeded()": {
+                "argument": {},
+                "contract": {
+                    "TOKENS_PER_ETH": "uint256",
+                    "MIN_ETH_FUND": "uint256",
+                    "MAX_ETH_FUND": "uint256",
+                    "KYC_ETH_LMT": "uint256",
+                    "END_DATE": "uint256"
+                }
+            },
+            "fundFailed()": {
+                "argument": {},
+                "contract": {
+                    "TOKENS_PER_ETH": "uint256",
+                    "MIN_ETH_FUND": "uint256",
+                    "MAX_ETH_FUND": "uint256",
+                    "KYC_ETH_LMT": "uint256",
+                    "END_DATE": "uint256"
+                }
+            },
+            "usdRaised()": {
+                "argument": {},
+                "contract": {
+                    "TOKENS_PER_ETH": "uint256",
+                    "MIN_ETH_FUND": "uint256",
+                    "MAX_ETH_FUND": "uint256",
+                    "KYC_ETH_LMT": "uint256",
+                    "END_DATE": "uint256"
+                }
+            },
+            "usdToEth(uint256)": {
+                "argument": {
+                    "_usd": "uint256"
+                },
+                "contract": {
+                    "TOKENS_PER_ETH": "uint256",
+                    "MIN_ETH_FUND": "uint256",
+                    "MAX_ETH_FUND": "uint256",
+                    "KYC_ETH_LMT": "uint256",
+                    "END_DATE": "uint256"
+                }
+            },
+            "ethToUsd(uint256)": {
+                "argument": {
+                    "_wei": "uint256"
+                },
+                "contract": {
+                    "TOKENS_PER_ETH": "uint256",
+                    "MIN_ETH_FUND": "uint256",
+                    "MAX_ETH_FUND": "uint256",
+                    "KYC_ETH_LMT": "uint256",
+                    "END_DATE": "uint256"
+                }
+            },
+            "ethToTokens(uint256)": {
+                "argument": {
+                    "_wei": "uint256"
+                },
+                "contract": {
+                    "TOKENS_PER_ETH": "uint256",
+                    "MIN_ETH_FUND": "uint256",
+                    "MAX_ETH_FUND": "uint256",
+                    "KYC_ETH_LMT": "uint256",
+                    "END_DATE": "uint256"
+                }
+            },
+            "proxyPurchase(address)": {
+                "argument": {},
+                "contract": {
+                    "TOKENS_PER_ETH": "uint256",
+                    "MIN_ETH_FUND": "uint256",
+                    "MAX_ETH_FUND": "uint256",
+                    "KYC_ETH_LMT": "uint256",
+                    "END_DATE": "uint256"
+                }
+            },
+            "finaliseICO()": {
+                "argument": {},
+                "contract": {
+                    "TOKENS_PER_ETH": "uint256",
+                    "MIN_ETH_FUND": "uint256",
+                    "MAX_ETH_FUND": "uint256",
+                    "KYC_ETH_LMT": "uint256",
+                    "END_DATE": "uint256"
+                }
+            },
+            "addKycAddress(address,bool)": {
+                "argument": {},
+                "contract": {
+                    "TOKENS_PER_ETH": "uint256",
+                    "MIN_ETH_FUND": "uint256",
+                    "MAX_ETH_FUND": "uint256",
+                    "KYC_ETH_LMT": "uint256",
+                    "END_DATE": "uint256"
+                }
+            },
+            "refund(address)": {
+                "argument": {},
+                "contract": {
+                    "TOKENS_PER_ETH": "uint256",
+                    "MIN_ETH_FUND": "uint256",
+                    "MAX_ETH_FUND": "uint256",
+                    "KYC_ETH_LMT": "uint256",
+                    "END_DATE": "uint256"
+                }
+            },
+            "abort()": {
+                "argument": {},
+                "contract": {
+                    "TOKENS_PER_ETH": "uint256",
+                    "MIN_ETH_FUND": "uint256",
+                    "MAX_ETH_FUND": "uint256",
+                    "KYC_ETH_LMT": "uint256",
+                    "END_DATE": "uint256"
+                }
+            },
+            "changeVeredictum(address)": {
+                "argument": {},
+                "contract": {
+                    "TOKENS_PER_ETH": "uint256",
+                    "MIN_ETH_FUND": "uint256",
+                    "MAX_ETH_FUND": "uint256",
+                    "KYC_ETH_LMT": "uint256",
+                    "END_DATE": "uint256"
+                }
+            },
+            "transferAnyERC20Token(address,uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {
+                    "TOKENS_PER_ETH": "uint256",
+                    "MIN_ETH_FUND": "uint256",
+                    "MAX_ETH_FUND": "uint256",
+                    "KYC_ETH_LMT": "uint256",
+                    "END_DATE": "uint256"
+                }
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "TOKENS_PER_ETH": "uint256",
+                    "MIN_ETH_FUND": "uint256",
+                    "MAX_ETH_FUND": "uint256",
+                    "KYC_ETH_LMT": "uint256",
+                    "END_DATE": "uint256"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "TOKENS_PER_ETH": "uint256",
+                    "MIN_ETH_FUND": "uint256",
+                    "MAX_ETH_FUND": "uint256",
+                    "KYC_ETH_LMT": "uint256",
+                    "END_DATE": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "TOKENS_PER_ETH": "uint256",
+                    "MIN_ETH_FUND": "uint256",
+                    "MAX_ETH_FUND": "uint256",
+                    "KYC_ETH_LMT": "uint256",
+                    "END_DATE": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "TOKENS_PER_ETH": "uint256",
+                    "MIN_ETH_FUND": "uint256",
+                    "MAX_ETH_FUND": "uint256",
+                    "KYC_ETH_LMT": "uint256",
+                    "END_DATE": "uint256"
+                }
+            },
+            "xfer(address,address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "TOKENS_PER_ETH": "uint256",
+                    "MIN_ETH_FUND": "uint256",
+                    "MAX_ETH_FUND": "uint256",
+                    "KYC_ETH_LMT": "uint256",
+                    "END_DATE": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "TOKENS_PER_ETH": "uint256",
+                    "MIN_ETH_FUND": "uint256",
+                    "MAX_ETH_FUND": "uint256",
+                    "KYC_ETH_LMT": "uint256",
+                    "END_DATE": "uint256"
+                }
+            },
+            "VentanaToken()": {
+                "argument": {},
+                "contract": {
+                    "TOKENS_PER_ETH": "uint256",
+                    "MIN_ETH_FUND": "uint256",
+                    "MAX_ETH_FUND": "uint256",
+                    "KYC_ETH_LMT": "uint256",
+                    "END_DATE": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "TOKENS_PER_ETH": "uint256",
+                    "MIN_ETH_FUND": "uint256",
+                    "MAX_ETH_FUND": "uint256",
+                    "KYC_ETH_LMT": "uint256",
+                    "END_DATE": "uint256"
+                }
+            },
+            "changeOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "TOKENS_PER_ETH": "uint256",
+                    "MIN_ETH_FUND": "uint256",
+                    "MAX_ETH_FUND": "uint256",
+                    "KYC_ETH_LMT": "uint256",
+                    "END_DATE": "uint256"
+                }
+            },
+            "acceptOwnership()": {
+                "argument": {},
+                "contract": {
+                    "TOKENS_PER_ETH": "uint256",
+                    "MIN_ETH_FUND": "uint256",
+                    "MAX_ETH_FUND": "uint256",
+                    "KYC_ETH_LMT": "uint256",
+                    "END_DATE": "uint256"
+                }
+            },
+            "destroy()": {
+                "argument": {},
+                "contract": {
+                    "TOKENS_PER_ETH": "uint256",
+                    "MIN_ETH_FUND": "uint256",
+                    "MAX_ETH_FUND": "uint256",
+                    "KYC_ETH_LMT": "uint256",
+                    "END_DATE": "uint256"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "TOKENS_PER_ETH": "uint256",
+                    "MIN_ETH_FUND": "uint256",
+                    "MAX_ETH_FUND": "uint256",
+                    "KYC_ETH_LMT": "uint256",
+                    "END_DATE": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "finaliseICO()": [
+                1230,
+                251
+            ],
+            "fundSucceeded()": [
+                1722,
+                405
+            ],
+            "abort()": [
+                1140,
+                207
+            ],
+            "destroy()": [
+                2083,
+                559
+            ],
+            "transferFrom(address,address,uint256)": [
+                958,
+                163
+            ],
+            "approve(address,uint256)": [
+                727,
+                97
+            ],
+            "transferAnyERC20Token(address,uint256)": [
+                3337,
+                977
+            ],
+            "usdRaised()": [
+                3557,
+                1021
+            ],
+            "refund(address)": [
+                3686,
+                1087
+            ],
+            "ethToTokens(uint256)": [
+                2583,
+                713
+            ],
+            "fundFailed()": [
+                1769,
+                427
+            ],
+            "changeOwner(address)": [
+                2648,
+                735
+            ],
+            "proxyPurchase(address)": [
+                1423,
+                317
+            ],
+            "changeVeredictum(address)": [
+                1544,
+                361
+            ],
+            "balanceOf(address)": [
+                1863,
+                471
+            ],
+            "usdToEth(uint256)": [
+                3056,
+                867
+            ],
+            "addKycAddress(address,bool)": [
+                1320,
+                295
+            ],
+            "ethToUsd(uint256)": [
+                2331,
+                647
+            ],
+            "transfer(address,uint256)": [
+                9054,
+                21063
+            ],
+            "allowance(address,address)": [
+                3438,
+                999
+            ],
+            "acceptOwnership()": [
+                2036,
+                537
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump5054": [
+                "Notify(veredictum).notify(msg.sender, _amount)",
+                "Notify(veredictum).notify(msg.sender, _amount)"
+            ],
+            "jump9054": [
+                "ERC20Token(tokenAddress).transfer(owner, amount)",
+                "ERC20Token(tokenAddress).transfer(owner, amount)"
+            ],
+            "block9793": [
+                "_addr.transfer(value)"
+            ],
+            "jump9793": [
+                "_addr.transfer(value)",
+                "_addr.transfer(value)"
+            ],
+            "jump8479": [
+                "Notify(veredictum).notify(msg.sender, _amount)",
+                "Notify(veredictum).notify(msg.sender, _amount)"
+            ],
+            "block5506": [
+                "fundWallet.transfer(this.balance)"
+            ],
+            "jump5506": [
+                "fundWallet.transfer(this.balance)",
+                "fundWallet.transfer(this.balance)"
+            ],
+            "block8479": [
+                "Notify(veredictum).notify(msg.sender, _amount)"
+            ],
+            "block9054": [
+                "ERC20Token(tokenAddress).transfer(owner, amount)"
+            ],
+            "block5054": [
+                "Notify(veredictum).notify(msg.sender, _amount)"
+            ]
+        }
+    },
+    "VeredictumTest": {
+        "function_list": [
+            "notify(address,uint256)",
+            "setVnt(address)",
+            "notify(address,uint256)"
+        ],
+        "initial_state": {
+            "notify(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {}
+            },
+            "setVnt(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "setVnt(address)": [
+                193,
+                97
+            ],
+            "notify(address,uint256)": [
+                92,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    }
+}

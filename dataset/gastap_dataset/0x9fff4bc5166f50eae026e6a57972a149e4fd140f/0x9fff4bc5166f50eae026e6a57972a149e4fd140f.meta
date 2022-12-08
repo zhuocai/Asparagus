@@ -1,0 +1,272 @@
+{
+    "Owned": {
+        "function_list": [
+            "Owned()",
+            "transferOwnership(address)"
+        ],
+        "initial_state": {
+            "Owned()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "TokenSeller": {
+        "function_list": [
+            "Owned()",
+            "transferOwnership(address)",
+            "TokenSeller(address,uint256,uint256,bool)",
+            "activate(bool)",
+            "makerWithdrawAsset(uint256)",
+            "makerTransferAsset(TokenSeller,uint256)",
+            "makerWithdrawERC20Token(address,uint256)",
+            "makerWithdrawEther(uint256)",
+            "takerBuyAsset()",
+            "fallback()"
+        ],
+        "initial_state": {
+            "Owned()": {
+                "argument": {},
+                "contract": {
+                    "sellPrice": "uint256",
+                    "units": "uint256"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "sellPrice": "uint256",
+                    "units": "uint256"
+                }
+            },
+            "TokenSeller(address,uint256,uint256,bool)": {
+                "argument": {
+                    "_sellPrice": "uint256",
+                    "_units": "uint256"
+                },
+                "contract": {
+                    "sellPrice": "uint256",
+                    "units": "uint256"
+                }
+            },
+            "activate(bool)": {
+                "argument": {},
+                "contract": {
+                    "sellPrice": "uint256",
+                    "units": "uint256"
+                }
+            },
+            "makerWithdrawAsset(uint256)": {
+                "argument": {
+                    "tokens": "uint256"
+                },
+                "contract": {
+                    "sellPrice": "uint256",
+                    "units": "uint256"
+                }
+            },
+            "makerTransferAsset(TokenSeller,uint256)": {
+                "argument": {
+                    "tokens": "uint256"
+                },
+                "contract": {
+                    "sellPrice": "uint256",
+                    "units": "uint256"
+                }
+            },
+            "makerWithdrawERC20Token(address,uint256)": {
+                "argument": {
+                    "tokens": "uint256"
+                },
+                "contract": {
+                    "sellPrice": "uint256",
+                    "units": "uint256"
+                }
+            },
+            "makerWithdrawEther(uint256)": {
+                "argument": {
+                    "ethers": "uint256"
+                },
+                "contract": {
+                    "sellPrice": "uint256",
+                    "units": "uint256"
+                }
+            },
+            "takerBuyAsset()": {
+                "argument": {},
+                "contract": {
+                    "sellPrice": "uint256",
+                    "units": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "sellPrice": "uint256",
+                    "units": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "makerWithdrawEther(uint256)": [
+                196,
+                75
+            ],
+            "takerBuyAsset()": [
+                774,
+                251
+            ],
+            "activate(bool)": [
+                853,
+                295
+            ],
+            "makerWithdrawAsset(uint256)": [
+                784,
+                273
+            ],
+            "makerWithdrawERC20Token(address,uint256)": [
+                673,
+                229
+            ],
+            "transferOwnership(address)": [
+                900,
+                317
+            ]
+        },
+        "block_CALL_mapping": {
+            "block1846_0": [
+                "msg.sender.send(msg.value)"
+            ],
+            "block3657": [
+                "ERC20Partial(tokenAddress).transfer(owner, tokens)"
+            ],
+            "jump3657": [
+                "ERC20Partial(tokenAddress).transfer(owner, tokens)",
+                "ERC20Partial(tokenAddress).transfer(owner, tokens)"
+            ],
+            "jump1398_0": [
+                "msg.sender.send(change)",
+                "msg.sender.send(change)"
+            ],
+            "jump1398_1": [
+                "msg.sender.send(change)",
+                "msg.sender.send(change)"
+            ],
+            "jump3151": [
+                "ERC20Partial(asset).transfer(toTokenSeller, tokens)",
+                "ERC20Partial(asset).transfer(toTokenSeller, tokens)"
+            ],
+            "block1288_0": [
+                "ERC20Partial(asset).balanceOf(address(this))"
+            ],
+            "block1288_1": [
+                "ERC20Partial(asset).balanceOf(address(this))"
+            ],
+            "block2042": [
+                "owner.send(ethers)"
+            ],
+            "block1398_0": [
+                "msg.sender.send(change)"
+            ],
+            "jump1288_0": [
+                "ERC20Partial(asset).balanceOf(address(this))",
+                "ERC20Partial(asset).balanceOf(address(this))"
+            ],
+            "block2696": [
+                "toTokenSeller.asset()"
+            ],
+            "jump2451": [
+                "toTokenSeller.owner()",
+                "toTokenSeller.owner()"
+            ],
+            "jump1672": [
+                "ERC20Partial(asset).transfer(msg.sender, order * units)",
+                "ERC20Partial(asset).transfer(msg.sender, order * units)"
+            ],
+            "jump2696": [
+                "toTokenSeller.asset()",
+                "toTokenSeller.asset()"
+            ],
+            "block1288": [
+                "ERC20Partial(asset).balanceOf(address(this))"
+            ],
+            "block2451": [
+                "toTokenSeller.owner()"
+            ],
+            "jump1398": [
+                "msg.sender.send(change)",
+                "msg.sender.send(change)"
+            ],
+            "block1672": [
+                "ERC20Partial(asset).transfer(msg.sender, order * units)"
+            ],
+            "jump1846": [
+                "msg.sender.send(msg.value)",
+                "msg.sender.send(msg.value)"
+            ],
+            "block3151": [
+                "ERC20Partial(asset).transfer(toTokenSeller, tokens)"
+            ],
+            "block1672_1": [
+                "ERC20Partial(asset).transfer(msg.sender, order * units)"
+            ],
+            "block1672_0": [
+                "ERC20Partial(asset).transfer(msg.sender, order * units)"
+            ],
+            "jump1672_1": [
+                "ERC20Partial(asset).transfer(msg.sender, order * units)",
+                "ERC20Partial(asset).transfer(msg.sender, order * units)"
+            ],
+            "jump1672_0": [
+                "ERC20Partial(asset).transfer(msg.sender, order * units)",
+                "ERC20Partial(asset).transfer(msg.sender, order * units)"
+            ],
+            "jump4102": [
+                "ERC20Partial(asset).transfer(owner, tokens)",
+                "ERC20Partial(asset).transfer(owner, tokens)"
+            ],
+            "jump1288": [
+                "ERC20Partial(asset).balanceOf(address(this))",
+                "ERC20Partial(asset).balanceOf(address(this))"
+            ],
+            "block4102": [
+                "ERC20Partial(asset).transfer(owner, tokens)"
+            ],
+            "block1398": [
+                "msg.sender.send(change)"
+            ],
+            "block1846": [
+                "msg.sender.send(msg.value)"
+            ],
+            "block1846_1": [
+                "msg.sender.send(msg.value)"
+            ],
+            "jump1846_0": [
+                "msg.sender.send(msg.value)",
+                "msg.sender.send(msg.value)"
+            ],
+            "jump1846_1": [
+                "msg.sender.send(msg.value)",
+                "msg.sender.send(msg.value)"
+            ],
+            "jump1288_1": [
+                "ERC20Partial(asset).balanceOf(address(this))",
+                "ERC20Partial(asset).balanceOf(address(this))"
+            ],
+            "block1398_1": [
+                "msg.sender.send(change)"
+            ]
+        }
+    }
+}

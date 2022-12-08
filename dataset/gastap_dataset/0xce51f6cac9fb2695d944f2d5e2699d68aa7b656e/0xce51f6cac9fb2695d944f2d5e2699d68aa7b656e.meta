@@ -1,0 +1,515 @@
+{
+    "helper": {
+        "function_list": [
+            "eccVerify(bytes32,uint8,bytes32,bytes32)",
+            "calcBindedBlindHash3(string,address)",
+            "calcBindedBlindHash256(string,address)",
+            "calcDoubleBindedBlindHash3(string,address,address)",
+            "calcDoubleBindedBlindHash256(string,address,address)",
+            "hash_sha256(string,uint256)",
+            "hash_sha3(string,uint256)",
+            "hash_ripemd160(string,uint256)"
+        ],
+        "initial_state": {
+            "eccVerify(bytes32,uint8,bytes32,bytes32)": {
+                "argument": {
+                    "hash": "bytes32",
+                    "curve": "uint8",
+                    "r": "bytes32",
+                    "s": "bytes32"
+                },
+                "contract": {}
+            },
+            "calcBindedBlindHash3(string,address)": {
+                "argument": {
+                    "key": "string"
+                },
+                "contract": {}
+            },
+            "calcBindedBlindHash256(string,address)": {
+                "argument": {
+                    "key": "string"
+                },
+                "contract": {}
+            },
+            "calcDoubleBindedBlindHash3(string,address,address)": {
+                "argument": {
+                    "key": "string"
+                },
+                "contract": {}
+            },
+            "calcDoubleBindedBlindHash256(string,address,address)": {
+                "argument": {
+                    "key": "string"
+                },
+                "contract": {}
+            },
+            "hash_sha256(string,uint256)": {
+                "argument": {
+                    "key": "string",
+                    "rounds": "uint256"
+                },
+                "contract": {}
+            },
+            "hash_sha3(string,uint256)": {
+                "argument": {
+                    "key": "string",
+                    "rounds": "uint256"
+                },
+                "contract": {}
+            },
+            "hash_ripemd160(string,uint256)": {
+                "argument": {
+                    "key": "string",
+                    "rounds": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "calcBindedBlindHash256(string,address)": [
+                684,
+                141
+            ],
+            "eccVerify(bytes32,uint8,bytes32,bytes32)": [
+                849,
+                163
+            ],
+            "hash_sha256(string,uint256)": [
+                1311,
+                229
+            ],
+            "calcDoubleBindedBlindHash256(string,address,address)": [
+                487,
+                119
+            ],
+            "calcBindedBlindHash3(string,address)": [
+                1003,
+                185
+            ],
+            "hash_sha3(string,uint256)": [
+                1168,
+                207
+            ],
+            "calcDoubleBindedBlindHash3(string,address,address)": [
+                147,
+                75
+            ],
+            "hash_ripemd160(string,uint256)": [
+                344,
+                97
+            ]
+        },
+        "block_CALL_mapping": {
+            "block2642": [
+                "sha256(sha256(key),receiver)"
+            ],
+            "jump2824": [
+                "ecrecover(hash, curve, r, s)",
+                "ecrecover(hash, curve, r, s)"
+            ],
+            "block1891": [
+                "ripemd160(r160_hash)"
+            ],
+            "block2311": [
+                "sha256(sha256(sha256(key),caller),receiver)"
+            ],
+            "block3554": [
+                "sha256(sha256_hash)"
+            ],
+            "block2154": [
+                "sha256(sha256(key),caller)"
+            ],
+            "block2065": [
+                "sha256(key)"
+            ],
+            "jump3554": [
+                "sha256(sha256_hash)",
+                "sha256(sha256_hash)"
+            ],
+            "jump2154": [
+                "sha256(sha256(key),caller)",
+                "sha256(sha256(key),caller)"
+            ],
+            "jump2553": [
+                "sha256(key)",
+                "sha256(key)"
+            ],
+            "jump1891": [
+                "ripemd160(r160_hash)",
+                "ripemd160(r160_hash)"
+            ],
+            "jump2311": [
+                "sha256(sha256(sha256(key),caller),receiver)",
+                "sha256(sha256(sha256(key),caller),receiver)"
+            ],
+            "block2553": [
+                "sha256(key)"
+            ],
+            "jump2642": [
+                "sha256(sha256(key),receiver)",
+                "sha256(sha256(key),receiver)"
+            ],
+            "block3429": [
+                "sha256(key)"
+            ],
+            "jump3429": [
+                "sha256(key)",
+                "sha256(key)"
+            ],
+            "block2824": [
+                "ecrecover(hash, curve, r, s)"
+            ],
+            "jump2065": [
+                "sha256(key)",
+                "sha256(key)"
+            ]
+        }
+    },
+    "owned": {
+        "function_list": [
+            "owned()"
+        ],
+        "initial_state": {
+            "owned()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "logger": {
+        "function_list": [],
+        "initial_state": {},
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "Locksmith": {
+        "function_list": [
+            "eccVerify(bytes32,uint8,bytes32,bytes32)",
+            "calcBindedBlindHash3(string,address)",
+            "calcBindedBlindHash256(string,address)",
+            "calcDoubleBindedBlindHash3(string,address,address)",
+            "calcDoubleBindedBlindHash256(string,address,address)",
+            "hash_sha256(string,uint256)",
+            "hash_sha3(string,uint256)",
+            "hash_ripemd160(string,uint256)",
+            "owned()",
+            "Locksmith()",
+            "setLock(bytes32,string)",
+            "unlock(string,address,bytes32,string)",
+            "sendTo(address,uint256)",
+            "logEvent()",
+            "kill()",
+            "fallback()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "eccVerify(bytes32,uint8,bytes32,bytes32)": {
+                "argument": {
+                    "hash": "bytes32",
+                    "curve": "uint8",
+                    "r": "bytes32",
+                    "s": "bytes32"
+                },
+                "contract": {
+                    "nonce": "uint256",
+                    "m_proofs": "uint256",
+                    "lock": "bytes32",
+                    "protocol": "string"
+                }
+            },
+            "calcBindedBlindHash3(string,address)": {
+                "argument": {
+                    "key": "string"
+                },
+                "contract": {
+                    "nonce": "uint256",
+                    "m_proofs": "uint256",
+                    "lock": "bytes32",
+                    "protocol": "string"
+                }
+            },
+            "calcBindedBlindHash256(string,address)": {
+                "argument": {
+                    "key": "string"
+                },
+                "contract": {
+                    "nonce": "uint256",
+                    "m_proofs": "uint256",
+                    "lock": "bytes32",
+                    "protocol": "string"
+                }
+            },
+            "calcDoubleBindedBlindHash3(string,address,address)": {
+                "argument": {
+                    "key": "string"
+                },
+                "contract": {
+                    "nonce": "uint256",
+                    "m_proofs": "uint256",
+                    "lock": "bytes32",
+                    "protocol": "string"
+                }
+            },
+            "calcDoubleBindedBlindHash256(string,address,address)": {
+                "argument": {
+                    "key": "string"
+                },
+                "contract": {
+                    "nonce": "uint256",
+                    "m_proofs": "uint256",
+                    "lock": "bytes32",
+                    "protocol": "string"
+                }
+            },
+            "hash_sha256(string,uint256)": {
+                "argument": {
+                    "key": "string",
+                    "rounds": "uint256"
+                },
+                "contract": {
+                    "nonce": "uint256",
+                    "m_proofs": "uint256",
+                    "lock": "bytes32",
+                    "protocol": "string"
+                }
+            },
+            "hash_sha3(string,uint256)": {
+                "argument": {
+                    "key": "string",
+                    "rounds": "uint256"
+                },
+                "contract": {
+                    "nonce": "uint256",
+                    "m_proofs": "uint256",
+                    "lock": "bytes32",
+                    "protocol": "string"
+                }
+            },
+            "hash_ripemd160(string,uint256)": {
+                "argument": {
+                    "key": "string",
+                    "rounds": "uint256"
+                },
+                "contract": {
+                    "nonce": "uint256",
+                    "m_proofs": "uint256",
+                    "lock": "bytes32",
+                    "protocol": "string"
+                }
+            },
+            "owned()": {
+                "argument": {},
+                "contract": {
+                    "nonce": "uint256",
+                    "m_proofs": "uint256",
+                    "lock": "bytes32",
+                    "protocol": "string"
+                }
+            },
+            "Locksmith()": {
+                "argument": {},
+                "contract": {
+                    "nonce": "uint256",
+                    "m_proofs": "uint256",
+                    "lock": "bytes32",
+                    "protocol": "string"
+                }
+            },
+            "setLock(bytes32,string)": {
+                "argument": {
+                    "_lock": "bytes32",
+                    "_protocol": "string"
+                },
+                "contract": {
+                    "nonce": "uint256",
+                    "m_proofs": "uint256",
+                    "lock": "bytes32",
+                    "protocol": "string"
+                }
+            },
+            "unlock(string,address,bytes32,string)": {
+                "argument": {
+                    "key": "string",
+                    "newLock": "bytes32",
+                    "_protocol": "string"
+                },
+                "contract": {
+                    "nonce": "uint256",
+                    "m_proofs": "uint256",
+                    "lock": "bytes32",
+                    "protocol": "string"
+                }
+            },
+            "sendTo(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "nonce": "uint256",
+                    "m_proofs": "uint256",
+                    "lock": "bytes32",
+                    "protocol": "string"
+                }
+            },
+            "logEvent()": {
+                "argument": {},
+                "contract": {
+                    "nonce": "uint256",
+                    "m_proofs": "uint256",
+                    "lock": "bytes32",
+                    "protocol": "string"
+                }
+            },
+            "kill()": {
+                "argument": {},
+                "contract": {
+                    "nonce": "uint256",
+                    "m_proofs": "uint256",
+                    "lock": "bytes32",
+                    "protocol": "string"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "nonce": "uint256",
+                    "m_proofs": "uint256",
+                    "lock": "bytes32",
+                    "protocol": "string"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "calcBindedBlindHash256(string,address)": [
+                1561,
+                273
+            ],
+            "sendTo(address,uint256)": [
+                2009,
+                317
+            ],
+            "kill()": [
+                770,
+                141
+            ],
+            "calcDoubleBindedBlindHash3(string,address,address)": [
+                387,
+                75
+            ],
+            "calcDoubleBindedBlindHash256(string,address,address)": [
+                793,
+                163
+            ],
+            "hash_sha256(string,uint256)": [
+                2689,
+                471
+            ],
+            "setLock(bytes32,string)": [
+                1211,
+                207
+            ],
+            "calcBindedBlindHash3(string,address)": [
+                2330,
+                405
+            ],
+            "hash_sha3(string,uint256)": [
+                2495,
+                427
+            ],
+            "unlock(string,address,bytes32,string)": [
+                990,
+                185
+            ],
+            "eccVerify(bytes32,uint8,bytes32,bytes32)": [
+                2133,
+                361
+            ],
+            "hash_ripemd160(string,uint256)": [
+                627,
+                119
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump3275": [
+                "ripemd160(r160_hash)",
+                "ripemd160(r160_hash)"
+            ],
+            "block7238": [
+                "sha256(key)"
+            ],
+            "block6526": [
+                "_to.send(value)"
+            ],
+            "block3714": [
+                "sha256(sha256(key),caller)"
+            ],
+            "jump3871": [
+                "sha256(sha256(sha256(key),caller),receiver)",
+                "sha256(sha256(sha256(key),caller),receiver)"
+            ],
+            "jump6526": [
+                "_to.send(value)",
+                "_to.send(value)"
+            ],
+            "jump7238": [
+                "sha256(key)",
+                "sha256(key)"
+            ],
+            "block5823": [
+                "sha256(key)"
+            ],
+            "jump5912": [
+                "sha256(sha256(key),receiver)",
+                "sha256(sha256(key),receiver)"
+            ],
+            "jump3714": [
+                "sha256(sha256(key),caller)",
+                "sha256(sha256(key),caller)"
+            ],
+            "block7363": [
+                "sha256(sha256_hash)"
+            ],
+            "jump3625": [
+                "sha256(key)",
+                "sha256(key)"
+            ],
+            "block3625": [
+                "sha256(key)"
+            ],
+            "block5213": [
+                "owner.send(this.balance)"
+            ],
+            "block3871": [
+                "sha256(sha256(sha256(key),caller),receiver)"
+            ],
+            "jump5213": [
+                "owner.send(this.balance)",
+                "owner.send(this.balance)"
+            ],
+            "jump6621": [
+                "ecrecover(hash, curve, r, s)",
+                "ecrecover(hash, curve, r, s)"
+            ],
+            "block6621": [
+                "ecrecover(hash, curve, r, s)"
+            ],
+            "jump5823": [
+                "sha256(key)",
+                "sha256(key)"
+            ],
+            "block5912": [
+                "sha256(sha256(key),receiver)"
+            ],
+            "jump7363": [
+                "sha256(sha256_hash)",
+                "sha256(sha256_hash)"
+            ],
+            "block3275": [
+                "ripemd160(r160_hash)"
+            ]
+        }
+    }
+}

@@ -1,0 +1,91 @@
+{
+    "Finalizable": {
+        "function_list": [
+            "finalize()"
+        ],
+        "initial_state": {
+            "finalize()": {
+                "argument": {},
+                "contract": {
+                    "finalizedBlock": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "finalize()": [
+                114,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "ContributionWallet": {
+        "function_list": [
+            "refund(address,uint256)",
+            "ContributionWallet(address,address)",
+            "fallback()",
+            "withdraw()",
+            "refund(address,uint256)"
+        ],
+        "initial_state": {
+            "refund(address,uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {}
+            },
+            "ContributionWallet(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {}
+            },
+            "withdraw()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "withdraw()": [
+                100,
+                75
+            ],
+            "refund(address,uint256)": [
+                123,
+                97
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump1114": [
+                "th.transfer(amount)",
+                "th.transfer(amount)"
+            ],
+            "block824": [
+                "contribution.finalizedBlock()"
+            ],
+            "jump824": [
+                "contribution.finalizedBlock()",
+                "contribution.finalizedBlock()"
+            ],
+            "jump894": [
+                "multisig.transfer(this.balance)",
+                "multisig.transfer(this.balance)"
+            ],
+            "block623": [
+                "contribution.goalMet()"
+            ],
+            "jump623": [
+                "contribution.goalMet()",
+                "contribution.goalMet()"
+            ],
+            "block894": [
+                "multisig.transfer(this.balance)"
+            ],
+            "block1114": [
+                "th.transfer(amount)"
+            ]
+        }
+    }
+}

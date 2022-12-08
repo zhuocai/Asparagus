@@ -1,0 +1,290 @@
+{
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "ERC20": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                180,
+                75
+            ],
+            "balanceOf(address)": [
+                615,
+                185
+            ],
+            "transferFrom(address,address,uint256)": [
+                324,
+                119
+            ],
+            "allowance(address,address)": [
+                913,
+                273
+            ],
+            "transfer(address,uint256)": [
+                812,
+                251
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Owned": {
+        "function_list": [
+            "setOwner(address)"
+        ],
+        "initial_state": {
+            "setOwner(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "setOwner(address)": [
+                81,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "ArbitrageCtCrowdsale": {
+        "function_list": [
+            "setOwner(address)",
+            "tokenBalance()",
+            "ArbitrageCtCrowdsale()",
+            "transferToken(address,uint256)",
+            "fallback()",
+            "doPurchase()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "setOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "startICO": "uint256",
+                    "endICO": "uint256",
+                    "tokenETHAmount": "uint256"
+                }
+            },
+            "tokenBalance()": {
+                "argument": {},
+                "contract": {
+                    "startICO": "uint256",
+                    "endICO": "uint256",
+                    "tokenETHAmount": "uint256"
+                }
+            },
+            "ArbitrageCtCrowdsale()": {
+                "argument": {},
+                "contract": {
+                    "startICO": "uint256",
+                    "endICO": "uint256",
+                    "tokenETHAmount": "uint256"
+                }
+            },
+            "transferToken(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "startICO": "uint256",
+                    "endICO": "uint256",
+                    "tokenETHAmount": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "startICO": "uint256",
+                    "endICO": "uint256",
+                    "tokenETHAmount": "uint256"
+                }
+            },
+            "doPurchase()": {
+                "argument": {},
+                "contract": {
+                    "startICO": "uint256",
+                    "endICO": "uint256",
+                    "tokenETHAmount": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "setOwner(address)": [
+                286,
+                97
+            ],
+            "tokenBalance()": [
+                700,
+                229
+            ],
+            "doPurchase()": [
+                743,
+                251
+            ],
+            "transferToken(address,uint256)": [
+                185,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "block1983": [
+                "multisig.transfer(msg.value)"
+            ],
+            "jump2923_2": [
+                "token.balanceOf(address(this))",
+                "token.balanceOf(address(this))"
+            ],
+            "jump1983_0": [
+                "multisig.transfer(msg.value)",
+                "multisig.transfer(msg.value)"
+            ],
+            "jump1983_1": [
+                "multisig.transfer(msg.value)",
+                "multisig.transfer(msg.value)"
+            ],
+            "block2923": [
+                "token.balanceOf(address(this))"
+            ],
+            "jump2923": [
+                "token.balanceOf(address(this))",
+                "token.balanceOf(address(this))"
+            ],
+            "block1913": [
+                "token.transfer(msg.sender, tokensAmount)"
+            ],
+            "block1983_0": [
+                "multisig.transfer(msg.value)"
+            ],
+            "block1983_1": [
+                "multisig.transfer(msg.value)"
+            ],
+            "jump2923_1": [
+                "token.balanceOf(address(this))",
+                "token.balanceOf(address(this))"
+            ],
+            "jump2923_0": [
+                "token.balanceOf(address(this))",
+                "token.balanceOf(address(this))"
+            ],
+            "block1913_1": [
+                "token.transfer(msg.sender, tokensAmount)"
+            ],
+            "block1913_0": [
+                "token.transfer(msg.sender, tokensAmount)"
+            ],
+            "block2382": [
+                "token.transfer(_to,  _value)"
+            ],
+            "block2923_2": [
+                "token.balanceOf(address(this))"
+            ],
+            "block2923_1": [
+                "token.balanceOf(address(this))"
+            ],
+            "block2923_0": [
+                "token.balanceOf(address(this))"
+            ],
+            "jump1983": [
+                "multisig.transfer(msg.value)",
+                "multisig.transfer(msg.value)"
+            ],
+            "jump1913_1": [
+                "token.transfer(msg.sender, tokensAmount)",
+                "token.transfer(msg.sender, tokensAmount)"
+            ],
+            "jump1913_0": [
+                "token.transfer(msg.sender, tokensAmount)",
+                "token.transfer(msg.sender, tokensAmount)"
+            ],
+            "jump2382": [
+                "token.transfer(_to,  _value)",
+                "token.transfer(_to,  _value)"
+            ],
+            "jump1913": [
+                "token.transfer(msg.sender, tokensAmount)",
+                "token.transfer(msg.sender, tokensAmount)"
+            ]
+        }
+    }
+}

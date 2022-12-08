@@ -1,0 +1,185 @@
+{
+    "ERC20Events": {
+        "function_list": [],
+        "initial_state": {},
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "ERC20": {
+        "function_list": [
+            "transfer(address,uint256)",
+            "balanceOf(address)"
+        ],
+        "initial_state": {
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transfer(address,uint256)": [
+                1385,
+                361
+            ],
+            "balanceOf(address)": [
+                1044,
+                273
+            ]
+        },
+        "block_CALL_mapping": {
+            "block3721": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ],
+            "jump3721": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)",
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ]
+        }
+    },
+    "Owned": {
+        "function_list": [
+            "Owned()",
+            "transferOwnership(address)"
+        ],
+        "initial_state": {
+            "Owned()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "ClosedSale": {
+        "function_list": [
+            "Owned()",
+            "transferOwnership(address)",
+            "ClosedSale(ERC20,address,uint256,address)",
+            "withdrawToken(uint256)",
+            "buy(address)",
+            "fallback()"
+        ],
+        "initial_state": {
+            "Owned()": {
+                "argument": {},
+                "contract": {
+                    "tokenPerEth": "uint256"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "tokenPerEth": "uint256"
+                }
+            },
+            "ClosedSale(ERC20,address,uint256,address)": {
+                "argument": {
+                    "_tokenPerEth": "uint256"
+                },
+                "contract": {
+                    "tokenPerEth": "uint256"
+                }
+            },
+            "withdrawToken(uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "tokenPerEth": "uint256"
+                }
+            },
+            "buy(address)": {
+                "argument": {},
+                "contract": {
+                    "tokenPerEth": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "tokenPerEth": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "withdrawToken(uint256)": [
+                196,
+                97
+            ],
+            "buy(address)": [
+                439,
+                163
+            ],
+            "transferOwnership(address)": [
+                493,
+                185
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump1074_1": [
+                "receiver.transfer(msg.value)",
+                "receiver.transfer(msg.value)"
+            ],
+            "jump1074_0": [
+                "receiver.transfer(msg.value)",
+                "receiver.transfer(msg.value)"
+            ],
+            "block1074": [
+                "receiver.transfer(msg.value)"
+            ],
+            "block1585": [
+                "ERC20(token).transfer(owner,_value)"
+            ],
+            "jump1074": [
+                "receiver.transfer(msg.value)",
+                "receiver.transfer(msg.value)"
+            ],
+            "jump1032_0": [
+                "token.transfer(beneficiary, orderInTokens)",
+                "token.transfer(beneficiary, orderInTokens)"
+            ],
+            "block1074_1": [
+                "receiver.transfer(msg.value)"
+            ],
+            "block1074_0": [
+                "receiver.transfer(msg.value)"
+            ],
+            "block1032_1": [
+                "token.transfer(beneficiary, orderInTokens)"
+            ],
+            "block1032_0": [
+                "token.transfer(beneficiary, orderInTokens)"
+            ],
+            "block1032": [
+                "token.transfer(beneficiary, orderInTokens)"
+            ],
+            "jump1032_1": [
+                "token.transfer(beneficiary, orderInTokens)",
+                "token.transfer(beneficiary, orderInTokens)"
+            ],
+            "jump1585": [
+                "ERC20(token).transfer(owner,_value)",
+                "ERC20(token).transfer(owner,_value)"
+            ],
+            "jump1032": [
+                "token.transfer(beneficiary, orderInTokens)",
+                "token.transfer(beneficiary, orderInTokens)"
+            ]
+        }
+    }
+}

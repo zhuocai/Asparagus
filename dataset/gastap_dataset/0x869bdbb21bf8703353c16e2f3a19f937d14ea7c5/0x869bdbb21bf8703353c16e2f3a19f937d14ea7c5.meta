@@ -1,0 +1,208 @@
+{
+    "Ownable": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                70,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "SharkProxy": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "SharkProxy()",
+            "getOwner()",
+            "forward(address,uint256,bytes)",
+            "fallback()",
+            "tokenFallback(address,uint256,bytes)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "SharkProxy()": {
+                "argument": {},
+                "contract": {}
+            },
+            "getOwner()": {
+                "argument": {},
+                "contract": {}
+            },
+            "forward(address,uint256,bytes)": {
+                "argument": {
+                    "_value": "uint256",
+                    "_data": "bytes"
+                },
+                "contract": {}
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {}
+            },
+            "tokenFallback(address,uint256,bytes)": {
+                "argument": {
+                    "_value": "uint256",
+                    "_data": "bytes"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "forward(address,uint256,bytes)": [
+                412,
+                119
+            ],
+            "getOwner()": [
+                178,
+                75
+            ],
+            "tokenFallback(address,uint256,bytes)": [
+                265,
+                97
+            ],
+            "transferOwnership(address)": [
+                559,
+                141
+            ]
+        },
+        "block_CALL_mapping": {
+            "block938": [
+                "_destination.call.value(_value)(_data)"
+            ],
+            "jump938": [
+                "_destination.call.value(_value)(_data)",
+                "_destination.call.value(_value)(_data)"
+            ]
+        }
+    },
+    "FishProxy": {
+        "function_list": [
+            "SharkProxy()",
+            "getOwner()",
+            "forward(address,uint256,bytes)",
+            "fallback()",
+            "tokenFallback(address,uint256,bytes)",
+            "Ownable()",
+            "transferOwnership(address)",
+            "FishProxy(address,address)",
+            "isLocked()",
+            "unlock(bytes32,bytes32,bytes32)",
+            "fallback()"
+        ],
+        "initial_state": {
+            "SharkProxy()": {
+                "argument": {},
+                "contract": {}
+            },
+            "getOwner()": {
+                "argument": {},
+                "contract": {}
+            },
+            "forward(address,uint256,bytes)": {
+                "argument": {
+                    "_value": "uint256",
+                    "_data": "bytes"
+                },
+                "contract": {}
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {}
+            },
+            "tokenFallback(address,uint256,bytes)": {
+                "argument": {
+                    "_value": "uint256",
+                    "_data": "bytes"
+                },
+                "contract": {}
+            },
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "FishProxy(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "isLocked()": {
+                "argument": {},
+                "contract": {}
+            },
+            "unlock(bytes32,bytes32,bytes32)": {
+                "argument": {
+                    "_r": "bytes32",
+                    "_s": "bytes32",
+                    "_pl": "bytes32"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "tokenFallback(address,uint256,bytes)": [
+                466,
+                119
+            ],
+            "getOwner()": [
+                332,
+                75
+            ],
+            "unlock(bytes32,bytes32,bytes32)": [
+                613,
+                141
+            ],
+            "isLocked()": [
+                419,
+                97
+            ],
+            "forward(address,uint256,bytes)": [
+                690,
+                163
+            ],
+            "transferOwnership(address)": [
+                837,
+                185
+            ]
+        },
+        "block_CALL_mapping": {
+            "block2094": [
+                "_destination.call.value(_value)(_data)"
+            ],
+            "jump2094": [
+                "_destination.call.value(_value)(_data)",
+                "_destination.call.value(_value)(_data)"
+            ],
+            "jump1286": [
+                "ecrecover(sha3(uint8(0), target, newOwner), v, _r, _s)",
+                "ecrecover(sha3(uint8(0), target, newOwner), v, _r, _s)"
+            ],
+            "block1286": [
+                "ecrecover(sha3(uint8(0), target, newOwner), v, _r, _s)"
+            ]
+        }
+    }
+}

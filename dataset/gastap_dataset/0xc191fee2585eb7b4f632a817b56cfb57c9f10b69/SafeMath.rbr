@@ -1,0 +1,161 @@
+block0(l(l1), l(l0), calldataload, calldatasize, callvalue)=>
+	s(0) = 128
+	nop(PUSH1)
+	s(1) = 64
+	nop(PUSH1)
+	l(l0) = s(0)
+	nop(MSTORE)
+	s(0) = 4
+	nop(PUSH1)
+	s(1) = calldatasize
+	nop(CALLDATASIZE)
+	call(jump0(s(1),s(0), l(l1), l(l0), calldataload, calldatasize, callvalue))
+	nop(LT)
+	nop(PUSH1)
+	nop(JUMPI)
+
+jump0(s(1), s(0), l(l1), l(l0), calldataload, calldatasize, callvalue)=>
+	lt(s(1), s(0))
+	call(block63())
+
+jump0(s(1), s(0), l(l1), l(l0), calldataload, calldatasize, callvalue)=>
+	geq(s(1), s(0))
+	call(block12(l(l1), l(l0), calldataload, callvalue))
+
+jump12(s(2), s(1), s(0), l(l1), l(l0), calldataload, callvalue)=>
+	eq(s(2), s(1))
+	call(block68(s(0), l(l1), l(l0), callvalue))
+
+jump12(s(2), s(1), s(0), l(l1), l(l0), calldataload, callvalue)=>
+	neq(s(2), s(1))
+	call(block63_0(s(0)))
+
+block12(l(l1), l(l0), calldataload, callvalue)=>
+	s(0) = 0
+	nop(PUSH1)
+	s(0) = calldataload
+	nop(CALLDATALOAD)
+	s(1) = 26959946667150639794667015087019630673637144422540572481103610249216
+	nop(PUSH29)
+	s(2) = s(0)
+	s(0) = s(1)
+	s(1) = s(2)
+	nop(SWAP1)
+	s(0) = s(1)/s(0)
+	nop(DIV)
+	s(1) = 4294967295
+	nop(PUSH4)
+	s(0) = and(s(1), s(0))
+	nop(AND)
+	s(1) = s(0)
+	nop(DUP1)
+	s(2) = 866484690
+	nop(PUSH4)
+	call(jump12(s(2),s(1),s(0), l(l1), l(l0), calldataload, callvalue))
+	nop(EQ)
+	nop(PUSH1)
+	nop(JUMPI)
+
+block63()=>
+	nop(JUMPDEST)
+	s(0) = 0
+	nop(PUSH1)
+	s(1) = s(0)
+	nop(DUP1)
+	nop(REVERT)
+
+jump68(s(2), s(1), s(0), l(l1), l(l0), callvalue)=>
+	eq(s(2), 0)
+	call(block79(s(1), s(0), l(l1), l(l0)))
+
+jump68(s(2), s(1), s(0), l(l1), l(l0), callvalue)=>
+	neq(s(2), 0)
+	call(block75(s(1), s(0)))
+
+block68(s(0), l(l1), l(l0), callvalue)=>
+	nop(JUMPDEST)
+	s(1) = callvalue
+	nop(CALLVALUE)
+	s(2) = s(1)
+	nop(DUP1)
+	call(jump68(s(2),s(1),s(0), l(l1), l(l0), callvalue))
+	nop(ISZERO)
+	nop(PUSH1)
+	nop(JUMPI)
+
+block75(s(1), s(0))=>
+	s(2) = 0
+	nop(PUSH1)
+	s(3) = s(2)
+	nop(DUP1)
+	nop(REVERT)
+
+block79(s(1), s(0), l(l1), l(l0))=>
+	nop(JUMPDEST)
+	nop(POP)
+	s(1) = 86
+	nop(PUSH1)
+	s(2) = 108
+	nop(PUSH1)
+	call(block108(s(1),s(0), l(l1), l(l0)))
+	nop(JUMP)
+
+block86(s(2), s(1), s(0), l(l1), l(l0))=>
+	nop(JUMPDEST)
+	s(3) = 64
+	nop(PUSH1)
+	s(3) = l(l0)
+	nop(MLOAD)
+	s(4) = s(3)
+	nop(DUP1)
+	s(5) = s(2)
+	nop(DUP3)
+	s(6) = s(4)
+	nop(DUP2)
+	l(l1) = s(5)
+	nop(MSTORE)
+	s(5) = 32
+	nop(PUSH1)
+	s(4) = s(5)+s(4)
+	nop(ADD)
+	s(5) = s(2)
+	s(2) = s(4)
+	s(4) = s(5)
+	nop(SWAP2)
+	nop(POP)
+	nop(POP)
+	s(3) = 64
+	nop(PUSH1)
+	s(3) = l(l0)
+	nop(MLOAD)
+	s(4) = s(3)
+	nop(DUP1)
+	s(5) = s(2)
+	s(2) = s(4)
+	s(4) = s(5)
+	nop(SWAP2)
+	s(3) = s(4)-s(3)
+	nop(SUB)
+	s(4) = s(2)
+	s(2) = s(3)
+	s(3) = s(4)
+	nop(SWAP1)
+	nop(RETURN)
+
+block108(s(1), s(0), l(l1), l(l0))=>
+	nop(JUMPDEST)
+	s(2) = 115792089237316195423570985008687907853269984665640564039457584007913129639935
+	nop(PUSH32)
+	s(3) = s(1)
+	nop(DUP2)
+	call(block86(s(2),s(1),s(0), l(l1), l(l0)))
+	nop(JUMP)
+
+block63_0(s(0))=>
+	nop(JUMPDEST)
+	s(1) = 0
+	nop(PUSH1)
+	s(2) = s(1)
+	nop(DUP1)
+	nop(REVERT)
+

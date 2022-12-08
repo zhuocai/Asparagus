@@ -1,0 +1,244 @@
+{
+    "ERC20": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                807,
+                207
+            ],
+            "transfer(address,uint256)": [
+                1038,
+                251
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump3655": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)",
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ],
+            "block3655": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ]
+        }
+    },
+    "TokenPool": {
+        "function_list": [
+            "TokenPool(TokenPoolList,string,uint256,uint256,ERC20,address,string)",
+            "Fund()",
+            "fallback()",
+            "Withdraw()",
+            "CreateTokens()",
+            "ClaimTokens()",
+            "ClaimReward()"
+        ],
+        "initial_state": {
+            "TokenPool(TokenPoolList,string,uint256,uint256,ERC20,address,string)": {
+                "argument": {
+                    "_name": "string",
+                    "_fundingLimit": "uint256",
+                    "_rewardPercentage": "uint256",
+                    "_tokenCreateFunction": "string"
+                },
+                "contract": {
+                    "name": "string",
+                    "fundingLimit": "uint256",
+                    "rewardPercentage": "uint256",
+                    "amountRaised": "uint256",
+                    "tokensCreated": "uint256",
+                    "tokenCreateFunction": "string",
+                    "tokenCreateFunctionHash": "bytes4"
+                }
+            },
+            "Fund()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "fundingLimit": "uint256",
+                    "rewardPercentage": "uint256",
+                    "amountRaised": "uint256",
+                    "tokensCreated": "uint256",
+                    "tokenCreateFunction": "string",
+                    "tokenCreateFunctionHash": "bytes4"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "fundingLimit": "uint256",
+                    "rewardPercentage": "uint256",
+                    "amountRaised": "uint256",
+                    "tokensCreated": "uint256",
+                    "tokenCreateFunction": "string",
+                    "tokenCreateFunctionHash": "bytes4"
+                }
+            },
+            "Withdraw()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "fundingLimit": "uint256",
+                    "rewardPercentage": "uint256",
+                    "amountRaised": "uint256",
+                    "tokensCreated": "uint256",
+                    "tokenCreateFunction": "string",
+                    "tokenCreateFunctionHash": "bytes4"
+                }
+            },
+            "CreateTokens()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "fundingLimit": "uint256",
+                    "rewardPercentage": "uint256",
+                    "amountRaised": "uint256",
+                    "tokensCreated": "uint256",
+                    "tokenCreateFunction": "string",
+                    "tokenCreateFunctionHash": "bytes4"
+                }
+            },
+            "ClaimTokens()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "fundingLimit": "uint256",
+                    "rewardPercentage": "uint256",
+                    "amountRaised": "uint256",
+                    "tokensCreated": "uint256",
+                    "tokenCreateFunction": "string",
+                    "tokenCreateFunctionHash": "bytes4"
+                }
+            },
+            "ClaimReward()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "fundingLimit": "uint256",
+                    "rewardPercentage": "uint256",
+                    "amountRaised": "uint256",
+                    "tokensCreated": "uint256",
+                    "tokenCreateFunction": "string",
+                    "tokenCreateFunctionHash": "bytes4"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "ClaimTokens()": [
+                844,
+                317
+            ],
+            "Fund()": [
+                702,
+                207
+            ],
+            "CreateTokens()": [
+                821,
+                295
+            ],
+            "Withdraw()": [
+                679,
+                185
+            ],
+            "ClaimReward()": [
+                712,
+                229
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump2003": [
+                "msg.sender.send(reward)",
+                "msg.sender.send(reward)"
+            ],
+            "jump2193": [
+                "tokenCreateContract.call.value(amount)(tokenCreateFunctionHash)",
+                "tokenCreateContract.call.value(amount)(tokenCreateFunctionHash)"
+            ],
+            "block3114": [
+                "tokenContract.transfer(msg.sender, tokens)"
+            ],
+            "block2193": [
+                "tokenCreateContract.call.value(amount)(tokenCreateFunctionHash)"
+            ],
+            "block2003": [
+                "msg.sender.send(reward)"
+            ],
+            "block1637": [
+                "msg.sender.send(amount)"
+            ],
+            "jump2595": [
+                "tokenContract.balanceOf(this)",
+                "tokenContract.balanceOf(this)"
+            ],
+            "jump3114": [
+                "tokenContract.transfer(msg.sender, tokens)",
+                "tokenContract.transfer(msg.sender, tokens)"
+            ],
+            "block2595": [
+                "tokenContract.balanceOf(this)"
+            ],
+            "jump1637": [
+                "msg.sender.send(amount)",
+                "msg.sender.send(amount)"
+            ]
+        }
+    },
+    "TokenPoolList": {
+        "function_list": [
+            "add(address)",
+            "getCount()",
+            "getAddress(uint256)"
+        ],
+        "initial_state": {
+            "add(address)": {
+                "argument": {},
+                "contract": {
+                    "list": "address[]"
+                }
+            },
+            "getCount()": {
+                "argument": {},
+                "contract": {
+                    "list": "address[]"
+                }
+            },
+            "getAddress(uint256)": {
+                "argument": {
+                    "index": "uint256"
+                },
+                "contract": {
+                    "list": "address[]"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "add(address)": [
+                103,
+                75
+            ],
+            "getAddress(uint256)": [
+                322,
+                141
+            ],
+            "getCount()": [
+                279,
+                119
+            ]
+        },
+        "block_CALL_mapping": {}
+    }
+}

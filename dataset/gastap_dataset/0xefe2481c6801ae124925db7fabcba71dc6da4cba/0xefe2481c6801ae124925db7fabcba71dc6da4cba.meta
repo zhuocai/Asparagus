@@ -1,0 +1,67 @@
+{
+    "XG4KCrowdFunding": {
+        "function_list": [
+            "newCampaign(address,uint256,uint256)",
+            "contribute(uint256)",
+            "checkGoalReached(uint256)",
+            "clean(uint256)"
+        ],
+        "initial_state": {
+            "newCampaign(address,uint256,uint256)": {
+                "argument": {
+                    "goal": "uint256",
+                    "deadline": "uint256"
+                },
+                "contract": {
+                    "numCampaigns": "uint256"
+                }
+            },
+            "contribute(uint256)": {
+                "argument": {
+                    "campaignID": "uint256"
+                },
+                "contract": {
+                    "numCampaigns": "uint256"
+                }
+            },
+            "checkGoalReached(uint256)": {
+                "argument": {
+                    "campaignID": "uint256"
+                },
+                "contract": {
+                    "numCampaigns": "uint256"
+                }
+            },
+            "clean(uint256)": {
+                "argument": {
+                    "id": "uint256"
+                },
+                "contract": {
+                    "numCampaigns": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "contribute(uint256)": [
+                161,
+                97
+            ],
+            "newCampaign(address,uint256,uint256)": [
+                206,
+                119
+            ],
+            "checkGoalReached(uint256)": [
+                92,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "block504": [
+                "c.funders[j].addr.send(c.funders[j].amount)"
+            ],
+            "block358": [
+                "c.beneficiary.send(c.amount)"
+            ]
+        }
+    }
+}

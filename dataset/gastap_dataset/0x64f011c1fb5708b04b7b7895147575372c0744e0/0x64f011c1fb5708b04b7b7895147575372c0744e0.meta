@@ -1,0 +1,73 @@
+{
+    "Token": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                402,
+                141
+            ],
+            "transfer(address,uint256)": [
+                489,
+                163
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Vault": {
+        "function_list": [
+            "unlock()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "unlock()": {
+                "argument": {},
+                "contract": {
+                    "unlockedAt": "uint256"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "unlockedAt": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "unlock()": [
+                233,
+                119
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump568": [
+                "token.balanceOf(address(this))",
+                "token.balanceOf(address(this))"
+            ],
+            "block831": [
+                "token.transfer(recipient, vaultBalance)"
+            ],
+            "jump831": [
+                "token.transfer(recipient, vaultBalance)",
+                "token.transfer(recipient, vaultBalance)"
+            ],
+            "block568": [
+                "token.balanceOf(address(this))"
+            ]
+        }
+    }
+}

@@ -1,0 +1,267 @@
+{
+    "Math": {
+        "function_list": [
+            "max64(uint64,uint64)",
+            "min64(uint64,uint64)",
+            "max256(uint256,uint256)",
+            "min256(uint256,uint256)"
+        ],
+        "initial_state": {
+            "max64(uint64,uint64)": {
+                "argument": {
+                    "a": "uint64",
+                    "b": "uint64"
+                },
+                "contract": {}
+            },
+            "min64(uint64,uint64)": {
+                "argument": {
+                    "a": "uint64",
+                    "b": "uint64"
+                },
+                "contract": {}
+            },
+            "max256(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "min256(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "ERC20Basic": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                124,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Ownable": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "ICOBuyer": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "ICOBuyer(address,address,uint256,uint256)",
+            "changeCrowdSale(address)",
+            "changeICOStartBlock(uint256)",
+            "changePurchaseCap(uint256)",
+            "changeExecutor(address)",
+            "withdrawEther()",
+            "withdrawTokens(address)",
+            "buyICO()",
+            "fallback()",
+            "getBlockNumber()"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {
+                    "icoStartBlock": "uint256",
+                    "purchaseCap": "uint256"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "icoStartBlock": "uint256",
+                    "purchaseCap": "uint256"
+                }
+            },
+            "ICOBuyer(address,address,uint256,uint256)": {
+                "argument": {
+                    "_icoStartBlock": "uint256",
+                    "_purchaseCap": "uint256"
+                },
+                "contract": {
+                    "icoStartBlock": "uint256",
+                    "purchaseCap": "uint256"
+                }
+            },
+            "changeCrowdSale(address)": {
+                "argument": {},
+                "contract": {
+                    "icoStartBlock": "uint256",
+                    "purchaseCap": "uint256"
+                }
+            },
+            "changeICOStartBlock(uint256)": {
+                "argument": {
+                    "_icoStartBlock": "uint256"
+                },
+                "contract": {
+                    "icoStartBlock": "uint256",
+                    "purchaseCap": "uint256"
+                }
+            },
+            "changePurchaseCap(uint256)": {
+                "argument": {
+                    "_purchaseCap": "uint256"
+                },
+                "contract": {
+                    "icoStartBlock": "uint256",
+                    "purchaseCap": "uint256"
+                }
+            },
+            "changeExecutor(address)": {
+                "argument": {},
+                "contract": {
+                    "icoStartBlock": "uint256",
+                    "purchaseCap": "uint256"
+                }
+            },
+            "withdrawEther()": {
+                "argument": {},
+                "contract": {
+                    "icoStartBlock": "uint256",
+                    "purchaseCap": "uint256"
+                }
+            },
+            "withdrawTokens(address)": {
+                "argument": {},
+                "contract": {
+                    "icoStartBlock": "uint256",
+                    "purchaseCap": "uint256"
+                }
+            },
+            "buyICO()": {
+                "argument": {},
+                "contract": {
+                    "icoStartBlock": "uint256",
+                    "purchaseCap": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "icoStartBlock": "uint256",
+                    "purchaseCap": "uint256"
+                }
+            },
+            "getBlockNumber()": {
+                "argument": {},
+                "contract": {
+                    "icoStartBlock": "uint256",
+                    "purchaseCap": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "withdrawEther()": [
+                499,
+                163
+            ],
+            "withdrawTokens(address)": [
+                365,
+                119
+            ],
+            "changeExecutor(address)": [
+                696,
+                229
+            ],
+            "changeCrowdSale(address)": [
+                432,
+                141
+            ],
+            "buyICO()": [
+                893,
+                295
+            ],
+            "changePurchaseCap(uint256)": [
+                320,
+                97
+            ],
+            "changeICOStartBlock(uint256)": [
+                916,
+                317
+            ],
+            "transferOwnership(address)": [
+                961,
+                339
+            ]
+        },
+        "block_CALL_mapping": {
+            "block1717": [
+                "token.transfer(owner, contractTokenBalance)"
+            ],
+            "jump2266": [
+                "owner.transfer(this.balance)",
+                "owner.transfer(this.balance)"
+            ],
+            "block1444": [
+                "token.balanceOf(address(this))"
+            ],
+            "block2266": [
+                "owner.transfer(this.balance)"
+            ],
+            "jump3125": [
+                "crowdSale.call.value(purchaseAmount)()",
+                "crowdSale.call.value(purchaseAmount)()"
+            ],
+            "block3125": [
+                "crowdSale.call.value(purchaseAmount)()"
+            ],
+            "jump1444": [
+                "token.balanceOf(address(this))",
+                "token.balanceOf(address(this))"
+            ],
+            "jump1717": [
+                "token.transfer(owner, contractTokenBalance)",
+                "token.transfer(owner, contractTokenBalance)"
+            ]
+        }
+    }
+}

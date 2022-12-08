@@ -1,0 +1,879 @@
+{
+    "Ownable": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "ERC20Basic": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                124,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "ERC20": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                401,
+                97
+            ],
+            "transfer(address,uint256)": [
+                1385,
+                361
+            ],
+            "allowance(address,address)": [
+                1704,
+                427
+            ],
+            "balanceOf(address)": [
+                1044,
+                273
+            ],
+            "transferFrom(address,address,uint256)": [
+                588,
+                163
+            ]
+        },
+        "block_CALL_mapping": {
+            "block3721": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ],
+            "jump3721": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)",
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ]
+        }
+    },
+    "Drainable": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "withdrawToken(address)",
+            "withdrawEther()"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "withdrawToken(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "withdrawEther()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "withdrawEther()": [
+                103,
+                75
+            ],
+            "withdrawToken(address)": [
+                126,
+                97
+            ],
+            "transferOwnership(address)": [
+                280,
+                141
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump1003": [
+                "token.transfer(msg.sender, bal)",
+                "token.transfer(msg.sender, bal)"
+            ],
+            "jump438": [
+                "msg.sender.send(this.balance)",
+                "msg.sender.send(this.balance)"
+            ],
+            "block438": [
+                "msg.sender.send(this.balance)"
+            ],
+            "block1003": [
+                "token.transfer(msg.sender, bal)"
+            ],
+            "jump779": [
+                "token.balanceOf(address(this))",
+                "token.balanceOf(address(this))"
+            ],
+            "block779": [
+                "token.balanceOf(address(this))"
+            ]
+        }
+    },
+    "ADXRegistry": {
+        "function_list": [
+            "withdrawToken(address)",
+            "withdrawEther()",
+            "Ownable()",
+            "transferOwnership(address)",
+            "register(bytes32,address,bytes32,bytes32,bytes32)",
+            "registerItem(uint256,uint256,bytes32,bytes32,bytes32)",
+            "isRegistered(address)",
+            "getAccount(address)",
+            "getAccountItems(address,uint256)",
+            "getItem(uint256,uint256)",
+            "hasItem(uint256,uint256)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "withdrawToken(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string"
+                }
+            },
+            "withdrawEther()": {
+                "argument": {},
+                "contract": {
+                    "name": "string"
+                }
+            },
+            "Ownable()": {
+                "argument": {},
+                "contract": {
+                    "name": "string"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string"
+                }
+            },
+            "register(bytes32,address,bytes32,bytes32,bytes32)": {
+                "argument": {
+                    "_name": "bytes32",
+                    "_ipfs": "bytes32",
+                    "_sig": "bytes32",
+                    "_meta": "bytes32"
+                },
+                "contract": {
+                    "name": "string"
+                }
+            },
+            "registerItem(uint256,uint256,bytes32,bytes32,bytes32)": {
+                "argument": {
+                    "_type": "uint256",
+                    "_id": "uint256",
+                    "_ipfs": "bytes32",
+                    "_name": "bytes32",
+                    "_meta": "bytes32"
+                },
+                "contract": {
+                    "name": "string"
+                }
+            },
+            "isRegistered(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string"
+                }
+            },
+            "getAccount(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string"
+                }
+            },
+            "getAccountItems(address,uint256)": {
+                "argument": {
+                    "_type": "uint256"
+                },
+                "contract": {
+                    "name": "string"
+                }
+            },
+            "getItem(uint256,uint256)": {
+                "argument": {
+                    "_type": "uint256",
+                    "_id": "uint256"
+                },
+                "contract": {
+                    "name": "string"
+                }
+            },
+            "hasItem(uint256,uint256)": {
+                "argument": {
+                    "_type": "uint256",
+                    "_id": "uint256"
+                },
+                "contract": {
+                    "name": "string"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "registerItem(uint256,uint256,bytes32,bytes32,bytes32)": [
+                1428,
+                273
+            ],
+            "getAccount(address)": [
+                1827,
+                383
+            ],
+            "hasItem(uint256,uint256)": [
+                1681,
+                339
+            ],
+            "register(bytes32,address,bytes32,bytes32,bytes32)": [
+                1305,
+                251
+            ],
+            "getItem(uint256,uint256)": [
+                560,
+                119
+            ],
+            "withdrawEther()": [
+                966,
+                163
+            ],
+            "isRegistered(address)": [
+                1525,
+                295
+            ],
+            "withdrawToken(address)": [
+                989,
+                185
+            ],
+            "getAccountItems(address,uint256)": [
+                1143,
+                229
+            ],
+            "transferOwnership(address)": [
+                1760,
+                361
+            ]
+        },
+        "block_CALL_mapping": {
+            "block3195": [
+                "token.transfer(msg.sender, bal)"
+            ],
+            "jump2630": [
+                "msg.sender.send(this.balance)",
+                "msg.sender.send(this.balance)"
+            ],
+            "block2971": [
+                "token.balanceOf(address(this))"
+            ],
+            "block2630": [
+                "msg.sender.send(this.balance)"
+            ],
+            "jump2971": [
+                "token.balanceOf(address(this))",
+                "token.balanceOf(address(this))"
+            ],
+            "jump3195": [
+                "token.transfer(msg.sender, bal)",
+                "token.transfer(msg.sender, bal)"
+            ]
+        }
+    },
+    "ADXExchange": {
+        "function_list": [
+            "withdrawToken(address)",
+            "withdrawEther()",
+            "Ownable()",
+            "transferOwnership(address)",
+            "ADXExchange(address,address)",
+            "placeBid(uint256,uint256,uint256,uint256,bytes32)",
+            "cancelBid(uint256)",
+            "acceptBid(uint256,uint256,bytes32)",
+            "giveupBid(uint256)",
+            "verifyBid(uint256,bytes32)",
+            "claimBidReward(uint256)",
+            "refundBid(uint256)",
+            "getBidsFromArr(uint256[],uint256)",
+            "getAllBidsByAdunit(uint256)",
+            "getBidsByAdunit(uint256,uint256)",
+            "getAllBidsByAdslot(uint256)",
+            "getBidsByAdslot(uint256,uint256)",
+            "getBid(uint256)",
+            "getBidReports(uint256)",
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "withdrawToken(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "bidsCount": "uint256",
+                    "bidsByAdunit": "mapping(uint256 => uint256[])",
+                    "bidsByAdslot": "mapping(uint256 => uint256[])",
+                    "ADUNIT": "uint256",
+                    "ADSLOT": "uint256"
+                }
+            },
+            "withdrawEther()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "bidsCount": "uint256",
+                    "bidsByAdunit": "mapping(uint256 => uint256[])",
+                    "bidsByAdslot": "mapping(uint256 => uint256[])",
+                    "ADUNIT": "uint256",
+                    "ADSLOT": "uint256"
+                }
+            },
+            "Ownable()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "bidsCount": "uint256",
+                    "bidsByAdunit": "mapping(uint256 => uint256[])",
+                    "bidsByAdslot": "mapping(uint256 => uint256[])",
+                    "ADUNIT": "uint256",
+                    "ADSLOT": "uint256"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "bidsCount": "uint256",
+                    "bidsByAdunit": "mapping(uint256 => uint256[])",
+                    "bidsByAdslot": "mapping(uint256 => uint256[])",
+                    "ADUNIT": "uint256",
+                    "ADSLOT": "uint256"
+                }
+            },
+            "ADXExchange(address,address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "bidsCount": "uint256",
+                    "bidsByAdunit": "mapping(uint256 => uint256[])",
+                    "bidsByAdslot": "mapping(uint256 => uint256[])",
+                    "ADUNIT": "uint256",
+                    "ADSLOT": "uint256"
+                }
+            },
+            "placeBid(uint256,uint256,uint256,uint256,bytes32)": {
+                "argument": {
+                    "_adunitId": "uint256",
+                    "_target": "uint256",
+                    "_rewardAmount": "uint256",
+                    "_timeout": "uint256",
+                    "_peer": "bytes32"
+                },
+                "contract": {
+                    "name": "string",
+                    "bidsCount": "uint256",
+                    "bidsByAdunit": "mapping(uint256 => uint256[])",
+                    "bidsByAdslot": "mapping(uint256 => uint256[])",
+                    "ADUNIT": "uint256",
+                    "ADSLOT": "uint256"
+                }
+            },
+            "cancelBid(uint256)": {
+                "argument": {
+                    "_bidId": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "bidsCount": "uint256",
+                    "bidsByAdunit": "mapping(uint256 => uint256[])",
+                    "bidsByAdslot": "mapping(uint256 => uint256[])",
+                    "ADUNIT": "uint256",
+                    "ADSLOT": "uint256"
+                }
+            },
+            "acceptBid(uint256,uint256,bytes32)": {
+                "argument": {
+                    "_bidId": "uint256",
+                    "_slotId": "uint256",
+                    "_peer": "bytes32"
+                },
+                "contract": {
+                    "name": "string",
+                    "bidsCount": "uint256",
+                    "bidsByAdunit": "mapping(uint256 => uint256[])",
+                    "bidsByAdslot": "mapping(uint256 => uint256[])",
+                    "ADUNIT": "uint256",
+                    "ADSLOT": "uint256"
+                }
+            },
+            "giveupBid(uint256)": {
+                "argument": {
+                    "_bidId": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "bidsCount": "uint256",
+                    "bidsByAdunit": "mapping(uint256 => uint256[])",
+                    "bidsByAdslot": "mapping(uint256 => uint256[])",
+                    "ADUNIT": "uint256",
+                    "ADSLOT": "uint256"
+                }
+            },
+            "verifyBid(uint256,bytes32)": {
+                "argument": {
+                    "_bidId": "uint256",
+                    "_report": "bytes32"
+                },
+                "contract": {
+                    "name": "string",
+                    "bidsCount": "uint256",
+                    "bidsByAdunit": "mapping(uint256 => uint256[])",
+                    "bidsByAdslot": "mapping(uint256 => uint256[])",
+                    "ADUNIT": "uint256",
+                    "ADSLOT": "uint256"
+                }
+            },
+            "claimBidReward(uint256)": {
+                "argument": {
+                    "_bidId": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "bidsCount": "uint256",
+                    "bidsByAdunit": "mapping(uint256 => uint256[])",
+                    "bidsByAdslot": "mapping(uint256 => uint256[])",
+                    "ADUNIT": "uint256",
+                    "ADSLOT": "uint256"
+                }
+            },
+            "refundBid(uint256)": {
+                "argument": {
+                    "_bidId": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "bidsCount": "uint256",
+                    "bidsByAdunit": "mapping(uint256 => uint256[])",
+                    "bidsByAdslot": "mapping(uint256 => uint256[])",
+                    "ADUNIT": "uint256",
+                    "ADSLOT": "uint256"
+                }
+            },
+            "getBidsFromArr(uint256[],uint256)": {
+                "argument": {
+                    "arr": "uint256[]",
+                    "_state": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "bidsCount": "uint256",
+                    "bidsByAdunit": "mapping(uint256 => uint256[])",
+                    "bidsByAdslot": "mapping(uint256 => uint256[])",
+                    "ADUNIT": "uint256",
+                    "ADSLOT": "uint256"
+                }
+            },
+            "getAllBidsByAdunit(uint256)": {
+                "argument": {
+                    "_adunitId": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "bidsCount": "uint256",
+                    "bidsByAdunit": "mapping(uint256 => uint256[])",
+                    "bidsByAdslot": "mapping(uint256 => uint256[])",
+                    "ADUNIT": "uint256",
+                    "ADSLOT": "uint256"
+                }
+            },
+            "getBidsByAdunit(uint256,uint256)": {
+                "argument": {
+                    "_adunitId": "uint256",
+                    "_state": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "bidsCount": "uint256",
+                    "bidsByAdunit": "mapping(uint256 => uint256[])",
+                    "bidsByAdslot": "mapping(uint256 => uint256[])",
+                    "ADUNIT": "uint256",
+                    "ADSLOT": "uint256"
+                }
+            },
+            "getAllBidsByAdslot(uint256)": {
+                "argument": {
+                    "_adslotId": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "bidsCount": "uint256",
+                    "bidsByAdunit": "mapping(uint256 => uint256[])",
+                    "bidsByAdslot": "mapping(uint256 => uint256[])",
+                    "ADUNIT": "uint256",
+                    "ADSLOT": "uint256"
+                }
+            },
+            "getBidsByAdslot(uint256,uint256)": {
+                "argument": {
+                    "_adslotId": "uint256",
+                    "_state": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "bidsCount": "uint256",
+                    "bidsByAdunit": "mapping(uint256 => uint256[])",
+                    "bidsByAdslot": "mapping(uint256 => uint256[])",
+                    "ADUNIT": "uint256",
+                    "ADSLOT": "uint256"
+                }
+            },
+            "getBid(uint256)": {
+                "argument": {
+                    "_bidId": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "bidsCount": "uint256",
+                    "bidsByAdunit": "mapping(uint256 => uint256[])",
+                    "bidsByAdslot": "mapping(uint256 => uint256[])",
+                    "ADUNIT": "uint256",
+                    "ADSLOT": "uint256"
+                }
+            },
+            "getBidReports(uint256)": {
+                "argument": {
+                    "_bidId": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "bidsCount": "uint256",
+                    "bidsByAdunit": "mapping(uint256 => uint256[])",
+                    "bidsByAdslot": "mapping(uint256 => uint256[])",
+                    "ADUNIT": "uint256",
+                    "ADSLOT": "uint256"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "bidsCount": "uint256",
+                    "bidsByAdunit": "mapping(uint256 => uint256[])",
+                    "bidsByAdslot": "mapping(uint256 => uint256[])",
+                    "ADUNIT": "uint256",
+                    "ADSLOT": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "acceptBid(uint256,uint256,bytes32)": [
+                434,
+                97
+            ],
+            "claimBidReward(uint256)": [
+                1758,
+                449
+            ],
+            "placeBid(uint256,uint256,uint256,uint256,bytes32)": [
+                503,
+                119
+            ],
+            "giveupBid(uint256)": [
+                907,
+                207
+            ],
+            "getBidsByAdunit(uint256,uint256)": [
+                1162,
+                273
+            ],
+            "withdrawEther()": [
+                1302,
+                295
+            ],
+            "refundBid(uint256)": [
+                592,
+                141
+            ],
+            "withdrawToken(address)": [
+                1412,
+                339
+            ],
+            "getBidsByAdslot(uint256,uint256)": [
+                767,
+                185
+            ],
+            "getBidReports(uint256)": [
+                1670,
+                427
+            ],
+            "cancelBid(uint256)": [
+                1625,
+                405
+            ],
+            "verifyBid(uint256,bytes32)": [
+                1566,
+                383
+            ],
+            "getBid(uint256)": [
+                952,
+                229
+            ],
+            "transferOwnership(address)": [
+                1933,
+                493
+            ],
+            "getAllBidsByAdslot(uint256)": [
+                1803,
+                471
+            ],
+            "getAllBidsByAdunit(uint256)": [
+                637,
+                163
+            ]
+        },
+        "block_CALL_mapping": {
+            "block3103": [
+                "registry.getAccount(publisher)"
+            ],
+            "block8699": [
+                "msg.sender.send(this.balance)"
+            ],
+            "jump12342": [
+                "token.transfer(bid.publisherWallet, bid.amount)",
+                "token.transfer(bid.publisherWallet, bid.amount)"
+            ],
+            "jump4236": [
+                "registry.getItem(ADUNIT, _adunitId)",
+                "registry.getItem(ADUNIT, _adunitId)"
+            ],
+            "block9078": [
+                "token.balanceOf(address(this))"
+            ],
+            "block4012": [
+                "registry.isRegistered(msg.sender)"
+            ],
+            "block6970": [
+                "token.transfer(bid.advertiserWallet, bid.amount)"
+            ],
+            "jump4012": [
+                "registry.isRegistered(msg.sender)",
+                "registry.isRegistered(msg.sender)"
+            ],
+            "jump4525": [
+                "registry.getAccount(advertiser)",
+                "registry.getAccount(advertiser)"
+            ],
+            "jump11712": [
+                "registry.isRegistered(msg.sender)",
+                "registry.isRegistered(msg.sender)"
+            ],
+            "block4525": [
+                "registry.getAccount(advertiser)"
+            ],
+            "block12342": [
+                "token.transfer(bid.publisherWallet, bid.amount)"
+            ],
+            "jump9078": [
+                "token.balanceOf(address(this))",
+                "token.balanceOf(address(this))"
+            ],
+            "block11712": [
+                "registry.isRegistered(msg.sender)"
+            ],
+            "block4236": [
+                "registry.getItem(ADUNIT, _adunitId)"
+            ],
+            "jump8699": [
+                "msg.sender.send(this.balance)",
+                "msg.sender.send(this.balance)"
+            ],
+            "block11298": [
+                "token.transfer(bid.advertiserWallet, bid.amount)"
+            ],
+            "jump11298": [
+                "token.transfer(bid.advertiserWallet, bid.amount)",
+                "token.transfer(bid.advertiserWallet, bid.amount)"
+            ],
+            "jump6970": [
+                "token.transfer(bid.advertiserWallet, bid.amount)",
+                "token.transfer(bid.advertiserWallet, bid.amount)"
+            ],
+            "block5843": [
+                "token.transferFrom(advertiserWallet, address(this), _rewardAmount)"
+            ],
+            "block9595": [
+                "registry.isRegistered(msg.sender)"
+            ],
+            "jump6290": [
+                "registry.isRegistered(msg.sender)",
+                "registry.isRegistered(msg.sender)"
+            ],
+            "jump7522": [
+                "registry.isRegistered(msg.sender)",
+                "registry.isRegistered(msg.sender)"
+            ],
+            "jump3103": [
+                "registry.getAccount(publisher)",
+                "registry.getAccount(publisher)"
+            ],
+            "block8152": [
+                "token.transfer(bid.advertiserWallet, bid.amount)"
+            ],
+            "block2814": [
+                "registry.getItem(ADSLOT, _slotId)"
+            ],
+            "block6290": [
+                "registry.isRegistered(msg.sender)"
+            ],
+            "jump2814": [
+                "registry.getItem(ADSLOT, _slotId)",
+                "registry.getItem(ADSLOT, _slotId)"
+            ],
+            "jump5843": [
+                "token.transferFrom(advertiserWallet, address(this), _rewardAmount)",
+                "token.transferFrom(advertiserWallet, address(this), _rewardAmount)"
+            ],
+            "block7522": [
+                "registry.isRegistered(msg.sender)"
+            ],
+            "block2440": [
+                "registry.isRegistered(msg.sender)"
+            ],
+            "block9302": [
+                "token.transfer(msg.sender, bal)"
+            ],
+            "jump2440": [
+                "registry.isRegistered(msg.sender)",
+                "registry.isRegistered(msg.sender)"
+            ],
+            "jump9302": [
+                "token.transfer(msg.sender, bal)",
+                "token.transfer(msg.sender, bal)"
+            ],
+            "jump9595": [
+                "registry.isRegistered(msg.sender)",
+                "registry.isRegistered(msg.sender)"
+            ],
+            "jump8152": [
+                "token.transfer(bid.advertiserWallet, bid.amount)",
+                "token.transfer(bid.advertiserWallet, bid.amount)"
+            ],
+            "jump10669": [
+                "registry.isRegistered(msg.sender)",
+                "registry.isRegistered(msg.sender)"
+            ],
+            "block10669": [
+                "registry.isRegistered(msg.sender)"
+            ]
+        }
+    }
+}

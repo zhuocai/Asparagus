@@ -1,0 +1,161 @@
+{
+    "token": {
+        "function_list": [
+            "transfer(address,uint256)"
+        ],
+        "initial_state": {
+            "transfer(address,uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transfer(address,uint256)": [
+                1062,
+                273
+            ]
+        },
+        "block_CALL_mapping": {
+            "block3392": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ],
+            "jump3392": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)",
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ]
+        }
+    },
+    "Crowdsale": {
+        "function_list": [
+            "Crowdsale(address,uint256,uint256,uint256,address)",
+            "fallback()",
+            "checkGoalReached()",
+            "transferToken(uint256)",
+            "safeWithdrawal()",
+            "checkPriceCrowdsale(uint256,uint256)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "Crowdsale(address,uint256,uint256,uint256,address)": {
+                "argument": {
+                    "fundingGoalInEthers": "uint256",
+                    "durationInMinutes": "uint256",
+                    "etherCostOfEachToken": "uint256"
+                },
+                "contract": {
+                    "fundingGoal": "uint256",
+                    "amountRaised": "uint256",
+                    "deadline": "uint256",
+                    "price": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "fundingGoal": "uint256",
+                    "amountRaised": "uint256",
+                    "deadline": "uint256",
+                    "price": "uint256"
+                }
+            },
+            "checkGoalReached()": {
+                "argument": {},
+                "contract": {
+                    "fundingGoal": "uint256",
+                    "amountRaised": "uint256",
+                    "deadline": "uint256",
+                    "price": "uint256"
+                }
+            },
+            "transferToken(uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {
+                    "fundingGoal": "uint256",
+                    "amountRaised": "uint256",
+                    "deadline": "uint256",
+                    "price": "uint256"
+                }
+            },
+            "safeWithdrawal()": {
+                "argument": {},
+                "contract": {
+                    "fundingGoal": "uint256",
+                    "amountRaised": "uint256",
+                    "deadline": "uint256",
+                    "price": "uint256"
+                }
+            },
+            "checkPriceCrowdsale(uint256,uint256)": {
+                "argument": {
+                    "newPrice1": "uint256",
+                    "newPrice2": "uint256"
+                },
+                "contract": {
+                    "fundingGoal": "uint256",
+                    "amountRaised": "uint256",
+                    "deadline": "uint256",
+                    "price": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "checkGoalReached()": [
+                658,
+                75
+            ],
+            "safeWithdrawal()": [
+                1214,
+                295
+            ],
+            "checkPriceCrowdsale(uint256,uint256)": [
+                1159,
+                273
+            ],
+            "transferToken(uint256)": [
+                1071,
+                229
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump2405": [
+                "msg.sender.send(amount)",
+                "msg.sender.send(amount)"
+            ],
+            "block1871": [
+                "tokenReward.transfer(msg.sender, amount)"
+            ],
+            "jump1871": [
+                "tokenReward.transfer(msg.sender, amount)",
+                "tokenReward.transfer(msg.sender, amount)"
+            ],
+            "jump511": [
+                "tokenReward.transfer(msg.sender, amount / price)",
+                "tokenReward.transfer(msg.sender, amount / price)"
+            ],
+            "block2405": [
+                "msg.sender.send(amount)"
+            ],
+            "block511": [
+                "tokenReward.transfer(msg.sender, amount / price)"
+            ],
+            "jump511_0": [
+                "tokenReward.transfer(msg.sender, amount / price)",
+                "tokenReward.transfer(msg.sender, amount / price)"
+            ],
+            "jump2768": [
+                "beneficiary.send(amountRaised)",
+                "beneficiary.send(amountRaised)"
+            ],
+            "block2768": [
+                "beneficiary.send(amountRaised)"
+            ],
+            "block511_0": [
+                "tokenReward.transfer(msg.sender, amount / price)"
+            ]
+        }
+    }
+}

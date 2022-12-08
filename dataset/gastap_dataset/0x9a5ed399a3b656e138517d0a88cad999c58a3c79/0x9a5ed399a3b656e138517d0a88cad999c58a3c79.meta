@@ -1,0 +1,69 @@
+{
+    "DependentOnIPFS": {
+        "function_list": [
+            "isValidIPFSMultihash(bytes)"
+        ],
+        "initial_state": {
+            "isValidIPFSMultihash(bytes)": {
+                "argument": {
+                    "_multihashBytes": "bytes"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "Poll": {
+        "function_list": [
+            "isValidIPFSMultihash(bytes)",
+            "Poll(bytes,uint16,uint256,uint256,address)",
+            "vote(uint16)"
+        ],
+        "initial_state": {
+            "isValidIPFSMultihash(bytes)": {
+                "argument": {
+                    "_multihashBytes": "bytes"
+                },
+                "contract": {
+                    "pollDataMultihash": "bytes",
+                    "numChoices": "uint16",
+                    "startTime": "uint256",
+                    "endTime": "uint256"
+                }
+            },
+            "Poll(bytes,uint16,uint256,uint256,address)": {
+                "argument": {
+                    "_ipfsHash": "bytes",
+                    "_numChoices": "uint16",
+                    "_startTime": "uint256",
+                    "_endTime": "uint256"
+                },
+                "contract": {
+                    "pollDataMultihash": "bytes",
+                    "numChoices": "uint16",
+                    "startTime": "uint256",
+                    "endTime": "uint256"
+                }
+            },
+            "vote(uint16)": {
+                "argument": {
+                    "_choice": "uint16"
+                },
+                "contract": {
+                    "pollDataMultihash": "bytes",
+                    "numChoices": "uint16",
+                    "startTime": "uint256",
+                    "endTime": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "vote(uint16)": [
+                599,
+                207
+            ]
+        },
+        "block_CALL_mapping": {}
+    }
+}

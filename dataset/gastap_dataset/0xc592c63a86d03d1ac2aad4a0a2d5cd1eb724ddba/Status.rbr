@@ -1,0 +1,398 @@
+block0(g(weiRaised), g(endTimeTwo), l(l1), l(l0), calldataload, calldatasize, callvalue, timestamp)=>
+	s(0) = 128
+	nop(PUSH1)
+	s(1) = 64
+	nop(PUSH1)
+	l(l0) = s(0)
+	nop(MSTORE)
+	s(0) = 4
+	nop(PUSH1)
+	s(1) = calldatasize
+	nop(CALLDATASIZE)
+	call(jump0(s(1),s(0),g(weiRaised), g(endTimeTwo), l(l1), l(l0), calldataload, calldatasize, callvalue, timestamp))
+	nop(LT)
+	nop(PUSH1)
+	nop(JUMPI)
+
+jump0(s(1), s(0), g(weiRaised), g(endTimeTwo), l(l1), l(l0), calldataload, calldatasize, callvalue, timestamp)=>
+	lt(s(1), s(0))
+	call(block83())
+
+jump0(s(1), s(0), g(weiRaised), g(endTimeTwo), l(l1), l(l0), calldataload, calldatasize, callvalue, timestamp)=>
+	geq(s(1), s(0))
+	call(block12(g(weiRaised), g(endTimeTwo), l(l1), l(l0), calldataload, callvalue, timestamp))
+
+block12(g(weiRaised), g(endTimeTwo), l(l1), l(l0), calldataload, callvalue, timestamp)=>
+	s(0) = 0
+	nop(PUSH1)
+	s(0) = calldataload
+	nop(CALLDATALOAD)
+	s(1) = 26959946667150639794667015087019630673637144422540572481103610249216
+	nop(PUSH29)
+	s(2) = s(0)
+	s(0) = s(1)
+	s(1) = s(2)
+	nop(SWAP1)
+	s(0) = s(1)/s(0)
+	nop(DIV)
+	s(1) = 4294967295
+	nop(PUSH4)
+	s(0) = and(s(1), s(0))
+	nop(AND)
+	s(1) = s(0)
+	nop(DUP1)
+	s(2) = 1078113903
+	nop(PUSH4)
+	call(jump12(s(2),s(1),s(0),g(weiRaised), g(endTimeTwo), l(l1), l(l0), calldataload, callvalue, timestamp))
+	nop(EQ)
+	nop(PUSH1)
+	nop(JUMPI)
+
+jump12(s(2), s(1), s(0), g(weiRaised), g(endTimeTwo), l(l1), l(l0), calldataload, callvalue, timestamp)=>
+	eq(s(2), s(1))
+	call(block88(s(0),g(weiRaised), l(l1), l(l0), callvalue))
+
+jump12(s(2), s(1), s(0), g(weiRaised), g(endTimeTwo), l(l1), l(l0), calldataload, callvalue, timestamp)=>
+	neq(s(2), s(1))
+	call(block63(s(0),g(endTimeTwo), l(l1), l(l0), callvalue, timestamp))
+
+jump63(s(2), s(1), s(0), g(endTimeTwo), l(l1), l(l0), callvalue, timestamp)=>
+	eq(s(2), s(1))
+	call(block128(s(0),g(endTimeTwo), l(l1), l(l0), callvalue))
+
+jump63(s(2), s(1), s(0), g(endTimeTwo), l(l1), l(l0), callvalue, timestamp)=>
+	neq(s(2), s(1))
+	call(block73(s(0),g(endTimeTwo), l(l1), l(l0), callvalue, timestamp))
+
+block63(s(0), g(endTimeTwo), l(l1), l(l0), callvalue, timestamp)=>
+	s(1) = s(0)
+	nop(DUP1)
+	s(2) = 1413173103
+	nop(PUSH4)
+	call(jump63(s(2),s(1),s(0),g(endTimeTwo), l(l1), l(l0), callvalue, timestamp))
+	nop(EQ)
+	nop(PUSH1)
+	nop(JUMPI)
+
+jump73(s(2), s(1), s(0), g(endTimeTwo), l(l1), l(l0), callvalue, timestamp)=>
+	eq(s(2), s(1))
+	call(block168(s(0),g(endTimeTwo), l(l1), l(l0), callvalue, timestamp))
+
+jump73(s(2), s(1), s(0), g(endTimeTwo), l(l1), l(l0), callvalue, timestamp)=>
+	neq(s(2), s(1))
+	call(block83_0(s(0)))
+
+block73(s(0), g(endTimeTwo), l(l1), l(l0), callvalue, timestamp)=>
+	s(1) = s(0)
+	nop(DUP1)
+	s(2) = 3971420087
+	nop(PUSH4)
+	call(jump73(s(2),s(1),s(0),g(endTimeTwo), l(l1), l(l0), callvalue, timestamp))
+	nop(EQ)
+	nop(PUSH1)
+	nop(JUMPI)
+
+block83()=>
+	nop(JUMPDEST)
+	s(0) = 0
+	nop(PUSH1)
+	s(1) = s(0)
+	nop(DUP1)
+	nop(REVERT)
+
+jump88(s(2), s(1), s(0), g(weiRaised), l(l1), l(l0), callvalue)=>
+	eq(s(2), 0)
+	call(block99(s(1), s(0),g(weiRaised), l(l1), l(l0)))
+
+jump88(s(2), s(1), s(0), g(weiRaised), l(l1), l(l0), callvalue)=>
+	neq(s(2), 0)
+	call(block95(s(1), s(0)))
+
+block88(s(0), g(weiRaised), l(l1), l(l0), callvalue)=>
+	nop(JUMPDEST)
+	s(1) = callvalue
+	nop(CALLVALUE)
+	s(2) = s(1)
+	nop(DUP1)
+	call(jump88(s(2),s(1),s(0),g(weiRaised), l(l1), l(l0), callvalue))
+	nop(ISZERO)
+	nop(PUSH1)
+	nop(JUMPI)
+
+block95(s(1), s(0))=>
+	s(2) = 0
+	nop(PUSH1)
+	s(3) = s(2)
+	nop(DUP1)
+	nop(REVERT)
+
+block99(s(1), s(0), g(weiRaised), l(l1), l(l0))=>
+	nop(JUMPDEST)
+	nop(POP)
+	s(1) = 106
+	nop(PUSH1)
+	s(2) = 212
+	nop(PUSH1)
+	call(block212(s(1),s(0),g(weiRaised), l(l1), l(l0)))
+	nop(JUMP)
+
+block106(s(2), s(1), s(0), l(l1), l(l0))=>
+	nop(JUMPDEST)
+	s(3) = 64
+	nop(PUSH1)
+	s(3) = l(l0)
+	nop(MLOAD)
+	s(4) = s(3)
+	nop(DUP1)
+	s(5) = s(2)
+	nop(DUP3)
+	s(6) = s(4)
+	nop(DUP2)
+	l(l1) = s(5)
+	nop(MSTORE)
+	s(5) = 32
+	nop(PUSH1)
+	s(4) = s(5)+s(4)
+	nop(ADD)
+	s(5) = s(2)
+	s(2) = s(4)
+	s(4) = s(5)
+	nop(SWAP2)
+	nop(POP)
+	nop(POP)
+	s(3) = 64
+	nop(PUSH1)
+	s(3) = l(l0)
+	nop(MLOAD)
+	s(4) = s(3)
+	nop(DUP1)
+	s(5) = s(2)
+	s(2) = s(4)
+	s(4) = s(5)
+	nop(SWAP2)
+	s(3) = s(4)-s(3)
+	nop(SUB)
+	s(4) = s(2)
+	s(2) = s(3)
+	s(3) = s(4)
+	nop(SWAP1)
+	nop(RETURN)
+
+jump128(s(2), s(1), s(0), g(endTimeTwo), l(l1), l(l0), callvalue)=>
+	eq(s(2), 0)
+	call(block139(s(1), s(0),g(endTimeTwo), l(l1), l(l0)))
+
+jump128(s(2), s(1), s(0), g(endTimeTwo), l(l1), l(l0), callvalue)=>
+	neq(s(2), 0)
+	call(block135(s(1), s(0)))
+
+block128(s(0), g(endTimeTwo), l(l1), l(l0), callvalue)=>
+	nop(JUMPDEST)
+	s(1) = callvalue
+	nop(CALLVALUE)
+	s(2) = s(1)
+	nop(DUP1)
+	call(jump128(s(2),s(1),s(0),g(endTimeTwo), l(l1), l(l0), callvalue))
+	nop(ISZERO)
+	nop(PUSH1)
+	nop(JUMPI)
+
+block135(s(1), s(0))=>
+	s(2) = 0
+	nop(PUSH1)
+	s(3) = s(2)
+	nop(DUP1)
+	nop(REVERT)
+
+block139(s(1), s(0), g(endTimeTwo), l(l1), l(l0))=>
+	nop(JUMPDEST)
+	nop(POP)
+	s(1) = 146
+	nop(PUSH1)
+	s(2) = 218
+	nop(PUSH1)
+	call(block218(s(1),s(0),g(endTimeTwo), l(l1), l(l0)))
+	nop(JUMP)
+
+block146(s(2), s(1), s(0), l(l1), l(l0))=>
+	nop(JUMPDEST)
+	s(3) = 64
+	nop(PUSH1)
+	s(3) = l(l0)
+	nop(MLOAD)
+	s(4) = s(3)
+	nop(DUP1)
+	s(5) = s(2)
+	nop(DUP3)
+	s(6) = s(4)
+	nop(DUP2)
+	l(l1) = s(5)
+	nop(MSTORE)
+	s(5) = 32
+	nop(PUSH1)
+	s(4) = s(5)+s(4)
+	nop(ADD)
+	s(5) = s(2)
+	s(2) = s(4)
+	s(4) = s(5)
+	nop(SWAP2)
+	nop(POP)
+	nop(POP)
+	s(3) = 64
+	nop(PUSH1)
+	s(3) = l(l0)
+	nop(MLOAD)
+	s(4) = s(3)
+	nop(DUP1)
+	s(5) = s(2)
+	s(2) = s(4)
+	s(4) = s(5)
+	nop(SWAP2)
+	s(3) = s(4)-s(3)
+	nop(SUB)
+	s(4) = s(2)
+	s(2) = s(3)
+	s(3) = s(4)
+	nop(SWAP1)
+	nop(RETURN)
+
+jump168(s(2), s(1), s(0), g(endTimeTwo), l(l1), l(l0), callvalue, timestamp)=>
+	eq(s(2), 0)
+	call(block179(s(1), s(0),g(endTimeTwo), l(l1), l(l0), timestamp))
+
+jump168(s(2), s(1), s(0), g(endTimeTwo), l(l1), l(l0), callvalue, timestamp)=>
+	neq(s(2), 0)
+	call(block175(s(1), s(0)))
+
+block168(s(0), g(endTimeTwo), l(l1), l(l0), callvalue, timestamp)=>
+	nop(JUMPDEST)
+	s(1) = callvalue
+	nop(CALLVALUE)
+	s(2) = s(1)
+	nop(DUP1)
+	call(jump168(s(2),s(1),s(0),g(endTimeTwo), l(l1), l(l0), callvalue, timestamp))
+	nop(ISZERO)
+	nop(PUSH1)
+	nop(JUMPI)
+
+block175(s(1), s(0))=>
+	s(2) = 0
+	nop(PUSH1)
+	s(3) = s(2)
+	nop(DUP1)
+	nop(REVERT)
+
+block179(s(1), s(0), g(endTimeTwo), l(l1), l(l0), timestamp)=>
+	nop(JUMPDEST)
+	nop(POP)
+	s(1) = 186
+	nop(PUSH1)
+	s(2) = 224
+	nop(PUSH1)
+	call(block224(s(1),s(0),g(endTimeTwo), l(l1), l(l0), timestamp))
+	nop(JUMP)
+
+block186(s(1), s(0), l(l1), l(l0))=>
+	nop(JUMPDEST)
+	s(2) = 64
+	nop(PUSH1)
+	s(2) = l(l0)
+	nop(MLOAD)
+	s(3) = s(2)
+	nop(DUP1)
+	s(4) = s(1)
+	nop(DUP3)
+	s(4)= eq(s(4), 0)
+	nop(ISZERO)
+	s(4)= eq(s(4), 0)
+	nop(ISZERO)
+	s(4)= eq(s(4), 0)
+	nop(ISZERO)
+	s(4)= eq(s(4), 0)
+	nop(ISZERO)
+	s(5) = s(3)
+	nop(DUP2)
+	l(l1) = s(4)
+	nop(MSTORE)
+	s(4) = 32
+	nop(PUSH1)
+	s(3) = s(4)+s(3)
+	nop(ADD)
+	s(4) = s(1)
+	s(1) = s(3)
+	s(3) = s(4)
+	nop(SWAP2)
+	nop(POP)
+	nop(POP)
+	s(2) = 64
+	nop(PUSH1)
+	s(2) = l(l0)
+	nop(MLOAD)
+	s(3) = s(2)
+	nop(DUP1)
+	s(4) = s(1)
+	s(1) = s(3)
+	s(3) = s(4)
+	nop(SWAP2)
+	s(2) = s(3)-s(2)
+	nop(SUB)
+	s(3) = s(1)
+	s(1) = s(2)
+	s(2) = s(3)
+	nop(SWAP1)
+	nop(RETURN)
+
+block212(s(1), s(0), g(weiRaised), l(l1), l(l0))=>
+	nop(JUMPDEST)
+	s(2) = 1
+	nop(PUSH1)
+	s(2) = g(weiRaised)
+	nop(SLOAD)
+	s(3) = s(1)
+	nop(DUP2)
+	call(block106(s(2),s(1),s(0), l(l1), l(l0)))
+	nop(JUMP)
+
+block218(s(1), s(0), g(endTimeTwo), l(l1), l(l0))=>
+	nop(JUMPDEST)
+	s(2) = 0
+	nop(PUSH1)
+	s(2) = g(endTimeTwo)
+	nop(SLOAD)
+	s(3) = s(1)
+	nop(DUP2)
+	call(block146(s(2),s(1),s(0), l(l1), l(l0)))
+	nop(JUMP)
+
+block224(s(1), s(0), g(endTimeTwo), l(l1), l(l0), timestamp)=>
+	nop(JUMPDEST)
+	s(2) = 0
+	nop(PUSH1)
+	s(3) = s(2)
+	nop(DUP1)
+	s(3) = g(endTimeTwo)
+	nop(SLOAD)
+	s(4) = timestamp
+	nop(TIMESTAMP)
+	s(3) = gt(s(4), s(3))
+	nop(GT)
+	s(4) = s(2)
+	s(2) = s(3)
+	s(3) = s(4)
+	nop(SWAP1)
+	nop(POP)
+	s(3) = s(1)
+	s(1) = s(2)
+	s(2) = s(3)
+	nop(SWAP1)
+	call(block186(s(1),s(0), l(l1), l(l0)))
+	nop(JUMP)
+
+block83_0(s(0))=>
+	nop(JUMPDEST)
+	s(1) = 0
+	nop(PUSH1)
+	s(2) = s(1)
+	nop(DUP1)
+	nop(REVERT)
+

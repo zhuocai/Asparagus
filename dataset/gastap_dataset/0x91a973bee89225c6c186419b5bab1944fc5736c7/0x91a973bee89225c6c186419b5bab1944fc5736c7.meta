@@ -1,0 +1,588 @@
+{
+    "Owned": {
+        "function_list": [
+            "Owned()",
+            "proposeOwnership(address)",
+            "acceptOwnership()",
+            "changeOwnership(address)",
+            "removeOwnership(address)"
+        ],
+        "initial_state": {
+            "Owned()": {
+                "argument": {},
+                "contract": {}
+            },
+            "proposeOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "acceptOwnership()": {
+                "argument": {},
+                "contract": {}
+            },
+            "changeOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "removeOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "proposeOwnership(address)": [
+                259,
+                119
+            ],
+            "removeOwnership(address)": [
+                192,
+                97
+            ],
+            "changeOwnership(address)": [
+                125,
+                75
+            ],
+            "acceptOwnership()": [
+                326,
+                141
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "ERC20": {
+        "function_list": [
+            "totalSupply()",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)"
+        ],
+        "initial_state": {
+            "totalSupply()": {
+                "argument": {},
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                313,
+                97
+            ],
+            "balanceOf(address)": [
+                639,
+                185
+            ],
+            "totalSupply()": [
+                414,
+                119
+            ],
+            "allowance(address,address)": [
+                1118,
+                273
+            ],
+            "transferFrom(address,address,uint256)": [
+                457,
+                141
+            ],
+            "transfer(address,uint256)": [
+                870,
+                229
+            ]
+        },
+        "block_CALL_mapping": {
+            "block2404": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ],
+            "jump2404": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)",
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ]
+        }
+    },
+    "Escapable": {
+        "function_list": [
+            "Owned()",
+            "proposeOwnership(address)",
+            "acceptOwnership()",
+            "changeOwnership(address)",
+            "removeOwnership(address)",
+            "Escapable(address,address)",
+            "blacklistEscapeToken(address)",
+            "isTokenEscapable(address)",
+            "escapeHatch(address)",
+            "changeHatchEscapeCaller(address)"
+        ],
+        "initial_state": {
+            "Owned()": {
+                "argument": {},
+                "contract": {}
+            },
+            "proposeOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "acceptOwnership()": {
+                "argument": {},
+                "contract": {}
+            },
+            "changeOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "removeOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "Escapable(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "blacklistEscapeToken(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "isTokenEscapable(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "escapeHatch(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "changeHatchEscapeCaller(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "proposeOwnership(address)": [
+                401,
+                141
+            ],
+            "removeOwnership(address)": [
+                334,
+                119
+            ],
+            "changeHatchEscapeCaller(address)": [
+                823,
+                273
+            ],
+            "changeOwnership(address)": [
+                267,
+                97
+            ],
+            "escapeHatch(address)": [
+                669,
+                229
+            ],
+            "isTokenEscapable(address)": [
+                491,
+                185
+            ],
+            "acceptOwnership()": [
+                468,
+                163
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump3540": [
+                "token.transfer(escapeHatchDestination, balance)",
+                "token.transfer(escapeHatchDestination, balance)"
+            ],
+            "jump2882": [
+                "escapeHatchDestination.transfer(balance)",
+                "escapeHatchDestination.transfer(balance)"
+            ],
+            "jump3282": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "block3282": [
+                "token.balanceOf(this)"
+            ],
+            "block2882": [
+                "escapeHatchDestination.transfer(balance)"
+            ],
+            "block3540": [
+                "token.transfer(escapeHatchDestination, balance)"
+            ]
+        }
+    },
+    "LPVault": {
+        "function_list": [
+            "Escapable(address,address)",
+            "blacklistEscapeToken(address)",
+            "isTokenEscapable(address)",
+            "escapeHatch(address)",
+            "changeHatchEscapeCaller(address)",
+            "Owned()",
+            "proposeOwnership(address)",
+            "acceptOwnership()",
+            "changeOwnership(address)",
+            "removeOwnership(address)",
+            "LPVault(address,address)",
+            "fallback()",
+            "setLiquidPledging(address)",
+            "setAutopay(bool)",
+            "authorizePayment(bytes32,address,uint256)",
+            "confirmPayment(uint256)",
+            "doConfirmPayment(uint256)",
+            "cancelPayment(uint256)",
+            "doCancelPayment(uint256)",
+            "multiConfirm(uint256[])",
+            "multiCancel(uint256[])",
+            "nPayments()",
+            "escapeFunds(address,uint256)"
+        ],
+        "initial_state": {
+            "Escapable(address,address)": {
+                "argument": {},
+                "contract": {
+                    "payments": "LPVault.Payment[]"
+                }
+            },
+            "blacklistEscapeToken(address)": {
+                "argument": {},
+                "contract": {
+                    "payments": "LPVault.Payment[]"
+                }
+            },
+            "isTokenEscapable(address)": {
+                "argument": {},
+                "contract": {
+                    "payments": "LPVault.Payment[]"
+                }
+            },
+            "escapeHatch(address)": {
+                "argument": {},
+                "contract": {
+                    "payments": "LPVault.Payment[]"
+                }
+            },
+            "changeHatchEscapeCaller(address)": {
+                "argument": {},
+                "contract": {
+                    "payments": "LPVault.Payment[]"
+                }
+            },
+            "Owned()": {
+                "argument": {},
+                "contract": {
+                    "payments": "LPVault.Payment[]"
+                }
+            },
+            "proposeOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "payments": "LPVault.Payment[]"
+                }
+            },
+            "acceptOwnership()": {
+                "argument": {},
+                "contract": {
+                    "payments": "LPVault.Payment[]"
+                }
+            },
+            "changeOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "payments": "LPVault.Payment[]"
+                }
+            },
+            "removeOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "payments": "LPVault.Payment[]"
+                }
+            },
+            "LPVault(address,address)": {
+                "argument": {},
+                "contract": {
+                    "payments": "LPVault.Payment[]"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "payments": "LPVault.Payment[]"
+                }
+            },
+            "setLiquidPledging(address)": {
+                "argument": {},
+                "contract": {
+                    "payments": "LPVault.Payment[]"
+                }
+            },
+            "setAutopay(bool)": {
+                "argument": {},
+                "contract": {
+                    "payments": "LPVault.Payment[]"
+                }
+            },
+            "authorizePayment(bytes32,address,uint256)": {
+                "argument": {
+                    "_ref": "bytes32",
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "payments": "LPVault.Payment[]"
+                }
+            },
+            "confirmPayment(uint256)": {
+                "argument": {
+                    "_idPayment": "uint256"
+                },
+                "contract": {
+                    "payments": "LPVault.Payment[]"
+                }
+            },
+            "doConfirmPayment(uint256)": {
+                "argument": {
+                    "_idPayment": "uint256"
+                },
+                "contract": {
+                    "payments": "LPVault.Payment[]"
+                }
+            },
+            "cancelPayment(uint256)": {
+                "argument": {
+                    "_idPayment": "uint256"
+                },
+                "contract": {
+                    "payments": "LPVault.Payment[]"
+                }
+            },
+            "doCancelPayment(uint256)": {
+                "argument": {
+                    "_idPayment": "uint256"
+                },
+                "contract": {
+                    "payments": "LPVault.Payment[]"
+                }
+            },
+            "multiConfirm(uint256[])": {
+                "argument": {
+                    "_idPayments": "uint256[]"
+                },
+                "contract": {
+                    "payments": "LPVault.Payment[]"
+                }
+            },
+            "multiCancel(uint256[])": {
+                "argument": {
+                    "_idPayments": "uint256[]"
+                },
+                "contract": {
+                    "payments": "LPVault.Payment[]"
+                }
+            },
+            "nPayments()": {
+                "argument": {},
+                "contract": {
+                    "payments": "LPVault.Payment[]"
+                }
+            },
+            "escapeFunds(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "payments": "LPVault.Payment[]"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "confirmPayment(uint256)": [
+                872,
+                273
+            ],
+            "proposeOwnership(address)": [
+                650,
+                185
+            ],
+            "multiCancel(uint256[])": [
+                1361,
+                405
+            ],
+            "setLiquidPledging(address)": [
+                1775,
+                515
+            ],
+            "multiConfirm(uint256[])": [
+                1929,
+                559
+            ],
+            "removeOwnership(address)": [
+                583,
+                163
+            ],
+            "cancelPayment(uint256)": [
+                827,
+                251
+            ],
+            "changeHatchEscapeCaller(address)": [
+                1708,
+                493
+            ],
+            "escapeFunds(address,uint256)": [
+                309,
+                75
+            ],
+            "setAutopay(bool)": [
+                1314,
+                383
+            ],
+            "authorizePayment(bytes32,address,uint256)": [
+                1463,
+                427
+            ],
+            "nPayments()": [
+                540,
+                141
+            ],
+            "changeOwnership(address)": [
+                473,
+                119
+            ],
+            "isTokenEscapable(address)": [
+                1069,
+                317
+            ],
+            "escapeHatch(address)": [
+                1247,
+                361
+            ],
+            "acceptOwnership()": [
+                804,
+                229
+            ]
+        },
+        "block_CALL_mapping": {
+            "block5954": [
+                "token.transfer(escapeHatchDestination, balance)"
+            ],
+            "jump5696": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "block8003_0": [
+                "liquidPledging.cancelPayment(uint64(p.ref), p.amount)"
+            ],
+            "block8434": [
+                "p.dest.transfer(p.amount)"
+            ],
+            "block8414": [
+                "liquidPledging.confirmPayment(uint64(p.ref), p.amount)"
+            ],
+            "block2194": [
+                "escapeHatchDestination.transfer(_amount)"
+            ],
+            "jump5954": [
+                "token.transfer(escapeHatchDestination, balance)",
+                "token.transfer(escapeHatchDestination, balance)"
+            ],
+            "block8434_0": [
+                "p.dest.transfer(p.amount)"
+            ],
+            "block8434_1": [
+                "p.dest.transfer(p.amount)"
+            ],
+            "jump8003_0": [
+                "liquidPledging.cancelPayment(uint64(p.ref), p.amount)",
+                "liquidPledging.cancelPayment(uint64(p.ref), p.amount)"
+            ],
+            "jump8434": [
+                "p.dest.transfer(p.amount)",
+                "p.dest.transfer(p.amount)"
+            ],
+            "jump8414": [
+                "liquidPledging.confirmPayment(uint64(p.ref), p.amount)",
+                "liquidPledging.confirmPayment(uint64(p.ref), p.amount)"
+            ],
+            "block5696": [
+                "token.balanceOf(this)"
+            ],
+            "jump2842": [
+                "token.transfer(escapeHatchDestination, _amount)",
+                "token.transfer(escapeHatchDestination, _amount)"
+            ],
+            "jump2194": [
+                "escapeHatchDestination.transfer(_amount)",
+                "escapeHatchDestination.transfer(_amount)"
+            ],
+            "block2569": [
+                "token.balanceOf(this)"
+            ],
+            "jump8003": [
+                "liquidPledging.cancelPayment(uint64(p.ref), p.amount)",
+                "liquidPledging.cancelPayment(uint64(p.ref), p.amount)"
+            ],
+            "block2842": [
+                "token.transfer(escapeHatchDestination, _amount)"
+            ],
+            "jump8414_0": [
+                "liquidPledging.confirmPayment(uint64(p.ref), p.amount)",
+                "liquidPledging.confirmPayment(uint64(p.ref), p.amount)"
+            ],
+            "jump8414_1": [
+                "liquidPledging.confirmPayment(uint64(p.ref), p.amount)",
+                "liquidPledging.confirmPayment(uint64(p.ref), p.amount)"
+            ],
+            "block8414_0": [
+                "liquidPledging.confirmPayment(uint64(p.ref), p.amount)"
+            ],
+            "block8414_1": [
+                "liquidPledging.confirmPayment(uint64(p.ref), p.amount)"
+            ],
+            "block8003": [
+                "liquidPledging.cancelPayment(uint64(p.ref), p.amount)"
+            ],
+            "jump8434_0": [
+                "p.dest.transfer(p.amount)",
+                "p.dest.transfer(p.amount)"
+            ],
+            "jump8434_1": [
+                "p.dest.transfer(p.amount)",
+                "p.dest.transfer(p.amount)"
+            ],
+            "jump2569": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "block5296": [
+                "escapeHatchDestination.transfer(balance)"
+            ],
+            "jump5296": [
+                "escapeHatchDestination.transfer(balance)",
+                "escapeHatchDestination.transfer(balance)"
+            ]
+        }
+    }
+}

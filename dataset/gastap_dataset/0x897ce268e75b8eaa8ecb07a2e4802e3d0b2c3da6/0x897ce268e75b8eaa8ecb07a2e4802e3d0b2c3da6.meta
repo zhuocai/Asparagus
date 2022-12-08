@@ -1,0 +1,290 @@
+{
+    "tokenRecipient": {
+        "function_list": [
+            "receiveApproval(address,uint256,address,bytes)"
+        ],
+        "initial_state": {
+            "receiveApproval(address,uint256,address,bytes)": {
+                "argument": {
+                    "_value": "uint256",
+                    "_extraData": "bytes"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "receiveApproval(address,uint256,address,bytes)": [
+                174,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump573": [
+                "t.transferFrom(_from, this, _value)",
+                "t.transferFrom(_from, this, _value)"
+            ],
+            "block573": [
+                "t.transferFrom(_from, this, _value)"
+            ]
+        }
+    },
+    "MessageToken": {
+        "function_list": [
+            "MessageToken()",
+            "transfer(address,uint256)",
+            "approve(address,uint256)",
+            "register(address)",
+            "transferFrom(address,address,uint256)",
+            "getBalance(address)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "MessageToken()": {
+                "argument": {},
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256"
+                }
+            },
+            "register(address)": {
+                "argument": {},
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256"
+                }
+            },
+            "getBalance(address)": {
+                "argument": {},
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                335,
+                97
+            ],
+            "getBalance(address)": [
+                1323,
+                317
+            ],
+            "register(address)": [
+                661,
+                185
+            ],
+            "transferFrom(address,address,uint256)": [
+                479,
+                141
+            ],
+            "transfer(address,uint256)": [
+                1127,
+                273
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "EMS": {
+        "function_list": [
+            "sendMessage(address,string)",
+            "markAllRead()",
+            "markRead(uint256)",
+            "deleteAllMessages()",
+            "deleteMessage(uint256)",
+            "getInbox(address,uint256)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "sendMessage(address,string)": {
+                "argument": {
+                    "message": "string"
+                },
+                "contract": {}
+            },
+            "markAllRead()": {
+                "argument": {},
+                "contract": {}
+            },
+            "markRead(uint256)": {
+                "argument": {
+                    "numMessages": "uint256"
+                },
+                "contract": {}
+            },
+            "deleteAllMessages()": {
+                "argument": {},
+                "contract": {}
+            },
+            "deleteMessage(uint256)": {
+                "argument": {
+                    "messageNumber": "uint256"
+                },
+                "contract": {}
+            },
+            "getInbox(address,uint256)": {
+                "argument": {
+                    "messageNumber": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "sendMessage(address,string)": [
+                436,
+                163
+            ],
+            "getInbox(address,uint256)": [
+                193,
+                119
+            ],
+            "deleteAllMessages()": [
+                573,
+                185
+            ],
+            "deleteMessage(uint256)": [
+                391,
+                141
+            ],
+            "markAllRead()": [
+                170,
+                97
+            ],
+            "markRead(uint256)": [
+                125,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump3567": [
+                "m.register(msg.sender)",
+                "m.register(msg.sender)"
+            ],
+            "jump2156_0": [
+                "m.transferFrom(msg.sender, messageTokenContract, m.getBalance(msg.sender))",
+                "m.transferFrom(msg.sender, messageTokenContract, m.getBalance(msg.sender))"
+            ],
+            "block2156_0": [
+                "m.transferFrom(msg.sender, messageTokenContract, m.getBalance(msg.sender))"
+            ],
+            "block2752": [
+                "m.register(msg.sender)"
+            ],
+            "jump3911": [
+                "m.transferFrom(messageTokenContract, recipient, 1)",
+                "m.transferFrom(messageTokenContract, recipient, 1)"
+            ],
+            "jump2752": [
+                "m.register(msg.sender)",
+                "m.register(msg.sender)"
+            ],
+            "block3222": [
+                "m.transferFrom(msg.sender, messageTokenContract, 1)"
+            ],
+            "block3567": [
+                "m.register(msg.sender)"
+            ],
+            "block1913": [
+                "m.getBalance(msg.sender)"
+            ],
+            "jump3222": [
+                "m.transferFrom(msg.sender, messageTokenContract, 1)",
+                "m.transferFrom(msg.sender, messageTokenContract, 1)"
+            ],
+            "block1913_0": [
+                "m.getBalance(msg.sender)"
+            ],
+            "block1566": [
+                "m.register(msg.sender)"
+            ],
+            "jump1566_0": [
+                "m.register(msg.sender)",
+                "m.register(msg.sender)"
+            ],
+            "jump878": [
+                "m.register(msg.sender)",
+                "m.register(msg.sender)"
+            ],
+            "jump2156": [
+                "m.transferFrom(msg.sender, messageTokenContract, m.getBalance(msg.sender))",
+                "m.transferFrom(msg.sender, messageTokenContract, m.getBalance(msg.sender))"
+            ],
+            "block1566_0": [
+                "m.register(msg.sender)"
+            ],
+            "block1221": [
+                "m.transferFrom(msg.sender, messageTokenContract, numMessages)"
+            ],
+            "block3911": [
+                "m.transferFrom(messageTokenContract, recipient, 1)"
+            ],
+            "jump1221": [
+                "m.transferFrom(msg.sender, messageTokenContract, numMessages)",
+                "m.transferFrom(msg.sender, messageTokenContract, numMessages)"
+            ],
+            "jump1913_0": [
+                "m.getBalance(msg.sender)",
+                "m.getBalance(msg.sender)"
+            ],
+            "block2156": [
+                "m.transferFrom(msg.sender, messageTokenContract, m.getBalance(msg.sender))"
+            ],
+            "block878": [
+                "m.register(msg.sender)"
+            ],
+            "jump1913": [
+                "m.getBalance(msg.sender)",
+                "m.getBalance(msg.sender)"
+            ],
+            "jump1566": [
+                "m.register(msg.sender)",
+                "m.register(msg.sender)"
+            ]
+        }
+    }
+}

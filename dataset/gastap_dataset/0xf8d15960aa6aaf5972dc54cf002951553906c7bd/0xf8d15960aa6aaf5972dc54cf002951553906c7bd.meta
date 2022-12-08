@@ -1,0 +1,991 @@
+{
+    "ERC20": {
+        "function_list": [
+            "totalSupply()",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)"
+        ],
+        "initial_state": {
+            "totalSupply()": {
+                "argument": {},
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                337,
+                97
+            ],
+            "totalSupply()": [
+                438,
+                119
+            ],
+            "allowance(address,address)": [
+                1286,
+                295
+            ],
+            "balanceOf(address)": [
+                807,
+                207
+            ],
+            "transferFrom(address,address,uint256)": [
+                481,
+                141
+            ],
+            "transfer(address,uint256)": [
+                1038,
+                251
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump3655": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)",
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ],
+            "block3655": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ]
+        }
+    },
+    "BookERC20EthV1": {
+        "function_list": [
+            "BookERC20EthV1()",
+            "init(ERC20,ERC20)",
+            "changeFeeCollector(address)",
+            "getBookInfo()",
+            "getClientBalances(address)",
+            "transferFromBase()",
+            "transferBase(uint256)",
+            "depositCntr()",
+            "withdrawCntr(uint256)",
+            "transferFromRwrd()",
+            "transferRwrd(uint256)",
+            "getOrder(uint128)",
+            "getOrderState(uint128)",
+            "walkClientOrders(address,uint128,uint128)",
+            "unpackPrice(uint16)",
+            "isBuyPrice(uint16)",
+            "computeOppositePrice(uint16)",
+            "computeCntrAmountUsingUnpacked(uint256,uint16,int8)",
+            "computeCntrAmountUsingPacked(uint256,uint16)",
+            "createOrder(uint128,uint16,uint256,BookERC20EthV1.Terms,uint256)",
+            "cancelOrder(uint128)",
+            "continueOrder(uint128,uint256)",
+            "removeOpenOrderFromBook(uint128)",
+            "creditExecutedFundsLessFees(uint128,uint256,uint256)",
+            "processOrder(uint128,uint256)",
+            "matchAgainstBook(uint128,uint256,uint256,uint256)",
+            "matchWithOccupiedPrice(BookERC20EthV1.Order,uint16,uint256)",
+            "matchWithTheirs(uint256,uint128,uint16)",
+            "recordTheirMatch(BookERC20EthV1.Order,uint128,uint16,uint256,uint256)",
+            "refundUnmatchedAndFinish(uint128,BookERC20EthV1.Status,BookERC20EthV1.ReasonCode)",
+            "enterOrder(uint128)",
+            "debitFunds(address,BookERC20EthV1.Direction,uint256,uint256)",
+            "walkBook(uint16)",
+            "sumDepth(uint128)",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "BookERC20EthV1()": {
+                "argument": {},
+                "contract": {
+                    "baseMinInitialSize": "uint256",
+                    "baseMinRemainingSize": "uint256",
+                    "baseMaxSize": "uint256",
+                    "cntrMinInitialSize": "uint256",
+                    "cntrMaxSize": "uint256",
+                    "ethRwrdRate": "uint256",
+                    "feeDivisor": "uint256",
+                    "occupiedPriceBitmaps": "uint256[85]",
+                    "invalidPrice": "uint256",
+                    "maxBuyPrice": "uint256",
+                    "minBuyPrice": "uint256",
+                    "minSellPrice": "uint256",
+                    "maxSellPrice": "uint256"
+                }
+            },
+            "init(ERC20,ERC20)": {
+                "argument": {},
+                "contract": {
+                    "baseMinInitialSize": "uint256",
+                    "baseMinRemainingSize": "uint256",
+                    "baseMaxSize": "uint256",
+                    "cntrMinInitialSize": "uint256",
+                    "cntrMaxSize": "uint256",
+                    "ethRwrdRate": "uint256",
+                    "feeDivisor": "uint256",
+                    "occupiedPriceBitmaps": "uint256[85]",
+                    "invalidPrice": "uint256",
+                    "maxBuyPrice": "uint256",
+                    "minBuyPrice": "uint256",
+                    "minSellPrice": "uint256",
+                    "maxSellPrice": "uint256"
+                }
+            },
+            "changeFeeCollector(address)": {
+                "argument": {},
+                "contract": {
+                    "baseMinInitialSize": "uint256",
+                    "baseMinRemainingSize": "uint256",
+                    "baseMaxSize": "uint256",
+                    "cntrMinInitialSize": "uint256",
+                    "cntrMaxSize": "uint256",
+                    "ethRwrdRate": "uint256",
+                    "feeDivisor": "uint256",
+                    "occupiedPriceBitmaps": "uint256[85]",
+                    "invalidPrice": "uint256",
+                    "maxBuyPrice": "uint256",
+                    "minBuyPrice": "uint256",
+                    "minSellPrice": "uint256",
+                    "maxSellPrice": "uint256"
+                }
+            },
+            "getBookInfo()": {
+                "argument": {},
+                "contract": {
+                    "baseMinInitialSize": "uint256",
+                    "baseMinRemainingSize": "uint256",
+                    "baseMaxSize": "uint256",
+                    "cntrMinInitialSize": "uint256",
+                    "cntrMaxSize": "uint256",
+                    "ethRwrdRate": "uint256",
+                    "feeDivisor": "uint256",
+                    "occupiedPriceBitmaps": "uint256[85]",
+                    "invalidPrice": "uint256",
+                    "maxBuyPrice": "uint256",
+                    "minBuyPrice": "uint256",
+                    "minSellPrice": "uint256",
+                    "maxSellPrice": "uint256"
+                }
+            },
+            "getClientBalances(address)": {
+                "argument": {},
+                "contract": {
+                    "baseMinInitialSize": "uint256",
+                    "baseMinRemainingSize": "uint256",
+                    "baseMaxSize": "uint256",
+                    "cntrMinInitialSize": "uint256",
+                    "cntrMaxSize": "uint256",
+                    "ethRwrdRate": "uint256",
+                    "feeDivisor": "uint256",
+                    "occupiedPriceBitmaps": "uint256[85]",
+                    "invalidPrice": "uint256",
+                    "maxBuyPrice": "uint256",
+                    "minBuyPrice": "uint256",
+                    "minSellPrice": "uint256",
+                    "maxSellPrice": "uint256"
+                }
+            },
+            "transferFromBase()": {
+                "argument": {},
+                "contract": {
+                    "baseMinInitialSize": "uint256",
+                    "baseMinRemainingSize": "uint256",
+                    "baseMaxSize": "uint256",
+                    "cntrMinInitialSize": "uint256",
+                    "cntrMaxSize": "uint256",
+                    "ethRwrdRate": "uint256",
+                    "feeDivisor": "uint256",
+                    "occupiedPriceBitmaps": "uint256[85]",
+                    "invalidPrice": "uint256",
+                    "maxBuyPrice": "uint256",
+                    "minBuyPrice": "uint256",
+                    "minSellPrice": "uint256",
+                    "maxSellPrice": "uint256"
+                }
+            },
+            "transferBase(uint256)": {
+                "argument": {
+                    "amountBase": "uint256"
+                },
+                "contract": {
+                    "baseMinInitialSize": "uint256",
+                    "baseMinRemainingSize": "uint256",
+                    "baseMaxSize": "uint256",
+                    "cntrMinInitialSize": "uint256",
+                    "cntrMaxSize": "uint256",
+                    "ethRwrdRate": "uint256",
+                    "feeDivisor": "uint256",
+                    "occupiedPriceBitmaps": "uint256[85]",
+                    "invalidPrice": "uint256",
+                    "maxBuyPrice": "uint256",
+                    "minBuyPrice": "uint256",
+                    "minSellPrice": "uint256",
+                    "maxSellPrice": "uint256"
+                }
+            },
+            "depositCntr()": {
+                "argument": {},
+                "contract": {
+                    "baseMinInitialSize": "uint256",
+                    "baseMinRemainingSize": "uint256",
+                    "baseMaxSize": "uint256",
+                    "cntrMinInitialSize": "uint256",
+                    "cntrMaxSize": "uint256",
+                    "ethRwrdRate": "uint256",
+                    "feeDivisor": "uint256",
+                    "occupiedPriceBitmaps": "uint256[85]",
+                    "invalidPrice": "uint256",
+                    "maxBuyPrice": "uint256",
+                    "minBuyPrice": "uint256",
+                    "minSellPrice": "uint256",
+                    "maxSellPrice": "uint256"
+                }
+            },
+            "withdrawCntr(uint256)": {
+                "argument": {
+                    "amountCntr": "uint256"
+                },
+                "contract": {
+                    "baseMinInitialSize": "uint256",
+                    "baseMinRemainingSize": "uint256",
+                    "baseMaxSize": "uint256",
+                    "cntrMinInitialSize": "uint256",
+                    "cntrMaxSize": "uint256",
+                    "ethRwrdRate": "uint256",
+                    "feeDivisor": "uint256",
+                    "occupiedPriceBitmaps": "uint256[85]",
+                    "invalidPrice": "uint256",
+                    "maxBuyPrice": "uint256",
+                    "minBuyPrice": "uint256",
+                    "minSellPrice": "uint256",
+                    "maxSellPrice": "uint256"
+                }
+            },
+            "transferFromRwrd()": {
+                "argument": {},
+                "contract": {
+                    "baseMinInitialSize": "uint256",
+                    "baseMinRemainingSize": "uint256",
+                    "baseMaxSize": "uint256",
+                    "cntrMinInitialSize": "uint256",
+                    "cntrMaxSize": "uint256",
+                    "ethRwrdRate": "uint256",
+                    "feeDivisor": "uint256",
+                    "occupiedPriceBitmaps": "uint256[85]",
+                    "invalidPrice": "uint256",
+                    "maxBuyPrice": "uint256",
+                    "minBuyPrice": "uint256",
+                    "minSellPrice": "uint256",
+                    "maxSellPrice": "uint256"
+                }
+            },
+            "transferRwrd(uint256)": {
+                "argument": {
+                    "amountRwrd": "uint256"
+                },
+                "contract": {
+                    "baseMinInitialSize": "uint256",
+                    "baseMinRemainingSize": "uint256",
+                    "baseMaxSize": "uint256",
+                    "cntrMinInitialSize": "uint256",
+                    "cntrMaxSize": "uint256",
+                    "ethRwrdRate": "uint256",
+                    "feeDivisor": "uint256",
+                    "occupiedPriceBitmaps": "uint256[85]",
+                    "invalidPrice": "uint256",
+                    "maxBuyPrice": "uint256",
+                    "minBuyPrice": "uint256",
+                    "minSellPrice": "uint256",
+                    "maxSellPrice": "uint256"
+                }
+            },
+            "getOrder(uint128)": {
+                "argument": {
+                    "orderId": "uint128"
+                },
+                "contract": {
+                    "baseMinInitialSize": "uint256",
+                    "baseMinRemainingSize": "uint256",
+                    "baseMaxSize": "uint256",
+                    "cntrMinInitialSize": "uint256",
+                    "cntrMaxSize": "uint256",
+                    "ethRwrdRate": "uint256",
+                    "feeDivisor": "uint256",
+                    "occupiedPriceBitmaps": "uint256[85]",
+                    "invalidPrice": "uint256",
+                    "maxBuyPrice": "uint256",
+                    "minBuyPrice": "uint256",
+                    "minSellPrice": "uint256",
+                    "maxSellPrice": "uint256"
+                }
+            },
+            "getOrderState(uint128)": {
+                "argument": {
+                    "orderId": "uint128"
+                },
+                "contract": {
+                    "baseMinInitialSize": "uint256",
+                    "baseMinRemainingSize": "uint256",
+                    "baseMaxSize": "uint256",
+                    "cntrMinInitialSize": "uint256",
+                    "cntrMaxSize": "uint256",
+                    "ethRwrdRate": "uint256",
+                    "feeDivisor": "uint256",
+                    "occupiedPriceBitmaps": "uint256[85]",
+                    "invalidPrice": "uint256",
+                    "maxBuyPrice": "uint256",
+                    "minBuyPrice": "uint256",
+                    "minSellPrice": "uint256",
+                    "maxSellPrice": "uint256"
+                }
+            },
+            "walkClientOrders(address,uint128,uint128)": {
+                "argument": {
+                    "maybeLastOrderIdReturned": "uint128",
+                    "minClosedOrderIdCutoff": "uint128"
+                },
+                "contract": {
+                    "baseMinInitialSize": "uint256",
+                    "baseMinRemainingSize": "uint256",
+                    "baseMaxSize": "uint256",
+                    "cntrMinInitialSize": "uint256",
+                    "cntrMaxSize": "uint256",
+                    "ethRwrdRate": "uint256",
+                    "feeDivisor": "uint256",
+                    "occupiedPriceBitmaps": "uint256[85]",
+                    "invalidPrice": "uint256",
+                    "maxBuyPrice": "uint256",
+                    "minBuyPrice": "uint256",
+                    "minSellPrice": "uint256",
+                    "maxSellPrice": "uint256"
+                }
+            },
+            "unpackPrice(uint16)": {
+                "argument": {
+                    "price": "uint16"
+                },
+                "contract": {
+                    "baseMinInitialSize": "uint256",
+                    "baseMinRemainingSize": "uint256",
+                    "baseMaxSize": "uint256",
+                    "cntrMinInitialSize": "uint256",
+                    "cntrMaxSize": "uint256",
+                    "ethRwrdRate": "uint256",
+                    "feeDivisor": "uint256",
+                    "occupiedPriceBitmaps": "uint256[85]",
+                    "invalidPrice": "uint256",
+                    "maxBuyPrice": "uint256",
+                    "minBuyPrice": "uint256",
+                    "minSellPrice": "uint256",
+                    "maxSellPrice": "uint256"
+                }
+            },
+            "isBuyPrice(uint16)": {
+                "argument": {
+                    "price": "uint16"
+                },
+                "contract": {
+                    "baseMinInitialSize": "uint256",
+                    "baseMinRemainingSize": "uint256",
+                    "baseMaxSize": "uint256",
+                    "cntrMinInitialSize": "uint256",
+                    "cntrMaxSize": "uint256",
+                    "ethRwrdRate": "uint256",
+                    "feeDivisor": "uint256",
+                    "occupiedPriceBitmaps": "uint256[85]",
+                    "invalidPrice": "uint256",
+                    "maxBuyPrice": "uint256",
+                    "minBuyPrice": "uint256",
+                    "minSellPrice": "uint256",
+                    "maxSellPrice": "uint256"
+                }
+            },
+            "computeOppositePrice(uint16)": {
+                "argument": {
+                    "price": "uint16"
+                },
+                "contract": {
+                    "baseMinInitialSize": "uint256",
+                    "baseMinRemainingSize": "uint256",
+                    "baseMaxSize": "uint256",
+                    "cntrMinInitialSize": "uint256",
+                    "cntrMaxSize": "uint256",
+                    "ethRwrdRate": "uint256",
+                    "feeDivisor": "uint256",
+                    "occupiedPriceBitmaps": "uint256[85]",
+                    "invalidPrice": "uint256",
+                    "maxBuyPrice": "uint256",
+                    "minBuyPrice": "uint256",
+                    "minSellPrice": "uint256",
+                    "maxSellPrice": "uint256"
+                }
+            },
+            "computeCntrAmountUsingUnpacked(uint256,uint16,int8)": {
+                "argument": {
+                    "baseAmount": "uint256",
+                    "mantissa": "uint16"
+                },
+                "contract": {
+                    "baseMinInitialSize": "uint256",
+                    "baseMinRemainingSize": "uint256",
+                    "baseMaxSize": "uint256",
+                    "cntrMinInitialSize": "uint256",
+                    "cntrMaxSize": "uint256",
+                    "ethRwrdRate": "uint256",
+                    "feeDivisor": "uint256",
+                    "occupiedPriceBitmaps": "uint256[85]",
+                    "invalidPrice": "uint256",
+                    "maxBuyPrice": "uint256",
+                    "minBuyPrice": "uint256",
+                    "minSellPrice": "uint256",
+                    "maxSellPrice": "uint256"
+                }
+            },
+            "computeCntrAmountUsingPacked(uint256,uint16)": {
+                "argument": {
+                    "baseAmount": "uint256",
+                    "price": "uint16"
+                },
+                "contract": {
+                    "baseMinInitialSize": "uint256",
+                    "baseMinRemainingSize": "uint256",
+                    "baseMaxSize": "uint256",
+                    "cntrMinInitialSize": "uint256",
+                    "cntrMaxSize": "uint256",
+                    "ethRwrdRate": "uint256",
+                    "feeDivisor": "uint256",
+                    "occupiedPriceBitmaps": "uint256[85]",
+                    "invalidPrice": "uint256",
+                    "maxBuyPrice": "uint256",
+                    "minBuyPrice": "uint256",
+                    "minSellPrice": "uint256",
+                    "maxSellPrice": "uint256"
+                }
+            },
+            "createOrder(uint128,uint16,uint256,BookERC20EthV1.Terms,uint256)": {
+                "argument": {
+                    "orderId": "uint128",
+                    "price": "uint16",
+                    "sizeBase": "uint256",
+                    "maxMatches": "uint256"
+                },
+                "contract": {
+                    "baseMinInitialSize": "uint256",
+                    "baseMinRemainingSize": "uint256",
+                    "baseMaxSize": "uint256",
+                    "cntrMinInitialSize": "uint256",
+                    "cntrMaxSize": "uint256",
+                    "ethRwrdRate": "uint256",
+                    "feeDivisor": "uint256",
+                    "occupiedPriceBitmaps": "uint256[85]",
+                    "invalidPrice": "uint256",
+                    "maxBuyPrice": "uint256",
+                    "minBuyPrice": "uint256",
+                    "minSellPrice": "uint256",
+                    "maxSellPrice": "uint256"
+                }
+            },
+            "cancelOrder(uint128)": {
+                "argument": {
+                    "orderId": "uint128"
+                },
+                "contract": {
+                    "baseMinInitialSize": "uint256",
+                    "baseMinRemainingSize": "uint256",
+                    "baseMaxSize": "uint256",
+                    "cntrMinInitialSize": "uint256",
+                    "cntrMaxSize": "uint256",
+                    "ethRwrdRate": "uint256",
+                    "feeDivisor": "uint256",
+                    "occupiedPriceBitmaps": "uint256[85]",
+                    "invalidPrice": "uint256",
+                    "maxBuyPrice": "uint256",
+                    "minBuyPrice": "uint256",
+                    "minSellPrice": "uint256",
+                    "maxSellPrice": "uint256"
+                }
+            },
+            "continueOrder(uint128,uint256)": {
+                "argument": {
+                    "orderId": "uint128",
+                    "maxMatches": "uint256"
+                },
+                "contract": {
+                    "baseMinInitialSize": "uint256",
+                    "baseMinRemainingSize": "uint256",
+                    "baseMaxSize": "uint256",
+                    "cntrMinInitialSize": "uint256",
+                    "cntrMaxSize": "uint256",
+                    "ethRwrdRate": "uint256",
+                    "feeDivisor": "uint256",
+                    "occupiedPriceBitmaps": "uint256[85]",
+                    "invalidPrice": "uint256",
+                    "maxBuyPrice": "uint256",
+                    "minBuyPrice": "uint256",
+                    "minSellPrice": "uint256",
+                    "maxSellPrice": "uint256"
+                }
+            },
+            "removeOpenOrderFromBook(uint128)": {
+                "argument": {
+                    "orderId": "uint128"
+                },
+                "contract": {
+                    "baseMinInitialSize": "uint256",
+                    "baseMinRemainingSize": "uint256",
+                    "baseMaxSize": "uint256",
+                    "cntrMinInitialSize": "uint256",
+                    "cntrMaxSize": "uint256",
+                    "ethRwrdRate": "uint256",
+                    "feeDivisor": "uint256",
+                    "occupiedPriceBitmaps": "uint256[85]",
+                    "invalidPrice": "uint256",
+                    "maxBuyPrice": "uint256",
+                    "minBuyPrice": "uint256",
+                    "minSellPrice": "uint256",
+                    "maxSellPrice": "uint256"
+                }
+            },
+            "creditExecutedFundsLessFees(uint128,uint256,uint256)": {
+                "argument": {
+                    "orderId": "uint128",
+                    "originalExecutedBase": "uint256",
+                    "originalExecutedCntr": "uint256"
+                },
+                "contract": {
+                    "baseMinInitialSize": "uint256",
+                    "baseMinRemainingSize": "uint256",
+                    "baseMaxSize": "uint256",
+                    "cntrMinInitialSize": "uint256",
+                    "cntrMaxSize": "uint256",
+                    "ethRwrdRate": "uint256",
+                    "feeDivisor": "uint256",
+                    "occupiedPriceBitmaps": "uint256[85]",
+                    "invalidPrice": "uint256",
+                    "maxBuyPrice": "uint256",
+                    "minBuyPrice": "uint256",
+                    "minSellPrice": "uint256",
+                    "maxSellPrice": "uint256"
+                }
+            },
+            "processOrder(uint128,uint256)": {
+                "argument": {
+                    "orderId": "uint128",
+                    "maxMatches": "uint256"
+                },
+                "contract": {
+                    "baseMinInitialSize": "uint256",
+                    "baseMinRemainingSize": "uint256",
+                    "baseMaxSize": "uint256",
+                    "cntrMinInitialSize": "uint256",
+                    "cntrMaxSize": "uint256",
+                    "ethRwrdRate": "uint256",
+                    "feeDivisor": "uint256",
+                    "occupiedPriceBitmaps": "uint256[85]",
+                    "invalidPrice": "uint256",
+                    "maxBuyPrice": "uint256",
+                    "minBuyPrice": "uint256",
+                    "minSellPrice": "uint256",
+                    "maxSellPrice": "uint256"
+                }
+            },
+            "matchAgainstBook(uint128,uint256,uint256,uint256)": {
+                "argument": {
+                    "orderId": "uint128",
+                    "theirPriceStart": "uint256",
+                    "theirPriceEnd": "uint256",
+                    "maxMatches": "uint256"
+                },
+                "contract": {
+                    "baseMinInitialSize": "uint256",
+                    "baseMinRemainingSize": "uint256",
+                    "baseMaxSize": "uint256",
+                    "cntrMinInitialSize": "uint256",
+                    "cntrMaxSize": "uint256",
+                    "ethRwrdRate": "uint256",
+                    "feeDivisor": "uint256",
+                    "occupiedPriceBitmaps": "uint256[85]",
+                    "invalidPrice": "uint256",
+                    "maxBuyPrice": "uint256",
+                    "minBuyPrice": "uint256",
+                    "minSellPrice": "uint256",
+                    "maxSellPrice": "uint256"
+                }
+            },
+            "matchWithOccupiedPrice(BookERC20EthV1.Order,uint16,uint256)": {
+                "argument": {
+                    "theirPrice": "uint16",
+                    "maxMatches": "uint256"
+                },
+                "contract": {
+                    "baseMinInitialSize": "uint256",
+                    "baseMinRemainingSize": "uint256",
+                    "baseMaxSize": "uint256",
+                    "cntrMinInitialSize": "uint256",
+                    "cntrMaxSize": "uint256",
+                    "ethRwrdRate": "uint256",
+                    "feeDivisor": "uint256",
+                    "occupiedPriceBitmaps": "uint256[85]",
+                    "invalidPrice": "uint256",
+                    "maxBuyPrice": "uint256",
+                    "minBuyPrice": "uint256",
+                    "minSellPrice": "uint256",
+                    "maxSellPrice": "uint256"
+                }
+            },
+            "matchWithTheirs(uint256,uint128,uint16)": {
+                "argument": {
+                    "ourRemainingBase": "uint256",
+                    "theirOrderId": "uint128",
+                    "theirPrice": "uint16"
+                },
+                "contract": {
+                    "baseMinInitialSize": "uint256",
+                    "baseMinRemainingSize": "uint256",
+                    "baseMaxSize": "uint256",
+                    "cntrMinInitialSize": "uint256",
+                    "cntrMaxSize": "uint256",
+                    "ethRwrdRate": "uint256",
+                    "feeDivisor": "uint256",
+                    "occupiedPriceBitmaps": "uint256[85]",
+                    "invalidPrice": "uint256",
+                    "maxBuyPrice": "uint256",
+                    "minBuyPrice": "uint256",
+                    "minSellPrice": "uint256",
+                    "maxSellPrice": "uint256"
+                }
+            },
+            "recordTheirMatch(BookERC20EthV1.Order,uint128,uint16,uint256,uint256)": {
+                "argument": {
+                    "theirOrderId": "uint128",
+                    "theirPrice": "uint16",
+                    "matchBase": "uint256",
+                    "matchCntr": "uint256"
+                },
+                "contract": {
+                    "baseMinInitialSize": "uint256",
+                    "baseMinRemainingSize": "uint256",
+                    "baseMaxSize": "uint256",
+                    "cntrMinInitialSize": "uint256",
+                    "cntrMaxSize": "uint256",
+                    "ethRwrdRate": "uint256",
+                    "feeDivisor": "uint256",
+                    "occupiedPriceBitmaps": "uint256[85]",
+                    "invalidPrice": "uint256",
+                    "maxBuyPrice": "uint256",
+                    "minBuyPrice": "uint256",
+                    "minSellPrice": "uint256",
+                    "maxSellPrice": "uint256"
+                }
+            },
+            "refundUnmatchedAndFinish(uint128,BookERC20EthV1.Status,BookERC20EthV1.ReasonCode)": {
+                "argument": {
+                    "orderId": "uint128"
+                },
+                "contract": {
+                    "baseMinInitialSize": "uint256",
+                    "baseMinRemainingSize": "uint256",
+                    "baseMaxSize": "uint256",
+                    "cntrMinInitialSize": "uint256",
+                    "cntrMaxSize": "uint256",
+                    "ethRwrdRate": "uint256",
+                    "feeDivisor": "uint256",
+                    "occupiedPriceBitmaps": "uint256[85]",
+                    "invalidPrice": "uint256",
+                    "maxBuyPrice": "uint256",
+                    "minBuyPrice": "uint256",
+                    "minSellPrice": "uint256",
+                    "maxSellPrice": "uint256"
+                }
+            },
+            "enterOrder(uint128)": {
+                "argument": {
+                    "orderId": "uint128"
+                },
+                "contract": {
+                    "baseMinInitialSize": "uint256",
+                    "baseMinRemainingSize": "uint256",
+                    "baseMaxSize": "uint256",
+                    "cntrMinInitialSize": "uint256",
+                    "cntrMaxSize": "uint256",
+                    "ethRwrdRate": "uint256",
+                    "feeDivisor": "uint256",
+                    "occupiedPriceBitmaps": "uint256[85]",
+                    "invalidPrice": "uint256",
+                    "maxBuyPrice": "uint256",
+                    "minBuyPrice": "uint256",
+                    "minSellPrice": "uint256",
+                    "maxSellPrice": "uint256"
+                }
+            },
+            "debitFunds(address,BookERC20EthV1.Direction,uint256,uint256)": {
+                "argument": {
+                    "sizeBase": "uint256",
+                    "sizeCntr": "uint256"
+                },
+                "contract": {
+                    "baseMinInitialSize": "uint256",
+                    "baseMinRemainingSize": "uint256",
+                    "baseMaxSize": "uint256",
+                    "cntrMinInitialSize": "uint256",
+                    "cntrMaxSize": "uint256",
+                    "ethRwrdRate": "uint256",
+                    "feeDivisor": "uint256",
+                    "occupiedPriceBitmaps": "uint256[85]",
+                    "invalidPrice": "uint256",
+                    "maxBuyPrice": "uint256",
+                    "minBuyPrice": "uint256",
+                    "minSellPrice": "uint256",
+                    "maxSellPrice": "uint256"
+                }
+            },
+            "walkBook(uint16)": {
+                "argument": {
+                    "fromPrice": "uint16"
+                },
+                "contract": {
+                    "baseMinInitialSize": "uint256",
+                    "baseMinRemainingSize": "uint256",
+                    "baseMaxSize": "uint256",
+                    "cntrMinInitialSize": "uint256",
+                    "cntrMaxSize": "uint256",
+                    "ethRwrdRate": "uint256",
+                    "feeDivisor": "uint256",
+                    "occupiedPriceBitmaps": "uint256[85]",
+                    "invalidPrice": "uint256",
+                    "maxBuyPrice": "uint256",
+                    "minBuyPrice": "uint256",
+                    "minSellPrice": "uint256",
+                    "maxSellPrice": "uint256"
+                }
+            },
+            "sumDepth(uint128)": {
+                "argument": {
+                    "orderId": "uint128"
+                },
+                "contract": {
+                    "baseMinInitialSize": "uint256",
+                    "baseMinRemainingSize": "uint256",
+                    "baseMaxSize": "uint256",
+                    "cntrMinInitialSize": "uint256",
+                    "cntrMaxSize": "uint256",
+                    "ethRwrdRate": "uint256",
+                    "feeDivisor": "uint256",
+                    "occupiedPriceBitmaps": "uint256[85]",
+                    "invalidPrice": "uint256",
+                    "maxBuyPrice": "uint256",
+                    "minBuyPrice": "uint256",
+                    "minSellPrice": "uint256",
+                    "maxSellPrice": "uint256"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "baseMinInitialSize": "uint256",
+                    "baseMinRemainingSize": "uint256",
+                    "baseMaxSize": "uint256",
+                    "cntrMinInitialSize": "uint256",
+                    "cntrMaxSize": "uint256",
+                    "ethRwrdRate": "uint256",
+                    "feeDivisor": "uint256",
+                    "occupiedPriceBitmaps": "uint256[85]",
+                    "invalidPrice": "uint256",
+                    "maxBuyPrice": "uint256",
+                    "minBuyPrice": "uint256",
+                    "minSellPrice": "uint256",
+                    "maxSellPrice": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "transferFromRwrd()": [
+                1325,
+                317
+            ],
+            "transferBase(uint256)": [
+                1006,
+                185
+            ],
+            "getBookInfo()": [
+                629,
+                141
+            ],
+            "walkClientOrders(address,uint128,uint128)": [
+                1348,
+                339
+            ],
+            "getOrderState(uint128)": [
+                860,
+                163
+            ],
+            "transferRwrd(uint256)": [
+                1051,
+                207
+            ],
+            "depositCntr()": [
+                1096,
+                229
+            ],
+            "transferFromBase()": [
+                1106,
+                251
+            ],
+            "cancelOrder(uint128)": [
+                1823,
+                405
+            ],
+            "changeFeeCollector(address)": [
+                1258,
+                295
+            ],
+            "withdrawCntr(uint256)": [
+                584,
+                119
+            ],
+            "getClientBalances(address)": [
+                1129,
+                273
+            ],
+            "walkBook(uint16)": [
+                246,
+                75
+            ],
+            "continueOrder(uint128,uint256)": [
+                1750,
+                383
+            ],
+            "getOrder(uint128)": [
+                344,
+                97
+            ]
+        },
+        "block_CALL_mapping": {
+            "block3067": [
+                "client.transfer(amountCntr)"
+            ],
+            "jump6107": [
+                "baseToken.allowance(client, book)",
+                "baseToken.allowance(client, book)"
+            ],
+            "block4790": [
+                "rwrdToken.transfer(client, amountRwrd)"
+            ],
+            "jump4217": [
+                "baseToken.transfer(client, amountBase)",
+                "baseToken.transfer(client, amountBase)"
+            ],
+            "jump8180": [
+                "rwrdToken.allowance(client, book)",
+                "rwrdToken.allowance(client, book)"
+            ],
+            "jump5471": [
+                "baseToken.allowance(client, book)",
+                "baseToken.allowance(client, book)"
+            ],
+            "block13790": [
+                "_rwrdToken.totalSupply()"
+            ],
+            "block5471": [
+                "baseToken.allowance(client, book)"
+            ],
+            "block7381": [
+                "baseToken.balanceOf(client)"
+            ],
+            "block13553": [
+                "_baseToken.totalSupply()"
+            ],
+            "block8180": [
+                "rwrdToken.allowance(client, book)"
+            ],
+            "block4217": [
+                "baseToken.transfer(client, amountBase)"
+            ],
+            "jump13553": [
+                "_baseToken.totalSupply()",
+                "_baseToken.totalSupply()"
+            ],
+            "jump7132": [
+                "rwrdToken.allowance(client, address(this))",
+                "rwrdToken.allowance(client, address(this))"
+            ],
+            "block8818": [
+                "rwrdToken.allowance(client, book)"
+            ],
+            "jump6830": [
+                "baseToken.allowance(client, address(this))",
+                "baseToken.allowance(client, address(this))"
+            ],
+            "jump5795": [
+                "baseToken.transferFrom(client, book, amountBase)",
+                "baseToken.transferFrom(client, book, amountBase)"
+            ],
+            "block8505": [
+                "rwrdToken.transferFrom(client, book, amountRwrd)"
+            ],
+            "jump7381": [
+                "baseToken.balanceOf(client)",
+                "baseToken.balanceOf(client)"
+            ],
+            "block5795": [
+                "baseToken.transferFrom(client, book, amountBase)"
+            ],
+            "jump7631": [
+                "rwrdToken.balanceOf(client)",
+                "rwrdToken.balanceOf(client)"
+            ],
+            "jump3067": [
+                "client.transfer(amountCntr)",
+                "client.transfer(amountCntr)"
+            ],
+            "block6830": [
+                "baseToken.allowance(client, address(this))"
+            ],
+            "jump4790": [
+                "rwrdToken.transfer(client, amountRwrd)",
+                "rwrdToken.transfer(client, amountRwrd)"
+            ],
+            "block7631": [
+                "rwrdToken.balanceOf(client)"
+            ],
+            "block6107": [
+                "baseToken.allowance(client, book)"
+            ],
+            "jump8505": [
+                "rwrdToken.transferFrom(client, book, amountRwrd)",
+                "rwrdToken.transferFrom(client, book, amountRwrd)"
+            ],
+            "jump13790": [
+                "_rwrdToken.totalSupply()",
+                "_rwrdToken.totalSupply()"
+            ],
+            "block7132": [
+                "rwrdToken.allowance(client, address(this))"
+            ],
+            "jump8818": [
+                "rwrdToken.allowance(client, book)",
+                "rwrdToken.allowance(client, book)"
+            ]
+        }
+    }
+}

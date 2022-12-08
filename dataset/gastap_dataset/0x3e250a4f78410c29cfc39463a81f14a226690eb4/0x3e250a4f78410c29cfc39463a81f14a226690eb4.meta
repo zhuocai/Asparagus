@@ -1,0 +1,836 @@
+{
+    "InputValidator": {
+        "function_list": [],
+        "initial_state": {},
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "MultiOwned": {
+        "function_list": [
+            "isOwner(address)",
+            "getOwnerCount()",
+            "getOwnerAt(uint256)",
+            "addOwner(address)",
+            "removeOwner(address)",
+            "MultiOwned()",
+            "isOwner(address)",
+            "getOwnerCount()",
+            "getOwnerAt(uint256)",
+            "addOwner(address)",
+            "removeOwner(address)"
+        ],
+        "initial_state": {
+            "isOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "ownersIndex": "address[]"
+                }
+            },
+            "getOwnerCount()": {
+                "argument": {},
+                "contract": {
+                    "ownersIndex": "address[]"
+                }
+            },
+            "getOwnerAt(uint256)": {
+                "argument": {
+                    "_index": "uint256"
+                },
+                "contract": {
+                    "ownersIndex": "address[]"
+                }
+            },
+            "addOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "ownersIndex": "address[]"
+                }
+            },
+            "removeOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "ownersIndex": "address[]"
+                }
+            },
+            "MultiOwned()": {
+                "argument": {},
+                "contract": {
+                    "ownersIndex": "address[]"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "getOwnerCount()": [
+                448,
+                163
+            ],
+            "isOwner(address)": [
+                181,
+                97
+            ],
+            "addOwner(address)": [
+                381,
+                141
+            ],
+            "getOwnerAt(uint256)": [
+                272,
+                119
+            ],
+            "removeOwner(address)": [
+                114,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "TokenRetriever": {
+        "function_list": [
+            "retrieveTokens(address)",
+            "retrieveTokens(address)"
+        ],
+        "initial_state": {
+            "retrieveTokens(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "retrieveTokens(address)": [
+                70,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "block298": [
+                "tokenInstance.balanceOf(this)"
+            ],
+            "block531": [
+                "tokenInstance.transfer(msg.sender, tokenBalance)"
+            ],
+            "jump531": [
+                "tokenInstance.transfer(msg.sender, tokenBalance)",
+                "tokenInstance.transfer(msg.sender, tokenBalance)"
+            ],
+            "jump298": [
+                "tokenInstance.balanceOf(this)",
+                "tokenInstance.balanceOf(this)"
+            ]
+        }
+    },
+    "IToken": {
+        "function_list": [
+            "totalSupply()",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)"
+        ],
+        "initial_state": {
+            "totalSupply()": {
+                "argument": {},
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                319,
+                119
+            ],
+            "totalSupply()": [
+                147,
+                75
+            ],
+            "allowance(address,address)": [
+                901,
+                207
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Token": {
+        "function_list": [
+            "totalSupply()",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "Token(string,string,uint8)",
+            "totalSupply()",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "totalSupply()": {
+                "argument": {},
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalTokenSupply": "uint256"
+                }
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalTokenSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalTokenSupply": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalTokenSupply": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalTokenSupply": "uint256"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalTokenSupply": "uint256"
+                }
+            },
+            "Token(string,string,uint8)": {
+                "argument": {
+                    "_name": "string",
+                    "_symbol": "string",
+                    "_decimals": "uint8"
+                },
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalTokenSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                313,
+                97
+            ],
+            "totalSupply()": [
+                414,
+                119
+            ],
+            "balanceOf(address)": [
+                783,
+                207
+            ],
+            "transferFrom(address,address,uint256)": [
+                457,
+                141
+            ],
+            "allowance(address,address)": [
+                1115,
+                273
+            ],
+            "transfer(address,uint256)": [
+                1014,
+                251
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "ManagedToken": {
+        "function_list": [
+            "MultiOwned()",
+            "isOwner(address)",
+            "getOwnerCount()",
+            "getOwnerAt(uint256)",
+            "addOwner(address)",
+            "removeOwner(address)",
+            "isOwner(address)",
+            "getOwnerCount()",
+            "getOwnerAt(uint256)",
+            "addOwner(address)",
+            "removeOwner(address)",
+            "Token(string,string,uint8)",
+            "totalSupply()",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "totalSupply()",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "isLocked()",
+            "lock()",
+            "unlock()",
+            "issue(address,uint256)",
+            "burn(address,uint256)",
+            "ManagedToken(string,string,uint8,bool)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "isLocked()",
+            "lock()",
+            "unlock()",
+            "issue(address,uint256)",
+            "burn(address,uint256)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "MultiOwned()": {
+                "argument": {},
+                "contract": {}
+            },
+            "isOwner(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "getOwnerCount()": {
+                "argument": {},
+                "contract": {}
+            },
+            "getOwnerAt(uint256)": {
+                "argument": {
+                    "_index": "uint256"
+                },
+                "contract": {}
+            },
+            "addOwner(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "removeOwner(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "Token(string,string,uint8)": {
+                "argument": {
+                    "_name": "string",
+                    "_symbol": "string",
+                    "_decimals": "uint8"
+                },
+                "contract": {}
+            },
+            "totalSupply()": {
+                "argument": {},
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "isLocked()": {
+                "argument": {},
+                "contract": {}
+            },
+            "lock()": {
+                "argument": {},
+                "contract": {}
+            },
+            "unlock()": {
+                "argument": {},
+                "contract": {}
+            },
+            "issue(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "burn(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "ManagedToken(string,string,uint8,bool)": {
+                "argument": {
+                    "_name": "string",
+                    "_symbol": "string",
+                    "_decimals": "uint8"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "unlock()": [
+                1707,
+                405
+            ],
+            "approve(address,uint256)": [
+                423,
+                97
+            ],
+            "balanceOf(address)": [
+                1227,
+                295
+            ],
+            "transfer(address,uint256)": [
+                1754,
+                427
+            ],
+            "isOwner(address)": [
+                767,
+                185
+            ],
+            "issue(address,uint256)": [
+                1314,
+                317
+            ],
+            "removeOwner(address)": [
+                524,
+                119
+            ],
+            "totalSupply()": [
+                591,
+                141
+            ],
+            "isLocked()": [
+                1660,
+                383
+            ],
+            "getOwnerAt(uint256)": [
+                907,
+                229
+            ],
+            "getOwnerCount()": [
+                1974,
+                471
+            ],
+            "burn(address,uint256)": [
+                1559,
+                361
+            ],
+            "transferFrom(address,address,uint256)": [
+                634,
+                163
+            ],
+            "allowance(address,address)": [
+                1855,
+                449
+            ],
+            "addOwner(address)": [
+                1160,
+                273
+            ],
+            "lock()": [
+                2017,
+                493
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "DRPSToken": {
+        "function_list": [
+            "retrieveTokens(address)",
+            "retrieveTokens(address)",
+            "isObserver(address)",
+            "getObserverCount()",
+            "getObserverAtIndex(uint256)",
+            "registerObserver(address)",
+            "unregisterObserver(address)",
+            "canRegisterObserver(address)",
+            "canUnregisterObserver(address)",
+            "isObserver(address)",
+            "getObserverCount()",
+            "getObserverAtIndex(uint256)",
+            "registerObserver(address)",
+            "unregisterObserver(address)",
+            "ManagedToken(string,string,uint8,bool)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "isLocked()",
+            "lock()",
+            "unlock()",
+            "issue(address,uint256)",
+            "burn(address,uint256)",
+            "MultiOwned()",
+            "isOwner(address)",
+            "getOwnerCount()",
+            "getOwnerAt(uint256)",
+            "addOwner(address)",
+            "removeOwner(address)",
+            "isOwner(address)",
+            "getOwnerCount()",
+            "getOwnerAt(uint256)",
+            "addOwner(address)",
+            "removeOwner(address)",
+            "Token(string,string,uint8)",
+            "totalSupply()",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "totalSupply()",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "isLocked()",
+            "lock()",
+            "unlock()",
+            "issue(address,uint256)",
+            "burn(address,uint256)",
+            "DRPSToken()",
+            "canRegisterObserver(address)",
+            "canUnregisterObserver(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "retrieveTokens(address)",
+            "fallback()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "retrieveTokens(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "isObserver(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "getObserverCount()": {
+                "argument": {},
+                "contract": {}
+            },
+            "getObserverAtIndex(uint256)": {
+                "argument": {
+                    "_index": "uint256"
+                },
+                "contract": {}
+            },
+            "registerObserver(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "unregisterObserver(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "canRegisterObserver(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "canUnregisterObserver(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "ManagedToken(string,string,uint8,bool)": {
+                "argument": {
+                    "_name": "string",
+                    "_symbol": "string",
+                    "_decimals": "uint8"
+                },
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "isLocked()": {
+                "argument": {},
+                "contract": {}
+            },
+            "lock()": {
+                "argument": {},
+                "contract": {}
+            },
+            "unlock()": {
+                "argument": {},
+                "contract": {}
+            },
+            "issue(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "burn(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "MultiOwned()": {
+                "argument": {},
+                "contract": {}
+            },
+            "isOwner(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "getOwnerCount()": {
+                "argument": {},
+                "contract": {}
+            },
+            "getOwnerAt(uint256)": {
+                "argument": {
+                    "_index": "uint256"
+                },
+                "contract": {}
+            },
+            "addOwner(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "removeOwner(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "Token(string,string,uint8)": {
+                "argument": {
+                    "_name": "string",
+                    "_symbol": "string",
+                    "_decimals": "uint8"
+                },
+                "contract": {}
+            },
+            "totalSupply()": {
+                "argument": {},
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "DRPSToken()": {
+                "argument": {},
+                "contract": {}
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "lock()": [
+                2460,
+                603
+            ],
+            "addOwner(address)": [
+                1402,
+                317
+            ],
+            "retrieveTokens(address)": [
+                2140,
+                515
+            ],
+            "balanceOf(address)": [
+                7279,
+                853
+            ],
+            "totalSupply()": [
+                657,
+                141
+            ],
+            "allowance(address,address)": [
+                2298,
+                559
+            ],
+            "transferFrom(address,address,uint256)": [
+                700,
+                163
+            ],
+            "unlock()": [
+                1992,
+                471
+            ],
+            "getOwnerCount()": [
+                2417,
+                581
+            ],
+            "approve(address,uint256)": [
+                489,
+                97
+            ],
+            "registerObserver(address)": [
+                833,
+                185
+            ],
+            "isOwner(address)": [
+                900,
+                207
+            ],
+            "isObserver(address)": [
+                2207,
+                537
+            ],
+            "isLocked()": [
+                1945,
+                449
+            ],
+            "getObserverCount()": [
+                1556,
+                361
+            ],
+            "issue(address,uint256)": [
+                1599,
+                383
+            ],
+            "removeOwner(address)": [
+                590,
+                119
+            ],
+            "getOwnerAt(uint256)": [
+                1040,
+                251
+            ],
+            "getObserverAtIndex(uint256)": [
+                1293,
+                295
+            ],
+            "unregisterObserver(address)": [
+                2507,
+                625
+            ],
+            "burn(address,uint256)": [
+                1844,
+                427
+            ],
+            "transfer(address,uint256)": [
+                7512,
+                858
+            ]
+        },
+        "block_CALL_mapping": {
+            "block5785": [
+                "ITokenObserver(_to).notifyTokensReceived(msg.sender, _value)"
+            ],
+            "jump5785": [
+                "ITokenObserver(_to).notifyTokensReceived(msg.sender, _value)",
+                "ITokenObserver(_to).notifyTokensReceived(msg.sender, _value)"
+            ],
+            "block3310": [
+                "ITokenObserver(_to).notifyTokensReceived(_from, _value)"
+            ],
+            "block7279": [
+                "tokenInstance.balanceOf(this)"
+            ],
+            "block7512": [
+                "tokenInstance.transfer(msg.sender, tokenBalance)"
+            ],
+            "jump3310": [
+                "ITokenObserver(_to).notifyTokensReceived(_from, _value)",
+                "ITokenObserver(_to).notifyTokensReceived(_from, _value)"
+            ],
+            "jump7279": [
+                "tokenInstance.balanceOf(this)",
+                "tokenInstance.balanceOf(this)"
+            ],
+            "jump7512": [
+                "tokenInstance.transfer(msg.sender, tokenBalance)",
+                "tokenInstance.transfer(msg.sender, tokenBalance)"
+            ]
+        }
+    }
+}

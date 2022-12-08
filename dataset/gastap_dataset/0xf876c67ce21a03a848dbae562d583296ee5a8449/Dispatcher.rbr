@@ -1,0 +1,104 @@
+block0(g(target), l(l0), calldatasize, callvalue, gas, returndatasize)=>
+	s(0) = 128
+	nop(PUSH1)
+	s(1) = 64
+	nop(PUSH1)
+	l(l0) = s(0)
+	nop(MSTORE)
+	s(0) = callvalue
+	nop(CALLVALUE)
+	s(1) = s(0)
+	nop(DUP1)
+	call(jump0(s(1),s(0),g(target), l(l0), calldatasize, callvalue, gas, returndatasize))
+	nop(ISZERO)
+	nop(PUSH1)
+	nop(JUMPI)
+
+jump0(s(1), s(0), g(target), l(l0), calldatasize, callvalue, gas, returndatasize)=>
+	eq(s(1), 0)
+	call(block15(s(0),g(target), calldatasize, gas, returndatasize))
+
+jump0(s(1), s(0), g(target), l(l0), calldatasize, callvalue, gas, returndatasize)=>
+	neq(s(1), 0)
+	call(block11(s(0)))
+
+block11(s(0))=>
+	s(1) = 0
+	nop(PUSH1)
+	s(2) = s(1)
+	nop(DUP1)
+	nop(REVERT)
+
+block15(s(0), g(target), calldatasize, gas, returndatasize)=>
+	nop(JUMPDEST)
+	nop(POP)
+	s(0) = 0
+	nop(PUSH1)
+	s(0) = g(target)
+	nop(SLOAD)
+	s(1) = calldatasize
+	nop(CALLDATASIZE)
+	s(2) = 0
+	nop(PUSH1)
+	s(3) = s(2)
+	nop(DUP1)
+	nop(CALLDATACOPY)
+	s(1) = 0
+	nop(PUSH1)
+	s(2) = s(1)
+	nop(DUP1)
+	s(3) = calldatasize
+	nop(CALLDATASIZE)
+	s(4) = 0
+	nop(PUSH1)
+	s(5) = s(0)
+	nop(DUP5)
+	s(6) = gas
+	nop(GAS)
+	s(1) = 1
+	nop(DELEGATECALL)
+	s(2) = returndatasize
+	nop(RETURNDATASIZE)
+	s(3) = s(2)
+	nop(DUP1)
+	s(4) = 0
+	nop(PUSH1)
+	s(5) = s(4)
+	nop(DUP1)
+	nop(RETURNDATACOPY)
+	s(4) = s(2)
+	nop(DUP2)
+	s(5) = 0
+	nop(PUSH1)
+	s(6) = s(4)
+	nop(DUP2)
+	call(jump15(s(6),s(5),s(4),s(3),s(2),s(1),s(0),g(target), calldatasize, gas, returndatasize))
+	nop(EQ)
+	nop(PUSH1)
+	nop(JUMPI)
+
+jump15(s(6), s(5), s(4), s(3), s(2), s(1), s(0), g(target), calldatasize, gas, returndatasize)=>
+	eq(s(6), s(5))
+	call(block52(s(4), s(3), s(2), s(1)))
+
+jump15(s(6), s(5), s(4), s(3), s(2), s(1), s(0), g(target), calldatasize, gas, returndatasize)=>
+	neq(s(6), s(5))
+	call(block48(s(4), s(3), s(2), s(1)))
+
+block48(s(3), s(2), s(1), s(0))=>
+	s(4) = s(2)
+	nop(DUP2)
+	s(5) = 0
+	nop(PUSH1)
+	nop(RETURN)
+
+block52(s(3), s(2), s(1), s(0))=>
+	nop(JUMPDEST)
+	s(4) = 0
+	nop(PUSH1)
+	s(5) = s(4)
+	nop(DUP1)
+	nop(REVERT)
+	skip
+	nop(STOP)
+

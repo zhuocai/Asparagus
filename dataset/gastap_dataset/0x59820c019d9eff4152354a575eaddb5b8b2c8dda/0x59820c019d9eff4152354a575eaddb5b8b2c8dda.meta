@@ -1,0 +1,98 @@
+{
+    "Ownable": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "ELTCOINLock": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "ELTCOINLock(address,uint256)",
+            "hasEnded()",
+            "drainRemainingToken()"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {
+                    "endTime": "uint256"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "endTime": "uint256"
+                }
+            },
+            "ELTCOINLock(address,uint256)": {
+                "argument": {
+                    "_endTime": "uint256"
+                },
+                "contract": {
+                    "endTime": "uint256"
+                }
+            },
+            "hasEnded()": {
+                "argument": {},
+                "contract": {
+                    "endTime": "uint256"
+                }
+            },
+            "drainRemainingToken()": {
+                "argument": {},
+                "contract": {
+                    "endTime": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "hasEnded()": [
+                278,
+                141
+            ],
+            "drainRemainingToken()": [
+                168,
+                97
+            ],
+            "transferOwnership(address)": [
+                325,
+                163
+            ]
+        },
+        "block_CALL_mapping": {
+            "block880": [
+                "token.balanceOf(this)"
+            ],
+            "jump880": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "jump1072": [
+                "token.transfer(owner, token.balanceOf(this))",
+                "token.transfer(owner, token.balanceOf(this))"
+            ],
+            "block1072": [
+                "token.transfer(owner, token.balanceOf(this))"
+            ]
+        }
+    }
+}

@@ -1,0 +1,875 @@
+{
+    "IToken": {
+        "function_list": [
+            "totalSupply()",
+            "mintTokens(address,uint256)"
+        ],
+        "initial_state": {
+            "totalSupply()": {
+                "argument": {},
+                "contract": {}
+            },
+            "mintTokens(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "totalSupply()": [
+                147,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Owned": {
+        "function_list": [
+            "Owned()",
+            "transferOwnership(address)",
+            "acceptOwnership()"
+        ],
+        "initial_state": {
+            "Owned()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "acceptOwnership()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                300,
+                141
+            ],
+            "acceptOwnership()": [
+                103,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "ReentrancyHandling": {
+        "function_list": [],
+        "initial_state": {},
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "Crowdsale": {
+        "function_list": [
+            "Owned()",
+            "transferOwnership(address)",
+            "acceptOwnership()",
+            "fallback()",
+            "getState()",
+            "checkCrowdsaleState()",
+            "calculateCommunity(address,uint256)",
+            "calculateCrowdsale(uint256)",
+            "processTransaction(address,uint256)",
+            "WhiteListContributors(address[],bool[])",
+            "salvageTokensFromContract(address,address,uint256)",
+            "setCompanyAddress(address)",
+            "setToken(address)",
+            "getToken()",
+            "claimCompanyTokens()",
+            "claimRemainingTokens()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "Owned()": {
+                "argument": {},
+                "contract": {
+                    "communityRoundStartDate": "uint256",
+                    "crowdsaleStartDate": "uint256",
+                    "crowdsaleEndDate": "uint256",
+                    "ethToTokenConversion": "uint256",
+                    "maxCrowdsaleCap": "uint256",
+                    "maxCommunityCap": "uint256",
+                    "maxCommunityWithoutBonusCap": "uint256",
+                    "maxContribution": "uint256",
+                    "tokenSold": "uint256",
+                    "communityTokenSold": "uint256",
+                    "communityTokenWithoutBonusSold": "uint256",
+                    "crowdsaleTokenSold": "uint256",
+                    "ethRaisedWithoutCompany": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "companyTokens": "uint256"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "communityRoundStartDate": "uint256",
+                    "crowdsaleStartDate": "uint256",
+                    "crowdsaleEndDate": "uint256",
+                    "ethToTokenConversion": "uint256",
+                    "maxCrowdsaleCap": "uint256",
+                    "maxCommunityCap": "uint256",
+                    "maxCommunityWithoutBonusCap": "uint256",
+                    "maxContribution": "uint256",
+                    "tokenSold": "uint256",
+                    "communityTokenSold": "uint256",
+                    "communityTokenWithoutBonusSold": "uint256",
+                    "crowdsaleTokenSold": "uint256",
+                    "ethRaisedWithoutCompany": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "companyTokens": "uint256"
+                }
+            },
+            "acceptOwnership()": {
+                "argument": {},
+                "contract": {
+                    "communityRoundStartDate": "uint256",
+                    "crowdsaleStartDate": "uint256",
+                    "crowdsaleEndDate": "uint256",
+                    "ethToTokenConversion": "uint256",
+                    "maxCrowdsaleCap": "uint256",
+                    "maxCommunityCap": "uint256",
+                    "maxCommunityWithoutBonusCap": "uint256",
+                    "maxContribution": "uint256",
+                    "tokenSold": "uint256",
+                    "communityTokenSold": "uint256",
+                    "communityTokenWithoutBonusSold": "uint256",
+                    "crowdsaleTokenSold": "uint256",
+                    "ethRaisedWithoutCompany": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "companyTokens": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "communityRoundStartDate": "uint256",
+                    "crowdsaleStartDate": "uint256",
+                    "crowdsaleEndDate": "uint256",
+                    "ethToTokenConversion": "uint256",
+                    "maxCrowdsaleCap": "uint256",
+                    "maxCommunityCap": "uint256",
+                    "maxCommunityWithoutBonusCap": "uint256",
+                    "maxContribution": "uint256",
+                    "tokenSold": "uint256",
+                    "communityTokenSold": "uint256",
+                    "communityTokenWithoutBonusSold": "uint256",
+                    "crowdsaleTokenSold": "uint256",
+                    "ethRaisedWithoutCompany": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "companyTokens": "uint256"
+                }
+            },
+            "getState()": {
+                "argument": {},
+                "contract": {
+                    "communityRoundStartDate": "uint256",
+                    "crowdsaleStartDate": "uint256",
+                    "crowdsaleEndDate": "uint256",
+                    "ethToTokenConversion": "uint256",
+                    "maxCrowdsaleCap": "uint256",
+                    "maxCommunityCap": "uint256",
+                    "maxCommunityWithoutBonusCap": "uint256",
+                    "maxContribution": "uint256",
+                    "tokenSold": "uint256",
+                    "communityTokenSold": "uint256",
+                    "communityTokenWithoutBonusSold": "uint256",
+                    "crowdsaleTokenSold": "uint256",
+                    "ethRaisedWithoutCompany": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "companyTokens": "uint256"
+                }
+            },
+            "checkCrowdsaleState()": {
+                "argument": {},
+                "contract": {
+                    "communityRoundStartDate": "uint256",
+                    "crowdsaleStartDate": "uint256",
+                    "crowdsaleEndDate": "uint256",
+                    "ethToTokenConversion": "uint256",
+                    "maxCrowdsaleCap": "uint256",
+                    "maxCommunityCap": "uint256",
+                    "maxCommunityWithoutBonusCap": "uint256",
+                    "maxContribution": "uint256",
+                    "tokenSold": "uint256",
+                    "communityTokenSold": "uint256",
+                    "communityTokenWithoutBonusSold": "uint256",
+                    "crowdsaleTokenSold": "uint256",
+                    "ethRaisedWithoutCompany": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "companyTokens": "uint256"
+                }
+            },
+            "calculateCommunity(address,uint256)": {
+                "argument": {
+                    "_newContribution": "uint256"
+                },
+                "contract": {
+                    "communityRoundStartDate": "uint256",
+                    "crowdsaleStartDate": "uint256",
+                    "crowdsaleEndDate": "uint256",
+                    "ethToTokenConversion": "uint256",
+                    "maxCrowdsaleCap": "uint256",
+                    "maxCommunityCap": "uint256",
+                    "maxCommunityWithoutBonusCap": "uint256",
+                    "maxContribution": "uint256",
+                    "tokenSold": "uint256",
+                    "communityTokenSold": "uint256",
+                    "communityTokenWithoutBonusSold": "uint256",
+                    "crowdsaleTokenSold": "uint256",
+                    "ethRaisedWithoutCompany": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "companyTokens": "uint256"
+                }
+            },
+            "calculateCrowdsale(uint256)": {
+                "argument": {
+                    "_remainingContribution": "uint256"
+                },
+                "contract": {
+                    "communityRoundStartDate": "uint256",
+                    "crowdsaleStartDate": "uint256",
+                    "crowdsaleEndDate": "uint256",
+                    "ethToTokenConversion": "uint256",
+                    "maxCrowdsaleCap": "uint256",
+                    "maxCommunityCap": "uint256",
+                    "maxCommunityWithoutBonusCap": "uint256",
+                    "maxContribution": "uint256",
+                    "tokenSold": "uint256",
+                    "communityTokenSold": "uint256",
+                    "communityTokenWithoutBonusSold": "uint256",
+                    "crowdsaleTokenSold": "uint256",
+                    "ethRaisedWithoutCompany": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "companyTokens": "uint256"
+                }
+            },
+            "processTransaction(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "communityRoundStartDate": "uint256",
+                    "crowdsaleStartDate": "uint256",
+                    "crowdsaleEndDate": "uint256",
+                    "ethToTokenConversion": "uint256",
+                    "maxCrowdsaleCap": "uint256",
+                    "maxCommunityCap": "uint256",
+                    "maxCommunityWithoutBonusCap": "uint256",
+                    "maxContribution": "uint256",
+                    "tokenSold": "uint256",
+                    "communityTokenSold": "uint256",
+                    "communityTokenWithoutBonusSold": "uint256",
+                    "crowdsaleTokenSold": "uint256",
+                    "ethRaisedWithoutCompany": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "companyTokens": "uint256"
+                }
+            },
+            "WhiteListContributors(address[],bool[])": {
+                "argument": {
+                    "_contributorAddresses": "address[]",
+                    "_contributorCommunityRoundApproved": "bool[]"
+                },
+                "contract": {
+                    "communityRoundStartDate": "uint256",
+                    "crowdsaleStartDate": "uint256",
+                    "crowdsaleEndDate": "uint256",
+                    "ethToTokenConversion": "uint256",
+                    "maxCrowdsaleCap": "uint256",
+                    "maxCommunityCap": "uint256",
+                    "maxCommunityWithoutBonusCap": "uint256",
+                    "maxContribution": "uint256",
+                    "tokenSold": "uint256",
+                    "communityTokenSold": "uint256",
+                    "communityTokenWithoutBonusSold": "uint256",
+                    "crowdsaleTokenSold": "uint256",
+                    "ethRaisedWithoutCompany": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "companyTokens": "uint256"
+                }
+            },
+            "salvageTokensFromContract(address,address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "communityRoundStartDate": "uint256",
+                    "crowdsaleStartDate": "uint256",
+                    "crowdsaleEndDate": "uint256",
+                    "ethToTokenConversion": "uint256",
+                    "maxCrowdsaleCap": "uint256",
+                    "maxCommunityCap": "uint256",
+                    "maxCommunityWithoutBonusCap": "uint256",
+                    "maxContribution": "uint256",
+                    "tokenSold": "uint256",
+                    "communityTokenSold": "uint256",
+                    "communityTokenWithoutBonusSold": "uint256",
+                    "crowdsaleTokenSold": "uint256",
+                    "ethRaisedWithoutCompany": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "companyTokens": "uint256"
+                }
+            },
+            "setCompanyAddress(address)": {
+                "argument": {},
+                "contract": {
+                    "communityRoundStartDate": "uint256",
+                    "crowdsaleStartDate": "uint256",
+                    "crowdsaleEndDate": "uint256",
+                    "ethToTokenConversion": "uint256",
+                    "maxCrowdsaleCap": "uint256",
+                    "maxCommunityCap": "uint256",
+                    "maxCommunityWithoutBonusCap": "uint256",
+                    "maxContribution": "uint256",
+                    "tokenSold": "uint256",
+                    "communityTokenSold": "uint256",
+                    "communityTokenWithoutBonusSold": "uint256",
+                    "crowdsaleTokenSold": "uint256",
+                    "ethRaisedWithoutCompany": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "companyTokens": "uint256"
+                }
+            },
+            "setToken(address)": {
+                "argument": {},
+                "contract": {
+                    "communityRoundStartDate": "uint256",
+                    "crowdsaleStartDate": "uint256",
+                    "crowdsaleEndDate": "uint256",
+                    "ethToTokenConversion": "uint256",
+                    "maxCrowdsaleCap": "uint256",
+                    "maxCommunityCap": "uint256",
+                    "maxCommunityWithoutBonusCap": "uint256",
+                    "maxContribution": "uint256",
+                    "tokenSold": "uint256",
+                    "communityTokenSold": "uint256",
+                    "communityTokenWithoutBonusSold": "uint256",
+                    "crowdsaleTokenSold": "uint256",
+                    "ethRaisedWithoutCompany": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "companyTokens": "uint256"
+                }
+            },
+            "getToken()": {
+                "argument": {},
+                "contract": {
+                    "communityRoundStartDate": "uint256",
+                    "crowdsaleStartDate": "uint256",
+                    "crowdsaleEndDate": "uint256",
+                    "ethToTokenConversion": "uint256",
+                    "maxCrowdsaleCap": "uint256",
+                    "maxCommunityCap": "uint256",
+                    "maxCommunityWithoutBonusCap": "uint256",
+                    "maxContribution": "uint256",
+                    "tokenSold": "uint256",
+                    "communityTokenSold": "uint256",
+                    "communityTokenWithoutBonusSold": "uint256",
+                    "crowdsaleTokenSold": "uint256",
+                    "ethRaisedWithoutCompany": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "companyTokens": "uint256"
+                }
+            },
+            "claimCompanyTokens()": {
+                "argument": {},
+                "contract": {
+                    "communityRoundStartDate": "uint256",
+                    "crowdsaleStartDate": "uint256",
+                    "crowdsaleEndDate": "uint256",
+                    "ethToTokenConversion": "uint256",
+                    "maxCrowdsaleCap": "uint256",
+                    "maxCommunityCap": "uint256",
+                    "maxCommunityWithoutBonusCap": "uint256",
+                    "maxContribution": "uint256",
+                    "tokenSold": "uint256",
+                    "communityTokenSold": "uint256",
+                    "communityTokenWithoutBonusSold": "uint256",
+                    "crowdsaleTokenSold": "uint256",
+                    "ethRaisedWithoutCompany": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "companyTokens": "uint256"
+                }
+            },
+            "claimRemainingTokens()": {
+                "argument": {},
+                "contract": {
+                    "communityRoundStartDate": "uint256",
+                    "crowdsaleStartDate": "uint256",
+                    "crowdsaleEndDate": "uint256",
+                    "ethToTokenConversion": "uint256",
+                    "maxCrowdsaleCap": "uint256",
+                    "maxCommunityCap": "uint256",
+                    "maxCommunityWithoutBonusCap": "uint256",
+                    "maxContribution": "uint256",
+                    "tokenSold": "uint256",
+                    "communityTokenSold": "uint256",
+                    "communityTokenWithoutBonusSold": "uint256",
+                    "crowdsaleTokenSold": "uint256",
+                    "ethRaisedWithoutCompany": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "companyTokens": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                1751,
+                405
+            ],
+            "claimRemainingTokens()": [
+                1130,
+                185
+            ],
+            "setToken(address)": [
+                833,
+                75
+            ],
+            "getToken()": [
+                1000,
+                141
+            ],
+            "setCompanyAddress(address)": [
+                1153,
+                207
+            ],
+            "getState()": [
+                900,
+                97
+            ],
+            "WhiteListContributors(address[],bool[])": [
+                1818,
+                427
+            ],
+            "salvageTokensFromContract(address,address,uint256)": [
+                1489,
+                317
+            ],
+            "claimCompanyTokens()": [
+                1598,
+                339
+            ],
+            "acceptOwnership()": [
+                1220,
+                229
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump6373": [
+                "token.mintTokens(companyAddress, companyTokens)",
+                "token.mintTokens(companyAddress, companyTokens)"
+            ],
+            "block5857": [
+                "IERC20Token(_tokenAddress).transfer(_to, _amount)"
+            ],
+            "jump3403_0": [
+                "_contributor.transfer(refundAmount)",
+                "_contributor.transfer(refundAmount)"
+            ],
+            "block2963": [
+                "token.mintTokens(_contributor, tokenAmount)"
+            ],
+            "jump3403": [
+                "_contributor.transfer(refundAmount)",
+                "_contributor.transfer(refundAmount)"
+            ],
+            "jump5857": [
+                "IERC20Token(_tokenAddress).transfer(_to, _amount)",
+                "IERC20Token(_tokenAddress).transfer(_to, _amount)"
+            ],
+            "block3474_0": [
+                "companyAddress.transfer(newContribution)"
+            ],
+            "block4743": [
+                "token.mintTokens(companyAddress, remainingTokens)"
+            ],
+            "block2963_0": [
+                "token.mintTokens(_contributor, tokenAmount)"
+            ],
+            "jump4743": [
+                "token.mintTokens(companyAddress, remainingTokens)",
+                "token.mintTokens(companyAddress, remainingTokens)"
+            ],
+            "block3403": [
+                "_contributor.transfer(refundAmount)"
+            ],
+            "jump3474_0": [
+                "companyAddress.transfer(newContribution)",
+                "companyAddress.transfer(newContribution)"
+            ],
+            "block6373": [
+                "token.mintTokens(companyAddress, companyTokens)"
+            ],
+            "jump2963": [
+                "token.mintTokens(_contributor, tokenAmount)",
+                "token.mintTokens(_contributor, tokenAmount)"
+            ],
+            "jump3474": [
+                "companyAddress.transfer(newContribution)",
+                "companyAddress.transfer(newContribution)"
+            ],
+            "jump4434": [
+                "token.totalSupply()",
+                "token.totalSupply()"
+            ],
+            "block4434": [
+                "token.totalSupply()"
+            ],
+            "block3403_0": [
+                "_contributor.transfer(refundAmount)"
+            ],
+            "block3474": [
+                "companyAddress.transfer(newContribution)"
+            ],
+            "jump2963_0": [
+                "token.mintTokens(_contributor, tokenAmount)",
+                "token.mintTokens(_contributor, tokenAmount)"
+            ]
+        }
+    },
+    "StormCrowdsale": {
+        "function_list": [
+            "fallback()",
+            "getState()",
+            "checkCrowdsaleState()",
+            "calculateCommunity(address,uint256)",
+            "calculateCrowdsale(uint256)",
+            "processTransaction(address,uint256)",
+            "WhiteListContributors(address[],bool[])",
+            "salvageTokensFromContract(address,address,uint256)",
+            "setCompanyAddress(address)",
+            "setToken(address)",
+            "getToken()",
+            "claimCompanyTokens()",
+            "claimRemainingTokens()",
+            "Owned()",
+            "transferOwnership(address)",
+            "acceptOwnership()",
+            "StormCrowdsale()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "officialWebsite": "string",
+                    "officialFacebook": "string",
+                    "officialTelegram": "string",
+                    "officialEmail": "string"
+                }
+            },
+            "getState()": {
+                "argument": {},
+                "contract": {
+                    "officialWebsite": "string",
+                    "officialFacebook": "string",
+                    "officialTelegram": "string",
+                    "officialEmail": "string"
+                }
+            },
+            "checkCrowdsaleState()": {
+                "argument": {},
+                "contract": {
+                    "officialWebsite": "string",
+                    "officialFacebook": "string",
+                    "officialTelegram": "string",
+                    "officialEmail": "string"
+                }
+            },
+            "calculateCommunity(address,uint256)": {
+                "argument": {
+                    "_newContribution": "uint256"
+                },
+                "contract": {
+                    "officialWebsite": "string",
+                    "officialFacebook": "string",
+                    "officialTelegram": "string",
+                    "officialEmail": "string"
+                }
+            },
+            "calculateCrowdsale(uint256)": {
+                "argument": {
+                    "_remainingContribution": "uint256"
+                },
+                "contract": {
+                    "officialWebsite": "string",
+                    "officialFacebook": "string",
+                    "officialTelegram": "string",
+                    "officialEmail": "string"
+                }
+            },
+            "processTransaction(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "officialWebsite": "string",
+                    "officialFacebook": "string",
+                    "officialTelegram": "string",
+                    "officialEmail": "string"
+                }
+            },
+            "WhiteListContributors(address[],bool[])": {
+                "argument": {
+                    "_contributorAddresses": "address[]",
+                    "_contributorCommunityRoundApproved": "bool[]"
+                },
+                "contract": {
+                    "officialWebsite": "string",
+                    "officialFacebook": "string",
+                    "officialTelegram": "string",
+                    "officialEmail": "string"
+                }
+            },
+            "salvageTokensFromContract(address,address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "officialWebsite": "string",
+                    "officialFacebook": "string",
+                    "officialTelegram": "string",
+                    "officialEmail": "string"
+                }
+            },
+            "setCompanyAddress(address)": {
+                "argument": {},
+                "contract": {
+                    "officialWebsite": "string",
+                    "officialFacebook": "string",
+                    "officialTelegram": "string",
+                    "officialEmail": "string"
+                }
+            },
+            "setToken(address)": {
+                "argument": {},
+                "contract": {
+                    "officialWebsite": "string",
+                    "officialFacebook": "string",
+                    "officialTelegram": "string",
+                    "officialEmail": "string"
+                }
+            },
+            "getToken()": {
+                "argument": {},
+                "contract": {
+                    "officialWebsite": "string",
+                    "officialFacebook": "string",
+                    "officialTelegram": "string",
+                    "officialEmail": "string"
+                }
+            },
+            "claimCompanyTokens()": {
+                "argument": {},
+                "contract": {
+                    "officialWebsite": "string",
+                    "officialFacebook": "string",
+                    "officialTelegram": "string",
+                    "officialEmail": "string"
+                }
+            },
+            "claimRemainingTokens()": {
+                "argument": {},
+                "contract": {
+                    "officialWebsite": "string",
+                    "officialFacebook": "string",
+                    "officialTelegram": "string",
+                    "officialEmail": "string"
+                }
+            },
+            "Owned()": {
+                "argument": {},
+                "contract": {
+                    "officialWebsite": "string",
+                    "officialFacebook": "string",
+                    "officialTelegram": "string",
+                    "officialEmail": "string"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "officialWebsite": "string",
+                    "officialFacebook": "string",
+                    "officialTelegram": "string",
+                    "officialEmail": "string"
+                }
+            },
+            "acceptOwnership()": {
+                "argument": {},
+                "contract": {
+                    "officialWebsite": "string",
+                    "officialFacebook": "string",
+                    "officialTelegram": "string",
+                    "officialEmail": "string"
+                }
+            },
+            "StormCrowdsale()": {
+                "argument": {},
+                "contract": {
+                    "officialWebsite": "string",
+                    "officialFacebook": "string",
+                    "officialTelegram": "string",
+                    "officialEmail": "string"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                2371,
+                493
+            ],
+            "claimRemainingTokens()": [
+                1318,
+                207
+            ],
+            "setToken(address)": [
+                877,
+                75
+            ],
+            "getToken()": [
+                1044,
+                141
+            ],
+            "claimCompanyTokens()": [
+                2074,
+                405
+            ],
+            "setCompanyAddress(address)": [
+                1485,
+                251
+            ],
+            "getState()": [
+                944,
+                97
+            ],
+            "WhiteListContributors(address[],bool[])": [
+                2438,
+                515
+            ],
+            "salvageTokensFromContract(address,address,uint256)": [
+                1821,
+                361
+            ],
+            "acceptOwnership()": [
+                1552,
+                273
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump7467": [
+                "token.mintTokens(companyAddress, companyTokens)",
+                "token.mintTokens(companyAddress, companyTokens)"
+            ],
+            "jump5212": [
+                "token.totalSupply()",
+                "token.totalSupply()"
+            ],
+            "jump4023": [
+                "_contributor.transfer(refundAmount)",
+                "_contributor.transfer(refundAmount)"
+            ],
+            "jump5521": [
+                "token.mintTokens(companyAddress, remainingTokens)",
+                "token.mintTokens(companyAddress, remainingTokens)"
+            ],
+            "jump4023_0": [
+                "_contributor.transfer(refundAmount)",
+                "_contributor.transfer(refundAmount)"
+            ],
+            "jump3583": [
+                "token.mintTokens(_contributor, tokenAmount)",
+                "token.mintTokens(_contributor, tokenAmount)"
+            ],
+            "block6793": [
+                "IERC20Token(_tokenAddress).transfer(_to, _amount)"
+            ],
+            "jump4094_0": [
+                "companyAddress.transfer(newContribution)",
+                "companyAddress.transfer(newContribution)"
+            ],
+            "block4094": [
+                "companyAddress.transfer(newContribution)"
+            ],
+            "block7467": [
+                "token.mintTokens(companyAddress, companyTokens)"
+            ],
+            "block5521": [
+                "token.mintTokens(companyAddress, remainingTokens)"
+            ],
+            "block4023_0": [
+                "_contributor.transfer(refundAmount)"
+            ],
+            "block3583_0": [
+                "token.mintTokens(_contributor, tokenAmount)"
+            ],
+            "block4023": [
+                "_contributor.transfer(refundAmount)"
+            ],
+            "jump3583_0": [
+                "token.mintTokens(_contributor, tokenAmount)",
+                "token.mintTokens(_contributor, tokenAmount)"
+            ],
+            "block3583": [
+                "token.mintTokens(_contributor, tokenAmount)"
+            ],
+            "block5212": [
+                "token.totalSupply()"
+            ],
+            "jump6793": [
+                "IERC20Token(_tokenAddress).transfer(_to, _amount)",
+                "IERC20Token(_tokenAddress).transfer(_to, _amount)"
+            ],
+            "block4094_0": [
+                "companyAddress.transfer(newContribution)"
+            ],
+            "jump4094": [
+                "companyAddress.transfer(newContribution)",
+                "companyAddress.transfer(newContribution)"
+            ]
+        }
+    }
+}

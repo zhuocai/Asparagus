@@ -1,0 +1,103 @@
+{
+    "RoseCoin": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "buy()"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "buy()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                1121,
+                264
+            ],
+            "buy()": [
+                1548,
+                396
+            ],
+            "transfer(address,uint256)": [
+                1578,
+                418
+            ]
+        },
+        "block_CALL_mapping": {
+            "block3086": [
+                "owner.send(this.balance)"
+            ],
+            "jump4309": [
+                "owner.transfer(msg.value - remain)",
+                "owner.transfer(msg.value - remain)"
+            ],
+            "block4309": [
+                "owner.transfer(msg.value - remain)"
+            ],
+            "block4231": [
+                "msg.sender.transfer(remain)"
+            ],
+            "jump4231": [
+                "msg.sender.transfer(remain)",
+                "msg.sender.transfer(remain)"
+            ]
+        }
+    },
+    "IndirectBuyRSC": {
+        "function_list": [
+            "buy(address)",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "buy(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "buy(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump389": [
+                "abc.buy.value(this.balance)()",
+                "abc.buy.value(this.balance)()"
+            ],
+            "jump674": [
+                "abc.balanceOf(this)",
+                "abc.balanceOf(this)"
+            ],
+            "block389": [
+                "abc.buy.value(this.balance)()"
+            ],
+            "block866": [
+                "abc.transfer(_receiver, abc.balanceOf(this))"
+            ],
+            "block674": [
+                "abc.balanceOf(this)"
+            ],
+            "jump866": [
+                "abc.transfer(_receiver, abc.balanceOf(this))",
+                "abc.transfer(_receiver, abc.balanceOf(this))"
+            ]
+        }
+    }
+}

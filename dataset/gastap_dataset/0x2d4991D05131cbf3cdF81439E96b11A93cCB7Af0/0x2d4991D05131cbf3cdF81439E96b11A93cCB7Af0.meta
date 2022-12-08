@@ -1,0 +1,154 @@
+{
+    "Ownable": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "GoFreakingDoIt": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "setGoal(string,string,string,string)",
+            "getGoalsCount()",
+            "setEmailSent(uint256,bytes32)",
+            "setGoalSucceeded(uint256,bytes32)",
+            "setGoalFailed(uint256,bytes32)",
+            "fallback()",
+            "kill()"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {
+                    "activeGoals": "GoFreakingDoIt.Goal[]"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "activeGoals": "GoFreakingDoIt.Goal[]"
+                }
+            },
+            "setGoal(string,string,string,string)": {
+                "argument": {
+                    "_description": "string",
+                    "_supervisorEmail": "string",
+                    "_creatorEmail": "string",
+                    "_deadline": "string"
+                },
+                "contract": {
+                    "activeGoals": "GoFreakingDoIt.Goal[]"
+                }
+            },
+            "getGoalsCount()": {
+                "argument": {},
+                "contract": {
+                    "activeGoals": "GoFreakingDoIt.Goal[]"
+                }
+            },
+            "setEmailSent(uint256,bytes32)": {
+                "argument": {
+                    "_index": "uint256",
+                    "_hash": "bytes32"
+                },
+                "contract": {
+                    "activeGoals": "GoFreakingDoIt.Goal[]"
+                }
+            },
+            "setGoalSucceeded(uint256,bytes32)": {
+                "argument": {
+                    "_index": "uint256",
+                    "_hash": "bytes32"
+                },
+                "contract": {
+                    "activeGoals": "GoFreakingDoIt.Goal[]"
+                }
+            },
+            "setGoalFailed(uint256,bytes32)": {
+                "argument": {
+                    "_index": "uint256",
+                    "_hash": "bytes32"
+                },
+                "contract": {
+                    "activeGoals": "GoFreakingDoIt.Goal[]"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "activeGoals": "GoFreakingDoIt.Goal[]"
+                }
+            },
+            "kill()": {
+                "argument": {},
+                "contract": {
+                    "activeGoals": "GoFreakingDoIt.Goal[]"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "setGoalFailed(uint256,bytes32)": [
+                833,
+                141
+            ],
+            "setGoal(string,string,string,string)": [
+                1481,
+                185
+            ],
+            "kill()": [
+                810,
+                119
+            ],
+            "getGoalsCount()": [
+                2447,
+                251
+            ],
+            "setEmailSent(uint256,bytes32)": [
+                2388,
+                229
+            ],
+            "transferOwnership(address)": [
+                2490,
+                273
+            ],
+            "setGoalSucceeded(uint256,bytes32)": [
+                166,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump4066": [
+                "owner.transfer(goals[_hash].amount)",
+                "owner.transfer(goals[_hash].amount)"
+            ],
+            "jump2761": [
+                "goals[_hash].owner.transfer(goals[_hash].amount)",
+                "goals[_hash].owner.transfer(goals[_hash].amount)"
+            ],
+            "block2761": [
+                "goals[_hash].owner.transfer(goals[_hash].amount)"
+            ],
+            "block4066": [
+                "owner.transfer(goals[_hash].amount)"
+            ]
+        }
+    }
+}

@@ -1,0 +1,629 @@
+{
+    "Ownership": {
+        "function_list": [
+            "isOwner(address)",
+            "getOwner()",
+            "Ownership()",
+            "isOwner(address)",
+            "getOwner()"
+        ],
+        "initial_state": {
+            "isOwner(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "getOwner()": {
+                "argument": {},
+                "contract": {}
+            },
+            "Ownership()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "isOwner(address)": [
+                81,
+                75
+            ],
+            "getOwner()": [
+                172,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "TransferableOwnership": {
+        "function_list": [
+            "Ownership()",
+            "isOwner(address)",
+            "getOwner()",
+            "isOwner(address)",
+            "getOwner()",
+            "transferOwnership(address)",
+            "transferOwnership(address)"
+        ],
+        "initial_state": {
+            "Ownership()": {
+                "argument": {},
+                "contract": {}
+            },
+            "isOwner(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "getOwner()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "isOwner(address)": [
+                92,
+                75
+            ],
+            "getOwner()": [
+                183,
+                97
+            ],
+            "transferOwnership(address)": [
+                270,
+                119
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "TokenRetriever": {
+        "function_list": [
+            "retrieveTokens(address)",
+            "retrieveTokens(address)"
+        ],
+        "initial_state": {
+            "retrieveTokens(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "retrieveTokens(address)": [
+                70,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "block298": [
+                "tokenInstance.balanceOf(this)"
+            ],
+            "block531": [
+                "tokenInstance.transfer(msg.sender, tokenBalance)"
+            ],
+            "jump531": [
+                "tokenInstance.transfer(msg.sender, tokenBalance)",
+                "tokenInstance.transfer(msg.sender, tokenBalance)"
+            ],
+            "jump298": [
+                "tokenInstance.balanceOf(this)",
+                "tokenInstance.balanceOf(this)"
+            ]
+        }
+    },
+    "IToken": {
+        "function_list": [
+            "totalSupply()",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)"
+        ],
+        "initial_state": {
+            "totalSupply()": {
+                "argument": {},
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                319,
+                119
+            ],
+            "totalSupply()": [
+                147,
+                75
+            ],
+            "allowance(address,address)": [
+                901,
+                207
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "TokenChanger": {
+        "function_list": [
+            "isPaused()",
+            "pause()",
+            "resume()",
+            "isToken(address)",
+            "getLeftToken()",
+            "getRightToken()",
+            "getFee()",
+            "getRate()",
+            "getPrecision()",
+            "calculateFee(uint256)",
+            "TokenChanger(address,address,uint256,uint256,uint256,bool,bool)",
+            "isToken(address)",
+            "getLeftToken()",
+            "getRightToken()",
+            "getFee()",
+            "getRate()",
+            "getPrecision()",
+            "isPaused()",
+            "pause()",
+            "resume()",
+            "calculateFee(uint256)",
+            "convert(address,address,uint256)"
+        ],
+        "initial_state": {
+            "isPaused()": {
+                "argument": {},
+                "contract": {
+                    "rate": "uint256",
+                    "fee": "uint256",
+                    "precision": "uint256"
+                }
+            },
+            "pause()": {
+                "argument": {},
+                "contract": {
+                    "rate": "uint256",
+                    "fee": "uint256",
+                    "precision": "uint256"
+                }
+            },
+            "resume()": {
+                "argument": {},
+                "contract": {
+                    "rate": "uint256",
+                    "fee": "uint256",
+                    "precision": "uint256"
+                }
+            },
+            "isToken(address)": {
+                "argument": {},
+                "contract": {
+                    "rate": "uint256",
+                    "fee": "uint256",
+                    "precision": "uint256"
+                }
+            },
+            "getLeftToken()": {
+                "argument": {},
+                "contract": {
+                    "rate": "uint256",
+                    "fee": "uint256",
+                    "precision": "uint256"
+                }
+            },
+            "getRightToken()": {
+                "argument": {},
+                "contract": {
+                    "rate": "uint256",
+                    "fee": "uint256",
+                    "precision": "uint256"
+                }
+            },
+            "getFee()": {
+                "argument": {},
+                "contract": {
+                    "rate": "uint256",
+                    "fee": "uint256",
+                    "precision": "uint256"
+                }
+            },
+            "getRate()": {
+                "argument": {},
+                "contract": {
+                    "rate": "uint256",
+                    "fee": "uint256",
+                    "precision": "uint256"
+                }
+            },
+            "getPrecision()": {
+                "argument": {},
+                "contract": {
+                    "rate": "uint256",
+                    "fee": "uint256",
+                    "precision": "uint256"
+                }
+            },
+            "calculateFee(uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "rate": "uint256",
+                    "fee": "uint256",
+                    "precision": "uint256"
+                }
+            },
+            "TokenChanger(address,address,uint256,uint256,uint256,bool,bool)": {
+                "argument": {
+                    "_rate": "uint256",
+                    "_fee": "uint256",
+                    "_decimals": "uint256"
+                },
+                "contract": {
+                    "rate": "uint256",
+                    "fee": "uint256",
+                    "precision": "uint256"
+                }
+            },
+            "convert(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "rate": "uint256",
+                    "fee": "uint256",
+                    "precision": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "resume()": [
+                169,
+                75
+            ],
+            "pause()": [
+                500,
+                185
+            ],
+            "getRate()": [
+                457,
+                163
+            ],
+            "isToken(address)": [
+                192,
+                97
+            ],
+            "getRightToken()": [
+                370,
+                141
+            ],
+            "getFee()": [
+                678,
+                273
+            ],
+            "getLeftToken()": [
+                283,
+                119
+            ],
+            "isPaused()": [
+                631,
+                251
+            ],
+            "getPrecision()": [
+                523,
+                207
+            ],
+            "calculateFee(uint256)": [
+                566,
+                229
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "DRPSTokenConverter": {
+        "function_list": [
+            "retrieveTokens(address)",
+            "retrieveTokens(address)",
+            "transferOwnership(address)",
+            "Ownership()",
+            "isOwner(address)",
+            "getOwner()",
+            "isOwner(address)",
+            "getOwner()",
+            "transferOwnership(address)",
+            "isAuthenticating()",
+            "enableAuthentication()",
+            "disableAuthentication()",
+            "TokenChanger(address,address,uint256,uint256,uint256,bool,bool)",
+            "isToken(address)",
+            "getLeftToken()",
+            "getRightToken()",
+            "getFee()",
+            "getRate()",
+            "getPrecision()",
+            "isPaused()",
+            "pause()",
+            "resume()",
+            "calculateFee(uint256)",
+            "convert(address,address,uint256)",
+            "isPaused()",
+            "pause()",
+            "resume()",
+            "isToken(address)",
+            "getLeftToken()",
+            "getRightToken()",
+            "getFee()",
+            "getRate()",
+            "getPrecision()",
+            "calculateFee(uint256)",
+            "DRPSTokenConverter(address,address,address)",
+            "isAuthenticating()",
+            "enableAuthentication()",
+            "disableAuthentication()",
+            "pause()",
+            "resume()",
+            "requestConversion(uint256)",
+            "retrieveTokens(address)",
+            "fallback()"
+        ],
+        "initial_state": {
+            "retrieveTokens(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "Ownership()": {
+                "argument": {},
+                "contract": {}
+            },
+            "isOwner(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "getOwner()": {
+                "argument": {},
+                "contract": {}
+            },
+            "isAuthenticating()": {
+                "argument": {},
+                "contract": {}
+            },
+            "enableAuthentication()": {
+                "argument": {},
+                "contract": {}
+            },
+            "disableAuthentication()": {
+                "argument": {},
+                "contract": {}
+            },
+            "TokenChanger(address,address,uint256,uint256,uint256,bool,bool)": {
+                "argument": {
+                    "_rate": "uint256",
+                    "_fee": "uint256",
+                    "_decimals": "uint256"
+                },
+                "contract": {}
+            },
+            "isToken(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "getLeftToken()": {
+                "argument": {},
+                "contract": {}
+            },
+            "getRightToken()": {
+                "argument": {},
+                "contract": {}
+            },
+            "getFee()": {
+                "argument": {},
+                "contract": {}
+            },
+            "getRate()": {
+                "argument": {},
+                "contract": {}
+            },
+            "getPrecision()": {
+                "argument": {},
+                "contract": {}
+            },
+            "isPaused()": {
+                "argument": {},
+                "contract": {}
+            },
+            "pause()": {
+                "argument": {},
+                "contract": {}
+            },
+            "resume()": {
+                "argument": {},
+                "contract": {}
+            },
+            "calculateFee(uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "convert(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "DRPSTokenConverter(address,address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "requestConversion(uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "resume()": [
+                257,
+                75
+            ],
+            "pause()": [
+                679,
+                207
+            ],
+            "getRate()": [
+                636,
+                185
+            ],
+            "isToken(address)": [
+                280,
+                97
+            ],
+            "disableAuthentication()": [
+                967,
+                339
+            ],
+            "getRightToken()": [
+                549,
+                163
+            ],
+            "isOwner(address)": [
+                371,
+                119
+            ],
+            "retrieveTokens(address)": [
+                990,
+                361
+            ],
+            "enableAuthentication()": [
+                836,
+                273
+            ],
+            "calculateFee(uint256)": [
+                902,
+                317
+            ],
+            "getLeftToken()": [
+                462,
+                141
+            ],
+            "isPaused()": [
+                1057,
+                383
+            ],
+            "getFee()": [
+                1149,
+                427
+            ],
+            "getPrecision()": [
+                859,
+                295
+            ],
+            "isAuthenticating()": [
+                789,
+                251
+            ],
+            "transferOwnership(address)": [
+                1192,
+                449
+            ],
+            "getOwner()": [
+                702,
+                229
+            ],
+            "requestConversion(uint256)": [
+                1104,
+                405
+            ]
+        },
+        "block_CALL_mapping": {
+            "block3371": [
+                "tokenInstance.balanceOf(this)"
+            ],
+            "jump4027": [
+                "tokenRight.issue(_sender, amountToIssue - calculateFee(amountToIssue))",
+                "tokenRight.issue(_sender, amountToIssue - calculateFee(amountToIssue))"
+            ],
+            "block4682": [
+                "tokenLeft.issue(_sender, amountToIssue - calculateFee(amountToIssue))"
+            ],
+            "jump2906": [
+                "drpToken.transferFrom(sender, this, _value)",
+                "drpToken.transferFrom(sender, this, _value)"
+            ],
+            "jump4960": [
+                "tokenRight.burn(this, _value)",
+                "tokenRight.burn(this, _value)"
+            ],
+            "jump4304": [
+                "tokenLeft.burn(this, _value)",
+                "tokenLeft.burn(this, _value)"
+            ],
+            "jump4682": [
+                "tokenLeft.issue(_sender, amountToIssue - calculateFee(amountToIssue))",
+                "tokenLeft.issue(_sender, amountToIssue - calculateFee(amountToIssue))"
+            ],
+            "block3604": [
+                "tokenInstance.transfer(msg.sender, tokenBalance)"
+            ],
+            "block4304": [
+                "tokenLeft.burn(this, _value)"
+            ],
+            "block4960": [
+                "tokenRight.burn(this, _value)"
+            ],
+            "block4027": [
+                "tokenRight.issue(_sender, amountToIssue - calculateFee(amountToIssue))"
+            ],
+            "jump2610": [
+                "whitelist.authenticate(sender)",
+                "whitelist.authenticate(sender)"
+            ],
+            "jump3604": [
+                "tokenInstance.transfer(msg.sender, tokenBalance)",
+                "tokenInstance.transfer(msg.sender, tokenBalance)"
+            ],
+            "block2610": [
+                "whitelist.authenticate(sender)"
+            ],
+            "jump3371": [
+                "tokenInstance.balanceOf(this)",
+                "tokenInstance.balanceOf(this)"
+            ],
+            "block2906": [
+                "drpToken.transferFrom(sender, this, _value)"
+            ]
+        }
+    }
+}

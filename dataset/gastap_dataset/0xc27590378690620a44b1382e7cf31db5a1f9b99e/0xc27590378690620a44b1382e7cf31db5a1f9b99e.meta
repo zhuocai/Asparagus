@@ -1,0 +1,69 @@
+{
+    "Owned": {
+        "function_list": [],
+        "initial_state": {},
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "HodlContract": {
+        "function_list": [
+            "HodlEth(address,uint256)",
+            "Realize(uint256)",
+            "FindID(address)"
+        ],
+        "initial_state": {
+            "HodlEth(address,uint256)": {
+                "argument": {
+                    "daysWait": "uint256"
+                },
+                "contract": {
+                    "hodls": "HodlContract.HodlStruct[]"
+                }
+            },
+            "Realize(uint256)": {
+                "argument": {
+                    "hodlID": "uint256"
+                },
+                "contract": {
+                    "hodls": "HodlContract.HodlStruct[]"
+                }
+            },
+            "FindID(address)": {
+                "argument": {},
+                "contract": {
+                    "hodls": "HodlContract.HodlStruct[]"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "HodlEth(address,uint256)": [
+                103,
+                75
+            ],
+            "Realize(uint256)": [
+                408,
+                141
+            ],
+            "FindID(address)": [
+                321,
+                119
+            ]
+        },
+        "block_CALL_mapping": {
+            "block1466": [
+                "msg.sender.transfer(p.amount)"
+            ],
+            "block565": [
+                "FeeAddress.transfer(FeeAmount)"
+            ],
+            "jump565": [
+                "FeeAddress.transfer(FeeAmount)",
+                "FeeAddress.transfer(FeeAmount)"
+            ],
+            "jump1466": [
+                "msg.sender.transfer(p.amount)",
+                "msg.sender.transfer(p.amount)"
+            ]
+        }
+    }
+}

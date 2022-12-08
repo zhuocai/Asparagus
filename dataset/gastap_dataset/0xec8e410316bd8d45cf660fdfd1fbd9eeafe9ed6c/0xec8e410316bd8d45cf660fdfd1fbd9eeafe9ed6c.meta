@@ -1,0 +1,4372 @@
+{
+    "Ownable": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Pausable": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "pause()",
+            "unpause()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "pause()": {
+                "argument": {},
+                "contract": {}
+            },
+            "unpause()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "pause()": [
+                208,
+                119
+            ],
+            "unpause()": [
+                114,
+                75
+            ],
+            "transferOwnership(address)": [
+                342,
+                163
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "ClockAuctionBase": {
+        "function_list": [
+            "_owns(address,uint256)",
+            "_escrow(address,uint256)",
+            "_transfer(address,uint256)",
+            "_addAuction(uint256,ClockAuctionBase.Auction)",
+            "_cancelAuction(uint256,address)",
+            "_bid(uint256,uint256)",
+            "_removeAuction(uint256)",
+            "_isOnAuction(ClockAuctionBase.Auction)",
+            "_currentPrice(ClockAuctionBase.Auction)",
+            "_computeCurrentPrice(uint256,uint256,uint256,uint256)",
+            "_computeCut(uint256)"
+        ],
+        "initial_state": {
+            "_owns(address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "ownerCut": "uint256"
+                }
+            },
+            "_escrow(address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "ownerCut": "uint256"
+                }
+            },
+            "_transfer(address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "ownerCut": "uint256"
+                }
+            },
+            "_addAuction(uint256,ClockAuctionBase.Auction)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "ownerCut": "uint256"
+                }
+            },
+            "_cancelAuction(uint256,address)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "ownerCut": "uint256"
+                }
+            },
+            "_bid(uint256,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256",
+                    "_bidAmount": "uint256"
+                },
+                "contract": {
+                    "ownerCut": "uint256"
+                }
+            },
+            "_removeAuction(uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "ownerCut": "uint256"
+                }
+            },
+            "_isOnAuction(ClockAuctionBase.Auction)": {
+                "argument": {},
+                "contract": {
+                    "ownerCut": "uint256"
+                }
+            },
+            "_currentPrice(ClockAuctionBase.Auction)": {
+                "argument": {},
+                "contract": {
+                    "ownerCut": "uint256"
+                }
+            },
+            "_computeCurrentPrice(uint256,uint256,uint256,uint256)": {
+                "argument": {
+                    "_startingPrice": "uint256",
+                    "_endingPrice": "uint256",
+                    "_duration": "uint256",
+                    "_secondsPassed": "uint256"
+                },
+                "contract": {
+                    "ownerCut": "uint256"
+                }
+            },
+            "_computeCut(uint256)": {
+                "argument": {
+                    "_price": "uint256"
+                },
+                "contract": {
+                    "ownerCut": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "ClockAuction": {
+        "function_list": [
+            "_owns(address,uint256)",
+            "_escrow(address,uint256)",
+            "_transfer(address,uint256)",
+            "_addAuction(uint256,ClockAuctionBase.Auction)",
+            "_cancelAuction(uint256,address)",
+            "_bid(uint256,uint256)",
+            "_removeAuction(uint256)",
+            "_isOnAuction(ClockAuctionBase.Auction)",
+            "_currentPrice(ClockAuctionBase.Auction)",
+            "_computeCurrentPrice(uint256,uint256,uint256,uint256)",
+            "_computeCut(uint256)",
+            "pause()",
+            "unpause()",
+            "Ownable()",
+            "transferOwnership(address)",
+            "ClockAuction(address,uint256)",
+            "withdrawBalance()",
+            "createAuction(uint256,uint256,uint256,uint256,address)",
+            "bid(uint256)",
+            "cancelAuction(uint256)",
+            "cancelAuctionWhenPaused(uint256)",
+            "getAuction(uint256)",
+            "getCurrentPrice(uint256)",
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "_owns(address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "InterfaceSignature_ERC721": "bytes4"
+                }
+            },
+            "_escrow(address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "InterfaceSignature_ERC721": "bytes4"
+                }
+            },
+            "_transfer(address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "InterfaceSignature_ERC721": "bytes4"
+                }
+            },
+            "_addAuction(uint256,ClockAuctionBase.Auction)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "InterfaceSignature_ERC721": "bytes4"
+                }
+            },
+            "_cancelAuction(uint256,address)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "InterfaceSignature_ERC721": "bytes4"
+                }
+            },
+            "_bid(uint256,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256",
+                    "_bidAmount": "uint256"
+                },
+                "contract": {
+                    "InterfaceSignature_ERC721": "bytes4"
+                }
+            },
+            "_removeAuction(uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "InterfaceSignature_ERC721": "bytes4"
+                }
+            },
+            "_isOnAuction(ClockAuctionBase.Auction)": {
+                "argument": {},
+                "contract": {
+                    "InterfaceSignature_ERC721": "bytes4"
+                }
+            },
+            "_currentPrice(ClockAuctionBase.Auction)": {
+                "argument": {},
+                "contract": {
+                    "InterfaceSignature_ERC721": "bytes4"
+                }
+            },
+            "_computeCurrentPrice(uint256,uint256,uint256,uint256)": {
+                "argument": {
+                    "_startingPrice": "uint256",
+                    "_endingPrice": "uint256",
+                    "_duration": "uint256",
+                    "_secondsPassed": "uint256"
+                },
+                "contract": {
+                    "InterfaceSignature_ERC721": "bytes4"
+                }
+            },
+            "_computeCut(uint256)": {
+                "argument": {
+                    "_price": "uint256"
+                },
+                "contract": {
+                    "InterfaceSignature_ERC721": "bytes4"
+                }
+            },
+            "pause()": {
+                "argument": {},
+                "contract": {
+                    "InterfaceSignature_ERC721": "bytes4"
+                }
+            },
+            "unpause()": {
+                "argument": {},
+                "contract": {
+                    "InterfaceSignature_ERC721": "bytes4"
+                }
+            },
+            "Ownable()": {
+                "argument": {},
+                "contract": {
+                    "InterfaceSignature_ERC721": "bytes4"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "InterfaceSignature_ERC721": "bytes4"
+                }
+            },
+            "ClockAuction(address,uint256)": {
+                "argument": {
+                    "_cut": "uint256"
+                },
+                "contract": {
+                    "InterfaceSignature_ERC721": "bytes4"
+                }
+            },
+            "withdrawBalance()": {
+                "argument": {},
+                "contract": {
+                    "InterfaceSignature_ERC721": "bytes4"
+                }
+            },
+            "createAuction(uint256,uint256,uint256,uint256,address)": {
+                "argument": {
+                    "_tokenId": "uint256",
+                    "_startingPrice": "uint256",
+                    "_endingPrice": "uint256",
+                    "_duration": "uint256"
+                },
+                "contract": {
+                    "InterfaceSignature_ERC721": "bytes4"
+                }
+            },
+            "bid(uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "InterfaceSignature_ERC721": "bytes4"
+                }
+            },
+            "cancelAuction(uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "InterfaceSignature_ERC721": "bytes4"
+                }
+            },
+            "cancelAuctionWhenPaused(uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "InterfaceSignature_ERC721": "bytes4"
+                }
+            },
+            "getAuction(uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "InterfaceSignature_ERC721": "bytes4"
+                }
+            },
+            "getCurrentPrice(uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "InterfaceSignature_ERC721": "bytes4"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "InterfaceSignature_ERC721": "bytes4"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "pause()": [
+                649,
+                229
+            ],
+            "unpause()": [
+                320,
+                97
+            ],
+            "createAuction(uint256,uint256,uint256,uint256,address)": [
+                213,
+                75
+            ],
+            "bid(uint256)": [
+                367,
+                119
+            ],
+            "getAuction(uint256)": [
+                469,
+                185
+            ],
+            "cancelAuction(uint256)": [
+                828,
+                295
+            ],
+            "cancelAuctionWhenPaused(uint256)": [
+                696,
+                251
+            ],
+            "withdrawBalance()": [
+                446,
+                163
+            ],
+            "transferOwnership(address)": [
+                1025,
+                361
+            ],
+            "getCurrentPrice(uint256)": [
+                873,
+                317
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump4390": [
+                "msg.sender.transfer(bidExcess)",
+                "msg.sender.transfer(bidExcess)"
+            ],
+            "block4793_0": [
+                "nonFungibleContract.transfer(_receiver, _tokenId)"
+            ],
+            "block4793": [
+                "nonFungibleContract.transfer(_receiver, _tokenId)"
+            ],
+            "jump4793": [
+                "nonFungibleContract.transfer(_receiver, _tokenId)",
+                "nonFungibleContract.transfer(_receiver, _tokenId)"
+            ],
+            "jump4311": [
+                "seller.transfer(sellerProceeds)",
+                "seller.transfer(sellerProceeds)"
+            ],
+            "block4793_1": [
+                "nonFungibleContract.transfer(_receiver, _tokenId)"
+            ],
+            "jump4793_0": [
+                "nonFungibleContract.transfer(_receiver, _tokenId)",
+                "nonFungibleContract.transfer(_receiver, _tokenId)"
+            ],
+            "jump4793_1": [
+                "nonFungibleContract.transfer(_receiver, _tokenId)",
+                "nonFungibleContract.transfer(_receiver, _tokenId)"
+            ],
+            "block1837": [
+                "nftAddress.transfer(this.balance)"
+            ],
+            "jump3654": [
+                "nonFungibleContract.transferFrom(_owner, this, _tokenId)",
+                "nonFungibleContract.transferFrom(_owner, this, _tokenId)"
+            ],
+            "block3654": [
+                "nonFungibleContract.transferFrom(_owner, this, _tokenId)"
+            ],
+            "jump1837": [
+                "nftAddress.transfer(this.balance)",
+                "nftAddress.transfer(this.balance)"
+            ],
+            "block3315": [
+                "nonFungibleContract.ownerOf(_tokenId)"
+            ],
+            "block4311": [
+                "seller.transfer(sellerProceeds)"
+            ],
+            "jump3315": [
+                "nonFungibleContract.ownerOf(_tokenId)",
+                "nonFungibleContract.ownerOf(_tokenId)"
+            ],
+            "block4390": [
+                "msg.sender.transfer(bidExcess)"
+            ]
+        }
+    },
+    "GeneScience": {
+        "function_list": [
+            "isGeneScience()",
+            "random(uint64)",
+            "randomBetween(uint32,uint32)",
+            "randomCode()",
+            "getBaseStats(uint8)",
+            "sqrt(uint256)",
+            "maxCP(uint256,uint16)",
+            "getCode(uint256)",
+            "getAttack(uint256)",
+            "getDefense(uint256)",
+            "getStamina(uint256)",
+            "mixGenes(uint256,uint256,uint256)",
+            "randomGenes()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "isGeneScience()": {
+                "argument": {},
+                "contract": {
+                    "_seed": "uint64"
+                }
+            },
+            "random(uint64)": {
+                "argument": {
+                    "upper": "uint64"
+                },
+                "contract": {
+                    "_seed": "uint64"
+                }
+            },
+            "randomBetween(uint32,uint32)": {
+                "argument": {
+                    "a": "uint32",
+                    "b": "uint32"
+                },
+                "contract": {
+                    "_seed": "uint64"
+                }
+            },
+            "randomCode()": {
+                "argument": {},
+                "contract": {
+                    "_seed": "uint64"
+                }
+            },
+            "getBaseStats(uint8)": {
+                "argument": {
+                    "id": "uint8"
+                },
+                "contract": {
+                    "_seed": "uint64"
+                }
+            },
+            "sqrt(uint256)": {
+                "argument": {
+                    "x": "uint256"
+                },
+                "contract": {
+                    "_seed": "uint64"
+                }
+            },
+            "maxCP(uint256,uint16)": {
+                "argument": {
+                    "genes": "uint256",
+                    "generation": "uint16"
+                },
+                "contract": {
+                    "_seed": "uint64"
+                }
+            },
+            "getCode(uint256)": {
+                "argument": {
+                    "genes": "uint256"
+                },
+                "contract": {
+                    "_seed": "uint64"
+                }
+            },
+            "getAttack(uint256)": {
+                "argument": {
+                    "genes": "uint256"
+                },
+                "contract": {
+                    "_seed": "uint64"
+                }
+            },
+            "getDefense(uint256)": {
+                "argument": {
+                    "genes": "uint256"
+                },
+                "contract": {
+                    "_seed": "uint64"
+                }
+            },
+            "getStamina(uint256)": {
+                "argument": {
+                    "genes": "uint256"
+                },
+                "contract": {
+                    "_seed": "uint64"
+                }
+            },
+            "mixGenes(uint256,uint256,uint256)": {
+                "argument": {
+                    "genes1": "uint256",
+                    "genes2": "uint256",
+                    "targetBlock": "uint256"
+                },
+                "contract": {
+                    "_seed": "uint64"
+                }
+            },
+            "randomGenes()": {
+                "argument": {},
+                "contract": {
+                    "_seed": "uint64"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "mixGenes(uint256,uint256,uint256)": [
+                158,
+                75
+            ],
+            "maxCP(uint256,uint16)": [
+                243,
+                97
+            ],
+            "getStamina(uint256)": [
+                684,
+                229
+            ],
+            "getDefense(uint256)": [
+                755,
+                251
+            ],
+            "getBaseStats(uint8)": [
+                381,
+                141
+            ],
+            "getAttack(uint256)": [
+                613,
+                207
+            ],
+            "isGeneScience()": [
+                334,
+                119
+            ],
+            "getCode(uint256)": [
+                499,
+                163
+            ],
+            "randomGenes()": [
+                570,
+                185
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "SaleClockAuction": {
+        "function_list": [
+            "ClockAuction(address,uint256)",
+            "withdrawBalance()",
+            "createAuction(uint256,uint256,uint256,uint256,address)",
+            "bid(uint256)",
+            "cancelAuction(uint256)",
+            "cancelAuctionWhenPaused(uint256)",
+            "getAuction(uint256)",
+            "getCurrentPrice(uint256)",
+            "_owns(address,uint256)",
+            "_escrow(address,uint256)",
+            "_transfer(address,uint256)",
+            "_addAuction(uint256,ClockAuctionBase.Auction)",
+            "_cancelAuction(uint256,address)",
+            "_bid(uint256,uint256)",
+            "_removeAuction(uint256)",
+            "_isOnAuction(ClockAuctionBase.Auction)",
+            "_currentPrice(ClockAuctionBase.Auction)",
+            "_computeCurrentPrice(uint256,uint256,uint256,uint256)",
+            "_computeCut(uint256)",
+            "pause()",
+            "unpause()",
+            "Ownable()",
+            "transferOwnership(address)",
+            "SaleClockAuction(address,uint256)",
+            "createAuction(uint256,uint256,uint256,uint256,address)",
+            "bid(uint256)",
+            "averageGen0SalePrice()",
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "ClockAuction(address,uint256)": {
+                "argument": {
+                    "_cut": "uint256"
+                },
+                "contract": {
+                    "gen0SaleCount": "uint256",
+                    "lastGen0SalePrices": "uint256[5]"
+                }
+            },
+            "withdrawBalance()": {
+                "argument": {},
+                "contract": {
+                    "gen0SaleCount": "uint256",
+                    "lastGen0SalePrices": "uint256[5]"
+                }
+            },
+            "createAuction(uint256,uint256,uint256,uint256,address)": {
+                "argument": {
+                    "_tokenId": "uint256",
+                    "_startingPrice": "uint256",
+                    "_endingPrice": "uint256",
+                    "_duration": "uint256"
+                },
+                "contract": {
+                    "gen0SaleCount": "uint256",
+                    "lastGen0SalePrices": "uint256[5]"
+                }
+            },
+            "bid(uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "gen0SaleCount": "uint256",
+                    "lastGen0SalePrices": "uint256[5]"
+                }
+            },
+            "cancelAuction(uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "gen0SaleCount": "uint256",
+                    "lastGen0SalePrices": "uint256[5]"
+                }
+            },
+            "cancelAuctionWhenPaused(uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "gen0SaleCount": "uint256",
+                    "lastGen0SalePrices": "uint256[5]"
+                }
+            },
+            "getAuction(uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "gen0SaleCount": "uint256",
+                    "lastGen0SalePrices": "uint256[5]"
+                }
+            },
+            "getCurrentPrice(uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "gen0SaleCount": "uint256",
+                    "lastGen0SalePrices": "uint256[5]"
+                }
+            },
+            "_owns(address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "gen0SaleCount": "uint256",
+                    "lastGen0SalePrices": "uint256[5]"
+                }
+            },
+            "_escrow(address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "gen0SaleCount": "uint256",
+                    "lastGen0SalePrices": "uint256[5]"
+                }
+            },
+            "_transfer(address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "gen0SaleCount": "uint256",
+                    "lastGen0SalePrices": "uint256[5]"
+                }
+            },
+            "_addAuction(uint256,ClockAuctionBase.Auction)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "gen0SaleCount": "uint256",
+                    "lastGen0SalePrices": "uint256[5]"
+                }
+            },
+            "_cancelAuction(uint256,address)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "gen0SaleCount": "uint256",
+                    "lastGen0SalePrices": "uint256[5]"
+                }
+            },
+            "_bid(uint256,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256",
+                    "_bidAmount": "uint256"
+                },
+                "contract": {
+                    "gen0SaleCount": "uint256",
+                    "lastGen0SalePrices": "uint256[5]"
+                }
+            },
+            "_removeAuction(uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "gen0SaleCount": "uint256",
+                    "lastGen0SalePrices": "uint256[5]"
+                }
+            },
+            "_isOnAuction(ClockAuctionBase.Auction)": {
+                "argument": {},
+                "contract": {
+                    "gen0SaleCount": "uint256",
+                    "lastGen0SalePrices": "uint256[5]"
+                }
+            },
+            "_currentPrice(ClockAuctionBase.Auction)": {
+                "argument": {},
+                "contract": {
+                    "gen0SaleCount": "uint256",
+                    "lastGen0SalePrices": "uint256[5]"
+                }
+            },
+            "_computeCurrentPrice(uint256,uint256,uint256,uint256)": {
+                "argument": {
+                    "_startingPrice": "uint256",
+                    "_endingPrice": "uint256",
+                    "_duration": "uint256",
+                    "_secondsPassed": "uint256"
+                },
+                "contract": {
+                    "gen0SaleCount": "uint256",
+                    "lastGen0SalePrices": "uint256[5]"
+                }
+            },
+            "_computeCut(uint256)": {
+                "argument": {
+                    "_price": "uint256"
+                },
+                "contract": {
+                    "gen0SaleCount": "uint256",
+                    "lastGen0SalePrices": "uint256[5]"
+                }
+            },
+            "pause()": {
+                "argument": {},
+                "contract": {
+                    "gen0SaleCount": "uint256",
+                    "lastGen0SalePrices": "uint256[5]"
+                }
+            },
+            "unpause()": {
+                "argument": {},
+                "contract": {
+                    "gen0SaleCount": "uint256",
+                    "lastGen0SalePrices": "uint256[5]"
+                }
+            },
+            "Ownable()": {
+                "argument": {},
+                "contract": {
+                    "gen0SaleCount": "uint256",
+                    "lastGen0SalePrices": "uint256[5]"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "gen0SaleCount": "uint256",
+                    "lastGen0SalePrices": "uint256[5]"
+                }
+            },
+            "SaleClockAuction(address,uint256)": {
+                "argument": {
+                    "_cut": "uint256"
+                },
+                "contract": {
+                    "gen0SaleCount": "uint256",
+                    "lastGen0SalePrices": "uint256[5]"
+                }
+            },
+            "averageGen0SalePrice()": {
+                "argument": {},
+                "contract": {
+                    "gen0SaleCount": "uint256",
+                    "lastGen0SalePrices": "uint256[5]"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "gen0SaleCount": "uint256",
+                    "lastGen0SalePrices": "uint256[5]"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "pause()": [
+                758,
+                251
+            ],
+            "averageGen0SalePrice()": [
+                1224,
+                427
+            ],
+            "unpause()": [
+                364,
+                97
+            ],
+            "createAuction(uint256,uint256,uint256,uint256,address)": [
+                257,
+                75
+            ],
+            "bid(uint256)": [
+                411,
+                119
+            ],
+            "getAuction(uint256)": [
+                578,
+                207
+            ],
+            "cancelAuction(uint256)": [
+                1027,
+                361
+            ],
+            "cancelAuctionWhenPaused(uint256)": [
+                852,
+                295
+            ],
+            "withdrawBalance()": [
+                555,
+                185
+            ],
+            "transferOwnership(address)": [
+                1267,
+                449
+            ],
+            "getCurrentPrice(uint256)": [
+                1072,
+                383
+            ]
+        },
+        "block_CALL_mapping": {
+            "block5119_1": [
+                "nonFungibleContract.transfer(_receiver, _tokenId)"
+            ],
+            "block5119_0": [
+                "nonFungibleContract.transfer(_receiver, _tokenId)"
+            ],
+            "block5119": [
+                "nonFungibleContract.transfer(_receiver, _tokenId)"
+            ],
+            "block3980": [
+                "nonFungibleContract.transferFrom(_owner, this, _tokenId)"
+            ],
+            "jump4716": [
+                "msg.sender.transfer(bidExcess)",
+                "msg.sender.transfer(bidExcess)"
+            ],
+            "block4716": [
+                "msg.sender.transfer(bidExcess)"
+            ],
+            "block2322": [
+                "nftAddress.transfer(this.balance)"
+            ],
+            "jump2322": [
+                "nftAddress.transfer(this.balance)",
+                "nftAddress.transfer(this.balance)"
+            ],
+            "jump5119_1": [
+                "nonFungibleContract.transfer(_receiver, _tokenId)",
+                "nonFungibleContract.transfer(_receiver, _tokenId)"
+            ],
+            "jump5119_0": [
+                "nonFungibleContract.transfer(_receiver, _tokenId)",
+                "nonFungibleContract.transfer(_receiver, _tokenId)"
+            ],
+            "jump4637": [
+                "seller.transfer(sellerProceeds)",
+                "seller.transfer(sellerProceeds)"
+            ],
+            "block4637": [
+                "seller.transfer(sellerProceeds)"
+            ],
+            "jump3980": [
+                "nonFungibleContract.transferFrom(_owner, this, _tokenId)",
+                "nonFungibleContract.transferFrom(_owner, this, _tokenId)"
+            ],
+            "jump5119": [
+                "nonFungibleContract.transfer(_receiver, _tokenId)",
+                "nonFungibleContract.transfer(_receiver, _tokenId)"
+            ]
+        }
+    },
+    "SiringClockAuction": {
+        "function_list": [
+            "ClockAuction(address,uint256)",
+            "withdrawBalance()",
+            "createAuction(uint256,uint256,uint256,uint256,address)",
+            "bid(uint256)",
+            "cancelAuction(uint256)",
+            "cancelAuctionWhenPaused(uint256)",
+            "getAuction(uint256)",
+            "getCurrentPrice(uint256)",
+            "_owns(address,uint256)",
+            "_escrow(address,uint256)",
+            "_transfer(address,uint256)",
+            "_addAuction(uint256,ClockAuctionBase.Auction)",
+            "_cancelAuction(uint256,address)",
+            "_bid(uint256,uint256)",
+            "_removeAuction(uint256)",
+            "_isOnAuction(ClockAuctionBase.Auction)",
+            "_currentPrice(ClockAuctionBase.Auction)",
+            "_computeCurrentPrice(uint256,uint256,uint256,uint256)",
+            "_computeCut(uint256)",
+            "pause()",
+            "unpause()",
+            "Ownable()",
+            "transferOwnership(address)",
+            "SiringClockAuction(address,uint256)",
+            "createAuction(uint256,uint256,uint256,uint256,address)",
+            "bid(uint256)",
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "ClockAuction(address,uint256)": {
+                "argument": {
+                    "_cut": "uint256"
+                },
+                "contract": {}
+            },
+            "withdrawBalance()": {
+                "argument": {},
+                "contract": {}
+            },
+            "createAuction(uint256,uint256,uint256,uint256,address)": {
+                "argument": {
+                    "_tokenId": "uint256",
+                    "_startingPrice": "uint256",
+                    "_endingPrice": "uint256",
+                    "_duration": "uint256"
+                },
+                "contract": {}
+            },
+            "bid(uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {}
+            },
+            "cancelAuction(uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {}
+            },
+            "cancelAuctionWhenPaused(uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {}
+            },
+            "getAuction(uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {}
+            },
+            "getCurrentPrice(uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {}
+            },
+            "_owns(address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {}
+            },
+            "_escrow(address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {}
+            },
+            "_transfer(address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {}
+            },
+            "_addAuction(uint256,ClockAuctionBase.Auction)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {}
+            },
+            "_cancelAuction(uint256,address)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {}
+            },
+            "_bid(uint256,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256",
+                    "_bidAmount": "uint256"
+                },
+                "contract": {}
+            },
+            "_removeAuction(uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {}
+            },
+            "_isOnAuction(ClockAuctionBase.Auction)": {
+                "argument": {},
+                "contract": {}
+            },
+            "_currentPrice(ClockAuctionBase.Auction)": {
+                "argument": {},
+                "contract": {}
+            },
+            "_computeCurrentPrice(uint256,uint256,uint256,uint256)": {
+                "argument": {
+                    "_startingPrice": "uint256",
+                    "_endingPrice": "uint256",
+                    "_duration": "uint256",
+                    "_secondsPassed": "uint256"
+                },
+                "contract": {}
+            },
+            "_computeCut(uint256)": {
+                "argument": {
+                    "_price": "uint256"
+                },
+                "contract": {}
+            },
+            "pause()": {
+                "argument": {},
+                "contract": {}
+            },
+            "unpause()": {
+                "argument": {},
+                "contract": {}
+            },
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "SiringClockAuction(address,uint256)": {
+                "argument": {
+                    "_cut": "uint256"
+                },
+                "contract": {}
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "pause()": [
+                707,
+                251
+            ],
+            "unpause()": [
+                331,
+                97
+            ],
+            "createAuction(uint256,uint256,uint256,uint256,address)": [
+                224,
+                75
+            ],
+            "bid(uint256)": [
+                378,
+                119
+            ],
+            "getAuction(uint256)": [
+                527,
+                207
+            ],
+            "cancelAuction(uint256)": [
+                886,
+                317
+            ],
+            "cancelAuctionWhenPaused(uint256)": [
+                754,
+                273
+            ],
+            "withdrawBalance()": [
+                457,
+                163
+            ],
+            "transferOwnership(address)": [
+                1083,
+                383
+            ],
+            "getCurrentPrice(uint256)": [
+                931,
+                339
+            ]
+        },
+        "block_CALL_mapping": {
+            "block4777": [
+                "nonFungibleContract.transfer(_receiver, _tokenId)"
+            ],
+            "jump3638": [
+                "nonFungibleContract.transferFrom(_owner, this, _tokenId)",
+                "nonFungibleContract.transferFrom(_owner, this, _tokenId)"
+            ],
+            "jump4777_0": [
+                "nonFungibleContract.transfer(_receiver, _tokenId)",
+                "nonFungibleContract.transfer(_receiver, _tokenId)"
+            ],
+            "jump4777_1": [
+                "nonFungibleContract.transfer(_receiver, _tokenId)",
+                "nonFungibleContract.transfer(_receiver, _tokenId)"
+            ],
+            "jump4295": [
+                "seller.transfer(sellerProceeds)",
+                "seller.transfer(sellerProceeds)"
+            ],
+            "block2062": [
+                "nftAddress.transfer(this.balance)"
+            ],
+            "jump4777": [
+                "nonFungibleContract.transfer(_receiver, _tokenId)",
+                "nonFungibleContract.transfer(_receiver, _tokenId)"
+            ],
+            "jump2062": [
+                "nftAddress.transfer(this.balance)",
+                "nftAddress.transfer(this.balance)"
+            ],
+            "block4374": [
+                "msg.sender.transfer(bidExcess)"
+            ],
+            "block4295": [
+                "seller.transfer(sellerProceeds)"
+            ],
+            "block3638": [
+                "nonFungibleContract.transferFrom(_owner, this, _tokenId)"
+            ],
+            "block4777_1": [
+                "nonFungibleContract.transfer(_receiver, _tokenId)"
+            ],
+            "block4777_0": [
+                "nonFungibleContract.transfer(_receiver, _tokenId)"
+            ],
+            "jump4374": [
+                "msg.sender.transfer(bidExcess)",
+                "msg.sender.transfer(bidExcess)"
+            ]
+        }
+    },
+    "MonsterAccessControl": {
+        "function_list": [
+            "setCEO(address)",
+            "setCFO(address)",
+            "setCOO(address)",
+            "pause()",
+            "unpause()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "setCEO(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "setCFO(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "setCOO(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "pause()": {
+                "argument": {},
+                "contract": {}
+            },
+            "unpause()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "pause()": [
+                603,
+                229
+            ],
+            "unpause()": [
+                466,
+                163
+            ],
+            "setCFO(address)": [
+                489,
+                185
+            ],
+            "setCOO(address)": [
+                399,
+                141
+            ],
+            "setCEO(address)": [
+                332,
+                119
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "MonsterBase": {
+        "function_list": [
+            "setCEO(address)",
+            "setCFO(address)",
+            "setCOO(address)",
+            "pause()",
+            "unpause()",
+            "_transfer(address,address,uint256)",
+            "_createMonster(uint256,uint256,uint256,uint256,address)",
+            "setSecondsPerBlock(uint256)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "setCEO(address)": {
+                "argument": {},
+                "contract": {
+                    "cooldowns": "uint32[14]",
+                    "secondsPerBlock": "uint256",
+                    "monsters": "MonsterBase.Monster[]"
+                }
+            },
+            "setCFO(address)": {
+                "argument": {},
+                "contract": {
+                    "cooldowns": "uint32[14]",
+                    "secondsPerBlock": "uint256",
+                    "monsters": "MonsterBase.Monster[]"
+                }
+            },
+            "setCOO(address)": {
+                "argument": {},
+                "contract": {
+                    "cooldowns": "uint32[14]",
+                    "secondsPerBlock": "uint256",
+                    "monsters": "MonsterBase.Monster[]"
+                }
+            },
+            "pause()": {
+                "argument": {},
+                "contract": {
+                    "cooldowns": "uint32[14]",
+                    "secondsPerBlock": "uint256",
+                    "monsters": "MonsterBase.Monster[]"
+                }
+            },
+            "unpause()": {
+                "argument": {},
+                "contract": {
+                    "cooldowns": "uint32[14]",
+                    "secondsPerBlock": "uint256",
+                    "monsters": "MonsterBase.Monster[]"
+                }
+            },
+            "_transfer(address,address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "cooldowns": "uint32[14]",
+                    "secondsPerBlock": "uint256",
+                    "monsters": "MonsterBase.Monster[]"
+                }
+            },
+            "_createMonster(uint256,uint256,uint256,uint256,address)": {
+                "argument": {
+                    "_matronId": "uint256",
+                    "_sireId": "uint256",
+                    "_generation": "uint256",
+                    "_genes": "uint256"
+                },
+                "contract": {
+                    "cooldowns": "uint32[14]",
+                    "secondsPerBlock": "uint256",
+                    "monsters": "MonsterBase.Monster[]"
+                }
+            },
+            "setSecondsPerBlock(uint256)": {
+                "argument": {
+                    "secs": "uint256"
+                },
+                "contract": {
+                    "cooldowns": "uint32[14]",
+                    "secondsPerBlock": "uint256",
+                    "monsters": "MonsterBase.Monster[]"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "pause()": [
+                1095,
+                339
+            ],
+            "unpause()": [
+                652,
+                185
+            ],
+            "setSecondsPerBlock(uint256)": [
+                851,
+                251
+            ],
+            "setCFO(address)": [
+                784,
+                229
+            ],
+            "setCOO(address)": [
+                585,
+                163
+            ],
+            "setCEO(address)": [
+                518,
+                141
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "ERC721Metadata": {
+        "function_list": [
+            "getMetadata(uint256,string)"
+        ],
+        "initial_state": {
+            "getMetadata(uint256,string)": {
+                "argument": {
+                    "_tokenId": "uint256",
+                    "": "string"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "getMetadata(uint256,string)": [
+                70,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "MonsterOwnership": {
+        "function_list": [
+            "totalSupply()",
+            "balanceOf(address)",
+            "ownerOf(uint256)",
+            "approve(address,uint256)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "supportsInterface(bytes4)",
+            "_transfer(address,address,uint256)",
+            "_createMonster(uint256,uint256,uint256,uint256,address)",
+            "setSecondsPerBlock(uint256)",
+            "setCEO(address)",
+            "setCFO(address)",
+            "setCOO(address)",
+            "pause()",
+            "unpause()",
+            "supportsInterface(bytes4)",
+            "setMetadataAddress(address)",
+            "_owns(address,uint256)",
+            "_approvedFor(address,uint256)",
+            "_approve(uint256,address)",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "approve(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "totalSupply()",
+            "ownerOf(uint256)",
+            "tokensOfOwner(address)",
+            "_memcpy(uint256,uint256,uint256)",
+            "_toString(bytes32[4],uint256)",
+            "tokenMetadata(uint256,string)",
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "totalSupply()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "InterfaceSignature_ERC165": "bytes4",
+                    "InterfaceSignature_ERC721": "bytes4"
+                }
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "InterfaceSignature_ERC165": "bytes4",
+                    "InterfaceSignature_ERC721": "bytes4"
+                }
+            },
+            "ownerOf(uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "InterfaceSignature_ERC165": "bytes4",
+                    "InterfaceSignature_ERC721": "bytes4"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "InterfaceSignature_ERC165": "bytes4",
+                    "InterfaceSignature_ERC721": "bytes4"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "InterfaceSignature_ERC165": "bytes4",
+                    "InterfaceSignature_ERC721": "bytes4"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "InterfaceSignature_ERC165": "bytes4",
+                    "InterfaceSignature_ERC721": "bytes4"
+                }
+            },
+            "supportsInterface(bytes4)": {
+                "argument": {
+                    "_interfaceID": "bytes4"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "InterfaceSignature_ERC165": "bytes4",
+                    "InterfaceSignature_ERC721": "bytes4"
+                }
+            },
+            "_transfer(address,address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "InterfaceSignature_ERC165": "bytes4",
+                    "InterfaceSignature_ERC721": "bytes4"
+                }
+            },
+            "_createMonster(uint256,uint256,uint256,uint256,address)": {
+                "argument": {
+                    "_matronId": "uint256",
+                    "_sireId": "uint256",
+                    "_generation": "uint256",
+                    "_genes": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "InterfaceSignature_ERC165": "bytes4",
+                    "InterfaceSignature_ERC721": "bytes4"
+                }
+            },
+            "setSecondsPerBlock(uint256)": {
+                "argument": {
+                    "secs": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "InterfaceSignature_ERC165": "bytes4",
+                    "InterfaceSignature_ERC721": "bytes4"
+                }
+            },
+            "setCEO(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "InterfaceSignature_ERC165": "bytes4",
+                    "InterfaceSignature_ERC721": "bytes4"
+                }
+            },
+            "setCFO(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "InterfaceSignature_ERC165": "bytes4",
+                    "InterfaceSignature_ERC721": "bytes4"
+                }
+            },
+            "setCOO(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "InterfaceSignature_ERC165": "bytes4",
+                    "InterfaceSignature_ERC721": "bytes4"
+                }
+            },
+            "pause()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "InterfaceSignature_ERC165": "bytes4",
+                    "InterfaceSignature_ERC721": "bytes4"
+                }
+            },
+            "unpause()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "InterfaceSignature_ERC165": "bytes4",
+                    "InterfaceSignature_ERC721": "bytes4"
+                }
+            },
+            "setMetadataAddress(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "InterfaceSignature_ERC165": "bytes4",
+                    "InterfaceSignature_ERC721": "bytes4"
+                }
+            },
+            "_owns(address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "InterfaceSignature_ERC165": "bytes4",
+                    "InterfaceSignature_ERC721": "bytes4"
+                }
+            },
+            "_approvedFor(address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "InterfaceSignature_ERC165": "bytes4",
+                    "InterfaceSignature_ERC721": "bytes4"
+                }
+            },
+            "_approve(uint256,address)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "InterfaceSignature_ERC165": "bytes4",
+                    "InterfaceSignature_ERC721": "bytes4"
+                }
+            },
+            "tokensOfOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "InterfaceSignature_ERC165": "bytes4",
+                    "InterfaceSignature_ERC721": "bytes4"
+                }
+            },
+            "_memcpy(uint256,uint256,uint256)": {
+                "argument": {
+                    "_dest": "uint256",
+                    "_src": "uint256",
+                    "_len": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "InterfaceSignature_ERC165": "bytes4",
+                    "InterfaceSignature_ERC721": "bytes4"
+                }
+            },
+            "_toString(bytes32[4],uint256)": {
+                "argument": {
+                    "_rawBytes": "bytes32[4]",
+                    "_stringLength": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "InterfaceSignature_ERC165": "bytes4",
+                    "InterfaceSignature_ERC721": "bytes4"
+                }
+            },
+            "tokenMetadata(uint256,string)": {
+                "argument": {
+                    "_tokenId": "uint256",
+                    "_preferredTransport": "string"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "InterfaceSignature_ERC165": "bytes4",
+                    "InterfaceSignature_ERC721": "bytes4"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "InterfaceSignature_ERC165": "bytes4",
+                    "InterfaceSignature_ERC721": "bytes4"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "totalSupply()": [
+                1085,
+                207
+            ],
+            "ownerOf(uint256)": [
+                1749,
+                427
+            ],
+            "transferFrom(address,address,uint256)": [
+                1215,
+                251
+            ],
+            "pause()": [
+                2097,
+                515
+            ],
+            "approve(address,uint256)": [
+                921,
+                163
+            ],
+            "unpause()": [
+                1458,
+                317
+            ],
+            "setMetadataAddress(address)": [
+                2853,
+                691
+            ],
+            "setCFO(address)": [
+                1590,
+                361
+            ],
+            "balanceOf(address)": [
+                1858,
+                449
+            ],
+            "tokenMetadata(uint256,string)": [
+                587,
+                119
+            ],
+            "tokensOfOwner(address)": [
+                2120,
+                537
+            ],
+            "setSecondsPerBlock(uint256)": [
+                1657,
+                383
+            ],
+            "supportsInterface(bytes4)": [
+                400,
+                75
+            ],
+            "transfer(address,uint256)": [
+                2493,
+                603
+            ],
+            "setCEO(address)": [
+                1324,
+                273
+            ],
+            "setCOO(address)": [
+                1391,
+                295
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump4201": [
+                "erc721Metadata.getMetadata(_tokenId, _preferredTransport)",
+                "erc721Metadata.getMetadata(_tokenId, _preferredTransport)"
+            ],
+            "block4201": [
+                "erc721Metadata.getMetadata(_tokenId, _preferredTransport)"
+            ]
+        }
+    },
+    "MonsterBreeding": {
+        "function_list": [
+            "supportsInterface(bytes4)",
+            "setMetadataAddress(address)",
+            "_owns(address,uint256)",
+            "_approvedFor(address,uint256)",
+            "_approve(uint256,address)",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "approve(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "totalSupply()",
+            "ownerOf(uint256)",
+            "tokensOfOwner(address)",
+            "_memcpy(uint256,uint256,uint256)",
+            "_toString(bytes32[4],uint256)",
+            "tokenMetadata(uint256,string)",
+            "totalSupply()",
+            "balanceOf(address)",
+            "ownerOf(uint256)",
+            "approve(address,uint256)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "supportsInterface(bytes4)",
+            "_transfer(address,address,uint256)",
+            "_createMonster(uint256,uint256,uint256,uint256,address)",
+            "setSecondsPerBlock(uint256)",
+            "setCEO(address)",
+            "setCFO(address)",
+            "setCOO(address)",
+            "pause()",
+            "unpause()",
+            "setGeneScienceAddress(address)",
+            "_isReadyToBreed(MonsterBase.Monster)",
+            "_isSiringPermitted(uint256,uint256)",
+            "_triggerCooldown(MonsterBase.Monster)",
+            "approveSiring(address,uint256)",
+            "setAutoBirthFee(uint256)",
+            "_isReadyToGiveBirth(MonsterBase.Monster)",
+            "isReadyToBreed(uint256)",
+            "isPregnant(uint256)",
+            "_isValidMatingPair(MonsterBase.Monster,uint256,MonsterBase.Monster,uint256)",
+            "_canBreedWithViaAuction(uint256,uint256)",
+            "canBreedWith(uint256,uint256)",
+            "_breedWith(uint256,uint256)",
+            "breedWithAuto(uint256,uint256)",
+            "giveBirth(uint256)",
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "supportsInterface(bytes4)": {
+                "argument": {
+                    "_interfaceID": "bytes4"
+                },
+                "contract": {
+                    "autoBirthFee": "uint256",
+                    "pregnantMonsters": "uint256"
+                }
+            },
+            "setMetadataAddress(address)": {
+                "argument": {},
+                "contract": {
+                    "autoBirthFee": "uint256",
+                    "pregnantMonsters": "uint256"
+                }
+            },
+            "_owns(address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "autoBirthFee": "uint256",
+                    "pregnantMonsters": "uint256"
+                }
+            },
+            "_approvedFor(address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "autoBirthFee": "uint256",
+                    "pregnantMonsters": "uint256"
+                }
+            },
+            "_approve(uint256,address)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "autoBirthFee": "uint256",
+                    "pregnantMonsters": "uint256"
+                }
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "autoBirthFee": "uint256",
+                    "pregnantMonsters": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "autoBirthFee": "uint256",
+                    "pregnantMonsters": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "autoBirthFee": "uint256",
+                    "pregnantMonsters": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "autoBirthFee": "uint256",
+                    "pregnantMonsters": "uint256"
+                }
+            },
+            "totalSupply()": {
+                "argument": {},
+                "contract": {
+                    "autoBirthFee": "uint256",
+                    "pregnantMonsters": "uint256"
+                }
+            },
+            "ownerOf(uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "autoBirthFee": "uint256",
+                    "pregnantMonsters": "uint256"
+                }
+            },
+            "tokensOfOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "autoBirthFee": "uint256",
+                    "pregnantMonsters": "uint256"
+                }
+            },
+            "_memcpy(uint256,uint256,uint256)": {
+                "argument": {
+                    "_dest": "uint256",
+                    "_src": "uint256",
+                    "_len": "uint256"
+                },
+                "contract": {
+                    "autoBirthFee": "uint256",
+                    "pregnantMonsters": "uint256"
+                }
+            },
+            "_toString(bytes32[4],uint256)": {
+                "argument": {
+                    "_rawBytes": "bytes32[4]",
+                    "_stringLength": "uint256"
+                },
+                "contract": {
+                    "autoBirthFee": "uint256",
+                    "pregnantMonsters": "uint256"
+                }
+            },
+            "tokenMetadata(uint256,string)": {
+                "argument": {
+                    "_tokenId": "uint256",
+                    "_preferredTransport": "string"
+                },
+                "contract": {
+                    "autoBirthFee": "uint256",
+                    "pregnantMonsters": "uint256"
+                }
+            },
+            "_transfer(address,address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "autoBirthFee": "uint256",
+                    "pregnantMonsters": "uint256"
+                }
+            },
+            "_createMonster(uint256,uint256,uint256,uint256,address)": {
+                "argument": {
+                    "_matronId": "uint256",
+                    "_sireId": "uint256",
+                    "_generation": "uint256",
+                    "_genes": "uint256"
+                },
+                "contract": {
+                    "autoBirthFee": "uint256",
+                    "pregnantMonsters": "uint256"
+                }
+            },
+            "setSecondsPerBlock(uint256)": {
+                "argument": {
+                    "secs": "uint256"
+                },
+                "contract": {
+                    "autoBirthFee": "uint256",
+                    "pregnantMonsters": "uint256"
+                }
+            },
+            "setCEO(address)": {
+                "argument": {},
+                "contract": {
+                    "autoBirthFee": "uint256",
+                    "pregnantMonsters": "uint256"
+                }
+            },
+            "setCFO(address)": {
+                "argument": {},
+                "contract": {
+                    "autoBirthFee": "uint256",
+                    "pregnantMonsters": "uint256"
+                }
+            },
+            "setCOO(address)": {
+                "argument": {},
+                "contract": {
+                    "autoBirthFee": "uint256",
+                    "pregnantMonsters": "uint256"
+                }
+            },
+            "pause()": {
+                "argument": {},
+                "contract": {
+                    "autoBirthFee": "uint256",
+                    "pregnantMonsters": "uint256"
+                }
+            },
+            "unpause()": {
+                "argument": {},
+                "contract": {
+                    "autoBirthFee": "uint256",
+                    "pregnantMonsters": "uint256"
+                }
+            },
+            "setGeneScienceAddress(address)": {
+                "argument": {},
+                "contract": {
+                    "autoBirthFee": "uint256",
+                    "pregnantMonsters": "uint256"
+                }
+            },
+            "_isReadyToBreed(MonsterBase.Monster)": {
+                "argument": {},
+                "contract": {
+                    "autoBirthFee": "uint256",
+                    "pregnantMonsters": "uint256"
+                }
+            },
+            "_isSiringPermitted(uint256,uint256)": {
+                "argument": {
+                    "_sireId": "uint256",
+                    "_matronId": "uint256"
+                },
+                "contract": {
+                    "autoBirthFee": "uint256",
+                    "pregnantMonsters": "uint256"
+                }
+            },
+            "_triggerCooldown(MonsterBase.Monster)": {
+                "argument": {},
+                "contract": {
+                    "autoBirthFee": "uint256",
+                    "pregnantMonsters": "uint256"
+                }
+            },
+            "approveSiring(address,uint256)": {
+                "argument": {
+                    "_sireId": "uint256"
+                },
+                "contract": {
+                    "autoBirthFee": "uint256",
+                    "pregnantMonsters": "uint256"
+                }
+            },
+            "setAutoBirthFee(uint256)": {
+                "argument": {
+                    "val": "uint256"
+                },
+                "contract": {
+                    "autoBirthFee": "uint256",
+                    "pregnantMonsters": "uint256"
+                }
+            },
+            "_isReadyToGiveBirth(MonsterBase.Monster)": {
+                "argument": {},
+                "contract": {
+                    "autoBirthFee": "uint256",
+                    "pregnantMonsters": "uint256"
+                }
+            },
+            "isReadyToBreed(uint256)": {
+                "argument": {
+                    "_monsterId": "uint256"
+                },
+                "contract": {
+                    "autoBirthFee": "uint256",
+                    "pregnantMonsters": "uint256"
+                }
+            },
+            "isPregnant(uint256)": {
+                "argument": {
+                    "_monsterId": "uint256"
+                },
+                "contract": {
+                    "autoBirthFee": "uint256",
+                    "pregnantMonsters": "uint256"
+                }
+            },
+            "_isValidMatingPair(MonsterBase.Monster,uint256,MonsterBase.Monster,uint256)": {
+                "argument": {
+                    "_matronId": "uint256",
+                    "_sireId": "uint256"
+                },
+                "contract": {
+                    "autoBirthFee": "uint256",
+                    "pregnantMonsters": "uint256"
+                }
+            },
+            "_canBreedWithViaAuction(uint256,uint256)": {
+                "argument": {
+                    "_matronId": "uint256",
+                    "_sireId": "uint256"
+                },
+                "contract": {
+                    "autoBirthFee": "uint256",
+                    "pregnantMonsters": "uint256"
+                }
+            },
+            "canBreedWith(uint256,uint256)": {
+                "argument": {
+                    "_matronId": "uint256",
+                    "_sireId": "uint256"
+                },
+                "contract": {
+                    "autoBirthFee": "uint256",
+                    "pregnantMonsters": "uint256"
+                }
+            },
+            "_breedWith(uint256,uint256)": {
+                "argument": {
+                    "_matronId": "uint256",
+                    "_sireId": "uint256"
+                },
+                "contract": {
+                    "autoBirthFee": "uint256",
+                    "pregnantMonsters": "uint256"
+                }
+            },
+            "breedWithAuto(uint256,uint256)": {
+                "argument": {
+                    "_matronId": "uint256",
+                    "_sireId": "uint256"
+                },
+                "contract": {
+                    "autoBirthFee": "uint256",
+                    "pregnantMonsters": "uint256"
+                }
+            },
+            "giveBirth(uint256)": {
+                "argument": {
+                    "_matronId": "uint256"
+                },
+                "contract": {
+                    "autoBirthFee": "uint256",
+                    "pregnantMonsters": "uint256"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "autoBirthFee": "uint256",
+                    "pregnantMonsters": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "canBreedWith(uint256,uint256)": [
+                1836,
+                405
+            ],
+            "isPregnant(uint256)": [
+                1238,
+                229
+            ],
+            "totalSupply()": [
+                1195,
+                207
+            ],
+            "breedWithAuto(uint256,uint256)": [
+                3761,
+                955
+            ],
+            "ownerOf(uint256)": [
+                2196,
+                537
+            ],
+            "transferFrom(address,address,uint256)": [
+                1394,
+                273
+            ],
+            "pause()": [
+                2544,
+                625
+            ],
+            "approve(address,uint256)": [
+                1031,
+                163
+            ],
+            "unpause()": [
+                1704,
+                361
+            ],
+            "setMetadataAddress(address)": [
+                3520,
+                889
+            ],
+            "setGeneScienceAddress(address)": [
+                1503,
+                295
+            ],
+            "setAutoBirthFee(uint256)": [
+                1915,
+                427
+            ],
+            "approveSiring(address,uint256)": [
+                1960,
+                449
+            ],
+            "giveBirth(uint256)": [
+                2719,
+                669
+            ],
+            "setCFO(address)": [
+                2037,
+                471
+            ],
+            "balanceOf(address)": [
+                2305,
+                559
+            ],
+            "tokenMetadata(uint256,string)": [
+                697,
+                119
+            ],
+            "tokensOfOwner(address)": [
+                2567,
+                647
+            ],
+            "isReadyToBreed(uint256)": [
+                3451,
+                867
+            ],
+            "setSecondsPerBlock(uint256)": [
+                2104,
+                493
+            ],
+            "supportsInterface(bytes4)": [
+                510,
+                75
+            ],
+            "transfer(address,uint256)": [
+                3005,
+                735
+            ],
+            "setCOO(address)": [
+                1637,
+                339
+            ],
+            "setCEO(address)": [
+                1570,
+                317
+            ]
+        },
+        "block_CALL_mapping": {
+            "block4910": [
+                "erc721Metadata.getMetadata(_tokenId, _preferredTransport)"
+            ],
+            "jump5872": [
+                "candidateContract.isGeneScience()",
+                "candidateContract.isGeneScience()"
+            ],
+            "block9400": [
+                "geneScience.mixGenes(matron.genes, sire.genes, matron.cooldownEndBlock - 1)"
+            ],
+            "block9561": [
+                "msg.sender.send(autoBirthFee)"
+            ],
+            "jump4910": [
+                "erc721Metadata.getMetadata(_tokenId, _preferredTransport)",
+                "erc721Metadata.getMetadata(_tokenId, _preferredTransport)"
+            ],
+            "block5872": [
+                "candidateContract.isGeneScience()"
+            ],
+            "jump9400": [
+                "geneScience.mixGenes(matron.genes, sire.genes, matron.cooldownEndBlock - 1)",
+                "geneScience.mixGenes(matron.genes, sire.genes, matron.cooldownEndBlock - 1)"
+            ]
+        }
+    },
+    "MonsterAuction": {
+        "function_list": [
+            "setGeneScienceAddress(address)",
+            "_isReadyToBreed(MonsterBase.Monster)",
+            "_isSiringPermitted(uint256,uint256)",
+            "_triggerCooldown(MonsterBase.Monster)",
+            "approveSiring(address,uint256)",
+            "setAutoBirthFee(uint256)",
+            "_isReadyToGiveBirth(MonsterBase.Monster)",
+            "isReadyToBreed(uint256)",
+            "isPregnant(uint256)",
+            "_isValidMatingPair(MonsterBase.Monster,uint256,MonsterBase.Monster,uint256)",
+            "_canBreedWithViaAuction(uint256,uint256)",
+            "canBreedWith(uint256,uint256)",
+            "_breedWith(uint256,uint256)",
+            "breedWithAuto(uint256,uint256)",
+            "giveBirth(uint256)",
+            "supportsInterface(bytes4)",
+            "setMetadataAddress(address)",
+            "_owns(address,uint256)",
+            "_approvedFor(address,uint256)",
+            "_approve(uint256,address)",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "approve(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "totalSupply()",
+            "ownerOf(uint256)",
+            "tokensOfOwner(address)",
+            "_memcpy(uint256,uint256,uint256)",
+            "_toString(bytes32[4],uint256)",
+            "tokenMetadata(uint256,string)",
+            "totalSupply()",
+            "balanceOf(address)",
+            "ownerOf(uint256)",
+            "approve(address,uint256)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "supportsInterface(bytes4)",
+            "_transfer(address,address,uint256)",
+            "_createMonster(uint256,uint256,uint256,uint256,address)",
+            "setSecondsPerBlock(uint256)",
+            "setCEO(address)",
+            "setCFO(address)",
+            "setCOO(address)",
+            "pause()",
+            "unpause()",
+            "setSaleAuctionAddress(address)",
+            "setSiringAuctionAddress(address)",
+            "createSaleAuction(uint256,uint256,uint256,uint256)",
+            "createSiringAuction(uint256,uint256,uint256,uint256)",
+            "bidOnSiringAuction(uint256,uint256)",
+            "withdrawAuctionBalances()",
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "setGeneScienceAddress(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "_isReadyToBreed(MonsterBase.Monster)": {
+                "argument": {},
+                "contract": {}
+            },
+            "_isSiringPermitted(uint256,uint256)": {
+                "argument": {
+                    "_sireId": "uint256",
+                    "_matronId": "uint256"
+                },
+                "contract": {}
+            },
+            "_triggerCooldown(MonsterBase.Monster)": {
+                "argument": {},
+                "contract": {}
+            },
+            "approveSiring(address,uint256)": {
+                "argument": {
+                    "_sireId": "uint256"
+                },
+                "contract": {}
+            },
+            "setAutoBirthFee(uint256)": {
+                "argument": {
+                    "val": "uint256"
+                },
+                "contract": {}
+            },
+            "_isReadyToGiveBirth(MonsterBase.Monster)": {
+                "argument": {},
+                "contract": {}
+            },
+            "isReadyToBreed(uint256)": {
+                "argument": {
+                    "_monsterId": "uint256"
+                },
+                "contract": {}
+            },
+            "isPregnant(uint256)": {
+                "argument": {
+                    "_monsterId": "uint256"
+                },
+                "contract": {}
+            },
+            "_isValidMatingPair(MonsterBase.Monster,uint256,MonsterBase.Monster,uint256)": {
+                "argument": {
+                    "_matronId": "uint256",
+                    "_sireId": "uint256"
+                },
+                "contract": {}
+            },
+            "_canBreedWithViaAuction(uint256,uint256)": {
+                "argument": {
+                    "_matronId": "uint256",
+                    "_sireId": "uint256"
+                },
+                "contract": {}
+            },
+            "canBreedWith(uint256,uint256)": {
+                "argument": {
+                    "_matronId": "uint256",
+                    "_sireId": "uint256"
+                },
+                "contract": {}
+            },
+            "_breedWith(uint256,uint256)": {
+                "argument": {
+                    "_matronId": "uint256",
+                    "_sireId": "uint256"
+                },
+                "contract": {}
+            },
+            "breedWithAuto(uint256,uint256)": {
+                "argument": {
+                    "_matronId": "uint256",
+                    "_sireId": "uint256"
+                },
+                "contract": {}
+            },
+            "giveBirth(uint256)": {
+                "argument": {
+                    "_matronId": "uint256"
+                },
+                "contract": {}
+            },
+            "supportsInterface(bytes4)": {
+                "argument": {
+                    "_interfaceID": "bytes4"
+                },
+                "contract": {}
+            },
+            "setMetadataAddress(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "_owns(address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {}
+            },
+            "_approvedFor(address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {}
+            },
+            "_approve(uint256,address)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {}
+            },
+            "totalSupply()": {
+                "argument": {},
+                "contract": {}
+            },
+            "ownerOf(uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {}
+            },
+            "tokensOfOwner(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "_memcpy(uint256,uint256,uint256)": {
+                "argument": {
+                    "_dest": "uint256",
+                    "_src": "uint256",
+                    "_len": "uint256"
+                },
+                "contract": {}
+            },
+            "_toString(bytes32[4],uint256)": {
+                "argument": {
+                    "_rawBytes": "bytes32[4]",
+                    "_stringLength": "uint256"
+                },
+                "contract": {}
+            },
+            "tokenMetadata(uint256,string)": {
+                "argument": {
+                    "_tokenId": "uint256",
+                    "_preferredTransport": "string"
+                },
+                "contract": {}
+            },
+            "_transfer(address,address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {}
+            },
+            "_createMonster(uint256,uint256,uint256,uint256,address)": {
+                "argument": {
+                    "_matronId": "uint256",
+                    "_sireId": "uint256",
+                    "_generation": "uint256",
+                    "_genes": "uint256"
+                },
+                "contract": {}
+            },
+            "setSecondsPerBlock(uint256)": {
+                "argument": {
+                    "secs": "uint256"
+                },
+                "contract": {}
+            },
+            "setCEO(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "setCFO(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "setCOO(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "pause()": {
+                "argument": {},
+                "contract": {}
+            },
+            "unpause()": {
+                "argument": {},
+                "contract": {}
+            },
+            "setSaleAuctionAddress(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "setSiringAuctionAddress(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "createSaleAuction(uint256,uint256,uint256,uint256)": {
+                "argument": {
+                    "_monsterId": "uint256",
+                    "_startingPrice": "uint256",
+                    "_endingPrice": "uint256",
+                    "_duration": "uint256"
+                },
+                "contract": {}
+            },
+            "createSiringAuction(uint256,uint256,uint256,uint256)": {
+                "argument": {
+                    "_monsterId": "uint256",
+                    "_startingPrice": "uint256",
+                    "_endingPrice": "uint256",
+                    "_duration": "uint256"
+                },
+                "contract": {}
+            },
+            "bidOnSiringAuction(uint256,uint256)": {
+                "argument": {
+                    "_sireId": "uint256",
+                    "_matronId": "uint256"
+                },
+                "contract": {}
+            },
+            "withdrawAuctionBalances()": {
+                "argument": {},
+                "contract": {}
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "canBreedWith(uint256,uint256)": [
+                2044,
+                449
+            ],
+            "isPregnant(uint256)": [
+                1371,
+                251
+            ],
+            "setSiringAuctionAddress(address)": [
+                1261,
+                207
+            ],
+            "totalSupply()": [
+                1328,
+                229
+            ],
+            "breedWithAuto(uint256,uint256)": [
+                4176,
+                1087
+            ],
+            "setSaleAuctionAddress(address)": [
+                2588,
+                625
+            ],
+            "transferFrom(address,address,uint256)": [
+                1527,
+                295
+            ],
+            "ownerOf(uint256)": [
+                2479,
+                603
+            ],
+            "pause()": [
+                2894,
+                713
+            ],
+            "approve(address,uint256)": [
+                1097,
+                163
+            ],
+            "unpause()": [
+                1912,
+                405
+            ],
+            "setMetadataAddress(address)": [
+                3893,
+                999
+            ],
+            "setGeneScienceAddress(address)": [
+                1636,
+                317
+            ],
+            "createSaleAuction(uint256,uint256,uint256,uint256)": [
+                1837,
+                383
+            ],
+            "withdrawAuctionBalances()": [
+                3134,
+                779
+            ],
+            "setAutoBirthFee(uint256)": [
+                2198,
+                493
+            ],
+            "approveSiring(address,uint256)": [
+                2243,
+                515
+            ],
+            "giveBirth(uint256)": [
+                3069,
+                757
+            ],
+            "createSiringAuction(uint256,uint256,uint256,uint256)": [
+                2123,
+                471
+            ],
+            "bidOnSiringAuction(uint256,uint256)": [
+                4047,
+                1043
+            ],
+            "setCFO(address)": [
+                2320,
+                537
+            ],
+            "balanceOf(address)": [
+                2655,
+                647
+            ],
+            "tokenMetadata(uint256,string)": [
+                763,
+                119
+            ],
+            "tokensOfOwner(address)": [
+                2917,
+                735
+            ],
+            "isReadyToBreed(uint256)": [
+                3824,
+                977
+            ],
+            "setSecondsPerBlock(uint256)": [
+                2387,
+                559
+            ],
+            "supportsInterface(bytes4)": [
+                576,
+                75
+            ],
+            "transfer(address,uint256)": [
+                3378,
+                845
+            ],
+            "setCOO(address)": [
+                1770,
+                361
+            ],
+            "setCEO(address)": [
+                1703,
+                339
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump5946": [
+                "candidateContract.isSiringClockAuction()",
+                "candidateContract.isSiringClockAuction()"
+            ],
+            "block13717": [
+                "siringAuction.bid.value(msg.value - autoBirthFee)(_sireId)"
+            ],
+            "jump13717": [
+                "siringAuction.bid.value(msg.value - autoBirthFee)(_sireId)",
+                "siringAuction.bid.value(msg.value - autoBirthFee)(_sireId)"
+            ],
+            "jump13488": [
+                "siringAuction.getCurrentPrice(_sireId)",
+                "siringAuction.getCurrentPrice(_sireId)"
+            ],
+            "block11891": [
+                "saleAuction.withdrawBalance()"
+            ],
+            "jump7533": [
+                "saleAuction.createAuction(\n            _monsterId,\n            _startingPrice,\n            _endingPrice,\n            _duration,\n            msg.sender\n        )",
+                "saleAuction.createAuction(\n            _monsterId,\n            _startingPrice,\n            _endingPrice,\n            _duration,\n            msg.sender\n        )"
+            ],
+            "jump9393": [
+                "candidateContract.isSaleClockAuction()",
+                "candidateContract.isSaleClockAuction()"
+            ],
+            "jump11214": [
+                "geneScience.mixGenes(matron.genes, sire.genes, matron.cooldownEndBlock - 1)",
+                "geneScience.mixGenes(matron.genes, sire.genes, matron.cooldownEndBlock - 1)"
+            ],
+            "jump5325": [
+                "erc721Metadata.getMetadata(_tokenId, _preferredTransport)",
+                "erc721Metadata.getMetadata(_tokenId, _preferredTransport)"
+            ],
+            "block7533": [
+                "saleAuction.createAuction(\n            _monsterId,\n            _startingPrice,\n            _endingPrice,\n            _duration,\n            msg.sender\n        )"
+            ],
+            "block11375": [
+                "msg.sender.send(autoBirthFee)"
+            ],
+            "jump11891": [
+                "saleAuction.withdrawBalance()",
+                "saleAuction.withdrawBalance()"
+            ],
+            "block5946": [
+                "candidateContract.isSiringClockAuction()"
+            ],
+            "block11214": [
+                "geneScience.mixGenes(matron.genes, sire.genes, matron.cooldownEndBlock - 1)"
+            ],
+            "block13488": [
+                "siringAuction.getCurrentPrice(_sireId)"
+            ],
+            "block9393": [
+                "candidateContract.isSaleClockAuction()"
+            ],
+            "block8231": [
+                "siringAuction.createAuction(\n            _monsterId,\n            _startingPrice,\n            _endingPrice,\n            _duration,\n            msg.sender\n        )"
+            ],
+            "block12049": [
+                "siringAuction.withdrawBalance()"
+            ],
+            "jump8231": [
+                "siringAuction.createAuction(\n            _monsterId,\n            _startingPrice,\n            _endingPrice,\n            _duration,\n            msg.sender\n        )",
+                "siringAuction.createAuction(\n            _monsterId,\n            _startingPrice,\n            _endingPrice,\n            _duration,\n            msg.sender\n        )"
+            ],
+            "jump6622": [
+                "candidateContract.isGeneScience()",
+                "candidateContract.isGeneScience()"
+            ],
+            "block5325": [
+                "erc721Metadata.getMetadata(_tokenId, _preferredTransport)"
+            ],
+            "block6622": [
+                "candidateContract.isGeneScience()"
+            ],
+            "jump12049": [
+                "siringAuction.withdrawBalance()",
+                "siringAuction.withdrawBalance()"
+            ]
+        }
+    },
+    "MonsterMinting": {
+        "function_list": [
+            "setSaleAuctionAddress(address)",
+            "setSiringAuctionAddress(address)",
+            "createSaleAuction(uint256,uint256,uint256,uint256)",
+            "createSiringAuction(uint256,uint256,uint256,uint256)",
+            "bidOnSiringAuction(uint256,uint256)",
+            "withdrawAuctionBalances()",
+            "setGeneScienceAddress(address)",
+            "_isReadyToBreed(MonsterBase.Monster)",
+            "_isSiringPermitted(uint256,uint256)",
+            "_triggerCooldown(MonsterBase.Monster)",
+            "approveSiring(address,uint256)",
+            "setAutoBirthFee(uint256)",
+            "_isReadyToGiveBirth(MonsterBase.Monster)",
+            "isReadyToBreed(uint256)",
+            "isPregnant(uint256)",
+            "_isValidMatingPair(MonsterBase.Monster,uint256,MonsterBase.Monster,uint256)",
+            "_canBreedWithViaAuction(uint256,uint256)",
+            "canBreedWith(uint256,uint256)",
+            "_breedWith(uint256,uint256)",
+            "breedWithAuto(uint256,uint256)",
+            "giveBirth(uint256)",
+            "supportsInterface(bytes4)",
+            "setMetadataAddress(address)",
+            "_owns(address,uint256)",
+            "_approvedFor(address,uint256)",
+            "_approve(uint256,address)",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "approve(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "totalSupply()",
+            "ownerOf(uint256)",
+            "tokensOfOwner(address)",
+            "_memcpy(uint256,uint256,uint256)",
+            "_toString(bytes32[4],uint256)",
+            "tokenMetadata(uint256,string)",
+            "totalSupply()",
+            "balanceOf(address)",
+            "ownerOf(uint256)",
+            "approve(address,uint256)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "supportsInterface(bytes4)",
+            "_transfer(address,address,uint256)",
+            "_createMonster(uint256,uint256,uint256,uint256,address)",
+            "setSecondsPerBlock(uint256)",
+            "setCEO(address)",
+            "setCFO(address)",
+            "setCOO(address)",
+            "pause()",
+            "unpause()",
+            "createPromoMonster(uint256,address)",
+            "createGen0Auction(uint256)",
+            "_computeNextGen0Price()",
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "setSaleAuctionAddress(address)": {
+                "argument": {},
+                "contract": {
+                    "PROMO_CREATION_LIMIT": "uint256",
+                    "GEN0_CREATION_LIMIT": "uint256",
+                    "GEN0_STARTING_PRICE": "uint256",
+                    "GEN0_AUCTION_DURATION": "uint256",
+                    "promoCreatedCount": "uint256",
+                    "gen0CreatedCount": "uint256"
+                }
+            },
+            "setSiringAuctionAddress(address)": {
+                "argument": {},
+                "contract": {
+                    "PROMO_CREATION_LIMIT": "uint256",
+                    "GEN0_CREATION_LIMIT": "uint256",
+                    "GEN0_STARTING_PRICE": "uint256",
+                    "GEN0_AUCTION_DURATION": "uint256",
+                    "promoCreatedCount": "uint256",
+                    "gen0CreatedCount": "uint256"
+                }
+            },
+            "createSaleAuction(uint256,uint256,uint256,uint256)": {
+                "argument": {
+                    "_monsterId": "uint256",
+                    "_startingPrice": "uint256",
+                    "_endingPrice": "uint256",
+                    "_duration": "uint256"
+                },
+                "contract": {
+                    "PROMO_CREATION_LIMIT": "uint256",
+                    "GEN0_CREATION_LIMIT": "uint256",
+                    "GEN0_STARTING_PRICE": "uint256",
+                    "GEN0_AUCTION_DURATION": "uint256",
+                    "promoCreatedCount": "uint256",
+                    "gen0CreatedCount": "uint256"
+                }
+            },
+            "createSiringAuction(uint256,uint256,uint256,uint256)": {
+                "argument": {
+                    "_monsterId": "uint256",
+                    "_startingPrice": "uint256",
+                    "_endingPrice": "uint256",
+                    "_duration": "uint256"
+                },
+                "contract": {
+                    "PROMO_CREATION_LIMIT": "uint256",
+                    "GEN0_CREATION_LIMIT": "uint256",
+                    "GEN0_STARTING_PRICE": "uint256",
+                    "GEN0_AUCTION_DURATION": "uint256",
+                    "promoCreatedCount": "uint256",
+                    "gen0CreatedCount": "uint256"
+                }
+            },
+            "bidOnSiringAuction(uint256,uint256)": {
+                "argument": {
+                    "_sireId": "uint256",
+                    "_matronId": "uint256"
+                },
+                "contract": {
+                    "PROMO_CREATION_LIMIT": "uint256",
+                    "GEN0_CREATION_LIMIT": "uint256",
+                    "GEN0_STARTING_PRICE": "uint256",
+                    "GEN0_AUCTION_DURATION": "uint256",
+                    "promoCreatedCount": "uint256",
+                    "gen0CreatedCount": "uint256"
+                }
+            },
+            "withdrawAuctionBalances()": {
+                "argument": {},
+                "contract": {
+                    "PROMO_CREATION_LIMIT": "uint256",
+                    "GEN0_CREATION_LIMIT": "uint256",
+                    "GEN0_STARTING_PRICE": "uint256",
+                    "GEN0_AUCTION_DURATION": "uint256",
+                    "promoCreatedCount": "uint256",
+                    "gen0CreatedCount": "uint256"
+                }
+            },
+            "setGeneScienceAddress(address)": {
+                "argument": {},
+                "contract": {
+                    "PROMO_CREATION_LIMIT": "uint256",
+                    "GEN0_CREATION_LIMIT": "uint256",
+                    "GEN0_STARTING_PRICE": "uint256",
+                    "GEN0_AUCTION_DURATION": "uint256",
+                    "promoCreatedCount": "uint256",
+                    "gen0CreatedCount": "uint256"
+                }
+            },
+            "_isReadyToBreed(MonsterBase.Monster)": {
+                "argument": {},
+                "contract": {
+                    "PROMO_CREATION_LIMIT": "uint256",
+                    "GEN0_CREATION_LIMIT": "uint256",
+                    "GEN0_STARTING_PRICE": "uint256",
+                    "GEN0_AUCTION_DURATION": "uint256",
+                    "promoCreatedCount": "uint256",
+                    "gen0CreatedCount": "uint256"
+                }
+            },
+            "_isSiringPermitted(uint256,uint256)": {
+                "argument": {
+                    "_sireId": "uint256",
+                    "_matronId": "uint256"
+                },
+                "contract": {
+                    "PROMO_CREATION_LIMIT": "uint256",
+                    "GEN0_CREATION_LIMIT": "uint256",
+                    "GEN0_STARTING_PRICE": "uint256",
+                    "GEN0_AUCTION_DURATION": "uint256",
+                    "promoCreatedCount": "uint256",
+                    "gen0CreatedCount": "uint256"
+                }
+            },
+            "_triggerCooldown(MonsterBase.Monster)": {
+                "argument": {},
+                "contract": {
+                    "PROMO_CREATION_LIMIT": "uint256",
+                    "GEN0_CREATION_LIMIT": "uint256",
+                    "GEN0_STARTING_PRICE": "uint256",
+                    "GEN0_AUCTION_DURATION": "uint256",
+                    "promoCreatedCount": "uint256",
+                    "gen0CreatedCount": "uint256"
+                }
+            },
+            "approveSiring(address,uint256)": {
+                "argument": {
+                    "_sireId": "uint256"
+                },
+                "contract": {
+                    "PROMO_CREATION_LIMIT": "uint256",
+                    "GEN0_CREATION_LIMIT": "uint256",
+                    "GEN0_STARTING_PRICE": "uint256",
+                    "GEN0_AUCTION_DURATION": "uint256",
+                    "promoCreatedCount": "uint256",
+                    "gen0CreatedCount": "uint256"
+                }
+            },
+            "setAutoBirthFee(uint256)": {
+                "argument": {
+                    "val": "uint256"
+                },
+                "contract": {
+                    "PROMO_CREATION_LIMIT": "uint256",
+                    "GEN0_CREATION_LIMIT": "uint256",
+                    "GEN0_STARTING_PRICE": "uint256",
+                    "GEN0_AUCTION_DURATION": "uint256",
+                    "promoCreatedCount": "uint256",
+                    "gen0CreatedCount": "uint256"
+                }
+            },
+            "_isReadyToGiveBirth(MonsterBase.Monster)": {
+                "argument": {},
+                "contract": {
+                    "PROMO_CREATION_LIMIT": "uint256",
+                    "GEN0_CREATION_LIMIT": "uint256",
+                    "GEN0_STARTING_PRICE": "uint256",
+                    "GEN0_AUCTION_DURATION": "uint256",
+                    "promoCreatedCount": "uint256",
+                    "gen0CreatedCount": "uint256"
+                }
+            },
+            "isReadyToBreed(uint256)": {
+                "argument": {
+                    "_monsterId": "uint256"
+                },
+                "contract": {
+                    "PROMO_CREATION_LIMIT": "uint256",
+                    "GEN0_CREATION_LIMIT": "uint256",
+                    "GEN0_STARTING_PRICE": "uint256",
+                    "GEN0_AUCTION_DURATION": "uint256",
+                    "promoCreatedCount": "uint256",
+                    "gen0CreatedCount": "uint256"
+                }
+            },
+            "isPregnant(uint256)": {
+                "argument": {
+                    "_monsterId": "uint256"
+                },
+                "contract": {
+                    "PROMO_CREATION_LIMIT": "uint256",
+                    "GEN0_CREATION_LIMIT": "uint256",
+                    "GEN0_STARTING_PRICE": "uint256",
+                    "GEN0_AUCTION_DURATION": "uint256",
+                    "promoCreatedCount": "uint256",
+                    "gen0CreatedCount": "uint256"
+                }
+            },
+            "_isValidMatingPair(MonsterBase.Monster,uint256,MonsterBase.Monster,uint256)": {
+                "argument": {
+                    "_matronId": "uint256",
+                    "_sireId": "uint256"
+                },
+                "contract": {
+                    "PROMO_CREATION_LIMIT": "uint256",
+                    "GEN0_CREATION_LIMIT": "uint256",
+                    "GEN0_STARTING_PRICE": "uint256",
+                    "GEN0_AUCTION_DURATION": "uint256",
+                    "promoCreatedCount": "uint256",
+                    "gen0CreatedCount": "uint256"
+                }
+            },
+            "_canBreedWithViaAuction(uint256,uint256)": {
+                "argument": {
+                    "_matronId": "uint256",
+                    "_sireId": "uint256"
+                },
+                "contract": {
+                    "PROMO_CREATION_LIMIT": "uint256",
+                    "GEN0_CREATION_LIMIT": "uint256",
+                    "GEN0_STARTING_PRICE": "uint256",
+                    "GEN0_AUCTION_DURATION": "uint256",
+                    "promoCreatedCount": "uint256",
+                    "gen0CreatedCount": "uint256"
+                }
+            },
+            "canBreedWith(uint256,uint256)": {
+                "argument": {
+                    "_matronId": "uint256",
+                    "_sireId": "uint256"
+                },
+                "contract": {
+                    "PROMO_CREATION_LIMIT": "uint256",
+                    "GEN0_CREATION_LIMIT": "uint256",
+                    "GEN0_STARTING_PRICE": "uint256",
+                    "GEN0_AUCTION_DURATION": "uint256",
+                    "promoCreatedCount": "uint256",
+                    "gen0CreatedCount": "uint256"
+                }
+            },
+            "_breedWith(uint256,uint256)": {
+                "argument": {
+                    "_matronId": "uint256",
+                    "_sireId": "uint256"
+                },
+                "contract": {
+                    "PROMO_CREATION_LIMIT": "uint256",
+                    "GEN0_CREATION_LIMIT": "uint256",
+                    "GEN0_STARTING_PRICE": "uint256",
+                    "GEN0_AUCTION_DURATION": "uint256",
+                    "promoCreatedCount": "uint256",
+                    "gen0CreatedCount": "uint256"
+                }
+            },
+            "breedWithAuto(uint256,uint256)": {
+                "argument": {
+                    "_matronId": "uint256",
+                    "_sireId": "uint256"
+                },
+                "contract": {
+                    "PROMO_CREATION_LIMIT": "uint256",
+                    "GEN0_CREATION_LIMIT": "uint256",
+                    "GEN0_STARTING_PRICE": "uint256",
+                    "GEN0_AUCTION_DURATION": "uint256",
+                    "promoCreatedCount": "uint256",
+                    "gen0CreatedCount": "uint256"
+                }
+            },
+            "giveBirth(uint256)": {
+                "argument": {
+                    "_matronId": "uint256"
+                },
+                "contract": {
+                    "PROMO_CREATION_LIMIT": "uint256",
+                    "GEN0_CREATION_LIMIT": "uint256",
+                    "GEN0_STARTING_PRICE": "uint256",
+                    "GEN0_AUCTION_DURATION": "uint256",
+                    "promoCreatedCount": "uint256",
+                    "gen0CreatedCount": "uint256"
+                }
+            },
+            "supportsInterface(bytes4)": {
+                "argument": {
+                    "_interfaceID": "bytes4"
+                },
+                "contract": {
+                    "PROMO_CREATION_LIMIT": "uint256",
+                    "GEN0_CREATION_LIMIT": "uint256",
+                    "GEN0_STARTING_PRICE": "uint256",
+                    "GEN0_AUCTION_DURATION": "uint256",
+                    "promoCreatedCount": "uint256",
+                    "gen0CreatedCount": "uint256"
+                }
+            },
+            "setMetadataAddress(address)": {
+                "argument": {},
+                "contract": {
+                    "PROMO_CREATION_LIMIT": "uint256",
+                    "GEN0_CREATION_LIMIT": "uint256",
+                    "GEN0_STARTING_PRICE": "uint256",
+                    "GEN0_AUCTION_DURATION": "uint256",
+                    "promoCreatedCount": "uint256",
+                    "gen0CreatedCount": "uint256"
+                }
+            },
+            "_owns(address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "PROMO_CREATION_LIMIT": "uint256",
+                    "GEN0_CREATION_LIMIT": "uint256",
+                    "GEN0_STARTING_PRICE": "uint256",
+                    "GEN0_AUCTION_DURATION": "uint256",
+                    "promoCreatedCount": "uint256",
+                    "gen0CreatedCount": "uint256"
+                }
+            },
+            "_approvedFor(address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "PROMO_CREATION_LIMIT": "uint256",
+                    "GEN0_CREATION_LIMIT": "uint256",
+                    "GEN0_STARTING_PRICE": "uint256",
+                    "GEN0_AUCTION_DURATION": "uint256",
+                    "promoCreatedCount": "uint256",
+                    "gen0CreatedCount": "uint256"
+                }
+            },
+            "_approve(uint256,address)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "PROMO_CREATION_LIMIT": "uint256",
+                    "GEN0_CREATION_LIMIT": "uint256",
+                    "GEN0_STARTING_PRICE": "uint256",
+                    "GEN0_AUCTION_DURATION": "uint256",
+                    "promoCreatedCount": "uint256",
+                    "gen0CreatedCount": "uint256"
+                }
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "PROMO_CREATION_LIMIT": "uint256",
+                    "GEN0_CREATION_LIMIT": "uint256",
+                    "GEN0_STARTING_PRICE": "uint256",
+                    "GEN0_AUCTION_DURATION": "uint256",
+                    "promoCreatedCount": "uint256",
+                    "gen0CreatedCount": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "PROMO_CREATION_LIMIT": "uint256",
+                    "GEN0_CREATION_LIMIT": "uint256",
+                    "GEN0_STARTING_PRICE": "uint256",
+                    "GEN0_AUCTION_DURATION": "uint256",
+                    "promoCreatedCount": "uint256",
+                    "gen0CreatedCount": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "PROMO_CREATION_LIMIT": "uint256",
+                    "GEN0_CREATION_LIMIT": "uint256",
+                    "GEN0_STARTING_PRICE": "uint256",
+                    "GEN0_AUCTION_DURATION": "uint256",
+                    "promoCreatedCount": "uint256",
+                    "gen0CreatedCount": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "PROMO_CREATION_LIMIT": "uint256",
+                    "GEN0_CREATION_LIMIT": "uint256",
+                    "GEN0_STARTING_PRICE": "uint256",
+                    "GEN0_AUCTION_DURATION": "uint256",
+                    "promoCreatedCount": "uint256",
+                    "gen0CreatedCount": "uint256"
+                }
+            },
+            "totalSupply()": {
+                "argument": {},
+                "contract": {
+                    "PROMO_CREATION_LIMIT": "uint256",
+                    "GEN0_CREATION_LIMIT": "uint256",
+                    "GEN0_STARTING_PRICE": "uint256",
+                    "GEN0_AUCTION_DURATION": "uint256",
+                    "promoCreatedCount": "uint256",
+                    "gen0CreatedCount": "uint256"
+                }
+            },
+            "ownerOf(uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "PROMO_CREATION_LIMIT": "uint256",
+                    "GEN0_CREATION_LIMIT": "uint256",
+                    "GEN0_STARTING_PRICE": "uint256",
+                    "GEN0_AUCTION_DURATION": "uint256",
+                    "promoCreatedCount": "uint256",
+                    "gen0CreatedCount": "uint256"
+                }
+            },
+            "tokensOfOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "PROMO_CREATION_LIMIT": "uint256",
+                    "GEN0_CREATION_LIMIT": "uint256",
+                    "GEN0_STARTING_PRICE": "uint256",
+                    "GEN0_AUCTION_DURATION": "uint256",
+                    "promoCreatedCount": "uint256",
+                    "gen0CreatedCount": "uint256"
+                }
+            },
+            "_memcpy(uint256,uint256,uint256)": {
+                "argument": {
+                    "_dest": "uint256",
+                    "_src": "uint256",
+                    "_len": "uint256"
+                },
+                "contract": {
+                    "PROMO_CREATION_LIMIT": "uint256",
+                    "GEN0_CREATION_LIMIT": "uint256",
+                    "GEN0_STARTING_PRICE": "uint256",
+                    "GEN0_AUCTION_DURATION": "uint256",
+                    "promoCreatedCount": "uint256",
+                    "gen0CreatedCount": "uint256"
+                }
+            },
+            "_toString(bytes32[4],uint256)": {
+                "argument": {
+                    "_rawBytes": "bytes32[4]",
+                    "_stringLength": "uint256"
+                },
+                "contract": {
+                    "PROMO_CREATION_LIMIT": "uint256",
+                    "GEN0_CREATION_LIMIT": "uint256",
+                    "GEN0_STARTING_PRICE": "uint256",
+                    "GEN0_AUCTION_DURATION": "uint256",
+                    "promoCreatedCount": "uint256",
+                    "gen0CreatedCount": "uint256"
+                }
+            },
+            "tokenMetadata(uint256,string)": {
+                "argument": {
+                    "_tokenId": "uint256",
+                    "_preferredTransport": "string"
+                },
+                "contract": {
+                    "PROMO_CREATION_LIMIT": "uint256",
+                    "GEN0_CREATION_LIMIT": "uint256",
+                    "GEN0_STARTING_PRICE": "uint256",
+                    "GEN0_AUCTION_DURATION": "uint256",
+                    "promoCreatedCount": "uint256",
+                    "gen0CreatedCount": "uint256"
+                }
+            },
+            "_transfer(address,address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {
+                    "PROMO_CREATION_LIMIT": "uint256",
+                    "GEN0_CREATION_LIMIT": "uint256",
+                    "GEN0_STARTING_PRICE": "uint256",
+                    "GEN0_AUCTION_DURATION": "uint256",
+                    "promoCreatedCount": "uint256",
+                    "gen0CreatedCount": "uint256"
+                }
+            },
+            "_createMonster(uint256,uint256,uint256,uint256,address)": {
+                "argument": {
+                    "_matronId": "uint256",
+                    "_sireId": "uint256",
+                    "_generation": "uint256",
+                    "_genes": "uint256"
+                },
+                "contract": {
+                    "PROMO_CREATION_LIMIT": "uint256",
+                    "GEN0_CREATION_LIMIT": "uint256",
+                    "GEN0_STARTING_PRICE": "uint256",
+                    "GEN0_AUCTION_DURATION": "uint256",
+                    "promoCreatedCount": "uint256",
+                    "gen0CreatedCount": "uint256"
+                }
+            },
+            "setSecondsPerBlock(uint256)": {
+                "argument": {
+                    "secs": "uint256"
+                },
+                "contract": {
+                    "PROMO_CREATION_LIMIT": "uint256",
+                    "GEN0_CREATION_LIMIT": "uint256",
+                    "GEN0_STARTING_PRICE": "uint256",
+                    "GEN0_AUCTION_DURATION": "uint256",
+                    "promoCreatedCount": "uint256",
+                    "gen0CreatedCount": "uint256"
+                }
+            },
+            "setCEO(address)": {
+                "argument": {},
+                "contract": {
+                    "PROMO_CREATION_LIMIT": "uint256",
+                    "GEN0_CREATION_LIMIT": "uint256",
+                    "GEN0_STARTING_PRICE": "uint256",
+                    "GEN0_AUCTION_DURATION": "uint256",
+                    "promoCreatedCount": "uint256",
+                    "gen0CreatedCount": "uint256"
+                }
+            },
+            "setCFO(address)": {
+                "argument": {},
+                "contract": {
+                    "PROMO_CREATION_LIMIT": "uint256",
+                    "GEN0_CREATION_LIMIT": "uint256",
+                    "GEN0_STARTING_PRICE": "uint256",
+                    "GEN0_AUCTION_DURATION": "uint256",
+                    "promoCreatedCount": "uint256",
+                    "gen0CreatedCount": "uint256"
+                }
+            },
+            "setCOO(address)": {
+                "argument": {},
+                "contract": {
+                    "PROMO_CREATION_LIMIT": "uint256",
+                    "GEN0_CREATION_LIMIT": "uint256",
+                    "GEN0_STARTING_PRICE": "uint256",
+                    "GEN0_AUCTION_DURATION": "uint256",
+                    "promoCreatedCount": "uint256",
+                    "gen0CreatedCount": "uint256"
+                }
+            },
+            "pause()": {
+                "argument": {},
+                "contract": {
+                    "PROMO_CREATION_LIMIT": "uint256",
+                    "GEN0_CREATION_LIMIT": "uint256",
+                    "GEN0_STARTING_PRICE": "uint256",
+                    "GEN0_AUCTION_DURATION": "uint256",
+                    "promoCreatedCount": "uint256",
+                    "gen0CreatedCount": "uint256"
+                }
+            },
+            "unpause()": {
+                "argument": {},
+                "contract": {
+                    "PROMO_CREATION_LIMIT": "uint256",
+                    "GEN0_CREATION_LIMIT": "uint256",
+                    "GEN0_STARTING_PRICE": "uint256",
+                    "GEN0_AUCTION_DURATION": "uint256",
+                    "promoCreatedCount": "uint256",
+                    "gen0CreatedCount": "uint256"
+                }
+            },
+            "createPromoMonster(uint256,address)": {
+                "argument": {
+                    "_genes": "uint256"
+                },
+                "contract": {
+                    "PROMO_CREATION_LIMIT": "uint256",
+                    "GEN0_CREATION_LIMIT": "uint256",
+                    "GEN0_STARTING_PRICE": "uint256",
+                    "GEN0_AUCTION_DURATION": "uint256",
+                    "promoCreatedCount": "uint256",
+                    "gen0CreatedCount": "uint256"
+                }
+            },
+            "createGen0Auction(uint256)": {
+                "argument": {
+                    "_genes": "uint256"
+                },
+                "contract": {
+                    "PROMO_CREATION_LIMIT": "uint256",
+                    "GEN0_CREATION_LIMIT": "uint256",
+                    "GEN0_STARTING_PRICE": "uint256",
+                    "GEN0_AUCTION_DURATION": "uint256",
+                    "promoCreatedCount": "uint256",
+                    "gen0CreatedCount": "uint256"
+                }
+            },
+            "_computeNextGen0Price()": {
+                "argument": {},
+                "contract": {
+                    "PROMO_CREATION_LIMIT": "uint256",
+                    "GEN0_CREATION_LIMIT": "uint256",
+                    "GEN0_STARTING_PRICE": "uint256",
+                    "GEN0_AUCTION_DURATION": "uint256",
+                    "promoCreatedCount": "uint256",
+                    "gen0CreatedCount": "uint256"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "PROMO_CREATION_LIMIT": "uint256",
+                    "GEN0_CREATION_LIMIT": "uint256",
+                    "GEN0_STARTING_PRICE": "uint256",
+                    "GEN0_AUCTION_DURATION": "uint256",
+                    "promoCreatedCount": "uint256",
+                    "gen0CreatedCount": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "canBreedWith(uint256,uint256)": [
+                2261,
+                515
+            ],
+            "isPregnant(uint256)": [
+                1545,
+                295
+            ],
+            "setSiringAuctionAddress(address)": [
+                1435,
+                251
+            ],
+            "createGen0Auction(uint256)": [
+                4118,
+                1065
+            ],
+            "transfer(address,uint256)": [
+                3715,
+                955
+            ],
+            "totalSupply()": [
+                1502,
+                273
+            ],
+            "breedWithAuto(uint256,uint256)": [
+                4644,
+                1263
+            ],
+            "setSaleAuctionAddress(address)": [
+                2848,
+                713
+            ],
+            "transferFrom(address,address,uint256)": [
+                1744,
+                361
+            ],
+            "ownerOf(uint256)": [
+                2696,
+                669
+            ],
+            "pause()": [
+                3154,
+                801
+            ],
+            "approve(address,uint256)": [
+                1228,
+                185
+            ],
+            "unpause()": [
+                2129,
+                471
+            ],
+            "setMetadataAddress(address)": [
+                4318,
+                1153
+            ],
+            "createPromoMonster(uint256,address)": [
+                3394,
+                867
+            ],
+            "setGeneScienceAddress(address)": [
+                1853,
+                383
+            ],
+            "createSaleAuction(uint256,uint256,uint256,uint256)": [
+                2054,
+                449
+            ],
+            "bidOnSiringAuction(uint256,uint256)": [
+                4472,
+                1197
+            ],
+            "withdrawAuctionBalances()": [
+                3471,
+                889
+            ],
+            "setAutoBirthFee(uint256)": [
+                2415,
+                559
+            ],
+            "approveSiring(address,uint256)": [
+                2460,
+                581
+            ],
+            "giveBirth(uint256)": [
+                3329,
+                845
+            ],
+            "createSiringAuction(uint256,uint256,uint256,uint256)": [
+                2340,
+                537
+            ],
+            "isReadyToBreed(uint256)": [
+                4206,
+                1109
+            ],
+            "setCFO(address)": [
+                2537,
+                603
+            ],
+            "balanceOf(address)": [
+                2915,
+                735
+            ],
+            "tokenMetadata(uint256,string)": [
+                851,
+                119
+            ],
+            "tokensOfOwner(address)": [
+                3177,
+                823
+            ],
+            "setSecondsPerBlock(uint256)": [
+                2604,
+                625
+            ],
+            "supportsInterface(bytes4)": [
+                664,
+                75
+            ],
+            "setCOO(address)": [
+                1987,
+                427
+            ],
+            "setCEO(address)": [
+                1920,
+                405
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump12634": [
+                "saleAuction.withdrawBalance()",
+                "saleAuction.withdrawBalance()"
+            ],
+            "block12634": [
+                "saleAuction.withdrawBalance()"
+            ],
+            "jump13683": [
+                "geneScience.randomGenes()",
+                "geneScience.randomGenes()"
+            ],
+            "jump14038": [
+                "saleAuction.createAuction(\n            monsterId,\n            _computeNextGen0Price(),\n            0,\n            GEN0_AUCTION_DURATION,\n            address(this)\n        )",
+                "saleAuction.createAuction(\n            monsterId,\n            _computeNextGen0Price(),\n            0,\n            GEN0_AUCTION_DURATION,\n            address(this)\n        )"
+            ],
+            "jump15127": [
+                "siringAuction.bid.value(msg.value - autoBirthFee)(_sireId)",
+                "siringAuction.bid.value(msg.value - autoBirthFee)(_sireId)"
+            ],
+            "jump5793": [
+                "erc721Metadata.getMetadata(_tokenId, _preferredTransport)",
+                "erc721Metadata.getMetadata(_tokenId, _preferredTransport)"
+            ],
+            "block14898": [
+                "siringAuction.getCurrentPrice(_sireId)"
+            ],
+            "jump18799": [
+                "saleAuction.averageGen0SalePrice()",
+                "saleAuction.averageGen0SalePrice()"
+            ],
+            "jump12792": [
+                "siringAuction.withdrawBalance()",
+                "siringAuction.withdrawBalance()"
+            ],
+            "block11873": [
+                "msg.sender.send(autoBirthFee)"
+            ],
+            "jump6431": [
+                "candidateContract.isSiringClockAuction()",
+                "candidateContract.isSiringClockAuction()"
+            ],
+            "block11712": [
+                "geneScience.mixGenes(matron.genes, sire.genes, matron.cooldownEndBlock - 1)"
+            ],
+            "jump8025": [
+                "saleAuction.createAuction(\n            _monsterId,\n            _startingPrice,\n            _endingPrice,\n            _duration,\n            msg.sender\n        )",
+                "saleAuction.createAuction(\n            _monsterId,\n            _startingPrice,\n            _endingPrice,\n            _duration,\n            msg.sender\n        )"
+            ],
+            "jump8723": [
+                "siringAuction.createAuction(\n            _monsterId,\n            _startingPrice,\n            _endingPrice,\n            _duration,\n            msg.sender\n        )",
+                "siringAuction.createAuction(\n            _monsterId,\n            _startingPrice,\n            _endingPrice,\n            _duration,\n            msg.sender\n        )"
+            ],
+            "block18799": [
+                "saleAuction.averageGen0SalePrice()"
+            ],
+            "jump7114": [
+                "candidateContract.isGeneScience()",
+                "candidateContract.isGeneScience()"
+            ],
+            "block6431": [
+                "candidateContract.isSiringClockAuction()"
+            ],
+            "block15127": [
+                "siringAuction.bid.value(msg.value - autoBirthFee)(_sireId)"
+            ],
+            "block14038": [
+                "saleAuction.createAuction(\n            monsterId,\n            _computeNextGen0Price(),\n            0,\n            GEN0_AUCTION_DURATION,\n            address(this)\n        )"
+            ],
+            "block8723": [
+                "siringAuction.createAuction(\n            _monsterId,\n            _startingPrice,\n            _endingPrice,\n            _duration,\n            msg.sender\n        )"
+            ],
+            "jump14898": [
+                "siringAuction.getCurrentPrice(_sireId)",
+                "siringAuction.getCurrentPrice(_sireId)"
+            ],
+            "block5793": [
+                "erc721Metadata.getMetadata(_tokenId, _preferredTransport)"
+            ],
+            "block8025": [
+                "saleAuction.createAuction(\n            _monsterId,\n            _startingPrice,\n            _endingPrice,\n            _duration,\n            msg.sender\n        )"
+            ],
+            "block13683": [
+                "geneScience.randomGenes()"
+            ],
+            "jump9891": [
+                "candidateContract.isSaleClockAuction()",
+                "candidateContract.isSaleClockAuction()"
+            ],
+            "jump11712": [
+                "geneScience.mixGenes(matron.genes, sire.genes, matron.cooldownEndBlock - 1)",
+                "geneScience.mixGenes(matron.genes, sire.genes, matron.cooldownEndBlock - 1)"
+            ],
+            "block9891": [
+                "candidateContract.isSaleClockAuction()"
+            ],
+            "block7114": [
+                "candidateContract.isGeneScience()"
+            ],
+            "block12792": [
+                "siringAuction.withdrawBalance()"
+            ]
+        }
+    },
+    "MonsterCore": {
+        "function_list": [
+            "createPromoMonster(uint256,address)",
+            "createGen0Auction(uint256)",
+            "_computeNextGen0Price()",
+            "setSaleAuctionAddress(address)",
+            "setSiringAuctionAddress(address)",
+            "createSaleAuction(uint256,uint256,uint256,uint256)",
+            "createSiringAuction(uint256,uint256,uint256,uint256)",
+            "bidOnSiringAuction(uint256,uint256)",
+            "withdrawAuctionBalances()",
+            "setGeneScienceAddress(address)",
+            "_isReadyToBreed(MonsterBase.Monster)",
+            "_isSiringPermitted(uint256,uint256)",
+            "_triggerCooldown(MonsterBase.Monster)",
+            "approveSiring(address,uint256)",
+            "setAutoBirthFee(uint256)",
+            "_isReadyToGiveBirth(MonsterBase.Monster)",
+            "isReadyToBreed(uint256)",
+            "isPregnant(uint256)",
+            "_isValidMatingPair(MonsterBase.Monster,uint256,MonsterBase.Monster,uint256)",
+            "_canBreedWithViaAuction(uint256,uint256)",
+            "canBreedWith(uint256,uint256)",
+            "_breedWith(uint256,uint256)",
+            "breedWithAuto(uint256,uint256)",
+            "giveBirth(uint256)",
+            "supportsInterface(bytes4)",
+            "setMetadataAddress(address)",
+            "_owns(address,uint256)",
+            "_approvedFor(address,uint256)",
+            "_approve(uint256,address)",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "approve(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "totalSupply()",
+            "ownerOf(uint256)",
+            "tokensOfOwner(address)",
+            "_memcpy(uint256,uint256,uint256)",
+            "_toString(bytes32[4],uint256)",
+            "tokenMetadata(uint256,string)",
+            "totalSupply()",
+            "balanceOf(address)",
+            "ownerOf(uint256)",
+            "approve(address,uint256)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "supportsInterface(bytes4)",
+            "_transfer(address,address,uint256)",
+            "_createMonster(uint256,uint256,uint256,uint256,address)",
+            "setSecondsPerBlock(uint256)",
+            "setCEO(address)",
+            "setCFO(address)",
+            "setCOO(address)",
+            "pause()",
+            "unpause()",
+            "MonsterCore()",
+            "setNewAddress(address)",
+            "fallback()",
+            "getMonster(uint256)",
+            "unpause()",
+            "withdrawBalance()",
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "createPromoMonster(uint256,address)": {
+                "argument": {
+                    "_genes": "uint256"
+                },
+                "contract": {}
+            },
+            "createGen0Auction(uint256)": {
+                "argument": {
+                    "_genes": "uint256"
+                },
+                "contract": {}
+            },
+            "_computeNextGen0Price()": {
+                "argument": {},
+                "contract": {}
+            },
+            "setSaleAuctionAddress(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "setSiringAuctionAddress(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "createSaleAuction(uint256,uint256,uint256,uint256)": {
+                "argument": {
+                    "_monsterId": "uint256",
+                    "_startingPrice": "uint256",
+                    "_endingPrice": "uint256",
+                    "_duration": "uint256"
+                },
+                "contract": {}
+            },
+            "createSiringAuction(uint256,uint256,uint256,uint256)": {
+                "argument": {
+                    "_monsterId": "uint256",
+                    "_startingPrice": "uint256",
+                    "_endingPrice": "uint256",
+                    "_duration": "uint256"
+                },
+                "contract": {}
+            },
+            "bidOnSiringAuction(uint256,uint256)": {
+                "argument": {
+                    "_sireId": "uint256",
+                    "_matronId": "uint256"
+                },
+                "contract": {}
+            },
+            "withdrawAuctionBalances()": {
+                "argument": {},
+                "contract": {}
+            },
+            "setGeneScienceAddress(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "_isReadyToBreed(MonsterBase.Monster)": {
+                "argument": {},
+                "contract": {}
+            },
+            "_isSiringPermitted(uint256,uint256)": {
+                "argument": {
+                    "_sireId": "uint256",
+                    "_matronId": "uint256"
+                },
+                "contract": {}
+            },
+            "_triggerCooldown(MonsterBase.Monster)": {
+                "argument": {},
+                "contract": {}
+            },
+            "approveSiring(address,uint256)": {
+                "argument": {
+                    "_sireId": "uint256"
+                },
+                "contract": {}
+            },
+            "setAutoBirthFee(uint256)": {
+                "argument": {
+                    "val": "uint256"
+                },
+                "contract": {}
+            },
+            "_isReadyToGiveBirth(MonsterBase.Monster)": {
+                "argument": {},
+                "contract": {}
+            },
+            "isReadyToBreed(uint256)": {
+                "argument": {
+                    "_monsterId": "uint256"
+                },
+                "contract": {}
+            },
+            "isPregnant(uint256)": {
+                "argument": {
+                    "_monsterId": "uint256"
+                },
+                "contract": {}
+            },
+            "_isValidMatingPair(MonsterBase.Monster,uint256,MonsterBase.Monster,uint256)": {
+                "argument": {
+                    "_matronId": "uint256",
+                    "_sireId": "uint256"
+                },
+                "contract": {}
+            },
+            "_canBreedWithViaAuction(uint256,uint256)": {
+                "argument": {
+                    "_matronId": "uint256",
+                    "_sireId": "uint256"
+                },
+                "contract": {}
+            },
+            "canBreedWith(uint256,uint256)": {
+                "argument": {
+                    "_matronId": "uint256",
+                    "_sireId": "uint256"
+                },
+                "contract": {}
+            },
+            "_breedWith(uint256,uint256)": {
+                "argument": {
+                    "_matronId": "uint256",
+                    "_sireId": "uint256"
+                },
+                "contract": {}
+            },
+            "breedWithAuto(uint256,uint256)": {
+                "argument": {
+                    "_matronId": "uint256",
+                    "_sireId": "uint256"
+                },
+                "contract": {}
+            },
+            "giveBirth(uint256)": {
+                "argument": {
+                    "_matronId": "uint256"
+                },
+                "contract": {}
+            },
+            "supportsInterface(bytes4)": {
+                "argument": {
+                    "_interfaceID": "bytes4"
+                },
+                "contract": {}
+            },
+            "setMetadataAddress(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "_owns(address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {}
+            },
+            "_approvedFor(address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {}
+            },
+            "_approve(uint256,address)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {}
+            },
+            "totalSupply()": {
+                "argument": {},
+                "contract": {}
+            },
+            "ownerOf(uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {}
+            },
+            "tokensOfOwner(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "_memcpy(uint256,uint256,uint256)": {
+                "argument": {
+                    "_dest": "uint256",
+                    "_src": "uint256",
+                    "_len": "uint256"
+                },
+                "contract": {}
+            },
+            "_toString(bytes32[4],uint256)": {
+                "argument": {
+                    "_rawBytes": "bytes32[4]",
+                    "_stringLength": "uint256"
+                },
+                "contract": {}
+            },
+            "tokenMetadata(uint256,string)": {
+                "argument": {
+                    "_tokenId": "uint256",
+                    "_preferredTransport": "string"
+                },
+                "contract": {}
+            },
+            "_transfer(address,address,uint256)": {
+                "argument": {
+                    "_tokenId": "uint256"
+                },
+                "contract": {}
+            },
+            "_createMonster(uint256,uint256,uint256,uint256,address)": {
+                "argument": {
+                    "_matronId": "uint256",
+                    "_sireId": "uint256",
+                    "_generation": "uint256",
+                    "_genes": "uint256"
+                },
+                "contract": {}
+            },
+            "setSecondsPerBlock(uint256)": {
+                "argument": {
+                    "secs": "uint256"
+                },
+                "contract": {}
+            },
+            "setCEO(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "setCFO(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "setCOO(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "pause()": {
+                "argument": {},
+                "contract": {}
+            },
+            "unpause()": {
+                "argument": {},
+                "contract": {}
+            },
+            "MonsterCore()": {
+                "argument": {},
+                "contract": {}
+            },
+            "setNewAddress(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {}
+            },
+            "getMonster(uint256)": {
+                "argument": {
+                    "_id": "uint256"
+                },
+                "contract": {}
+            },
+            "withdrawBalance()": {
+                "argument": {},
+                "contract": {}
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "canBreedWith(uint256,uint256)": [
+                2482,
+                515
+            ],
+            "isPregnant(uint256)": [
+                1766,
+                295
+            ],
+            "setSiringAuctionAddress(address)": [
+                1656,
+                251
+            ],
+            "createGen0Auction(uint256)": [
+                4652,
+                1153
+            ],
+            "transfer(address,uint256)": [
+                4249,
+                1043
+            ],
+            "totalSupply()": [
+                1723,
+                273
+            ],
+            "breedWithAuto(uint256,uint256)": [
+                5178,
+                1351
+            ],
+            "setSaleAuctionAddress(address)": [
+                3315,
+                779
+            ],
+            "transferFrom(address,address,uint256)": [
+                1965,
+                361
+            ],
+            "ownerOf(uint256)": [
+                3076,
+                713
+            ],
+            "pause()": [
+                3688,
+                889
+            ],
+            "approve(address,uint256)": [
+                1449,
+                185
+            ],
+            "unpause()": [
+                2350,
+                471
+            ],
+            "setMetadataAddress(address)": [
+                4852,
+                1241
+            ],
+            "setGeneScienceAddress(address)": [
+                2074,
+                383
+            ],
+            "withdrawBalance()": [
+                14594,
+                894
+            ],
+            "createSaleAuction(uint256,uint256,uint256,uint256)": [
+                2275,
+                449
+            ],
+            "bidOnSiringAuction(uint256,uint256)": [
+                5006,
+                1285
+            ],
+            "withdrawAuctionBalances()": [
+                4005,
+                977
+            ],
+            "setAutoBirthFee(uint256)": [
+                2636,
+                559
+            ],
+            "approveSiring(address,uint256)": [
+                2681,
+                581
+            ],
+            "giveBirth(uint256)": [
+                3863,
+                933
+            ],
+            "createSiringAuction(uint256,uint256,uint256,uint256)": [
+                2561,
+                537
+            ],
+            "isReadyToBreed(uint256)": [
+                4740,
+                1197
+            ],
+            "setCFO(address)": [
+                2758,
+                603
+            ],
+            "balanceOf(address)": [
+                3382,
+                801
+            ],
+            "tokenMetadata(uint256,string)": [
+                1072,
+                119
+            ],
+            "tokensOfOwner(address)": [
+                3711,
+                911
+            ],
+            "getMonster(uint256)": [
+                2940,
+                691
+            ],
+            "setSecondsPerBlock(uint256)": [
+                2825,
+                625
+            ],
+            "setNewAddress(address)": [
+                3469,
+                823
+            ],
+            "supportsInterface(bytes4)": [
+                885,
+                75
+            ],
+            "createPromoMonster(uint256,address)": [
+                3928,
+                955
+            ],
+            "setCOO(address)": [
+                2208,
+                427
+            ],
+            "setCEO(address)": [
+                2141,
+                405
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump11408": [
+                "candidateContract.isSaleClockAuction()",
+                "candidateContract.isSaleClockAuction()"
+            ],
+            "block8559": [
+                "saleAuction.createAuction(\n            _monsterId,\n            _startingPrice,\n            _endingPrice,\n            _duration,\n            msg.sender\n        )"
+            ],
+            "block13675": [
+                "msg.sender.send(autoBirthFee)"
+            ],
+            "block20748": [
+                "saleAuction.averageGen0SalePrice()"
+            ],
+            "jump14436": [
+                "saleAuction.withdrawBalance()",
+                "saleAuction.withdrawBalance()"
+            ],
+            "block16700": [
+                "siringAuction.getCurrentPrice(_sireId)"
+            ],
+            "block16929": [
+                "siringAuction.bid.value(msg.value - autoBirthFee)(_sireId)"
+            ],
+            "block14436": [
+                "saleAuction.withdrawBalance()"
+            ],
+            "jump6327": [
+                "erc721Metadata.getMetadata(_tokenId, _preferredTransport)",
+                "erc721Metadata.getMetadata(_tokenId, _preferredTransport)"
+            ],
+            "block13514": [
+                "geneScience.mixGenes(matron.genes, sire.genes, matron.cooldownEndBlock - 1)"
+            ],
+            "jump7648": [
+                "candidateContract.isGeneScience()",
+                "candidateContract.isGeneScience()"
+            ],
+            "jump14594": [
+                "siringAuction.withdrawBalance()",
+                "siringAuction.withdrawBalance()"
+            ],
+            "jump8559": [
+                "saleAuction.createAuction(\n            _monsterId,\n            _startingPrice,\n            _endingPrice,\n            _duration,\n            msg.sender\n        )",
+                "saleAuction.createAuction(\n            _monsterId,\n            _startingPrice,\n            _endingPrice,\n            _duration,\n            msg.sender\n        )"
+            ],
+            "jump20748": [
+                "saleAuction.averageGen0SalePrice()",
+                "saleAuction.averageGen0SalePrice()"
+            ],
+            "jump16929": [
+                "siringAuction.bid.value(msg.value - autoBirthFee)(_sireId)",
+                "siringAuction.bid.value(msg.value - autoBirthFee)(_sireId)"
+            ],
+            "block14594": [
+                "siringAuction.withdrawBalance()"
+            ],
+            "block7648": [
+                "candidateContract.isGeneScience()"
+            ],
+            "block11408": [
+                "candidateContract.isSaleClockAuction()"
+            ],
+            "block6327": [
+                "erc721Metadata.getMetadata(_tokenId, _preferredTransport)"
+            ],
+            "jump13514": [
+                "geneScience.mixGenes(matron.genes, sire.genes, matron.cooldownEndBlock - 1)",
+                "geneScience.mixGenes(matron.genes, sire.genes, matron.cooldownEndBlock - 1)"
+            ],
+            "jump15485": [
+                "geneScience.randomGenes()",
+                "geneScience.randomGenes()"
+            ],
+            "block9613": [
+                "siringAuction.createAuction(\n            _monsterId,\n            _startingPrice,\n            _endingPrice,\n            _duration,\n            msg.sender\n        )"
+            ],
+            "jump16700": [
+                "siringAuction.getCurrentPrice(_sireId)",
+                "siringAuction.getCurrentPrice(_sireId)"
+            ],
+            "jump15840": [
+                "saleAuction.createAuction(\n            monsterId,\n            _computeNextGen0Price(),\n            0,\n            GEN0_AUCTION_DURATION,\n            address(this)\n        )",
+                "saleAuction.createAuction(\n            monsterId,\n            _computeNextGen0Price(),\n            0,\n            GEN0_AUCTION_DURATION,\n            address(this)\n        )"
+            ],
+            "block15485": [
+                "geneScience.randomGenes()"
+            ],
+            "block15840": [
+                "saleAuction.createAuction(\n            monsterId,\n            _computeNextGen0Price(),\n            0,\n            GEN0_AUCTION_DURATION,\n            address(this)\n        )"
+            ],
+            "block6965": [
+                "candidateContract.isSiringClockAuction()"
+            ],
+            "jump6965": [
+                "candidateContract.isSiringClockAuction()",
+                "candidateContract.isSiringClockAuction()"
+            ],
+            "jump9613": [
+                "siringAuction.createAuction(\n            _monsterId,\n            _startingPrice,\n            _endingPrice,\n            _duration,\n            msg.sender\n        )",
+                "siringAuction.createAuction(\n            _monsterId,\n            _startingPrice,\n            _endingPrice,\n            _duration,\n            msg.sender\n        )"
+            ],
+            "block10600": [
+                "cfoAddress.send(balance - subtractFees)"
+            ]
+        }
+    }
+}

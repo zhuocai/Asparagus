@@ -1,0 +1,75 @@
+{
+    "Token": {
+        "function_list": [
+            "transferFrom(address,address,uint256)"
+        ],
+        "initial_state": {
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferFrom(address,address,uint256)": [
+                269,
+                119
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "RedemptionContract": {
+        "function_list": [
+            "RedemptionContract(address,uint256)",
+            "fallback()",
+            "redeemTokens(uint256)"
+        ],
+        "initial_state": {
+            "RedemptionContract(address,uint256)": {
+                "argument": {
+                    "_exchangeRate": "uint256"
+                },
+                "contract": {
+                    "exchangeRate": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "exchangeRate": "uint256"
+                }
+            },
+            "redeemTokens(uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {
+                    "exchangeRate": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "redeemTokens(uint256)": [
+                321,
+                119
+            ]
+        },
+        "block_CALL_mapping": {
+            "block830": [
+                "msg.sender.transfer(redemptionValue)"
+            ],
+            "jump830": [
+                "msg.sender.transfer(redemptionValue)",
+                "msg.sender.transfer(redemptionValue)"
+            ],
+            "block747": [
+                "Token(token).transferFrom(msg.sender, this, amount)"
+            ],
+            "jump747": [
+                "Token(token).transferFrom(msg.sender, this, amount)",
+                "Token(token).transferFrom(msg.sender, this, amount)"
+            ]
+        }
+    }
+}

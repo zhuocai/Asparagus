@@ -1,0 +1,260 @@
+{
+    "ERC20": {
+        "function_list": [
+            "transfer(address,uint256)",
+            "balanceOf(address)",
+            "approve(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "allowance(address,address)"
+        ],
+        "initial_state": {
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                125,
+                75
+            ],
+            "balanceOf(address)": [
+                402,
+                141
+            ],
+            "allowance(address,address)": [
+                590,
+                185
+            ],
+            "transferFrom(address,address,uint256)": [
+                269,
+                119
+            ],
+            "transfer(address,uint256)": [
+                489,
+                163
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Distribute": {
+        "function_list": [
+            "Distribute()",
+            "tokensDue(uint256)",
+            "changeToken(address)",
+            "withdrawAll()",
+            "validate()",
+            "returnToSender()",
+            "abort()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "Distribute()": {
+                "argument": {},
+                "contract": {
+                    "ethToTokenRate": "uint256",
+                    "withhold": "uint256",
+                    "payees": "Distribute.Payee[]",
+                    "admins": "address[]",
+                    "tokenMultiplier": "uint256",
+                    "ethToWei": "uint256"
+                }
+            },
+            "tokensDue(uint256)": {
+                "argument": {
+                    "_contributionWei": "uint256"
+                },
+                "contract": {
+                    "ethToTokenRate": "uint256",
+                    "withhold": "uint256",
+                    "payees": "Distribute.Payee[]",
+                    "admins": "address[]",
+                    "tokenMultiplier": "uint256",
+                    "ethToWei": "uint256"
+                }
+            },
+            "changeToken(address)": {
+                "argument": {},
+                "contract": {
+                    "ethToTokenRate": "uint256",
+                    "withhold": "uint256",
+                    "payees": "Distribute.Payee[]",
+                    "admins": "address[]",
+                    "tokenMultiplier": "uint256",
+                    "ethToWei": "uint256"
+                }
+            },
+            "withdrawAll()": {
+                "argument": {},
+                "contract": {
+                    "ethToTokenRate": "uint256",
+                    "withhold": "uint256",
+                    "payees": "Distribute.Payee[]",
+                    "admins": "address[]",
+                    "tokenMultiplier": "uint256",
+                    "ethToWei": "uint256"
+                }
+            },
+            "validate()": {
+                "argument": {},
+                "contract": {
+                    "ethToTokenRate": "uint256",
+                    "withhold": "uint256",
+                    "payees": "Distribute.Payee[]",
+                    "admins": "address[]",
+                    "tokenMultiplier": "uint256",
+                    "ethToWei": "uint256"
+                }
+            },
+            "returnToSender()": {
+                "argument": {},
+                "contract": {
+                    "ethToTokenRate": "uint256",
+                    "withhold": "uint256",
+                    "payees": "Distribute.Payee[]",
+                    "admins": "address[]",
+                    "tokenMultiplier": "uint256",
+                    "ethToWei": "uint256"
+                }
+            },
+            "abort()": {
+                "argument": {},
+                "contract": {
+                    "ethToTokenRate": "uint256",
+                    "withhold": "uint256",
+                    "payees": "Distribute.Payee[]",
+                    "admins": "address[]",
+                    "tokenMultiplier": "uint256",
+                    "ethToWei": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "changeToken(address)": [
+                682,
+                207
+            ],
+            "returnToSender()": [
+                905,
+                317
+            ],
+            "abort()": [
+                380,
+                119
+            ],
+            "validate()": [
+                749,
+                229
+            ],
+            "withdrawAll()": [
+                796,
+                251
+            ],
+            "tokensDue(uint256)": [
+                490,
+                163
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump3440": [
+                "token.transferFrom(multisig,payees[i].addr, tokensToSend*tokenMultiplier)",
+                "token.transferFrom(multisig,payees[i].addr, tokensToSend*tokenMultiplier)"
+            ],
+            "block4062_0": [
+                "token.balanceOf(address(this))"
+            ],
+            "jump2583": [
+                "token.allowance(multisig,address(this))",
+                "token.allowance(multisig,address(this))"
+            ],
+            "block2240_0": [
+                "token.balanceOf(multisig)"
+            ],
+            "block4254_0": [
+                "token.transfer(multisig, token.balanceOf(address(this)))"
+            ],
+            "jump4324": [
+                "multisig.send(this.balance)",
+                "multisig.send(this.balance)"
+            ],
+            "jump4254": [
+                "token.transfer(multisig, token.balanceOf(address(this)))",
+                "token.transfer(multisig, token.balanceOf(address(this)))"
+            ],
+            "block4254": [
+                "token.transfer(multisig, token.balanceOf(address(this)))"
+            ],
+            "block4324_0": [
+                "multisig.send(this.balance)"
+            ],
+            "jump2240_0": [
+                "token.balanceOf(multisig)",
+                "token.balanceOf(multisig)"
+            ],
+            "jump2240": [
+                "token.balanceOf(multisig)",
+                "token.balanceOf(multisig)"
+            ],
+            "jump4062": [
+                "token.balanceOf(address(this))",
+                "token.balanceOf(address(this))"
+            ],
+            "jump4254_0": [
+                "token.transfer(multisig, token.balanceOf(address(this)))",
+                "token.transfer(multisig, token.balanceOf(address(this)))"
+            ],
+            "jump2583_0": [
+                "token.allowance(multisig,address(this))",
+                "token.allowance(multisig,address(this))"
+            ],
+            "block4062": [
+                "token.balanceOf(address(this))"
+            ],
+            "block2583": [
+                "token.allowance(multisig,address(this))"
+            ],
+            "block3440": [
+                "token.transferFrom(multisig,payees[i].addr, tokensToSend*tokenMultiplier)"
+            ],
+            "block4324": [
+                "multisig.send(this.balance)"
+            ],
+            "jump4324_0": [
+                "multisig.send(this.balance)",
+                "multisig.send(this.balance)"
+            ],
+            "block2583_0": [
+                "token.allowance(multisig,address(this))"
+            ],
+            "block2240": [
+                "token.balanceOf(multisig)"
+            ],
+            "jump4062_0": [
+                "token.balanceOf(address(this))",
+                "token.balanceOf(address(this))"
+            ]
+        }
+    }
+}

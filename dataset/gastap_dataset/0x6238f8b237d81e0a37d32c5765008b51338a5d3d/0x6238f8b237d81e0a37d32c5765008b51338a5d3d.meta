@@ -1,0 +1,291 @@
+{
+    "ERC20": {
+        "function_list": [
+            "transfer(address,uint256)",
+            "balanceOf(address)"
+        ],
+        "initial_state": {
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transfer(address,uint256)": [
+                1396,
+                361
+            ],
+            "balanceOf(address)": [
+                1055,
+                273
+            ]
+        },
+        "block_CALL_mapping": {
+            "block4085": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ],
+            "jump4085": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)",
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ]
+        }
+    },
+    "MainSale": {
+        "function_list": [
+            "createTokens(address)"
+        ],
+        "initial_state": {
+            "createTokens(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "createTokens(address)": [
+                989,
+                317
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump4769": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "block1841_0": [
+                "exchangeRate.getRate(\"ETH\")"
+            ],
+            "block3376": [
+                "token.totalSupply()"
+            ],
+            "jump2188": [
+                "multisigVault.send(msg.value)",
+                "multisigVault.send(msg.value)"
+            ],
+            "jump2146": [
+                "token.mint(recipient, tokens)",
+                "token.mint(recipient, tokens)"
+            ],
+            "block3903": [
+                "token.finishMinting()"
+            ],
+            "jump2188_0": [
+                "multisigVault.send(msg.value)",
+                "multisigVault.send(msg.value)"
+            ],
+            "jump2146_0": [
+                "token.mint(recipient, tokens)",
+                "token.mint(recipient, tokens)"
+            ],
+            "block4769": [
+                "token.balanceOf(this)"
+            ],
+            "block2146": [
+                "token.mint(recipient, tokens)"
+            ],
+            "block2188": [
+                "multisigVault.send(msg.value)"
+            ],
+            "jump1841": [
+                "exchangeRate.getRate(\"ETH\")",
+                "exchangeRate.getRate(\"ETH\")"
+            ],
+            "jump3709": [
+                "token.mint(multisigVault, restrictedTokens)",
+                "token.mint(multisigVault, restrictedTokens)"
+            ],
+            "block4961": [
+                "token.transfer(multisigVault, token.balanceOf(this))"
+            ],
+            "jump4961": [
+                "token.transfer(multisigVault, token.balanceOf(this))",
+                "token.transfer(multisigVault, token.balanceOf(this))"
+            ],
+            "jump2146_1": [
+                "token.mint(recipient, tokens)",
+                "token.mint(recipient, tokens)"
+            ],
+            "block2977": [
+                "token.mint(recipient, tokens)"
+            ],
+            "block2146_0": [
+                "token.mint(recipient, tokens)"
+            ],
+            "block2146_1": [
+                "token.mint(recipient, tokens)"
+            ],
+            "jump2977": [
+                "token.mint(recipient, tokens)",
+                "token.mint(recipient, tokens)"
+            ],
+            "jump3376": [
+                "token.totalSupply()",
+                "token.totalSupply()"
+            ],
+            "block3709": [
+                "token.mint(multisigVault, restrictedTokens)"
+            ],
+            "jump3903": [
+                "token.finishMinting()",
+                "token.finishMinting()"
+            ],
+            "block1841": [
+                "exchangeRate.getRate(\"ETH\")"
+            ],
+            "block2188_0": [
+                "multisigVault.send(msg.value)"
+            ],
+            "block2188_1": [
+                "multisigVault.send(msg.value)"
+            ],
+            "jump2188_1": [
+                "multisigVault.send(msg.value)",
+                "multisigVault.send(msg.value)"
+            ],
+            "jump4185": [
+                "token.transferOwnership(owner)",
+                "token.transferOwnership(owner)"
+            ],
+            "jump1841_1": [
+                "exchangeRate.getRate(\"ETH\")",
+                "exchangeRate.getRate(\"ETH\")"
+            ],
+            "jump1841_0": [
+                "exchangeRate.getRate(\"ETH\")",
+                "exchangeRate.getRate(\"ETH\")"
+            ],
+            "block4185": [
+                "token.transferOwnership(owner)"
+            ],
+            "block1841_1": [
+                "exchangeRate.getRate(\"ETH\")"
+            ]
+        }
+    },
+    "Reseller": {
+        "function_list": [
+            "buy()",
+            "withdraw()",
+            "claim()",
+            "fallback()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "buy()": {
+                "argument": {},
+                "contract": {
+                    "total_pay_claimed": "uint256"
+                }
+            },
+            "withdraw()": {
+                "argument": {},
+                "contract": {
+                    "total_pay_claimed": "uint256"
+                }
+            },
+            "claim()": {
+                "argument": {},
+                "contract": {
+                    "total_pay_claimed": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "total_pay_claimed": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "claim()": [
+                274,
+                119
+            ],
+            "buy()": [
+                414,
+                185
+            ],
+            "withdraw()": [
+                164,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump1199": [
+                "developer.transfer(msg.value)",
+                "developer.transfer(msg.value)"
+            ],
+            "block1121_0": [
+                "token.balanceOf(address(this))"
+            ],
+            "jump1658": [
+                "sale.createTokens.value(msg.value)(address(this))",
+                "sale.createTokens.value(msg.value)(address(this))"
+            ],
+            "block859": [
+                "token.transfer(msg.sender, pay_to_withdraw)"
+            ],
+            "block1199_1": [
+                "developer.transfer(msg.value)"
+            ],
+            "block1199_0": [
+                "developer.transfer(msg.value)"
+            ],
+            "block1121_1": [
+                "token.balanceOf(address(this))"
+            ],
+            "block859_0": [
+                "token.transfer(msg.sender, pay_to_withdraw)"
+            ],
+            "jump1121": [
+                "token.balanceOf(address(this))",
+                "token.balanceOf(address(this))"
+            ],
+            "jump1199_0": [
+                "developer.transfer(msg.value)",
+                "developer.transfer(msg.value)"
+            ],
+            "jump1121_0": [
+                "token.balanceOf(address(this))",
+                "token.balanceOf(address(this))"
+            ],
+            "jump1199_1": [
+                "developer.transfer(msg.value)",
+                "developer.transfer(msg.value)"
+            ],
+            "block1199": [
+                "developer.transfer(msg.value)"
+            ],
+            "jump1121_1": [
+                "token.balanceOf(address(this))",
+                "token.balanceOf(address(this))"
+            ],
+            "jump859_1": [
+                "token.transfer(msg.sender, pay_to_withdraw)",
+                "token.transfer(msg.sender, pay_to_withdraw)"
+            ],
+            "block1658": [
+                "sale.createTokens.value(msg.value)(address(this))"
+            ],
+            "jump859": [
+                "token.transfer(msg.sender, pay_to_withdraw)",
+                "token.transfer(msg.sender, pay_to_withdraw)"
+            ],
+            "jump859_0": [
+                "token.transfer(msg.sender, pay_to_withdraw)",
+                "token.transfer(msg.sender, pay_to_withdraw)"
+            ],
+            "block859_1": [
+                "token.transfer(msg.sender, pay_to_withdraw)"
+            ],
+            "block1121": [
+                "token.balanceOf(address(this))"
+            ]
+        }
+    }
+}

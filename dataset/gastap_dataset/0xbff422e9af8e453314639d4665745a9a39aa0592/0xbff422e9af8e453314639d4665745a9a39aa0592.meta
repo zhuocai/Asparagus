@@ -1,0 +1,823 @@
+{
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "owned": {
+        "function_list": [
+            "owned()",
+            "changeOwner(address)",
+            "confirmOwner()"
+        ],
+        "initial_state": {
+            "owned()": {
+                "argument": {},
+                "contract": {}
+            },
+            "changeOwner(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "confirmOwner()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "confirmOwner()": [
+                257,
+                119
+            ],
+            "changeOwner(address)": [
+                190,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "StandardToken": {
+        "function_list": [
+            "transfer(address,uint256)",
+            "balanceOf(address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "increaseApproval(address,uint256)",
+            "decreaseApproval(address,uint256)"
+        ],
+        "initial_state": {
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "increaseApproval(address,uint256)": {
+                "argument": {
+                    "_addedValue": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "decreaseApproval(address,uint256)": {
+                "argument": {
+                    "_subtractedValue": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                147,
+                75
+            ],
+            "increaseApproval(address,uint256)": [
+                713,
+                207
+            ],
+            "balanceOf(address)": [
+                525,
+                163
+            ],
+            "allowance(address,address)": [
+                814,
+                229
+            ],
+            "decreaseApproval(address,uint256)": [
+                424,
+                141
+            ],
+            "transferFrom(address,address,uint256)": [
+                291,
+                119
+            ],
+            "transfer(address,uint256)": [
+                612,
+                185
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "BulleonICO": {
+        "function_list": [
+            "owned()",
+            "changeOwner(address)",
+            "confirmOwner()",
+            "investmentsOf(address)",
+            "availableOnStage()",
+            "createTokenContract()",
+            "currentStageTokensCap()",
+            "currentStageTokensRate()",
+            "BulleonICO()",
+            "fallback()",
+            "buyTokens(address)",
+            "forceWithdraw()",
+            "calcMultiStage()",
+            "setWithdrawWallet(address)",
+            "totalInvestments(uint256)",
+            "refundMoney(uint256)",
+            "burnTokens(uint256)",
+            "getTokensCost(uint256)",
+            "getTokensAmount(uint256)",
+            "toNextStage()",
+            "availableTokens()",
+            "withdrawFunds(uint256)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "owned()": {
+                "argument": {},
+                "contract": {
+                    "version": "string",
+                    "totalSold": "uint256",
+                    "soldOnStage": "uint256",
+                    "currentStage": "uint8",
+                    "tokensRate": "uint256[]",
+                    "tokensCap": "uint256[]",
+                    "LIMIT_ON_BENEFICIARY": "uint256"
+                }
+            },
+            "changeOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "version": "string",
+                    "totalSold": "uint256",
+                    "soldOnStage": "uint256",
+                    "currentStage": "uint8",
+                    "tokensRate": "uint256[]",
+                    "tokensCap": "uint256[]",
+                    "LIMIT_ON_BENEFICIARY": "uint256"
+                }
+            },
+            "confirmOwner()": {
+                "argument": {},
+                "contract": {
+                    "version": "string",
+                    "totalSold": "uint256",
+                    "soldOnStage": "uint256",
+                    "currentStage": "uint8",
+                    "tokensRate": "uint256[]",
+                    "tokensCap": "uint256[]",
+                    "LIMIT_ON_BENEFICIARY": "uint256"
+                }
+            },
+            "investmentsOf(address)": {
+                "argument": {},
+                "contract": {
+                    "version": "string",
+                    "totalSold": "uint256",
+                    "soldOnStage": "uint256",
+                    "currentStage": "uint8",
+                    "tokensRate": "uint256[]",
+                    "tokensCap": "uint256[]",
+                    "LIMIT_ON_BENEFICIARY": "uint256"
+                }
+            },
+            "availableOnStage()": {
+                "argument": {},
+                "contract": {
+                    "version": "string",
+                    "totalSold": "uint256",
+                    "soldOnStage": "uint256",
+                    "currentStage": "uint8",
+                    "tokensRate": "uint256[]",
+                    "tokensCap": "uint256[]",
+                    "LIMIT_ON_BENEFICIARY": "uint256"
+                }
+            },
+            "createTokenContract()": {
+                "argument": {},
+                "contract": {
+                    "version": "string",
+                    "totalSold": "uint256",
+                    "soldOnStage": "uint256",
+                    "currentStage": "uint8",
+                    "tokensRate": "uint256[]",
+                    "tokensCap": "uint256[]",
+                    "LIMIT_ON_BENEFICIARY": "uint256"
+                }
+            },
+            "currentStageTokensCap()": {
+                "argument": {},
+                "contract": {
+                    "version": "string",
+                    "totalSold": "uint256",
+                    "soldOnStage": "uint256",
+                    "currentStage": "uint8",
+                    "tokensRate": "uint256[]",
+                    "tokensCap": "uint256[]",
+                    "LIMIT_ON_BENEFICIARY": "uint256"
+                }
+            },
+            "currentStageTokensRate()": {
+                "argument": {},
+                "contract": {
+                    "version": "string",
+                    "totalSold": "uint256",
+                    "soldOnStage": "uint256",
+                    "currentStage": "uint8",
+                    "tokensRate": "uint256[]",
+                    "tokensCap": "uint256[]",
+                    "LIMIT_ON_BENEFICIARY": "uint256"
+                }
+            },
+            "BulleonICO()": {
+                "argument": {},
+                "contract": {
+                    "version": "string",
+                    "totalSold": "uint256",
+                    "soldOnStage": "uint256",
+                    "currentStage": "uint8",
+                    "tokensRate": "uint256[]",
+                    "tokensCap": "uint256[]",
+                    "LIMIT_ON_BENEFICIARY": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "version": "string",
+                    "totalSold": "uint256",
+                    "soldOnStage": "uint256",
+                    "currentStage": "uint8",
+                    "tokensRate": "uint256[]",
+                    "tokensCap": "uint256[]",
+                    "LIMIT_ON_BENEFICIARY": "uint256"
+                }
+            },
+            "buyTokens(address)": {
+                "argument": {},
+                "contract": {
+                    "version": "string",
+                    "totalSold": "uint256",
+                    "soldOnStage": "uint256",
+                    "currentStage": "uint8",
+                    "tokensRate": "uint256[]",
+                    "tokensCap": "uint256[]",
+                    "LIMIT_ON_BENEFICIARY": "uint256"
+                }
+            },
+            "forceWithdraw()": {
+                "argument": {},
+                "contract": {
+                    "version": "string",
+                    "totalSold": "uint256",
+                    "soldOnStage": "uint256",
+                    "currentStage": "uint8",
+                    "tokensRate": "uint256[]",
+                    "tokensCap": "uint256[]",
+                    "LIMIT_ON_BENEFICIARY": "uint256"
+                }
+            },
+            "calcMultiStage()": {
+                "argument": {},
+                "contract": {
+                    "version": "string",
+                    "totalSold": "uint256",
+                    "soldOnStage": "uint256",
+                    "currentStage": "uint8",
+                    "tokensRate": "uint256[]",
+                    "tokensCap": "uint256[]",
+                    "LIMIT_ON_BENEFICIARY": "uint256"
+                }
+            },
+            "setWithdrawWallet(address)": {
+                "argument": {},
+                "contract": {
+                    "version": "string",
+                    "totalSold": "uint256",
+                    "soldOnStage": "uint256",
+                    "currentStage": "uint8",
+                    "tokensRate": "uint256[]",
+                    "tokensCap": "uint256[]",
+                    "LIMIT_ON_BENEFICIARY": "uint256"
+                }
+            },
+            "totalInvestments(uint256)": {
+                "argument": {
+                    "additionalAmount": "uint256"
+                },
+                "contract": {
+                    "version": "string",
+                    "totalSold": "uint256",
+                    "soldOnStage": "uint256",
+                    "currentStage": "uint8",
+                    "tokensRate": "uint256[]",
+                    "tokensCap": "uint256[]",
+                    "LIMIT_ON_BENEFICIARY": "uint256"
+                }
+            },
+            "refundMoney(uint256)": {
+                "argument": {
+                    "refundAmount": "uint256"
+                },
+                "contract": {
+                    "version": "string",
+                    "totalSold": "uint256",
+                    "soldOnStage": "uint256",
+                    "currentStage": "uint8",
+                    "tokensRate": "uint256[]",
+                    "tokensCap": "uint256[]",
+                    "LIMIT_ON_BENEFICIARY": "uint256"
+                }
+            },
+            "burnTokens(uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {
+                    "version": "string",
+                    "totalSold": "uint256",
+                    "soldOnStage": "uint256",
+                    "currentStage": "uint8",
+                    "tokensRate": "uint256[]",
+                    "tokensCap": "uint256[]",
+                    "LIMIT_ON_BENEFICIARY": "uint256"
+                }
+            },
+            "getTokensCost(uint256)": {
+                "argument": {
+                    "_tokensAmount": "uint256"
+                },
+                "contract": {
+                    "version": "string",
+                    "totalSold": "uint256",
+                    "soldOnStage": "uint256",
+                    "currentStage": "uint8",
+                    "tokensRate": "uint256[]",
+                    "tokensCap": "uint256[]",
+                    "LIMIT_ON_BENEFICIARY": "uint256"
+                }
+            },
+            "getTokensAmount(uint256)": {
+                "argument": {
+                    "_amountInWei": "uint256"
+                },
+                "contract": {
+                    "version": "string",
+                    "totalSold": "uint256",
+                    "soldOnStage": "uint256",
+                    "currentStage": "uint8",
+                    "tokensRate": "uint256[]",
+                    "tokensCap": "uint256[]",
+                    "LIMIT_ON_BENEFICIARY": "uint256"
+                }
+            },
+            "toNextStage()": {
+                "argument": {},
+                "contract": {
+                    "version": "string",
+                    "totalSold": "uint256",
+                    "soldOnStage": "uint256",
+                    "currentStage": "uint8",
+                    "tokensRate": "uint256[]",
+                    "tokensCap": "uint256[]",
+                    "LIMIT_ON_BENEFICIARY": "uint256"
+                }
+            },
+            "availableTokens()": {
+                "argument": {},
+                "contract": {
+                    "version": "string",
+                    "totalSold": "uint256",
+                    "soldOnStage": "uint256",
+                    "currentStage": "uint8",
+                    "tokensRate": "uint256[]",
+                    "tokensCap": "uint256[]",
+                    "LIMIT_ON_BENEFICIARY": "uint256"
+                }
+            },
+            "withdrawFunds(uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {
+                    "version": "string",
+                    "totalSold": "uint256",
+                    "soldOnStage": "uint256",
+                    "currentStage": "uint8",
+                    "tokensRate": "uint256[]",
+                    "tokensCap": "uint256[]",
+                    "LIMIT_ON_BENEFICIARY": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "investmentsOf(address)": [
+                349,
+                119
+            ],
+            "availableOnStage()": [
+                263,
+                75
+            ],
+            "changeOwner(address)": [
+                980,
+                339
+            ],
+            "currentStageTokensCap()": [
+                306,
+                97
+            ],
+            "currentStageTokensRate()": [
+                1157,
+                405
+            ],
+            "setWithdrawWallet(address)": [
+                870,
+                295
+            ],
+            "burnTokens(uint256)": [
+                672,
+                207
+            ],
+            "availableTokens()": [
+                629,
+                185
+            ],
+            "forceWithdraw()": [
+                717,
+                229
+            ],
+            "confirmOwner()": [
+                1047,
+                361
+            ],
+            "buyTokens(address)": [
+                1200,
+                427
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump2700_2": [
+                "rewardToken.balanceOf(address(this))",
+                "rewardToken.balanceOf(address(this))"
+            ],
+            "jump2700_3": [
+                "rewardToken.balanceOf(address(this))",
+                "rewardToken.balanceOf(address(this))"
+            ],
+            "jump2700_0": [
+                "rewardToken.balanceOf(address(this))",
+                "rewardToken.balanceOf(address(this))"
+            ],
+            "jump2700_1": [
+                "rewardToken.balanceOf(address(this))",
+                "rewardToken.balanceOf(address(this))"
+            ],
+            "jump2700": [
+                "rewardToken.balanceOf(address(this))",
+                "rewardToken.balanceOf(address(this))"
+            ],
+            "jump2700_4": [
+                "rewardToken.balanceOf(address(this))",
+                "rewardToken.balanceOf(address(this))"
+            ],
+            "block3000": [
+                "rewardToken.burn(amount)"
+            ],
+            "jump1991": [
+                "rewardToken.transfer(beneficiary,boughtTokens)",
+                "rewardToken.transfer(beneficiary,boughtTokens)"
+            ],
+            "jump4544": [
+                "WITHDRAW_WALLET.transfer(amount)",
+                "WITHDRAW_WALLET.transfer(amount)"
+            ],
+            "block4544_0": [
+                "WITHDRAW_WALLET.transfer(amount)"
+            ],
+            "block4544_1": [
+                "WITHDRAW_WALLET.transfer(amount)"
+            ],
+            "block4544_2": [
+                "WITHDRAW_WALLET.transfer(amount)"
+            ],
+            "block4470": [
+                "msg.sender.transfer(refundAmount)"
+            ],
+            "block4544": [
+                "WITHDRAW_WALLET.transfer(amount)"
+            ],
+            "jump1991_1": [
+                "rewardToken.transfer(beneficiary,boughtTokens)",
+                "rewardToken.transfer(beneficiary,boughtTokens)"
+            ],
+            "jump1991_0": [
+                "rewardToken.transfer(beneficiary,boughtTokens)",
+                "rewardToken.transfer(beneficiary,boughtTokens)"
+            ],
+            "block2700_4": [
+                "rewardToken.balanceOf(address(this))"
+            ],
+            "block2700_5": [
+                "rewardToken.balanceOf(address(this))"
+            ],
+            "block2700_0": [
+                "rewardToken.balanceOf(address(this))"
+            ],
+            "block2700_1": [
+                "rewardToken.balanceOf(address(this))"
+            ],
+            "block2700_2": [
+                "rewardToken.balanceOf(address(this))"
+            ],
+            "block2700_3": [
+                "rewardToken.balanceOf(address(this))"
+            ],
+            "jump3000": [
+                "rewardToken.burn(amount)",
+                "rewardToken.burn(amount)"
+            ],
+            "block1991": [
+                "rewardToken.transfer(beneficiary,boughtTokens)"
+            ],
+            "block4470_0": [
+                "msg.sender.transfer(refundAmount)"
+            ],
+            "block4470_1": [
+                "msg.sender.transfer(refundAmount)"
+            ],
+            "jump4470_0": [
+                "msg.sender.transfer(refundAmount)",
+                "msg.sender.transfer(refundAmount)"
+            ],
+            "jump4470_1": [
+                "msg.sender.transfer(refundAmount)",
+                "msg.sender.transfer(refundAmount)"
+            ],
+            "jump2700_5": [
+                "rewardToken.balanceOf(address(this))",
+                "rewardToken.balanceOf(address(this))"
+            ],
+            "jump4470": [
+                "msg.sender.transfer(refundAmount)",
+                "msg.sender.transfer(refundAmount)"
+            ],
+            "block1991_1": [
+                "rewardToken.transfer(beneficiary,boughtTokens)"
+            ],
+            "block1991_0": [
+                "rewardToken.transfer(beneficiary,boughtTokens)"
+            ],
+            "block2700": [
+                "rewardToken.balanceOf(address(this))"
+            ],
+            "jump4544_2": [
+                "WITHDRAW_WALLET.transfer(amount)",
+                "WITHDRAW_WALLET.transfer(amount)"
+            ],
+            "jump4544_0": [
+                "WITHDRAW_WALLET.transfer(amount)",
+                "WITHDRAW_WALLET.transfer(amount)"
+            ],
+            "jump4544_1": [
+                "WITHDRAW_WALLET.transfer(amount)",
+                "WITHDRAW_WALLET.transfer(amount)"
+            ]
+        }
+    },
+    "Bulleon": {
+        "function_list": [
+            "transfer(address,uint256)",
+            "balanceOf(address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "increaseApproval(address,uint256)",
+            "decreaseApproval(address,uint256)",
+            "Bulleon()",
+            "burn(uint256)",
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "version": "string",
+                    "premineWallets": "address[]"
+                }
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "version": "string",
+                    "premineWallets": "address[]"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "version": "string",
+                    "premineWallets": "address[]"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "version": "string",
+                    "premineWallets": "address[]"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "version": "string",
+                    "premineWallets": "address[]"
+                }
+            },
+            "increaseApproval(address,uint256)": {
+                "argument": {
+                    "_addedValue": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "version": "string",
+                    "premineWallets": "address[]"
+                }
+            },
+            "decreaseApproval(address,uint256)": {
+                "argument": {
+                    "_subtractedValue": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "version": "string",
+                    "premineWallets": "address[]"
+                }
+            },
+            "Bulleon()": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "version": "string",
+                    "premineWallets": "address[]"
+                }
+            },
+            "burn(uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "version": "string",
+                    "premineWallets": "address[]"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "version": "string",
+                    "premineWallets": "address[]"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                346,
+                97
+            ],
+            "increaseApproval(address,uint256)": [
+                1294,
+                317
+            ],
+            "allowance(address,address)": [
+                1395,
+                339
+            ],
+            "burn(uint256)": [
+                672,
+                185
+            ],
+            "balanceOf(address)": [
+                962,
+                251
+            ],
+            "decreaseApproval(address,uint256)": [
+                861,
+                229
+            ],
+            "transferFrom(address,address,uint256)": [
+                490,
+                141
+            ],
+            "transfer(address,uint256)": [
+                1193,
+                295
+            ]
+        },
+        "block_CALL_mapping": {}
+    }
+}

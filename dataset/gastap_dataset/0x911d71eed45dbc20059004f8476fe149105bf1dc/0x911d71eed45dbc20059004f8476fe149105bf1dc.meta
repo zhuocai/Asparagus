@@ -1,0 +1,117 @@
+{
+    "testingToken": {
+        "function_list": [
+            "testingToken()",
+            "send(address,uint256)",
+            "offerTrade(uint256,uint256)",
+            "agreeToTrade(address)",
+            "setTaxes(uint256,uint256)",
+            "extractWei(uint256)",
+            "transferOwnership(address)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "testingToken()": {
+                "argument": {},
+                "contract": {
+                    "ethTaxRate": "uint256",
+                    "tokenTaxRate": "uint256"
+                }
+            },
+            "send(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "ethTaxRate": "uint256",
+                    "tokenTaxRate": "uint256"
+                }
+            },
+            "offerTrade(uint256,uint256)": {
+                "argument": {
+                    "_weiWanted": "uint256",
+                    "_tokensOffered": "uint256"
+                },
+                "contract": {
+                    "ethTaxRate": "uint256",
+                    "tokenTaxRate": "uint256"
+                }
+            },
+            "agreeToTrade(address)": {
+                "argument": {},
+                "contract": {
+                    "ethTaxRate": "uint256",
+                    "tokenTaxRate": "uint256"
+                }
+            },
+            "setTaxes(uint256,uint256)": {
+                "argument": {
+                    "_ethTaxRate": "uint256",
+                    "_tokenTaxRate": "uint256"
+                },
+                "contract": {
+                    "ethTaxRate": "uint256",
+                    "tokenTaxRate": "uint256"
+                }
+            },
+            "extractWei(uint256)": {
+                "argument": {
+                    "_wei": "uint256"
+                },
+                "contract": {
+                    "ethTaxRate": "uint256",
+                    "tokenTaxRate": "uint256"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "ethTaxRate": "uint256",
+                    "tokenTaxRate": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "agreeToTrade(address)": [
+                686,
+                207
+            ],
+            "offerTrade(uint256,uint256)": [
+                1025,
+                339
+            ],
+            "setTaxes(uint256,uint256)": [
+                740,
+                229
+            ],
+            "send(address,uint256)": [
+                795,
+                251
+            ],
+            "extractWei(uint256)": [
+                289,
+                97
+            ],
+            "transferOwnership(address)": [
+                958,
+                317
+            ]
+        },
+        "block_CALL_mapping": {
+            "block1196": [
+                "msg.sender.send(_wei)"
+            ],
+            "jump1729": [
+                "_from.send((msg.value*(100-ethTaxRate))/100)",
+                "_from.send((msg.value*(100-ethTaxRate))/100)"
+            ],
+            "block1729": [
+                "_from.send((msg.value*(100-ethTaxRate))/100)"
+            ],
+            "jump1196": [
+                "msg.sender.send(_wei)",
+                "msg.sender.send(_wei)"
+            ]
+        }
+    }
+}

@@ -1,0 +1,189 @@
+{
+    "ERC20": {
+        "function_list": [
+            "transfer(address,uint256)",
+            "balanceOf(address)"
+        ],
+        "initial_state": {
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transfer(address,uint256)": [
+                717,
+                207
+            ],
+            "balanceOf(address)": [
+                630,
+                185
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "EnjinBuyer": {
+        "function_list": [
+            "set_token(address)",
+            "activate_kill_switch(string)",
+            "personal_withdraw(string,uint256)",
+            "withdraw_token(address)",
+            "withdraw_refund()",
+            "fallback()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "set_token(address)": {
+                "argument": {},
+                "contract": {
+                    "contract_eth_value": "uint256",
+                    "refund_contract_eth_value": "uint256",
+                    "refund_eth_value": "uint256",
+                    "password_hash": "bytes32",
+                    "eth_minimum": "uint256"
+                }
+            },
+            "activate_kill_switch(string)": {
+                "argument": {
+                    "password": "string"
+                },
+                "contract": {
+                    "contract_eth_value": "uint256",
+                    "refund_contract_eth_value": "uint256",
+                    "refund_eth_value": "uint256",
+                    "password_hash": "bytes32",
+                    "eth_minimum": "uint256"
+                }
+            },
+            "personal_withdraw(string,uint256)": {
+                "argument": {
+                    "password": "string",
+                    "transfer_amount": "uint256"
+                },
+                "contract": {
+                    "contract_eth_value": "uint256",
+                    "refund_contract_eth_value": "uint256",
+                    "refund_eth_value": "uint256",
+                    "password_hash": "bytes32",
+                    "eth_minimum": "uint256"
+                }
+            },
+            "withdraw_token(address)": {
+                "argument": {},
+                "contract": {
+                    "contract_eth_value": "uint256",
+                    "refund_contract_eth_value": "uint256",
+                    "refund_eth_value": "uint256",
+                    "password_hash": "bytes32",
+                    "eth_minimum": "uint256"
+                }
+            },
+            "withdraw_refund()": {
+                "argument": {},
+                "contract": {
+                    "contract_eth_value": "uint256",
+                    "refund_contract_eth_value": "uint256",
+                    "refund_eth_value": "uint256",
+                    "password_hash": "bytes32",
+                    "eth_minimum": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "contract_eth_value": "uint256",
+                    "refund_contract_eth_value": "uint256",
+                    "refund_eth_value": "uint256",
+                    "password_hash": "bytes32",
+                    "eth_minimum": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "set_token(address)": [
+                1751,
+                383
+            ],
+            "activate_kill_switch(string)": [
+                1818,
+                405
+            ],
+            "withdraw_token(address)": [
+                1464,
+                273
+            ],
+            "withdraw_refund()": [
+                1217,
+                163
+            ],
+            "personal_withdraw(string,uint256)": [
+                972,
+                97
+            ]
+        },
+        "block_CALL_mapping": {
+            "block4166": [
+                "myToken.transfer(msg.sender, tokens_to_withdraw - fee)"
+            ],
+            "block552_0": [
+                "sale.call.value(contract_eth_value)()"
+            ],
+            "jump2244": [
+                "msg.sender.transfer(transfer_amount)",
+                "msg.sender.transfer(transfer_amount)"
+            ],
+            "jump552_0": [
+                "sale.call.value(contract_eth_value)()",
+                "sale.call.value(contract_eth_value)()"
+            ],
+            "block3416": [
+                "myToken.balanceOf(address(this))"
+            ],
+            "block2527": [
+                "msg.sender.transfer(eth_to_withdraw)"
+            ],
+            "jump2527": [
+                "msg.sender.transfer(eth_to_withdraw)",
+                "msg.sender.transfer(eth_to_withdraw)"
+            ],
+            "jump3416": [
+                "myToken.balanceOf(address(this))",
+                "myToken.balanceOf(address(this))"
+            ],
+            "block552": [
+                "sale.call.value(contract_eth_value)()"
+            ],
+            "block2244": [
+                "msg.sender.transfer(transfer_amount)"
+            ],
+            "jump3931": [
+                "myToken.transfer(developer, fee)",
+                "myToken.transfer(developer, fee)"
+            ],
+            "jump4166": [
+                "myToken.transfer(msg.sender, tokens_to_withdraw - fee)",
+                "myToken.transfer(msg.sender, tokens_to_withdraw - fee)"
+            ],
+            "block3053": [
+                "msg.sender.transfer(eth_to_withdraw)"
+            ],
+            "block3931": [
+                "myToken.transfer(developer, fee)"
+            ],
+            "jump3053": [
+                "msg.sender.transfer(eth_to_withdraw)",
+                "msg.sender.transfer(eth_to_withdraw)"
+            ],
+            "jump552": [
+                "sale.call.value(contract_eth_value)()",
+                "sale.call.value(contract_eth_value)()"
+            ]
+        }
+    }
+}

@@ -1,0 +1,733 @@
+{
+    "EscrowGoods": {
+        "function_list": [
+            "EscrowGoods(address,uint256,uint256,uint256,uint16,uint256)",
+            "logDebug(string)",
+            "logEvent(uint256,string,uint256,uint16,address,uint256,uint256)",
+            "kill()",
+            "safeSend(address,uint256)",
+            "yes(uint256,string,uint256)",
+            "no(uint256,string,uint256)",
+            "arbYes(uint256,address,uint256,string,uint256)",
+            "getFees()",
+            "getMoney(uint256)",
+            "addDescription(string,uint256)",
+            "buy(uint256,string,uint256,uint16)",
+            "accept(uint256,string,uint256)",
+            "reject(uint256,string,uint256)",
+            "cancel(string,uint256)",
+            "unbuy()",
+            "fallback()",
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "EscrowGoods(address,uint256,uint256,uint256,uint16,uint256)": {
+                "argument": {
+                    "_freezePeriod": "uint256",
+                    "_feePromille": "uint256",
+                    "_rewardPromille": "uint256",
+                    "_count": "uint16",
+                    "_price": "uint256"
+                },
+                "contract": {
+                    "None": "uint16",
+                    "Available": "uint16",
+                    "Canceled": "uint16",
+                    "Buy": "uint16",
+                    "Accept": "uint16",
+                    "Reject": "uint16",
+                    "Cancel": "uint16",
+                    "Description": "uint16",
+                    "Unlock": "uint16",
+                    "Freeze": "uint16",
+                    "Resolved": "uint16",
+                    "arbitrationPeriod": "uint256",
+                    "safeGas": "uint256",
+                    "contentCount": "uint256",
+                    "logsCount": "uint256",
+                    "freezePeriod": "uint256",
+                    "feePromille": "uint256",
+                    "rewardPromille": "uint256",
+                    "feeFunds": "uint256",
+                    "totalEscrows": "uint256",
+                    "status": "uint16",
+                    "count": "uint16",
+                    "availableCount": "uint16",
+                    "pendingCount": "uint16",
+                    "price": "uint256"
+                }
+            },
+            "logDebug(string)": {
+                "argument": {
+                    "message": "string"
+                },
+                "contract": {
+                    "None": "uint16",
+                    "Available": "uint16",
+                    "Canceled": "uint16",
+                    "Buy": "uint16",
+                    "Accept": "uint16",
+                    "Reject": "uint16",
+                    "Cancel": "uint16",
+                    "Description": "uint16",
+                    "Unlock": "uint16",
+                    "Freeze": "uint16",
+                    "Resolved": "uint16",
+                    "arbitrationPeriod": "uint256",
+                    "safeGas": "uint256",
+                    "contentCount": "uint256",
+                    "logsCount": "uint256",
+                    "freezePeriod": "uint256",
+                    "feePromille": "uint256",
+                    "rewardPromille": "uint256",
+                    "feeFunds": "uint256",
+                    "totalEscrows": "uint256",
+                    "status": "uint16",
+                    "count": "uint16",
+                    "availableCount": "uint16",
+                    "pendingCount": "uint16",
+                    "price": "uint256"
+                }
+            },
+            "logEvent(uint256,string,uint256,uint16,address,uint256,uint256)": {
+                "argument": {
+                    "lockId": "uint256",
+                    "dataInfo": "string",
+                    "version": "uint256",
+                    "eventType": "uint16",
+                    "count": "uint256",
+                    "payment": "uint256"
+                },
+                "contract": {
+                    "None": "uint16",
+                    "Available": "uint16",
+                    "Canceled": "uint16",
+                    "Buy": "uint16",
+                    "Accept": "uint16",
+                    "Reject": "uint16",
+                    "Cancel": "uint16",
+                    "Description": "uint16",
+                    "Unlock": "uint16",
+                    "Freeze": "uint16",
+                    "Resolved": "uint16",
+                    "arbitrationPeriod": "uint256",
+                    "safeGas": "uint256",
+                    "contentCount": "uint256",
+                    "logsCount": "uint256",
+                    "freezePeriod": "uint256",
+                    "feePromille": "uint256",
+                    "rewardPromille": "uint256",
+                    "feeFunds": "uint256",
+                    "totalEscrows": "uint256",
+                    "status": "uint16",
+                    "count": "uint16",
+                    "availableCount": "uint16",
+                    "pendingCount": "uint16",
+                    "price": "uint256"
+                }
+            },
+            "kill()": {
+                "argument": {},
+                "contract": {
+                    "None": "uint16",
+                    "Available": "uint16",
+                    "Canceled": "uint16",
+                    "Buy": "uint16",
+                    "Accept": "uint16",
+                    "Reject": "uint16",
+                    "Cancel": "uint16",
+                    "Description": "uint16",
+                    "Unlock": "uint16",
+                    "Freeze": "uint16",
+                    "Resolved": "uint16",
+                    "arbitrationPeriod": "uint256",
+                    "safeGas": "uint256",
+                    "contentCount": "uint256",
+                    "logsCount": "uint256",
+                    "freezePeriod": "uint256",
+                    "feePromille": "uint256",
+                    "rewardPromille": "uint256",
+                    "feeFunds": "uint256",
+                    "totalEscrows": "uint256",
+                    "status": "uint16",
+                    "count": "uint16",
+                    "availableCount": "uint16",
+                    "pendingCount": "uint16",
+                    "price": "uint256"
+                }
+            },
+            "safeSend(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "None": "uint16",
+                    "Available": "uint16",
+                    "Canceled": "uint16",
+                    "Buy": "uint16",
+                    "Accept": "uint16",
+                    "Reject": "uint16",
+                    "Cancel": "uint16",
+                    "Description": "uint16",
+                    "Unlock": "uint16",
+                    "Freeze": "uint16",
+                    "Resolved": "uint16",
+                    "arbitrationPeriod": "uint256",
+                    "safeGas": "uint256",
+                    "contentCount": "uint256",
+                    "logsCount": "uint256",
+                    "freezePeriod": "uint256",
+                    "feePromille": "uint256",
+                    "rewardPromille": "uint256",
+                    "feeFunds": "uint256",
+                    "totalEscrows": "uint256",
+                    "status": "uint16",
+                    "count": "uint16",
+                    "availableCount": "uint16",
+                    "pendingCount": "uint16",
+                    "price": "uint256"
+                }
+            },
+            "yes(uint256,string,uint256)": {
+                "argument": {
+                    "_lockId": "uint256",
+                    "_dataInfo": "string",
+                    "_version": "uint256"
+                },
+                "contract": {
+                    "None": "uint16",
+                    "Available": "uint16",
+                    "Canceled": "uint16",
+                    "Buy": "uint16",
+                    "Accept": "uint16",
+                    "Reject": "uint16",
+                    "Cancel": "uint16",
+                    "Description": "uint16",
+                    "Unlock": "uint16",
+                    "Freeze": "uint16",
+                    "Resolved": "uint16",
+                    "arbitrationPeriod": "uint256",
+                    "safeGas": "uint256",
+                    "contentCount": "uint256",
+                    "logsCount": "uint256",
+                    "freezePeriod": "uint256",
+                    "feePromille": "uint256",
+                    "rewardPromille": "uint256",
+                    "feeFunds": "uint256",
+                    "totalEscrows": "uint256",
+                    "status": "uint16",
+                    "count": "uint16",
+                    "availableCount": "uint16",
+                    "pendingCount": "uint16",
+                    "price": "uint256"
+                }
+            },
+            "no(uint256,string,uint256)": {
+                "argument": {
+                    "_lockId": "uint256",
+                    "_dataInfo": "string",
+                    "_version": "uint256"
+                },
+                "contract": {
+                    "None": "uint16",
+                    "Available": "uint16",
+                    "Canceled": "uint16",
+                    "Buy": "uint16",
+                    "Accept": "uint16",
+                    "Reject": "uint16",
+                    "Cancel": "uint16",
+                    "Description": "uint16",
+                    "Unlock": "uint16",
+                    "Freeze": "uint16",
+                    "Resolved": "uint16",
+                    "arbitrationPeriod": "uint256",
+                    "safeGas": "uint256",
+                    "contentCount": "uint256",
+                    "logsCount": "uint256",
+                    "freezePeriod": "uint256",
+                    "feePromille": "uint256",
+                    "rewardPromille": "uint256",
+                    "feeFunds": "uint256",
+                    "totalEscrows": "uint256",
+                    "status": "uint16",
+                    "count": "uint16",
+                    "availableCount": "uint16",
+                    "pendingCount": "uint16",
+                    "price": "uint256"
+                }
+            },
+            "arbYes(uint256,address,uint256,string,uint256)": {
+                "argument": {
+                    "_lockId": "uint256",
+                    "_payment": "uint256",
+                    "_dataInfo": "string",
+                    "_version": "uint256"
+                },
+                "contract": {
+                    "None": "uint16",
+                    "Available": "uint16",
+                    "Canceled": "uint16",
+                    "Buy": "uint16",
+                    "Accept": "uint16",
+                    "Reject": "uint16",
+                    "Cancel": "uint16",
+                    "Description": "uint16",
+                    "Unlock": "uint16",
+                    "Freeze": "uint16",
+                    "Resolved": "uint16",
+                    "arbitrationPeriod": "uint256",
+                    "safeGas": "uint256",
+                    "contentCount": "uint256",
+                    "logsCount": "uint256",
+                    "freezePeriod": "uint256",
+                    "feePromille": "uint256",
+                    "rewardPromille": "uint256",
+                    "feeFunds": "uint256",
+                    "totalEscrows": "uint256",
+                    "status": "uint16",
+                    "count": "uint16",
+                    "availableCount": "uint16",
+                    "pendingCount": "uint16",
+                    "price": "uint256"
+                }
+            },
+            "getFees()": {
+                "argument": {},
+                "contract": {
+                    "None": "uint16",
+                    "Available": "uint16",
+                    "Canceled": "uint16",
+                    "Buy": "uint16",
+                    "Accept": "uint16",
+                    "Reject": "uint16",
+                    "Cancel": "uint16",
+                    "Description": "uint16",
+                    "Unlock": "uint16",
+                    "Freeze": "uint16",
+                    "Resolved": "uint16",
+                    "arbitrationPeriod": "uint256",
+                    "safeGas": "uint256",
+                    "contentCount": "uint256",
+                    "logsCount": "uint256",
+                    "freezePeriod": "uint256",
+                    "feePromille": "uint256",
+                    "rewardPromille": "uint256",
+                    "feeFunds": "uint256",
+                    "totalEscrows": "uint256",
+                    "status": "uint16",
+                    "count": "uint16",
+                    "availableCount": "uint16",
+                    "pendingCount": "uint16",
+                    "price": "uint256"
+                }
+            },
+            "getMoney(uint256)": {
+                "argument": {
+                    "_lockId": "uint256"
+                },
+                "contract": {
+                    "None": "uint16",
+                    "Available": "uint16",
+                    "Canceled": "uint16",
+                    "Buy": "uint16",
+                    "Accept": "uint16",
+                    "Reject": "uint16",
+                    "Cancel": "uint16",
+                    "Description": "uint16",
+                    "Unlock": "uint16",
+                    "Freeze": "uint16",
+                    "Resolved": "uint16",
+                    "arbitrationPeriod": "uint256",
+                    "safeGas": "uint256",
+                    "contentCount": "uint256",
+                    "logsCount": "uint256",
+                    "freezePeriod": "uint256",
+                    "feePromille": "uint256",
+                    "rewardPromille": "uint256",
+                    "feeFunds": "uint256",
+                    "totalEscrows": "uint256",
+                    "status": "uint16",
+                    "count": "uint16",
+                    "availableCount": "uint16",
+                    "pendingCount": "uint16",
+                    "price": "uint256"
+                }
+            },
+            "addDescription(string,uint256)": {
+                "argument": {
+                    "_dataInfo": "string",
+                    "_version": "uint256"
+                },
+                "contract": {
+                    "None": "uint16",
+                    "Available": "uint16",
+                    "Canceled": "uint16",
+                    "Buy": "uint16",
+                    "Accept": "uint16",
+                    "Reject": "uint16",
+                    "Cancel": "uint16",
+                    "Description": "uint16",
+                    "Unlock": "uint16",
+                    "Freeze": "uint16",
+                    "Resolved": "uint16",
+                    "arbitrationPeriod": "uint256",
+                    "safeGas": "uint256",
+                    "contentCount": "uint256",
+                    "logsCount": "uint256",
+                    "freezePeriod": "uint256",
+                    "feePromille": "uint256",
+                    "rewardPromille": "uint256",
+                    "feeFunds": "uint256",
+                    "totalEscrows": "uint256",
+                    "status": "uint16",
+                    "count": "uint16",
+                    "availableCount": "uint16",
+                    "pendingCount": "uint16",
+                    "price": "uint256"
+                }
+            },
+            "buy(uint256,string,uint256,uint16)": {
+                "argument": {
+                    "_lockId": "uint256",
+                    "_dataInfo": "string",
+                    "_version": "uint256",
+                    "_count": "uint16"
+                },
+                "contract": {
+                    "None": "uint16",
+                    "Available": "uint16",
+                    "Canceled": "uint16",
+                    "Buy": "uint16",
+                    "Accept": "uint16",
+                    "Reject": "uint16",
+                    "Cancel": "uint16",
+                    "Description": "uint16",
+                    "Unlock": "uint16",
+                    "Freeze": "uint16",
+                    "Resolved": "uint16",
+                    "arbitrationPeriod": "uint256",
+                    "safeGas": "uint256",
+                    "contentCount": "uint256",
+                    "logsCount": "uint256",
+                    "freezePeriod": "uint256",
+                    "feePromille": "uint256",
+                    "rewardPromille": "uint256",
+                    "feeFunds": "uint256",
+                    "totalEscrows": "uint256",
+                    "status": "uint16",
+                    "count": "uint16",
+                    "availableCount": "uint16",
+                    "pendingCount": "uint16",
+                    "price": "uint256"
+                }
+            },
+            "accept(uint256,string,uint256)": {
+                "argument": {
+                    "_lockId": "uint256",
+                    "_dataInfo": "string",
+                    "_version": "uint256"
+                },
+                "contract": {
+                    "None": "uint16",
+                    "Available": "uint16",
+                    "Canceled": "uint16",
+                    "Buy": "uint16",
+                    "Accept": "uint16",
+                    "Reject": "uint16",
+                    "Cancel": "uint16",
+                    "Description": "uint16",
+                    "Unlock": "uint16",
+                    "Freeze": "uint16",
+                    "Resolved": "uint16",
+                    "arbitrationPeriod": "uint256",
+                    "safeGas": "uint256",
+                    "contentCount": "uint256",
+                    "logsCount": "uint256",
+                    "freezePeriod": "uint256",
+                    "feePromille": "uint256",
+                    "rewardPromille": "uint256",
+                    "feeFunds": "uint256",
+                    "totalEscrows": "uint256",
+                    "status": "uint16",
+                    "count": "uint16",
+                    "availableCount": "uint16",
+                    "pendingCount": "uint16",
+                    "price": "uint256"
+                }
+            },
+            "reject(uint256,string,uint256)": {
+                "argument": {
+                    "_lockId": "uint256",
+                    "_dataInfo": "string",
+                    "_version": "uint256"
+                },
+                "contract": {
+                    "None": "uint16",
+                    "Available": "uint16",
+                    "Canceled": "uint16",
+                    "Buy": "uint16",
+                    "Accept": "uint16",
+                    "Reject": "uint16",
+                    "Cancel": "uint16",
+                    "Description": "uint16",
+                    "Unlock": "uint16",
+                    "Freeze": "uint16",
+                    "Resolved": "uint16",
+                    "arbitrationPeriod": "uint256",
+                    "safeGas": "uint256",
+                    "contentCount": "uint256",
+                    "logsCount": "uint256",
+                    "freezePeriod": "uint256",
+                    "feePromille": "uint256",
+                    "rewardPromille": "uint256",
+                    "feeFunds": "uint256",
+                    "totalEscrows": "uint256",
+                    "status": "uint16",
+                    "count": "uint16",
+                    "availableCount": "uint16",
+                    "pendingCount": "uint16",
+                    "price": "uint256"
+                }
+            },
+            "cancel(string,uint256)": {
+                "argument": {
+                    "_dataInfo": "string",
+                    "_version": "uint256"
+                },
+                "contract": {
+                    "None": "uint16",
+                    "Available": "uint16",
+                    "Canceled": "uint16",
+                    "Buy": "uint16",
+                    "Accept": "uint16",
+                    "Reject": "uint16",
+                    "Cancel": "uint16",
+                    "Description": "uint16",
+                    "Unlock": "uint16",
+                    "Freeze": "uint16",
+                    "Resolved": "uint16",
+                    "arbitrationPeriod": "uint256",
+                    "safeGas": "uint256",
+                    "contentCount": "uint256",
+                    "logsCount": "uint256",
+                    "freezePeriod": "uint256",
+                    "feePromille": "uint256",
+                    "rewardPromille": "uint256",
+                    "feeFunds": "uint256",
+                    "totalEscrows": "uint256",
+                    "status": "uint16",
+                    "count": "uint16",
+                    "availableCount": "uint16",
+                    "pendingCount": "uint16",
+                    "price": "uint256"
+                }
+            },
+            "unbuy()": {
+                "argument": {},
+                "contract": {
+                    "None": "uint16",
+                    "Available": "uint16",
+                    "Canceled": "uint16",
+                    "Buy": "uint16",
+                    "Accept": "uint16",
+                    "Reject": "uint16",
+                    "Cancel": "uint16",
+                    "Description": "uint16",
+                    "Unlock": "uint16",
+                    "Freeze": "uint16",
+                    "Resolved": "uint16",
+                    "arbitrationPeriod": "uint256",
+                    "safeGas": "uint256",
+                    "contentCount": "uint256",
+                    "logsCount": "uint256",
+                    "freezePeriod": "uint256",
+                    "feePromille": "uint256",
+                    "rewardPromille": "uint256",
+                    "feeFunds": "uint256",
+                    "totalEscrows": "uint256",
+                    "status": "uint16",
+                    "count": "uint16",
+                    "availableCount": "uint16",
+                    "pendingCount": "uint16",
+                    "price": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "None": "uint16",
+                    "Available": "uint16",
+                    "Canceled": "uint16",
+                    "Buy": "uint16",
+                    "Accept": "uint16",
+                    "Reject": "uint16",
+                    "Cancel": "uint16",
+                    "Description": "uint16",
+                    "Unlock": "uint16",
+                    "Freeze": "uint16",
+                    "Resolved": "uint16",
+                    "arbitrationPeriod": "uint256",
+                    "safeGas": "uint256",
+                    "contentCount": "uint256",
+                    "logsCount": "uint256",
+                    "freezePeriod": "uint256",
+                    "feePromille": "uint256",
+                    "rewardPromille": "uint256",
+                    "feeFunds": "uint256",
+                    "totalEscrows": "uint256",
+                    "status": "uint16",
+                    "count": "uint16",
+                    "availableCount": "uint16",
+                    "pendingCount": "uint16",
+                    "price": "uint256"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "None": "uint16",
+                    "Available": "uint16",
+                    "Canceled": "uint16",
+                    "Buy": "uint16",
+                    "Accept": "uint16",
+                    "Reject": "uint16",
+                    "Cancel": "uint16",
+                    "Description": "uint16",
+                    "Unlock": "uint16",
+                    "Freeze": "uint16",
+                    "Resolved": "uint16",
+                    "arbitrationPeriod": "uint256",
+                    "safeGas": "uint256",
+                    "contentCount": "uint256",
+                    "logsCount": "uint256",
+                    "freezePeriod": "uint256",
+                    "feePromille": "uint256",
+                    "rewardPromille": "uint256",
+                    "feeFunds": "uint256",
+                    "totalEscrows": "uint256",
+                    "status": "uint16",
+                    "count": "uint16",
+                    "availableCount": "uint16",
+                    "pendingCount": "uint16",
+                    "price": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "no(uint256,string,uint256)": [
+                1128,
+                273
+            ],
+            "buy(uint256,string,uint256,uint16)": [
+                863,
+                185
+            ],
+            "accept(uint256,string,uint256)": [
+                1401,
+                339
+            ],
+            "getFees()": [
+                2198,
+                581
+            ],
+            "cancel(string,uint256)": [
+                618,
+                119
+            ],
+            "getMoney(uint256)": [
+                1083,
+                251
+            ],
+            "arbYes(uint256,address,uint256,string,uint256)": [
+                1569,
+                383
+            ],
+            "reject(uint256,string,uint256)": [
+                1276,
+                317
+            ],
+            "addDescription(string,uint256)": [
+                2315,
+                647
+            ],
+            "kill()": [
+                1253,
+                295
+            ],
+            "yes(uint256,string,uint256)": [
+                1779,
+                427
+            ],
+            "unbuy()": [
+                2175,
+                559
+            ]
+        },
+        "block_CALL_mapping": {
+            "block9469_6": [
+                "addr.call.gas(safeGas).value(value)()"
+            ],
+            "jump9469": [
+                "addr.call.gas(safeGas).value(value)()",
+                "addr.call.gas(safeGas).value(value)()"
+            ],
+            "block9469": [
+                "addr.call.gas(safeGas).value(value)()"
+            ],
+            "jump9469_7": [
+                "addr.call.gas(safeGas).value(value)()",
+                "addr.call.gas(safeGas).value(value)()"
+            ],
+            "jump9469_3": [
+                "addr.call.gas(safeGas).value(value)()",
+                "addr.call.gas(safeGas).value(value)()"
+            ],
+            "jump9469_2": [
+                "addr.call.gas(safeGas).value(value)()",
+                "addr.call.gas(safeGas).value(value)()"
+            ],
+            "jump9469_1": [
+                "addr.call.gas(safeGas).value(value)()",
+                "addr.call.gas(safeGas).value(value)()"
+            ],
+            "jump9469_0": [
+                "addr.call.gas(safeGas).value(value)()",
+                "addr.call.gas(safeGas).value(value)()"
+            ],
+            "block9469_1": [
+                "addr.call.gas(safeGas).value(value)()"
+            ],
+            "block9469_0": [
+                "addr.call.gas(safeGas).value(value)()"
+            ],
+            "block9469_3": [
+                "addr.call.gas(safeGas).value(value)()"
+            ],
+            "block9469_2": [
+                "addr.call.gas(safeGas).value(value)()"
+            ],
+            "block9469_5": [
+                "addr.call.gas(safeGas).value(value)()"
+            ],
+            "jump9469_5": [
+                "addr.call.gas(safeGas).value(value)()",
+                "addr.call.gas(safeGas).value(value)()"
+            ],
+            "block9469_7": [
+                "addr.call.gas(safeGas).value(value)()"
+            ],
+            "block9469_4": [
+                "addr.call.gas(safeGas).value(value)()"
+            ],
+            "jump9469_4": [
+                "addr.call.gas(safeGas).value(value)()",
+                "addr.call.gas(safeGas).value(value)()"
+            ],
+            "jump9469_6": [
+                "addr.call.gas(safeGas).value(value)()",
+                "addr.call.gas(safeGas).value(value)()"
+            ]
+        }
+    }
+}

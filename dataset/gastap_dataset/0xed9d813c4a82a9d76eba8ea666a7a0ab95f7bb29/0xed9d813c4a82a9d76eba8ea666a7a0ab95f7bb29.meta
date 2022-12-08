@@ -1,0 +1,156 @@
+{
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "Ownable": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "StarbaseMarketingCampaign": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "StarbaseMarketingCampaign()",
+            "setup(address)",
+            "deliverRewardedTokens(address,uint256,string)",
+            "getContributorInfo(address,string)",
+            "numberOfContributors()"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {
+                    "contributors": "address[]"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "contributors": "address[]"
+                }
+            },
+            "StarbaseMarketingCampaign()": {
+                "argument": {},
+                "contract": {
+                    "contributors": "address[]"
+                }
+            },
+            "setup(address)": {
+                "argument": {},
+                "contract": {
+                    "contributors": "address[]"
+                }
+            },
+            "deliverRewardedTokens(address,uint256,string)": {
+                "argument": {
+                    "tokenCount": "uint256",
+                    "contributionId": "string"
+                },
+                "contract": {
+                    "contributors": "address[]"
+                }
+            },
+            "getContributorInfo(address,string)": {
+                "argument": {
+                    "contributionId": "string"
+                },
+                "contract": {
+                    "contributors": "address[]"
+                }
+            },
+            "numberOfContributors()": {
+                "argument": {},
+                "contract": {
+                    "contributors": "address[]"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "numberOfContributors()": [
+                267,
+                97
+            ],
+            "setup(address)": [
+                435,
+                141
+            ],
+            "getContributorInfo(address,string)": [
+                526,
+                163
+            ],
+            "deliverRewardedTokens(address,uint256,string)": [
+                310,
+                119
+            ],
+            "transferOwnership(address)": [
+                977,
+                251
+            ]
+        },
+        "block_CALL_mapping": {
+            "block2175": [
+                "starbaseToken.allocateToMarketingSupporter(contributorAddress, tokenCount)"
+            ],
+            "jump2175": [
+                "starbaseToken.allocateToMarketingSupporter(contributorAddress, tokenCount)",
+                "starbaseToken.allocateToMarketingSupporter(contributorAddress, tokenCount)"
+            ]
+        }
+    }
+}

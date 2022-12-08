@@ -1,0 +1,938 @@
+{
+    "ERC20Token": {
+        "function_list": [
+            "balanceOf(address)",
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "transfer(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "allowance(address,address)": [
+                1310,
+                295
+            ],
+            "balanceOf(address)": [
+                807,
+                207
+            ],
+            "transferFrom(address,address,uint256)": [
+                481,
+                141
+            ],
+            "transfer(address,uint256)": [
+                1038,
+                251
+            ]
+        },
+        "block_CALL_mapping": {
+            "block3855": [
+                "_spender.call(bytes4(bytes32(sha3(\"receiveApproval(address,uint256,address,bytes)\"))), msg.sender, _value, this, _extraData)"
+            ],
+            "jump3855": [
+                "_spender.call(bytes4(bytes32(sha3(\"receiveApproval(address,uint256,address,bytes)\"))), msg.sender, _value, this, _extraData)",
+                "_spender.call(bytes4(bytes32(sha3(\"receiveApproval(address,uint256,address,bytes)\"))), msg.sender, _value, this, _extraData)"
+            ]
+        }
+    },
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)",
+            "max64(uint64,uint64)",
+            "min64(uint64,uint64)",
+            "max256(uint256,uint256)",
+            "min256(uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "max64(uint64,uint64)": {
+                "argument": {
+                    "a": "uint64",
+                    "b": "uint64"
+                },
+                "contract": {}
+            },
+            "min64(uint64,uint64)": {
+                "argument": {
+                    "a": "uint64",
+                    "b": "uint64"
+                },
+                "contract": {}
+            },
+            "max256(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "min256(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "UnicornRanch": {
+        "function_list": [
+            "UnicornRanch()",
+            "getBookingCount(address)",
+            "getBooking(address,uint256)",
+            "bookSpaVisit(uint256)",
+            "bookAfternoonVisit(uint256)",
+            "bookDayVisit(uint256)",
+            "bookOvernightVisit(uint256)",
+            "bookWeekVisit(uint256)",
+            "bookExtendedVisit(uint256)",
+            "addBooking(UnicornRanch.VisitType,uint256)",
+            "completeBooking(uint256)",
+            "repossessBooking(address,uint256)",
+            "availableBalance(address)",
+            "fallback()",
+            "donateUnicorns(uint256)",
+            "changeOwner(address)",
+            "changeCardboardUnicornTokenAddress(address)",
+            "changeGroveAddress(address)",
+            "changeVisitLengths(uint256,uint256,uint256,uint256,uint256,uint256)",
+            "changeVisitCosts(uint256,uint256,uint256,uint256,uint256,uint256)",
+            "changeRepoSettings(uint256,uint8,uint8)",
+            "changeBirthSettings(uint256,uint8,uint8)",
+            "withdraw()",
+            "withdrawForeignTokens(address)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "UnicornRanch()": {
+                "argument": {},
+                "contract": {
+                    "bookings": "mapping(address => UnicornRanch.Visit[])",
+                    "visitingUnicorns": "uint256",
+                    "repossessionBlocks": "uint256",
+                    "repossessionBountyPerTen": "uint8",
+                    "repossessionBountyPerHundred": "uint8",
+                    "birthBlockThreshold": "uint256",
+                    "birthPerTen": "uint8",
+                    "birthPerHundred": "uint8"
+                }
+            },
+            "getBookingCount(address)": {
+                "argument": {},
+                "contract": {
+                    "bookings": "mapping(address => UnicornRanch.Visit[])",
+                    "visitingUnicorns": "uint256",
+                    "repossessionBlocks": "uint256",
+                    "repossessionBountyPerTen": "uint8",
+                    "repossessionBountyPerHundred": "uint8",
+                    "birthBlockThreshold": "uint256",
+                    "birthPerTen": "uint8",
+                    "birthPerHundred": "uint8"
+                }
+            },
+            "getBooking(address,uint256)": {
+                "argument": {
+                    "_index": "uint256"
+                },
+                "contract": {
+                    "bookings": "mapping(address => UnicornRanch.Visit[])",
+                    "visitingUnicorns": "uint256",
+                    "repossessionBlocks": "uint256",
+                    "repossessionBountyPerTen": "uint8",
+                    "repossessionBountyPerHundred": "uint8",
+                    "birthBlockThreshold": "uint256",
+                    "birthPerTen": "uint8",
+                    "birthPerHundred": "uint8"
+                }
+            },
+            "bookSpaVisit(uint256)": {
+                "argument": {
+                    "_unicornCount": "uint256"
+                },
+                "contract": {
+                    "bookings": "mapping(address => UnicornRanch.Visit[])",
+                    "visitingUnicorns": "uint256",
+                    "repossessionBlocks": "uint256",
+                    "repossessionBountyPerTen": "uint8",
+                    "repossessionBountyPerHundred": "uint8",
+                    "birthBlockThreshold": "uint256",
+                    "birthPerTen": "uint8",
+                    "birthPerHundred": "uint8"
+                }
+            },
+            "bookAfternoonVisit(uint256)": {
+                "argument": {
+                    "_unicornCount": "uint256"
+                },
+                "contract": {
+                    "bookings": "mapping(address => UnicornRanch.Visit[])",
+                    "visitingUnicorns": "uint256",
+                    "repossessionBlocks": "uint256",
+                    "repossessionBountyPerTen": "uint8",
+                    "repossessionBountyPerHundred": "uint8",
+                    "birthBlockThreshold": "uint256",
+                    "birthPerTen": "uint8",
+                    "birthPerHundred": "uint8"
+                }
+            },
+            "bookDayVisit(uint256)": {
+                "argument": {
+                    "_unicornCount": "uint256"
+                },
+                "contract": {
+                    "bookings": "mapping(address => UnicornRanch.Visit[])",
+                    "visitingUnicorns": "uint256",
+                    "repossessionBlocks": "uint256",
+                    "repossessionBountyPerTen": "uint8",
+                    "repossessionBountyPerHundred": "uint8",
+                    "birthBlockThreshold": "uint256",
+                    "birthPerTen": "uint8",
+                    "birthPerHundred": "uint8"
+                }
+            },
+            "bookOvernightVisit(uint256)": {
+                "argument": {
+                    "_unicornCount": "uint256"
+                },
+                "contract": {
+                    "bookings": "mapping(address => UnicornRanch.Visit[])",
+                    "visitingUnicorns": "uint256",
+                    "repossessionBlocks": "uint256",
+                    "repossessionBountyPerTen": "uint8",
+                    "repossessionBountyPerHundred": "uint8",
+                    "birthBlockThreshold": "uint256",
+                    "birthPerTen": "uint8",
+                    "birthPerHundred": "uint8"
+                }
+            },
+            "bookWeekVisit(uint256)": {
+                "argument": {
+                    "_unicornCount": "uint256"
+                },
+                "contract": {
+                    "bookings": "mapping(address => UnicornRanch.Visit[])",
+                    "visitingUnicorns": "uint256",
+                    "repossessionBlocks": "uint256",
+                    "repossessionBountyPerTen": "uint8",
+                    "repossessionBountyPerHundred": "uint8",
+                    "birthBlockThreshold": "uint256",
+                    "birthPerTen": "uint8",
+                    "birthPerHundred": "uint8"
+                }
+            },
+            "bookExtendedVisit(uint256)": {
+                "argument": {
+                    "_unicornCount": "uint256"
+                },
+                "contract": {
+                    "bookings": "mapping(address => UnicornRanch.Visit[])",
+                    "visitingUnicorns": "uint256",
+                    "repossessionBlocks": "uint256",
+                    "repossessionBountyPerTen": "uint8",
+                    "repossessionBountyPerHundred": "uint8",
+                    "birthBlockThreshold": "uint256",
+                    "birthPerTen": "uint8",
+                    "birthPerHundred": "uint8"
+                }
+            },
+            "addBooking(UnicornRanch.VisitType,uint256)": {
+                "argument": {
+                    "_unicornCount": "uint256"
+                },
+                "contract": {
+                    "bookings": "mapping(address => UnicornRanch.Visit[])",
+                    "visitingUnicorns": "uint256",
+                    "repossessionBlocks": "uint256",
+                    "repossessionBountyPerTen": "uint8",
+                    "repossessionBountyPerHundred": "uint8",
+                    "birthBlockThreshold": "uint256",
+                    "birthPerTen": "uint8",
+                    "birthPerHundred": "uint8"
+                }
+            },
+            "completeBooking(uint256)": {
+                "argument": {
+                    "_index": "uint256"
+                },
+                "contract": {
+                    "bookings": "mapping(address => UnicornRanch.Visit[])",
+                    "visitingUnicorns": "uint256",
+                    "repossessionBlocks": "uint256",
+                    "repossessionBountyPerTen": "uint8",
+                    "repossessionBountyPerHundred": "uint8",
+                    "birthBlockThreshold": "uint256",
+                    "birthPerTen": "uint8",
+                    "birthPerHundred": "uint8"
+                }
+            },
+            "repossessBooking(address,uint256)": {
+                "argument": {
+                    "_index": "uint256"
+                },
+                "contract": {
+                    "bookings": "mapping(address => UnicornRanch.Visit[])",
+                    "visitingUnicorns": "uint256",
+                    "repossessionBlocks": "uint256",
+                    "repossessionBountyPerTen": "uint8",
+                    "repossessionBountyPerHundred": "uint8",
+                    "birthBlockThreshold": "uint256",
+                    "birthPerTen": "uint8",
+                    "birthPerHundred": "uint8"
+                }
+            },
+            "availableBalance(address)": {
+                "argument": {},
+                "contract": {
+                    "bookings": "mapping(address => UnicornRanch.Visit[])",
+                    "visitingUnicorns": "uint256",
+                    "repossessionBlocks": "uint256",
+                    "repossessionBountyPerTen": "uint8",
+                    "repossessionBountyPerHundred": "uint8",
+                    "birthBlockThreshold": "uint256",
+                    "birthPerTen": "uint8",
+                    "birthPerHundred": "uint8"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "bookings": "mapping(address => UnicornRanch.Visit[])",
+                    "visitingUnicorns": "uint256",
+                    "repossessionBlocks": "uint256",
+                    "repossessionBountyPerTen": "uint8",
+                    "repossessionBountyPerHundred": "uint8",
+                    "birthBlockThreshold": "uint256",
+                    "birthPerTen": "uint8",
+                    "birthPerHundred": "uint8"
+                }
+            },
+            "donateUnicorns(uint256)": {
+                "argument": {
+                    "_unicornCount": "uint256"
+                },
+                "contract": {
+                    "bookings": "mapping(address => UnicornRanch.Visit[])",
+                    "visitingUnicorns": "uint256",
+                    "repossessionBlocks": "uint256",
+                    "repossessionBountyPerTen": "uint8",
+                    "repossessionBountyPerHundred": "uint8",
+                    "birthBlockThreshold": "uint256",
+                    "birthPerTen": "uint8",
+                    "birthPerHundred": "uint8"
+                }
+            },
+            "changeOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "bookings": "mapping(address => UnicornRanch.Visit[])",
+                    "visitingUnicorns": "uint256",
+                    "repossessionBlocks": "uint256",
+                    "repossessionBountyPerTen": "uint8",
+                    "repossessionBountyPerHundred": "uint8",
+                    "birthBlockThreshold": "uint256",
+                    "birthPerTen": "uint8",
+                    "birthPerHundred": "uint8"
+                }
+            },
+            "changeCardboardUnicornTokenAddress(address)": {
+                "argument": {},
+                "contract": {
+                    "bookings": "mapping(address => UnicornRanch.Visit[])",
+                    "visitingUnicorns": "uint256",
+                    "repossessionBlocks": "uint256",
+                    "repossessionBountyPerTen": "uint8",
+                    "repossessionBountyPerHundred": "uint8",
+                    "birthBlockThreshold": "uint256",
+                    "birthPerTen": "uint8",
+                    "birthPerHundred": "uint8"
+                }
+            },
+            "changeGroveAddress(address)": {
+                "argument": {},
+                "contract": {
+                    "bookings": "mapping(address => UnicornRanch.Visit[])",
+                    "visitingUnicorns": "uint256",
+                    "repossessionBlocks": "uint256",
+                    "repossessionBountyPerTen": "uint8",
+                    "repossessionBountyPerHundred": "uint8",
+                    "birthBlockThreshold": "uint256",
+                    "birthPerTen": "uint8",
+                    "birthPerHundred": "uint8"
+                }
+            },
+            "changeVisitLengths(uint256,uint256,uint256,uint256,uint256,uint256)": {
+                "argument": {
+                    "_spa": "uint256",
+                    "_afternoon": "uint256",
+                    "_day": "uint256",
+                    "_overnight": "uint256",
+                    "_week": "uint256",
+                    "_extended": "uint256"
+                },
+                "contract": {
+                    "bookings": "mapping(address => UnicornRanch.Visit[])",
+                    "visitingUnicorns": "uint256",
+                    "repossessionBlocks": "uint256",
+                    "repossessionBountyPerTen": "uint8",
+                    "repossessionBountyPerHundred": "uint8",
+                    "birthBlockThreshold": "uint256",
+                    "birthPerTen": "uint8",
+                    "birthPerHundred": "uint8"
+                }
+            },
+            "changeVisitCosts(uint256,uint256,uint256,uint256,uint256,uint256)": {
+                "argument": {
+                    "_spa": "uint256",
+                    "_afternoon": "uint256",
+                    "_day": "uint256",
+                    "_overnight": "uint256",
+                    "_week": "uint256",
+                    "_extended": "uint256"
+                },
+                "contract": {
+                    "bookings": "mapping(address => UnicornRanch.Visit[])",
+                    "visitingUnicorns": "uint256",
+                    "repossessionBlocks": "uint256",
+                    "repossessionBountyPerTen": "uint8",
+                    "repossessionBountyPerHundred": "uint8",
+                    "birthBlockThreshold": "uint256",
+                    "birthPerTen": "uint8",
+                    "birthPerHundred": "uint8"
+                }
+            },
+            "changeRepoSettings(uint256,uint8,uint8)": {
+                "argument": {
+                    "_repoBlocks": "uint256",
+                    "_repoPerTen": "uint8",
+                    "_repoPerHundred": "uint8"
+                },
+                "contract": {
+                    "bookings": "mapping(address => UnicornRanch.Visit[])",
+                    "visitingUnicorns": "uint256",
+                    "repossessionBlocks": "uint256",
+                    "repossessionBountyPerTen": "uint8",
+                    "repossessionBountyPerHundred": "uint8",
+                    "birthBlockThreshold": "uint256",
+                    "birthPerTen": "uint8",
+                    "birthPerHundred": "uint8"
+                }
+            },
+            "changeBirthSettings(uint256,uint8,uint8)": {
+                "argument": {
+                    "_birthBlocks": "uint256",
+                    "_birthPerTen": "uint8",
+                    "_birthPerHundred": "uint8"
+                },
+                "contract": {
+                    "bookings": "mapping(address => UnicornRanch.Visit[])",
+                    "visitingUnicorns": "uint256",
+                    "repossessionBlocks": "uint256",
+                    "repossessionBountyPerTen": "uint8",
+                    "repossessionBountyPerHundred": "uint8",
+                    "birthBlockThreshold": "uint256",
+                    "birthPerTen": "uint8",
+                    "birthPerHundred": "uint8"
+                }
+            },
+            "withdraw()": {
+                "argument": {},
+                "contract": {
+                    "bookings": "mapping(address => UnicornRanch.Visit[])",
+                    "visitingUnicorns": "uint256",
+                    "repossessionBlocks": "uint256",
+                    "repossessionBountyPerTen": "uint8",
+                    "repossessionBountyPerHundred": "uint8",
+                    "birthBlockThreshold": "uint256",
+                    "birthPerTen": "uint8",
+                    "birthPerHundred": "uint8"
+                }
+            },
+            "withdrawForeignTokens(address)": {
+                "argument": {},
+                "contract": {
+                    "bookings": "mapping(address => UnicornRanch.Visit[])",
+                    "visitingUnicorns": "uint256",
+                    "repossessionBlocks": "uint256",
+                    "repossessionBountyPerTen": "uint8",
+                    "repossessionBountyPerHundred": "uint8",
+                    "birthBlockThreshold": "uint256",
+                    "birthPerTen": "uint8",
+                    "birthPerHundred": "uint8"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "bookOvernightVisit(uint256)": [
+                1785,
+                537
+            ],
+            "completeBooking(uint256)": [
+                900,
+                185
+            ],
+            "bookSpaVisit(uint256)": [
+                2109,
+                669
+            ],
+            "bookDayVisit(uint256)": [
+                1753,
+                515
+            ],
+            "donateUnicorns(uint256)": [
+                2028,
+                625
+            ],
+            "changeRepoSettings(uint256,uint8,uint8)": [
+                1242,
+                317
+            ],
+            "withdrawForeignTokens(address)": [
+                2236,
+                713
+            ],
+            "bookExtendedVisit(uint256)": [
+                1013,
+                229
+            ],
+            "changeCardboardUnicornTokenAddress(address)": [
+                1961,
+                603
+            ],
+            "changeOwner(address)": [
+                1817,
+                559
+            ],
+            "changeGroveAddress(address)": [
+                1411,
+                383
+            ],
+            "changeVisitCosts(uint256,uint256,uint256,uint256,uint256,uint256)": [
+                2141,
+                691
+            ],
+            "getBooking(address,uint256)": [
+                609,
+                119
+            ],
+            "changeBirthSettings(uint256,uint8,uint8)": [
+                2303,
+                735
+            ],
+            "bookAfternoonVisit(uint256)": [
+                1478,
+                405
+            ],
+            "withdraw()": [
+                1132,
+                273
+            ],
+            "getBookingCount(address)": [
+                1045,
+                251
+            ],
+            "repossessBooking(address,uint256)": [
+                1884,
+                581
+            ],
+            "changeVisitLengths(uint256,uint256,uint256,uint256,uint256,uint256)": [
+                762,
+                141
+            ],
+            "bookWeekVisit(uint256)": [
+                2581,
+                801
+            ]
+        },
+        "block_CALL_mapping": {
+            "block8926": [
+                "cardboardUnicorns.transfer(msg.sender, bountyCount)"
+            ],
+            "block5635": [
+                "owner.transfer(this.balance)"
+            ],
+            "block3096": [
+                "cardboardUnicorns.balanceOf(_who)"
+            ],
+            "block6553": [
+                "cardboardUnicorns.transferFrom(msg.sender, address(this), _unicornCount)"
+            ],
+            "block2862_3": [
+                "cardboardUnicorns.allowance(_who, address(this))"
+            ],
+            "block2862_2": [
+                "cardboardUnicorns.allowance(_who, address(this))"
+            ],
+            "block2862_1": [
+                "cardboardUnicorns.allowance(_who, address(this))"
+            ],
+            "block2862_0": [
+                "cardboardUnicorns.allowance(_who, address(this))"
+            ],
+            "block2862_7": [
+                "cardboardUnicorns.allowance(_who, address(this))"
+            ],
+            "block2862_6": [
+                "cardboardUnicorns.allowance(_who, address(this))"
+            ],
+            "block2862_5": [
+                "cardboardUnicorns.allowance(_who, address(this))"
+            ],
+            "block2862_4": [
+                "cardboardUnicorns.allowance(_who, address(this))"
+            ],
+            "jump2862_0": [
+                "cardboardUnicorns.allowance(_who, address(this))",
+                "cardboardUnicorns.allowance(_who, address(this))"
+            ],
+            "block2862": [
+                "cardboardUnicorns.allowance(_who, address(this))"
+            ],
+            "jump2862_1": [
+                "cardboardUnicorns.allowance(_who, address(this))",
+                "cardboardUnicorns.allowance(_who, address(this))"
+            ],
+            "jump5635": [
+                "owner.transfer(this.balance)",
+                "owner.transfer(this.balance)"
+            ],
+            "jump2862_3": [
+                "cardboardUnicorns.allowance(_who, address(this))",
+                "cardboardUnicorns.allowance(_who, address(this))"
+            ],
+            "jump2862_2": [
+                "cardboardUnicorns.allowance(_who, address(this))",
+                "cardboardUnicorns.allowance(_who, address(this))"
+            ],
+            "block4749": [
+                "cardboardUnicorns.balanceOf(address(this))"
+            ],
+            "jump5305": [
+                "cardboardUnicorns.transfer(msg.sender, unicornsToReturn)",
+                "cardboardUnicorns.transfer(msg.sender, unicornsToReturn)"
+            ],
+            "jump2862_7": [
+                "cardboardUnicorns.allowance(_who, address(this))",
+                "cardboardUnicorns.allowance(_who, address(this))"
+            ],
+            "jump2862_6": [
+                "cardboardUnicorns.allowance(_who, address(this))",
+                "cardboardUnicorns.allowance(_who, address(this))"
+            ],
+            "jump3451_8": [
+                "cardboardUnicorns.transferFrom(msg.sender, address(this), _unicornCount)",
+                "cardboardUnicorns.transferFrom(msg.sender, address(this), _unicornCount)"
+            ],
+            "jump2862": [
+                "cardboardUnicorns.allowance(_who, address(this))",
+                "cardboardUnicorns.allowance(_who, address(this))"
+            ],
+            "jump3451": [
+                "cardboardUnicorns.transferFrom(msg.sender, address(this), _unicornCount)",
+                "cardboardUnicorns.transferFrom(msg.sender, address(this), _unicornCount)"
+            ],
+            "jump7531_3": [
+                "g.insert(\"bookingExpiration\", uniqueKey, int(expiresBlock))",
+                "g.insert(\"bookingExpiration\", uniqueKey, int(expiresBlock))"
+            ],
+            "jump7531_2": [
+                "g.insert(\"bookingExpiration\", uniqueKey, int(expiresBlock))",
+                "g.insert(\"bookingExpiration\", uniqueKey, int(expiresBlock))"
+            ],
+            "jump7531_1": [
+                "g.insert(\"bookingExpiration\", uniqueKey, int(expiresBlock))",
+                "g.insert(\"bookingExpiration\", uniqueKey, int(expiresBlock))"
+            ],
+            "jump7531_0": [
+                "g.insert(\"bookingExpiration\", uniqueKey, int(expiresBlock))",
+                "g.insert(\"bookingExpiration\", uniqueKey, int(expiresBlock))"
+            ],
+            "jump7531_5": [
+                "g.insert(\"bookingExpiration\", uniqueKey, int(expiresBlock))",
+                "g.insert(\"bookingExpiration\", uniqueKey, int(expiresBlock))"
+            ],
+            "jump7531_4": [
+                "g.insert(\"bookingExpiration\", uniqueKey, int(expiresBlock))",
+                "g.insert(\"bookingExpiration\", uniqueKey, int(expiresBlock))"
+            ],
+            "jump9892": [
+                "token.balanceOf(address(this))",
+                "token.balanceOf(address(this))"
+            ],
+            "jump3096_3": [
+                "cardboardUnicorns.balanceOf(_who)",
+                "cardboardUnicorns.balanceOf(_who)"
+            ],
+            "jump3096_2": [
+                "cardboardUnicorns.balanceOf(_who)",
+                "cardboardUnicorns.balanceOf(_who)"
+            ],
+            "jump3096_1": [
+                "cardboardUnicorns.balanceOf(_who)",
+                "cardboardUnicorns.balanceOf(_who)"
+            ],
+            "jump3096_0": [
+                "cardboardUnicorns.balanceOf(_who)",
+                "cardboardUnicorns.balanceOf(_who)"
+            ],
+            "jump3096_7": [
+                "cardboardUnicorns.balanceOf(_who)",
+                "cardboardUnicorns.balanceOf(_who)"
+            ],
+            "jump3096_6": [
+                "cardboardUnicorns.balanceOf(_who)",
+                "cardboardUnicorns.balanceOf(_who)"
+            ],
+            "jump3096_5": [
+                "cardboardUnicorns.balanceOf(_who)",
+                "cardboardUnicorns.balanceOf(_who)"
+            ],
+            "jump3096_4": [
+                "cardboardUnicorns.balanceOf(_who)",
+                "cardboardUnicorns.balanceOf(_who)"
+            ],
+            "block3451": [
+                "cardboardUnicorns.transferFrom(msg.sender, address(this), _unicornCount)"
+            ],
+            "jump7531": [
+                "g.insert(\"bookingExpiration\", uniqueKey, int(expiresBlock))",
+                "g.insert(\"bookingExpiration\", uniqueKey, int(expiresBlock))"
+            ],
+            "jump4749": [
+                "cardboardUnicorns.balanceOf(address(this))",
+                "cardboardUnicorns.balanceOf(address(this))"
+            ],
+            "block10084": [
+                "token.transfer(owner, token.balanceOf(address(this)))"
+            ],
+            "block3451_6": [
+                "cardboardUnicorns.transferFrom(msg.sender, address(this), _unicornCount)"
+            ],
+            "block3451_7": [
+                "cardboardUnicorns.transferFrom(msg.sender, address(this), _unicornCount)"
+            ],
+            "block3451_4": [
+                "cardboardUnicorns.transferFrom(msg.sender, address(this), _unicornCount)"
+            ],
+            "block3451_5": [
+                "cardboardUnicorns.transferFrom(msg.sender, address(this), _unicornCount)"
+            ],
+            "block3451_2": [
+                "cardboardUnicorns.transferFrom(msg.sender, address(this), _unicornCount)"
+            ],
+            "block3451_3": [
+                "cardboardUnicorns.transferFrom(msg.sender, address(this), _unicornCount)"
+            ],
+            "block3451_0": [
+                "cardboardUnicorns.transferFrom(msg.sender, address(this), _unicornCount)"
+            ],
+            "block3451_1": [
+                "cardboardUnicorns.transferFrom(msg.sender, address(this), _unicornCount)"
+            ],
+            "block3451_8": [
+                "cardboardUnicorns.transferFrom(msg.sender, address(this), _unicornCount)"
+            ],
+            "jump6553_4": [
+                "cardboardUnicorns.transferFrom(msg.sender, address(this), _unicornCount)",
+                "cardboardUnicorns.transferFrom(msg.sender, address(this), _unicornCount)"
+            ],
+            "jump6553_5": [
+                "cardboardUnicorns.transferFrom(msg.sender, address(this), _unicornCount)",
+                "cardboardUnicorns.transferFrom(msg.sender, address(this), _unicornCount)"
+            ],
+            "jump6553_0": [
+                "cardboardUnicorns.transferFrom(msg.sender, address(this), _unicornCount)",
+                "cardboardUnicorns.transferFrom(msg.sender, address(this), _unicornCount)"
+            ],
+            "jump6553_1": [
+                "cardboardUnicorns.transferFrom(msg.sender, address(this), _unicornCount)",
+                "cardboardUnicorns.transferFrom(msg.sender, address(this), _unicornCount)"
+            ],
+            "jump6553_2": [
+                "cardboardUnicorns.transferFrom(msg.sender, address(this), _unicornCount)",
+                "cardboardUnicorns.transferFrom(msg.sender, address(this), _unicornCount)"
+            ],
+            "jump6553_3": [
+                "cardboardUnicorns.transferFrom(msg.sender, address(this), _unicornCount)",
+                "cardboardUnicorns.transferFrom(msg.sender, address(this), _unicornCount)"
+            ],
+            "block7531_1": [
+                "g.insert(\"bookingExpiration\", uniqueKey, int(expiresBlock))"
+            ],
+            "block7531_0": [
+                "g.insert(\"bookingExpiration\", uniqueKey, int(expiresBlock))"
+            ],
+            "block7531_3": [
+                "g.insert(\"bookingExpiration\", uniqueKey, int(expiresBlock))"
+            ],
+            "block7531_2": [
+                "g.insert(\"bookingExpiration\", uniqueKey, int(expiresBlock))"
+            ],
+            "block7531_5": [
+                "g.insert(\"bookingExpiration\", uniqueKey, int(expiresBlock))"
+            ],
+            "block7531_4": [
+                "g.insert(\"bookingExpiration\", uniqueKey, int(expiresBlock))"
+            ],
+            "jump6553": [
+                "cardboardUnicorns.transferFrom(msg.sender, address(this), _unicornCount)",
+                "cardboardUnicorns.transferFrom(msg.sender, address(this), _unicornCount)"
+            ],
+            "block3096_5": [
+                "cardboardUnicorns.balanceOf(_who)"
+            ],
+            "block3096_4": [
+                "cardboardUnicorns.balanceOf(_who)"
+            ],
+            "block3096_7": [
+                "cardboardUnicorns.balanceOf(_who)"
+            ],
+            "block3096_6": [
+                "cardboardUnicorns.balanceOf(_who)"
+            ],
+            "block3096_1": [
+                "cardboardUnicorns.balanceOf(_who)"
+            ],
+            "block3096_0": [
+                "cardboardUnicorns.balanceOf(_who)"
+            ],
+            "block3096_3": [
+                "cardboardUnicorns.balanceOf(_who)"
+            ],
+            "block3096_2": [
+                "cardboardUnicorns.balanceOf(_who)"
+            ],
+            "jump10084": [
+                "token.transfer(owner, token.balanceOf(address(this)))",
+                "token.transfer(owner, token.balanceOf(address(this)))"
+            ],
+            "block5305": [
+                "cardboardUnicorns.transfer(msg.sender, unicornsToReturn)"
+            ],
+            "block7531": [
+                "g.insert(\"bookingExpiration\", uniqueKey, int(expiresBlock))"
+            ],
+            "jump8926": [
+                "cardboardUnicorns.transfer(msg.sender, bountyCount)",
+                "cardboardUnicorns.transfer(msg.sender, bountyCount)"
+            ],
+            "jump3451_0": [
+                "cardboardUnicorns.transferFrom(msg.sender, address(this), _unicornCount)",
+                "cardboardUnicorns.transferFrom(msg.sender, address(this), _unicornCount)"
+            ],
+            "jump3451_1": [
+                "cardboardUnicorns.transferFrom(msg.sender, address(this), _unicornCount)",
+                "cardboardUnicorns.transferFrom(msg.sender, address(this), _unicornCount)"
+            ],
+            "jump3451_2": [
+                "cardboardUnicorns.transferFrom(msg.sender, address(this), _unicornCount)",
+                "cardboardUnicorns.transferFrom(msg.sender, address(this), _unicornCount)"
+            ],
+            "jump3451_3": [
+                "cardboardUnicorns.transferFrom(msg.sender, address(this), _unicornCount)",
+                "cardboardUnicorns.transferFrom(msg.sender, address(this), _unicornCount)"
+            ],
+            "jump3451_4": [
+                "cardboardUnicorns.transferFrom(msg.sender, address(this), _unicornCount)",
+                "cardboardUnicorns.transferFrom(msg.sender, address(this), _unicornCount)"
+            ],
+            "jump3451_5": [
+                "cardboardUnicorns.transferFrom(msg.sender, address(this), _unicornCount)",
+                "cardboardUnicorns.transferFrom(msg.sender, address(this), _unicornCount)"
+            ],
+            "jump3451_6": [
+                "cardboardUnicorns.transferFrom(msg.sender, address(this), _unicornCount)",
+                "cardboardUnicorns.transferFrom(msg.sender, address(this), _unicornCount)"
+            ],
+            "jump3451_7": [
+                "cardboardUnicorns.transferFrom(msg.sender, address(this), _unicornCount)",
+                "cardboardUnicorns.transferFrom(msg.sender, address(this), _unicornCount)"
+            ],
+            "block6553_2": [
+                "cardboardUnicorns.transferFrom(msg.sender, address(this), _unicornCount)"
+            ],
+            "block6553_3": [
+                "cardboardUnicorns.transferFrom(msg.sender, address(this), _unicornCount)"
+            ],
+            "block6553_0": [
+                "cardboardUnicorns.transferFrom(msg.sender, address(this), _unicornCount)"
+            ],
+            "block6553_1": [
+                "cardboardUnicorns.transferFrom(msg.sender, address(this), _unicornCount)"
+            ],
+            "block6553_4": [
+                "cardboardUnicorns.transferFrom(msg.sender, address(this), _unicornCount)"
+            ],
+            "block6553_5": [
+                "cardboardUnicorns.transferFrom(msg.sender, address(this), _unicornCount)"
+            ],
+            "jump2862_5": [
+                "cardboardUnicorns.allowance(_who, address(this))",
+                "cardboardUnicorns.allowance(_who, address(this))"
+            ],
+            "jump2862_4": [
+                "cardboardUnicorns.allowance(_who, address(this))",
+                "cardboardUnicorns.allowance(_who, address(this))"
+            ],
+            "block9892": [
+                "token.balanceOf(address(this))"
+            ],
+            "jump3096": [
+                "cardboardUnicorns.balanceOf(_who)",
+                "cardboardUnicorns.balanceOf(_who)"
+            ]
+        }
+    }
+}

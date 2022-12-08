@@ -1,0 +1,758 @@
+{
+    "Token": {
+        "function_list": [
+            "transferFrom(address,address,uint256)",
+            "transfer(address,uint256)",
+            "balanceOf(address)"
+        ],
+        "initial_state": {
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                6447,
+                929
+            ],
+            "transferFrom(address,address,uint256)": [
+                644,
+                141
+            ],
+            "transfer(address,uint256)": [
+                2153,
+                559
+            ]
+        },
+        "block_CALL_mapping": {
+            "block2968": [
+                "controller.approve(msg.sender, _spender, _value)"
+            ],
+            "jump3709": [
+                "controller.transferFrom(msg.sender, _from, _to, _value)",
+                "controller.transferFrom(msg.sender, _from, _to, _value)"
+            ],
+            "block6188": [
+                "token.transfer(_to, token.balanceOf(this))"
+            ],
+            "jump5531": [
+                "controller.allowance(msg.sender, _spender)",
+                "controller.allowance(msg.sender, _spender)"
+            ],
+            "jump3290": [
+                "controller.totalSupply()",
+                "controller.totalSupply()"
+            ],
+            "block3290": [
+                "controller.totalSupply()"
+            ],
+            "jump2968": [
+                "controller.approve(msg.sender, _spender, _value)",
+                "controller.approve(msg.sender, _spender, _value)"
+            ],
+            "jump5996": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "jump5226": [
+                "controller.decreaseApproval(msg.sender, _spender, _subtractedValue)",
+                "controller.decreaseApproval(msg.sender, _spender, _subtractedValue)"
+            ],
+            "block5226": [
+                "controller.decreaseApproval(msg.sender, _spender, _subtractedValue)"
+            ],
+            "jump8766": [
+                "controller.allowance(msg.sender, _spender)",
+                "controller.allowance(msg.sender, _spender)"
+            ],
+            "jump6188": [
+                "token.transfer(_to, token.balanceOf(this))",
+                "token.transfer(_to, token.balanceOf(this))"
+            ],
+            "block5531": [
+                "controller.allowance(msg.sender, _spender)"
+            ],
+            "jump9193": [
+                "controller.allowance(_owner, _spender)",
+                "controller.allowance(_owner, _spender)"
+            ],
+            "block9193": [
+                "controller.allowance(_owner, _spender)"
+            ],
+            "block8461": [
+                "controller.increaseApproval(msg.sender, _spender, _addedValue)"
+            ],
+            "jump7952": [
+                "controller.transfer(msg.sender, _to, _value)",
+                "controller.transfer(msg.sender, _to, _value)"
+            ],
+            "block5996": [
+                "token.balanceOf(this)"
+            ],
+            "block3709": [
+                "controller.transferFrom(msg.sender, _from, _to, _value)"
+            ],
+            "jump4246": [
+                "controller.burn(msg.sender, _amount)",
+                "controller.burn(msg.sender, _amount)"
+            ],
+            "jump6447": [
+                "controller.balanceOf(a)",
+                "controller.balanceOf(a)"
+            ],
+            "jump8461": [
+                "controller.increaseApproval(msg.sender, _spender, _addedValue)",
+                "controller.increaseApproval(msg.sender, _spender, _addedValue)"
+            ],
+            "block7952": [
+                "controller.transfer(msg.sender, _to, _value)"
+            ],
+            "block8766": [
+                "controller.allowance(msg.sender, _spender)"
+            ],
+            "block4246": [
+                "controller.burn(msg.sender, _amount)"
+            ],
+            "block6447": [
+                "controller.balanceOf(a)"
+            ]
+        }
+    },
+    "Owned": {
+        "function_list": [
+            "Owned()",
+            "changeOwner(address)",
+            "acceptOwnership()"
+        ],
+        "initial_state": {
+            "Owned()": {
+                "argument": {},
+                "contract": {}
+            },
+            "changeOwner(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "acceptOwnership()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "changeOwner(address)": [
+                213,
+                119
+            ],
+            "acceptOwnership()": [
+                103,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "IOwned": {
+        "function_list": [
+            "owner()",
+            "changeOwner(address)",
+            "acceptOwnership()"
+        ],
+        "initial_state": {
+            "owner()": {
+                "argument": {},
+                "contract": {}
+            },
+            "changeOwner(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "acceptOwnership()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "owner()": [
+                68,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Savings": {
+        "function_list": [
+            "Owned()",
+            "changeOwner(address)",
+            "acceptOwnership()",
+            "fallback()",
+            "nullify()",
+            "init(uint256,uint256)",
+            "finalizeInit()",
+            "setToken(address)",
+            "lock()",
+            "start(uint256)",
+            "isStarted()",
+            "refundTokens(address,uint256)",
+            "updateTotal()",
+            "periodAt(uint256)",
+            "period()",
+            "deposit(uint256)",
+            "depositTo(address,uint256)",
+            "bulkDepositTo(uint256[])",
+            "withdraw()",
+            "availableForWithdrawalAt(uint256)",
+            "_withdrawTo(uint256,uint256,uint256,uint256)",
+            "withdrawTo(address)",
+            "bulkWithdraw(address[])",
+            "multiMint(uint256,uint256[])",
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "Owned()": {
+                "argument": {},
+                "contract": {
+                    "periods": "uint256",
+                    "t0special": "uint256",
+                    "intervalSecs": "uint256",
+                    "precision": "uint256",
+                    "startBlockTimestamp": "uint256",
+                    "totalfv": "uint256",
+                    "remainder": "uint256",
+                    "total": "uint256",
+                    "mintingNonce": "uint256"
+                }
+            },
+            "changeOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "periods": "uint256",
+                    "t0special": "uint256",
+                    "intervalSecs": "uint256",
+                    "precision": "uint256",
+                    "startBlockTimestamp": "uint256",
+                    "totalfv": "uint256",
+                    "remainder": "uint256",
+                    "total": "uint256",
+                    "mintingNonce": "uint256"
+                }
+            },
+            "acceptOwnership()": {
+                "argument": {},
+                "contract": {
+                    "periods": "uint256",
+                    "t0special": "uint256",
+                    "intervalSecs": "uint256",
+                    "precision": "uint256",
+                    "startBlockTimestamp": "uint256",
+                    "totalfv": "uint256",
+                    "remainder": "uint256",
+                    "total": "uint256",
+                    "mintingNonce": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "periods": "uint256",
+                    "t0special": "uint256",
+                    "intervalSecs": "uint256",
+                    "precision": "uint256",
+                    "startBlockTimestamp": "uint256",
+                    "totalfv": "uint256",
+                    "remainder": "uint256",
+                    "total": "uint256",
+                    "mintingNonce": "uint256"
+                }
+            },
+            "nullify()": {
+                "argument": {},
+                "contract": {
+                    "periods": "uint256",
+                    "t0special": "uint256",
+                    "intervalSecs": "uint256",
+                    "precision": "uint256",
+                    "startBlockTimestamp": "uint256",
+                    "totalfv": "uint256",
+                    "remainder": "uint256",
+                    "total": "uint256",
+                    "mintingNonce": "uint256"
+                }
+            },
+            "init(uint256,uint256)": {
+                "argument": {
+                    "_periods": "uint256",
+                    "_t0special": "uint256"
+                },
+                "contract": {
+                    "periods": "uint256",
+                    "t0special": "uint256",
+                    "intervalSecs": "uint256",
+                    "precision": "uint256",
+                    "startBlockTimestamp": "uint256",
+                    "totalfv": "uint256",
+                    "remainder": "uint256",
+                    "total": "uint256",
+                    "mintingNonce": "uint256"
+                }
+            },
+            "finalizeInit()": {
+                "argument": {},
+                "contract": {
+                    "periods": "uint256",
+                    "t0special": "uint256",
+                    "intervalSecs": "uint256",
+                    "precision": "uint256",
+                    "startBlockTimestamp": "uint256",
+                    "totalfv": "uint256",
+                    "remainder": "uint256",
+                    "total": "uint256",
+                    "mintingNonce": "uint256"
+                }
+            },
+            "setToken(address)": {
+                "argument": {},
+                "contract": {
+                    "periods": "uint256",
+                    "t0special": "uint256",
+                    "intervalSecs": "uint256",
+                    "precision": "uint256",
+                    "startBlockTimestamp": "uint256",
+                    "totalfv": "uint256",
+                    "remainder": "uint256",
+                    "total": "uint256",
+                    "mintingNonce": "uint256"
+                }
+            },
+            "lock()": {
+                "argument": {},
+                "contract": {
+                    "periods": "uint256",
+                    "t0special": "uint256",
+                    "intervalSecs": "uint256",
+                    "precision": "uint256",
+                    "startBlockTimestamp": "uint256",
+                    "totalfv": "uint256",
+                    "remainder": "uint256",
+                    "total": "uint256",
+                    "mintingNonce": "uint256"
+                }
+            },
+            "start(uint256)": {
+                "argument": {
+                    "_startBlockTimestamp": "uint256"
+                },
+                "contract": {
+                    "periods": "uint256",
+                    "t0special": "uint256",
+                    "intervalSecs": "uint256",
+                    "precision": "uint256",
+                    "startBlockTimestamp": "uint256",
+                    "totalfv": "uint256",
+                    "remainder": "uint256",
+                    "total": "uint256",
+                    "mintingNonce": "uint256"
+                }
+            },
+            "isStarted()": {
+                "argument": {},
+                "contract": {
+                    "periods": "uint256",
+                    "t0special": "uint256",
+                    "intervalSecs": "uint256",
+                    "precision": "uint256",
+                    "startBlockTimestamp": "uint256",
+                    "totalfv": "uint256",
+                    "remainder": "uint256",
+                    "total": "uint256",
+                    "mintingNonce": "uint256"
+                }
+            },
+            "refundTokens(address,uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {
+                    "periods": "uint256",
+                    "t0special": "uint256",
+                    "intervalSecs": "uint256",
+                    "precision": "uint256",
+                    "startBlockTimestamp": "uint256",
+                    "totalfv": "uint256",
+                    "remainder": "uint256",
+                    "total": "uint256",
+                    "mintingNonce": "uint256"
+                }
+            },
+            "updateTotal()": {
+                "argument": {},
+                "contract": {
+                    "periods": "uint256",
+                    "t0special": "uint256",
+                    "intervalSecs": "uint256",
+                    "precision": "uint256",
+                    "startBlockTimestamp": "uint256",
+                    "totalfv": "uint256",
+                    "remainder": "uint256",
+                    "total": "uint256",
+                    "mintingNonce": "uint256"
+                }
+            },
+            "periodAt(uint256)": {
+                "argument": {
+                    "_blockTimestamp": "uint256"
+                },
+                "contract": {
+                    "periods": "uint256",
+                    "t0special": "uint256",
+                    "intervalSecs": "uint256",
+                    "precision": "uint256",
+                    "startBlockTimestamp": "uint256",
+                    "totalfv": "uint256",
+                    "remainder": "uint256",
+                    "total": "uint256",
+                    "mintingNonce": "uint256"
+                }
+            },
+            "period()": {
+                "argument": {},
+                "contract": {
+                    "periods": "uint256",
+                    "t0special": "uint256",
+                    "intervalSecs": "uint256",
+                    "precision": "uint256",
+                    "startBlockTimestamp": "uint256",
+                    "totalfv": "uint256",
+                    "remainder": "uint256",
+                    "total": "uint256",
+                    "mintingNonce": "uint256"
+                }
+            },
+            "deposit(uint256)": {
+                "argument": {
+                    "tokens": "uint256"
+                },
+                "contract": {
+                    "periods": "uint256",
+                    "t0special": "uint256",
+                    "intervalSecs": "uint256",
+                    "precision": "uint256",
+                    "startBlockTimestamp": "uint256",
+                    "totalfv": "uint256",
+                    "remainder": "uint256",
+                    "total": "uint256",
+                    "mintingNonce": "uint256"
+                }
+            },
+            "depositTo(address,uint256)": {
+                "argument": {
+                    "tokens": "uint256"
+                },
+                "contract": {
+                    "periods": "uint256",
+                    "t0special": "uint256",
+                    "intervalSecs": "uint256",
+                    "precision": "uint256",
+                    "startBlockTimestamp": "uint256",
+                    "totalfv": "uint256",
+                    "remainder": "uint256",
+                    "total": "uint256",
+                    "mintingNonce": "uint256"
+                }
+            },
+            "bulkDepositTo(uint256[])": {
+                "argument": {
+                    "bits": "uint256[]"
+                },
+                "contract": {
+                    "periods": "uint256",
+                    "t0special": "uint256",
+                    "intervalSecs": "uint256",
+                    "precision": "uint256",
+                    "startBlockTimestamp": "uint256",
+                    "totalfv": "uint256",
+                    "remainder": "uint256",
+                    "total": "uint256",
+                    "mintingNonce": "uint256"
+                }
+            },
+            "withdraw()": {
+                "argument": {},
+                "contract": {
+                    "periods": "uint256",
+                    "t0special": "uint256",
+                    "intervalSecs": "uint256",
+                    "precision": "uint256",
+                    "startBlockTimestamp": "uint256",
+                    "totalfv": "uint256",
+                    "remainder": "uint256",
+                    "total": "uint256",
+                    "mintingNonce": "uint256"
+                }
+            },
+            "availableForWithdrawalAt(uint256)": {
+                "argument": {
+                    "blockTimestamp": "uint256"
+                },
+                "contract": {
+                    "periods": "uint256",
+                    "t0special": "uint256",
+                    "intervalSecs": "uint256",
+                    "precision": "uint256",
+                    "startBlockTimestamp": "uint256",
+                    "totalfv": "uint256",
+                    "remainder": "uint256",
+                    "total": "uint256",
+                    "mintingNonce": "uint256"
+                }
+            },
+            "_withdrawTo(uint256,uint256,uint256,uint256)": {
+                "argument": {
+                    "_deposit": "uint256",
+                    "_withdrawn": "uint256",
+                    "_blockTimestamp": "uint256",
+                    "_total": "uint256"
+                },
+                "contract": {
+                    "periods": "uint256",
+                    "t0special": "uint256",
+                    "intervalSecs": "uint256",
+                    "precision": "uint256",
+                    "startBlockTimestamp": "uint256",
+                    "totalfv": "uint256",
+                    "remainder": "uint256",
+                    "total": "uint256",
+                    "mintingNonce": "uint256"
+                }
+            },
+            "withdrawTo(address)": {
+                "argument": {},
+                "contract": {
+                    "periods": "uint256",
+                    "t0special": "uint256",
+                    "intervalSecs": "uint256",
+                    "precision": "uint256",
+                    "startBlockTimestamp": "uint256",
+                    "totalfv": "uint256",
+                    "remainder": "uint256",
+                    "total": "uint256",
+                    "mintingNonce": "uint256"
+                }
+            },
+            "bulkWithdraw(address[])": {
+                "argument": {
+                    "addrs": "address[]"
+                },
+                "contract": {
+                    "periods": "uint256",
+                    "t0special": "uint256",
+                    "intervalSecs": "uint256",
+                    "precision": "uint256",
+                    "startBlockTimestamp": "uint256",
+                    "totalfv": "uint256",
+                    "remainder": "uint256",
+                    "total": "uint256",
+                    "mintingNonce": "uint256"
+                }
+            },
+            "multiMint(uint256,uint256[])": {
+                "argument": {
+                    "nonce": "uint256",
+                    "bits": "uint256[]"
+                },
+                "contract": {
+                    "periods": "uint256",
+                    "t0special": "uint256",
+                    "intervalSecs": "uint256",
+                    "precision": "uint256",
+                    "startBlockTimestamp": "uint256",
+                    "totalfv": "uint256",
+                    "remainder": "uint256",
+                    "total": "uint256",
+                    "mintingNonce": "uint256"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "periods": "uint256",
+                    "t0special": "uint256",
+                    "intervalSecs": "uint256",
+                    "precision": "uint256",
+                    "startBlockTimestamp": "uint256",
+                    "totalfv": "uint256",
+                    "remainder": "uint256",
+                    "total": "uint256",
+                    "mintingNonce": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "lock()": [
+                2439,
+                801
+            ],
+            "periodAt(uint256)": [
+                2639,
+                889
+            ],
+            "deposit(uint256)": [
+                1998,
+                603
+            ],
+            "withdrawTo(address)": [
+                1149,
+                317
+            ],
+            "start(uint256)": [
+                1505,
+                427
+            ],
+            "isStarted()": [
+                915,
+                229
+            ],
+            "refundTokens(address,uint256)": [
+                962,
+                251
+            ],
+            "period()": [
+                2396,
+                779
+            ],
+            "changeOwner(address)": [
+                1786,
+                537
+            ],
+            "bulkDepositTo(uint256[])": [
+                1896,
+                581
+            ],
+            "setToken(address)": [
+                501,
+                75
+            ],
+            "updateTotal()": [
+                2043,
+                625
+            ],
+            "withdraw()": [
+                778,
+                163
+            ],
+            "availableForWithdrawalAt(uint256)": [
+                568,
+                97
+            ],
+            "bulkWithdraw(address[])": [
+                676,
+                141
+            ],
+            "finalizeInit()": [
+                1126,
+                295
+            ],
+            "multiMint(uint256,uint256[])": [
+                1263,
+                361
+            ],
+            "init(uint256,uint256)": [
+                1731,
+                515
+            ],
+            "nullify()": [
+                2373,
+                757
+            ],
+            "depositTo(address,uint256)": [
+                2704,
+                911
+            ],
+            "_withdrawTo(uint256,uint256,uint256,uint256)": [
+                1593,
+                471
+            ],
+            "acceptOwnership()": [
+                1240,
+                339
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump7880": [
+                "token.transferFrom(msg.sender, this, tokens)",
+                "token.transferFrom(msg.sender, this, tokens)"
+            ],
+            "block6868": [
+                "token.balanceOf(this)"
+            ],
+            "jump5711": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "block7880_1": [
+                "token.transferFrom(msg.sender, this, tokens)"
+            ],
+            "block4236_0": [
+                "token.transfer(addr, diff)"
+            ],
+            "block4236_1": [
+                "token.transfer(addr, diff)"
+            ],
+            "block7880": [
+                "token.transferFrom(msg.sender, this, tokens)"
+            ],
+            "block7880_0": [
+                "token.transferFrom(msg.sender, this, tokens)"
+            ],
+            "jump3527": [
+                "token.transfer(addr, amount)",
+                "token.transfer(addr, amount)"
+            ],
+            "block4236": [
+                "token.transfer(addr, diff)"
+            ],
+            "jump7880_0": [
+                "token.transferFrom(msg.sender, this, tokens)",
+                "token.transferFrom(msg.sender, this, tokens)"
+            ],
+            "jump7880_1": [
+                "token.transferFrom(msg.sender, this, tokens)",
+                "token.transferFrom(msg.sender, this, tokens)"
+            ],
+            "block5711": [
+                "token.balanceOf(this)"
+            ],
+            "jump4236": [
+                "token.transfer(addr, diff)",
+                "token.transfer(addr, diff)"
+            ],
+            "jump4236_1": [
+                "token.transfer(addr, diff)",
+                "token.transfer(addr, diff)"
+            ],
+            "jump6868": [
+                "token.balanceOf(this)",
+                "token.balanceOf(this)"
+            ],
+            "jump4236_0": [
+                "token.transfer(addr, diff)",
+                "token.transfer(addr, diff)"
+            ],
+            "block3527": [
+                "token.transfer(addr, amount)"
+            ]
+        }
+    }
+}

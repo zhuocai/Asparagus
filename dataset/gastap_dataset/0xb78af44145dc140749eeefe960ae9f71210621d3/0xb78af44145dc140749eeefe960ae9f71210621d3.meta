@@ -1,0 +1,272 @@
+{
+    "IOU": {
+        "function_list": [
+            "withdrawTokens()",
+            "haltPurchases()",
+            "resumePurchases()",
+            "updateAvailability(uint256)",
+            "updatePrice(uint256)",
+            "paySeller()",
+            "withdraw()",
+            "purchase()",
+            "fallback()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "withdrawTokens()": {
+                "argument": {},
+                "contract": {
+                    "total_iou_available": "uint256",
+                    "total_iou_purchased": "uint256",
+                    "total_iou_withdrawn": "uint256",
+                    "price_per_eth": "uint256"
+                }
+            },
+            "haltPurchases()": {
+                "argument": {},
+                "contract": {
+                    "total_iou_available": "uint256",
+                    "total_iou_purchased": "uint256",
+                    "total_iou_withdrawn": "uint256",
+                    "price_per_eth": "uint256"
+                }
+            },
+            "resumePurchases()": {
+                "argument": {},
+                "contract": {
+                    "total_iou_available": "uint256",
+                    "total_iou_purchased": "uint256",
+                    "total_iou_withdrawn": "uint256",
+                    "price_per_eth": "uint256"
+                }
+            },
+            "updateAvailability(uint256)": {
+                "argument": {
+                    "_iou_amount": "uint256"
+                },
+                "contract": {
+                    "total_iou_available": "uint256",
+                    "total_iou_purchased": "uint256",
+                    "total_iou_withdrawn": "uint256",
+                    "price_per_eth": "uint256"
+                }
+            },
+            "updatePrice(uint256)": {
+                "argument": {
+                    "_price": "uint256"
+                },
+                "contract": {
+                    "total_iou_available": "uint256",
+                    "total_iou_purchased": "uint256",
+                    "total_iou_withdrawn": "uint256",
+                    "price_per_eth": "uint256"
+                }
+            },
+            "paySeller()": {
+                "argument": {},
+                "contract": {
+                    "total_iou_available": "uint256",
+                    "total_iou_purchased": "uint256",
+                    "total_iou_withdrawn": "uint256",
+                    "price_per_eth": "uint256"
+                }
+            },
+            "withdraw()": {
+                "argument": {},
+                "contract": {
+                    "total_iou_available": "uint256",
+                    "total_iou_purchased": "uint256",
+                    "total_iou_withdrawn": "uint256",
+                    "price_per_eth": "uint256"
+                }
+            },
+            "purchase()": {
+                "argument": {},
+                "contract": {
+                    "total_iou_available": "uint256",
+                    "total_iou_purchased": "uint256",
+                    "total_iou_withdrawn": "uint256",
+                    "price_per_eth": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "total_iou_available": "uint256",
+                    "total_iou_purchased": "uint256",
+                    "total_iou_withdrawn": "uint256",
+                    "price_per_eth": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "updatePrice(uint256)": [
+                634,
+                273
+            ],
+            "resumePurchases()": [
+                428,
+                163
+            ],
+            "haltPurchases()": [
+                350,
+                97
+            ],
+            "withdraw()": [
+                373,
+                119
+            ],
+            "paySeller()": [
+                788,
+                361
+            ],
+            "updateAvailability(uint256)": [
+                383,
+                141
+            ],
+            "purchase()": [
+                451,
+                185
+            ],
+            "withdrawTokens()": [
+                679,
+                295
+            ]
+        },
+        "block_CALL_mapping": {
+            "block2732_0": [
+                "token.transfer(msg.sender, iou_to_withdraw)"
+            ],
+            "jump2169": [
+                "token.balanceOf(address(this))",
+                "token.balanceOf(address(this))"
+            ],
+            "jump2169_1": [
+                "token.balanceOf(address(this))",
+                "token.balanceOf(address(this))"
+            ],
+            "block1150": [
+                "token.balanceOf(address(this))"
+            ],
+            "block2732_1": [
+                "token.transfer(msg.sender, iou_to_withdraw)"
+            ],
+            "block2169_0": [
+                "token.balanceOf(address(this))"
+            ],
+            "jump1150_0": [
+                "token.balanceOf(address(this))",
+                "token.balanceOf(address(this))"
+            ],
+            "jump1150_1": [
+                "token.balanceOf(address(this))",
+                "token.balanceOf(address(this))"
+            ],
+            "block1432_1": [
+                "msg.sender.transfer(eth_to_refund)"
+            ],
+            "block1432_0": [
+                "msg.sender.transfer(eth_to_refund)"
+            ],
+            "block2732": [
+                "token.transfer(msg.sender, iou_to_withdraw)"
+            ],
+            "block3943": [
+                "token.balanceOf(address(this))"
+            ],
+            "jump4568": [
+                "seller.transfer(this.balance)",
+                "seller.transfer(this.balance)"
+            ],
+            "jump1432": [
+                "msg.sender.transfer(eth_to_refund)",
+                "msg.sender.transfer(eth_to_refund)"
+            ],
+            "jump4136": [
+                "token.transfer(seller, token.balanceOf(address(this)) - (total_iou_purchased - total_iou_withdrawn))",
+                "token.transfer(seller, token.balanceOf(address(this)) - (total_iou_purchased - total_iou_withdrawn))"
+            ],
+            "block1914_0": [
+                "token.balanceOf(address(this))"
+            ],
+            "block4498": [
+                "token.balanceOf(address(this))"
+            ],
+            "block2169": [
+                "token.balanceOf(address(this))"
+            ],
+            "block1914": [
+                "token.balanceOf(address(this))"
+            ],
+            "jump2732_1": [
+                "token.transfer(msg.sender, iou_to_withdraw)",
+                "token.transfer(msg.sender, iou_to_withdraw)"
+            ],
+            "jump2732_0": [
+                "token.transfer(msg.sender, iou_to_withdraw)",
+                "token.transfer(msg.sender, iou_to_withdraw)"
+            ],
+            "block4568": [
+                "seller.transfer(this.balance)"
+            ],
+            "jump2169_0": [
+                "token.balanceOf(address(this))",
+                "token.balanceOf(address(this))"
+            ],
+            "jump4498": [
+                "token.balanceOf(address(this))",
+                "token.balanceOf(address(this))"
+            ],
+            "jump2732": [
+                "token.transfer(msg.sender, iou_to_withdraw)",
+                "token.transfer(msg.sender, iou_to_withdraw)"
+            ],
+            "block2169_1": [
+                "token.balanceOf(address(this))"
+            ],
+            "block4136": [
+                "token.transfer(seller, token.balanceOf(address(this)) - (total_iou_purchased - total_iou_withdrawn))"
+            ],
+            "jump1150": [
+                "token.balanceOf(address(this))",
+                "token.balanceOf(address(this))"
+            ],
+            "jump3943": [
+                "token.balanceOf(address(this))",
+                "token.balanceOf(address(this))"
+            ],
+            "jump1432_1": [
+                "msg.sender.transfer(eth_to_refund)",
+                "msg.sender.transfer(eth_to_refund)"
+            ],
+            "jump1432_0": [
+                "msg.sender.transfer(eth_to_refund)",
+                "msg.sender.transfer(eth_to_refund)"
+            ],
+            "block1150_0": [
+                "token.balanceOf(address(this))"
+            ],
+            "block1150_1": [
+                "token.balanceOf(address(this))"
+            ],
+            "block1432": [
+                "msg.sender.transfer(eth_to_refund)"
+            ],
+            "block1914_1": [
+                "token.balanceOf(address(this))"
+            ],
+            "jump1914_0": [
+                "token.balanceOf(address(this))",
+                "token.balanceOf(address(this))"
+            ],
+            "jump1914_1": [
+                "token.balanceOf(address(this))",
+                "token.balanceOf(address(this))"
+            ],
+            "jump1914": [
+                "token.balanceOf(address(this))",
+                "token.balanceOf(address(this))"
+            ]
+        }
+    }
+}

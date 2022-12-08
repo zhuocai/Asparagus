@@ -1,0 +1,556 @@
+{
+    "BillionaireTokenRaffle": {
+        "function_list": [
+            "BillionaireTokenRaffle()",
+            "getLastWeekStake(address)",
+            "reduceLastWeekStake(address,uint256)",
+            "registerTickets(uint256)",
+            "setBurnerAddress(address)",
+            "setTicketPrice(uint256)",
+            "setOwnerAddr(address)",
+            "getPercent(uint8,uint256)",
+            "getRand(uint256)",
+            "getRandWithSeed(uint256,uint256)",
+            "resetWeeklyVars()",
+            "resetRaffle()",
+            "getWinners()",
+            "fillBurner()",
+            "fillWeeklyArrays(uint256,address)",
+            "burnTenPercent(uint256)",
+            "dSET_XBL_ADDRESS(address)",
+            "dTRIGGER_NEXTWEEK_TIMESTAMP()",
+            "dKERNEL_PANIC()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "BillionaireTokenRaffle()": {
+                "argument": {},
+                "contract": {
+                    "raffle_bowl": "address[]",
+                    "participants": "address[]",
+                    "seeds": "uint256[]",
+                    "unique_players": "uint64",
+                    "total_burned_by_raffle": "uint256",
+                    "next_week_timestamp": "uint256",
+                    "minutes_in_a_week": "uint256",
+                    "raffle_balance": "uint256",
+                    "ticket_price": "uint256",
+                    "current_week": "uint256",
+                    "total_supply": "uint256",
+                    "prev_week_ID": "uint8"
+                }
+            },
+            "getLastWeekStake(address)": {
+                "argument": {},
+                "contract": {
+                    "raffle_bowl": "address[]",
+                    "participants": "address[]",
+                    "seeds": "uint256[]",
+                    "unique_players": "uint64",
+                    "total_burned_by_raffle": "uint256",
+                    "next_week_timestamp": "uint256",
+                    "minutes_in_a_week": "uint256",
+                    "raffle_balance": "uint256",
+                    "ticket_price": "uint256",
+                    "current_week": "uint256",
+                    "total_supply": "uint256",
+                    "prev_week_ID": "uint8"
+                }
+            },
+            "reduceLastWeekStake(address,uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {
+                    "raffle_bowl": "address[]",
+                    "participants": "address[]",
+                    "seeds": "uint256[]",
+                    "unique_players": "uint64",
+                    "total_burned_by_raffle": "uint256",
+                    "next_week_timestamp": "uint256",
+                    "minutes_in_a_week": "uint256",
+                    "raffle_balance": "uint256",
+                    "ticket_price": "uint256",
+                    "current_week": "uint256",
+                    "total_supply": "uint256",
+                    "prev_week_ID": "uint8"
+                }
+            },
+            "registerTickets(uint256)": {
+                "argument": {
+                    "number_of_tickets": "uint256"
+                },
+                "contract": {
+                    "raffle_bowl": "address[]",
+                    "participants": "address[]",
+                    "seeds": "uint256[]",
+                    "unique_players": "uint64",
+                    "total_burned_by_raffle": "uint256",
+                    "next_week_timestamp": "uint256",
+                    "minutes_in_a_week": "uint256",
+                    "raffle_balance": "uint256",
+                    "ticket_price": "uint256",
+                    "current_week": "uint256",
+                    "total_supply": "uint256",
+                    "prev_week_ID": "uint8"
+                }
+            },
+            "setBurnerAddress(address)": {
+                "argument": {},
+                "contract": {
+                    "raffle_bowl": "address[]",
+                    "participants": "address[]",
+                    "seeds": "uint256[]",
+                    "unique_players": "uint64",
+                    "total_burned_by_raffle": "uint256",
+                    "next_week_timestamp": "uint256",
+                    "minutes_in_a_week": "uint256",
+                    "raffle_balance": "uint256",
+                    "ticket_price": "uint256",
+                    "current_week": "uint256",
+                    "total_supply": "uint256",
+                    "prev_week_ID": "uint8"
+                }
+            },
+            "setTicketPrice(uint256)": {
+                "argument": {
+                    "_ticket_price": "uint256"
+                },
+                "contract": {
+                    "raffle_bowl": "address[]",
+                    "participants": "address[]",
+                    "seeds": "uint256[]",
+                    "unique_players": "uint64",
+                    "total_burned_by_raffle": "uint256",
+                    "next_week_timestamp": "uint256",
+                    "minutes_in_a_week": "uint256",
+                    "raffle_balance": "uint256",
+                    "ticket_price": "uint256",
+                    "current_week": "uint256",
+                    "total_supply": "uint256",
+                    "prev_week_ID": "uint8"
+                }
+            },
+            "setOwnerAddr(address)": {
+                "argument": {},
+                "contract": {
+                    "raffle_bowl": "address[]",
+                    "participants": "address[]",
+                    "seeds": "uint256[]",
+                    "unique_players": "uint64",
+                    "total_burned_by_raffle": "uint256",
+                    "next_week_timestamp": "uint256",
+                    "minutes_in_a_week": "uint256",
+                    "raffle_balance": "uint256",
+                    "ticket_price": "uint256",
+                    "current_week": "uint256",
+                    "total_supply": "uint256",
+                    "prev_week_ID": "uint8"
+                }
+            },
+            "getPercent(uint8,uint256)": {
+                "argument": {
+                    "percent": "uint8",
+                    "number": "uint256"
+                },
+                "contract": {
+                    "raffle_bowl": "address[]",
+                    "participants": "address[]",
+                    "seeds": "uint256[]",
+                    "unique_players": "uint64",
+                    "total_burned_by_raffle": "uint256",
+                    "next_week_timestamp": "uint256",
+                    "minutes_in_a_week": "uint256",
+                    "raffle_balance": "uint256",
+                    "ticket_price": "uint256",
+                    "current_week": "uint256",
+                    "total_supply": "uint256",
+                    "prev_week_ID": "uint8"
+                }
+            },
+            "getRand(uint256)": {
+                "argument": {
+                    "upper_limit": "uint256"
+                },
+                "contract": {
+                    "raffle_bowl": "address[]",
+                    "participants": "address[]",
+                    "seeds": "uint256[]",
+                    "unique_players": "uint64",
+                    "total_burned_by_raffle": "uint256",
+                    "next_week_timestamp": "uint256",
+                    "minutes_in_a_week": "uint256",
+                    "raffle_balance": "uint256",
+                    "ticket_price": "uint256",
+                    "current_week": "uint256",
+                    "total_supply": "uint256",
+                    "prev_week_ID": "uint8"
+                }
+            },
+            "getRandWithSeed(uint256,uint256)": {
+                "argument": {
+                    "upper_limit": "uint256",
+                    "seed": "uint256"
+                },
+                "contract": {
+                    "raffle_bowl": "address[]",
+                    "participants": "address[]",
+                    "seeds": "uint256[]",
+                    "unique_players": "uint64",
+                    "total_burned_by_raffle": "uint256",
+                    "next_week_timestamp": "uint256",
+                    "minutes_in_a_week": "uint256",
+                    "raffle_balance": "uint256",
+                    "ticket_price": "uint256",
+                    "current_week": "uint256",
+                    "total_supply": "uint256",
+                    "prev_week_ID": "uint8"
+                }
+            },
+            "resetWeeklyVars()": {
+                "argument": {},
+                "contract": {
+                    "raffle_bowl": "address[]",
+                    "participants": "address[]",
+                    "seeds": "uint256[]",
+                    "unique_players": "uint64",
+                    "total_burned_by_raffle": "uint256",
+                    "next_week_timestamp": "uint256",
+                    "minutes_in_a_week": "uint256",
+                    "raffle_balance": "uint256",
+                    "ticket_price": "uint256",
+                    "current_week": "uint256",
+                    "total_supply": "uint256",
+                    "prev_week_ID": "uint8"
+                }
+            },
+            "resetRaffle()": {
+                "argument": {},
+                "contract": {
+                    "raffle_bowl": "address[]",
+                    "participants": "address[]",
+                    "seeds": "uint256[]",
+                    "unique_players": "uint64",
+                    "total_burned_by_raffle": "uint256",
+                    "next_week_timestamp": "uint256",
+                    "minutes_in_a_week": "uint256",
+                    "raffle_balance": "uint256",
+                    "ticket_price": "uint256",
+                    "current_week": "uint256",
+                    "total_supply": "uint256",
+                    "prev_week_ID": "uint8"
+                }
+            },
+            "getWinners()": {
+                "argument": {},
+                "contract": {
+                    "raffle_bowl": "address[]",
+                    "participants": "address[]",
+                    "seeds": "uint256[]",
+                    "unique_players": "uint64",
+                    "total_burned_by_raffle": "uint256",
+                    "next_week_timestamp": "uint256",
+                    "minutes_in_a_week": "uint256",
+                    "raffle_balance": "uint256",
+                    "ticket_price": "uint256",
+                    "current_week": "uint256",
+                    "total_supply": "uint256",
+                    "prev_week_ID": "uint8"
+                }
+            },
+            "fillBurner()": {
+                "argument": {},
+                "contract": {
+                    "raffle_bowl": "address[]",
+                    "participants": "address[]",
+                    "seeds": "uint256[]",
+                    "unique_players": "uint64",
+                    "total_burned_by_raffle": "uint256",
+                    "next_week_timestamp": "uint256",
+                    "minutes_in_a_week": "uint256",
+                    "raffle_balance": "uint256",
+                    "ticket_price": "uint256",
+                    "current_week": "uint256",
+                    "total_supply": "uint256",
+                    "prev_week_ID": "uint8"
+                }
+            },
+            "fillWeeklyArrays(uint256,address)": {
+                "argument": {
+                    "number_of_tickets": "uint256"
+                },
+                "contract": {
+                    "raffle_bowl": "address[]",
+                    "participants": "address[]",
+                    "seeds": "uint256[]",
+                    "unique_players": "uint64",
+                    "total_burned_by_raffle": "uint256",
+                    "next_week_timestamp": "uint256",
+                    "minutes_in_a_week": "uint256",
+                    "raffle_balance": "uint256",
+                    "ticket_price": "uint256",
+                    "current_week": "uint256",
+                    "total_supply": "uint256",
+                    "prev_week_ID": "uint8"
+                }
+            },
+            "burnTenPercent(uint256)": {
+                "argument": {
+                    "raffle_balance": "uint256"
+                },
+                "contract": {
+                    "raffle_bowl": "address[]",
+                    "participants": "address[]",
+                    "seeds": "uint256[]",
+                    "unique_players": "uint64",
+                    "total_burned_by_raffle": "uint256",
+                    "next_week_timestamp": "uint256",
+                    "minutes_in_a_week": "uint256",
+                    "raffle_balance": "uint256",
+                    "ticket_price": "uint256",
+                    "current_week": "uint256",
+                    "total_supply": "uint256",
+                    "prev_week_ID": "uint8"
+                }
+            },
+            "dSET_XBL_ADDRESS(address)": {
+                "argument": {},
+                "contract": {
+                    "raffle_bowl": "address[]",
+                    "participants": "address[]",
+                    "seeds": "uint256[]",
+                    "unique_players": "uint64",
+                    "total_burned_by_raffle": "uint256",
+                    "next_week_timestamp": "uint256",
+                    "minutes_in_a_week": "uint256",
+                    "raffle_balance": "uint256",
+                    "ticket_price": "uint256",
+                    "current_week": "uint256",
+                    "total_supply": "uint256",
+                    "prev_week_ID": "uint8"
+                }
+            },
+            "dTRIGGER_NEXTWEEK_TIMESTAMP()": {
+                "argument": {},
+                "contract": {
+                    "raffle_bowl": "address[]",
+                    "participants": "address[]",
+                    "seeds": "uint256[]",
+                    "unique_players": "uint64",
+                    "total_burned_by_raffle": "uint256",
+                    "next_week_timestamp": "uint256",
+                    "minutes_in_a_week": "uint256",
+                    "raffle_balance": "uint256",
+                    "ticket_price": "uint256",
+                    "current_week": "uint256",
+                    "total_supply": "uint256",
+                    "prev_week_ID": "uint8"
+                }
+            },
+            "dKERNEL_PANIC()": {
+                "argument": {},
+                "contract": {
+                    "raffle_bowl": "address[]",
+                    "participants": "address[]",
+                    "seeds": "uint256[]",
+                    "unique_players": "uint64",
+                    "total_burned_by_raffle": "uint256",
+                    "next_week_timestamp": "uint256",
+                    "minutes_in_a_week": "uint256",
+                    "raffle_balance": "uint256",
+                    "ticket_price": "uint256",
+                    "current_week": "uint256",
+                    "total_supply": "uint256",
+                    "prev_week_ID": "uint8"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "reduceLastWeekStake(address,uint256)": [
+                1621,
+                515
+            ],
+            "dTRIGGER_NEXTWEEK_TIMESTAMP()": [
+                1828,
+                581
+            ],
+            "setBurnerAddress(address)": [
+                1207,
+                383
+            ],
+            "dKERNEL_PANIC()": [
+                640,
+                185
+            ],
+            "getLastWeekStake(address)": [
+                749,
+                251
+            ],
+            "setTicketPrice(uint256)": [
+                394,
+                97
+            ],
+            "dSET_XBL_ADDRESS(address)": [
+                1010,
+                317
+            ],
+            "setOwnerAddr(address)": [
+                1761,
+                559
+            ],
+            "registerTickets(uint256)": [
+                439,
+                119
+            ]
+        },
+        "block_CALL_mapping": {
+            "block13865": [
+                "sha256(msg.sender)"
+            ],
+            "block5325": [
+                "ERC20_CALLS.totalSupply()"
+            ],
+            "block10453_0": [
+                "ERC20_CALLS.totalSupply()"
+            ],
+            "jump3157": [
+                "ERC20_CALLS.balanceOf(msg.sender)",
+                "ERC20_CALLS.balanceOf(msg.sender)"
+            ],
+            "jump13996": [
+                "sha256(uint256(block.blockhash(block.number-1)) * uint256(sha256(msg.sender)))",
+                "sha256(uint256(block.blockhash(block.number-1)) * uint256(sha256(msg.sender)))"
+            ],
+            "jump8083": [
+                "ERC20_CALLS.transfer(winner1, getPercent(40, raffle_balance))",
+                "ERC20_CALLS.transfer(winner1, getPercent(40, raffle_balance))"
+            ],
+            "jump5325": [
+                "ERC20_CALLS.totalSupply()",
+                "ERC20_CALLS.totalSupply()"
+            ],
+            "jump9137": [
+                "ERC20_CALLS.balanceOf(raffle_addr)",
+                "ERC20_CALLS.balanceOf(raffle_addr)"
+            ],
+            "block9137": [
+                "ERC20_CALLS.balanceOf(raffle_addr)"
+            ],
+            "jump13797": [
+                "ERC20_CALLS.transfer(burner_addr, ERC20_CALLS.balanceOf(raffle_addr))",
+                "ERC20_CALLS.transfer(burner_addr, ERC20_CALLS.balanceOf(raffle_addr))"
+            ],
+            "block10453": [
+                "ERC20_CALLS.totalSupply()"
+            ],
+            "jump10453_1": [
+                "ERC20_CALLS.totalSupply()",
+                "ERC20_CALLS.totalSupply()"
+            ],
+            "jump10453_0": [
+                "ERC20_CALLS.totalSupply()",
+                "ERC20_CALLS.totalSupply()"
+            ],
+            "block13605": [
+                "ERC20_CALLS.balanceOf(raffle_addr)"
+            ],
+            "jump8386": [
+                "ERC20_CALLS.transfer(winner2, getPercent(20, raffle_balance))",
+                "ERC20_CALLS.transfer(winner2, getPercent(20, raffle_balance))"
+            ],
+            "block13996": [
+                "sha256(uint256(block.blockhash(block.number-1)) * uint256(sha256(msg.sender)))"
+            ],
+            "jump4362": [
+                "ERC20_CALLS.transfer(raffle_bowl[i], address_to_tickets[raffle_bowl[i]] * ticket_price)",
+                "ERC20_CALLS.transfer(raffle_bowl[i], address_to_tickets[raffle_bowl[i]] * ticket_price)"
+            ],
+            "block8386": [
+                "ERC20_CALLS.transfer(winner2, getPercent(20, raffle_balance))"
+            ],
+            "block2858": [
+                "ERC20_CALLS.allowance(msg.sender, raffle_addr)"
+            ],
+            "jump10453": [
+                "ERC20_CALLS.totalSupply()",
+                "ERC20_CALLS.totalSupply()"
+            ],
+            "jump10093": [
+                "sha256(user_addr)",
+                "sha256(user_addr)"
+            ],
+            "block8689": [
+                "ERC20_CALLS.transfer(winner3, getPercent(10, raffle_balance))"
+            ],
+            "block3157": [
+                "ERC20_CALLS.balanceOf(msg.sender)"
+            ],
+            "block10023": [
+                "sha256(now)"
+            ],
+            "block8083": [
+                "ERC20_CALLS.transfer(winner1, getPercent(40, raffle_balance))"
+            ],
+            "jump13865": [
+                "sha256(msg.sender)",
+                "sha256(msg.sender)"
+            ],
+            "block3641": [
+                "ERC20_CALLS.transferFrom(msg.sender, raffle_addr, number_of_tickets * ticket_price)"
+            ],
+            "block7067": [
+                "ERC20_CALLS.transfer(raffle_bowl[i], address_to_tickets[raffle_bowl[i]] * ticket_price)"
+            ],
+            "jump3641": [
+                "ERC20_CALLS.transferFrom(msg.sender, raffle_addr, number_of_tickets * ticket_price)",
+                "ERC20_CALLS.transferFrom(msg.sender, raffle_addr, number_of_tickets * ticket_price)"
+            ],
+            "block10453_1": [
+                "ERC20_CALLS.totalSupply()"
+            ],
+            "block13797": [
+                "ERC20_CALLS.transfer(burner_addr, ERC20_CALLS.balanceOf(raffle_addr))"
+            ],
+            "jump7776": [
+                "ERC20_CALLS.balanceOf(raffle_addr)",
+                "ERC20_CALLS.balanceOf(raffle_addr)"
+            ],
+            "jump13092": [
+                "ERC20_CALLS.burn(amount_to_burn)",
+                "ERC20_CALLS.burn(amount_to_burn)"
+            ],
+            "jump10023": [
+                "sha256(now)",
+                "sha256(now)"
+            ],
+            "jump7067": [
+                "ERC20_CALLS.transfer(raffle_bowl[i], address_to_tickets[raffle_bowl[i]] * ticket_price)",
+                "ERC20_CALLS.transfer(raffle_bowl[i], address_to_tickets[raffle_bowl[i]] * ticket_price)"
+            ],
+            "block10093": [
+                "sha256(user_addr)"
+            ],
+            "jump8689": [
+                "ERC20_CALLS.transfer(winner3, getPercent(10, raffle_balance))",
+                "ERC20_CALLS.transfer(winner3, getPercent(10, raffle_balance))"
+            ],
+            "jump13605": [
+                "ERC20_CALLS.balanceOf(raffle_addr)",
+                "ERC20_CALLS.balanceOf(raffle_addr)"
+            ],
+            "block7776": [
+                "ERC20_CALLS.balanceOf(raffle_addr)"
+            ],
+            "jump2858": [
+                "ERC20_CALLS.allowance(msg.sender, raffle_addr)",
+                "ERC20_CALLS.allowance(msg.sender, raffle_addr)"
+            ],
+            "block4362": [
+                "ERC20_CALLS.transfer(raffle_bowl[i], address_to_tickets[raffle_bowl[i]] * ticket_price)"
+            ],
+            "block13092": [
+                "ERC20_CALLS.burn(amount_to_burn)"
+            ]
+        }
+    }
+}

@@ -1,0 +1,1431 @@
+{
+    "ERC20": {
+        "function_list": [
+            "balanceOf(address)",
+            "allowance(address,address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                412,
+                97
+            ],
+            "transfer(address,uint256)": [
+                1396,
+                361
+            ],
+            "allowance(address,address)": [
+                1802,
+                449
+            ],
+            "balanceOf(address)": [
+                1055,
+                273
+            ],
+            "transferFrom(address,address,uint256)": [
+                599,
+                163
+            ]
+        },
+        "block_CALL_mapping": {
+            "block4085": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ],
+            "jump4085": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)",
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ]
+        }
+    },
+    "SafeMath": {
+        "function_list": [
+            "safeMul(uint256,uint256)",
+            "safeDiv(uint256,uint256)",
+            "safeSub(uint256,uint256)",
+            "safeAdd(uint256,uint256)",
+            "max64(uint64,uint64)",
+            "min64(uint64,uint64)",
+            "max256(uint256,uint256)",
+            "min256(uint256,uint256)",
+            "assert(bool)"
+        ],
+        "initial_state": {
+            "safeMul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "safeDiv(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "safeSub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "safeAdd(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "max64(uint64,uint64)": {
+                "argument": {
+                    "a": "uint64",
+                    "b": "uint64"
+                },
+                "contract": {}
+            },
+            "min64(uint64,uint64)": {
+                "argument": {
+                    "a": "uint64",
+                    "b": "uint64"
+                },
+                "contract": {}
+            },
+            "max256(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "min256(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "assert(bool)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "MultiSigWallet": {
+        "function_list": [
+            "fallback()",
+            "MultiSigWallet(address[],uint256)",
+            "addOwner(address)",
+            "removeOwner(address)",
+            "replaceOwner(address,address)",
+            "changeRequirement(uint256)",
+            "submitTransaction(address,uint256,bytes)",
+            "confirmTransaction(uint256)",
+            "revokeConfirmation(uint256)",
+            "isConfirmed(uint256)",
+            "executeTransaction(uint256)",
+            "addTransaction(address,uint256,bytes)",
+            "getConfirmationCount(uint256)",
+            "getTransactionCount(bool,bool)",
+            "getOwners()",
+            "getConfirmations(uint256)",
+            "getTransactionIds(uint256,uint256,bool,bool)",
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "MAX_OWNER_COUNT": "uint256",
+                    "owners": "address[]",
+                    "required": "uint256",
+                    "transactionCount": "uint256"
+                }
+            },
+            "MultiSigWallet(address[],uint256)": {
+                "argument": {
+                    "_owners": "address[]",
+                    "_required": "uint256"
+                },
+                "contract": {
+                    "MAX_OWNER_COUNT": "uint256",
+                    "owners": "address[]",
+                    "required": "uint256",
+                    "transactionCount": "uint256"
+                }
+            },
+            "addOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "MAX_OWNER_COUNT": "uint256",
+                    "owners": "address[]",
+                    "required": "uint256",
+                    "transactionCount": "uint256"
+                }
+            },
+            "removeOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "MAX_OWNER_COUNT": "uint256",
+                    "owners": "address[]",
+                    "required": "uint256",
+                    "transactionCount": "uint256"
+                }
+            },
+            "replaceOwner(address,address)": {
+                "argument": {},
+                "contract": {
+                    "MAX_OWNER_COUNT": "uint256",
+                    "owners": "address[]",
+                    "required": "uint256",
+                    "transactionCount": "uint256"
+                }
+            },
+            "changeRequirement(uint256)": {
+                "argument": {
+                    "_required": "uint256"
+                },
+                "contract": {
+                    "MAX_OWNER_COUNT": "uint256",
+                    "owners": "address[]",
+                    "required": "uint256",
+                    "transactionCount": "uint256"
+                }
+            },
+            "submitTransaction(address,uint256,bytes)": {
+                "argument": {
+                    "value": "uint256",
+                    "data": "bytes"
+                },
+                "contract": {
+                    "MAX_OWNER_COUNT": "uint256",
+                    "owners": "address[]",
+                    "required": "uint256",
+                    "transactionCount": "uint256"
+                }
+            },
+            "confirmTransaction(uint256)": {
+                "argument": {
+                    "transactionId": "uint256"
+                },
+                "contract": {
+                    "MAX_OWNER_COUNT": "uint256",
+                    "owners": "address[]",
+                    "required": "uint256",
+                    "transactionCount": "uint256"
+                }
+            },
+            "revokeConfirmation(uint256)": {
+                "argument": {
+                    "transactionId": "uint256"
+                },
+                "contract": {
+                    "MAX_OWNER_COUNT": "uint256",
+                    "owners": "address[]",
+                    "required": "uint256",
+                    "transactionCount": "uint256"
+                }
+            },
+            "isConfirmed(uint256)": {
+                "argument": {
+                    "transactionId": "uint256"
+                },
+                "contract": {
+                    "MAX_OWNER_COUNT": "uint256",
+                    "owners": "address[]",
+                    "required": "uint256",
+                    "transactionCount": "uint256"
+                }
+            },
+            "executeTransaction(uint256)": {
+                "argument": {
+                    "transactionId": "uint256"
+                },
+                "contract": {
+                    "MAX_OWNER_COUNT": "uint256",
+                    "owners": "address[]",
+                    "required": "uint256",
+                    "transactionCount": "uint256"
+                }
+            },
+            "addTransaction(address,uint256,bytes)": {
+                "argument": {
+                    "value": "uint256",
+                    "data": "bytes"
+                },
+                "contract": {
+                    "MAX_OWNER_COUNT": "uint256",
+                    "owners": "address[]",
+                    "required": "uint256",
+                    "transactionCount": "uint256"
+                }
+            },
+            "getConfirmationCount(uint256)": {
+                "argument": {
+                    "transactionId": "uint256"
+                },
+                "contract": {
+                    "MAX_OWNER_COUNT": "uint256",
+                    "owners": "address[]",
+                    "required": "uint256",
+                    "transactionCount": "uint256"
+                }
+            },
+            "getTransactionCount(bool,bool)": {
+                "argument": {},
+                "contract": {
+                    "MAX_OWNER_COUNT": "uint256",
+                    "owners": "address[]",
+                    "required": "uint256",
+                    "transactionCount": "uint256"
+                }
+            },
+            "getOwners()": {
+                "argument": {},
+                "contract": {
+                    "MAX_OWNER_COUNT": "uint256",
+                    "owners": "address[]",
+                    "required": "uint256",
+                    "transactionCount": "uint256"
+                }
+            },
+            "getConfirmations(uint256)": {
+                "argument": {
+                    "transactionId": "uint256"
+                },
+                "contract": {
+                    "MAX_OWNER_COUNT": "uint256",
+                    "owners": "address[]",
+                    "required": "uint256",
+                    "transactionCount": "uint256"
+                }
+            },
+            "getTransactionIds(uint256,uint256,bool,bool)": {
+                "argument": {
+                    "from": "uint256",
+                    "to": "uint256"
+                },
+                "contract": {
+                    "MAX_OWNER_COUNT": "uint256",
+                    "owners": "address[]",
+                    "required": "uint256",
+                    "transactionCount": "uint256"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "MAX_OWNER_COUNT": "uint256",
+                    "owners": "address[]",
+                    "required": "uint256",
+                    "transactionCount": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "getOwners()": [
+                1350,
+                317
+            ],
+            "submitTransaction(address,uint256,bytes)": [
+                1885,
+                449
+            ],
+            "revokeConfirmation(uint256)": [
+                551,
+                119
+            ],
+            "getConfirmations(uint256)": [
+                1622,
+                361
+            ],
+            "removeOwner(address)": [
+                484,
+                97
+            ],
+            "confirmTransaction(uint256)": [
+                1840,
+                427
+            ],
+            "changeRequirement(uint256)": [
+                1795,
+                405
+            ],
+            "replaceOwner(address,address)": [
+                2138,
+                515
+            ],
+            "getConfirmationCount(uint256)": [
+                1050,
+                273
+            ],
+            "isConfirmed(uint256)": [
+                981,
+                251
+            ],
+            "getTransactionIds(uint256,uint256,bool,bool)": [
+                1458,
+                339
+            ],
+            "getTransactionCount(bool,bool)": [
+                835,
+                207
+            ],
+            "addOwner(address)": [
+                914,
+                229
+            ]
+        },
+        "block_CALL_mapping": {
+            "block7688_0": [
+                "tx.destination.call.value(tx.value)(tx.data)"
+            ],
+            "jump7688_0": [
+                "tx.destination.call.value(tx.value)(tx.data)",
+                "tx.destination.call.value(tx.value)(tx.data)"
+            ],
+            "block7688": [
+                "tx.destination.call.value(tx.value)(tx.data)"
+            ],
+            "jump7688": [
+                "tx.destination.call.value(tx.value)(tx.data)",
+                "tx.destination.call.value(tx.value)(tx.data)"
+            ]
+        }
+    },
+    "BCDCVault": {
+        "function_list": [
+            "safeMul(uint256,uint256)",
+            "safeDiv(uint256,uint256)",
+            "safeSub(uint256,uint256)",
+            "safeAdd(uint256,uint256)",
+            "max64(uint64,uint64)",
+            "min64(uint64,uint64)",
+            "max256(uint256,uint256)",
+            "min256(uint256,uint256)",
+            "assert(bool)",
+            "BCDCVault(address,uint256,uint256)",
+            "unlockForDevelopment()",
+            "unlockForFounders()",
+            "fallback()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "safeMul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "unlockedBlockForDev": "uint256",
+                    "unlockedBlockForFounders": "uint256",
+                    "numBlocksLockedDev": "uint256",
+                    "numBlocksLockedFounders": "uint256"
+                }
+            },
+            "safeDiv(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "unlockedBlockForDev": "uint256",
+                    "unlockedBlockForFounders": "uint256",
+                    "numBlocksLockedDev": "uint256",
+                    "numBlocksLockedFounders": "uint256"
+                }
+            },
+            "safeSub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "unlockedBlockForDev": "uint256",
+                    "unlockedBlockForFounders": "uint256",
+                    "numBlocksLockedDev": "uint256",
+                    "numBlocksLockedFounders": "uint256"
+                }
+            },
+            "safeAdd(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "unlockedBlockForDev": "uint256",
+                    "unlockedBlockForFounders": "uint256",
+                    "numBlocksLockedDev": "uint256",
+                    "numBlocksLockedFounders": "uint256"
+                }
+            },
+            "max64(uint64,uint64)": {
+                "argument": {
+                    "a": "uint64",
+                    "b": "uint64"
+                },
+                "contract": {
+                    "unlockedBlockForDev": "uint256",
+                    "unlockedBlockForFounders": "uint256",
+                    "numBlocksLockedDev": "uint256",
+                    "numBlocksLockedFounders": "uint256"
+                }
+            },
+            "min64(uint64,uint64)": {
+                "argument": {
+                    "a": "uint64",
+                    "b": "uint64"
+                },
+                "contract": {
+                    "unlockedBlockForDev": "uint256",
+                    "unlockedBlockForFounders": "uint256",
+                    "numBlocksLockedDev": "uint256",
+                    "numBlocksLockedFounders": "uint256"
+                }
+            },
+            "max256(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "unlockedBlockForDev": "uint256",
+                    "unlockedBlockForFounders": "uint256",
+                    "numBlocksLockedDev": "uint256",
+                    "numBlocksLockedFounders": "uint256"
+                }
+            },
+            "min256(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "unlockedBlockForDev": "uint256",
+                    "unlockedBlockForFounders": "uint256",
+                    "numBlocksLockedDev": "uint256",
+                    "numBlocksLockedFounders": "uint256"
+                }
+            },
+            "assert(bool)": {
+                "argument": {},
+                "contract": {
+                    "unlockedBlockForDev": "uint256",
+                    "unlockedBlockForFounders": "uint256",
+                    "numBlocksLockedDev": "uint256",
+                    "numBlocksLockedFounders": "uint256"
+                }
+            },
+            "BCDCVault(address,uint256,uint256)": {
+                "argument": {
+                    "_numBlocksLockedForDev": "uint256",
+                    "_numBlocksLockedForFounders": "uint256"
+                },
+                "contract": {
+                    "unlockedBlockForDev": "uint256",
+                    "unlockedBlockForFounders": "uint256",
+                    "numBlocksLockedDev": "uint256",
+                    "numBlocksLockedFounders": "uint256"
+                }
+            },
+            "unlockForDevelopment()": {
+                "argument": {},
+                "contract": {
+                    "unlockedBlockForDev": "uint256",
+                    "unlockedBlockForFounders": "uint256",
+                    "numBlocksLockedDev": "uint256",
+                    "numBlocksLockedFounders": "uint256"
+                }
+            },
+            "unlockForFounders()": {
+                "argument": {},
+                "contract": {
+                    "unlockedBlockForDev": "uint256",
+                    "unlockedBlockForFounders": "uint256",
+                    "numBlocksLockedDev": "uint256",
+                    "numBlocksLockedFounders": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "unlockedBlockForDev": "uint256",
+                    "unlockedBlockForFounders": "uint256",
+                    "numBlocksLockedDev": "uint256",
+                    "numBlocksLockedFounders": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "unlockForDevelopment()": [
+                507,
+                251
+            ],
+            "unlockForFounders()": [
+                441,
+                207
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump1924": [
+                "bcdcToken.transfer(bcdcMultisig, developmentTokens)",
+                "bcdcToken.transfer(bcdcMultisig, developmentTokens)"
+            ],
+            "block1609": [
+                "bcdcToken.balanceOf(this)"
+            ],
+            "block1150": [
+                "bcdcToken.transfer(bcdcMultisig, bcdcToken.balanceOf(this))"
+            ],
+            "jump958": [
+                "bcdcToken.balanceOf(this)",
+                "bcdcToken.balanceOf(this)"
+            ],
+            "block1220": [
+                "bcdcMultisig.send(this.balance)"
+            ],
+            "block1924": [
+                "bcdcToken.transfer(bcdcMultisig, developmentTokens)"
+            ],
+            "block958": [
+                "bcdcToken.balanceOf(this)"
+            ],
+            "jump1609": [
+                "bcdcToken.balanceOf(this)",
+                "bcdcToken.balanceOf(this)"
+            ],
+            "jump1150": [
+                "bcdcToken.transfer(bcdcMultisig, bcdcToken.balanceOf(this))",
+                "bcdcToken.transfer(bcdcMultisig, bcdcToken.balanceOf(this))"
+            ],
+            "jump1220": [
+                "bcdcMultisig.send(this.balance)",
+                "bcdcMultisig.send(this.balance)"
+            ]
+        }
+    },
+    "BCDCToken": {
+        "function_list": [
+            "balanceOf(address)",
+            "allowance(address,address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "safeMul(uint256,uint256)",
+            "safeDiv(uint256,uint256)",
+            "safeSub(uint256,uint256)",
+            "safeAdd(uint256,uint256)",
+            "max64(uint64,uint64)",
+            "min64(uint64,uint64)",
+            "max256(uint256,uint256)",
+            "min256(uint256,uint256)",
+            "assert(bool)",
+            "BCDCToken(address,address,uint256,uint256,uint256,uint256,uint256,uint256,uint256)",
+            "transferOwnership(address)",
+            "setBcdcReserveFund(address)",
+            "balanceOf(address)",
+            "checkInvestment(address)",
+            "allowance(address,address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "fallback()",
+            "preAllocation()",
+            "earlyInvestment(address,uint256)",
+            "assignTokens(address,uint256)",
+            "finalizeCrowdfunding()",
+            "refund()",
+            "getState()",
+            "upgrade(uint256)",
+            "setUpgradeAgent(address)",
+            "setUpgradeMaster(address)",
+            "halt()",
+            "unhalt()",
+            "reserveTokenClaim(address,uint256)",
+            "backTokenForRewards(uint256)",
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "fundingEndBlock": "uint256",
+                    "tokenSaleMax": "uint256",
+                    "tokenSaleMin": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "vaultPercentOfTotal": "uint256",
+                    "reservedPercentTotal": "uint256",
+                    "tokensPerEther": "uint256",
+                    "totalUpgraded": "uint256"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "fundingEndBlock": "uint256",
+                    "tokenSaleMax": "uint256",
+                    "tokenSaleMin": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "vaultPercentOfTotal": "uint256",
+                    "reservedPercentTotal": "uint256",
+                    "tokensPerEther": "uint256",
+                    "totalUpgraded": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "fundingEndBlock": "uint256",
+                    "tokenSaleMax": "uint256",
+                    "tokenSaleMin": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "vaultPercentOfTotal": "uint256",
+                    "reservedPercentTotal": "uint256",
+                    "tokensPerEther": "uint256",
+                    "totalUpgraded": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "fundingEndBlock": "uint256",
+                    "tokenSaleMax": "uint256",
+                    "tokenSaleMin": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "vaultPercentOfTotal": "uint256",
+                    "reservedPercentTotal": "uint256",
+                    "tokensPerEther": "uint256",
+                    "totalUpgraded": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "fundingEndBlock": "uint256",
+                    "tokenSaleMax": "uint256",
+                    "tokenSaleMin": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "vaultPercentOfTotal": "uint256",
+                    "reservedPercentTotal": "uint256",
+                    "tokensPerEther": "uint256",
+                    "totalUpgraded": "uint256"
+                }
+            },
+            "safeMul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "fundingEndBlock": "uint256",
+                    "tokenSaleMax": "uint256",
+                    "tokenSaleMin": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "vaultPercentOfTotal": "uint256",
+                    "reservedPercentTotal": "uint256",
+                    "tokensPerEther": "uint256",
+                    "totalUpgraded": "uint256"
+                }
+            },
+            "safeDiv(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "fundingEndBlock": "uint256",
+                    "tokenSaleMax": "uint256",
+                    "tokenSaleMin": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "vaultPercentOfTotal": "uint256",
+                    "reservedPercentTotal": "uint256",
+                    "tokensPerEther": "uint256",
+                    "totalUpgraded": "uint256"
+                }
+            },
+            "safeSub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "fundingEndBlock": "uint256",
+                    "tokenSaleMax": "uint256",
+                    "tokenSaleMin": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "vaultPercentOfTotal": "uint256",
+                    "reservedPercentTotal": "uint256",
+                    "tokensPerEther": "uint256",
+                    "totalUpgraded": "uint256"
+                }
+            },
+            "safeAdd(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "fundingEndBlock": "uint256",
+                    "tokenSaleMax": "uint256",
+                    "tokenSaleMin": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "vaultPercentOfTotal": "uint256",
+                    "reservedPercentTotal": "uint256",
+                    "tokensPerEther": "uint256",
+                    "totalUpgraded": "uint256"
+                }
+            },
+            "max64(uint64,uint64)": {
+                "argument": {
+                    "a": "uint64",
+                    "b": "uint64"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "fundingEndBlock": "uint256",
+                    "tokenSaleMax": "uint256",
+                    "tokenSaleMin": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "vaultPercentOfTotal": "uint256",
+                    "reservedPercentTotal": "uint256",
+                    "tokensPerEther": "uint256",
+                    "totalUpgraded": "uint256"
+                }
+            },
+            "min64(uint64,uint64)": {
+                "argument": {
+                    "a": "uint64",
+                    "b": "uint64"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "fundingEndBlock": "uint256",
+                    "tokenSaleMax": "uint256",
+                    "tokenSaleMin": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "vaultPercentOfTotal": "uint256",
+                    "reservedPercentTotal": "uint256",
+                    "tokensPerEther": "uint256",
+                    "totalUpgraded": "uint256"
+                }
+            },
+            "max256(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "fundingEndBlock": "uint256",
+                    "tokenSaleMax": "uint256",
+                    "tokenSaleMin": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "vaultPercentOfTotal": "uint256",
+                    "reservedPercentTotal": "uint256",
+                    "tokensPerEther": "uint256",
+                    "totalUpgraded": "uint256"
+                }
+            },
+            "min256(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "fundingEndBlock": "uint256",
+                    "tokenSaleMax": "uint256",
+                    "tokenSaleMin": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "vaultPercentOfTotal": "uint256",
+                    "reservedPercentTotal": "uint256",
+                    "tokensPerEther": "uint256",
+                    "totalUpgraded": "uint256"
+                }
+            },
+            "assert(bool)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "fundingEndBlock": "uint256",
+                    "tokenSaleMax": "uint256",
+                    "tokenSaleMin": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "vaultPercentOfTotal": "uint256",
+                    "reservedPercentTotal": "uint256",
+                    "tokensPerEther": "uint256",
+                    "totalUpgraded": "uint256"
+                }
+            },
+            "BCDCToken(address,address,uint256,uint256,uint256,uint256,uint256,uint256,uint256)": {
+                "argument": {
+                    "_fundingStartBlock": "uint256",
+                    "_fundingEndBlock": "uint256",
+                    "_tokenSaleMax": "uint256",
+                    "_tokenSaleMin": "uint256",
+                    "_tokensPerEther": "uint256",
+                    "_numBlocksLockedForDev": "uint256",
+                    "_numBlocksLockedForFounders": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "fundingEndBlock": "uint256",
+                    "tokenSaleMax": "uint256",
+                    "tokenSaleMin": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "vaultPercentOfTotal": "uint256",
+                    "reservedPercentTotal": "uint256",
+                    "tokensPerEther": "uint256",
+                    "totalUpgraded": "uint256"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "fundingEndBlock": "uint256",
+                    "tokenSaleMax": "uint256",
+                    "tokenSaleMin": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "vaultPercentOfTotal": "uint256",
+                    "reservedPercentTotal": "uint256",
+                    "tokensPerEther": "uint256",
+                    "totalUpgraded": "uint256"
+                }
+            },
+            "setBcdcReserveFund(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "fundingEndBlock": "uint256",
+                    "tokenSaleMax": "uint256",
+                    "tokenSaleMin": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "vaultPercentOfTotal": "uint256",
+                    "reservedPercentTotal": "uint256",
+                    "tokensPerEther": "uint256",
+                    "totalUpgraded": "uint256"
+                }
+            },
+            "checkInvestment(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "fundingEndBlock": "uint256",
+                    "tokenSaleMax": "uint256",
+                    "tokenSaleMin": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "vaultPercentOfTotal": "uint256",
+                    "reservedPercentTotal": "uint256",
+                    "tokensPerEther": "uint256",
+                    "totalUpgraded": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "fundingEndBlock": "uint256",
+                    "tokenSaleMax": "uint256",
+                    "tokenSaleMin": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "vaultPercentOfTotal": "uint256",
+                    "reservedPercentTotal": "uint256",
+                    "tokensPerEther": "uint256",
+                    "totalUpgraded": "uint256"
+                }
+            },
+            "preAllocation()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "fundingEndBlock": "uint256",
+                    "tokenSaleMax": "uint256",
+                    "tokenSaleMin": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "vaultPercentOfTotal": "uint256",
+                    "reservedPercentTotal": "uint256",
+                    "tokensPerEther": "uint256",
+                    "totalUpgraded": "uint256"
+                }
+            },
+            "earlyInvestment(address,uint256)": {
+                "argument": {
+                    "assignedTokens": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "fundingEndBlock": "uint256",
+                    "tokenSaleMax": "uint256",
+                    "tokenSaleMin": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "vaultPercentOfTotal": "uint256",
+                    "reservedPercentTotal": "uint256",
+                    "tokensPerEther": "uint256",
+                    "totalUpgraded": "uint256"
+                }
+            },
+            "assignTokens(address,uint256)": {
+                "argument": {
+                    "tokens": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "fundingEndBlock": "uint256",
+                    "tokenSaleMax": "uint256",
+                    "tokenSaleMin": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "vaultPercentOfTotal": "uint256",
+                    "reservedPercentTotal": "uint256",
+                    "tokensPerEther": "uint256",
+                    "totalUpgraded": "uint256"
+                }
+            },
+            "finalizeCrowdfunding()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "fundingEndBlock": "uint256",
+                    "tokenSaleMax": "uint256",
+                    "tokenSaleMin": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "vaultPercentOfTotal": "uint256",
+                    "reservedPercentTotal": "uint256",
+                    "tokensPerEther": "uint256",
+                    "totalUpgraded": "uint256"
+                }
+            },
+            "refund()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "fundingEndBlock": "uint256",
+                    "tokenSaleMax": "uint256",
+                    "tokenSaleMin": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "vaultPercentOfTotal": "uint256",
+                    "reservedPercentTotal": "uint256",
+                    "tokensPerEther": "uint256",
+                    "totalUpgraded": "uint256"
+                }
+            },
+            "getState()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "fundingEndBlock": "uint256",
+                    "tokenSaleMax": "uint256",
+                    "tokenSaleMin": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "vaultPercentOfTotal": "uint256",
+                    "reservedPercentTotal": "uint256",
+                    "tokensPerEther": "uint256",
+                    "totalUpgraded": "uint256"
+                }
+            },
+            "upgrade(uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "fundingEndBlock": "uint256",
+                    "tokenSaleMax": "uint256",
+                    "tokenSaleMin": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "vaultPercentOfTotal": "uint256",
+                    "reservedPercentTotal": "uint256",
+                    "tokensPerEther": "uint256",
+                    "totalUpgraded": "uint256"
+                }
+            },
+            "setUpgradeAgent(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "fundingEndBlock": "uint256",
+                    "tokenSaleMax": "uint256",
+                    "tokenSaleMin": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "vaultPercentOfTotal": "uint256",
+                    "reservedPercentTotal": "uint256",
+                    "tokensPerEther": "uint256",
+                    "totalUpgraded": "uint256"
+                }
+            },
+            "setUpgradeMaster(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "fundingEndBlock": "uint256",
+                    "tokenSaleMax": "uint256",
+                    "tokenSaleMin": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "vaultPercentOfTotal": "uint256",
+                    "reservedPercentTotal": "uint256",
+                    "tokensPerEther": "uint256",
+                    "totalUpgraded": "uint256"
+                }
+            },
+            "halt()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "fundingEndBlock": "uint256",
+                    "tokenSaleMax": "uint256",
+                    "tokenSaleMin": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "vaultPercentOfTotal": "uint256",
+                    "reservedPercentTotal": "uint256",
+                    "tokensPerEther": "uint256",
+                    "totalUpgraded": "uint256"
+                }
+            },
+            "unhalt()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "fundingEndBlock": "uint256",
+                    "tokenSaleMax": "uint256",
+                    "tokenSaleMin": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "vaultPercentOfTotal": "uint256",
+                    "reservedPercentTotal": "uint256",
+                    "tokensPerEther": "uint256",
+                    "totalUpgraded": "uint256"
+                }
+            },
+            "reserveTokenClaim(address,uint256)": {
+                "argument": {
+                    "token": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "fundingEndBlock": "uint256",
+                    "tokenSaleMax": "uint256",
+                    "tokenSaleMin": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "vaultPercentOfTotal": "uint256",
+                    "reservedPercentTotal": "uint256",
+                    "tokensPerEther": "uint256",
+                    "totalUpgraded": "uint256"
+                }
+            },
+            "backTokenForRewards(uint256)": {
+                "argument": {
+                    "tokens": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "fundingEndBlock": "uint256",
+                    "tokenSaleMax": "uint256",
+                    "tokenSaleMin": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "vaultPercentOfTotal": "uint256",
+                    "reservedPercentTotal": "uint256",
+                    "tokensPerEther": "uint256",
+                    "totalUpgraded": "uint256"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint256",
+                    "fundingStartBlock": "uint256",
+                    "fundingEndBlock": "uint256",
+                    "tokenSaleMax": "uint256",
+                    "tokenSaleMin": "uint256",
+                    "maxTokenSupply": "uint256",
+                    "vaultPercentOfTotal": "uint256",
+                    "reservedPercentTotal": "uint256",
+                    "tokensPerEther": "uint256",
+                    "totalUpgraded": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "upgrade(uint256)": [
+                1530,
+                317
+            ],
+            "backTokenForRewards(uint256)": [
+                2715,
+                713
+            ],
+            "allowance(address,address)": [
+                3049,
+                889
+            ],
+            "transferFrom(address,address,uint256)": [
+                1264,
+                229
+            ],
+            "approve(address,uint256)": [
+                993,
+                119
+            ],
+            "preAllocation()": [
+                2873,
+                801
+            ],
+            "earlyInvestment(address,uint256)": [
+                1972,
+                493
+            ],
+            "finalizeCrowdfunding()": [
+                1241,
+                207
+            ],
+            "transferOwnership(address)": [
+                3269,
+                933
+            ],
+            "balanceOf(address)": [
+                2139,
+                559
+            ],
+            "refund()": [
+                1665,
+                383
+            ],
+            "setUpgradeMaster(address)": [
+                3510,
+                999
+            ],
+            "setBcdcReserveFund(address)": [
+                2601,
+                669
+            ],
+            "setUpgradeAgent(address)": [
+                2939,
+                845
+            ],
+            "reserveTokenClaim(address,uint256)": [
+                3168,
+                911
+            ],
+            "halt()": [
+                1862,
+                449
+            ],
+            "getState()": [
+                1137,
+                163
+            ],
+            "unhalt()": [
+                2803,
+                757
+            ],
+            "transfer(address,uint256)": [
+                2500,
+                647
+            ],
+            "checkInvestment(address)": [
+                3423,
+                977
+            ]
+        },
+        "block_CALL_mapping": {
+            "block5603": [
+                "bcdcMultisig.send(this.balance)"
+            ],
+            "jump11455": [
+                "upgradeAgent.setOriginalSupply()",
+                "upgradeAgent.setOriginalSupply()"
+            ],
+            "jump7837": [
+                "msg.sender.send(ethValue)",
+                "msg.sender.send(ethValue)"
+            ],
+            "block11225": [
+                "upgradeAgent.isUpgradeAgent()"
+            ],
+            "block6852": [
+                "upgradeAgent.owner()"
+            ],
+            "jump6852": [
+                "upgradeAgent.owner()",
+                "upgradeAgent.owner()"
+            ],
+            "block7837": [
+                "msg.sender.send(ethValue)"
+            ],
+            "block7433": [
+                "upgradeAgent.upgradeFrom(msg.sender, value)"
+            ],
+            "jump11225": [
+                "upgradeAgent.isUpgradeAgent()",
+                "upgradeAgent.isUpgradeAgent()"
+            ],
+            "block11455": [
+                "upgradeAgent.setOriginalSupply()"
+            ],
+            "jump5603": [
+                "bcdcMultisig.send(this.balance)",
+                "bcdcMultisig.send(this.balance)"
+            ],
+            "jump7433": [
+                "upgradeAgent.upgradeFrom(msg.sender, value)",
+                "upgradeAgent.upgradeFrom(msg.sender, value)"
+            ]
+        }
+    }
+}

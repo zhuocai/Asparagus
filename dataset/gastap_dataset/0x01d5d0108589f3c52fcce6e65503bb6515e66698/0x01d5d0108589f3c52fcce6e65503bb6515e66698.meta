@@ -1,0 +1,744 @@
+{
+    "Ownership": {
+        "function_list": [
+            "isOwner(address)",
+            "getOwner()",
+            "Ownership()",
+            "isOwner(address)",
+            "getOwner()"
+        ],
+        "initial_state": {
+            "isOwner(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "getOwner()": {
+                "argument": {},
+                "contract": {}
+            },
+            "Ownership()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "isOwner(address)": [
+                81,
+                75
+            ],
+            "getOwner()": [
+                172,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "TransferableOwnership": {
+        "function_list": [
+            "Ownership()",
+            "isOwner(address)",
+            "getOwner()",
+            "isOwner(address)",
+            "getOwner()",
+            "transferOwnership(address)",
+            "transferOwnership(address)"
+        ],
+        "initial_state": {
+            "Ownership()": {
+                "argument": {},
+                "contract": {}
+            },
+            "isOwner(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "getOwner()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "isOwner(address)": [
+                92,
+                75
+            ],
+            "getOwner()": [
+                183,
+                97
+            ],
+            "transferOwnership(address)": [
+                270,
+                119
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "TokenRetriever": {
+        "function_list": [
+            "retrieveTokens(address)",
+            "retrieveTokens(address)"
+        ],
+        "initial_state": {
+            "retrieveTokens(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "retrieveTokens(address)": [
+                70,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "block298": [
+                "tokenInstance.balanceOf(this)"
+            ],
+            "block531": [
+                "tokenInstance.transfer(msg.sender, tokenBalance)"
+            ],
+            "jump531": [
+                "tokenInstance.transfer(msg.sender, tokenBalance)",
+                "tokenInstance.transfer(msg.sender, tokenBalance)"
+            ],
+            "jump298": [
+                "tokenInstance.balanceOf(this)",
+                "tokenInstance.balanceOf(this)"
+            ]
+        }
+    },
+    "IToken": {
+        "function_list": [
+            "totalSupply()",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)"
+        ],
+        "initial_state": {
+            "totalSupply()": {
+                "argument": {},
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                319,
+                119
+            ],
+            "totalSupply()": [
+                147,
+                75
+            ],
+            "allowance(address,address)": [
+                901,
+                207
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "DcorpProxy": {
+        "function_list": [
+            "retrieveTokens(address)",
+            "retrieveTokens(address)",
+            "transferOwnership(address)",
+            "Ownership()",
+            "isOwner(address)",
+            "getOwner()",
+            "isOwner(address)",
+            "getOwner()",
+            "transferOwnership(address)",
+            "notifyTokensReceived(address,uint256)",
+            "onTokensReceived(address,address,uint256)",
+            "notifyTokensReceived(address,uint256)",
+            "DcorpProxy(address,address,address)",
+            "isDeploying()",
+            "isDeployed()",
+            "isExecuted()",
+            "fallback()",
+            "deploy()",
+            "getTotalSupply()",
+            "hasBalance(address)",
+            "balanceOf(address,address)",
+            "isProposed(address)",
+            "getProposalCount()",
+            "propose(address)",
+            "getVotingDuration()",
+            "getVoteCount(address)",
+            "hasVoted(address,address)",
+            "getVote(address,address)",
+            "vote(address,bool)",
+            "getVotingResult(address)",
+            "isSupported(address,bool)",
+            "execute(address)",
+            "onTokensReceived(address,address,uint256)",
+            "withdrawDRPS(uint256)",
+            "withdrawDRPU(uint256)",
+            "retrieveTokens(address)",
+            "_adjustWeight(address,uint256,bool)",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "retrieveTokens(address)": {
+                "argument": {},
+                "contract": {
+                    "VOTING_DURATION": "uint256",
+                    "MIN_QUORUM": "uint256",
+                    "allocatedIndex": "address[]",
+                    "proposalIndex": "address[]",
+                    "drpCrowdsaleRecordedBalance": "uint256"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "VOTING_DURATION": "uint256",
+                    "MIN_QUORUM": "uint256",
+                    "allocatedIndex": "address[]",
+                    "proposalIndex": "address[]",
+                    "drpCrowdsaleRecordedBalance": "uint256"
+                }
+            },
+            "Ownership()": {
+                "argument": {},
+                "contract": {
+                    "VOTING_DURATION": "uint256",
+                    "MIN_QUORUM": "uint256",
+                    "allocatedIndex": "address[]",
+                    "proposalIndex": "address[]",
+                    "drpCrowdsaleRecordedBalance": "uint256"
+                }
+            },
+            "isOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "VOTING_DURATION": "uint256",
+                    "MIN_QUORUM": "uint256",
+                    "allocatedIndex": "address[]",
+                    "proposalIndex": "address[]",
+                    "drpCrowdsaleRecordedBalance": "uint256"
+                }
+            },
+            "getOwner()": {
+                "argument": {},
+                "contract": {
+                    "VOTING_DURATION": "uint256",
+                    "MIN_QUORUM": "uint256",
+                    "allocatedIndex": "address[]",
+                    "proposalIndex": "address[]",
+                    "drpCrowdsaleRecordedBalance": "uint256"
+                }
+            },
+            "notifyTokensReceived(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "VOTING_DURATION": "uint256",
+                    "MIN_QUORUM": "uint256",
+                    "allocatedIndex": "address[]",
+                    "proposalIndex": "address[]",
+                    "drpCrowdsaleRecordedBalance": "uint256"
+                }
+            },
+            "onTokensReceived(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "VOTING_DURATION": "uint256",
+                    "MIN_QUORUM": "uint256",
+                    "allocatedIndex": "address[]",
+                    "proposalIndex": "address[]",
+                    "drpCrowdsaleRecordedBalance": "uint256"
+                }
+            },
+            "DcorpProxy(address,address,address)": {
+                "argument": {},
+                "contract": {
+                    "VOTING_DURATION": "uint256",
+                    "MIN_QUORUM": "uint256",
+                    "allocatedIndex": "address[]",
+                    "proposalIndex": "address[]",
+                    "drpCrowdsaleRecordedBalance": "uint256"
+                }
+            },
+            "isDeploying()": {
+                "argument": {},
+                "contract": {
+                    "VOTING_DURATION": "uint256",
+                    "MIN_QUORUM": "uint256",
+                    "allocatedIndex": "address[]",
+                    "proposalIndex": "address[]",
+                    "drpCrowdsaleRecordedBalance": "uint256"
+                }
+            },
+            "isDeployed()": {
+                "argument": {},
+                "contract": {
+                    "VOTING_DURATION": "uint256",
+                    "MIN_QUORUM": "uint256",
+                    "allocatedIndex": "address[]",
+                    "proposalIndex": "address[]",
+                    "drpCrowdsaleRecordedBalance": "uint256"
+                }
+            },
+            "isExecuted()": {
+                "argument": {},
+                "contract": {
+                    "VOTING_DURATION": "uint256",
+                    "MIN_QUORUM": "uint256",
+                    "allocatedIndex": "address[]",
+                    "proposalIndex": "address[]",
+                    "drpCrowdsaleRecordedBalance": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "VOTING_DURATION": "uint256",
+                    "MIN_QUORUM": "uint256",
+                    "allocatedIndex": "address[]",
+                    "proposalIndex": "address[]",
+                    "drpCrowdsaleRecordedBalance": "uint256"
+                }
+            },
+            "deploy()": {
+                "argument": {},
+                "contract": {
+                    "VOTING_DURATION": "uint256",
+                    "MIN_QUORUM": "uint256",
+                    "allocatedIndex": "address[]",
+                    "proposalIndex": "address[]",
+                    "drpCrowdsaleRecordedBalance": "uint256"
+                }
+            },
+            "getTotalSupply()": {
+                "argument": {},
+                "contract": {
+                    "VOTING_DURATION": "uint256",
+                    "MIN_QUORUM": "uint256",
+                    "allocatedIndex": "address[]",
+                    "proposalIndex": "address[]",
+                    "drpCrowdsaleRecordedBalance": "uint256"
+                }
+            },
+            "hasBalance(address)": {
+                "argument": {},
+                "contract": {
+                    "VOTING_DURATION": "uint256",
+                    "MIN_QUORUM": "uint256",
+                    "allocatedIndex": "address[]",
+                    "proposalIndex": "address[]",
+                    "drpCrowdsaleRecordedBalance": "uint256"
+                }
+            },
+            "balanceOf(address,address)": {
+                "argument": {},
+                "contract": {
+                    "VOTING_DURATION": "uint256",
+                    "MIN_QUORUM": "uint256",
+                    "allocatedIndex": "address[]",
+                    "proposalIndex": "address[]",
+                    "drpCrowdsaleRecordedBalance": "uint256"
+                }
+            },
+            "isProposed(address)": {
+                "argument": {},
+                "contract": {
+                    "VOTING_DURATION": "uint256",
+                    "MIN_QUORUM": "uint256",
+                    "allocatedIndex": "address[]",
+                    "proposalIndex": "address[]",
+                    "drpCrowdsaleRecordedBalance": "uint256"
+                }
+            },
+            "getProposalCount()": {
+                "argument": {},
+                "contract": {
+                    "VOTING_DURATION": "uint256",
+                    "MIN_QUORUM": "uint256",
+                    "allocatedIndex": "address[]",
+                    "proposalIndex": "address[]",
+                    "drpCrowdsaleRecordedBalance": "uint256"
+                }
+            },
+            "propose(address)": {
+                "argument": {},
+                "contract": {
+                    "VOTING_DURATION": "uint256",
+                    "MIN_QUORUM": "uint256",
+                    "allocatedIndex": "address[]",
+                    "proposalIndex": "address[]",
+                    "drpCrowdsaleRecordedBalance": "uint256"
+                }
+            },
+            "getVotingDuration()": {
+                "argument": {},
+                "contract": {
+                    "VOTING_DURATION": "uint256",
+                    "MIN_QUORUM": "uint256",
+                    "allocatedIndex": "address[]",
+                    "proposalIndex": "address[]",
+                    "drpCrowdsaleRecordedBalance": "uint256"
+                }
+            },
+            "getVoteCount(address)": {
+                "argument": {},
+                "contract": {
+                    "VOTING_DURATION": "uint256",
+                    "MIN_QUORUM": "uint256",
+                    "allocatedIndex": "address[]",
+                    "proposalIndex": "address[]",
+                    "drpCrowdsaleRecordedBalance": "uint256"
+                }
+            },
+            "hasVoted(address,address)": {
+                "argument": {},
+                "contract": {
+                    "VOTING_DURATION": "uint256",
+                    "MIN_QUORUM": "uint256",
+                    "allocatedIndex": "address[]",
+                    "proposalIndex": "address[]",
+                    "drpCrowdsaleRecordedBalance": "uint256"
+                }
+            },
+            "getVote(address,address)": {
+                "argument": {},
+                "contract": {
+                    "VOTING_DURATION": "uint256",
+                    "MIN_QUORUM": "uint256",
+                    "allocatedIndex": "address[]",
+                    "proposalIndex": "address[]",
+                    "drpCrowdsaleRecordedBalance": "uint256"
+                }
+            },
+            "vote(address,bool)": {
+                "argument": {},
+                "contract": {
+                    "VOTING_DURATION": "uint256",
+                    "MIN_QUORUM": "uint256",
+                    "allocatedIndex": "address[]",
+                    "proposalIndex": "address[]",
+                    "drpCrowdsaleRecordedBalance": "uint256"
+                }
+            },
+            "getVotingResult(address)": {
+                "argument": {},
+                "contract": {
+                    "VOTING_DURATION": "uint256",
+                    "MIN_QUORUM": "uint256",
+                    "allocatedIndex": "address[]",
+                    "proposalIndex": "address[]",
+                    "drpCrowdsaleRecordedBalance": "uint256"
+                }
+            },
+            "isSupported(address,bool)": {
+                "argument": {},
+                "contract": {
+                    "VOTING_DURATION": "uint256",
+                    "MIN_QUORUM": "uint256",
+                    "allocatedIndex": "address[]",
+                    "proposalIndex": "address[]",
+                    "drpCrowdsaleRecordedBalance": "uint256"
+                }
+            },
+            "execute(address)": {
+                "argument": {},
+                "contract": {
+                    "VOTING_DURATION": "uint256",
+                    "MIN_QUORUM": "uint256",
+                    "allocatedIndex": "address[]",
+                    "proposalIndex": "address[]",
+                    "drpCrowdsaleRecordedBalance": "uint256"
+                }
+            },
+            "withdrawDRPS(uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "VOTING_DURATION": "uint256",
+                    "MIN_QUORUM": "uint256",
+                    "allocatedIndex": "address[]",
+                    "proposalIndex": "address[]",
+                    "drpCrowdsaleRecordedBalance": "uint256"
+                }
+            },
+            "withdrawDRPU(uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "VOTING_DURATION": "uint256",
+                    "MIN_QUORUM": "uint256",
+                    "allocatedIndex": "address[]",
+                    "proposalIndex": "address[]",
+                    "drpCrowdsaleRecordedBalance": "uint256"
+                }
+            },
+            "_adjustWeight(address,uint256,bool)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "VOTING_DURATION": "uint256",
+                    "MIN_QUORUM": "uint256",
+                    "allocatedIndex": "address[]",
+                    "proposalIndex": "address[]",
+                    "drpCrowdsaleRecordedBalance": "uint256"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "VOTING_DURATION": "uint256",
+                    "MIN_QUORUM": "uint256",
+                    "allocatedIndex": "address[]",
+                    "proposalIndex": "address[]",
+                    "drpCrowdsaleRecordedBalance": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "withdrawDRPU(uint256)": [
+                1387,
+                317
+            ],
+            "propose(address)": [
+                488,
+                75
+            ],
+            "retrieveTokens(address)": [
+                1662,
+                405
+            ],
+            "notifyTokensReceived(address,uint256)": [
+                1120,
+                251
+            ],
+            "isDeployed()": [
+                1937,
+                515
+            ],
+            "execute(address)": [
+                784,
+                163
+            ],
+            "isDeploying()": [
+                2181,
+                603
+            ],
+            "isProposed(address)": [
+                1432,
+                339
+            ],
+            "getVotingDuration()": [
+                1984,
+                537
+            ],
+            "hasVoted(address,address)": [
+                851,
+                185
+            ],
+            "isExecuted()": [
+                555,
+                97
+            ],
+            "isOwner(address)": [
+                693,
+                141
+            ],
+            "getVote(address,address)": [
+                974,
+                207
+            ],
+            "isSupported(address,bool)": [
+                1197,
+                273
+            ],
+            "withdrawDRPS(uint256)": [
+                1617,
+                383
+            ],
+            "transferOwnership(address)": [
+                2114,
+                581
+            ],
+            "getProposalCount()": [
+                1851,
+                471
+            ],
+            "vote(address,bool)": [
+                1772,
+                449
+            ],
+            "hasBalance(address)": [
+                602,
+                119
+            ],
+            "getVotingResult(address)": [
+                1523,
+                361
+            ],
+            "balanceOf(address,address)": [
+                2228,
+                625
+            ],
+            "getVoteCount(address)": [
+                2027,
+                559
+            ],
+            "deploy()": [
+                1097,
+                229
+            ],
+            "getOwner()": [
+                1300,
+                295
+            ],
+            "getTotalSupply()": [
+                1894,
+                493
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump8109_0": [
+                "drpuToken.totalSupply()",
+                "drpuToken.totalSupply()"
+            ],
+            "jump7912_0": [
+                "drpsToken.totalSupply()",
+                "drpsToken.totalSupply()"
+            ],
+            "jump7912_1": [
+                "drpsToken.totalSupply()",
+                "drpsToken.totalSupply()"
+            ],
+            "block3751": [
+                "IMultiOwned(drpuToken).addOwner(_acceptedAddress)"
+            ],
+            "block3538": [
+                "IMultiOwned(drpsToken).addOwner(_acceptedAddress)"
+            ],
+            "block7912_0": [
+                "drpsToken.totalSupply()"
+            ],
+            "block7912_1": [
+                "drpsToken.totalSupply()"
+            ],
+            "block4177": [
+                "IMultiOwned(drpuToken).removeOwner(this)"
+            ],
+            "block8109": [
+                "drpuToken.totalSupply()"
+            ],
+            "jump4177": [
+                "IMultiOwned(drpuToken).removeOwner(this)",
+                "IMultiOwned(drpuToken).removeOwner(this)"
+            ],
+            "block3964": [
+                "IMultiOwned(drpsToken).removeOwner(this)"
+            ],
+            "jump8109": [
+                "drpuToken.totalSupply()",
+                "drpuToken.totalSupply()"
+            ],
+            "jump6322": [
+                "drpsToken.transfer(msg.sender, _value)",
+                "drpsToken.transfer(msg.sender, _value)"
+            ],
+            "block8109_1": [
+                "drpuToken.totalSupply()"
+            ],
+            "block4197": [
+                "_acceptedAddress.transfer(balanceToSend)"
+            ],
+            "jump4197": [
+                "_acceptedAddress.transfer(balanceToSend)",
+                "_acceptedAddress.transfer(balanceToSend)"
+            ],
+            "block6322": [
+                "drpsToken.transfer(msg.sender, _value)"
+            ],
+            "jump10223": [
+                "tokenInstance.balanceOf(this)",
+                "tokenInstance.balanceOf(this)"
+            ],
+            "jump3538": [
+                "IMultiOwned(drpsToken).addOwner(_acceptedAddress)",
+                "IMultiOwned(drpsToken).addOwner(_acceptedAddress)"
+            ],
+            "block10223": [
+                "tokenInstance.balanceOf(this)"
+            ],
+            "jump3751": [
+                "IMultiOwned(drpuToken).addOwner(_acceptedAddress)",
+                "IMultiOwned(drpuToken).addOwner(_acceptedAddress)"
+            ],
+            "block8109_0": [
+                "drpuToken.totalSupply()"
+            ],
+            "jump5625": [
+                "drpuToken.transfer(msg.sender, _value)",
+                "drpuToken.transfer(msg.sender, _value)"
+            ],
+            "jump10456": [
+                "tokenInstance.transfer(msg.sender, tokenBalance)",
+                "tokenInstance.transfer(msg.sender, tokenBalance)"
+            ],
+            "jump7912": [
+                "drpsToken.totalSupply()",
+                "drpsToken.totalSupply()"
+            ],
+            "jump3964": [
+                "IMultiOwned(drpsToken).removeOwner(this)",
+                "IMultiOwned(drpsToken).removeOwner(this)"
+            ],
+            "block5625": [
+                "drpuToken.transfer(msg.sender, _value)"
+            ],
+            "jump8109_1": [
+                "drpuToken.totalSupply()",
+                "drpuToken.totalSupply()"
+            ],
+            "block7912": [
+                "drpsToken.totalSupply()"
+            ],
+            "block10456": [
+                "tokenInstance.transfer(msg.sender, tokenBalance)"
+            ]
+        }
+    }
+}

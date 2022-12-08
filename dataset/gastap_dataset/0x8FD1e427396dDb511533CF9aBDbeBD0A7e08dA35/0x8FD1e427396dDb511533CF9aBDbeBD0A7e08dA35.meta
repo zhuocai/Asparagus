@@ -1,0 +1,191 @@
+{
+    "Ownable": {
+        "function_list": [
+            "changeOwner(address)",
+            "confirmOwner()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "changeOwner(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "confirmOwner()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "confirmOwner()": [
+                148,
+                97
+            ],
+            "changeOwner(address)": [
+                81,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Token": {
+        "function_list": [
+            "changeOwner(address)",
+            "confirmOwner()",
+            "WithdrawToken(address,uint256,address)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "changeOwner(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "confirmOwner()": {
+                "argument": {},
+                "contract": {}
+            },
+            "WithdrawToken(address,uint256,address)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "WithdrawToken(address,uint256,address)": [
+                182,
+                119
+            ],
+            "confirmOwner()": [
+                159,
+                97
+            ],
+            "changeOwner(address)": [
+                92,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "block718": [
+                "token.call(bytes4(sha3(\"transfer(address,uint256)\")),to,amount)"
+            ]
+        }
+    },
+    "TokenBank": {
+        "function_list": [
+            "WithdrawToken(address,uint256,address)",
+            "changeOwner(address)",
+            "confirmOwner()",
+            "initTokenBank()",
+            "fallback()",
+            "Deposit()",
+            "WitdrawTokenToHolder(address,address,uint256)",
+            "WithdrawToHolder(address,uint256)",
+            "Bal()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "WithdrawToken(address,uint256,address)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {
+                    "MinDeposit": "uint256"
+                }
+            },
+            "changeOwner(address)": {
+                "argument": {},
+                "contract": {
+                    "MinDeposit": "uint256"
+                }
+            },
+            "confirmOwner()": {
+                "argument": {},
+                "contract": {
+                    "MinDeposit": "uint256"
+                }
+            },
+            "initTokenBank()": {
+                "argument": {},
+                "contract": {
+                    "MinDeposit": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "MinDeposit": "uint256"
+                }
+            },
+            "Deposit()": {
+                "argument": {},
+                "contract": {
+                    "MinDeposit": "uint256"
+                }
+            },
+            "WitdrawTokenToHolder(address,address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "MinDeposit": "uint256"
+                }
+            },
+            "WithdrawToHolder(address,uint256)": {
+                "argument": {
+                    "_wei": "uint256"
+                },
+                "contract": {
+                    "MinDeposit": "uint256"
+                }
+            },
+            "Bal()": {
+                "argument": {},
+                "contract": {
+                    "MinDeposit": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "Bal()": [
+                439,
+                185
+            ],
+            "WitdrawTokenToHolder(address,address,uint256)": [
+                240,
+                119
+            ],
+            "initTokenBank()": [
+                217,
+                97
+            ],
+            "WithdrawToken(address,uint256,address)": [
+                482,
+                207
+            ],
+            "WithdrawToHolder(address,uint256)": [
+                688,
+                273
+            ],
+            "confirmOwner()": [
+                416,
+                163
+            ],
+            "Deposit()": [
+                591,
+                229
+            ],
+            "changeOwner(address)": [
+                349,
+                141
+            ]
+        },
+        "block_CALL_mapping": {
+            "block1634_0": [
+                "token.call(bytes4(sha3(\"transfer(address,uint256)\")),to,amount)"
+            ],
+            "block1634": [
+                "token.call(bytes4(sha3(\"transfer(address,uint256)\")),to,amount)"
+            ]
+        }
+    }
+}

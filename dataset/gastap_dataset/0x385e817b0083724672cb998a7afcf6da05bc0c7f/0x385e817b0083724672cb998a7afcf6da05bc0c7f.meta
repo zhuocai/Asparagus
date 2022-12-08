@@ -1,0 +1,76 @@
+{
+    "FileStorage": {
+        "function_list": [
+            "FileStorage()",
+            "Kill()",
+            "StoreFile(bytes32,string,string,string,string,string,uint256,bytes)",
+            "GetFileLocation(bytes32)",
+            "fallback()"
+        ],
+        "initial_state": {
+            "FileStorage()": {
+                "argument": {},
+                "contract": {
+                    "files": "mapping(bytes32 => FileStorage.File[])"
+                }
+            },
+            "Kill()": {
+                "argument": {},
+                "contract": {
+                    "files": "mapping(bytes32 => FileStorage.File[])"
+                }
+            },
+            "StoreFile(bytes32,string,string,string,string,string,uint256,bytes)": {
+                "argument": {
+                    "key": "bytes32",
+                    "title": "string",
+                    "category": "string",
+                    "extension": "string",
+                    "created": "string",
+                    "updated": "string",
+                    "version": "uint256",
+                    "data": "bytes"
+                },
+                "contract": {
+                    "files": "mapping(bytes32 => FileStorage.File[])"
+                }
+            },
+            "GetFileLocation(bytes32)": {
+                "argument": {
+                    "key": "bytes32"
+                },
+                "contract": {
+                    "files": "mapping(bytes32 => FileStorage.File[])"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "files": "mapping(bytes32 => FileStorage.File[])"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "StoreFile(bytes32,string,string,string,string,string,uint256,bytes)": [
+                912,
+                119
+            ],
+            "GetFileLocation(bytes32)": [
+                843,
+                97
+            ],
+            "Kill()": [
+                1402,
+                141
+            ]
+        },
+        "block_CALL_mapping": {
+            "block2868": [
+                "owner.send(this.balance)"
+            ],
+            "block2986": [
+                "msg.sender.send(this.balance)"
+            ]
+        }
+    }
+}

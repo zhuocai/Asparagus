@@ -1,0 +1,218 @@
+{
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "Ownable": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Token": {
+        "function_list": [
+            "transferFrom(address,address,uint256)"
+        ],
+        "initial_state": {
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferFrom(address,address,uint256)": [
+                68,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Crowdsale2": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "Crowdsale2(address,address,address,uint256,uint256,uint256)",
+            "fallback()",
+            "validPurchase()",
+            "setEndTime(uint256)",
+            "hasEnded()"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "rate": "uint256",
+                    "tokensSold": "uint256",
+                    "weiRaised": "uint256"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "rate": "uint256",
+                    "tokensSold": "uint256",
+                    "weiRaised": "uint256"
+                }
+            },
+            "Crowdsale2(address,address,address,uint256,uint256,uint256)": {
+                "argument": {
+                    "_startTime": "uint256",
+                    "_endTime": "uint256",
+                    "_rate": "uint256"
+                },
+                "contract": {
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "rate": "uint256",
+                    "tokensSold": "uint256",
+                    "weiRaised": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "rate": "uint256",
+                    "tokensSold": "uint256",
+                    "weiRaised": "uint256"
+                }
+            },
+            "validPurchase()": {
+                "argument": {},
+                "contract": {
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "rate": "uint256",
+                    "tokensSold": "uint256",
+                    "weiRaised": "uint256"
+                }
+            },
+            "setEndTime(uint256)": {
+                "argument": {
+                    "_endTime": "uint256"
+                },
+                "contract": {
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "rate": "uint256",
+                    "tokensSold": "uint256",
+                    "weiRaised": "uint256"
+                }
+            },
+            "hasEnded()": {
+                "argument": {},
+                "contract": {
+                    "startTime": "uint256",
+                    "endTime": "uint256",
+                    "rate": "uint256",
+                    "tokensSold": "uint256",
+                    "weiRaised": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "hasEnded()": [
+                1390,
+                273
+            ],
+            "setEndTime(uint256)": [
+                1321,
+                251
+            ],
+            "transferOwnership(address)": [
+                1437,
+                295
+            ]
+        },
+        "block_CALL_mapping": {
+            "block590": [
+                "token.transferFrom(wallet, msg.sender, tokens)"
+            ],
+            "block632": [
+                "destination.transfer(amount)"
+            ],
+            "block632_0": [
+                "destination.transfer(amount)"
+            ],
+            "block590_0": [
+                "token.transferFrom(wallet, msg.sender, tokens)"
+            ],
+            "jump590_0": [
+                "token.transferFrom(wallet, msg.sender, tokens)",
+                "token.transferFrom(wallet, msg.sender, tokens)"
+            ],
+            "jump590": [
+                "token.transferFrom(wallet, msg.sender, tokens)",
+                "token.transferFrom(wallet, msg.sender, tokens)"
+            ],
+            "jump632": [
+                "destination.transfer(amount)",
+                "destination.transfer(amount)"
+            ],
+            "jump632_0": [
+                "destination.transfer(amount)",
+                "destination.transfer(amount)"
+            ]
+        }
+    }
+}

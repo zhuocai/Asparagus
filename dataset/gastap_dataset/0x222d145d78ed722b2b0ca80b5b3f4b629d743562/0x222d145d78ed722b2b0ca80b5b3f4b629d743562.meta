@@ -1,0 +1,123 @@
+{
+    "ERC20Interface": {
+        "function_list": [
+            "totalSupply()",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)"
+        ],
+        "initial_state": {
+            "totalSupply()": {
+                "argument": {},
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                125,
+                75
+            ],
+            "balanceOf(address)": [
+                402,
+                141
+            ],
+            "totalSupply()": [
+                226,
+                97
+            ],
+            "allowance(address,address)": [
+                590,
+                185
+            ],
+            "transferFrom(address,address,uint256)": [
+                269,
+                119
+            ],
+            "transfer(address,uint256)": [
+                489,
+                163
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "DepositContract": {
+        "function_list": [
+            "DepositContract()",
+            "sweep(address,address,uint256)",
+            "fallback()"
+        ],
+        "initial_state": {
+            "DepositContract()": {
+                "argument": {},
+                "contract": {}
+            },
+            "sweep(address,address,uint256)": {
+                "argument": {
+                    "mininumValue": "uint256"
+                },
+                "contract": {}
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "sweep(address,address,uint256)": [
+                67,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump388": [
+                "dedeStorageAddress.send(this.balance)",
+                "dedeStorageAddress.send(this.balance)"
+            ],
+            "jump883": [
+                "ERC20Interface(token).transfer(dedeStorageAddress, sendingValue)",
+                "ERC20Interface(token).transfer(dedeStorageAddress, sendingValue)"
+            ],
+            "block388": [
+                "dedeStorageAddress.send(this.balance)"
+            ],
+            "jump642": [
+                "ERC20Interface(token).balanceOf(this)",
+                "ERC20Interface(token).balanceOf(this)"
+            ],
+            "block883": [
+                "ERC20Interface(token).transfer(dedeStorageAddress, sendingValue)"
+            ],
+            "block642": [
+                "ERC20Interface(token).balanceOf(this)"
+            ]
+        }
+    }
+}

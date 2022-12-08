@@ -1,0 +1,613 @@
+{
+    "Ownable": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                70,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Upgradable": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "Upgradable(string)",
+            "setDeprecated(address,string,string)",
+            "isDeprecated()"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {
+                    "deprecatedSince": "uint256",
+                    "version": "string",
+                    "newVersion": "string",
+                    "reason": "string"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "deprecatedSince": "uint256",
+                    "version": "string",
+                    "newVersion": "string",
+                    "reason": "string"
+                }
+            },
+            "Upgradable(string)": {
+                "argument": {
+                    "_version": "string"
+                },
+                "contract": {
+                    "deprecatedSince": "uint256",
+                    "version": "string",
+                    "newVersion": "string",
+                    "reason": "string"
+                }
+            },
+            "setDeprecated(address,string,string)": {
+                "argument": {
+                    "_newVersion": "string",
+                    "_reason": "string"
+                },
+                "contract": {
+                    "deprecatedSince": "uint256",
+                    "version": "string",
+                    "newVersion": "string",
+                    "reason": "string"
+                }
+            },
+            "isDeprecated()": {
+                "argument": {},
+                "contract": {
+                    "deprecatedSince": "uint256",
+                    "version": "string",
+                    "newVersion": "string",
+                    "reason": "string"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "isDeprecated()": [
+                617,
+                163
+            ],
+            "setDeprecated(address,string,string)": [
+                291,
+                97
+            ],
+            "transferOwnership(address)": [
+                895,
+                229
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump1671": [
+                "Upgradable(_newAddress).isDeprecated()",
+                "Upgradable(_newAddress).isDeprecated()"
+            ],
+            "block1671": [
+                "Upgradable(_newAddress).isDeprecated()"
+            ]
+        }
+    },
+    "TokenERC20": {
+        "function_list": [
+            "transfer(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "balanceOf(address)"
+        ],
+        "initial_state": {
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                335,
+                97
+            ],
+            "allowance(address,address)": [
+                1310,
+                317
+            ],
+            "balanceOf(address)": [
+                730,
+                207
+            ],
+            "transferFrom(address,address,uint256)": [
+                479,
+                141
+            ],
+            "transfer(address,uint256)": [
+                1062,
+                273
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump3772": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)",
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ],
+            "block3772": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ]
+        }
+    },
+    "Managed": {
+        "function_list": [
+            "Upgradable(string)",
+            "setDeprecated(address,string,string)",
+            "isDeprecated()",
+            "Ownable()",
+            "transferOwnership(address)",
+            "Managed(string)",
+            "redeemEthers(address,uint256)",
+            "redeemTokens(TokenERC20,address,uint256)"
+        ],
+        "initial_state": {
+            "Upgradable(string)": {
+                "argument": {
+                    "_version": "string"
+                },
+                "contract": {}
+            },
+            "setDeprecated(address,string,string)": {
+                "argument": {
+                    "_newVersion": "string",
+                    "_reason": "string"
+                },
+                "contract": {}
+            },
+            "isDeprecated()": {
+                "argument": {},
+                "contract": {}
+            },
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "Managed(string)": {
+                "argument": {
+                    "_version": "string"
+                },
+                "contract": {}
+            },
+            "redeemEthers(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {}
+            },
+            "redeemTokens(TokenERC20,address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "TokenGiveaway": {
+        "function_list": [
+            "Managed(string)",
+            "redeemEthers(address,uint256)",
+            "redeemTokens(TokenERC20,address,uint256)",
+            "Upgradable(string)",
+            "setDeprecated(address,string,string)",
+            "isDeprecated()",
+            "Ownable()",
+            "transferOwnership(address)",
+            "TokenGiveaway()",
+            "transferBatch(address[])",
+            "transferTokens(address,uint256)",
+            "isOpen()",
+            "isOpenFor(address)",
+            "fallback()",
+            "updateTokenContract(address)",
+            "updateDonor(address)",
+            "updateEtherAmount(uint256)",
+            "updateTokenAmount(uint256)",
+            "updateDecimals(uint256)",
+            "updateEtherAndtokenAmount(uint256,uint256)",
+            "updateEtherAndtokenAmount(address,uint256,uint256)",
+            "updateParameters(address,address,uint256,uint256,uint256)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "Managed(string)": {
+                "argument": {
+                    "_version": "string"
+                },
+                "contract": {
+                    "etherAmount": "uint256",
+                    "tokenAmount": "uint256",
+                    "decimals": "uint256"
+                }
+            },
+            "redeemEthers(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "etherAmount": "uint256",
+                    "tokenAmount": "uint256",
+                    "decimals": "uint256"
+                }
+            },
+            "redeemTokens(TokenERC20,address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "etherAmount": "uint256",
+                    "tokenAmount": "uint256",
+                    "decimals": "uint256"
+                }
+            },
+            "Upgradable(string)": {
+                "argument": {
+                    "_version": "string"
+                },
+                "contract": {
+                    "etherAmount": "uint256",
+                    "tokenAmount": "uint256",
+                    "decimals": "uint256"
+                }
+            },
+            "setDeprecated(address,string,string)": {
+                "argument": {
+                    "_newVersion": "string",
+                    "_reason": "string"
+                },
+                "contract": {
+                    "etherAmount": "uint256",
+                    "tokenAmount": "uint256",
+                    "decimals": "uint256"
+                }
+            },
+            "isDeprecated()": {
+                "argument": {},
+                "contract": {
+                    "etherAmount": "uint256",
+                    "tokenAmount": "uint256",
+                    "decimals": "uint256"
+                }
+            },
+            "Ownable()": {
+                "argument": {},
+                "contract": {
+                    "etherAmount": "uint256",
+                    "tokenAmount": "uint256",
+                    "decimals": "uint256"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "etherAmount": "uint256",
+                    "tokenAmount": "uint256",
+                    "decimals": "uint256"
+                }
+            },
+            "TokenGiveaway()": {
+                "argument": {},
+                "contract": {
+                    "etherAmount": "uint256",
+                    "tokenAmount": "uint256",
+                    "decimals": "uint256"
+                }
+            },
+            "transferBatch(address[])": {
+                "argument": {
+                    "_addresses": "address[]"
+                },
+                "contract": {
+                    "etherAmount": "uint256",
+                    "tokenAmount": "uint256",
+                    "decimals": "uint256"
+                }
+            },
+            "transferTokens(address,uint256)": {
+                "argument": {
+                    "_tokenAmount": "uint256"
+                },
+                "contract": {
+                    "etherAmount": "uint256",
+                    "tokenAmount": "uint256",
+                    "decimals": "uint256"
+                }
+            },
+            "isOpen()": {
+                "argument": {},
+                "contract": {
+                    "etherAmount": "uint256",
+                    "tokenAmount": "uint256",
+                    "decimals": "uint256"
+                }
+            },
+            "isOpenFor(address)": {
+                "argument": {},
+                "contract": {
+                    "etherAmount": "uint256",
+                    "tokenAmount": "uint256",
+                    "decimals": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "etherAmount": "uint256",
+                    "tokenAmount": "uint256",
+                    "decimals": "uint256"
+                }
+            },
+            "updateTokenContract(address)": {
+                "argument": {},
+                "contract": {
+                    "etherAmount": "uint256",
+                    "tokenAmount": "uint256",
+                    "decimals": "uint256"
+                }
+            },
+            "updateDonor(address)": {
+                "argument": {},
+                "contract": {
+                    "etherAmount": "uint256",
+                    "tokenAmount": "uint256",
+                    "decimals": "uint256"
+                }
+            },
+            "updateEtherAmount(uint256)": {
+                "argument": {
+                    "_etherAmount": "uint256"
+                },
+                "contract": {
+                    "etherAmount": "uint256",
+                    "tokenAmount": "uint256",
+                    "decimals": "uint256"
+                }
+            },
+            "updateTokenAmount(uint256)": {
+                "argument": {
+                    "_tokenAmount": "uint256"
+                },
+                "contract": {
+                    "etherAmount": "uint256",
+                    "tokenAmount": "uint256",
+                    "decimals": "uint256"
+                }
+            },
+            "updateDecimals(uint256)": {
+                "argument": {
+                    "_decimals": "uint256"
+                },
+                "contract": {
+                    "etherAmount": "uint256",
+                    "tokenAmount": "uint256",
+                    "decimals": "uint256"
+                }
+            },
+            "updateEtherAndtokenAmount(uint256,uint256)": {
+                "argument": {
+                    "_etherAmount": "uint256",
+                    "_tokenAmount": "uint256"
+                },
+                "contract": {
+                    "etherAmount": "uint256",
+                    "tokenAmount": "uint256",
+                    "decimals": "uint256"
+                }
+            },
+            "updateEtherAndtokenAmount(address,uint256,uint256)": {
+                "argument": {
+                    "_etherAmount": "uint256",
+                    "_tokenAmount": "uint256"
+                },
+                "contract": {
+                    "etherAmount": "uint256",
+                    "tokenAmount": "uint256",
+                    "decimals": "uint256"
+                }
+            },
+            "updateParameters(address,address,uint256,uint256,uint256)": {
+                "argument": {
+                    "_etherAmount": "uint256",
+                    "_tokenAmount": "uint256",
+                    "_decimals": "uint256"
+                },
+                "contract": {
+                    "etherAmount": "uint256",
+                    "tokenAmount": "uint256",
+                    "decimals": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "updateEtherAmount(uint256)": [
+                337,
+                75
+            ],
+            "updateEtherAndtokenAmount(address,uint256,uint256)": [
+                788,
+                163
+            ],
+            "updateDonor(address)": [
+                1496,
+                361
+            ],
+            "updateDecimals(uint256)": [
+                1250,
+                273
+            ],
+            "setDeprecated(address,string,string)": [
+                875,
+                185
+            ],
+            "redeemEthers(address,uint256)": [
+                1811,
+                471
+            ],
+            "updateTokenAmount(uint256)": [
+                1205,
+                251
+            ],
+            "updateTokenContract(address)": [
+                1338,
+                317
+            ],
+            "transferBatch(address[])": [
+                1752,
+                449
+            ],
+            "updateEtherAndtokenAmount(uint256,uint256)": [
+                1563,
+                383
+            ],
+            "updateParameters(address,address,uint256,uint256,uint256)": [
+                382,
+                97
+            ],
+            "isOpen()": [
+                1014,
+                207
+            ],
+            "isDeprecated()": [
+                1618,
+                405
+            ],
+            "isOpenFor(address)": [
+                1405,
+                339
+            ],
+            "transferOwnership(address)": [
+                2056,
+                515
+            ]
+        },
+        "block_CALL_mapping": {
+            "block2604_1": [
+                "TokenERC20(tokenContract).transferFrom(donor, _receiver, _tokenAmount)"
+            ],
+            "block2604_0": [
+                "TokenERC20(tokenContract).transferFrom(donor, _receiver, _tokenAmount)"
+            ],
+            "jump2604": [
+                "TokenERC20(tokenContract).transferFrom(donor, _receiver, _tokenAmount)",
+                "TokenERC20(tokenContract).transferFrom(donor, _receiver, _tokenAmount)"
+            ],
+            "jump4775_1": [
+                "TokenERC20(tokenContract).allowance(donor, this)",
+                "TokenERC20(tokenContract).allowance(donor, this)"
+            ],
+            "jump4775_2": [
+                "TokenERC20(tokenContract).allowance(donor, this)",
+                "TokenERC20(tokenContract).allowance(donor, this)"
+            ],
+            "jump4775_3": [
+                "TokenERC20(tokenContract).allowance(donor, this)",
+                "TokenERC20(tokenContract).allowance(donor, this)"
+            ],
+            "jump6025": [
+                "_to.transfer(_amount)",
+                "_to.transfer(_amount)"
+            ],
+            "block3612": [
+                "_tokenAddress.transfer(_to, _amount)"
+            ],
+            "jump3612": [
+                "_tokenAddress.transfer(_to, _amount)",
+                "_tokenAddress.transfer(_to, _amount)"
+            ],
+            "jump4406": [
+                "Upgradable(_newAddress).isDeprecated()",
+                "Upgradable(_newAddress).isDeprecated()"
+            ],
+            "jump2604_1": [
+                "TokenERC20(tokenContract).transferFrom(donor, _receiver, _tokenAmount)",
+                "TokenERC20(tokenContract).transferFrom(donor, _receiver, _tokenAmount)"
+            ],
+            "jump2604_0": [
+                "TokenERC20(tokenContract).transferFrom(donor, _receiver, _tokenAmount)",
+                "TokenERC20(tokenContract).transferFrom(donor, _receiver, _tokenAmount)"
+            ],
+            "block4775_2": [
+                "TokenERC20(tokenContract).allowance(donor, this)"
+            ],
+            "block4775_3": [
+                "TokenERC20(tokenContract).allowance(donor, this)"
+            ],
+            "block4775_0": [
+                "TokenERC20(tokenContract).allowance(donor, this)"
+            ],
+            "block4775_1": [
+                "TokenERC20(tokenContract).allowance(donor, this)"
+            ],
+            "jump4775": [
+                "TokenERC20(tokenContract).allowance(donor, this)",
+                "TokenERC20(tokenContract).allowance(donor, this)"
+            ],
+            "block2604": [
+                "TokenERC20(tokenContract).transferFrom(donor, _receiver, _tokenAmount)"
+            ],
+            "block4775": [
+                "TokenERC20(tokenContract).allowance(donor, this)"
+            ],
+            "block6025": [
+                "_to.transfer(_amount)"
+            ],
+            "block4406": [
+                "Upgradable(_newAddress).isDeprecated()"
+            ],
+            "jump4775_0": [
+                "TokenERC20(tokenContract).allowance(donor, this)",
+                "TokenERC20(tokenContract).allowance(donor, this)"
+            ]
+        }
+    }
+}

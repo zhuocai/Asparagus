@@ -1,0 +1,1089 @@
+{
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "ERC20Basic": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                124,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "ERC20": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                125,
+                75
+            ],
+            "balanceOf(address)": [
+                402,
+                141
+            ],
+            "allowance(address,address)": [
+                590,
+                185
+            ],
+            "transferFrom(address,address,uint256)": [
+                269,
+                119
+            ],
+            "transfer(address,uint256)": [
+                489,
+                163
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "BasicToken": {
+        "function_list": [
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "transfer(address,uint256)",
+            "doTransfer(address,address,uint256)",
+            "balanceOf(address)",
+            "balanceOfAt(address,uint256)",
+            "totalSupplyAt(uint256)",
+            "getValueAt(BasicToken.Snapshot[],uint256)",
+            "updateValueAtNow(BasicToken.Snapshot[],uint256)",
+            "redeemedSupply()"
+        ],
+        "initial_state": {
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "balances": "mapping(address => BasicToken.Snapshot[])",
+                    "totalSupplyHistory": "BasicToken.Snapshot[]",
+                    "balanceForDividendsHistory": "BasicToken.Snapshot[]"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "balances": "mapping(address => BasicToken.Snapshot[])",
+                    "totalSupplyHistory": "BasicToken.Snapshot[]",
+                    "balanceForDividendsHistory": "BasicToken.Snapshot[]"
+                }
+            },
+            "doTransfer(address,address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "balances": "mapping(address => BasicToken.Snapshot[])",
+                    "totalSupplyHistory": "BasicToken.Snapshot[]",
+                    "balanceForDividendsHistory": "BasicToken.Snapshot[]"
+                }
+            },
+            "balanceOfAt(address,uint256)": {
+                "argument": {
+                    "_blockNumber": "uint256"
+                },
+                "contract": {
+                    "balances": "mapping(address => BasicToken.Snapshot[])",
+                    "totalSupplyHistory": "BasicToken.Snapshot[]",
+                    "balanceForDividendsHistory": "BasicToken.Snapshot[]"
+                }
+            },
+            "totalSupplyAt(uint256)": {
+                "argument": {
+                    "_blockNumber": "uint256"
+                },
+                "contract": {
+                    "balances": "mapping(address => BasicToken.Snapshot[])",
+                    "totalSupplyHistory": "BasicToken.Snapshot[]",
+                    "balanceForDividendsHistory": "BasicToken.Snapshot[]"
+                }
+            },
+            "getValueAt(BasicToken.Snapshot[],uint256)": {
+                "argument": {
+                    "checkpoints": "BasicToken.Snapshot[]",
+                    "_block": "uint256"
+                },
+                "contract": {
+                    "balances": "mapping(address => BasicToken.Snapshot[])",
+                    "totalSupplyHistory": "BasicToken.Snapshot[]",
+                    "balanceForDividendsHistory": "BasicToken.Snapshot[]"
+                }
+            },
+            "updateValueAtNow(BasicToken.Snapshot[],uint256)": {
+                "argument": {
+                    "checkpoints": "BasicToken.Snapshot[]",
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "balances": "mapping(address => BasicToken.Snapshot[])",
+                    "totalSupplyHistory": "BasicToken.Snapshot[]",
+                    "balanceForDividendsHistory": "BasicToken.Snapshot[]"
+                }
+            },
+            "redeemedSupply()": {
+                "argument": {},
+                "contract": {
+                    "balances": "mapping(address => BasicToken.Snapshot[])",
+                    "totalSupplyHistory": "BasicToken.Snapshot[]",
+                    "balanceForDividendsHistory": "BasicToken.Snapshot[]"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "redeemedSupply()": [
+                518,
+                185
+            ],
+            "balanceOfAt(address,uint256)": [
+                168,
+                97
+            ],
+            "totalSupplyAt(uint256)": [
+                352,
+                141
+            ],
+            "balanceOf(address)": [
+                265,
+                119
+            ],
+            "transfer(address,uint256)": [
+                417,
+                163
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Ownable": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "transferOwnership(address)": [
+                168,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "StandardToken": {
+        "function_list": [
+            "transfer(address,uint256)",
+            "doTransfer(address,address,uint256)",
+            "balanceOf(address)",
+            "balanceOfAt(address,uint256)",
+            "totalSupplyAt(uint256)",
+            "getValueAt(BasicToken.Snapshot[],uint256)",
+            "updateValueAtNow(BasicToken.Snapshot[],uint256)",
+            "redeemedSupply()",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)"
+        ],
+        "initial_state": {
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {}
+            },
+            "doTransfer(address,address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "balanceOfAt(address,uint256)": {
+                "argument": {
+                    "_blockNumber": "uint256"
+                },
+                "contract": {}
+            },
+            "totalSupplyAt(uint256)": {
+                "argument": {
+                    "_blockNumber": "uint256"
+                },
+                "contract": {}
+            },
+            "getValueAt(BasicToken.Snapshot[],uint256)": {
+                "argument": {
+                    "checkpoints": "BasicToken.Snapshot[]",
+                    "_block": "uint256"
+                },
+                "contract": {}
+            },
+            "updateValueAtNow(BasicToken.Snapshot[],uint256)": {
+                "argument": {
+                    "checkpoints": "BasicToken.Snapshot[]",
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "redeemedSupply()": {
+                "argument": {},
+                "contract": {}
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {}
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                158,
+                75
+            ],
+            "redeemedSupply()": [
+                785,
+                229
+            ],
+            "balanceOfAt(address,uint256)": [
+                435,
+                141
+            ],
+            "totalSupplyAt(uint256)": [
+                619,
+                185
+            ],
+            "balanceOf(address)": [
+                532,
+                163
+            ],
+            "allowance(address,address)": [
+                828,
+                251
+            ],
+            "transferFrom(address,address,uint256)": [
+                302,
+                119
+            ],
+            "transfer(address,uint256)": [
+                684,
+                207
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "MintableToken": {
+        "function_list": [
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "allowance(address,address)",
+            "transfer(address,uint256)",
+            "doTransfer(address,address,uint256)",
+            "balanceOf(address)",
+            "balanceOfAt(address,uint256)",
+            "totalSupplyAt(uint256)",
+            "getValueAt(BasicToken.Snapshot[],uint256)",
+            "updateValueAtNow(BasicToken.Snapshot[],uint256)",
+            "redeemedSupply()",
+            "balanceOf(address)",
+            "transfer(address,uint256)",
+            "allowance(address,address)",
+            "transferFrom(address,address,uint256)",
+            "approve(address,uint256)",
+            "mint(address,uint256)",
+            "recordDeposit(uint256)",
+            "finishMinting()",
+            "awailableDividends(address)",
+            "recordWithdraw(address)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8"
+                }
+            },
+            "allowance(address,address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8"
+                }
+            },
+            "doTransfer(address,address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8"
+                }
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8"
+                }
+            },
+            "balanceOfAt(address,uint256)": {
+                "argument": {
+                    "_blockNumber": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8"
+                }
+            },
+            "totalSupplyAt(uint256)": {
+                "argument": {
+                    "_blockNumber": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8"
+                }
+            },
+            "getValueAt(BasicToken.Snapshot[],uint256)": {
+                "argument": {
+                    "checkpoints": "BasicToken.Snapshot[]",
+                    "_block": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8"
+                }
+            },
+            "updateValueAtNow(BasicToken.Snapshot[],uint256)": {
+                "argument": {
+                    "checkpoints": "BasicToken.Snapshot[]",
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8"
+                }
+            },
+            "redeemedSupply()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8"
+                }
+            },
+            "mint(address,uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8"
+                }
+            },
+            "recordDeposit(uint256)": {
+                "argument": {
+                    "_amount": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8"
+                }
+            },
+            "finishMinting()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8"
+                }
+            },
+            "awailableDividends(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8"
+                }
+            },
+            "recordWithdraw(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                448,
+                119
+            ],
+            "redeemedSupply()": [
+                1615,
+                427
+            ],
+            "balanceOfAt(address,uint256)": [
+                987,
+                273
+            ],
+            "recordWithdraw(address)": [
+                819,
+                229
+            ],
+            "totalSupplyAt(uint256)": [
+                1449,
+                383
+            ],
+            "mint(address,uint256)": [
+                886,
+                251
+            ],
+            "finishMinting()": [
+                1258,
+                339
+            ],
+            "transfer(address,uint256)": [
+                1514,
+                405
+            ],
+            "balanceOf(address)": [
+                1171,
+                317
+            ],
+            "recordDeposit(uint256)": [
+                549,
+                141
+            ],
+            "awailableDividends(address)": [
+                1084,
+                295
+            ],
+            "transferFrom(address,address,uint256)": [
+                637,
+                185
+            ],
+            "allowance(address,address)": [
+                1658,
+                449
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "HoneyMiningToken": {
+        "function_list": [
+            "Ownable()",
+            "transferOwnership(address)",
+            "HoneyMiningToken()",
+            "fallback()",
+            "buyTokens(address)",
+            "validPurchase()",
+            "hasEnded()",
+            "checkBalance(address)",
+            "checkBalanceAt(address,uint256)",
+            "awailableDividends(address)",
+            "redeemedSupply()",
+            "withdrawDividends()",
+            "depositForDividends()",
+            "stopSales()",
+            "forwardFunds()",
+            "rate()",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "Ownable()": {
+                "argument": {},
+                "contract": {
+                    "maxSupply": "uint256"
+                }
+            },
+            "transferOwnership(address)": {
+                "argument": {},
+                "contract": {
+                    "maxSupply": "uint256"
+                }
+            },
+            "HoneyMiningToken()": {
+                "argument": {},
+                "contract": {
+                    "maxSupply": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "maxSupply": "uint256"
+                }
+            },
+            "buyTokens(address)": {
+                "argument": {},
+                "contract": {
+                    "maxSupply": "uint256"
+                }
+            },
+            "validPurchase()": {
+                "argument": {},
+                "contract": {
+                    "maxSupply": "uint256"
+                }
+            },
+            "hasEnded()": {
+                "argument": {},
+                "contract": {
+                    "maxSupply": "uint256"
+                }
+            },
+            "checkBalance(address)": {
+                "argument": {},
+                "contract": {
+                    "maxSupply": "uint256"
+                }
+            },
+            "checkBalanceAt(address,uint256)": {
+                "argument": {
+                    "targetBlock": "uint256"
+                },
+                "contract": {
+                    "maxSupply": "uint256"
+                }
+            },
+            "awailableDividends(address)": {
+                "argument": {},
+                "contract": {
+                    "maxSupply": "uint256"
+                }
+            },
+            "redeemedSupply()": {
+                "argument": {},
+                "contract": {
+                    "maxSupply": "uint256"
+                }
+            },
+            "withdrawDividends()": {
+                "argument": {},
+                "contract": {
+                    "maxSupply": "uint256"
+                }
+            },
+            "depositForDividends()": {
+                "argument": {},
+                "contract": {
+                    "maxSupply": "uint256"
+                }
+            },
+            "stopSales()": {
+                "argument": {},
+                "contract": {
+                    "maxSupply": "uint256"
+                }
+            },
+            "forwardFunds()": {
+                "argument": {},
+                "contract": {
+                    "maxSupply": "uint256"
+                }
+            },
+            "rate()": {
+                "argument": {},
+                "contract": {
+                    "maxSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "redeemedSupply()": [
+                623,
+                229
+            ],
+            "hasEnded()": [
+                763,
+                295
+            ],
+            "stopSales()": [
+                339,
+                141
+            ],
+            "withdrawDividends()": [
+                219,
+                97
+            ],
+            "depositForDividends()": [
+                209,
+                75
+            ],
+            "checkBalanceAt(address,uint256)": [
+                242,
+                119
+            ],
+            "checkBalance(address)": [
+                449,
+                185
+            ],
+            "awailableDividends(address)": [
+                4705,
+                929
+            ],
+            "buyTokens(address)": [
+                709,
+                273
+            ],
+            "transferOwnership(address)": [
+                810,
+                317
+            ]
+        },
+        "block_CALL_mapping": {
+            "block1426": [
+                "token.balanceOf(referrer)"
+            ],
+            "jump4705": [
+                "token.awailableDividends(userAddress)",
+                "token.awailableDividends(userAddress)"
+            ],
+            "jump5201": [
+                "token.totalSupply()",
+                "token.totalSupply()"
+            ],
+            "jump2236_0": [
+                "token.mint(referrer, refTokens)",
+                "token.mint(referrer, refTokens)"
+            ],
+            "jump2236_1": [
+                "token.mint(referrer, refTokens)",
+                "token.mint(referrer, refTokens)"
+            ],
+            "block5201": [
+                "token.totalSupply()"
+            ],
+            "block2659": [
+                "token.mint(msg.sender, tokens)"
+            ],
+            "block4705_0": [
+                "token.awailableDividends(userAddress)"
+            ],
+            "jump4962": [
+                "token.balanceOf(userAddress)",
+                "token.balanceOf(userAddress)"
+            ],
+            "jump5781_0": [
+                "owner.transfer(msg.value)",
+                "owner.transfer(msg.value)"
+            ],
+            "jump5781_1": [
+                "owner.transfer(msg.value)",
+                "owner.transfer(msg.value)"
+            ],
+            "jump1852_0": [
+                "token.mint(msg.sender, tokens.add(refTokens))",
+                "token.mint(msg.sender, tokens.add(refTokens))"
+            ],
+            "block3059_0": [
+                "token.mint(owner, devTokens)"
+            ],
+            "block3059_1": [
+                "token.mint(owner, devTokens)"
+            ],
+            "block3492": [
+                "token.recordDeposit(msg.value)"
+            ],
+            "block1852_1": [
+                "token.mint(msg.sender, tokens.add(refTokens))"
+            ],
+            "block1852_0": [
+                "token.mint(msg.sender, tokens.add(refTokens))"
+            ],
+            "block5201_9": [
+                "token.totalSupply()"
+            ],
+            "block5201_8": [
+                "token.totalSupply()"
+            ],
+            "jump2659_1": [
+                "token.mint(msg.sender, tokens)",
+                "token.mint(msg.sender, tokens)"
+            ],
+            "jump2659_0": [
+                "token.mint(msg.sender, tokens)",
+                "token.mint(msg.sender, tokens)"
+            ],
+            "jump5201_15": [
+                "token.totalSupply()",
+                "token.totalSupply()"
+            ],
+            "jump5201_14": [
+                "token.totalSupply()",
+                "token.totalSupply()"
+            ],
+            "block5201_1": [
+                "token.totalSupply()"
+            ],
+            "block5201_0": [
+                "token.totalSupply()"
+            ],
+            "jump5201_11": [
+                "token.totalSupply()",
+                "token.totalSupply()"
+            ],
+            "jump5201_10": [
+                "token.totalSupply()",
+                "token.totalSupply()"
+            ],
+            "jump3059": [
+                "token.mint(owner, devTokens)",
+                "token.mint(owner, devTokens)"
+            ],
+            "jump4447": [
+                "token.totalSupply()",
+                "token.totalSupply()"
+            ],
+            "block4962": [
+                "token.balanceOf(userAddress)"
+            ],
+            "block3851": [
+                "token.recordWithdraw(msg.sender)"
+            ],
+            "jump3591": [
+                "msg.sender.transfer(_amount)",
+                "msg.sender.transfer(_amount)"
+            ],
+            "jump4705_0": [
+                "token.awailableDividends(userAddress)",
+                "token.awailableDividends(userAddress)"
+            ],
+            "jump1852": [
+                "token.mint(msg.sender, tokens.add(refTokens))",
+                "token.mint(msg.sender, tokens.add(refTokens))"
+            ],
+            "block5201_5": [
+                "token.totalSupply()"
+            ],
+            "jump2236": [
+                "token.mint(referrer, refTokens)",
+                "token.mint(referrer, refTokens)"
+            ],
+            "block3591": [
+                "msg.sender.transfer(_amount)"
+            ],
+            "jump5201_7": [
+                "token.totalSupply()",
+                "token.totalSupply()"
+            ],
+            "jump5201_6": [
+                "token.totalSupply()",
+                "token.totalSupply()"
+            ],
+            "jump5201_5": [
+                "token.totalSupply()",
+                "token.totalSupply()"
+            ],
+            "jump5201_4": [
+                "token.totalSupply()",
+                "token.totalSupply()"
+            ],
+            "jump5201_3": [
+                "token.totalSupply()",
+                "token.totalSupply()"
+            ],
+            "jump5201_2": [
+                "token.totalSupply()",
+                "token.totalSupply()"
+            ],
+            "jump5201_1": [
+                "token.totalSupply()",
+                "token.totalSupply()"
+            ],
+            "block5201_4": [
+                "token.totalSupply()"
+            ],
+            "block5201_7": [
+                "token.totalSupply()"
+            ],
+            "jump5201_9": [
+                "token.totalSupply()",
+                "token.totalSupply()"
+            ],
+            "block3059": [
+                "token.mint(owner, devTokens)"
+            ],
+            "block5201_6": [
+                "token.totalSupply()"
+            ],
+            "jump5201_13": [
+                "token.totalSupply()",
+                "token.totalSupply()"
+            ],
+            "jump5201_0": [
+                "token.totalSupply()",
+                "token.totalSupply()"
+            ],
+            "jump5201_12": [
+                "token.totalSupply()",
+                "token.totalSupply()"
+            ],
+            "jump2659": [
+                "token.mint(msg.sender, tokens)",
+                "token.mint(msg.sender, tokens)"
+            ],
+            "block5201_3": [
+                "token.totalSupply()"
+            ],
+            "block5201_2": [
+                "token.totalSupply()"
+            ],
+            "block5201_11": [
+                "token.totalSupply()"
+            ],
+            "block5201_10": [
+                "token.totalSupply()"
+            ],
+            "block5201_13": [
+                "token.totalSupply()"
+            ],
+            "block5201_12": [
+                "token.totalSupply()"
+            ],
+            "block5201_15": [
+                "token.totalSupply()"
+            ],
+            "block5201_14": [
+                "token.totalSupply()"
+            ],
+            "jump5201_8": [
+                "token.totalSupply()",
+                "token.totalSupply()"
+            ],
+            "jump4155": [
+                "token.balanceOfAt(userAddress, targetBlock)",
+                "token.balanceOfAt(userAddress, targetBlock)"
+            ],
+            "block4155": [
+                "token.balanceOfAt(userAddress, targetBlock)"
+            ],
+            "block2236_0": [
+                "token.mint(referrer, refTokens)"
+            ],
+            "block2236_1": [
+                "token.mint(referrer, refTokens)"
+            ],
+            "block5781_0": [
+                "owner.transfer(msg.value)"
+            ],
+            "block5781_1": [
+                "owner.transfer(msg.value)"
+            ],
+            "block5781": [
+                "owner.transfer(msg.value)"
+            ],
+            "jump3851": [
+                "token.recordWithdraw(msg.sender)",
+                "token.recordWithdraw(msg.sender)"
+            ],
+            "block4447": [
+                "token.totalSupply()"
+            ],
+            "block1852": [
+                "token.mint(msg.sender, tokens.add(refTokens))"
+            ],
+            "block4705": [
+                "token.awailableDividends(userAddress)"
+            ],
+            "jump1852_1": [
+                "token.mint(msg.sender, tokens.add(refTokens))",
+                "token.mint(msg.sender, tokens.add(refTokens))"
+            ],
+            "block2236": [
+                "token.mint(referrer, refTokens)"
+            ],
+            "block1426_0": [
+                "token.balanceOf(referrer)"
+            ],
+            "block1426_1": [
+                "token.balanceOf(referrer)"
+            ],
+            "jump5781": [
+                "owner.transfer(msg.value)",
+                "owner.transfer(msg.value)"
+            ],
+            "block2659_1": [
+                "token.mint(msg.sender, tokens)"
+            ],
+            "block2659_0": [
+                "token.mint(msg.sender, tokens)"
+            ],
+            "jump1426": [
+                "token.balanceOf(referrer)",
+                "token.balanceOf(referrer)"
+            ],
+            "jump3492": [
+                "token.recordDeposit(msg.value)",
+                "token.recordDeposit(msg.value)"
+            ],
+            "jump1426_0": [
+                "token.balanceOf(referrer)",
+                "token.balanceOf(referrer)"
+            ],
+            "jump1426_1": [
+                "token.balanceOf(referrer)",
+                "token.balanceOf(referrer)"
+            ],
+            "jump3059_0": [
+                "token.mint(owner, devTokens)",
+                "token.mint(owner, devTokens)"
+            ],
+            "jump3059_1": [
+                "token.mint(owner, devTokens)",
+                "token.mint(owner, devTokens)"
+            ]
+        }
+    }
+}

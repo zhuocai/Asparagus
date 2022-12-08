@@ -1,0 +1,980 @@
+{
+    "TokenTracker": {
+        "function_list": [
+            "TokenTracker(uint256)",
+            "isUnrestricted()",
+            "multFracCeiling(uint256,uint256,uint256)",
+            "isRegistered(address,bool)",
+            "assign(address,uint256,bool)",
+            "closeAssignmentsIfOpen()",
+            "unrestrict(address)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "TokenTracker(uint256)": {
+                "argument": {
+                    "_restrictedShare": "uint256"
+                },
+                "contract": {
+                    "restrictedShare": "uint256",
+                    "totalRestrictedTokens": "uint256",
+                    "totalUnrestrictedTokens": "uint256",
+                    "totalRestrictedAssignments": "uint256",
+                    "totalUnrestrictedAssignments": "uint256",
+                    "burnMultDen": "uint256",
+                    "burnMultNom": "uint256"
+                }
+            },
+            "isUnrestricted()": {
+                "argument": {},
+                "contract": {
+                    "restrictedShare": "uint256",
+                    "totalRestrictedTokens": "uint256",
+                    "totalUnrestrictedTokens": "uint256",
+                    "totalRestrictedAssignments": "uint256",
+                    "totalUnrestrictedAssignments": "uint256",
+                    "burnMultDen": "uint256",
+                    "burnMultNom": "uint256"
+                }
+            },
+            "multFracCeiling(uint256,uint256,uint256)": {
+                "argument": {
+                    "x": "uint256",
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "restrictedShare": "uint256",
+                    "totalRestrictedTokens": "uint256",
+                    "totalUnrestrictedTokens": "uint256",
+                    "totalRestrictedAssignments": "uint256",
+                    "totalUnrestrictedAssignments": "uint256",
+                    "burnMultDen": "uint256",
+                    "burnMultNom": "uint256"
+                }
+            },
+            "isRegistered(address,bool)": {
+                "argument": {},
+                "contract": {
+                    "restrictedShare": "uint256",
+                    "totalRestrictedTokens": "uint256",
+                    "totalUnrestrictedTokens": "uint256",
+                    "totalRestrictedAssignments": "uint256",
+                    "totalUnrestrictedAssignments": "uint256",
+                    "burnMultDen": "uint256",
+                    "burnMultNom": "uint256"
+                }
+            },
+            "assign(address,uint256,bool)": {
+                "argument": {
+                    "tokenAmount": "uint256"
+                },
+                "contract": {
+                    "restrictedShare": "uint256",
+                    "totalRestrictedTokens": "uint256",
+                    "totalUnrestrictedTokens": "uint256",
+                    "totalRestrictedAssignments": "uint256",
+                    "totalUnrestrictedAssignments": "uint256",
+                    "burnMultDen": "uint256",
+                    "burnMultNom": "uint256"
+                }
+            },
+            "closeAssignmentsIfOpen()": {
+                "argument": {},
+                "contract": {
+                    "restrictedShare": "uint256",
+                    "totalRestrictedTokens": "uint256",
+                    "totalUnrestrictedTokens": "uint256",
+                    "totalRestrictedAssignments": "uint256",
+                    "totalUnrestrictedAssignments": "uint256",
+                    "burnMultDen": "uint256",
+                    "burnMultNom": "uint256"
+                }
+            },
+            "unrestrict(address)": {
+                "argument": {},
+                "contract": {
+                    "restrictedShare": "uint256",
+                    "totalRestrictedTokens": "uint256",
+                    "totalUnrestrictedTokens": "uint256",
+                    "totalRestrictedAssignments": "uint256",
+                    "totalUnrestrictedAssignments": "uint256",
+                    "burnMultDen": "uint256",
+                    "burnMultNom": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "isRegistered(address,bool)": [
+                769,
+                317
+            ],
+            "multFracCeiling(uint256,uint256,uint256)": [
+                245,
+                97
+            ],
+            "isUnrestricted()": [
+                549,
+                229
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Phased": {
+        "function_list": [
+            "getPhaseAtTime(uint256)",
+            "isPhase(uint256,uint256)",
+            "getPhaseStartTime(uint256)",
+            "addPhase(uint256)",
+            "setMaxDelay(uint256,uint256)",
+            "delayPhaseEndBy(uint256,uint256)",
+            "endCurrentPhaseIn(uint256)"
+        ],
+        "initial_state": {
+            "getPhaseAtTime(uint256)": {
+                "argument": {
+                    "time": "uint256"
+                },
+                "contract": {
+                    "phaseEndTime": "uint256[]",
+                    "N": "uint256"
+                }
+            },
+            "isPhase(uint256,uint256)": {
+                "argument": {
+                    "time": "uint256",
+                    "n": "uint256"
+                },
+                "contract": {
+                    "phaseEndTime": "uint256[]",
+                    "N": "uint256"
+                }
+            },
+            "getPhaseStartTime(uint256)": {
+                "argument": {
+                    "n": "uint256"
+                },
+                "contract": {
+                    "phaseEndTime": "uint256[]",
+                    "N": "uint256"
+                }
+            },
+            "addPhase(uint256)": {
+                "argument": {
+                    "time": "uint256"
+                },
+                "contract": {
+                    "phaseEndTime": "uint256[]",
+                    "N": "uint256"
+                }
+            },
+            "setMaxDelay(uint256,uint256)": {
+                "argument": {
+                    "i": "uint256",
+                    "timeDelta": "uint256"
+                },
+                "contract": {
+                    "phaseEndTime": "uint256[]",
+                    "N": "uint256"
+                }
+            },
+            "delayPhaseEndBy(uint256,uint256)": {
+                "argument": {
+                    "n": "uint256",
+                    "timeDelta": "uint256"
+                },
+                "contract": {
+                    "phaseEndTime": "uint256[]",
+                    "N": "uint256"
+                }
+            },
+            "endCurrentPhaseIn(uint256)": {
+                "argument": {
+                    "timeDelta": "uint256"
+                },
+                "contract": {
+                    "phaseEndTime": "uint256[]",
+                    "N": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "getPhaseAtTime(uint256)": [
+                442,
+                185
+            ],
+            "isPhase(uint256,uint256)": [
+                190,
+                97
+            ],
+            "getPhaseStartTime(uint256)": [
+                125,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "StepFunction": {
+        "function_list": [
+            "StepFunction(uint256,uint256,uint256)",
+            "getStepFunction(uint256)"
+        ],
+        "initial_state": {
+            "StepFunction(uint256,uint256,uint256)": {
+                "argument": {
+                    "_phaseLength": "uint256",
+                    "_initialValue": "uint256",
+                    "_nSteps": "uint256"
+                },
+                "contract": {
+                    "phaseLength": "uint256",
+                    "nSteps": "uint256",
+                    "step": "uint256"
+                }
+            },
+            "getStepFunction(uint256)": {
+                "argument": {
+                    "elapsedTime": "uint256"
+                },
+                "contract": {
+                    "phaseLength": "uint256",
+                    "nSteps": "uint256",
+                    "step": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "getStepFunction(uint256)": [
+                146,
+                97
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Targets": {
+        "function_list": [
+            "targetReached(uint256)",
+            "setTarget(uint256,uint256)",
+            "addTowardsTarget(uint256,uint256)"
+        ],
+        "initial_state": {
+            "targetReached(uint256)": {
+                "argument": {
+                    "id": "uint256"
+                },
+                "contract": {}
+            },
+            "setTarget(uint256,uint256)": {
+                "argument": {
+                    "id": "uint256",
+                    "_target": "uint256"
+                },
+                "contract": {}
+            },
+            "addTowardsTarget(uint256,uint256)": {
+                "argument": {
+                    "id": "uint256",
+                    "amount": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "targetReached(uint256)": [
+                92,
+                75
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "Parameters": {
+        "function_list": [
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "round0StartTime": "uint256",
+                    "round1StartTime": "uint256",
+                    "round0EndTime": "uint256",
+                    "round1EndTime": "uint256",
+                    "finalizeStartTime": "uint256",
+                    "finalizeEndTime": "uint256",
+                    "maxRoundDelay": "uint256",
+                    "gracePeriodAfterRound0Target": "uint256",
+                    "gracePeriodAfterRound1Target": "uint256",
+                    "tokensPerCHF": "uint256",
+                    "minDonation": "uint256",
+                    "round0Bonus": "uint256",
+                    "round1InitialBonus": "uint256",
+                    "round1BonusSteps": "uint256",
+                    "millionInCents": "uint256",
+                    "round0Target": "uint256",
+                    "round1Target": "uint256",
+                    "earlyContribShare": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "FDC": {
+        "function_list": [
+            "targetReached(uint256)",
+            "setTarget(uint256,uint256)",
+            "addTowardsTarget(uint256,uint256)",
+            "StepFunction(uint256,uint256,uint256)",
+            "getStepFunction(uint256)",
+            "getPhaseAtTime(uint256)",
+            "isPhase(uint256,uint256)",
+            "getPhaseStartTime(uint256)",
+            "addPhase(uint256)",
+            "setMaxDelay(uint256,uint256)",
+            "delayPhaseEndBy(uint256,uint256)",
+            "endCurrentPhaseIn(uint256)",
+            "TokenTracker(uint256)",
+            "isUnrestricted()",
+            "multFracCeiling(uint256,uint256,uint256)",
+            "isRegistered(address,bool)",
+            "assign(address,uint256,bool)",
+            "closeAssignmentsIfOpen()",
+            "unrestrict(address)",
+            "FDC(address,string)",
+            "getState()",
+            "getMultiplierAtTime(uint256)",
+            "donateAsWithChecksum(address,bytes4)",
+            "finalize(address)",
+            "empty()",
+            "getStatus(uint256,address,address)",
+            "setWeiPerCHF(uint256)",
+            "registerEarlyContrib(address,uint256,bytes32)",
+            "registerOffChainDonation(address,uint256,uint256,string,bytes32)",
+            "delayDonPhase(uint256,uint256)",
+            "setFoundationWallet(address)",
+            "setExchangeRateAuth(address)",
+            "setRegistrarAuth(address)",
+            "setMasterAuth(address)",
+            "donateAs(address)",
+            "bookDonation(address,uint256,uint256,string,bytes32)",
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "targetReached(uint256)": {
+                "argument": {
+                    "id": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "donorList": "address[]",
+                    "earlyContribList": "address[]",
+                    "weiPerCHF": "uint256",
+                    "totalWeiDonated": "uint256",
+                    "phaseOfRound0": "uint256",
+                    "phaseOfRound1": "uint256"
+                }
+            },
+            "setTarget(uint256,uint256)": {
+                "argument": {
+                    "id": "uint256",
+                    "_target": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "donorList": "address[]",
+                    "earlyContribList": "address[]",
+                    "weiPerCHF": "uint256",
+                    "totalWeiDonated": "uint256",
+                    "phaseOfRound0": "uint256",
+                    "phaseOfRound1": "uint256"
+                }
+            },
+            "addTowardsTarget(uint256,uint256)": {
+                "argument": {
+                    "id": "uint256",
+                    "amount": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "donorList": "address[]",
+                    "earlyContribList": "address[]",
+                    "weiPerCHF": "uint256",
+                    "totalWeiDonated": "uint256",
+                    "phaseOfRound0": "uint256",
+                    "phaseOfRound1": "uint256"
+                }
+            },
+            "StepFunction(uint256,uint256,uint256)": {
+                "argument": {
+                    "_phaseLength": "uint256",
+                    "_initialValue": "uint256",
+                    "_nSteps": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "donorList": "address[]",
+                    "earlyContribList": "address[]",
+                    "weiPerCHF": "uint256",
+                    "totalWeiDonated": "uint256",
+                    "phaseOfRound0": "uint256",
+                    "phaseOfRound1": "uint256"
+                }
+            },
+            "getStepFunction(uint256)": {
+                "argument": {
+                    "elapsedTime": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "donorList": "address[]",
+                    "earlyContribList": "address[]",
+                    "weiPerCHF": "uint256",
+                    "totalWeiDonated": "uint256",
+                    "phaseOfRound0": "uint256",
+                    "phaseOfRound1": "uint256"
+                }
+            },
+            "getPhaseAtTime(uint256)": {
+                "argument": {
+                    "time": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "donorList": "address[]",
+                    "earlyContribList": "address[]",
+                    "weiPerCHF": "uint256",
+                    "totalWeiDonated": "uint256",
+                    "phaseOfRound0": "uint256",
+                    "phaseOfRound1": "uint256"
+                }
+            },
+            "isPhase(uint256,uint256)": {
+                "argument": {
+                    "time": "uint256",
+                    "n": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "donorList": "address[]",
+                    "earlyContribList": "address[]",
+                    "weiPerCHF": "uint256",
+                    "totalWeiDonated": "uint256",
+                    "phaseOfRound0": "uint256",
+                    "phaseOfRound1": "uint256"
+                }
+            },
+            "getPhaseStartTime(uint256)": {
+                "argument": {
+                    "n": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "donorList": "address[]",
+                    "earlyContribList": "address[]",
+                    "weiPerCHF": "uint256",
+                    "totalWeiDonated": "uint256",
+                    "phaseOfRound0": "uint256",
+                    "phaseOfRound1": "uint256"
+                }
+            },
+            "addPhase(uint256)": {
+                "argument": {
+                    "time": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "donorList": "address[]",
+                    "earlyContribList": "address[]",
+                    "weiPerCHF": "uint256",
+                    "totalWeiDonated": "uint256",
+                    "phaseOfRound0": "uint256",
+                    "phaseOfRound1": "uint256"
+                }
+            },
+            "setMaxDelay(uint256,uint256)": {
+                "argument": {
+                    "i": "uint256",
+                    "timeDelta": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "donorList": "address[]",
+                    "earlyContribList": "address[]",
+                    "weiPerCHF": "uint256",
+                    "totalWeiDonated": "uint256",
+                    "phaseOfRound0": "uint256",
+                    "phaseOfRound1": "uint256"
+                }
+            },
+            "delayPhaseEndBy(uint256,uint256)": {
+                "argument": {
+                    "n": "uint256",
+                    "timeDelta": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "donorList": "address[]",
+                    "earlyContribList": "address[]",
+                    "weiPerCHF": "uint256",
+                    "totalWeiDonated": "uint256",
+                    "phaseOfRound0": "uint256",
+                    "phaseOfRound1": "uint256"
+                }
+            },
+            "endCurrentPhaseIn(uint256)": {
+                "argument": {
+                    "timeDelta": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "donorList": "address[]",
+                    "earlyContribList": "address[]",
+                    "weiPerCHF": "uint256",
+                    "totalWeiDonated": "uint256",
+                    "phaseOfRound0": "uint256",
+                    "phaseOfRound1": "uint256"
+                }
+            },
+            "TokenTracker(uint256)": {
+                "argument": {
+                    "_restrictedShare": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "donorList": "address[]",
+                    "earlyContribList": "address[]",
+                    "weiPerCHF": "uint256",
+                    "totalWeiDonated": "uint256",
+                    "phaseOfRound0": "uint256",
+                    "phaseOfRound1": "uint256"
+                }
+            },
+            "isUnrestricted()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "donorList": "address[]",
+                    "earlyContribList": "address[]",
+                    "weiPerCHF": "uint256",
+                    "totalWeiDonated": "uint256",
+                    "phaseOfRound0": "uint256",
+                    "phaseOfRound1": "uint256"
+                }
+            },
+            "multFracCeiling(uint256,uint256,uint256)": {
+                "argument": {
+                    "x": "uint256",
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "donorList": "address[]",
+                    "earlyContribList": "address[]",
+                    "weiPerCHF": "uint256",
+                    "totalWeiDonated": "uint256",
+                    "phaseOfRound0": "uint256",
+                    "phaseOfRound1": "uint256"
+                }
+            },
+            "isRegistered(address,bool)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "donorList": "address[]",
+                    "earlyContribList": "address[]",
+                    "weiPerCHF": "uint256",
+                    "totalWeiDonated": "uint256",
+                    "phaseOfRound0": "uint256",
+                    "phaseOfRound1": "uint256"
+                }
+            },
+            "assign(address,uint256,bool)": {
+                "argument": {
+                    "tokenAmount": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "donorList": "address[]",
+                    "earlyContribList": "address[]",
+                    "weiPerCHF": "uint256",
+                    "totalWeiDonated": "uint256",
+                    "phaseOfRound0": "uint256",
+                    "phaseOfRound1": "uint256"
+                }
+            },
+            "closeAssignmentsIfOpen()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "donorList": "address[]",
+                    "earlyContribList": "address[]",
+                    "weiPerCHF": "uint256",
+                    "totalWeiDonated": "uint256",
+                    "phaseOfRound0": "uint256",
+                    "phaseOfRound1": "uint256"
+                }
+            },
+            "unrestrict(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "donorList": "address[]",
+                    "earlyContribList": "address[]",
+                    "weiPerCHF": "uint256",
+                    "totalWeiDonated": "uint256",
+                    "phaseOfRound0": "uint256",
+                    "phaseOfRound1": "uint256"
+                }
+            },
+            "FDC(address,string)": {
+                "argument": {
+                    "_name": "string"
+                },
+                "contract": {
+                    "name": "string",
+                    "donorList": "address[]",
+                    "earlyContribList": "address[]",
+                    "weiPerCHF": "uint256",
+                    "totalWeiDonated": "uint256",
+                    "phaseOfRound0": "uint256",
+                    "phaseOfRound1": "uint256"
+                }
+            },
+            "getState()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "donorList": "address[]",
+                    "earlyContribList": "address[]",
+                    "weiPerCHF": "uint256",
+                    "totalWeiDonated": "uint256",
+                    "phaseOfRound0": "uint256",
+                    "phaseOfRound1": "uint256"
+                }
+            },
+            "getMultiplierAtTime(uint256)": {
+                "argument": {
+                    "time": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "donorList": "address[]",
+                    "earlyContribList": "address[]",
+                    "weiPerCHF": "uint256",
+                    "totalWeiDonated": "uint256",
+                    "phaseOfRound0": "uint256",
+                    "phaseOfRound1": "uint256"
+                }
+            },
+            "donateAsWithChecksum(address,bytes4)": {
+                "argument": {
+                    "checksum": "bytes4"
+                },
+                "contract": {
+                    "name": "string",
+                    "donorList": "address[]",
+                    "earlyContribList": "address[]",
+                    "weiPerCHF": "uint256",
+                    "totalWeiDonated": "uint256",
+                    "phaseOfRound0": "uint256",
+                    "phaseOfRound1": "uint256"
+                }
+            },
+            "finalize(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "donorList": "address[]",
+                    "earlyContribList": "address[]",
+                    "weiPerCHF": "uint256",
+                    "totalWeiDonated": "uint256",
+                    "phaseOfRound0": "uint256",
+                    "phaseOfRound1": "uint256"
+                }
+            },
+            "empty()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "donorList": "address[]",
+                    "earlyContribList": "address[]",
+                    "weiPerCHF": "uint256",
+                    "totalWeiDonated": "uint256",
+                    "phaseOfRound0": "uint256",
+                    "phaseOfRound1": "uint256"
+                }
+            },
+            "getStatus(uint256,address,address)": {
+                "argument": {
+                    "donationRound": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "donorList": "address[]",
+                    "earlyContribList": "address[]",
+                    "weiPerCHF": "uint256",
+                    "totalWeiDonated": "uint256",
+                    "phaseOfRound0": "uint256",
+                    "phaseOfRound1": "uint256"
+                }
+            },
+            "setWeiPerCHF(uint256)": {
+                "argument": {
+                    "weis": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "donorList": "address[]",
+                    "earlyContribList": "address[]",
+                    "weiPerCHF": "uint256",
+                    "totalWeiDonated": "uint256",
+                    "phaseOfRound0": "uint256",
+                    "phaseOfRound1": "uint256"
+                }
+            },
+            "registerEarlyContrib(address,uint256,bytes32)": {
+                "argument": {
+                    "tokenAmount": "uint256",
+                    "memo": "bytes32"
+                },
+                "contract": {
+                    "name": "string",
+                    "donorList": "address[]",
+                    "earlyContribList": "address[]",
+                    "weiPerCHF": "uint256",
+                    "totalWeiDonated": "uint256",
+                    "phaseOfRound0": "uint256",
+                    "phaseOfRound1": "uint256"
+                }
+            },
+            "registerOffChainDonation(address,uint256,uint256,string,bytes32)": {
+                "argument": {
+                    "timestamp": "uint256",
+                    "chfCents": "uint256",
+                    "currency": "string",
+                    "memo": "bytes32"
+                },
+                "contract": {
+                    "name": "string",
+                    "donorList": "address[]",
+                    "earlyContribList": "address[]",
+                    "weiPerCHF": "uint256",
+                    "totalWeiDonated": "uint256",
+                    "phaseOfRound0": "uint256",
+                    "phaseOfRound1": "uint256"
+                }
+            },
+            "delayDonPhase(uint256,uint256)": {
+                "argument": {
+                    "donPhase": "uint256",
+                    "timedelta": "uint256"
+                },
+                "contract": {
+                    "name": "string",
+                    "donorList": "address[]",
+                    "earlyContribList": "address[]",
+                    "weiPerCHF": "uint256",
+                    "totalWeiDonated": "uint256",
+                    "phaseOfRound0": "uint256",
+                    "phaseOfRound1": "uint256"
+                }
+            },
+            "setFoundationWallet(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "donorList": "address[]",
+                    "earlyContribList": "address[]",
+                    "weiPerCHF": "uint256",
+                    "totalWeiDonated": "uint256",
+                    "phaseOfRound0": "uint256",
+                    "phaseOfRound1": "uint256"
+                }
+            },
+            "setExchangeRateAuth(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "donorList": "address[]",
+                    "earlyContribList": "address[]",
+                    "weiPerCHF": "uint256",
+                    "totalWeiDonated": "uint256",
+                    "phaseOfRound0": "uint256",
+                    "phaseOfRound1": "uint256"
+                }
+            },
+            "setRegistrarAuth(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "donorList": "address[]",
+                    "earlyContribList": "address[]",
+                    "weiPerCHF": "uint256",
+                    "totalWeiDonated": "uint256",
+                    "phaseOfRound0": "uint256",
+                    "phaseOfRound1": "uint256"
+                }
+            },
+            "setMasterAuth(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "donorList": "address[]",
+                    "earlyContribList": "address[]",
+                    "weiPerCHF": "uint256",
+                    "totalWeiDonated": "uint256",
+                    "phaseOfRound0": "uint256",
+                    "phaseOfRound1": "uint256"
+                }
+            },
+            "donateAs(address)": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "donorList": "address[]",
+                    "earlyContribList": "address[]",
+                    "weiPerCHF": "uint256",
+                    "totalWeiDonated": "uint256",
+                    "phaseOfRound0": "uint256",
+                    "phaseOfRound1": "uint256"
+                }
+            },
+            "bookDonation(address,uint256,uint256,string,bytes32)": {
+                "argument": {
+                    "timestamp": "uint256",
+                    "chfCents": "uint256",
+                    "currency": "string",
+                    "memo": "bytes32"
+                },
+                "contract": {
+                    "name": "string",
+                    "donorList": "address[]",
+                    "earlyContribList": "address[]",
+                    "weiPerCHF": "uint256",
+                    "totalWeiDonated": "uint256",
+                    "phaseOfRound0": "uint256",
+                    "phaseOfRound1": "uint256"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "name": "string",
+                    "donorList": "address[]",
+                    "earlyContribList": "address[]",
+                    "weiPerCHF": "uint256",
+                    "totalWeiDonated": "uint256",
+                    "phaseOfRound0": "uint256",
+                    "phaseOfRound1": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "delayDonPhase(uint256,uint256)": [
+                2949,
+                779
+            ],
+            "finalize(address)": [
+                1900,
+                471
+            ],
+            "setWeiPerCHF(uint256)": [
+                4193,
+                1219
+            ],
+            "setExchangeRateAuth(address)": [
+                1505,
+                317
+            ],
+            "getStepFunction(uint256)": [
+                3594,
+                1021
+            ],
+            "setMasterAuth(address)": [
+                4633,
+                1351
+            ],
+            "registerOffChainDonation(address,uint256,uint256,string,bytes32)": [
+                2166,
+                559
+            ],
+            "isPhase(uint256,uint256)": [
+                3898,
+                1109
+            ],
+            "multFracCeiling(uint256,uint256,uint256)": [
+                1334,
+                251
+            ],
+            "targetReached(uint256)": [
+                1831,
+                449
+            ],
+            "getMultiplierAtTime(uint256)": [
+                1766,
+                427
+            ],
+            "setFoundationWallet(address)": [
+                807,
+                75
+            ],
+            "getPhaseAtTime(uint256)": [
+                4830,
+                1417
+            ],
+            "donateAsWithChecksum(address,bytes4)": [
+                4281,
+                1263
+            ],
+            "getPhaseStartTime(uint256)": [
+                1701,
+                405
+            ],
+            "isRegistered(address,bool)": [
+                4465,
+                1307
+            ],
+            "registerEarlyContrib(address,uint256,bytes32)": [
+                5028,
+                1505
+            ],
+            "empty()": [
+                4938,
+                1461
+            ],
+            "getStatus(uint256,address,address)": [
+                2682,
+                735
+            ],
+            "isUnrestricted()": [
+                3199,
+                867
+            ],
+            "getState()": [
+                1061,
+                141
+            ],
+            "setRegistrarAuth(address)": [
+                3441,
+                955
+            ]
+        },
+        "block_CALL_mapping": {
+            "block9319": [
+                "foundationWallet.call.value(this.balance)()"
+            ],
+            "block11368": [
+                "foundationWallet.call.value(this.balance)()"
+            ],
+            "jump8583": [
+                "sha256(addr)",
+                "sha256(addr)"
+            ],
+            "block8583": [
+                "sha256(addr)"
+            ]
+        }
+    }
+}

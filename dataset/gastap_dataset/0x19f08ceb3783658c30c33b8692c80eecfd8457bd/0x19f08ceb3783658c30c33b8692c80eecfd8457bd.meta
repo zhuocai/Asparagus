@@ -1,0 +1,96 @@
+{
+    "EtherCard": {
+        "function_list": [
+            "EtherCard()",
+            "getBalance()",
+            "getAmountByCoupon(bytes32)",
+            "getRedemptionStatus(bytes32)",
+            "redeemGift(string,address)",
+            "createGift(bytes32)"
+        ],
+        "initial_state": {
+            "EtherCard()": {
+                "argument": {},
+                "contract": {
+                    "feeAmount": "uint256"
+                }
+            },
+            "getBalance()": {
+                "argument": {},
+                "contract": {
+                    "feeAmount": "uint256"
+                }
+            },
+            "getAmountByCoupon(bytes32)": {
+                "argument": {
+                    "hash": "bytes32"
+                },
+                "contract": {
+                    "feeAmount": "uint256"
+                }
+            },
+            "getRedemptionStatus(bytes32)": {
+                "argument": {
+                    "hash": "bytes32"
+                },
+                "contract": {
+                    "feeAmount": "uint256"
+                }
+            },
+            "redeemGift(string,address)": {
+                "argument": {
+                    "coupon": "string"
+                },
+                "contract": {
+                    "feeAmount": "uint256"
+                }
+            },
+            "createGift(bytes32)": {
+                "argument": {
+                    "hashedCoupon": "bytes32"
+                },
+                "contract": {
+                    "feeAmount": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "getRedemptionStatus(bytes32)": [
+                204,
+                119
+            ],
+            "createGift(bytes32)": [
+                168,
+                97
+            ],
+            "redeemGift(string,address)": [
+                364,
+                163
+            ],
+            "getAmountByCoupon(bytes32)": [
+                521,
+                185
+            ],
+            "getBalance()": [
+                125,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump1187": [
+                "wallet.transfer(amount)",
+                "wallet.transfer(amount)"
+            ],
+            "jump655": [
+                "owner.transfer(calculatedFees)",
+                "owner.transfer(calculatedFees)"
+            ],
+            "block655": [
+                "owner.transfer(calculatedFees)"
+            ],
+            "block1187": [
+                "wallet.transfer(amount)"
+            ]
+        }
+    }
+}

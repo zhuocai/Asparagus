@@ -1,0 +1,230 @@
+{
+    "AuthenticationManager": {
+        "function_list": [
+            "AuthenticationManager()",
+            "contractVersion()",
+            "isCurrentAdmin(address)",
+            "isCurrentOrPastAdmin(address)",
+            "isCurrentAccountReader(address)",
+            "isCurrentOrPastAccountReader(address)",
+            "addAdmin(address)",
+            "removeAdmin(address)",
+            "addAccountReader(address)",
+            "removeAccountReader(address)"
+        ],
+        "initial_state": {
+            "AuthenticationManager()": {
+                "argument": {},
+                "contract": {
+                    "adminAudit": "address[]",
+                    "accountReaderAudit": "address[]"
+                }
+            },
+            "contractVersion()": {
+                "argument": {},
+                "contract": {
+                    "adminAudit": "address[]",
+                    "accountReaderAudit": "address[]"
+                }
+            },
+            "isCurrentAdmin(address)": {
+                "argument": {},
+                "contract": {
+                    "adminAudit": "address[]",
+                    "accountReaderAudit": "address[]"
+                }
+            },
+            "isCurrentOrPastAdmin(address)": {
+                "argument": {},
+                "contract": {
+                    "adminAudit": "address[]",
+                    "accountReaderAudit": "address[]"
+                }
+            },
+            "isCurrentAccountReader(address)": {
+                "argument": {},
+                "contract": {
+                    "adminAudit": "address[]",
+                    "accountReaderAudit": "address[]"
+                }
+            },
+            "isCurrentOrPastAccountReader(address)": {
+                "argument": {},
+                "contract": {
+                    "adminAudit": "address[]",
+                    "accountReaderAudit": "address[]"
+                }
+            },
+            "addAdmin(address)": {
+                "argument": {},
+                "contract": {
+                    "adminAudit": "address[]",
+                    "accountReaderAudit": "address[]"
+                }
+            },
+            "removeAdmin(address)": {
+                "argument": {},
+                "contract": {
+                    "adminAudit": "address[]",
+                    "accountReaderAudit": "address[]"
+                }
+            },
+            "addAccountReader(address)": {
+                "argument": {},
+                "contract": {
+                    "adminAudit": "address[]",
+                    "accountReaderAudit": "address[]"
+                }
+            },
+            "removeAccountReader(address)": {
+                "argument": {},
+                "contract": {
+                    "adminAudit": "address[]",
+                    "accountReaderAudit": "address[]"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "addAccountReader(address)": [
+                493,
+                185
+            ],
+            "isCurrentAdmin(address)": [
+                560,
+                207
+            ],
+            "isCurrentOrPastAccountReader(address)": [
+                158,
+                75
+            ],
+            "removeAccountReader(address)": [
+                316,
+                119
+            ],
+            "contractVersion()": [
+                450,
+                163
+            ],
+            "addAdmin(address)": [
+                383,
+                141
+            ],
+            "isCurrentOrPastAdmin(address)": [
+                651,
+                229
+            ],
+            "removeAdmin(address)": [
+                249,
+                97
+            ],
+            "isCurrentAccountReader(address)": [
+                742,
+                251
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "TransparencyRelayer": {
+        "function_list": [
+            "TransparencyRelayer(address)",
+            "contractVersion()",
+            "fundValueCount()",
+            "accountBalanceCount()",
+            "fundValuePublish(uint256,uint256,uint256)",
+            "accountBalancePublish(string,string,uint256,string,string,uint256)"
+        ],
+        "initial_state": {
+            "TransparencyRelayer(address)": {
+                "argument": {},
+                "contract": {
+                    "fundValues": "TransparencyRelayer.FundValueRepresentation[]",
+                    "accountBalances": "TransparencyRelayer.AccountBalanceRepresentation[]"
+                }
+            },
+            "contractVersion()": {
+                "argument": {},
+                "contract": {
+                    "fundValues": "TransparencyRelayer.FundValueRepresentation[]",
+                    "accountBalances": "TransparencyRelayer.AccountBalanceRepresentation[]"
+                }
+            },
+            "fundValueCount()": {
+                "argument": {},
+                "contract": {
+                    "fundValues": "TransparencyRelayer.FundValueRepresentation[]",
+                    "accountBalances": "TransparencyRelayer.AccountBalanceRepresentation[]"
+                }
+            },
+            "accountBalanceCount()": {
+                "argument": {},
+                "contract": {
+                    "fundValues": "TransparencyRelayer.FundValueRepresentation[]",
+                    "accountBalances": "TransparencyRelayer.AccountBalanceRepresentation[]"
+                }
+            },
+            "fundValuePublish(uint256,uint256,uint256)": {
+                "argument": {
+                    "_usdTotalFund": "uint256",
+                    "_etherTotalFund": "uint256",
+                    "_definedTimestamp": "uint256"
+                },
+                "contract": {
+                    "fundValues": "TransparencyRelayer.FundValueRepresentation[]",
+                    "accountBalances": "TransparencyRelayer.AccountBalanceRepresentation[]"
+                }
+            },
+            "accountBalancePublish(string,string,uint256,string,string,uint256)": {
+                "argument": {
+                    "_accountType": "string",
+                    "_accountIssuer": "string",
+                    "_balance": "uint256",
+                    "_accountReference": "string",
+                    "_validationUrl": "string",
+                    "_timestamp": "uint256"
+                },
+                "contract": {
+                    "fundValues": "TransparencyRelayer.FundValueRepresentation[]",
+                    "accountBalances": "TransparencyRelayer.AccountBalanceRepresentation[]"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "fundValueCount()": [
+                514,
+                119
+            ],
+            "contractVersion()": [
+                1219,
+                207
+            ],
+            "fundValuePublish(uint256,uint256,uint256)": [
+                557,
+                141
+            ],
+            "accountBalanceCount()": [
+                136,
+                75
+            ],
+            "accountBalancePublish(string,string,uint256,string,string,uint256)": [
+                179,
+                97
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump2507": [
+                "authenticationManager.isCurrentAdmin(msg.sender)",
+                "authenticationManager.isCurrentAdmin(msg.sender)"
+            ],
+            "jump1464": [
+                "authenticationManager.isCurrentAdmin(msg.sender)",
+                "authenticationManager.isCurrentAdmin(msg.sender)"
+            ],
+            "block2507": [
+                "authenticationManager.isCurrentAdmin(msg.sender)"
+            ],
+            "block1464": [
+                "authenticationManager.isCurrentAdmin(msg.sender)"
+            ]
+        }
+    }
+}

@@ -1,0 +1,41 @@
+{
+    "SendToMany": {
+        "function_list": [
+            "SendToMany(address[])",
+            "fallback()"
+        ],
+        "initial_state": {
+            "SendToMany(address[])": {
+                "argument": {
+                    "_recipients": "address[]"
+                },
+                "contract": {
+                    "recipients": "address[]"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "recipients": "address[]"
+                }
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {
+            "block183_0": [
+                "recipients[i].transfer(msg.value / amountOfRecipients)"
+            ],
+            "jump183": [
+                "recipients[i].transfer(msg.value / amountOfRecipients)",
+                "recipients[i].transfer(msg.value / amountOfRecipients)"
+            ],
+            "block183": [
+                "recipients[i].transfer(msg.value / amountOfRecipients)"
+            ],
+            "jump183_0": [
+                "recipients[i].transfer(msg.value / amountOfRecipients)",
+                "recipients[i].transfer(msg.value / amountOfRecipients)"
+            ]
+        }
+    }
+}

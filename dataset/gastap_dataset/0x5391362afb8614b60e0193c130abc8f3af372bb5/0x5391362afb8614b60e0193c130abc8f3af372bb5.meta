@@ -1,0 +1,304 @@
+{
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "add(uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "ERC20Token": {
+        "function_list": [
+            "transfer(address,uint256)",
+            "balanceOf(address)"
+        ],
+        "initial_state": {
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {}
+            },
+            "balanceOf(address)": {
+                "argument": {},
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "balanceOf(address)": [
+                807,
+                207
+            ],
+            "transfer(address,uint256)": [
+                1038,
+                251
+            ]
+        },
+        "block_CALL_mapping": {
+            "block3855": [
+                "_spender.call(bytes4(bytes32(sha3(\"receiveApproval(address,uint256,address,bytes)\"))), msg.sender, _value, this, _extraData)"
+            ],
+            "jump3855": [
+                "_spender.call(bytes4(bytes32(sha3(\"receiveApproval(address,uint256,address,bytes)\"))), msg.sender, _value, this, _extraData)",
+                "_spender.call(bytes4(bytes32(sha3(\"receiveApproval(address,uint256,address,bytes)\"))), msg.sender, _value, this, _extraData)"
+            ]
+        }
+    },
+    "PAXCHANGEICO": {
+        "function_list": [
+            "PAXCHANGEICO(string,ERC20Token)",
+            "contribute()",
+            "checkIfFundingCompleteOrExpired()",
+            "finished()",
+            "fallback()",
+            "slitherConstructorVariables()",
+            "slitherConstructorConstantVariables()"
+        ],
+        "initial_state": {
+            "PAXCHANGEICO(string,ERC20Token)": {
+                "argument": {
+                    "_campaignUrl": "string"
+                },
+                "contract": {
+                    "startTime": "uint256",
+                    "totalRaised": "uint256",
+                    "currentBalance": "uint256",
+                    "preSaledeadline": "uint256",
+                    "ICOdeadline": "uint256",
+                    "completedAt": "uint256",
+                    "campaignUrl": "string",
+                    "version": "uint256",
+                    "prices": "uint256[4]"
+                }
+            },
+            "contribute()": {
+                "argument": {},
+                "contract": {
+                    "startTime": "uint256",
+                    "totalRaised": "uint256",
+                    "currentBalance": "uint256",
+                    "preSaledeadline": "uint256",
+                    "ICOdeadline": "uint256",
+                    "completedAt": "uint256",
+                    "campaignUrl": "string",
+                    "version": "uint256",
+                    "prices": "uint256[4]"
+                }
+            },
+            "checkIfFundingCompleteOrExpired()": {
+                "argument": {},
+                "contract": {
+                    "startTime": "uint256",
+                    "totalRaised": "uint256",
+                    "currentBalance": "uint256",
+                    "preSaledeadline": "uint256",
+                    "ICOdeadline": "uint256",
+                    "completedAt": "uint256",
+                    "campaignUrl": "string",
+                    "version": "uint256",
+                    "prices": "uint256[4]"
+                }
+            },
+            "finished()": {
+                "argument": {},
+                "contract": {
+                    "startTime": "uint256",
+                    "totalRaised": "uint256",
+                    "currentBalance": "uint256",
+                    "preSaledeadline": "uint256",
+                    "ICOdeadline": "uint256",
+                    "completedAt": "uint256",
+                    "campaignUrl": "string",
+                    "version": "uint256",
+                    "prices": "uint256[4]"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "startTime": "uint256",
+                    "totalRaised": "uint256",
+                    "currentBalance": "uint256",
+                    "preSaledeadline": "uint256",
+                    "ICOdeadline": "uint256",
+                    "completedAt": "uint256",
+                    "campaignUrl": "string",
+                    "version": "uint256",
+                    "prices": "uint256[4]"
+                }
+            },
+            "slitherConstructorConstantVariables()": {
+                "argument": {},
+                "contract": {
+                    "startTime": "uint256",
+                    "totalRaised": "uint256",
+                    "currentBalance": "uint256",
+                    "preSaledeadline": "uint256",
+                    "ICOdeadline": "uint256",
+                    "completedAt": "uint256",
+                    "campaignUrl": "string",
+                    "version": "uint256",
+                    "prices": "uint256[4]"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "contribute()": [
+                893,
+                361
+            ],
+            "checkIfFundingCompleteOrExpired()": [
+                596,
+                207
+            ],
+            "finished()": [
+                727,
+                273
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump1879": [
+                "tokenReward.transfer(msg.sender, tokenBought)",
+                "tokenReward.transfer(msg.sender, tokenBought)"
+            ],
+            "jump3078": [
+                "tokenReward.transfer(creator,remanent)",
+                "tokenReward.transfer(creator,remanent)"
+            ],
+            "block2778": [
+                "tokenReward.balanceOf(this)"
+            ],
+            "block3120": [
+                "creator.send(this.balance)"
+            ],
+            "jump1879_0": [
+                "tokenReward.transfer(msg.sender, tokenBought)",
+                "tokenReward.transfer(msg.sender, tokenBought)"
+            ],
+            "jump1879_1": [
+                "tokenReward.transfer(msg.sender, tokenBought)",
+                "tokenReward.transfer(msg.sender, tokenBought)"
+            ],
+            "block1879": [
+                "tokenReward.transfer(msg.sender, tokenBought)"
+            ],
+            "block3120_0": [
+                "creator.send(this.balance)"
+            ],
+            "jump3120_1": [
+                "creator.send(this.balance)",
+                "creator.send(this.balance)"
+            ],
+            "jump3120_0": [
+                "creator.send(this.balance)",
+                "creator.send(this.balance)"
+            ],
+            "jump3120_3": [
+                "creator.send(this.balance)",
+                "creator.send(this.balance)"
+            ],
+            "jump3120_2": [
+                "creator.send(this.balance)",
+                "creator.send(this.balance)"
+            ],
+            "jump3078_3": [
+                "tokenReward.transfer(creator,remanent)",
+                "tokenReward.transfer(creator,remanent)"
+            ],
+            "jump3078_2": [
+                "tokenReward.transfer(creator,remanent)",
+                "tokenReward.transfer(creator,remanent)"
+            ],
+            "jump3078_1": [
+                "tokenReward.transfer(creator,remanent)",
+                "tokenReward.transfer(creator,remanent)"
+            ],
+            "jump3078_0": [
+                "tokenReward.transfer(creator,remanent)",
+                "tokenReward.transfer(creator,remanent)"
+            ],
+            "jump3120": [
+                "creator.send(this.balance)",
+                "creator.send(this.balance)"
+            ],
+            "block3078": [
+                "tokenReward.transfer(creator,remanent)"
+            ],
+            "jump2778": [
+                "tokenReward.balanceOf(this)",
+                "tokenReward.balanceOf(this)"
+            ],
+            "block1879_0": [
+                "tokenReward.transfer(msg.sender, tokenBought)"
+            ],
+            "block1879_1": [
+                "tokenReward.transfer(msg.sender, tokenBought)"
+            ],
+            "block3078_1": [
+                "tokenReward.transfer(creator,remanent)"
+            ],
+            "block3078_0": [
+                "tokenReward.transfer(creator,remanent)"
+            ],
+            "block3078_3": [
+                "tokenReward.transfer(creator,remanent)"
+            ],
+            "block3078_2": [
+                "tokenReward.transfer(creator,remanent)"
+            ],
+            "jump2778_3": [
+                "tokenReward.balanceOf(this)",
+                "tokenReward.balanceOf(this)"
+            ],
+            "block2778_0": [
+                "tokenReward.balanceOf(this)"
+            ],
+            "jump2778_1": [
+                "tokenReward.balanceOf(this)",
+                "tokenReward.balanceOf(this)"
+            ],
+            "block3120_3": [
+                "creator.send(this.balance)"
+            ],
+            "block3120_2": [
+                "creator.send(this.balance)"
+            ],
+            "block3120_1": [
+                "creator.send(this.balance)"
+            ],
+            "jump2778_0": [
+                "tokenReward.balanceOf(this)",
+                "tokenReward.balanceOf(this)"
+            ],
+            "block2778_1": [
+                "tokenReward.balanceOf(this)"
+            ],
+            "jump2778_2": [
+                "tokenReward.balanceOf(this)",
+                "tokenReward.balanceOf(this)"
+            ],
+            "block2778_3": [
+                "tokenReward.balanceOf(this)"
+            ],
+            "block2778_2": [
+                "tokenReward.balanceOf(this)"
+            ]
+        }
+    }
+}

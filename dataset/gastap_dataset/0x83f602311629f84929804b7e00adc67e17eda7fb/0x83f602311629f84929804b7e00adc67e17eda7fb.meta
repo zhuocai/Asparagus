@@ -1,0 +1,403 @@
+{
+    "SafeMath": {
+        "function_list": [
+            "mul(uint256,uint256)",
+            "div(uint256,uint256)",
+            "sub(uint256,uint256)",
+            "add(uint256,uint256)"
+        ],
+        "initial_state": {
+            "mul(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "div(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "sub(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            },
+            "add(uint256,uint256)": {
+                "argument": {
+                    "a": "uint256",
+                    "b": "uint256"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "ReentryProtected": {
+        "function_list": [],
+        "initial_state": {},
+        "function_block_mapping": {},
+        "block_CALL_mapping": {}
+    },
+    "GodzSwapGodzEtherCompliance": {
+        "function_list": [
+            "GodzSwapGodzEtherCompliance()",
+            "setHolderInformation(address)",
+            "SaveAccountBuyingGodz(address,uint256)",
+            "setSendGodz(uint256)",
+            "getAccountInformation(uint256)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "GodzSwapGodzEtherCompliance()": {
+                "argument": {},
+                "contract": {
+                    "indexAccount": "uint256"
+                }
+            },
+            "setHolderInformation(address)": {
+                "argument": {},
+                "contract": {
+                    "indexAccount": "uint256"
+                }
+            },
+            "SaveAccountBuyingGodz(address,uint256)": {
+                "argument": {
+                    "amount": "uint256"
+                },
+                "contract": {
+                    "indexAccount": "uint256"
+                }
+            },
+            "setSendGodz(uint256)": {
+                "argument": {
+                    "index": "uint256"
+                },
+                "contract": {
+                    "indexAccount": "uint256"
+                }
+            },
+            "getAccountInformation(uint256)": {
+                "argument": {
+                    "index": "uint256"
+                },
+                "contract": {
+                    "indexAccount": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "SaveAccountBuyingGodz(address,uint256)": [
+                424,
+                88
+            ],
+            "getAccountInformation(uint256)": [
+                699,
+                154
+            ],
+            "setSendGodz(uint256)": [
+                213,
+                22
+            ]
+        },
+        "block_CALL_mapping": {}
+    },
+    "GodzSwapGodzEther": {
+        "function_list": [
+            "GodzSwapGodzEther(address,address,address)",
+            "fallback()",
+            "safeWithdrawal()"
+        ],
+        "initial_state": {
+            "GodzSwapGodzEther(address,address,address)": {
+                "argument": {},
+                "contract": {
+                    "sellPrice": "uint256",
+                    "sellQuantity": "uint256"
+                }
+            },
+            "fallback()": {
+                "argument": {},
+                "contract": {
+                    "sellPrice": "uint256",
+                    "sellQuantity": "uint256"
+                }
+            },
+            "safeWithdrawal()": {
+                "argument": {},
+                "contract": {
+                    "sellPrice": "uint256",
+                    "sellQuantity": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "safeWithdrawal()": [
+                2346,
+                207
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump1276_0": [
+                "GodzSwapGodzEtherCompliance(complianceContract).SaveAccountBuyingGodz(buyer, valuePaid)",
+                "GodzSwapGodzEtherCompliance(complianceContract).SaveAccountBuyingGodz(buyer, valuePaid)"
+            ],
+            "jump1739_0": [
+                "Token(tokenContract).transferFrom(seller, buyer, buyQuantity)",
+                "Token(tokenContract).transferFrom(seller, buyer, buyQuantity)"
+            ],
+            "jump1351_0": [
+                "seller.transfer(valuePaid)",
+                "seller.transfer(valuePaid)"
+            ],
+            "jump2665": [
+                "seller.transfer(this.balance)",
+                "seller.transfer(this.balance)"
+            ],
+            "block1276": [
+                "GodzSwapGodzEtherCompliance(complianceContract).SaveAccountBuyingGodz(buyer, valuePaid)"
+            ],
+            "jump975_0": [
+                "complianceWallet.transfer(valuePaid)",
+                "complianceWallet.transfer(valuePaid)"
+            ],
+            "jump1351": [
+                "seller.transfer(valuePaid)",
+                "seller.transfer(valuePaid)"
+            ],
+            "block452_0": [
+                "Token(tokenContract).balanceOf(seller)"
+            ],
+            "jump1276": [
+                "GodzSwapGodzEtherCompliance(complianceContract).SaveAccountBuyingGodz(buyer, valuePaid)",
+                "GodzSwapGodzEtherCompliance(complianceContract).SaveAccountBuyingGodz(buyer, valuePaid)"
+            ],
+            "block788_0": [
+                "Token(tokenContract).allowance(seller,this)"
+            ],
+            "block1739_0": [
+                "Token(tokenContract).transferFrom(seller, buyer, buyQuantity)"
+            ],
+            "block1739": [
+                "Token(tokenContract).transferFrom(seller, buyer, buyQuantity)"
+            ],
+            "block1815": [
+                "buyer.transfer(valuePaid)"
+            ],
+            "jump1739": [
+                "Token(tokenContract).transferFrom(seller, buyer, buyQuantity)",
+                "Token(tokenContract).transferFrom(seller, buyer, buyQuantity)"
+            ],
+            "block788": [
+                "Token(tokenContract).allowance(seller,this)"
+            ],
+            "block452": [
+                "Token(tokenContract).balanceOf(seller)"
+            ],
+            "jump452_0": [
+                "Token(tokenContract).balanceOf(seller)",
+                "Token(tokenContract).balanceOf(seller)"
+            ],
+            "jump975": [
+                "complianceWallet.transfer(valuePaid)",
+                "complianceWallet.transfer(valuePaid)"
+            ],
+            "block1276_0": [
+                "GodzSwapGodzEtherCompliance(complianceContract).SaveAccountBuyingGodz(buyer, valuePaid)"
+            ],
+            "block2665": [
+                "seller.transfer(this.balance)"
+            ],
+            "jump1815_0": [
+                "buyer.transfer(valuePaid)",
+                "buyer.transfer(valuePaid)"
+            ],
+            "block975_0": [
+                "complianceWallet.transfer(valuePaid)"
+            ],
+            "block1815_0": [
+                "buyer.transfer(valuePaid)"
+            ],
+            "jump788_0": [
+                "Token(tokenContract).allowance(seller,this)",
+                "Token(tokenContract).allowance(seller,this)"
+            ],
+            "block975": [
+                "complianceWallet.transfer(valuePaid)"
+            ],
+            "jump452": [
+                "Token(tokenContract).balanceOf(seller)",
+                "Token(tokenContract).balanceOf(seller)"
+            ],
+            "jump788": [
+                "Token(tokenContract).allowance(seller,this)",
+                "Token(tokenContract).allowance(seller,this)"
+            ],
+            "jump1815": [
+                "buyer.transfer(valuePaid)",
+                "buyer.transfer(valuePaid)"
+            ],
+            "block1351_0": [
+                "seller.transfer(valuePaid)"
+            ],
+            "block1351": [
+                "seller.transfer(valuePaid)"
+            ]
+        }
+    },
+    "tokenRecipient": {
+        "function_list": [
+            "receiveApproval(address,uint256,address,bytes)"
+        ],
+        "initial_state": {
+            "receiveApproval(address,uint256,address,bytes)": {
+                "argument": {
+                    "_value": "uint256",
+                    "_extraData": "bytes"
+                },
+                "contract": {}
+            }
+        },
+        "function_block_mapping": {
+            "receiveApproval(address,uint256,address,bytes)": [
+                174,
+                75
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump573": [
+                "t.transferFrom(_from, this, _value)",
+                "t.transferFrom(_from, this, _value)"
+            ],
+            "block573": [
+                "t.transferFrom(_from, this, _value)"
+            ]
+        }
+    },
+    "Token": {
+        "function_list": [
+            "Token(uint256,string,uint8,string)",
+            "transfer(address,uint256)",
+            "approve(address,uint256)",
+            "approveAndCall(address,uint256,bytes)",
+            "transferFromOrigin(address,uint256)",
+            "transferFrom(address,address,uint256)",
+            "slitherConstructorVariables()"
+        ],
+        "initial_state": {
+            "Token(uint256,string,uint8,string)": {
+                "argument": {
+                    "initialSupply": "uint256",
+                    "tokenName": "string",
+                    "decimalUnits": "uint8",
+                    "tokenSymbol": "string"
+                },
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256"
+                }
+            },
+            "transfer(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256"
+                }
+            },
+            "approve(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256"
+                }
+            },
+            "approveAndCall(address,uint256,bytes)": {
+                "argument": {
+                    "_value": "uint256",
+                    "_extraData": "bytes"
+                },
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256"
+                }
+            },
+            "transferFromOrigin(address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256"
+                }
+            },
+            "transferFrom(address,address,uint256)": {
+                "argument": {
+                    "_value": "uint256"
+                },
+                "contract": {
+                    "standard": "string",
+                    "name": "string",
+                    "symbol": "string",
+                    "decimals": "uint8",
+                    "totalSupply": "uint256"
+                }
+            }
+        },
+        "function_block_mapping": {
+            "approve(address,uint256)": [
+                335,
+                97
+            ],
+            "transfer(address,uint256)": [
+                1137,
+                273
+            ],
+            "transferFrom(address,address,uint256)": [
+                479,
+                141
+            ],
+            "approveAndCall(address,uint256,bytes)": [
+                1214,
+                295
+            ],
+            "transferFromOrigin(address,uint256)": [
+                805,
+                207
+            ]
+        },
+        "block_CALL_mapping": {
+            "jump4845": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)",
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ],
+            "block4845": [
+                "spender.receiveApproval(msg.sender, _value, this, _extraData)"
+            ]
+        }
+    }
+}
