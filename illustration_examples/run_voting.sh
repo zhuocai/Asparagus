@@ -5,7 +5,7 @@ contract_name=Voting
 function_name="winningProposal"
 
 cd src/
-python synthesizer.py \
+python3 synthesizer.py \
     --root_dir ../illustration_examples/${file_name} \
     --file_name ${file_name}.sol \
     --contract_name ${contract_name} \

@@ -4,10 +4,9 @@ import random
 import sympy as sp
 import copy
 from polynomial import Polynomial
-from z3 import *
 import time
 from PolynomialTS import PolynomialTS
-
+from z3 import *
 import os
 import time
 
