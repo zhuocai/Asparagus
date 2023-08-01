@@ -50,7 +50,7 @@ def do_experiment_for_record(
         )
         subprocess.run(
             [
-                'python', "-u", "gas-new/synthesizer.py",
+                'python3', "-u", "src/synthesizer.py",
                 "--root_dir", record_dir,
                 "--file_name", file_name,
                 "--contract_name", contract_name,
@@ -65,26 +65,26 @@ def do_experiment_for_record(
         return True
     except subprocess.TimeoutExpired as e:
         result['timeout'] = True
-        logging.error(
-            "{}: {}.{} -> Timeout with {}".format(
-                file_name,
-                contract_name,
-                function_name,
-                extra_args
-            )
-        )
+        # logging.error(
+        #     "{}: {}.{} -> Timeout with {}".format(
+        #         file_name,
+        #         contract_name,
+        #         function_name,
+        #         extra_args
+        #     )
+        # )
     except Exception as e:
         result['timeout'] = False
         result['error'] = str(e)
-        logging.error(
-            "{}: {}.{} -> Faild with {}:{}".format(
-                file_name,
-                contract_name,
-                function_name,
-                extra_args,
-                str(e)
-            )
-        )
+        # logging.error(
+        #     "{}: {}.{} -> Faild with {}:{}".format(
+        #         file_name,
+        #         contract_name,
+        #         function_name,
+        #         extra_args,
+        #         str(e)
+        #     )
+        # )
     result['end_time'] = int(time.time())
     pd.DataFrame([result]).to_csv(
         output_file,
@@ -191,4 +191,3 @@ if __name__ == '__main__':
                     solved[key] = future.result()
                 except Exception as e:
                     logging.exception(e)
-        
