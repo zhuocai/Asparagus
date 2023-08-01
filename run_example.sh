@@ -17,7 +17,7 @@ python3 synthesizer.py \
     --file_name ${file_name}.sol \
     --contract_name ${contract_name} \
     --function_name ${function_name} \
-    --output_file ${file_name}_${contract_name}_${function_name}.out \
+    --output_file ../experiments/results/run_example.csv \
     --print_verbose \
     --use_const_cnt 1 # CHANGE THIS: replace this line with other options when necessary
 
